@@ -1,4 +1,5 @@
 # webvi-examples
+- Please use all of the default namespaces and directory names when building the Web Application in each example
 
 # Call LabVIEW Web Service
 
