@@ -104,9 +104,7 @@ To provide feedback to the 375px bounds of `.content-item`, CSS has been added t
 ```
 Once the content is placed within this box and the WebVI is built we have the correct CSS needed to achieve the same layout within a `.container`.
 
-
 <img src="box-in-lv.PNG" alt="Render black box in LabVIEW text" width="50%">
-
 
 ### Build Process
 Open `WebApp.gcomp` go to the **Document** tab and click **Build**. This produces the HTML (`Main.html`)of the front panel, the CSS defining the controls' absolute layout, and the compiled WebVI block diagram (`Main.via.txt`).
