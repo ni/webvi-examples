@@ -15,24 +15,24 @@ This example demonstrates embedding a Web VI built using LabVIEW NXG 2.0 Beta in
   - Open WebApp.gcomp
   - Switch to the **Document** tab
   - Click Build
-  
+
 # Hosting
-Place the entire contents of the `Embed WebVI into Content` directory within any Web server of your choosing. 
-## LabVIEW 2009-2017 Web Server
+Place the entire contents of the `Embed WebVI into Content` directory within any Web server of your choosing.
+## Hosting with LabVIEW 2009-2017 Web Server
 1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`
 2. Copy the `Embed WebVI into Content` directory into the `www` directory
 3. Open a Web Browser and navigate to `http://localhost:8080/Embed%20WebVI%20into%20Content/index.html`
 
-## Skyline Web Server
+## Hosting with Skyline Web Server
 1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`
 2. Copy the `Embed WebVI into Content` directory into the `htdocs` directory
 3. Open a Web Browser and navigate to `http://localhost/Embed%20WebVI%20into%20Content/index.html`
 
-## Published Example 
-The fully assembled and hosted Web application can be found at http://webvi-examples.s3.amazonaws.com/. TODO: This a placeholder that will be replaced with a github pages URL. 
+## Published Example
+The fully assembled and hosted Web application can be found at http://webvi-examples.s3.amazonaws.com/. TODO: This a placeholder that will be replaced with a github pages URL.
 
 # Details
-The following describes how the static Web page was built including including how parts of the WebVI are pulled into the page. 
+The following describes how the static Web page was built including including how parts of the WebVI are pulled into the page.
 
 ## The Basic Structure of the Static Page
 This page is structured like many common marketing pages.
@@ -104,13 +104,13 @@ To provide feedback to the 375px bounds of `.content-item`, CSS has been added t
 ```
 Once the content is placed within this box and the WebVI is built we have the correct CSS needed to achieve the same layout within a `.container`.
 
-![Render black box in LabVIEW](docs/box-in-lv.PNG)
+![Render black box in LabVIEW](box-in-lv.PNG)
 
 ### Build Process
 Open `WebApp.gcomp` go to the **Document** tab and click **Build**. This produces the HTML (`Main.html`)of the front panel, the CSS defining the controls' absolute layout, and the compiled WebVI block diagram (`Main.via.txt`).
 
 ## Coping HTML Custom Elements, Styles, and References
-This is the most brittle part of the process. If a controls is removed, added, or replaced this copy/paste process must occur again to incorporate them into the final page. In future revisions of LabVIEW and this example this process could be better automated. Changes to the block diagram are less brittle since we can refer to the .via.txt using a relative path that does not change when the Web application is rebuilt.
+This is the most brittle part of the process. If a controls is removed, added, or replaced this copy/paste process must occur again to incorporate them into the final page. In future revisions of LabVIEW NXG and this example this process could be better automated. Changes to the block diagram are less brittle since we can refer to the .via.txt using a relative path that does not change when the Web application is rebuilt.
 
 ### Control Custom Elements
 ```
@@ -140,14 +140,14 @@ In order for the WebVI to continue to run in the new page these two custom eleme
 The `ni-virtual-instrument` custom element needs no modification after it has been emitted into `Main.html` from LabVIEW. The `vireo-source` property `web-application` must be updated to reflect the relative path between `index.html` and `Main.via.txt`.
 
 ```
-<ni-web-application engine="VIREO" location="BROWSER" vireo-source="../g-source/Builds/Web%20Server/Configuration1/WebApp/Main.via.txt"><ni-virtual-instrument vi-name="Main.gviweb"></ni-virtual-instrument></ni-web-application>
+<ni-web-application engine="VIREO" location="BROWSER" vireo-source="WebVI/Builds/Web%20Server/Configuration1/WebApp/Main.via.txt"><ni-virtual-instrument vi-name="Main.gviweb"></ni-virtual-instrument></ni-web-application>
 
 ```
 
 ## Important Directories
-- **`g-source`**: Everything within this directory is either the source code of the WebVI of the build output from LabVIEW. Most of the path and filenames are defaults obtained by using the **Web Application** template in LabVIEW NXG 2.0.
- - **`g-source/Builds/Web Server/Configuration1/WebApp`**: This is the important bits of the emitted by LabVIEW when the Web Application is built.
-- **`app`**: This directory contains all the hand maintained HTML and CSS files of the static page. This example requires no additional JavaScript.
+- **`WebVI`**: Everything within this directory is either the source code of the WebVI of the build output from LabVIEW. Most of the path and filenames are defaults obtained by using the **Web Application** template in LabVIEW NXG 2.0.
+ - **`WebVI/Builds/Web Server/Configuration1/WebApp`**: This is the important bits of the emitted by LabVIEW when the Web Application is built.
+- **`StaticPageResources`**: This directory contains all the hand maintained HTML and CSS files of the static page. This example requires no additional JavaScript.
 
 # Usage
-Where would you use this? Example applications.
+This technique might be used when there is an existing Web page that can be enhanced with the addition of inline WebVIs. An example may be educational course material with a WebVI inline that visualizes data acquired in a lab setting. 
