@@ -3,6 +3,8 @@ This example demonstrates embedding a Web VI built using LabVIEW NXG 2.0 Beta in
 
 # Dependencies
 - LabVIEW NXG 2.0 Beta
+- LabVIEW 2009-2017 (Required for hosting only)
+- Skyline (Required for hosting only)
 
 # Setup
 - Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repo to your machine.
@@ -13,9 +15,25 @@ This example demonstrates embedding a Web VI built using LabVIEW NXG 2.0 Beta in
   - Open WebApp.gcomp
   - Switch to the **Document** tab
   - Click Build
+  
+# Hosting
+To ensure all files needed for this demo are available place the entire contents of the `Embed WebVI into Content` directory within any Web server of your choosing. 
+## LabVIEW 2009-2017 Web Server
+1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`
+2. Copy the `Embed WebVI into Content` directory into the `www` directory
+3. Open a Web Browser and navigate to `http://localhost:8080/Embed%20WebVI%20into%20Content/index.html`
+
+## Skyline Web Server
+1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`
+2. Copy the `Embed WebVI into Content` directory into the `htdocs` directory
+3. Open a Web Browser and navigate to `http://localhost/Embed%20WebVI%20into%20Content/index.html`
+
+## Published Exmaple 
+The fully assembled and hosted Web application can be found at http://webvi-examples.s3.amazonaws.com/. TODO: This a placeholder that will be replaced with a github pages URL. 
 
 # Details
-_Explain what your makes this example unique. Use images and code snippets to reinforce how it is built. This may itself be several section_
+The following describes how the static Web page was built including including how parts of the WebVI are pulled into the page. 
+
 ## The Basic Structure of the Static Page
 This page is structured like many common marketing pages.
 ### Hero and Sections
@@ -130,9 +148,6 @@ The `ni-virtual-instrument` custom element needs no modification after it has be
 - **`g-source`**: Everything within this directory is either the source code of the WebVI of the build output from LabVIEW. Most of the path and filenames are defaults obtained by using the **Web Application** template in LabVIEW NXG 2.0.
  - **`g-source/Builds/Web Server/Configuration1/WebApp`**: This is the important bits of the emitted by LabVIEW when the Web Application is built.
 - **`app`**: This directory contains all the hand maintained HTML and CSS files of the static page. This example requires no additional JavaScript.
-
-# Expected Behavior
-The fully assembled and hosted Web application can be found at http://webvi-examples.s3.amazonaws.com/.
 
 # Usage
 Where would you use this? Example applications.
