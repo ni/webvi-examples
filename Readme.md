@@ -13,3 +13,5 @@
 # Embed Content into a WebVI
 
 # Embed a WebVI into Web Content
+
+# Incorporate User Resource into WebVI
