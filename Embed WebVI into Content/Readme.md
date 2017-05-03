@@ -104,7 +104,9 @@ To provide feedback to the 375px bounds of `.content-item`, CSS has been added t
 ```
 Once the content is placed within this box and the WebVI is built we have the correct CSS needed to achieve the same layout within a `.container`.
 
-![Render black box in LabVIEW](box-in-lv.PNG)
+
+<img src="box-in-lv.PNG" alt="Render black box in LabVIEW text" width="50%">
+
 
 ### Build Process
 Open `WebApp.gcomp` go to the **Document** tab and click **Build**. This produces the HTML (`Main.html`)of the front panel, the CSS defining the controls' absolute layout, and the compiled WebVI block diagram (`Main.via.txt`).
@@ -150,4 +152,4 @@ The `ni-virtual-instrument` custom element needs no modification after it has be
 - **`StaticPageResources`**: This directory contains all the hand maintained HTML and CSS files of the static page. This example requires no additional JavaScript.
 
 # Usage
-This technique might be used when there is an existing Web page that can be enhanced with the addition of inline WebVIs. An example may be educational course material with a WebVI inline that visualizes data acquired in a lab setting. 
+This technique might be used when there is an existing Web page that can be enhanced with the addition of inline WebVIs. An example may be educational course material with a WebVI inline that visualizes data acquired in a lab setting.
