@@ -576,10 +576,9 @@ ni-enum-selector .jqx-widget {
 /*************************************
 * Gauge
 **************************************/
-jqx-gauge {
-    position: absolute;
+ni-gauge {
+    display: inline-block;
 }
-
 
 /*************************************
 * Graph Tools
@@ -628,6 +627,42 @@ ni-hyperlink a {
     overflow: hidden;
     white-space: pre;
     text-overflow: ellipsis;
+}
+
+/*************************************
+* Image
+**************************************/
+ni-image {
+    display: inline-block;
+}
+
+ni-image .ni-image-box {
+    background-image: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-attachment: scroll;
+    background-color: transparent;
+
+    /* stretch behavior of none */
+    background-size: auto auto;
+}
+
+ni-image[source=""] .ni-image-box {
+    outline: 1px solid black;
+}
+
+ni-image .ni-stretch-uniform {
+    background-size: contain;
+}
+
+ni-image .ni-stretch-uniformtofill {
+    background-size: cover;
+}
+
+ni-image .ni-stretch-fill {
+    background-size: 100% 100%;
 }
 
 /*************************************
