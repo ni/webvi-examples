@@ -25,10 +25,12 @@ To add resource files:
 
 User resources are referenced via a relative URL. This URL depends on what namespace the Web VI is in, and the namespace of the user resource.  
 Examples:
-| *Web VI location*                       | *Resource location*                     | *Relative URL*                 |
-| --------------------------------------- |:---------------------------------------:| ------------------------------:|
-| Application:Main.gviweb                 | Application:myImage.jpg                 | myImage.jpg                    |
-| Application:ChildNamespace1:Main.gviweb | Application:ChildNamespace2:myImage.jpg | ../ChildNamespace2/myImage.jpg |
+- *Web VI:* Application:Main.gviweb  
+  *Resource:* Application:myImage.jpg  
+  *Relative URL:* myImage.jpg
+- *Web VI:* Application:ChildNamespace1:Main.gviweb  
+  *Resource:* Application:ChildNamespace2:myImage.jpg  
+  *Relative URL:* ../ChildNamespace2/myImage.jpg
 
 Images (*.png, *.bmp, *.jpg, *.jpeg, *.gif, *.svg, *.webp, *.ico):
 - From the front panel palette, expand the Drawings category, then drop a URL Image
