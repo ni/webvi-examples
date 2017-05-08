@@ -18,7 +18,7 @@ This example demonstrates embedding a Web VI built using LabVIEW NXG 2.0 Beta in
 # Incorporate User Resource into WebVI
 
 # Multiple Top-Level VIs
-[![Multiple Top-Level VIs Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)]({{site.github.url}}/Multiple%20Top-Level%20VIs/Builds/Web%20Server/Configuration1/Multiple%20Top-Level%20VIs/Main.html)
-[![Multiple Top-Level VIs README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)]({{site.github.url}}/Multiple%20Top-Level%20VIs/)
+[![Multiple Top-Level VIs Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/Multiple%20Top-Level%20VIs/Builds/Web%20Server/Configuration1/Multiple%20Top-Level%20VIs/Main.html)
+[![Multiple Top-Level VIs README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://ni.github.io/webvi-examples//Multiple%20Top-Level%20VIs/)
 
 This example demonstrates usage of multiple Top-Level VIs in a NXG Component. Each Top-Level VI is built into a separate HTML file and using the hyperlink control one can create links pointing between different Top-Level VIs. The example uses the Component name and the VI name to create relative urls that point between the corresponding built HTML pages.
