@@ -8,11 +8,13 @@ This example demonstrates usage of multiple Top-Level VIs in a NXG Component. Ea
 
 # Setup
 - Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repo to your machine.
-- Open Embed WebVI into Content/WebVI/Embed WebVI into Content.lvproject
+- Open Multiple Top-Level VIs\Multiple Top-Level VIs.lvproject
 - Run the Web VI
+  - In the **Project Files** tab expand **WebApp.gcomp**
   - Open **Main.gviweb** and click the **Run** button
+    <br> _Note: In the LabVIEW NXG Beta 2.0 Release clicking links to another Top-Level VI in a component will cause the WebVI to open in an external browser but the WebVI will not run_ <!-- TODO DE12694: Pressing run and clicking link to other top-level panel opens a link to broken web vi stuck in synchronization mode -->
 - Build Web application
-  - Open WebApp.gcomp
+  - Open **WebApp.gcomp**
   - Switch to the **Document** tab
   - Click Build
 
