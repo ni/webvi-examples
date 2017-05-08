@@ -1,13 +1,13 @@
 <!-- The following should be equivalent to the section in webvi-examples/Readme.md -->
 # Multiple Top-Level VIs
-[![Multiple Top-Level VIs Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)][MultipleTopLevelVIsDemoLink]
+[![Multiple Top-Level VIs Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/MultipleTopLevelVIs/Builds/Web%20Server/Configuration1/MultipleTopLevelVIs/)
 [![Multiple Top-Level VIs README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://ni.github.io/webvi-examples/MultipleTopLevelVIs/)
 
-This example demonstrates usage of multiple Top-Level VIs in a NXG Component. Each Top-Level VI is built into a separate HTML file and using the hyperlink control one can create links pointing between different Top-Level VIs. The example uses the Component name and the VI name to create relative urls that point between the corresponding built HTML pages.
+This example demonstrates usage of multiple Top-Level VIs in a NXG Component.
+Each Top-Level VI is built into a separate HTML file and the Hyperlink control is used to create clickable links between the different Top-Level VIs.
+The example determines the correct url to use for a hyperlink by examining the Relative URL property available for each item in the Component.
 
-[![Multiple Top-Level VIs Demo Link](https://ni.github.io/webvi-examples/MultipleTopLevelVIs/MultipleTopLevelVIs.gif)][MultipleTopLevelVIsDemoLink]
-
-[MultipleTopLevelVIsDemoLink]: (https://ni.github.io/webvi-examples/MultipleTopLevelVIs/Builds/Web%20Server/Configuration1/MultipleTopLevelVIs/)
+[![Multiple Top-Level VIs Demo Link](https://ni.github.io/webvi-examples/MultipleTopLevelVIs/MultipleTopLevelVIs.gif)](https://ni.github.io/webvi-examples/MultipleTopLevelVIs/Builds/Web%20Server/Configuration1/MultipleTopLevelVIs/)
 
 # Dependencies
 - LabVIEW NXG 2.0 Beta
@@ -39,14 +39,13 @@ Place the entire `MultipleTopLevelVIs` directory built under `Builds/Web Server/
 3. Open a Web Browser and navigate to `http://localhost/MultipleTopLevelVIs/index.html`
 
 # Details
-The following describes how the static Web page was built including including how parts of the WebVI are pulled into the page.
+Each of the Top-Level VIs will create a corresponding HTML page where the organization of those pages is determined by position in the Component.
+As can be seen in the following screenshot you have the ability to change the generated File Name for each VI as well as a seeing the Relative URL used for linking.
+![Main.gviweb Right Rail View in Component showing File Name and Relative URL properties](ComponentRightRail.png)
 
-## Important Directories
-- **`WebVI`**: Everything within this directory is either the source code of the WebVI of the build output from LabVIEW. Most of the path and filenames are defaults obtained by using the **Web Application** template in LabVIEW NXG 2.0.
- - **`WebVI/Builds/Web Server/Configuration1/WebApp`**: This is the important bits of the emitted by LabVIEW when the Web Application is built.
-- **`StaticPageResources`**: This directory contains all the hand maintained HTML and CSS files of the static page. This example requires no additional JavaScript.
+Notice how it is not required for Top-Level VIs to be at the root of the namespace.
+For example, the `Resources/Attribution.gviweb` file is marked as Top-Level and has a Relative URL of `Resources/Attribution.html`.
 
-# Usage
-This technique might be used when there is an existing Web page that can be enhanced with the addition of inline WebVIs. An example may be educational course material with a WebVI inline that visualizes data acquired in a lab setting.
-
-[MultipleTopLevelVIsDemoLink]: (https://ni.github.io/webvi-examples/MultipleTopLevelVIs/Builds/Web%20Server/Configuration1/MultipleTopLevelVIs/Main.html)
+Also notice how the Main.gviweb file has the File Name set to `index.html` rather than `Main.html`.
+This was done as many static Web Servers will automatically serve files named `index.html` when a directory is requested which makes for cleaner urls.
+For example, on a compatible web server a user can visit `www.example.com/MultipleTopLevelVIs/` or `www.example.com/MultipleTopLevelVIs/index.html` to see the same page.
