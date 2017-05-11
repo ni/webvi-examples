@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="A773E28E2A08B3703A838BF7145D3690" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="5.0.1.2897" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="5.0.0.1" Version="5.0.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="5.0.1.2897" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="4.9.0.0" Version="5.0.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="5.0.1.2897" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="4.9.0.0" Version="4.9.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="5.0.1.2897" FeatureSetName="Html VI" Name="http://www.ni.com/NationalInstruments.LabVIEW.HtmlVI" OldestCompatibleVersion="4.5.0.0" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="5.0.1.2897" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="5.0.0.49154" Version="5.0.0.49154" />
+		<ApplicationVersionInfo Build="5.0.1.2897" Name="LabVIEW NXG" Version="2.0.0" />
+	</SourceModelFeatureSet>
+	<VirtualInstrument Id="1" OverridingModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.HTMLVirtualInstrument" xmlns="http://www.ni.com/LabVIEW.VI">
+		<Icon Id="2" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="3" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Id="4" Left="[float]0" TemplateName="Gray" Top="[float]0" Width="[float]40">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+					<FileNameText Attached="[bool]True" Height="[float]36" Id="7" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Efficiency" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden" Width="[float]36">
+						<FontSetting FontFamily="Verdana" FontSize="6" Id="8" />
+					</FileNameText>
+				</IconTemplate>
+			</IconPanel>
+		</Icon>
+		<ConnectorPane Height="40" Id="9" ListViewHeight="40" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+			<ConnectorPaneTerminal />
+			<ConnectorPaneTerminal Hotspot="0 15" />
+			<ConnectorPaneTerminal Hotspot="0 25" />
+			<ConnectorPaneTerminal Hotspot="0 35" />
+			<ConnectorPaneTerminal Hotspot="15 0" />
+			<ConnectorPaneTerminal Hotspot="25 0" />
+			<ConnectorPaneTerminal Hotspot="40 5" />
+			<ConnectorPaneTerminal Hotspot="40 15" />
+			<ConnectorPaneTerminal Hotspot="40 25" />
+			<ConnectorPaneTerminal Hotspot="40 35" />
+			<ConnectorPaneTerminal Hotspot="15 40" />
+			<ConnectorPaneTerminal Hotspot="25 40" />
+		</ConnectorPane>
+		<DiagramUnplacedItems Id="10" xmlns="http://www.ni.com/MocCommon" />
+		<FrontPanelUnplacedItems Id="11" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" />
+		<BlockDiagram Id="12">
+			<WhileLoop Bounds="215 150 295 195" DiagramId="37" Id="36">
+				<LoopIteration Bounds="5 165 15 15" Id="38" />
+				<LoopCondition Bounds="265 145 15 15" Id="39" />
+				<DataAccessor Bounds="170 65 40 15" DataItem="17" Id="18" Label="31" xmlns="http://www.ni.com/MocCommon">
+					<Terminal DataType="Double" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+				</DataAccessor>
+				<NodeLabel AttachedTo="18" Bounds="215 65 31 14" Id="31" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>Chart</p.Text>
+				</NodeLabel>
+				<Literal Bounds="230 145 25 15" DataType="Boolean" Facade="False Constant" Id="40" Label="41" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>False</p.Data>
+					<BooleanBehavior />
+				</Literal>
+				<NodeLabel AttachedTo="40" Bounds="230 127 30 15" Id="41" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>stop</p.Text>
+				</NodeLabel>
+				<Wire Id="42" Joints="N(40:Out)|(255,150) N(39:Input)|(265,150)" xmlns="http://www.ni.com/PlatformFramework" />
+				<RandomNumber Bounds="50 50 30 30" Id="43" />
+				<Multiply Bounds="105 60 30 30" Id="44" Terminals="o=49, c0t0v=45, c1t0v=48" />
+				<Wire Id="45" Joints="N(43:number (0 to 1\))|(80,65) N(44:c0t0v)|(105,65)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Literal Bounds="35 90 45 15" DataType="Double" Facade="Numeric" Id="46" Label="47" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>0x4059000000000000</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+				</Literal>
+				<NodeLabel AttachedTo="46" Bounds="35 72 30 15" Id="47" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>input 1</p.Text>
+				</NodeLabel>
+				<Wire Id="48" Joints="N(46:Out)|(80,95) h(20) v(-15) N(44:c1t0v)|(105,80)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="49" Joints="N(44:o)|(135,75) h(5) v(-5) N(18:Value)|(173,70)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wait Bounds="130 125 40 40" Id="50" />
+				<Literal Bounds="55 140 45 15" DataType="UInt32" Facade="Numeric" Id="51" Label="52" xmlns="http://www.ni.com/MocCommon">
+					<p.Data>500</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+				</Literal>
+				<NodeLabel AttachedTo="51" Bounds="55 122 30 15" Id="52" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>milliseconds to wait</p.Text>
+				</NodeLabel>
+				<Wire Id="53" Joints="N(51:Out)|(100,145) N(50:time to wait)|(130,145)" xmlns="http://www.ni.com/PlatformFramework" />
+			</WhileLoop>
+		</BlockDiagram>
+		<HtmlFrontPanel Height="[float]480" Id="14" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" UpdatedRootPage="[string]&lt;!DOCTYPE html&gt;&#xA;&lt;html lang=&quot;en&quot;&gt;&#xA;&#xA;    &lt;head&gt;&#xA;&#xA;        &lt;meta charset=&quot;utf-8&quot;&gt;&#xA;        &lt;!---Read only section. Source panel edits to these document properties will not be persisted--&gt;&#xA;        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&#xA;        &lt;title&gt;Efficiency&lt;/title&gt;&#xA;        &lt;!---End read only section. Additional scripts or document properties can be added outside this section--&gt;&#xA;&#xA;        &lt;style&gt;&#xA;            /* Read only section. Source panel edits to the content of this style tag will not be persisted */&#xA;            &#xA;            [data-ni-base-style] {&#xA;                position: absolute;&#xA;            }&#xA;            &#xA;            ni-text[ni-control-id='15'] {&#xA;                left: 84px;&#xA;                top: 20px;&#xA;                width: 168px;&#xA;                height: 56px;&#xA;                font-size: 37px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;                color: rgba(43, 48, 51, 1);&#xA;            }&#xA;            &#xA;            ni-chart[ni-control-id='19'] {&#xA;                left: 6px;&#xA;                top: 83px;&#xA;                width: 312px;&#xA;                height: 376px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;                color: rgba(43, 48, 51, 1);&#xA;            }&#xA;            &#xA;            ni-cartesian-axis[ni-control-id='20'] {&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-cartesian-axis[ni-control-id='21'] {&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-cartesian-plot[ni-control-id='22'] {&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-scale-legend[ni-control-id='26'] {&#xA;                left: 317px;&#xA;                top: 397px;&#xA;                width: 145px;&#xA;                height: 60px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-plot-legend[ni-control-id='27'] {&#xA;                left: 90px;&#xA;                top: 467px;&#xA;                width: 145px;&#xA;                height: 26px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-cursor-legend[ni-control-id='28'] {&#xA;                left: 3px;&#xA;                top: 467px;&#xA;                width: 320px;&#xA;                height: 35px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-graph-tools[ni-control-id='29'] {&#xA;                left: 8px;&#xA;                top: 85px;&#xA;                width: 120px;&#xA;                height: 30px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-label[ni-control-id='30'] {&#xA;                left: 6px;&#xA;                top: 63px;&#xA;                width: 29px;&#xA;                height: 16px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;                color: rgba(43, 48, 51, 1);&#xA;            }&#xA;            /* End read only section. To add additional styles, add a new style tag after this one. */&#xA;        &lt;/style&gt;&#xA;    &lt;/head&gt;&#xA;&#xA;    &lt;body&gt;&#xA;        &lt;div id=&quot;ni-outdated-browser-message&quot; style=&quot;display:none&quot;&gt;This browser is reporting compatibility with older browser technologies that may perform poorly if it all.&lt;/div&gt;&#xA;        &lt;div id=&quot;ni-failed-to-load-vireo-source&quot; style=&quot;display:none&quot;&gt;Unable to load required dependencies. Please verify all WebVI files are available and served using an http server or use a browser that can load files directly from the filesystem.&lt;/div&gt;&#xA;        &lt;section id=&quot;FrontPanelCanvas&quot;&gt;&#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;        &lt;/section&gt;&#xA;        &lt;link href=&quot;Resources/WebVICenter.css&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot;&gt;&#xA;        &lt;script src=&quot;Resources/WebVICenter.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;&#xA;    &lt;/body&gt;&#xA;&#xA;&lt;/html&gt;" Width="[float]320" xmlns="http://www.ni.com/NationalInstruments.LabVIEW.HtmlVI">
+			<HtmlText BaseName="[string]Text" Height="[float]56" Id="15" Left="[float]84" MinHeight="[float]11" MinWidth="[float]11" Name="[string]Light years per jump" SizeMode="[TextModelSizeMode]Fixed" Text="[string]Efficiency" TextAlignment="[TextAlignment]Left" TextWrapping="[TextWrapping]Wrap" Top="[float]20" Width="[float]168" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<FontSetting FontFamily="Segoe UI" FontSize="28" Id="16" xmlns="http://www.ni.com/PlatformFramework" />
+			</HtmlText>
+			<HtmlChart DataSource="{DataItemBinding Id=17}" Height="[float]376" Id="19" Label="[UIModel]30" Left="[float]6" TabIndex="[int]0" Top="[float]83" Width="[float]312" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<HtmlAxis Adjuster="[RangeAdjuster]ContinuousChart" Id="20" Label="[string]Time (minutes)" MajorDivisions="[UIModel]23" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 10, System.Double" ValueType="[Type]Double">
+					<HtmlRangeLabeledDivisions Id="23" LabelPresenter="[string]LVRelativeSeconds:G6&gt;&gt;0.000E+0" />
+				</HtmlAxis>
+				<HtmlAxis Adjuster="[RangeAdjuster]None" Id="21" Label="[string]MPG" MajorDivisions="[UIModel]24" Orientation="[SMOrientation]Vertical" Range="[IRange]0, 100, System.Double" ValueType="[Type]Double">
+					<HtmlRangeLabeledDivisions Id="24" LabelPresenter="[string]LVRelativeSeconds:G6&gt;&gt;0.000E+0" />
+				</HtmlAxis>
+				<HtmlPlot HorizontalScale="[UIModel]20" Id="22" Label="[string]MPG" VerticalScale="[UIModel]21">
+					<HtmlPlotRenderer BarBaseline="[FillBaseline]Zero" BarFill="[SMSolidColorBrush]#ff3ab878" Id="25" LineThickness="[double]1" />
+				</HtmlPlot>
+			</HtmlChart>
+			<HtmlScaleLegend Graph="[UIModel]19" Height="[float]60" Id="26" Left="[float]317" MinWidth="[float]145" Top="[float]397" Visible="[bool]False" Width="[float]145" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<HtmlPlotLegend Graph="[UIModel]19" Height="[float]26" Id="27" Left="[float]90" MinWidth="[float]145" Top="[float]467" Visible="[bool]False" Width="[float]145" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<HtmlCursorLegend Graph="[UIModel]19" Height="[float]35" Id="28" Left="[float]3" MinWidth="[float]320" Top="[float]467" Visible="[bool]False" Width="[float]320" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<HtmlGraphTools Graph="[UIModel]19" Height="[float]30" Id="29" Left="[float]8" Top="[float]85" Visible="[bool]False" Width="[float]120" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<HtmlLabel Height="[float]16" Id="30" LabelOwner="[UIModel]19" Left="[float]6" Text="[string]Chart" Top="[float]63" Visible="[bool]False" Width="[float]29" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+		</HtmlFrontPanel>
+		<DataItem AdaptToDiagramType="True" BufferSize="10" DataType="Double" Id="17" Name="Chart" xmlns="http://www.ni.com/MocCommon" />
+	</VirtualInstrument>
+</SourceFile>
