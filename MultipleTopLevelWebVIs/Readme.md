@@ -3,7 +3,7 @@
 [![Multiple Top-Level WebVIs Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/Builds/Web%20Server/Configuration1/MultipleTopLevelWebVIs/)
 [![Multiple Top-Level WebVIs README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/MultipleTopLevelWebVIs)
 
-This example demonstrates usage of multiple Top-Level WebVIs in a NXG Web Application configured Component.
+This example demonstrates usage of multiple Top-Level WebVIs in a NXG Web Application.
 Each Top-Level WebVI is built into a separate HTML file and the Hyperlink control is used to create clickable links between the different Top-Level WebVIs.
 The example determines the correct URL to use for a Hyperlink control by examining the Relative URL property available for each item in the Component.
 
@@ -24,7 +24,7 @@ The example determines the correct URL to use for a Hyperlink control by examini
 - Test the Top-Level WebVIs
   - In the **Project Files** tab double-click the **System Designer**
   - In the **Web Server** target right click the **MultipleTopLevelVIs.gcomp** item and click **Run Web Component**
-    <br> _Note: In the LabVIEW NXG Beta 2.0 Release clicking **Run Web Component** will open all the Top-Level WebVIs in your default browser at the same time_
+    <br> _Note: In the LabVIEW NXG Beta 2.0 Release clicking **Run Web Component** will open all the Top-Level WebVIs in your default browser at once_
     <!-- TODO DE12779: Performing Run Web Component opens all Top-Level Vis at the same time -->
 - Build Web application
   - Open **MultipleTopLevelWebVIs.gcomp**
@@ -32,7 +32,7 @@ The example determines the correct URL to use for a Hyperlink control by examini
   - Click Build
 
 # Hosting
-Place the entire `MultipleTopLevelWebVIs` directory built under `Builds/Web Server/Configuration1/` to any Web server of your choosing.
+Copy the entire `MultipleTopLevelWebVIs` directory built under `Builds/Web Server/Configuration1/` to any Web Server of your choosing.
 ## Hosting with LabVIEW 2009-2017 Web Server
 1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`
 2. Copy the `MultipleTopLevelWebVIs` directory into the `www` directory
@@ -66,3 +66,42 @@ These files were added to center the content of the WebVI in a deployed page.
 
 Note: The `WebVICenter.css` contains hard coded panel dimensions.
 Please see the documentation in both `WebVICenter.css` and `WebVICenter.js` if you would like to change the panel dimensions of the WebVI.
+
+The following is the contents of the files with reduced documentation as an example. For more documentation see the [WebVICenter.css](https://github.com/ni/webvi-examples/blob/master/MultipleTopLevelWebVIs/MultipleTopLevelWebVIs.gcomp/Resources/WebVICenter.css) and [WebVICenter.js](https://github.com/ni/webvi-examples/blob/master/MultipleTopLevelWebVIs/MultipleTopLevelWebVIs.gcomp/Resources/WebVICenter.js) files.
+
+### WebVICenter.css
+When the webvi-center class is present on the body the layout of the page changes to a single column with centered elements.
+
+```css
+body.webvi-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body.webvi-center #FrontPanelCanvas {
+    position: relative;
+    width: 320px; /* Must be updated if panel dimensions are changed */
+    height: 480px; /* Must be updated if panel dimensions are changed */
+    display: block;
+}
+```
+
+### WebVICenter.js
+Determines if the page is running in the browser and adds the webvi-center class to the body element of the WebVI
+
+```javascript
+(function () {
+    'use strict';
+
+    var niWebAppElement = document.querySelector('ni-web-application');
+    if (niWebAppElement === null) {
+        return;
+    }
+
+    if (niWebAppElement.getAttribute('location').toLowerCase() !== 'browser') {
+        return;
+    }
+
+    document.body.classList.add('webvi-center');
+}());
+```
