@@ -1,5 +1,5 @@
 # Call LabVIEW Web Service
-This example demonstrates how to create a Web VI which can make requests to a LabVIEW web service, and how to create a LabVIEW 2016 web service which can respond to requests from a Web VI.
+This example demonstrates how to create a WebVI which can make requests to a LabVIEW web service, and how to create a LabVIEW 2016 web service which can respond to requests from a WebVI.
 
 # Dependencies
 - LabVIEW NXG 2.0 Beta
@@ -10,7 +10,7 @@ This example demonstrates how to create a Web VI which can make requests to a La
 - Open "Call LabVIEW Web Service\Web Service\Web Service.lvproj" in LabVIEW 2016.
 - In the Project Explorer, right-click **Web Server** and click **Start**
 - Open "Call LabVIEW Web Service\WebVI\Call LabVIEW Web Service.lvproject" in LabVIEW NXG.
-- Run the Web VI
+- Run the WebVI
   - Open **Main.gviweb** and click the **Run** button
 - Build Web application
   - Open WebApp.gcomp
@@ -22,7 +22,7 @@ This example demonstrates how to create a Web VI which can make requests to a La
 The web service is built in LabVIEW 2016, and consists of two HTTP endpoint methods (one GET and one POST), as well as a few sub VIs. 
 
 ### Output Type
-The Output Type must be configured correctly in order for a LabVIEW web service to send data back to a Web VI.
+The Output Type must be configured correctly in order for a LabVIEW web service to send data back to a WebVI.
 - In the Project Explorer, right-click on **Web Server** and click **Properties**
   - Web Server must be stopped before editing properties
 - Navigate to **HTTP Method VI Settings** in the left menu
@@ -34,18 +34,18 @@ The Output Type must be configured correctly in order for a LabVIEW web service 
     - This option returns data through VI output terminals and performs serialization automatically
 
 ### CORS
-Cross-Origin Resource Sharing (CORS) allows a Web Service VI to respond to HTTP requests from a different origin than where it is hosted. This configuration is necessary when your Web VI is not being hosted by the LabVIEW 2016 web server. AddCORSHeaders.vi adds HTTP headers to allow requests from any origin. 
+Cross-Origin Resource Sharing (CORS) allows a Web Service VI to respond to HTTP requests from a different origin than where it is hosted. This configuration is necessary when your WebVI is not being hosted by the LabVIEW 2016 web server. AddCORSHeaders.vi adds HTTP headers to allow requests from any origin. 
 
-## The Web VI
-The web VI makes requests to both of the VI endpoints, and displays the returned data. For the POST method, it collects some parameter information from the front panel controls and serializes it into the POST buffer. 
+## The WebVI
+The WebVI makes requests to both of the VI endpoints, and displays the returned data. For the POST method, it collects some parameter information from the front panel controls and serializes it into the POST buffer. 
 
 ## Important Directories
 - **`Web Service`**: Contains LabVIEW 2016 web service project.
-- **`WebVI`**: Contains LabVIEW NXG Web VI project
-- **`WebVI/Builds/Web Server/Configuration1/WebApp`**: This is the built Web VI, containing HTML, Javascript, the compiled block diagram, and other web content.
+- **`WebVI`**: Contains LabVIEW NXG WebVI project
+- **`WebVI/Builds/Web Server/Configuration1/WebApp`**: This is the built WebVI, containing HTML, Javascript, the compiled block diagram, and other web content.
 
 # Usage
-- Leverage LabVIEW 2016 to perform operations that a Web VI can't do alone, like:
+- Leverage LabVIEW 2016 to perform operations that a WebVI can't do alone, like:
   - Complex data analysis, signal processing
   - Interact with hardware
   - Read/write data to/from filesystems, databases

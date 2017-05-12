@@ -13,7 +13,7 @@ On the front panel it displays a summary of the results in a data grid indicator
 # Setup
 - Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repo to your machine.
 - Open `Call 3rd Party Web Service/Call 3rd Party WebService.lvproject`
-- Run the Web VI
+- Run the WebVI
   - Open **Main.gviweb** and click the **Run** button
 - Build Web application
   - Open WebApp.gcomp
@@ -25,15 +25,15 @@ A web service is a collection of functions that can be called through the web to
 
 Many web services are open and public like the Earthquake API. Others require registration and API keys to restrict access to specific users and to limit the load on the service.
 
-To call a web service in the Web VI, we use the `HTTP Get` VI, passing in the URL of the service and receiving a string with the result of the call. There are examples of this in several VIs, including `GetRecentEarthquakes.gviweb`.
+To call a web service in the WebVI, we use the `HTTP Get` VI, passing in the URL of the service and receiving a string with the result of the call. There are examples of this in several VIs, including `GetRecentEarthquakes.gviweb`.
 ![alt text](img/HTTPGet.png "Calling Web Service using HTTP Get")
 
 Web services return data in a variety of formats like JSON, XML, CSV, and YML. The USGS Earthquake service uses JSON, which LabVIEW is able to parse using `Unflatten from JSON`. We must specify the structure the data is expected to take and can also provide a path to limit the search to a specific part of the data. There are examples of this in several VIs, including `Get Earthquake Count.gviweb`.
 ![alt text](img/UnflattenJSON.png "Parsing JSON using Unflatten from JSON")
 
-If the web service returns data in a format other than JSON, we can still extract it in the Web VI using functions from the String palette. There is an example of this in `Get Map URL.gviweb`.
+If the web service returns data in a format other than JSON, we can still extract it in the WebVI using functions from the String palette. There is an example of this in `Get Map URL.gviweb`.
 
-Once the data has been retrieved and converted into LabVIEW types, we display it on the Top Level Web VI panel, `Main.gviweb`, using indicators from the panel palettes. This example uses a data grid to show all earthquakes and a URL Image to display the map of the surrounding area.
+Once the data has been retrieved and converted into LabVIEW types, we display it on the Top Level WebVI panel, `Main.gviweb`, using indicators from the panel palettes. This example uses a data grid to show all earthquakes and a URL Image to display the map of the surrounding area.
 
 ![alt text](img/Indicators.png "Wiring to indicators")
 

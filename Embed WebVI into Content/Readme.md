@@ -1,5 +1,5 @@
 # Embed a WebVI into Web Content
-This example demonstrates embedding a Web VI built using LabVIEW NXG 2.0 Beta into an entirely different static Web page. WebVIs are composed of three basic parts: HTML5 Custom Elements which compose the view of the page, the WebVI block diagram (.via.txt) which provides the client side logic, and the JavaScript and CSS files that make the Web application run. Because these are the same basic building blocks (san via.txt) of all other Web pages you can pull the Web VI apart and embed it with any Web content.
+This example demonstrates embedding a WebVI built using LabVIEW NXG 2.0 Beta into an entirely different static Web page. WebVIs are composed of three basic parts: HTML5 Custom Elements which compose the view of the page, the WebVI block diagram (.via.txt) which provides the client side logic, and the JavaScript and CSS files that make the Web application run. Because these are the same basic building blocks (san via.txt) of all other Web pages you can pull the WebVI apart and embed it with any Web content.
 
 # Dependencies
 - LabVIEW NXG 2.0 Beta
@@ -9,7 +9,7 @@ This example demonstrates embedding a Web VI built using LabVIEW NXG 2.0 Beta in
 # Setup
 - Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repo to your machine.
 - Open Embed WebVI into Content/WebVI/Embed WebVI into Content.lvproject
-- Run the Web VI
+- Run the WebVI
   - Open **Main.gviweb** and click the **Run** button
 - Build Web application
   - Open WebApp.gcomp
@@ -40,7 +40,7 @@ This page is structured like many common marketing pages.
 ```html
 <div class="section" id="hero">
   <div class="container">
-    <h1>Web VI</h1>
+    <h1>WebVI</h1>
   </div>
   <div class="right-content container">
     <div>LabVIEW on the Web</div>
@@ -82,11 +82,11 @@ The content within a `.container` does not reflow as the page resizes, but it do
 }
 ```
 
-## Authoring the Web VI
-This example leverages LabVIEW's absolute layout system for the layout of the controls and indicators and places these within a `.container` that is laid out relative to the rest of the page content. This is not strictly necessary since the Web VI custom elements can be incorporated into a page without any absolute layout.
+## Authoring the WebVI
+This example leverages LabVIEW's absolute layout system for the layout of the controls and indicators and places these within a `.container` that is laid out relative to the rest of the page content. This is not strictly necessary since the WebVI custom elements can be incorporated into a page without any absolute layout.
 
 ### Approximating Relative Layout
-To provide feedback to the 375px bounds of `.content-item`, CSS has been added to the Web VI using the **HTML** aspect of the Web VI.
+To provide feedback to the 375px bounds of `.content-item`, CSS has been added to the WebVI using the **HTML** aspect of the WebVI.
 ```html
 <style>
   .front-panel {
