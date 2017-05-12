@@ -46,7 +46,7 @@ Copy the entire `MultipleTopLevelWebVIs` directory built under `Builds/Web Serve
 # Details
 
 ## File Name and Relative URL
-Each Top-Level WebVIs will create a corresponding HTML page where the organization of those pages is determined by position in the Component.
+Each Top-Level WebVI will create a corresponding HTML page where the organization of those pages is determined by position of the WebVI in the Component.
 As can be seen in the following screenshot you have the ability to change the generated File Name for each WebVI as well as a seeing the Relative URL used for linking.
 
 ![Main.gviweb Right Rail View in Component showing File Name and Relative URL properties](ComponentRightRail.png)
@@ -62,7 +62,7 @@ For example, on a compatible web server a user can visit `www.example.com/Multip
 
 ## Centering the page in Web Browsers
 The Source Panel of each of the WebVIs in this example was modified to include a CSS file called `WebVICenter.css` and a JS file called `WebVICenter.js`.
-These files were added to center the content of the WebVI in a deployed page.
+These files were added to center the content of the WebVI when viewed outside of the LabVIEW NXG editor in a Web Browser.
 
 Note: The `WebVICenter.css` contains hard coded panel dimensions.
 Please see the documentation in both `WebVICenter.css` and `WebVICenter.js` if you would like to change the panel dimensions of the WebVI.
