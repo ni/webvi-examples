@@ -1,34 +1,53 @@
 # Customize WebVI with CSS
+This example demonstrates how to customize the HTML output of a WebVI using CSS. 
 
-One of the main components of WebVIs is a html panel that is used to display HTML5 custom elements, that can be connected to the block diagram. One of the main advantages of leveraging the styling to the web is the separation of concerns. Meaning, a customer can create a custom CSS file that can be shared across the organization or even among other users to build more and more styles and layouts.
+One of the main parts of a WebVI is an HTML ouput that displays HTML5 Custom Elements. One of the advantages of using CSS in a web application is to the separate content from style. For example, you could create a custom CSS file that is shared across the organization or even among other users to build more and more styles and layouts.
+
+# Usage
+
+You can use this approach in your own projects if you are familiar with CSS and how it interacts with HTML. For example, you can customize controls and indicators to match a corporate color scheme or make them accessible for color-blind users or in low contrast situations.
 
 # Dependencies
 - LabVIEW NXG 2.0 Beta
 - LabVIEW 2009-2017 (Required for hosting only)
 
 # Setup
-- Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repo to your machine.
-- Open `Customize with CSS/Customize with CSS.lvproject`
-    - Run the Web VI
-        - Open Main.gviweb and click the Run button
-    - Build Web application
-        - Open WebApp.gcomp
-        - Switch to the Document tab
-        - Click Build
+1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
+2. Open `Customize with CSS/Customize with CSS.lvproject`.
+3. On the **Project Files** tab, expand `WebApp.gcomp` and open `Main.gviweb`.
+4. Click the **Run** button.
+5. Build the web application.  
+  a. On the **Project Files** tab, double-click `WebApp.gcomp` to open the web application component.  
+  b. On the **Document** tab, click **Build**.  
+**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building.
 
 # Hosting
 
-Place the entire contents of the `Customize with CSS/Builds/Web Server/Configuration1/WebApp` directory within any Web server of your choosing.
+Copy and paste the entire `Customize with CSS/Builds/Web Server/Configuration1/WebApp` directory to any web server you want.
 
 ## Hosting with LabVIEW 2009-2017 Web Server
 
-1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`
-2. Copy `Customize with CSS/Builds/Web Server/Configuration1/WebApp` directory into the `www` directory
-3. Open a Web Browser and navigate to `http://localhost:8080/WebApp/index.html`
+1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
+2. Copy `Customize with CSS/Builds/Web Server/Configuration1/WebApp` directory into the `www` directory.
+3. Open a web browser and navigate to `http://localhost:8080/WebApp/index.html`.  
+**Note:** NI recommends using Mozilla Firefox to view HTML files generated from a web application project. 
 
 # Details
 
-The next section describes the CSS added to the **Html** panel as a `<style>` tag. Except here is commented to better explain it.
+## Adding custom CSS rules to a WebVI
+1. Switch to the HTML editor of a WebVI.
+2. Enter the following lines between the `<head></head>` tags.  
+    ```css
+        <style>
+            [selector] {
+                [property]: [value];
+            }
+        </style>
+    ```
+3. Click the **Apply** button on the top right corner of the document toolbar and build the web application again. Refer to the [setup section](#Setup) for instructions on building a web application. 
+
+## CSS rule behavior
+The following section describes the behavior of  different CSS rules you can add to the **HTML** editor of the WebVI.
 
 Change the background color of the whole document.
 ```css
@@ -37,16 +56,16 @@ Change the background color of the whole document.
     }
 ```
 
-Let's give the labels a little bit more weight and change the color. Notice the extra `label` selector to override another rule with less [specificity](https://www.w3.org/TR/css3-selectors/#specificity).
+Change the weight and color of the label text. Note the extra `label` selector to override another rule with less [specificity](https://www.w3.org/TR/css3-selectors/#specificity).
 ```css
     ni-label label {
         color: #FF9800;
         font-weight: 700
     }
     
-    /* Next two rules, change color of labels and free text */
+    /* The next two rules change the color of label text and free text. */
     .jqx-label {
-        color: #FF9800 !important; /* override all other rules */
+        color: #FF9800 !important; /* Override all other rules. */
     }
 
     ni-text div {
@@ -54,8 +73,7 @@ Let's give the labels a little bit more weight and change the color. Notice the 
     }
 ```
 
-
-Now change the color of all text in scales, like charts, graphs, 
+Change the color of all text in scales, such as in charts and graphs.
 ```css
     ni-intensity-graph .flot-text {
         color: #FF9800;
@@ -74,16 +92,16 @@ Now change the color of all text in scales, like charts, graphs,
     }
 ```
 
-Set the color for all tick marks that are in scales
+Change the color for all tick marks in scales.
 ```css
     .jqx-scale .jqx-tick {
         background: #FF9800;
     }
 ```
 
-Some special treatment for the charts and graphs that are contained in a white rectangle, for these we'll make them transparent and adjust the padding to use the space better.
+Replace the white background for charts and graphs with a transparent background and change the padding around the charts and graphs.
 ```css
-    /* Get rid of the white background for charts and graphs */
+    /* Make the white background for charts and graphs transparent. */
     ni-intensity-graph {
         background-color: transparent;
         border-color: transparent;
@@ -101,7 +119,6 @@ Some special treatment for the charts and graphs that are contained in a white r
         color: #FF9800 !important;
     }
     
-
     ni-data-grid jqx-checkbox .jqx-container {
         height: inherit;
         position: inherit;
@@ -111,7 +128,8 @@ Some special treatment for the charts and graphs that are contained in a white r
         margin: auto;
     }
 ```
-Change the accent color of the controls. 
+
+Change the accent color of controls.
 ```css
     
     jqx-slider .jqx-track .jqx-value {
@@ -147,9 +165,3 @@ Change the accent color of the controls.
         background-color: #FF9800;
     }
 ```
-
-Finally put all of these CSS rules in the HTML panel, press the `Apply` button on the upper right corner and build the component again, following instructions from the [setup section](#Setup). 
-
-# Usage
-
-This approach can be replicated by any LabVIEW NXG developer that is already familiar with CSS and how they interact with HTML. For example changing the controls to match corporate colors or special considerations like color-blindness or low contrast situations.
