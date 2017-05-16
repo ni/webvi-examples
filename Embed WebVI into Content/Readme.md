@@ -1,38 +1,48 @@
 # Embed a WebVI into Web Content
-This example demonstrates embedding a WebVI built using LabVIEW NXG 2.0 Beta into an entirely different static Web page. WebVIs are composed of three basic parts: HTML5 Custom Elements which compose the view of the page, the WebVI block diagram (.via.txt) which provides the client side logic, and the JavaScript and CSS files that make the Web application run. Because these are the same basic building blocks (san via.txt) of all other Web pages you can pull the WebVI apart and embed it with any Web content.
+This example demonstrates how to embed a WebVI built using LabVIEW NXG 2.0 Beta into an static web page. 
+
+WebVIs are composed of three basic parts: 
+- HTML5 Custom Elements
+- WebVI diagram (.via.txt)
+- JavaScript and CSS files. 
+
+Because these are the same basic building blocks of all other web pages, you can pull the WebVI apart and embed it in any web content.
 
 # Dependencies
 - LabVIEW NXG 2.0 Beta
 - LabVIEW 2009-2017 (Required for hosting only)
-- Skyline (Required for hosting only)
+- NI SystemLink Server (Required for hosting only)
 
 # Setup
-- Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repo to your machine.
-- Open Embed WebVI into Content/WebVI/Embed WebVI into Content.lvproject
-- Run the WebVI
-  - Open **Main.gviweb** and click the **Run** button
-- Build Web application
-  - Open WebApp.gcomp
-  - Switch to the **Document** tab
-  - Click Build
+1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
+2. Open `Embed WebVI into Content/WebVI/Embed WebVI into Content.lvproject`.
+3. On the **Project Files** tab, expand `WebApp.gcomp` and open `Main.gviweb`.
+4. Click the **Run** button.
+5. Build the web application.
+  a. On the **Project Files** tab, double-click `WebApp.gcomp` to open the web application component.
+  b. On the **Document** tab, click **Build**.
+**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building.
 
 # Hosting
-Place the entire contents of the `Embed WebVI into Content` directory within any Web server of your choosing.
-## Hosting with LabVIEW 2009-2017 Web Server
-1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`
-2. Copy the `Embed WebVI into Content` directory into the `www` directory
-3. Open a Web Browser and navigate to `http://localhost:8080/Embed%20WebVI%20into%20Content/index.html`
+Copy and paste the entire `Embed WebVI into Content` directory to any web server you want.
 
-## Hosting with Skyline Web Server
-1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`
-2. Copy the `Embed WebVI into Content` directory into the `htdocs` directory
-3. Open a Web Browser and navigate to `http://localhost/Embed%20WebVI%20into%20Content/index.html`
+## Hosting on the LabVIEW 2009-2017 Web Server
+1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
+2. Copy the `Embed WebVI into Content` directory into the `www` directory.
+3. Open a web browser and navigate to `http://localhost:8080/Embed%20WebVI%20into%20Content/index.html`.
+**Note:** NI recommends using Mozilla Firefox to view HTML files generated from a web application project. 
+
+## Hosting on the NI SystemLink Server
+1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
+2. Copy the `Embed WebVI into Content` directory into the `htdocs` directory.
+3. Open a web browser and navigate to `http://localhost/Embed%20WebVI%20into%20Content/index.html`.
+**Note:** NI recommends using Mozilla Firefox to view HTML files generated from a web application project. 
 
 ## Published Example
-The fully assembled and hosted Web application can be found on [Github Pages]({{site.github.url}}/Embed%20WebVI%20into%20Content/index.html) TODO: Double check link once Github pages is up and running. 
+You can find the fully assembled and hosted web application on [Github Pages]({{site.github.url}}/Embed%20WebVI%20into%20Content/index.html) TODO: Double check link once Github pages is up and running. 
 
 # Details
-The following describes how the static Web page was built including including how parts of the WebVI are pulled into the page.
+The following sections describe how the static web page was built including including how parts of the WebVI are pulled into the page.
 
 ## The Basic Structure of the Static Page
 This page is structured like many common marketing pages.
