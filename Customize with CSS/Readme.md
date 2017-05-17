@@ -44,7 +44,7 @@ Copy and paste the entire `Customize with CSS/Builds/Web Server/Configuration1/W
             }
         </style>
     ```
-3. Click the **Apply** button on the top right corner of the document toolbar and build the web application again. Refer to the [setup section](#Setup) for instructions on building a web application. 
+3. Click the **Apply** button on the top right corner of the document toolbar and build the web application again. Refer to the [setup section](# Setup) for instructions on building a web application. 
 
 ## CSS rule behavior
 The following section describes the behavior of  different CSS rules you can add to the **HTML** editor of the WebVI.
