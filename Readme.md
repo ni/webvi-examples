@@ -22,14 +22,14 @@ One of the main parts of a WebVI is an HTML output that displays HTML5 Custom El
 This example demonstrates how to embed custom web content into the WebVI panel using LabVIEW NXG 2.0 Beta. WebVIs use HTML to define and describe the content of the panel that is loaded in a web page. This means that you can add custom HTML content to appear alongside the LabVIEW-generated HTML.
 
 # Embed a WebVI into Web Content
-This example demonstrates how to embed a WebVI built using LabVIEW NXG 2.0 Beta into an static web page. 
+This example demonstrates how to embed the output of a WebVI built using LabVIEW NXG 2.0 Beta into an static web page. 
 
-WebVIs are composed of three basic parts: 
-- HTML5 Custom Elements
-- WebVI diagram (`.via.txt`)
-- JavaScript and CSS files. 
+The build output of a WebVI includes three basic parts: 
+- HTML5 custom elements
+- Compiled WebVI diagram (`.via.txt`)
+- JavaScript and CSS files used in the web application 
 
-Because these are the same basic building blocks of all other web pages, you can pull the WebVI apart and embed it in any web content.
+Because WebVIs share the same basic building blocks as other web pages, you can embed WebVI output into any web content.
 
 # Incorporate User Resource into WebVI
 This example demonstrates how to add resource files such as images, CSS files, JavaScript files, and HTML files to your web application component and reference them in a WebVI without needing to upload these files to a web server.
