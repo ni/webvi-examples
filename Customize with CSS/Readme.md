@@ -152,4 +152,4 @@ Finally put all of these CSS rules in the HTML panel, press the `Apply` button o
 
 # Usage
 
-This approach can be replicated by any LabVIEW NXG that is already familiar with CSS and how they interact with HTML. For example changing the controls to match corporate colors or special considerations like color-blindness or low contrast situations.
+This approach can be replicated by any LabVIEW NXG developer that is already familiar with CSS and how they interact with HTML. For example changing the controls to match corporate colors or special considerations like color-blindness or low contrast situations.
