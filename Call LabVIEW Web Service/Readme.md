@@ -27,7 +27,7 @@ Use LabVIEW 2016 to create web services that do what WebVIs can't do, such as:
 ## Important Directories
 - **`Web Service`** &mdash; Contains the LabVIEW 2016 web service project.
 - **`WebVI`** &mdash; Contains the LabVIEW NXG 2.0 Beta web application project, which includes the WebVI.
-- **`WebVI/Builds/Web Server/Configuration1/WebApp`** &mdash; Contains the built web application, which consists of HTML, Javascript, the compiled diagram, and other web content.
+- **`WebVI/Builds/Web Server/Configuration1/WebApp`** &mdash; Contains the built web application, which consists of HTML, JavaScript, the compiled diagram, and other web content.
 
 ## The Web Service
 The web service is created in LabVIEW 2016 and consists of two HTTP endpoint methods (one `GET` and one `POST`) and a few subVIs. 
