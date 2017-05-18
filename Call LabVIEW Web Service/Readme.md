@@ -18,8 +18,8 @@ Use LabVIEW 2016 to create web services that do what WebVIs can't do, such as:
 3. In the **Project Explorer**, right-click **Web Server** and select **Start**.
 4. Open `Call LabVIEW Web Service\WebVI\Call LabVIEW Web Service.lvproject` in LabVIEW NXG 2.0 Beta.
 5. Open `Main.gviweb` and click the **Run** button.
-6. Build the web application.
-  a. Open `WebApp.gcomp`.
+6. Build the web application.  
+  a. Open `WebApp.gcomp`.  
   b. On the **Document** tab, click **Build**.
 
 # Details
@@ -38,10 +38,10 @@ You must configure the Output Type correctly in order for a LabVIEW web service 
 **Note:** The Web Server must be stopped before you can edit its properties.
 2. On the left navigation menu, select **HTTP Method VI Settings**.
 3. Select a Web Service VI from the table and click the **Output Type** tab under **Web Service VI Properties**.
-4. Choose one of the following options.
-  a. Option 1 (recommended): Select **Stream** and enable the **Use headers** and **Buffered** checkboxes.
-**Note:** This option requires the web service VI to flatten return data to JSON and return it through `Write Response.vi`.
-  b. Option 2: Select **Terminal** and select **JSON** as the output format.
+4. Choose one of the following options.  
+  a. Option 1 (recommended): Select **Stream** and enable the **Use headers** and **Buffered** checkboxes.  
+**Note:** This option requires the web service VI to flatten return data to JSON and return it through `Write Response.vi`.  
+  b. Option 2: Select **Terminal** and select **JSON** as the output format.  
 **Note:** This option returns data through VI output terminals and serializes LabVIEW data into JSON automatically.
 
 ### CORS

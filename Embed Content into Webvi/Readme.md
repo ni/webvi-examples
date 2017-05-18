@@ -10,7 +10,7 @@ This example demonstrates how to embed custom web content into the WebVI panel u
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
 2. Open `Embed WebVI into Content/WebVI/Embed WebVI into Content.lvproject`.
 3. On the **Project Files** tab, expand `WebApp.gcomp` and open `Main.gviweb`.
-4. Click the **Run** button.  
+4. Click the **Run** button.
 5. Build the web application.  
   a. On the **Project Files** tab, double-click `WebApp.gcomp` to open the web application component.  
   b. On the **Document** tab, click **Build**.  

@@ -14,8 +14,8 @@ On the panel, this WebVI displays a summary of the results in a data grid and a 
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
 2. Open `Call 3rd Party Web Service/Call 3rd Party WebService.lvproject`
 3. Open `Main.gviweb` and click the **Run** button.
-4. Build the web application.
-  a. Open `WebApp.gcomp`.
+4. Build the web application.  
+  a. Open `WebApp.gcomp`.  
   b. On the **Document** tab, click **Build**.
 
 # Details
@@ -27,11 +27,11 @@ To call a web service in a WebVI, this example uses the `HTTP Get` node to pass 
 ![alt text](img/HTTPGet.png "Calling Web Service using HTTP Get")
 
 Web services return data in a variety of formats, such as JSON, XML, CSV, and YML. The USGS Earthquake service returns JSON, which LabVIEW can parse using the `Unflatten from JSON` node. To use `Unflatten from JSON`, you must specify the structure the data is expected to take and can provide a path to limit the search to a specific part of the data. There are examples of this in several WebVIs, including `Get Earthquake Count.gviweb`.
-![alt text](img/UnflattenJSON.png "Parsing JSON using Unflatten from JSON")
+![alt text](img/UnflattenJSON.PNG "Parsing JSON using Unflatten from JSON")
 
 If the web service returns data in a format other than JSON, you can still parse it in the WebVI using String nodes. There is an example of this in `Get Map URL.gviweb`.
 
 Once the data has been retrieved and converted into LabVIEW data types, this example displays the data in indicators on the panel of the top-level WebVI, `Main.gviweb`. This example uses a data grid to show all earthquakes and a URL Image indicator to display a map of the surrounding area.
 
-![alt text](img/Indicators.png "Wiring to indicators")
+![alt text](img/Indicators.PNG "Wiring to indicators")
 

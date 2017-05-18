@@ -25,33 +25,33 @@ Refer to the following sections to learn how to add resource files to a web appl
 1. Open or create a web application project.
 2. On the **Project Files** tab, double-click `WebApp.gcomp` to open the web application component.
 3. Decide on a folder structure for your files. You can add all files to the same folder, or you can organize files in subfolders, such as a `styles` folder for CSS files or an `images` folder for image files.
-4. _(Optional)_ Create namespaces that correspond to each folder in your folder structure.
-a. In the component document, right-click an existing namespace and select **Add Namespace**.
+4. _(Optional)_ Create namespaces that correspond to each folder in your folder structure.  
+a. In the component document, right-click an existing namespace and select **Add Namespace**.  
 b. Repeat the previous step for every namespace you want to create.
-5. In the component document, right-click the namespace you want to add resource files to and select **Import File(s)**.
+5. In the component document, right-click the namespace you want to add resource files to and select **Import File(s)**.  
 **Note:** You must save your component document before you can import files.
 
 ### Referencing resource files in a WebVI
 You can reference a resource file using its relative URL. The relative URL is determined by the namespace of the WebVI and the namespace of the resource file.  
 
 Examples:
-- **WebVI:** `Application/Main.gviweb`
-  **Resource file:** `Application/myImage.jpg`
-  **Relative URL:** `myImage.jpg`
-- **WebVI:** `Application/ChildNamespace1/Main.gviweb`
-  **Resource:** `Application/ChildNamespace2/myImage.jpg`
-  **Relative URL:** `../ChildNamespace2/myImage.jpg`
+- **WebVI:** `Application/Main.gviweb`  
+  **Resource file:** `Application/myImage.jpg`  
+  **Relative URL:** `myImage.jpg`  
+- **WebVI:** `Application/ChildNamespace1/Main.gviweb`  
+  **Resource:** `Application/ChildNamespace2/myImage.jpg`  
+  **Relative URL:** `../ChildNamespace2/myImage.jpg`  
 
 #### Referencing images (*.png, *.bmp, *.jpg, *.jpeg, *.gif, *.svg, *.webp, *.ico)
 1. On the panel of a WebVI, add a **URL Image** control.
-3. Select the URL image control. On the **Item** tab, set **Source URL** to the relative URL of the image you you want to reference.  
+2. Select the URL image control. On the **Item** tab, set **Source URL** to the relative URL of the image you you want to reference.  
 **Note:** The source URL needs to be URL-encoded. For example, `my image.jpg` should be `my%20image.jpg`.
 
 #### Referencing CSS files (*.css)
-1. In a WebVI, switch to the HTML editor. 
+1. In a WebVI, switch to the HTML editor.  
 **Note:** You can select the active editor from the document toolbar.
 2. Add the following line in between the `<head></head>` tags:  
-`<link rel="stylesheet" type="text/css" href="[your-stylesheet].css">`
+`<link rel="stylesheet" type="text/css" href="[your-stylesheet].css">`  
 Example: 
     ```
     <head>
@@ -61,10 +61,10 @@ Example:
     ```
 
 #### Referencing JavaScript files (*.js)
-1. In a WebVI, switch to the HTML editor. 
+1. In a WebVI, switch to the HTML editor.  
 **Note:** You can select the active editor from the document toolbar.
 2. Add the following line in between the `<head></head>` tags:  
-`<script src="[your-script].js" type="text/javascript"></script>`
+`<script src="[your-script].js" type="text/javascript"></script>`  
 Example:
     ```
     <head>
