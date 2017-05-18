@@ -17,13 +17,13 @@ This example demonstrates embedding a Web VI built using LabVIEW NXG 2.0 Beta in
 
 # Incorporate User Resource into WebVI
 
-<!-- The following should be equivalent to the section in webvi-examples/MultipleTopLevelVIs/Readme.md -->
-# Multiple Top-Level VIs
-[![Multiple Top-Level VIs Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/MultipleTopLevelVIs/Builds/Web%20Server/Configuration1/MultipleTopLevelVIs/)
-[![Multiple Top-Level VIs README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://ni.github.io/webvi-examples/MultipleTopLevelVIs/)
+<!-- The following should be equivalent to the section in webvi-examples/MultipleTopLevelWebVIs/Readme.md -->
+# Multiple Top-Level WebVIs
+[![Multiple Top-Level WebVIs Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/Builds/Web%20Server/Configuration1/MultipleTopLevelWebVIs/)
+[![Multiple Top-Level WebVIs README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/MultipleTopLevelWebVIs)
 
-This example demonstrates usage of multiple Top-Level VIs in a NXG Component.
-Each Top-Level VI is built into a separate HTML file and the Hyperlink control is used to create clickable links between the different Top-Level VIs.
-The example determines the correct url to use for a hyperlink by examining the Relative URL property available for each item in the Component.
+This example demonstrates usage of multiple Top-Level WebVIs in a NXG Web Application.
+Each Top-Level WebVI is built into a separate HTML file and the Hyperlink control is used to create clickable links between the different Top-Level WebVIs.
+The example determines the correct URL to use for a Hyperlink control by examining the Relative URL property available for each item in the Component.
 
-[![Multiple Top-Level VIs Demo Link](https://ni.github.io/webvi-examples/MultipleTopLevelVIs/MultipleTopLevelVIs.gif)](https://ni.github.io/webvi-examples/MultipleTopLevelVIs/Builds/Web%20Server/Configuration1/MultipleTopLevelVIs/)
+[![Multiple Top-Level WebVIs Demo Link](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/MultipleTopLevelWebVIs.gif)](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/Builds/Web%20Server/Configuration1/MultipleTopLevelWebVIs/)
