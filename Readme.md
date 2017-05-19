@@ -1,7 +1,5 @@
 # webvi-examples
-- Please use all of the default namespaces and directory names when building the web application in each example.
-- Fork or branch this repository and work on a single example in a single branch at a time.
-- Draft the readme for each example as you go. The readme doesn't need to be perfect, but there must be something before we can pull it in.
+The following examples show off different features that are unique to the WebVI. Each directory contains the ready to run code as well as readme documentation. If you have questions or problems, post on this GitHub repository's issues page.
 
 # Call LabVIEW Web Service
 This example demonstrates how to create a WebVI that makes requests to a LabVIEW web service, and how to create a LabVIEW 2016 web service that can respond to requests from a WebVI.
