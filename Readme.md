@@ -1,5 +1,5 @@
 # webvi-examples
-The following examples show off different features that are unique to the WebVI. Each directory contains the ready to run code as well as readme documentation. If you have questions or problems, post on this GitHub repository's issues page.
+The following examples demonstrate different ways of using WebVIs. Each directory contains example code and a readme explaining the example. If you have any questions or problems related to these examples, post on this GitHub repository's issues page.
 
 # Call LabVIEW Web Service
 This example demonstrates how to create a WebVI that makes requests to a LabVIEW web service, and how to create a LabVIEW 2016 web service that can respond to requests from a WebVI.
@@ -34,10 +34,10 @@ This example demonstrates how to add resource files such as images, CSS files, J
 
 You can also use resource files to augment the WebVI's capabilities. For example, you can add other HTML widgets or scripts and reference them in the HTML view of the WebVI.
 
-<!-- The following should be equivalent to the section in webvi-examples/MultipleTopLevelVIs/Readme.md -->
-# Multiple Top-Level VIs
-[![Multiple Top-Level WebVIs Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/MultipleTopLevelVIs/Builds/Web%20Server/Configuration1/MultipleTopLevelVIs/)
-[![Multiple Top-Level WebVIs Readme Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://ni.github.io/webvi-examples/MultipleTopLevelVIs/)
+<!-- The following should be equivalent to the section in webvi-examples/Readme.md -->
+# Multiple Top-Level WebVIs
+[![Multiple Top-Level WebVIs Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/Builds/Web%20Server/Configuration1/MultipleTopLevelWebVIs/)
+[![Multiple Top-Level WebVIs README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/MultipleTopLevelWebVIs)
 
 This example demonstrates how to create a web application with multiple pages by using multiple top-level WebVIs and Hyperlink controls to link between them. When you build the web application, each top-level WebVI generates a separate HTML file with links to the other HTML files that are generated.
 
