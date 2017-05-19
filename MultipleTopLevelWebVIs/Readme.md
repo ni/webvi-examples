@@ -42,7 +42,7 @@ Copy and paste the entire `MultipleTopLevelVIs` directory built under `<Project 
 # Details
 
 ## File Name and Relative URL
-Each of the top-level WebVIs generates a corresponding HTML file. The organization of the generated HTML files is determined by the hierarchy of the top-level WebVIs in the `WebApp.gcomp` file.
+Each of the top-level WebVIs generates a corresponding HTML file. The organization of the generated HTML files mirrors the hierarchy of WebVIs marked as top-level in the `WebApp.gcomp` file.
 
 On the **Item** tab, you can change the file name for each WebVI and view the relative URL used for linking.  
 
