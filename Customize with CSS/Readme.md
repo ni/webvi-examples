@@ -1,4 +1,5 @@
 # Customize WebVI with CSS
+[![Customize WebVI with CSS Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/Customize%20with%20CSS/Builds/Web%20Server/Configuration1/WebApp/Main.html)
 [![Customize WebVI with CSS README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/blob/master/Customize%20with%20CSS/)
 
 This example demonstrates how to customize the HTML output of a WebVI using CSS. 
