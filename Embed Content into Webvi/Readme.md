@@ -1,4 +1,7 @@
 # Embed Content into a WebVI
+[![Embed Content into a WebVI Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/Embed%20Content%20into%20Webvi/Builds/Web%20Server/Configuration1/WebApp/Main.html)
+[![Embed Content into a WebVI README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/Embed%20Content%20into%20Webvi)
+
 This example demonstrates how to embed custom web content into the WebVI panel using LabVIEW NXG 2.0 Beta. WebVIs use HTML to define and describe the content of the panel that is loaded in a web page. This means that you can add custom HTML content to appear alongside the LabVIEW-generated HTML.
 
 # Dependencies
