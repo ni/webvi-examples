@@ -6,6 +6,8 @@ This example demonstrates how to add resource files such as images, CSS files, J
 
 You can also use resource files to augment the WebVI's capabilities. For example, you can add other HTML widgets or scripts and reference them in the HTML view of the WebVI.
 
+![Screenshot of Demo](https://ni.github.io/webvi-examples/Incorporate%20User%20Resources/Screenshot.gif)
+
 # Dependencies
 - LabVIEW NXG 2.0 Beta
 

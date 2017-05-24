@@ -11,6 +11,8 @@ The build output of a WebVI includes three basic parts:
 
 Because WebVIs share the same basic building blocks as other web pages, you can embed WebVI output into any web content.
 
+![Screenshot of Demo](https://ni.github.io/webvi-examples/Embed%20WebVI%20into%20Content/Screenshot.gif)
+
 # Usage
 You can use the techniques demonstrated in this example whenever you want to embed a WebVI to an existing web page. For example, you may create educational course material with an embedded WebVI that visualizes data acquired in a lab setting.
 

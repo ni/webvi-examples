@@ -4,6 +4,8 @@
 
 This example demonstrates how to embed custom web content into the WebVI panel using LabVIEW NXG 2.0 Beta. WebVIs use HTML to define and describe the content of the panel that is loaded in a web page. This means that you can add custom HTML content to appear alongside the LabVIEW-generated HTML.
 
+![Screenshot of Demo](https://ni.github.io/webvi-examples/Embed%20Content%20into%20Webvi/Screenshot.gif)
+
 # Dependencies
 - LabVIEW NXG 2.0 Beta
 - LabVIEW 2009-2017 (Required for hosting only)

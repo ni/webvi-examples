@@ -6,6 +6,8 @@ This example demonstrates how to customize the HTML output of a WebVI using CSS.
 
 One of the main parts of a WebVI is an HTML output that displays HTML5 Custom Elements. One of the advantages of using CSS in a web application is to the separate content from style. For example, you could create a custom CSS file that is shared across the organization or even among other users to build more and more styles and layouts.
 
+![Screenshot of Demo](https://ni.github.io/webvi-examples/Customize%20with%20CSS/Screenshot.gif)
+
 # Usage
 
 You can use this approach in your own projects if you are familiar with CSS and how it interacts with HTML. For example, you can customize controls and indicators to match a corporate color scheme or make them accessible for color-blind users or in low contrast situations.
