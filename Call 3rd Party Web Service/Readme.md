@@ -8,7 +8,7 @@ On the diagram, this WebVI uses [HTTP GET](http://zone.ni.com/reference/en-XX/he
 
 On the panel, this WebVI displays a summary of the results in a data grid and a map of the selected earthquake region in a URL Image indicator.
 
-![Screenshot of Demo](https://ni.github.io/webvi-examples/Call%203rd%20Party%20Web%20Service/Screenshot.PNG)
+![Screenshot of Demo](https://ni.github.io/webvi-examples/Call%203rd%20Party%20Web%20Service/Screenshot.png)
 
 # Dependencies
 - LabVIEW NXG 2.0 Beta

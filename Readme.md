@@ -11,7 +11,7 @@ On the diagram, this WebVI uses [HTTP GET](http://zone.ni.com/reference/en-XX/he
 
 On the panel, this WebVI displays a summary of the results in a data grid and a map of the selected earthquake region in a URL Image indicator.
 
-![Screenshot of Demo](https://ni.github.io/webvi-examples/Call%203rd%20Party%20Web%20Service/Screenshot.PNG)
+![Screenshot of Demo](https://ni.github.io/webvi-examples/Call%203rd%20Party%20Web%20Service/Screenshot.png)
 
 # Call LabVIEW Web Service
 [![Call LabVIEW Web Service Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/Call%20LabVIEW%20Web%20Service/WebVI/Builds/Web%20Server/Configuration1/WebApp/Main.html)
@@ -61,4 +61,4 @@ You can also use resource files to augment the WebVI's capabilities. For example
 
 This example demonstrates how to create a web application with multiple pages by using multiple top-level WebVIs and Hyperlink controls to link between them. When you build the web application, each top-level WebVI generates a separate HTML file with links to the other HTML files that are generated.
 
-[![Multiple Top-Level WebVIs Demo Link](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/MultipleTopLevelWebVIs.gif)](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/Builds/Web%20Server/Configuration1/MultipleTopLevelWebVIs/)
+[![Multiple Top-Level WebVIs Demo Link](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/Screenshot.gif)](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/Builds/Web%20Server/Configuration1/MultipleTopLevelWebVIs/)
