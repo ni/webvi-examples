@@ -8,7 +8,7 @@ On the diagram, this WebVI uses [HTTP GET](http://zone.ni.com/reference/en-XX/he
 
 On the panel, this WebVI displays a summary of the results in a data grid and a map of the selected earthquake region in a URL Image indicator.
 
-![alt text](Screenshot.PNG "Screenshot")
+![Screenshot of Demo](https://ni.github.io/webvi-examples/Call%203rd%20Party%20Web%20Service/Screenshot.PNG)
 
 # Dependencies
 - LabVIEW NXG 2.0 Beta
@@ -27,14 +27,16 @@ A web service is a collection of functions that can be called through the web to
 Many web services are open and public like the Earthquake API. Others require registration and API keys that restrict access to specific users and limit the load on the service.
 
 To call a web service in a WebVI, this example uses the `HTTP Get` node to pass in the URL of the service and return a string with the result of the call. There are examples of this in several WebVIs, including `GetRecentEarthquakes.gviweb`.
-![alt text](img/HTTPGet.png "Calling Web Service using HTTP Get")
+
+![Calling Web Service using HTTP Get](img/HTTPGet.png)
 
 Web services return data in a variety of formats, such as JSON, XML, CSV, and YML. The USGS Earthquake service returns JSON, which LabVIEW can parse using the `Unflatten from JSON` node. To use `Unflatten from JSON`, you must specify the structure the data is expected to take and can provide a path to limit the search to a specific part of the data. There are examples of this in several WebVIs, including `Get Earthquake Count.gviweb`.
-![alt text](img/UnflattenJSON.PNG "Parsing JSON using Unflatten from JSON")
+
+![Parsing JSON using Unflatten from JSON](img/UnflattenJSON.PNG)
 
 If the web service returns data in a format other than JSON, you can still parse it in the WebVI using String nodes. There is an example of this in `Get Map URL.gviweb`.
 
 Once the data has been retrieved and converted into LabVIEW data types, this example displays the data in indicators on the panel of the top-level WebVI, `Main.gviweb`. This example uses a data grid to show all earthquakes and a URL Image indicator to display a map of the surrounding area.
 
-![alt text](img/Indicators.PNG "Wiring to indicators")
+![Wiring to indicators](img/Indicators.PNG)
 
