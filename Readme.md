@@ -11,7 +11,7 @@ On the diagram, this WebVI uses [HTTP GET](http://zone.ni.com/reference/en-XX/he
 
 On the panel, this WebVI displays a summary of the results in a data grid and a map of the selected earthquake region in a URL Image indicator.
 
-![Screenshot of Demo](https://ni.github.io/webvi-examples/Call%203rd%20Party%20Web%20Service/Screenshot.png)
+![Screenshot of Demo](https://ni.github.io/webvi-examples/Call%203rd%20Party%20Web%20Service/Screenshot.gif)
 
 # Call LabVIEW Web Service
 [![Call LabVIEW Web Service Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/Call%20LabVIEW%20Web%20Service/WebVI/Builds/Web%20Server/Configuration1/WebApp/Main.html)
@@ -27,7 +27,7 @@ This example demonstrates how to create a WebVI that makes requests to a LabVIEW
 [![Customize WebVI with CSS Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/Customize%20with%20CSS/Builds/Web%20Server/Configuration1/WebApp/Main.html)
 [![Customize WebVI with CSS README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/Customize%20with%20CSS)
 
-This example demonstrates how to customize the HTML output of a WebVI using CSS. 
+This example demonstrates how to customize the HTML output of a WebVI using CSS.
 
 One of the main parts of a WebVI is an HTML output that displays HTML5 Custom Elements. One of the advantages of using CSS in a web application is to the separate content from style. For example, you could create a custom CSS file that is shared across the organization or even among other users to build more and more styles and layouts.
 
@@ -45,12 +45,12 @@ This example demonstrates how to embed custom web content into the WebVI panel u
 [![Embed a WebVI into Web Content Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/Embed%20WebVI%20into%20Content/)
 [![Embed a WebVI into Web Content README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/Embed%20WebVI%20into%20Content)
 
-This example demonstrates how to embed the output of a WebVI built using LabVIEW NXG 2.0 Beta into an static web page. 
+This example demonstrates how to embed the output of a WebVI built using LabVIEW NXG 2.0 Beta into an static web page.
 
-The build output of a WebVI includes three basic parts: 
+The build output of a WebVI includes three basic parts:
 - HTML5 custom elements
 - Compiled WebVI diagram (`.via.txt`)
-- JavaScript and CSS files used in the web application 
+- JavaScript and CSS files used in the web application
 
 Because WebVIs share the same basic building blocks as other web pages, you can embed WebVI output into any web content.
 

@@ -8,7 +8,7 @@ On the diagram, this WebVI uses [HTTP GET](http://zone.ni.com/reference/en-XX/he
 
 On the panel, this WebVI displays a summary of the results in a data grid and a map of the selected earthquake region in a URL Image indicator.
 
-![Screenshot of Demo](https://ni.github.io/webvi-examples/Call%203rd%20Party%20Web%20Service/Screenshot.png)
+![Screenshot of Demo](https://ni.github.io/webvi-examples/Call%203rd%20Party%20Web%20Service/Screenshot.gif)
 
 # Dependencies
 - LabVIEW NXG 2.0 Beta
@@ -39,4 +39,3 @@ If the web service returns data in a format other than JSON, you can still parse
 Once the data has been retrieved and converted into LabVIEW data types, this example displays the data in indicators on the panel of the top-level WebVI, `Main.gviweb`. This example uses a data grid to show all earthquakes and a URL Image indicator to display a map of the surrounding area.
 
 ![Wiring to indicators](img/Indicators.PNG)
-
