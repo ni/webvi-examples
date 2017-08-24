@@ -37,7 +37,7 @@ One of the main parts of a WebVI is an HTML output that displays HTML5 Custom El
 [![Embed Content into a WebVI Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/Embed%20Content%20into%20Webvi/Builds/Web%20Server/Configuration1/WebApp/Main.html)
 [![Embed Content into a WebVI README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/Embed%20Content%20into%20Webvi)
 
-This example demonstrates how to embed custom web content into the WebVI panel using LabVIEW NXG 2.0 Beta. WebVIs use HTML to define and describe the content of the panel that is loaded in a web page. This means that you can add custom HTML content to appear alongside the LabVIEW-generated HTML.
+This example demonstrates how to embed custom web content into the WebVI panel using LabVIEW NXG 2.0. WebVIs use HTML to define and describe the content of the panel that is loaded in a web page. This means that you can add custom HTML content to appear alongside the LabVIEW-generated HTML.
 
 ![Screenshot of Demo](https://ni.github.io/webvi-examples/Embed%20Content%20into%20Webvi/Screenshot.gif)
 
@@ -45,7 +45,7 @@ This example demonstrates how to embed custom web content into the WebVI panel u
 [![Embed a WebVI into Web Content Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/Embed%20WebVI%20into%20Content/)
 [![Embed a WebVI into Web Content README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/Embed%20WebVI%20into%20Content)
 
-This example demonstrates how to embed the output of a WebVI built using LabVIEW NXG 2.0 Beta into an static web page.
+This example demonstrates how to embed the output of a WebVI built using LabVIEW NXG 2.0 into an static web page.
 
 The build output of a WebVI includes three basic parts:
 - HTML5 custom elements

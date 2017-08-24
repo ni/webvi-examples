@@ -9,7 +9,7 @@ You can also use resource files to augment the WebVI's capabilities. For example
 ![Screenshot of Demo](https://ni.github.io/webvi-examples/Incorporate%20User%20Resources/Screenshot.gif)
 
 # Dependencies
-- LabVIEW NXG 2.0 Beta
+- LabVIEW NXG 2.0 Web Module
 
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
@@ -22,7 +22,7 @@ This example uses two types of resources: images and CSS files.
 
 Two images are included in a child namespace within the `WebApp.gcomp` file called `images`: the National Instruments logo (`.svg`), and a screenshot of the diagram code (`.png`).
 
-A CSS file is included in a child namespace called `styles`. The file `main.css` styles the WebVI header at the top of the panel. 
+A CSS file is included in a child namespace called `styles`. The file `main.css` styles the WebVI header at the top of the panel.
 
 Refer to the following sections to learn how to add resource files to a web application component and reference them in a WebVI.
 
@@ -57,7 +57,7 @@ Examples:
 **Note:** You can select the active editor from the document toolbar.
 2. Add the following line in between the `<head></head>` tags:  
 `<link rel="stylesheet" type="text/css" href="[your-stylesheet].css">`  
-Example: 
+Example:
     ```
     <head>
         ...

@@ -2,12 +2,12 @@
 [![Embed a WebVI into Web Content Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/Embed%20WebVI%20into%20Content/)
 [![Embed a WebVI into Web Content README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/Embed%20WebVI%20into%20Content)
 
-This example demonstrates how to embed the output of a WebVI built using LabVIEW NXG 2.0 Beta into an static web page. 
+This example demonstrates how to embed the output of a WebVI built using LabVIEW NXG 2.0 into an static web page.
 
-The build output of a WebVI includes three basic parts: 
+The build output of a WebVI includes three basic parts:
 - HTML5 custom elements
 - Compiled WebVI diagram (`.via.txt`)
-- JavaScript and CSS files used in the web application 
+- JavaScript and CSS files used in the web application
 
 Because WebVIs share the same basic building blocks as other web pages, you can embed WebVI output into any web content.
 
@@ -17,7 +17,7 @@ Because WebVIs share the same basic building blocks as other web pages, you can 
 You can use the techniques demonstrated in this example whenever you want to embed a WebVI to an existing web page. For example, you may create educational course material with an embedded WebVI that visualizes data acquired in a lab setting.
 
 # Dependencies
-- LabVIEW NXG 2.0 Beta
+- LabVIEW NXG 2.0 Web Module
 - LabVIEW 2009-2017 (Required for hosting only)
 - NI SystemLink Server (Required for hosting only)
 
@@ -32,7 +32,7 @@ You can use the techniques demonstrated in this example whenever you want to emb
 **Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building.
 
 ## Important Directories
-- **`WebVI`** &mdash; The source code of the WebVI and the build output of the web application. Most of the paths and file names are defaults from the **Web Application Project** template in LabVIEW NXG 2.0 Beta.
+- **`WebVI`** &mdash; The source code of the WebVI and the build output of the web application. Most of the paths and file names are defaults from the **Web Application Project** template in LabVIEW NXG 2.0.
     - **`WebVI/Builds/Web Server/Configuration1/WebApp`** &mdash; The build output of the web application.
 - **`StaticPageResources`** &mdash; The HTML and CSS files that define the static web page. This example requires no additional JavaScript.
 
@@ -43,16 +43,16 @@ Copy and paste the entire `Embed WebVI into Content` directory to any web server
 1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
 2. Copy the `Embed WebVI into Content` directory into the `www` directory.
 3. Open a web browser and navigate to `http://localhost:8080/Embed%20WebVI%20into%20Content/index.html`.  
-**Note:** NI recommends using Mozilla Firefox to view HTML files generated from a web application project. 
+**Note:** NI recommends using Mozilla Firefox to view HTML files generated from a web application project.
 
 ## Hosting on the NI SystemLink Server
 1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
 2. Copy the `Embed WebVI into Content` directory into the `htdocs` directory.
 3. Open a web browser and navigate to `http://localhost/Embed%20WebVI%20into%20Content/index.html`.  
-**Note:** NI recommends using Mozilla Firefox to view HTML files generated from a web application project. 
+**Note:** NI recommends using Mozilla Firefox to view HTML files generated from a web application project.
 
 ## Published Example
-You can find the fully assembled and hosted web application on [Github Pages]({{site.github.url}}/Embed%20WebVI%20into%20Content/index.html) TODO: Double check link once GitHub pages is up and running. 
+You can find the fully assembled and hosted web application on [Github Pages]({{site.github.url}}/Embed%20WebVI%20into%20Content/index.html) TODO: Double check link once GitHub pages is up and running.
 
 # Details
 The following sections describe how the static web page was built including including how parts of the WebVI are pulled into the page.
@@ -132,7 +132,7 @@ Once the content is placed within this box and the WebVI is built, we have the c
 ![Render black box in LabVIEW text](box-in-lv.PNG)
 
 ### Building a web application
-Refer to the [Setup](# Setup) section for instructions on building a web application. Building a web application produces the following output: 
+Refer to the [Setup](# Setup) section for instructions on building a web application. Building a web application produces the following output:
 - `Main.html` &mdash; An HTML representation of the panel, including the CSS that defines the absolute layout of the controls.
 - `Main.via.txt` &mdash; The compiled WebVI diagram that can execute in a web browser.
 
@@ -140,7 +140,7 @@ Refer to the [Setup](# Setup) section for instructions on building a web applica
 This is the most brittle part of the process. If you add, remove, or replace a control on the panel of the WebVI, you must rebuild the web application and copy the HTML output to the static web page again. Changes to the diagram are less brittle because you can refer to the `.via.txt` file using a relative path that does not change when the web application is rebuilt.
 
 ### Control custom elements
-The following code is the HTML representation of one of the slider controls in `Main.html`. 
+The following code is the HTML representation of one of the slider controls in `Main.html`.
 ```html
 <jqx-slider data-ni-base-style="uninitialized" ni-control-id='28' binding-info='{"prop":"value","dco":0,"dataItem":"dataItem_Slider","unplacedOrDisabled":false,"sync":false}' label-id='29' value='0' min='0' max='9' interval='1' scale-position='far' ticks-visibility='minor' labels-visibility='all' format='decimal' significant-digits='6' scale-type='floatingPoint' orientation='horizontal'></jqx-slider>
 ```

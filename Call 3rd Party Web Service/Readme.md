@@ -11,7 +11,7 @@ On the panel, this WebVI displays a summary of the results in a data grid and a 
 ![Screenshot of Demo](https://ni.github.io/webvi-examples/Call%203rd%20Party%20Web%20Service/Screenshot.gif)
 
 # Dependencies
-- LabVIEW NXG 2.0 Beta
+- LabVIEW NXG 2.0 Web Module
 
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
