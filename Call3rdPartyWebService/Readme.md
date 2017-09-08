@@ -1,6 +1,6 @@
 # Call 3rd Party Web Service
-[![Call 3rd Party Web Service Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/Call%203rd%20Party%20Web%20Service/Builds/Web%20Server/Configuration1/WebApp/Main.html)
-[![Call 3rd Party Web Service README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/Call%203rd%20Party%20Web%20Service)
+[![Call 3rd Party Web Service Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/Call3rdPartyWebService/Builds/WebApp_Web Server/Main.html)
+[![Call 3rd Party Web Service README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/Call3rdPartyWebService)
 
 This example demonstrates how to use a WebVI to call the [Earthquake API](https://earthquake.usgs.gov/) from the [US Geological Survey](https://www.usgs.gov/) and display recent earthquakes on a web page.
 
@@ -8,14 +8,14 @@ On the diagram, this WebVI uses [HTTP GET](http://zone.ni.com/reference/en-XX/he
 
 On the panel, this WebVI displays a summary of the results in a data grid and a map of the selected earthquake region in a URL Image indicator.
 
-![Screenshot of Demo](https://ni.github.io/webvi-examples/Call%203rd%20Party%20Web%20Service/Screenshot.gif)
+![Screenshot of Demo](https://ni.github.io/webvi-examples/Call3rdPartyWebService/Screenshot.gif)
 
 # Dependencies
 - LabVIEW NXG 2.0 Web Module
 
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
-2. Open `Call 3rd Party Web Service/Call 3rd Party WebService.lvproject`
+2. Open `Call 3rd Party Web Service/Call3rdPartyWebService.lvproject`
 3. Open `Main.gviweb` and click the **Run** button.
 4. Build the web application.  
   a. Open `WebApp.gcomp`.  
