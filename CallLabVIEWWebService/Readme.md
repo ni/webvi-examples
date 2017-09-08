@@ -1,5 +1,5 @@
 # Call LabVIEW Web Service
-[![Call LabVIEW Web Service Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/CallLabVIEWWebService/WebVI/Builds/WebApp_Web Server/Main.html)
+[![Call LabVIEW Web Service Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/CallLabVIEWWebService/WebVI/Builds/WebApp_Web%20Server/Main.html)
 [![Call LabVIEW Web Service README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/CallLabVIEWWebService)
 
 This example demonstrates how to create a WebVI that makes requests to a LabVIEW web service, and how to create a LabVIEW 2016 web service that can respond to requests from a WebVI.
@@ -19,9 +19,9 @@ Use LabVIEW 2016 to create web services that do what WebVIs can't do, such as:
 
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
-2. Open `Call LabVIEW Web Service\Web Service\Web Service.lvproj` in LabVIEW 2016.
+2. Open `Call LabVIEW Web Service\WebService\WebService.lvproj` in LabVIEW 2016.
 3. In the **Project Explorer**, right-click **Web Server** and select **Start**.
-4. Open `Call LabVIEW Web Service\WebVI\Call LabVIEW Web Service.lvproject` in LabVIEW NXG 2.0.
+4. Open `Call LabVIEW Web Service\WebVI\CallLabVIEWWebService.lvproject` in LabVIEW NXG 2.0.
 5. Open `Main.gviweb` and click the **Run** button.
 6. Build the web application.  
   a. Open `WebApp.gcomp`.  
@@ -32,7 +32,7 @@ Use LabVIEW 2016 to create web services that do what WebVIs can't do, such as:
 ## Important Directories
 - **`Web Service`** &mdash; Contains the LabVIEW 2016 web service project.
 - **`WebVI`** &mdash; Contains the LabVIEW NXG 2.0 web application project, which includes the WebVI.
-- **`WebVI/Builds/Web Server/Configuration1/WebApp`** &mdash; Contains the built web application, which consists of HTML, JavaScript, the compiled diagram, and other web content.
+- **`WebVI/Builds/WebApp_Web Server`** &mdash; Contains the built web application, which consists of HTML, JavaScript, the compiled diagram, and other web content.
 
 ## The Web Service
 The web service is created in LabVIEW 2016 and consists of two HTTP endpoint methods (one `GET` and one `POST`) and a few subVIs.
