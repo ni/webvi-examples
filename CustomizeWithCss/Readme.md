@@ -119,21 +119,26 @@ Change the color for tank and circular progress bar fill.
 
 Remove all boarder from  numeric indicators
 ```css
-    jqx-numeric-text-box {
-          color: #ffff00;
-    }
+jqx-numeric-text-box {
+            color: #FFFFFF;
+        }
 
-    jqx-numeric-text-box[readonly="true"] .jqx-numeric-text-box-component {
-        background-color: transparent;
-        border: none;
-    }
+        jqx-numeric-text-box input.jqx-numeric-text-box-component {
+            background-color: transparent;
+            border: none;
+        }
 
-    jqx-numeric-text-box input.jqx-numeric-text-box-component {
-        background-color: transparent;
-        border: none;
-    }
+        jqx-numeric-text-box[readonly="true"] .jqx-numeric-text-box-component {
+            background-color: transparent;
+            border: none;
+        }
 
-    jqx-numeric-text-box input.jqx-numeric-text-box-component:hover {
-        border: none;
-    }
+        jqx-numeric-text-box[readonly="true"] .jqx-numeric-text-box-component:hover {
+            background-color: transparent;
+            border: none;
+        }
+
+        jqx-numeric-text-box input.jqx-numeric-text-box-component:hover {
+            border: none;
+        }
 ```
