@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="9BBC34F53E2CB35CB15D00B70BBAC46C" Timestamp="1D32B22CFC8BE51" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="5CAA74560035274A0C1A3B5CBF5A958A" Timestamp="1D32B2B024A4BE6" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="5.2.0.5942" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="5.2.0.4" Version="5.2.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="5.2.0.5942" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="5.2.0.9" Version="5.2.0.49152" />
@@ -57,126 +57,132 @@
 		</DiagramUnplacedItems>
 		<FrontPanelUnplacedItems Id="11" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" />
 		<BlockDiagram Id="12">
-			<WhileLoop Bounds="230 125 400 190" DiagramId="16" Id="15">
-				<LoopIteration Bounds="0 165 15 15" Id="17" />
-				<LoopCondition Bounds="375 165 15 15" Id="18" />
-				<Literal Bounds="325 60 25 15" DataType="Boolean" Id="19" Label="20" xmlns="http://www.ni.com/MocCommon">
-					<p.Data>False</p.Data>
-					<BooleanBehavior />
-				</Literal>
-				<NodeLabel AttachedTo="19" Bounds="325 42 30 15" Id="20" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
-					<p.Text>stop</p.Text>
-				</NodeLabel>
-				<Wire Id="21" Joints="N(19:Out)|(350,65) h(15) v(105) N(18:Input)|(375,170)" xmlns="http://www.ni.com/PlatformFramework" />
-				<Wait Bounds="100 15 40 40" Id="22" />
-				<Literal Bounds="35 30 45 15" DataType="UInt32" Id="23" Label="24" xmlns="http://www.ni.com/MocCommon">
-					<p.Data>150</p.Data>
-					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
-				</Literal>
-				<NodeLabel AttachedTo="23" Bounds="35 48 30 15" Id="24" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
-					<p.Text>milliseconds to wait</p.Text>
-				</NodeLabel>
-				<Wire Id="25" Joints="N(23:Out)|(80,35) N(22:time to wait)|(100,35)" xmlns="http://www.ni.com/PlatformFramework" />
-				<DataAccessor Bounds="105 100 40 15" DataItem="26" Id="27" Label="30" xmlns="http://www.ni.com/MocCommon">
-					<Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
-				</DataAccessor>
-				<NodeLabel AttachedTo="27" Bounds="68 100 32 14" Id="30" xmlns="http://www.ni.com/PlatformFramework">
-					<p.Text>Slider</p.Text>
-				</NodeLabel>
-				<DataAccessor Bounds="105 115 40 15" DataItem="33" Id="34" Label="35" xmlns="http://www.ni.com/MocCommon">
-					<Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
-				</DataAccessor>
-				<NodeLabel AttachedTo="34" Bounds="54 115 46 14" Id="35" xmlns="http://www.ni.com/PlatformFramework">
-					<p.Text>Slider_2</p.Text>
-				</NodeLabel>
-				<DataAccessor Bounds="215 110 40 15" DataItem="36" Id="37" Label="40" xmlns="http://www.ni.com/MocCommon">
-					<Terminal DataType="Double" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
-				</DataAccessor>
-				<NodeLabel AttachedTo="37" Bounds="260 110 26 14" Id="40" xmlns="http://www.ni.com/PlatformFramework">
-					<p.Text>Tank</p.Text>
-				</NodeLabel>
-				<Add Bounds="165 100 30 30" Id="41" Terminals="o=44, c0t0v=42, c1t0v=43" />
-				<Wire Id="42" Joints="N(27:Value)|(145,105) N(41:c0t0v)|(165,105)" xmlns="http://www.ni.com/PlatformFramework" />
-				<Wire Id="43" Joints="N(34:Value)|(145,120) N(41:c1t0v)|(165,120)" xmlns="http://www.ni.com/PlatformFramework" />
-				<Wire Id="44" Joints="N(41:o)|(195,115) N(37:Value)|(218,115)" xmlns="http://www.ni.com/PlatformFramework" />
-				<DataAccessor Bounds="165 60 40 15" DataItem="88" Id="89" Label="92" xmlns="http://www.ni.com/MocCommon">
-					<Terminal DataType="Double" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
-				</DataAccessor>
-				<NodeLabel AttachedTo="89" Bounds="210 60 36 14" Id="92" xmlns="http://www.ni.com/PlatformFramework">
-					<p.Text>Gauge</p.Text>
-				</NodeLabel>
-				<DataAccessor Bounds="105 60 40 15" DataItem="127" Id="128" Label="131" xmlns="http://www.ni.com/MocCommon">
-					<Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
-				</DataAccessor>
-				<NodeLabel AttachedTo="128" Bounds="54 60 46 14" Id="131" xmlns="http://www.ni.com/PlatformFramework">
-					<p.Text>Slider_3</p.Text>
-				</NodeLabel>
-				<Wire Id="137" Joints="N(128:Value)|(145,65) N(89:Value)|(168,65)" xmlns="http://www.ni.com/PlatformFramework" />
-				<DataAccessor Bounds="165 80 40 15" DataItem="93" Id="94" Label="97" xmlns="http://www.ni.com/MocCommon">
-					<Terminal DataType="Double" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
-				</DataAccessor>
-				<NodeLabel AttachedTo="94" Bounds="210 80 108 14" Id="97" xmlns="http://www.ni.com/PlatformFramework">
-					<p.Text>Radial Progress Bar</p.Text>
-				</NodeLabel>
-				<DataAccessor Bounds="105 80 40 15" DataItem="134" Id="135" Label="136" xmlns="http://www.ni.com/MocCommon">
-					<Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
-				</DataAccessor>
-				<NodeLabel AttachedTo="135" Bounds="54 80 46 14" Id="136" xmlns="http://www.ni.com/PlatformFramework">
-					<p.Text>Slider_4</p.Text>
-				</NodeLabel>
-				<Wire Id="138" Joints="N(135:Value)|(145,85) N(94:Value)|(168,85)" xmlns="http://www.ni.com/PlatformFramework" />
-			</WhileLoop>
-			<DataAccessor Bounds="470 320 40 15" DataItem="110" Id="111" Label="116" xmlns="http://www.ni.com/MocCommon">
-				<Terminal DataType="@4d4eb634bba248f182b6ebed69e8fa74" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
-			</DataAccessor>
-			<NodeLabel AttachedTo="111" Bounds="515 320 53 14" Id="116" xmlns="http://www.ni.com/PlatformFramework">
-				<p.Text>Data Grid</p.Text>
-			</NodeLabel>
-			<ArrayLiteral Bounds="230 320 222 351" DataType="@4d4eb634bba248f182b6ebed69e8fa74" Id="150" Label="158" xmlns="http://www.ni.com/MocCommon">
-				<p.Data>
-					<Array Lengths="5" IsBinary="True" Compression="GZip">
-						<BinaryElements>H4sIAAAAAAAEAM1V227aQBC1azA2l1B6U9SX8gHEAhJyeUBqCmobpU2iQqJKCJHFTCI3ix3tris5UtX3vvWL2xljCpWg4oEqWcmDd3Z2zzkzg1fTNU37hYN+aeQfoemdMOUFPuNHvlQiHIOvpNMKBFTKFyAkLjUbTt2pOtVKuRVyFQpo+hAqwXilfBYOueceQ9QNbsBv1oGxBruq7m/vQL1eG6UJqbEIoM0Uu2A8BMTioVQg3nrAR62Ac3ApPIU7zSvyybTPxiCz8aQb3YIsupMtLXbLXE9FhmFoP/ROhL6xMztCOu/AB+G5zgdPqstar7cg5IjWKuWxdAPBveFM9A5JXkX0cG+PNdzGbu0AVVf3D/r9n4u4nA6/4OvHYATc+QRsdOrzaLY+x66jhOdfr5nSt9WzQyleM7pFjWYbZKiudhoNtUaKXA+pcsTHHHgIJdMD6d2BNfg6ORVXXi4j0etblm3iViN5UqTyAXZBnHOOjI3vq+f8vzCxM0SF+uB+O/OfBS/M4cY1tuZqnKGCT7qYPJvLmsO2qeOzZHJosilSft/pXy4bVaHQfCKSRsb6S2huLil2gWRtkCmStpKdRJqPyQdb7fPuVm37sJid+idHfn5dzCUeXS9NwcwSoXWBPu3SfIKTAk3KZyK4FiCl+RRdudjVUUyFMkXwrxI+5z7eBB3MIOPeXXzjvA/4CET8f6Trxo4jiHb+UEoYD3l0gheLrumW+UybVXuS8Pj+eY7meI2J1ylVRNp8MQfYDnAXxB9GAtSL06BNNBtJ0Jsg4MD8P1G538VloG7OBwAA</BinaryElements>
-						<BinaryElements>H4sIAAAAAAAEAM1VS2/aQBC2azA2j1D6UtRL+QHEAgp5HJDSgtpGaZOokFxQRBYzRG4XO9pdV3Kkqj331l/czhhTqAQVB6pkJQ/e2dn9vm9m8Gq6pmm/cNAvjfwDNP0TprzAZ/zIl0qEE/CVdNqBgEr5AoTEpVbTqTtVp1opt0OuQgEtH0IlGK+Uz8Ih99xjiHrBZ/BbdWCsycbV/ZcNqNdrozQhNZcBdJhiF4yHgFg8lArEGw/4qB1wDi6Fp3CnOSafTPtsAjIbT3rRDciiO93SZjfM9VRkGIb2Q+9G6Js48yOk8xZ8EJ7rvPekuqr1+0tCjmitUp5INxDcG85FN0jyOqKHe3us6TZ3aweourp/cHn5cxmX0+EnfP0QjIA7H4GNTn0ezdcX2HWV8PzrDVP6un52KMUbRreo0WyDDNXVTqOh1kiR6z5VjviYAw+hZHogvVuwBl+mp+LK81Uk+peWZZu41UieFKm8h10Q55wjY+Pb+jn/L0zsDFGhPrjbzvxnwQsLuHGNrYUaZ6jg0y4mz/aq5rBt6vgsmRyabIqU33X6V8tGVSg0n4ikkbH+EppbSIpdIFlbZIqkrWQnkeZD8o13Oue9ncZuu5id+eMTvx8eFnOJR9dKMzCzRGg9oE+7NB/hpECT8pkIrgVIaT5GVy52dRVToUwR/IuEz7mPN0EXM8i4dxvfOO8CPgIR/x/purHjCKKdfyUlTIY8OsGLRdd0y3yizas9TXh8/zxFc7zBxOuUKiJtPlsA7AS4C+IPIwHqxVnQNpqtJOh1EHBg/p+o3G9n27ntzgcAAA==</BinaryElements>
-						<BinaryElements>H4sIAAAAAAAEAM1VTW/aQBC1Cxibj1D6paiX8gOIBTRukgNSW1DbKG0SBZILQmQxE+RmsaPddSVHqnrvrf+o/6ydMaZQCSoOVMlKHryzs/vemxm8mq5p2i8c9Euj8ABN75gpL/AZP/SlEuEEfCXtViCgWrkAIXGp6dgNu2bXqpVWyFUooOlDqATj1cppOOSeewRRN7gGv9kAxhx2Vdt/uQuNRn2UISRnGUCbKXbBeAiIxUOpQLzzgI9aAefgUngadxpX5JMZn01A5uJJN7oBWXKnW1rshrmeilKplPZd70Tom9jzI6T9HnwQnmt/9KS6rPd6S0IOaa1amUg3ENwbzkXvkuR1RA/39pjjOq/qB6i6tn/Q7/9YxuVk+BlfPwUj4PYZsNGJz6P5+gK7jhKeP94wpa/rZ4dSvGF0kxrNSpGhuloZNNQaaXLdp8oRH2PgIZTMDKR3C+bgy/RUXHm+ikSvb5qWgVtTyZMmlfewC+Kcc2Sc+rZ+zv8LEytLVKgP7rYz/1nw4gJuXGNzocZZKvi0i8mzvao5LIs6PkcmjyaXJuV3nf7VslEVCi0kImlkzb+E5heSYhVJ1haZEmkrW0mk8ZB84532eXfHca5LuZk/PvHn2etSPvHoenkGZpQJrQv0aZfGI5wUaVI5FcFYgJTGY3TlY1dHMRXKNMG/SPic+3gTdDCDjHu38Y3zIeAjEPH/ka4bK44g2oU3UsJkyKNjvFh0TTeNJ9q82tOEx/fPUzRHG0y8Tqki0sazBcB2gLsg/jASoF6aBW2j2UqC3gYBB+b/icr/BnjbAU7OBwAA</BinaryElements>
-						<BinaryElements>H4sIAAAAAAAEAM1V328SQRC+8+C440cRrabxRf4AegEsQh9IVIi2qbaN0L6QBpdjSk6Xu2Z3z+SaGN998y/WmeMQTMDwgGk3ueF2dna/75sZbjVd07RfOOiXRv4BmsEpU17gM37sSyXCKfhKOp1AQKV8CULiUrvh1J2qU62UOyFXoYC2D6ESjFfK5+GIe+4JRP3gC/jtOjDWYNfV1osDqNdr4zQhNVYBdJlil4yHgFg8lArEWw/4uBNwDi6Fp3CneU0+mfbZFGQ2nvSjG5BFd7alw26Y66nIMAzth96L0Dd1FkdI5x34IDzXee9J9ak2GKwIOaa1Snkq3UBwb7QQfUCSNxE9ajZZw228rB2i6mrr8Orq5youZ6PP+PohGAN3PgIbn/k8Wqwvsesp4fmTLVP6tnl2KMVbRreo0WyDDNXVTqOh1kiR6z5VjviYQw+hZHoovVuwhl9np+LKs3UkBleWZZu41UieFKm8h10Q55wjY+P75jn/L0zsDFGhPrjbzvxnwQtLuHGNraUaZ6jgsy4mz9665rBt6vgsmRyabIqU33X618tGVSg0n4ikkbH+EppbSopdIFk7ZIqkrWQnkeZD8k32uxf9/VbzqJid+2dH7r4q5hKPrpfmYGaJ0PpAn3ZpPsJJgSblcxFMBEhpPkZXLnb1FFOhTBH884TPhY83QQ8zyLh3G984RwEfg4j/j3Td2HEE0c6/lhKmIx6d4sWia7pl7mqLas8SHt8/T9CcbDHxOqWKSJtPlwC7Ae6C+MNIgHpxHrSHZicJehMEHJj/Jyr3G8MRxv/OBwAA</BinaryElements>
-						<BinaryElements>H4sIAAAAAAAEAM1V227aQBC1azA2l1B6U9SX8gHEAhqa5AGpCahtlOaiQiJVCNHFTJDbxY5215Ucqep73/rF7YwxhUpQ8UCVrOTBOzu755yZwavpmqb9wkG/NPIP0PTOmPICn/FjXyoRTsBX0mkFAirlKxASl5oNp+5UnWql3Aq5CgU0fQiVYLxSvgiH3HNPIOoGX8Bv1oGxBruu7r/chXq9NkoTUmMZQJspdsV4CIjFQ6lAvPGAj1oB5+BSeAp3mtfkk2mfTUBm40k3ugFZdKdbWuyGuZ6KDMPQfuidCH0TZ36EdN6CD8JznfeeVJ9qvd6SkGNaq5Qn0g0E94Zz0bskeR3Rw7091nAbr2oHqLq6f9Dv/1zG5Xz4GV9PgxFw5wOw0bnPo/n6AruOEp4/3jClb+tnh1K8YXSLGs02yFBd7TQaao0Uue5T5YiPOfAQSqYH0rsFa/B1eiquPF9Fote3LNvErUbypEjlPeyCOOccGRvf18/5f2FiZ4gK9cHdduY/C15YwI1rbC3UOEMFn3YxebZXNYdtU8dnyeTQZFOk/K7Tv1o2qkKh+UQkjYz1l9DcQlLsAsnaIlMkbSU7iTQfkm+8077s7pweHhWzM//0yI+vi7nEo2ulGZhZIrQu0Kddmo9wUqBJ+UIEYwFSmo/RlYtdHcVUKFME/yLhc+njTdDBDDLu3cY3zruAj0DE/0e6buw4gmjnD6WEyZBHZ3ix6JpumU+0ebWnCY/vn6doTjaYeJ1SRaTNZwuA7QB3QfxhJEC9OAvaRrOVBB0FAQfm/4nK/QZD6JjxzgcAAA==</BinaryElements>
-					</Array>
-				</p.Data>
-				<ArrayBehavior ElementType="@cb6215e738174b62b0636bc6f477c0af" IndexEditorWidth="42" VisibleRows="5">
-					<p.DefaultElementValue>
-						<Cluster>
-							<Field1>""</Field1>
-							<Field2>0x0</Field2>
-							<Field3>False</Field3>
-						</Cluster>
-					</p.DefaultElementValue>
-				</ArrayBehavior>
-				<ClusterLiteral Bounds="47 4 161 67" DataType="@cb6215e738174b62b0636bc6f477c0af" Id="151">
-					<ClusterBehavior AutoArrange="ArrangeVertically" />
-					<Literal Bounds="2 2 140 15" DataType="String" Id="152" Label="153">
-						<StringBehavior TextDisplayMode="Default" />
-					</Literal>
-					<NodeLabel AttachedTo="152" Bounds="2 -16 40 15" Id="153" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
-						<p.Text>Testers</p.Text>
+			<FlatSequence Bounds="580 435 830 390" Id="317">
+				<FlatSequence.Frame Bounds="5 10 375 370" Id="318">
+					<ArrayLiteral Bounds="20 10 222 351" DataType="@4d4eb634bba248f182b6ebed69e8fa74" Id="150" Label="158" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>
+							<Array Lengths="5" IsBinary="True" Compression="GZip">
+								<BinaryElements>H4sIAAAAAAAEAM1V227aQBC1azA2l1B6U9SX8gHEAhJyeUBqCmobpU2iQqJKCJHFTCI3ix3tris5UtX3vvWL2xljCpWg4oEqWcmDd3Z2zzkzg1fTNU37hYN+aeQfoemdMOUFPuNHvlQiHIOvpNMKBFTKFyAkLjUbTt2pOtVKuRVyFQpo+hAqwXilfBYOueceQ9QNbsBv1oGxBruq7m/vQL1eG6UJqbEIoM0Uu2A8BMTioVQg3nrAR62Ac3ApPIU7zSvyybTPxiCz8aQb3YIsupMtLXbLXE9FhmFoP/ROhL6xMztCOu/AB+G5zgdPqstar7cg5IjWKuWxdAPBveFM9A5JXkX0cG+PNdzGbu0AVVf3D/r9n4u4nA6/4OvHYATc+QRsdOrzaLY+x66jhOdfr5nSt9WzQyleM7pFjWYbZKiudhoNtUaKXA+pcsTHHHgIJdMD6d2BNfg6ORVXXi4j0etblm3iViN5UqTyAXZBnHOOjI3vq+f8vzCxM0SF+uB+O/OfBS/M4cY1tuZqnKGCT7qYPJvLmsO2qeOzZHJosilSft/pXy4bVaHQfCKSRsb6S2huLil2gWRtkCmStpKdRJqPyQdb7fPuVm37sJid+idHfn5dzCUeXS9NwcwSoXWBPu3SfIKTAk3KZyK4FiCl+RRdudjVUUyFMkXwrxI+5z7eBB3MIOPeXXzjvA/4CET8f6Trxo4jiHb+UEoYD3l0gheLrumW+UybVXuS8Pj+eY7meI2J1ylVRNp8MQfYDnAXxB9GAtSL06BNNBtJ0Jsg4MD8P1G538VloG7OBwAA</BinaryElements>
+								<BinaryElements>H4sIAAAAAAAEAM1VS2/aQBC2azA2j1D6UtRL+QHEAgp5HJDSgtpGaZOokFxQRBYzRG4XO9pdV3Kkqj331l/czhhTqAQVB6pkJQ/e2dn9vm9m8Gq6pmm/cNAvjfwDNP0TprzAZ/zIl0qEE/CVdNqBgEr5AoTEpVbTqTtVp1opt0OuQgEtH0IlGK+Uz8Ih99xjiHrBZ/BbdWCsycbV/ZcNqNdrozQhNZcBdJhiF4yHgFg8lArEGw/4qB1wDi6Fp3CnOSafTPtsAjIbT3rRDciiO93SZjfM9VRkGIb2Q+9G6Js48yOk8xZ8EJ7rvPekuqr1+0tCjmitUp5INxDcG85FN0jyOqKHe3us6TZ3aweourp/cHn5cxmX0+EnfP0QjIA7H4GNTn0ezdcX2HWV8PzrDVP6un52KMUbRreo0WyDDNXVTqOh1kiR6z5VjviYAw+hZHogvVuwBl+mp+LK81Uk+peWZZu41UieFKm8h10Q55wjY+Pb+jn/L0zsDFGhPrjbzvxnwQsLuHGNrYUaZ6jg0y4mz/aq5rBt6vgsmRyabIqU33X6V8tGVSg0n4ikkbH+EppbSIpdIFlbZIqkrWQnkeZD8o13Oue9ncZuu5id+eMTvx8eFnOJR9dKMzCzRGg9oE+7NB/hpECT8pkIrgVIaT5GVy52dRVToUwR/IuEz7mPN0EXM8i4dxvfOO8CPgIR/x/purHjCKKdfyUlTIY8OsGLRdd0y3yizas9TXh8/zxFc7zBxOuUKiJtPlsA7AS4C+IPIwHqxVnQNpqtJOh1EHBg/p+o3G9n27ntzgcAAA==</BinaryElements>
+								<BinaryElements>H4sIAAAAAAAEAM1VTW/aQBC1Cxibj1D6paiX8gOIBTRukgNSW1DbKG0SBZILQmQxE+RmsaPddSVHqnrvrf+o/6ydMaZQCSoOVMlKHryzs/vemxm8mq5p2i8c9Euj8ABN75gpL/AZP/SlEuEEfCXtViCgWrkAIXGp6dgNu2bXqpVWyFUooOlDqATj1cppOOSeewRRN7gGv9kAxhx2Vdt/uQuNRn2UISRnGUCbKXbBeAiIxUOpQLzzgI9aAefgUngadxpX5JMZn01A5uJJN7oBWXKnW1rshrmeilKplPZd70Tom9jzI6T9HnwQnmt/9KS6rPd6S0IOaa1amUg3ENwbzkXvkuR1RA/39pjjOq/qB6i6tn/Q7/9YxuVk+BlfPwUj4PYZsNGJz6P5+gK7jhKeP94wpa/rZ4dSvGF0kxrNSpGhuloZNNQaaXLdp8oRH2PgIZTMDKR3C+bgy/RUXHm+ikSvb5qWgVtTyZMmlfewC+Kcc2Sc+rZ+zv8LEytLVKgP7rYz/1nw4gJuXGNzocZZKvi0i8mzvao5LIs6PkcmjyaXJuV3nf7VslEVCi0kImlkzb+E5heSYhVJ1haZEmkrW0mk8ZB84532eXfHca5LuZk/PvHn2etSPvHoenkGZpQJrQv0aZfGI5wUaVI5FcFYgJTGY3TlY1dHMRXKNMG/SPic+3gTdDCDjHu38Y3zIeAjEPH/ka4bK44g2oU3UsJkyKNjvFh0TTeNJ9q82tOEx/fPUzRHG0y8Tqki0sazBcB2gLsg/jASoF6aBW2j2UqC3gYBB+b/icr/BnjbAU7OBwAA</BinaryElements>
+								<BinaryElements>H4sIAAAAAAAEAM1V328SQRC+8+C440cRrabxRf4AegEsQh9IVIi2qbaN0L6QBpdjSk6Xu2Z3z+SaGN998y/WmeMQTMDwgGk3ueF2dna/75sZbjVd07RfOOiXRv4BmsEpU17gM37sSyXCKfhKOp1AQKV8CULiUrvh1J2qU62UOyFXoYC2D6ESjFfK5+GIe+4JRP3gC/jtOjDWYNfV1osDqNdr4zQhNVYBdJlil4yHgFg8lArEWw/4uBNwDi6Fp3CneU0+mfbZFGQ2nvSjG5BFd7alw26Y66nIMAzth96L0Dd1FkdI5x34IDzXee9J9ak2GKwIOaa1Snkq3UBwb7QQfUCSNxE9ajZZw228rB2i6mrr8Orq5youZ6PP+PohGAN3PgIbn/k8Wqwvsesp4fmTLVP6tnl2KMVbRreo0WyDDNXVTqOh1kiR6z5VjviYQw+hZHoovVuwhl9np+LKs3UkBleWZZu41UieFKm8h10Q55wjY+P75jn/L0zsDFGhPrjbzvxnwQtLuHGNraUaZ6jgsy4mz9665rBt6vgsmRyabIqU33X618tGVSg0n4ikkbH+EppbSopdIFk7ZIqkrWQnkeZD8k32uxf9/VbzqJid+2dH7r4q5hKPrpfmYGaJ0PpAn3ZpPsJJgSblcxFMBEhpPkZXLnb1FFOhTBH884TPhY83QQ8zyLh3G984RwEfg4j/j3Td2HEE0c6/lhKmIx6d4sWia7pl7mqLas8SHt8/T9CcbDHxOqWKSJtPlwC7Ae6C+MNIgHpxHrSHZicJehMEHJj/Jyr3G8MRxv/OBwAA</BinaryElements>
+								<BinaryElements>H4sIAAAAAAAEAM1V227aQBC1azA2l1B6U9SX8gHEAhqa5AGpCahtlOaiQiJVCNHFTJDbxY5215Ucqep73/rF7YwxhUpQ8UCVrOTBOzu755yZwavpmqb9wkG/NPIP0PTOmPICn/FjXyoRTsBX0mkFAirlKxASl5oNp+5UnWql3Aq5CgU0fQiVYLxSvgiH3HNPIOoGX8Bv1oGxBruu7r/chXq9NkoTUmMZQJspdsV4CIjFQ6lAvPGAj1oB5+BSeAp3mtfkk2mfTUBm40k3ugFZdKdbWuyGuZ6KDMPQfuidCH0TZ36EdN6CD8JznfeeVJ9qvd6SkGNaq5Qn0g0E94Zz0bskeR3Rw7091nAbr2oHqLq6f9Dv/1zG5Xz4GV9PgxFw5wOw0bnPo/n6AruOEp4/3jClb+tnh1K8YXSLGs02yFBd7TQaao0Uue5T5YiPOfAQSqYH0rsFa/B1eiquPF9Fote3LNvErUbypEjlPeyCOOccGRvf18/5f2FiZ4gK9cHdduY/C15YwI1rbC3UOEMFn3YxebZXNYdtU8dnyeTQZFOk/K7Tv1o2qkKh+UQkjYz1l9DcQlLsAsnaIlMkbSU7iTQfkm+8077s7pweHhWzM//0yI+vi7nEo2ulGZhZIrQu0Kddmo9wUqBJ+UIEYwFSmo/RlYtdHcVUKFME/yLhc+njTdDBDDLu3cY3zruAj0DE/0e6buw4gmjnD6WEyZBHZ3ix6JpumU+0ebWnCY/vn6doTjaYeJ1SRaTNZwuA7QB3QfxhJEC9OAvaRrOVBB0FAQfm/4nK/QZD6JjxzgcAAA==</BinaryElements>
+							</Array>
+						</p.Data>
+						<ArrayBehavior ElementType="@cb6215e738174b62b0636bc6f477c0af" IndexEditorWidth="42" VisibleRows="5">
+							<p.DefaultElementValue>
+								<Cluster>
+									<Field1>""</Field1>
+									<Field2>0x0</Field2>
+									<Field3>False</Field3>
+								</Cluster>
+							</p.DefaultElementValue>
+						</ArrayBehavior>
+						<ClusterLiteral Bounds="47 4 161 67" DataType="@cb6215e738174b62b0636bc6f477c0af" Id="151">
+							<ClusterBehavior AutoArrange="ArrangeVertically" />
+							<Literal Bounds="2 2 140 15" DataType="String" Id="152" Label="153">
+								<StringBehavior TextDisplayMode="Default" />
+							</Literal>
+							<NodeLabel AttachedTo="152" Bounds="2 -16 40 15" Id="153" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+								<p.Text>Testers</p.Text>
+							</NodeLabel>
+							<Literal Bounds="2 21 55 15" DataType="Double" Id="154" Label="155">
+								<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+							</Literal>
+							<NodeLabel AttachedTo="154" Bounds="2 3 75 15" Id="155" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+								<p.Text>Test Progress</p.Text>
+							</NodeLabel>
+							<Literal Bounds="2 40 15 15" DataType="Boolean" Id="156" Label="157">
+								<BooleanBehavior />
+							</Literal>
+							<NodeLabel AttachedTo="156" Bounds="2 22 65 15" Id="157" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+								<p.Text>Test Status</p.Text>
+							</NodeLabel>
+						</ClusterLiteral>
+					</ArrayLiteral>
+					<NodeLabel AttachedTo="150" Bounds="20 -8 30 15" Id="158" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>Data Grid</p.Text>
 					</NodeLabel>
-					<Literal Bounds="2 21 55 15" DataType="Double" Id="154" Label="155">
-						<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
-					</Literal>
-					<NodeLabel AttachedTo="154" Bounds="2 3 75 15" Id="155" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
-						<p.Text>Test Progress</p.Text>
+					<Wire Id="391" Joints="N(150:Out)|(242,15) N(111:Value)|(263,15)" xmlns="http://www.ni.com/PlatformFramework" />
+					<DataAccessor Bounds="260 10 40 15" DataItem="110" Id="111" Label="116" xmlns="http://www.ni.com/MocCommon">
+						<Terminal DataType="@4d4eb634bba248f182b6ebed69e8fa74" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+					</DataAccessor>
+					<NodeLabel AttachedTo="111" Bounds="305 10 53 14" Id="116" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>Data Grid</p.Text>
 					</NodeLabel>
-					<Literal Bounds="2 40 15 15" DataType="Boolean" Id="156" Label="157">
-						<BooleanBehavior />
-					</Literal>
-					<NodeLabel AttachedTo="156" Bounds="2 22 65 15" Id="157" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
-						<p.Text>Test Status</p.Text>
-					</NodeLabel>
-				</ClusterLiteral>
-			</ArrayLiteral>
-			<NodeLabel AttachedTo="150" Bounds="230 302 30 15" Id="158" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
-				<p.Text>Data Grid</p.Text>
-			</NodeLabel>
-			<Wire Id="159" Joints="N(150:Out)|(452,325) N(111:Value)|(473,325)" xmlns="http://www.ni.com/PlatformFramework" />
+				</FlatSequence.Frame>
+				<FlatSequence.Frame Bounds="385 10 440 370" Id="394">
+					<WhileLoop Bounds="20 15 400 190" DiagramId="16" Id="15">
+						<LoopIteration Bounds="0 165 15 15" Id="17" />
+						<LoopCondition Bounds="375 165 15 15" Id="18" />
+						<Literal Bounds="325 60 25 15" DataType="Boolean" Id="19" Label="20" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>False</p.Data>
+							<BooleanBehavior />
+						</Literal>
+						<NodeLabel AttachedTo="19" Bounds="325 42 30 15" Id="20" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>stop</p.Text>
+						</NodeLabel>
+						<Wire Id="21" Joints="N(19:Out)|(350,65) h(15) v(105) N(18:Input)|(375,170)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wait Bounds="100 15 40 40" Id="22" />
+						<Literal Bounds="35 30 45 15" DataType="UInt32" Id="23" Label="24" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>150</p.Data>
+							<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+						</Literal>
+						<NodeLabel AttachedTo="23" Bounds="35 48 30 15" Id="24" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>milliseconds to wait</p.Text>
+						</NodeLabel>
+						<Wire Id="25" Joints="N(23:Out)|(80,35) N(22:time to wait)|(100,35)" xmlns="http://www.ni.com/PlatformFramework" />
+						<DataAccessor Bounds="105 100 40 15" DataItem="26" Id="27" Label="30" xmlns="http://www.ni.com/MocCommon">
+							<Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+						</DataAccessor>
+						<NodeLabel AttachedTo="27" Bounds="68 100 32 14" Id="30" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>Slider</p.Text>
+						</NodeLabel>
+						<DataAccessor Bounds="105 115 40 15" DataItem="33" Id="34" Label="35" xmlns="http://www.ni.com/MocCommon">
+							<Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+						</DataAccessor>
+						<NodeLabel AttachedTo="34" Bounds="54 115 46 14" Id="35" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>Slider_2</p.Text>
+						</NodeLabel>
+						<DataAccessor Bounds="215 110 40 15" DataItem="36" Id="37" Label="40" xmlns="http://www.ni.com/MocCommon">
+							<Terminal DataType="Double" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+						</DataAccessor>
+						<NodeLabel AttachedTo="37" Bounds="260 110 26 14" Id="40" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>Tank</p.Text>
+						</NodeLabel>
+						<Add Bounds="165 100 30 30" Id="41" Terminals="o=44, c0t0v=42, c1t0v=43" />
+						<Wire Id="42" Joints="N(27:Value)|(145,105) N(41:c0t0v)|(165,105)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="43" Joints="N(34:Value)|(145,120) N(41:c1t0v)|(165,120)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="44" Joints="N(41:o)|(195,115) N(37:Value)|(218,115)" xmlns="http://www.ni.com/PlatformFramework" />
+						<DataAccessor Bounds="165 60 40 15" DataItem="88" Id="89" Label="92" xmlns="http://www.ni.com/MocCommon">
+							<Terminal DataType="Double" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+						</DataAccessor>
+						<NodeLabel AttachedTo="89" Bounds="210 60 36 14" Id="92" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>Gauge</p.Text>
+						</NodeLabel>
+						<DataAccessor Bounds="105 60 40 15" DataItem="127" Id="128" Label="131" xmlns="http://www.ni.com/MocCommon">
+							<Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+						</DataAccessor>
+						<NodeLabel AttachedTo="128" Bounds="54 60 46 14" Id="131" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>Slider_3</p.Text>
+						</NodeLabel>
+						<Wire Id="137" Joints="N(128:Value)|(145,65) N(89:Value)|(168,65)" xmlns="http://www.ni.com/PlatformFramework" />
+						<DataAccessor Bounds="165 80 40 15" DataItem="93" Id="94" Label="97" xmlns="http://www.ni.com/MocCommon">
+							<Terminal DataType="Double" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+						</DataAccessor>
+						<NodeLabel AttachedTo="94" Bounds="210 80 108 14" Id="97" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>Radial Progress Bar</p.Text>
+						</NodeLabel>
+						<DataAccessor Bounds="105 80 40 15" DataItem="134" Id="135" Label="136" xmlns="http://www.ni.com/MocCommon">
+							<Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+						</DataAccessor>
+						<NodeLabel AttachedTo="135" Bounds="54 80 46 14" Id="136" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>Slider_4</p.Text>
+						</NodeLabel>
+						<Wire Id="138" Joints="N(135:Value)|(145,85) N(94:Value)|(168,85)" xmlns="http://www.ni.com/PlatformFramework" />
+					</WhileLoop>
+				</FlatSequence.Frame>
+			</FlatSequence>
 		</BlockDiagram>
 		<HtmlFrontPanel Height="[float]1600" Id="14" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" UpdatedRootPage="[string]&lt;!DOCTYPE html&gt;&#xA;&lt;html lang=&quot;en&quot;&gt;&#xA;&#xA;    &lt;head&gt;&#xA;&#xA;        &lt;meta charset=&quot;utf-8&quot;&gt;&#xA;        &lt;!---Read only section. Source panel edits to these document properties will not be persisted--&gt;&#xA;        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&#xA;        &lt;title&gt;Main&lt;/title&gt;&#xA;        &lt;!---End read only section. Additional scripts or document properties can be added outside this section--&gt;&#xA;&#xA;        &lt;style ni-autogenerated-style-id=&quot;&quot;&gt;&#xA;            /* Read only section. Source panel edits to the content of this style tag will not be persisted */&#xA;            &#xA;            [data-ni-base-style] {&#xA;                position: absolute;&#xA;            }&#xA;            &#xA;            jqx-slider[ni-control-id='28'] {&#xA;                left: 1212px;&#xA;                top: 449px;&#xA;                width: 152px;&#xA;                height: 62px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-label[ni-control-id='29'] {&#xA;                left: 1212px;&#xA;                top: 429px;&#xA;                width: 30px;&#xA;                height: 16px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;                color: rgba(43, 48, 51, 1);&#xA;            }&#xA;            &#xA;            jqx-slider[ni-control-id='31'] {&#xA;                left: 1212px;&#xA;                top: 545px;&#xA;                width: 152px;&#xA;                height: 62px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-label[ni-control-id='32'] {&#xA;                left: 1212px;&#xA;                top: 525px;&#xA;                width: 42px;&#xA;                height: 16px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;                color: rgba(43, 48, 51, 1);&#xA;            }&#xA;            &#xA;            jqx-tank[ni-control-id='38'] {&#xA;                left: 1367px;&#xA;                top: 449px;&#xA;                width: 75px;&#xA;                height: 152px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-label[ni-control-id='39'] {&#xA;                left: 1367px;&#xA;                top: 429px;&#xA;                width: 24px;&#xA;                height: 16px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;                color: rgba(43, 48, 51, 1);&#xA;            }&#xA;            &#xA;            ni-cartesian-graph[ni-control-id='64'] {&#xA;                left: 393px;&#xA;                top: 14px;&#xA;                width: 375px;&#xA;                height: 667px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;                color: rgba(43, 48, 51, 1);&#xA;            }&#xA;            &#xA;            ni-cartesian-axis[ni-control-id='65'] {&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-cartesian-axis[ni-control-id='66'] {&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-cartesian-plot[ni-control-id='67'] {&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-cartesian-plot[ni-control-id='213'] {&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-cursor[ni-control-id='211'] {&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-cursor[ni-control-id='212'] {&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-scale-legend[ni-control-id='71'] {&#xA;                left: 788px;&#xA;                top: 144px;&#xA;                width: 145px;&#xA;                height: 60px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-plot-legend[ni-control-id='72'] {&#xA;                left: 948px;&#xA;                top: 148px;&#xA;                width: 200px;&#xA;                height: 52px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-cursor-legend[ni-control-id='73'] {&#xA;                left: 780px;&#xA;                top: 11px;&#xA;                width: 375px;&#xA;                height: 120px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-graph-tools[ni-control-id='74'] {&#xA;                left: 395px;&#xA;                top: 16px;&#xA;                width: 120px;&#xA;                height: 30px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-label[ni-control-id='75'] {&#xA;                left: 393px;&#xA;                top: -6px;&#xA;                width: 33px;&#xA;                height: 16px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;                color: rgba(43, 48, 51, 1);&#xA;            }&#xA;            &#xA;            ni-gauge[ni-control-id='90'] {&#xA;                left: 1201px;&#xA;                top: 33px;&#xA;                width: 290px;&#xA;                height: 290px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-label[ni-control-id='91'] {&#xA;                left: 1201px;&#xA;                top: 13px;&#xA;                width: 35px;&#xA;                height: 16px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;                color: rgba(43, 48, 51, 1);&#xA;            }&#xA;            &#xA;            jqx-circular-progress-bar[ni-control-id='95'] {&#xA;                left: 1202px;&#xA;                top: 36px;&#xA;                width: 290px;&#xA;                height: 290px;&#xA;            }&#xA;            &#xA;            ni-label[ni-control-id='96'] {&#xA;                left: 1202px;&#xA;                top: 16px;&#xA;                width: 102px;&#xA;                height: 16px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;                color: rgba(43, 48, 51, 1);&#xA;            }&#xA;            &#xA;            jqx-numeric-text-box[ni-control-id='100'] {&#xA;                left: 1188px;&#xA;                top: 356px;&#xA;                width: 170px;&#xA;                height: 40px;&#xA;                font-size: 24px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-label[ni-control-id='101'] {&#xA;                left: 1188px;&#xA;                top: 336px;&#xA;                width: 46px;&#xA;                height: 16px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;                color: rgba(43, 48, 51, 1);&#xA;            }&#xA;            &#xA;            jqx-numeric-text-box[ni-control-id='103'] {&#xA;                left: 1378px;&#xA;                top: 356px;&#xA;                width: 170px;&#xA;                height: 40px;&#xA;                font-size: 24px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-label[ni-control-id='104'] {&#xA;                left: 1378px;&#xA;                top: 336px;&#xA;                width: 57px;&#xA;                height: 16px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;                color: rgba(43, 48, 51, 1);&#xA;            }&#xA;            &#xA;            ni-data-grid[ni-control-id='112'] {&#xA;                left: 1188px;&#xA;                top: 420px;&#xA;                width: 350px;&#xA;                height: 232px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-string-control[ni-control-id='114'] {&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            jqx-led[ni-control-id='149'] {&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-label[ni-control-id='115'] {&#xA;                left: 1188px;&#xA;                top: 400px;&#xA;                width: 51px;&#xA;                height: 16px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;                color: rgba(43, 48, 51, 1);&#xA;            }&#xA;            &#xA;            jqx-slider[ni-control-id='129'] {&#xA;                left: 1500px;&#xA;                top: 33px;&#xA;                width: 56px;&#xA;                height: 296px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-label[ni-control-id='130'] {&#xA;                left: 1500px;&#xA;                top: 13px;&#xA;                width: 42px;&#xA;                height: 16px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;                color: rgba(43, 48, 51, 1);&#xA;            }&#xA;            &#xA;            jqx-slider[ni-control-id='132'] {&#xA;                left: 1492px;&#xA;                top: 33px;&#xA;                width: 64px;&#xA;                height: 296px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;            }&#xA;            &#xA;            ni-label[ni-control-id='133'] {&#xA;                left: 1492px;&#xA;                top: 13px;&#xA;                width: 42px;&#xA;                height: 16px;&#xA;                font-size: 12px;&#xA;                font-family: Segoe UI, sans-serif;&#xA;                font-style: normal;&#xA;                font-weight: normal;&#xA;                text-decoration: none;&#xA;                color: rgba(43, 48, 51, 1);&#xA;            }&#xA;            /* End read only section. To add additional styles, add a new style tag after this one. */&#xA;        &lt;/style&gt;&#xA;        &lt;style&gt;&#xA;            .front-panel {&#xA;                display: inline-block;&#xA;                width: 375px;&#xA;                height: 667px;&#xA;                position: relative;&#xA;                overflow: show;&#xA;                border-style: solid;&#xA;            }&#xA;        &lt;/style&gt;&#xA;&#xA;    &lt;/head&gt;&#xA;&#xA;    &lt;body&gt;&#xA;        &lt;div id=&quot;ni-outdated-browser-message&quot; style=&quot;display:none&quot;&gt;This browser is reporting compatibility with older browser technologies that may perform poorly if it all.&lt;/div&gt;&#xA;        &lt;section id=&quot;FrontPanelCanvas&quot; class=&quot;front-panel&quot;&gt;&#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;            &#xA;&#xA;        &lt;/section&gt;&#xA;        &lt;!--&lt;div class=&quot;front-panel&quot;&gt;&lt;/div&gt;&#xA;        &lt;div class=&quot;front-panel&quot;&gt;&lt;/div&gt;&#xA;        &lt;div class=&quot;front-panel&quot;&gt;&lt;/div&gt;--&gt;&#xA;    &lt;/body&gt;&#xA;&#xA;&lt;/html&gt;" Width="[float]2000" xmlns="http://www.ni.com/NationalInstruments.LabVIEW.HtmlVI">
 			<HtmlSlider BaseName="[string]Slider" Height="[float]62" Id="28" Label="[UIModel]29" LabelPresenter="[string]LV:G6" Left="[float]569" Maximum="[double]9" MinHeight="[float]40" MinWidth="[float]50" TabIndex="[int]0" Top="[float]468" Value="{DataItemBinding Id=26}" Width="[float]152" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
