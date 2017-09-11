@@ -1,19 +1,19 @@
 # Incorporate User Resource into WebVI
-[![Incorporate User Resource into WebVI Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/Incorporate%20User%20Resources/Builds/Web%20Server/Configuration1/WebApp/Main.html)
-[![Incorporate User Resource into WebVI README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/Incorporate%20User%20Resources)
+[![Incorporate User Resource into WebVI Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/IncorporateUserResources/Builds/WebApp_Web Server/Main.html)
+[![Incorporate User Resource into WebVI README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/IncorporateUserResources)
 
 This example demonstrates how to add resource files such as images, CSS files, JavaScript files, and HTML files to your web application component and reference them in a WebVI without needing to upload these files to a web server.
 
 You can also use resource files to augment the WebVI's capabilities. For example, you can add other HTML widgets or scripts and reference them in the HTML view of the WebVI.
 
-![Screenshot of Demo](https://ni.github.io/webvi-examples/Incorporate%20User%20Resources/Screenshot.gif)
+![Screenshot of Demo](https://ni.github.io/webvi-examples/IncorporateUserResources/Screenshot.gif)
 
 # Dependencies
 - LabVIEW NXG 2.0 Web Module
 
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
-2. Open `Incorporate User Resources/Incorporate User Resources.lvproject`.
+2. Open `Incorporate User Resources/IncorporateUserResources.lvproject`.
 3. On the **Project Files** tab, expand `WebApp.gcomp`.
 4. Double-click `Main.gviweb` to open it.
 
