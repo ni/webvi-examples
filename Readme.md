@@ -5,8 +5,8 @@
 The following examples demonstrate different ways of using WebVIs. Each directory contains example code and a readme explaining the example. If you have any questions or problems related to these examples, post on this GitHub repository's issues page.
 
 # Call 3rd Party Web Service
-[![Call 3rd Party Web Service Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/Call%203rd%20Party%20Web%20Service/Builds/Web%20Server/Configuration1/WebApp/Main.html)
-[![Call 3rd Party Web Service README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/Call%203rd%20Party%20Web%20Service)
+[![Call 3rd Party Web Service Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/Call3rdPartyWebService/Builds/WebApp_Web%20Server/Main.html)
+[![Call 3rd Party Web Service README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/Call3rdPartyWebService)
 
 This example demonstrates how to use a WebVI to call the [Earthquake API](https://earthquake.usgs.gov/) from the [US Geological Survey](https://www.usgs.gov/) and display recent earthquakes on a web page.
 
@@ -27,8 +27,8 @@ This example demonstrates how to create a WebVI that makes requests to a LabVIEW
 ![Screenshot of Demo](https://ni.github.io/webvi-examples/Call%20LabVIEW%20Web%20Service/Screenshot.gif)
 
 # Customize WebVI with CSS
-[![Customize WebVI with CSS Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/Customize%20with%20CSS/Builds/Web%20Server/Configuration1/WebApp/Main.html)
-[![Customize WebVI with CSS README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/Customize%20with%20CSS)
+[![Customize WebVI with CSS Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/CustomizeWithss/Builds/WebApp_Web%20ServerMain.html)
+[![Customize WebVI with CSS README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/CustomizeWithCss)
 
 This example demonstrates how to customize the HTML output of a WebVI using CSS.
 
