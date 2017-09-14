@@ -18,8 +18,11 @@ This example demonstrates how to use a WebVI to communicate over networks with S
   b. On the **Document** tab, click **Build**.
 
 # Details
-Skyline tags are a highly scalable, lossy network commutations method that utilizes a central node to broker communication between distributed applications. Tags have limited data types (integer, double, and string), but these datatypes can be utlized to provide sufficient flexibility for most applications. For example its common practice to utilize an integer tag to transmit data that will be represented to the user as a Boolean. 
+Skyline tags are a highly scalable, lossy network commutation method that utilizes a central node to broker communication between distributed embedded, desktop, and Web applications. Tags have limited data types (integer, double, and string), but these datatypes can be utilized to provide sufficient flexibility for most applications. String tags can be used to transmit JSON or other string based interchange formats. It is also common practice to utilize an integer tag to transmit data that will be represented to the user as a Boolean.
 
+![Screenshot of Int to Bool](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/int-to-bool.png)
+
+Here the bool to converted to an integer using the **Boolean to Integer** primitive before writing the tag. The Read Example Tags a **Not Equaly to 0?** to convert the integer to a Boolean.
 
 
 
