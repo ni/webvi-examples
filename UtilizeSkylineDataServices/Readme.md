@@ -24,7 +24,9 @@ Skyline tags are a highly scalable, lossy network commutation method that utiliz
 
 Here the bool to converted to an integer using the **Boolean to Integer** primitive before writing the tag. The Read Example Tags a **Not Equaly to 0?** to convert the integer to a Boolean.
 
+The example demonstrates the best practice of using the **Multi Read** and **Multi Write** tags nodes to read and write all tags in a single call. While this requires slightly more complex block diagram code the whole application runs more effecienctly by using a single HTTP GET/POST to read/write all five tags rather than 5 HTTP GET/POST calls. This advantage scales well in real applications with 10s or 100s of tags visualized in a single application. 
 
+![Screenshot of MultiRead](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/int-to-bool.png)
 
 
 A web service is a collection of functions that can be called through the web to trigger behavior or return data. Many websites offer these APIs as a way for third-party developers to build new applications using the website's underlying data or functionality.
