@@ -19,13 +19,29 @@ Use LabVIEW 2016 to create web services that do what WebVIs can't do, such as:
 
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
-2. Open `Call LabVIEW Web Service\WebService\WebService.lvproj` in LabVIEW 2016.
+2. Open `CallLabVIEWWebService\WebService\WebService.lvproj` in LabVIEW 2016.
 3. In the **Project Explorer**, right-click **Web Server** and select **Start**.
 4. Open `Call LabVIEW Web Service\WebVI\CallLabVIEWWebService.lvproject` in LabVIEW NXG 2.0.
 5. Open `Main.gviweb` and click the **Run** button.
 6. Build the web application.  
   a. Open `WebApp.gcomp`.  
   b. On the **Document** tab, click **Build**.
+
+**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Disigner** >> **Web Sever** >> right-click **WebApp.gcomp** >> **Run**
+
+# Hosting
+Copy and paste the build output at `\CallLabVIEWWebService\Builds` directory to any web server you want.
+
+## Hosting on the LabVIEW 2009-2017 Web Server
+1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
+2. Copy the `WebApp+Web Server` directory into the `www` directory.
+3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/Main.html`
+
+
+## Hosting on the NI Web Server
+1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
+2. Copy the `WebApp_Web Server` directory into the `htdocs` directory.
+3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/Main.html`.
 
 # Details
 

@@ -12,23 +12,28 @@ This example demonstrates how to embed custom web content into the WebVI panel u
 
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
-2. Open `Embed WebVI into Content/WebVI/Embed WebVI into Content.lvproject`.
+2. Open `EmbedWebVIIntoContent/WebVI/Embed WebVI into Content.lvproject`.
 3. On the **Project Files** tab, expand `WebApp.gcomp` and open `Main.gviweb`.
 4. Click the **Run** button.
 5. Build the web application.  
   a. On the **Project Files** tab, double-click `WebApp.gcomp` to open the web application component.  
   b. On the **Document** tab, click **Build**.  
-**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building.
 
-# Hosting
-Copy and paste the entire `<LabVIEW Projects>/Embed Content into WebVI/Builds/Web Server/Configuration1/WebApp` directory to any web server you want.
+  # Hosting
+  Copy and paste the build output at `\EmbedContentIntoWebVI\Builds` directory to any web server you want.
 
-## Hosting on the LabVIEW 2009-2017 Web Server
-1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
-2. Copy the `Embed WebVI into Content` directory into the `www` directory.
-3. Open a web browser and navigate to `http://localhost:8080/EmbedContentintoWebVI/Main.html`.  
-**Note:** NI recommends using Mozilla Firefox to view HTML files generated from a web application project.
+  ## Hosting on the LabVIEW 2009-2017 Web Server
+  1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
+  2. Copy the `WebApp+Web Server` directory into the `www` directory.
+  3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/Main.html`
 
+
+  ## Hosting on the NI Web Server
+  1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
+  2. Copy the `WebApp_Web Server` directory into the `htdocs` directory.
+  3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/Main.html`.  
+
+**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Disigner** >> **Web Sever** >> right-click **WebApp.gcomp** >> **Run**
 
 # Details
 This section describes the content added to the HTML view of the WebVI to create a web page that shows current weather conditions for Iowa State University.

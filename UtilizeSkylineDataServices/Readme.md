@@ -26,7 +26,22 @@ This example demonstrates how to use a WebVI to communicate over networks with S
 4. To build the web application.  
   a. Open `WebApp.gcomp`.  
   b. On the **Document** tab, click **Build**.
+
   **Note:** You can automatically launch and view the Web application locally by going to **System Disigner** >> **Web Sever** >> right-click **WebApp.gcomp** >> **Run**
+
+# Hosting
+Copy and paste the build output at `\UtilizeSkylineDataServices\Builds` directory to any web server you want.
+
+## Hosting on the LabVIEW 2009-2017 Web Server
+1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
+2. Copy the `WebApp+Web Server` directory into the `www` directory.
+3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/Main.html`
+
+
+## Hosting on the NI Web Server
+1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
+2. Copy the `WebApp_Web Server` directory into the `htdocs` directory.
+3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/Main.html`.  
 
 # Details
 ## Interacting with Tags
@@ -52,18 +67,4 @@ If an error has occurred or if the user clicks **Clear Faults and Reconnect** th
 # Security
 For the sake of approachability and learnability this example includes username and password fields on its panel. **We discourage this practice for all applications used in production**. Authentication credentials should also not be stored in constants on the block diagram. Doing this could lead to credentials stored in version control, which is an anti-pattern. We encourage credentials to be stored securely on disk but accessible via HTTPS. For example, credentials could be stored in a JSON file within the Web server that is also hosting your Web application.
 
-If storing credentials in a file is not an option you may choose to host your Web application in the NI Web Server. This requires the user to login to the Skyline Web UI for authentication. Logging into this Web UI stores an authentication cookie in your browser that is automatically sent with calls to Skyline data services. This eliminates the need to enter a username or password directly to the WebVI either on its panel or its diagram. To do this put the built output of your Web application into `C:\Program Files\National Instruments\Shared\Web Server\htdocs`. This is the directory for all files hosted by the NI Web Server. Please not a user can access the URL of the Web application without logging in, but to read/write tags in this scenario they will have to login to the Skyline Web UI at http://localhost:9090. 
-
-# Hosting
-Copy and paste the build output at `\UtilizeSkylineDataServices\Builds` directory to any web server you want.
-
-## Hosting on the LabVIEW 2009-2017 Web Server
-1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
-2. Copy the `WebApp+Web Server` directory into the `www` directory.
-3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/Main.html`
-
-
-## Hosting on the NI Web Server
-1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
-2. Copy the `WebApp_Web Server` directory into the `htdocs` directory.
-3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/Main.html`.  
+If storing credentials in a file is not an option you may choose to host your Web application in the NI Web Server. This requires the user to login to the Skyline Web UI for authentication. Logging into this Web UI stores an authentication cookie in your browser that is automatically sent with calls to Skyline data services. This eliminates the need to enter a username or password directly to the WebVI either on its panel or its diagram. To do this put the built output of your Web application into `C:\Program Files\National Instruments\Shared\Web Server\htdocs`. This is the directory for all files hosted by the NI Web Server. Please not a user can access the URL of the Web application without logging in, but to read/write tags in this scenario they will have to login to the Skyline Web UI at http://localhost:9090.

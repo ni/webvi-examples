@@ -12,32 +12,32 @@ This example demonstrates how to create a web application with multiple pages by
 - LabVIEW 2009-2017 (Required for hosting only)
 - NI SystemLink Server (Required for hosting only)
 
+
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
-2. Open `Multiple Top-Level VIs\Multiple Top-Level VIs.lvproject`.
-3. Open `Main.gviweb` and click the **Run** button.  
-**Note:** Clicking a link to another top-level WebVI within LabVIEW opens a web browser, but the WebVI does not run in the web browser. <!-- TODO DE12694: Pressing run and clicking link to other top-level panel opens a link to broken WebVI stuck in synchronization mode -->
-4. Test the top-level WebVIs.  
-  a. On the **Project Files** tab, double-click **System Designer** to open it.  
-  b. On the **Web Server** target, right-click `MultipleTopLevelVIs.gcomp` and select **Run Web Component**.  
-  **Note:** Clicking **Run Web Component** opens all the top-level WebVIs in your default browser at once.
-  <!-- TODO DE12779: Performing Run Web Component opens all Top-Level Vis at the same time -->
+2. Open `MultipleTopLevelVIs/MultipleTopLevelVIs.lvproject`.
+3. On the **Project Files** tab, expand `WebApp.gcomp` and open `Main.gviweb`.
+4. Click the **Run** button.
 5. Build the web application.  
-  a. Open `WebApp.gcomp`.  
-  b. On the **Document** tab, click **Build**.
+  a. On the **Project Files** tab, double-click `WebApp.gcomp` to open the web application component.  
+  b. On the **Document** tab, click **Build**.  
 
-# Hosting a Web Application on a Server
-Copy and paste the entire `MultipleTopLevelVIs` directory built under `<Project Directory>/Builds/Web Server/Configuration1/` to any web server of your choosing.
+**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Disigner** >> **Web Sever** >> right-click **WebApp.gcomp** >> **Run**
+
+# Hosting
+Copy and paste the build output at `\MultipleTopLevelVIs\Builds` directory to any web server you want.
 
 ## Hosting on the LabVIEW 2009-2017 Web Server
-1. Navigate to `<National Instruments>\Shared\NI WebServer\www`.
-2. Copy the `MultipleTopLevelVIs` directory into the `www` directory.
-3. Open a web browser and navigate to `http://localhost:8080/MultipleTopLevelVIs/index.html`.
+1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
+2. Copy the `WebApp+Web Server` directory into the `www` directory.
+3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/index.html`
 
-## Hosting on the NI SystemLink Server
-1. Navigate to `<National Instruments>\Shared\Web Server\htdocs`.
-2. Copy the `MultipleTopLevelVIs` directory into the `htdocs` directory.
-3. Open a web browser and navigate to `http://localhost/MultipleTopLevelVIs/index.html`.
+
+## Hosting on the NI Web Server
+1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
+2. Copy the `WebApp_Web Server` directory into the `htdocs` directory.
+3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/index.html`.  
+
 
 # Details
 
@@ -55,47 +55,3 @@ Top-level WebVIs do not need to be at the root of the namespace. For example, `S
 
 ## Change the File name to index.html for simpler URLs
 The file name of the HTML output of a top-level WebVI does not need to match the name of the WebVI itself. For example, the file name of `Main.gviweb` is set to `index.html` rather than `Main.html`. Many static web servers automatically serve a file named `index.html` when a directory is requested, which makes for cleaner URLs. For example, on a compatible web server, a user can enter `www.example.com/MultipleTopLevelVIs/` or `www.example.com/MultipleTopLevelVIs/index.html` to view the same page.
-
-## Centering a page in a web browser
-The HTML view of each of the WebVIs in this example was modified to include a CSS file called `WebVICenter.css` and a JavaScript file called `WebVICenter.js`.
-These files were added to center the WebVI content when you view the WebVI build output in a web browser.  
-**Note:** `WebVICenter.css` contains hard-coded panel dimensions. Please refer to the documentation in both `WebVICenter.css` and `WebVICenter.js` if you would like to change the panel dimensions of the WebVI.
-
-The following section contains an example of the content of the `WebVICenter.css` and `WebVICenter.js` files with reduced documentation. For more documentation, refer to the [WebVICenter.css](https://github.com/ni/webvi-examples/blob/master/MultipleTopLevelWebVIs/MultipleTopLevelWebVIs.gcomp/Resources/WebVICenter.css) and [WebVICenter.js](https://github.com/ni/webvi-examples/blob/master/MultipleTopLevelWebVIs/MultipleTopLevelWebVIs.gcomp/Resources/WebVICenter.js) files.
-
-### WebVICenter.css
-This file defines the CSS rules of the `webvi-center` class. When the `<body>` tag contains the `webvi-center` class, the layout of the HTML changes to a single column with centered elements.
-
-```css
-body.webvi-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-body.webvi-center #FrontPanelCanvas {
-    position: relative;
-    width: 320px; /* Make sure this matches the panel dimensions */
-    height: 480px; /* Make sure this matches the panel dimensions */
-    display: block;
-}
-```
-
-### WebVICenter.js
-This script determines whether the page is running in a web browser. If so, this script dynamically adds the `webvi-center` class to the `<body>` tag of the WebVI's HTML output.
-
-```javascript
-(function () {
-    'use strict';
-
-    var niWebAppElement = document.querySelector('ni-web-application');
-    if (niWebAppElement === null) {
-        return;
-    }
-
-    if (niWebAppElement.getAttribute('location').toLowerCase() !== 'browser') {
-        return;
-    }
-
-    document.body.classList.add('webvi-center');
-}());
-```
