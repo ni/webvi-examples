@@ -33,7 +33,7 @@ This example demonstrates how to embed custom web content into the WebVI panel u
   2. Copy the `WebApp_Web Server` directory into the `htdocs` directory.
   3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/Main.html`.  
 
-**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Disigner** >> **Web Sever** >> right-click **WebApp.gcomp** >> **Run**
+**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Sever** >> right-click **WebApp.gcomp** >> **Run**
 
 # Details
 This section describes the content added to the HTML view of the WebVI to create a web page that shows current weather conditions for Iowa State University.

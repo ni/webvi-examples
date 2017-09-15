@@ -27,7 +27,7 @@ This example demonstrates how to use a WebVI to communicate over networks with S
   a. Open `WebApp.gcomp`.  
   b. On the **Document** tab, click **Build**.
 
-  **Note:** You can automatically launch and view the Web application locally by going to **System Disigner** >> **Web Sever** >> right-click **WebApp.gcomp** >> **Run**
+  **Note:** You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Sever** >> right-click **WebApp.gcomp** >> **Run**
 
 # Hosting
 Copy and paste the build output at `\UtilizeSkylineDataServices\Builds` directory to any web server you want.
