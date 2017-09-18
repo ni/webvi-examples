@@ -1,5 +1,5 @@
 # Customize WebVI with CSS
-[![Customize WebVI with CSS Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/CustomizeWithss/Builds/WebApp_Web ServerMain.html)
+[![Customize WebVI with CSS Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/CustomizeWithCss/Builds/WebApp_Web%20Server/Main.html)
 [![Customize WebVI with CSS README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/CustomizeWithCss)
 
 This example demonstrates how to customize the HTML of a WebVI using CSS.
@@ -23,16 +23,22 @@ You can use this approach in your own projects if you are familiar with CSS and 
 5. Build the web application.  
   a. On the **Project Files** tab, double-click `WebApp.gcomp` to open the web application component.  
   b. On the **Document** tab, click **Build**.  
-**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building.
+
+**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Sever** >> right-click **WebApp.gcomp** >> **Run**
 
 # Hosting
-Copy and paste the entire `CustomizeWithCss/Builds/WebApp_Web Server` directory to any web server you want.
+Copy and paste the build output at `\CustomizeWithCss\Builds` directory to any web server you want.
 
-## Hosting with LabVIEW 2009-2017 Web Server
+## Hosting on the LabVIEW 2009-2017 Web Server
 1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
-2. Copy `Customize with CSS/Builds/Web Server/Configuration1/WebApp` directory into the `www` directory.
-3. Open a web browser and navigate to `http://localhost:8080/WebApp/index.html`.  
-**Note:** NI recommends using Mozilla Firefox to view HTML files generated from a web application project.
+2. Copy the `WebApp+Web Server` directory into the `www` directory.
+3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/Main.html`
+
+
+## Hosting on the NI Web Server
+1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
+2. Copy the `WebApp_Web Server` directory into the `htdocs` directory.
+3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/Main.html`.  
 
 # Details
 

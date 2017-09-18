@@ -1,5 +1,5 @@
 # Call 3rd Party Web Service
-[![Call 3rd Party Web Service Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/Call3rdPartyWebService/Builds/WebApp_Web Server/Main.html)
+[![Call 3rd Party Web Service Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/Call3rdPartyWebService/Builds/WebApp_Web%20Server/Main.html)
 [![Call 3rd Party Web Service README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/Call3rdPartyWebService)
 
 This example demonstrates how to use a WebVI to call the [Earthquake API](https://earthquake.usgs.gov/) from the [US Geological Survey](https://www.usgs.gov/) and display recent earthquakes on a web page.
@@ -15,11 +15,27 @@ On the panel, this WebVI displays a summary of the results in a data grid and a 
 
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
-2. Open `Call 3rd Party Web Service/Call3rdPartyWebService.lvproject`
+2. Open `Call3rdPartyWebService/Call3rdPartyWebService.lvproject`
 3. Open `Main.gviweb` and click the **Run** button.
 4. Build the web application.  
   a. Open `WebApp.gcomp`.  
   b. On the **Document** tab, click **Build**.
+
+**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Sever** >> right-click **WebApp.gcomp** >> **Run**
+
+# Hosting
+Copy and paste the build output at `\Call3rdPartyWebService\Builds` directory to any web server you want.
+
+## Hosting on the LabVIEW 2009-2017 Web Server
+1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
+2. Copy the `WebApp+Web Server` directory into the `www` directory.
+3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/Main.html`
+
+
+## Hosting on the NI Web Server
+1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
+2. Copy the `WebApp_Web Server` directory into the `htdocs` directory.
+3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/Main.html`.  
 
 # Details
 A web service is a collection of functions that can be called through the web to trigger behavior or return data. Many websites offer these APIs as a way for third-party developers to build new applications using the website's underlying data or functionality.

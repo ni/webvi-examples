@@ -1,6 +1,6 @@
 # Embed a WebVI into Web Content
-[![Embed a WebVI into Web Content Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/Embed%20WebVI%20into%20Content/)
-[![Embed a WebVI into Web Content README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/Embed%20WebVI%20into%20Content)
+[![Embed a WebVI into Web Content Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/EmbedWebVIIntoContent/)
+[![Embed a WebVI into Web Content README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/EEmbedWebVIIntoContent)
 
 This example demonstrates how to embed the output of a WebVI built using LabVIEW NXG 2.0 into an static web page.
 
@@ -11,7 +11,7 @@ The build output of a WebVI includes three basic parts:
 
 Because WebVIs share the same basic building blocks as other web pages, you can embed WebVI output into any web content.
 
-![Screenshot of Demo](https://ni.github.io/webvi-examples/Embed%20WebVI%20into%20Content/Screenshot.gif)
+![Screenshot of Demo](https://ni.github.io/webvi-examples/EmbedWebVIIntoContent/Screenshot.gif)
 
 # Usage
 You can use the techniques demonstrated in this example whenever you want to embed a WebVI to an existing web page. For example, you may create educational course material with an embedded WebVI that visualizes data acquired in a lab setting.
@@ -23,13 +23,15 @@ You can use the techniques demonstrated in this example whenever you want to emb
 
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
-2. Open `Embed WebVI into Content/WebVI/Embed WebVI into Content.lvproject`.
+2. Open `EmbedWebVIIntoContent/WebVI/EmbedWebVIIntoContent.lvproject`.
 3. On the **Project Files** tab, expand `WebApp.gcomp` and open `Main.gviweb`.
 4. Click the **Run** button.
 5. Build the web application.  
   a. On the **Project Files** tab, double-click `WebApp.gcomp` to open the web application component.  
   b. On the **Document** tab, click **Build**.  
-**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building.
+
+**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. 
+
 
 ## Important Directories
 - **`WebVI`** &mdash; The source code of the WebVI and the build output of the web application. Most of the paths and file names are defaults from the **Web Application Project** template in LabVIEW NXG 2.0.
@@ -37,19 +39,18 @@ You can use the techniques demonstrated in this example whenever you want to emb
 - **`StaticPageResources`** &mdash; The HTML and CSS files that define the static web page. This example requires no additional JavaScript.
 
 # Hosting
-Copy and paste the entire `Embed WebVI into Content` directory to any web server you want.
+After building copy and paste the build output at `\EmbedWebVIIntoContents` directory to any web server you want.
 
 ## Hosting on the LabVIEW 2009-2017 Web Server
-1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
-2. Copy the `Embed WebVI into Content` directory into the `www` directory.
-3. Open a web browser and navigate to `http://localhost:8080/Embed%20WebVI%20into%20Content/index.html`.  
-**Note:** NI recommends using Mozilla Firefox to view HTML files generated from a web application project.
+1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`and create directory; for example `webvi-example`.
+2. Copy the `EmbedWebVIIntoContents` directory into the `webvi-example` directory.
+3. Open a web browser and navigate to `http://localhost:8080/webvi-example/index.html`
 
-## Hosting on the NI SystemLink Server
-1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
-2. Copy the `Embed WebVI into Content` directory into the `htdocs` directory.
-3. Open a web browser and navigate to `http://localhost/Embed%20WebVI%20into%20Content/index.html`.  
-**Note:** NI recommends using Mozilla Firefox to view HTML files generated from a web application project.
+## Hosting on the NI Web Server
+1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs` and create directory; for example `webvi-example`.
+2. Copy the `EmbedWebVIIntoContents` directory into the `htdoc\webvi-example` directory.
+3. Open a web browser and navigate to `http://localhost:9090/webvi-example/index.html`.  
+
 
 ## Published Example
 You can find the fully assembled and hosted web application on [Github Pages]({{site.github.url}}/Embed%20WebVI%20into%20Content/index.html) TODO: Double check link once GitHub pages is up and running.
