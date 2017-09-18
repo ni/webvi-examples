@@ -70,3 +70,14 @@ Cross-Origin Resource Sharing (CORS) allows a Web Service VI to respond to HTTP 
 
 ## The WebVI
 The WebVI makes requests to both of the HTTP endpoint methods in the LabVIEW 2016 web service and displays the returned data. For the POST method, it collects some parameter information from the panel controls and serializes it into the POST buffer.
+
+## Bundling with LabVIEW Web Services
+This example show how to include your WebVI as part of your LabVIEW Web service and deploy them together. This is advantageous if you want to avoid CORS between your WebVI and Web service in production. This also allows the use of relative URLs on the WebVI block diagram.
+
+### Project Setup
+The `WebApp_Web Server` directory has been included as **Public Content** within the LabVIEW 2016 project. This was done by right-clicking the Web service in the project and selecting Add **Public Content Folder**. In the **Open** dialog the `WebApp_Web Server` directory was selected. This is an *auto populating* folder so changes made by modifying the WebVI and rebuilding the application in LabVIEW NXG are automatically up taken by LabVIEW 2016 project.
+
+### URL Configuration Enum
+In the WebVI there is a drop down for selecting the URL configuration.
+- **Use Absolute URLs and Local Debugging**: This uses fully qualitied URLs; e.g. `http://127.0.0.1:8001/Web_Server/ParametricCurve` in each HTTP request. Fully qualified URLs must be used if the Web service access by the WebVI is on a different host than the WebVI itself; eg. CORS. The port here is the **Local Debugging** port used by LabVIEW 2016 when the Web service is hosted by LabVIEW. This is enabled by right-clicking the Web Service in the LabVIEW 2016 project and selecting **Start**.
+- **Use Relative URLs and Application Web Server**: This uses a relative URLs; e.g. `ParametricCurve` in each HTTP request. The rest of the URL is filled in automatically by the browser. This technique is useful because URLs in code don't need to be changed as the hostname, protocol, or port or the Web service is changed. The Web service and WebVI are deployed to the **Application Web Server** by right-clicking the Web service in the LabVIEW 2016 project and selecting **Publish**.
