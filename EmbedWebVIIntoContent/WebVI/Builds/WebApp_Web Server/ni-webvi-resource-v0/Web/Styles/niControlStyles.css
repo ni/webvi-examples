@@ -103,12 +103,18 @@ jqx-toggle-button {
     position: absolute;
 }
 
+jqx-toggle-button .jqx-container {
+    color: inherit;
+    transition: none !important;
+}
+
 jqx-toggle-button .ni-glyph {
     display: inline;
     font: normal normal normal 1em "NILVJSFontAwesome";
     font-stretch: normal;
     text-decoration: none;
     margin-right: 10px;
+    color: inherit;
 }
 
 
@@ -118,9 +124,17 @@ jqx-toggle-button .ni-text {
     white-space: pre;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: inherit;
 }
 
-jqx-toggle-button .ni-hidden {
+/* Only hide the text when show values are hidden.
+   The user can hide the glyph by setting the glyph to none. */
+jqx-toggle-button .ni-glyph.ni-hidden {
+    display: inline;
+    margin-right: 0px;
+}
+
+jqx-toggle-button .ni-text.ni-hidden {
     display: none;
 }
 
@@ -597,6 +611,21 @@ ni-data-grid ni-linear-progress-bar {
     box-sizing: border-box;
 }
 
+/* Adds a margin between the go to page text box and the counters */
+ni-data-grid .jqx-grid-pager > div :nth-child(3) {
+    margin-left: 5px;
+}
+
+/* Hides the the grid pager list drop down*/
+ni-data-grid .jqx-grid-pager > div :nth-child(4) {
+    display: none;
+}
+
+/* Hides the "Show rows:" text*/
+ni-data-grid .jqx-grid-pager > div :nth-child(5) {
+    display: none;
+}
+
 /*************************************
 * Drop Down
 **************************************/
@@ -617,6 +646,8 @@ ni-enum-selector .ni-expand-button {
 }
 
 ni-enum-selector jqx-drop-down-list {
+    width: 100%;
+    height: 100%;
     font: inherit;
 }
 
@@ -1094,19 +1125,19 @@ ni-ring-selector {
     display: inline-block;
 }
 
-ni-ring-selector .ni-ring-numeric-input {
+ni-ring-selector jqx-numeric-text-box {
     display: none;
 }
 
-ni-ring-selector[allow-undefined] .ni-expand-button {
-    width: 75%;
+ni-ring-selector[allow-undefined] jqx-drop-down-list {
+    width: 70%; /* Keep in sync with ni-ring-selector.js*/
     overflow: visible;
 }
 
-ni-ring-selector[allow-undefined] .ni-ring-numeric-input {
+ni-ring-selector[allow-undefined] jqx-numeric-text-box {
     display: block;
     height: 100%;
-    width: 25%;
+    width: 30%;  /* Keep in sync with ni-ring-selector.js*/
     position: absolute;
     top: 0px;
     right: 0px;
@@ -1434,6 +1465,25 @@ ni-url-image .ni-stretch-uniformtofill {
 
 ni-url-image .ni-stretch-fill {
     background-size: 100% 100%;
+}
+
+/*************************************
+* Error message when Vireo load fails
+**************************************/
+#ni-failed-to-load-vireo-source {
+    background-color: rgba(235, 235, 245, 0.8);
+    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+    color: rgb(105, 109, 116);
+    padding: 8px;
+}
+
+#ni-failed-to-load-vireo-message-title {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#ni-failed-to-load-vireo-message-body {
+    font-size: 14px;
 }
 
 /*************************************
