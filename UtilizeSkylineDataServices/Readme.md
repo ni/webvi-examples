@@ -18,8 +18,9 @@ Setup for building web applications and NI Packages is also demonstrated. Quickl
   - API UPDATE FOR YTBNCS
 
 
-# Setup for YTBNCS for data communication
+# Setup for YTBNCS
 TODO: IMAGE OF CONFIGURE VI
+
 **Server URL:**https://YTBNCS.com
 
 **API Key Authentication** An API key is needed to authenticate the communication between the WebVI running on your local machine and the YTBNCS in the cloud. An API key is not needed if the web application is hosted by YTBNCS because your ni.com user name and password can be used for authentication.
