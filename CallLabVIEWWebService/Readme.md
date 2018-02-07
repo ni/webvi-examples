@@ -30,15 +30,32 @@ Use LabVIEW 2016 to create web services that do what WebVIs can't do, such as:
 **Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Sever** >> right-click **WebApp.gcomp** >> **Run**
 
 # Hosting
-Copy and paste the build output at `\CallLabVIEWWebService\Builds` directory to any web server you want.
+You can manually the move the build output found at `\CallLabVIEWWebService\Builds` to any web server. This project also includes a Distribution (WebApp.lvdist) that can be used to build a package (.nipkg). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on NI'S YET TO BE NAMED CLOUD SERVICES.
 
-## Hosting on the LabVIEW 2009-2017 Web Server
+## TO BE NAMED Cloud Hosting
+The following steps can be used to host the web app on NI'S YET TO BE NAMED CLOUD SERVICES
+1. Open `CallLabVIEWWebService.lvproject`.
+2. Open `WebApp.lvdist`.
+3. Click the build icon in the top command bar of this distribution document
+4. Open a Web browser and navigate to https://YETTOBEDEFINEDHOST/webapps
+5. Click the **Choose nipkg** button and select the nipkg built in step 3.
+6. When the upload is complete, click on your newly uploaded Web app from your list of Web apps
+
+## Local Hosting
+The following steps can be used to host the web app on a local web server
+### Hosting on the NI Web Server with a nipkg
+1. Open `CallLabVIEWWebService.lvproject`
+2. Open `WebApp.lvdist`.
+3. Click the build icon in the top command bar of this distribution document
+4. Double-click the nipkg and follow the on screen instructions
+5. Open a web browser and navigate to `http://localhost:9090/calllvwebservice/Main.html`
+
+### Hosting on the LabVIEW 2009-2017 Web Server
 1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
 2. Copy the `WebApp+Web Server` directory into the `www` directory.
 3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/Main.html`
 
-
-## Hosting on the NI Web Server
+### Hosting on the NI Web Server
 1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
 2. Copy the `WebApp_Web Server` directory into the `htdocs` directory.
 3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/Main.html`.
@@ -72,7 +89,7 @@ Cross-Origin Resource Sharing (CORS) allows a Web Service VI to respond to HTTP 
 The WebVI makes requests to both of the HTTP endpoint methods in the LabVIEW 2016 web service and displays the returned data. For the POST method, it collects some parameter information from the panel controls and serializes it into the POST buffer.
 
 ## Bundling with LabVIEW Web Services
-This example show how to include your WebVI as part of your LabVIEW Web service and deploy them together. This is advantageous if you want to avoid CORS between your WebVI and Web service in production. This also allows the use of relative URLs on the WebVI block diagram.
+This example show how to include your WebVI as part of your LabVIEW Web service for either Windows or Real-Time and deploy them together. This is advantageous if you want to avoid CORS between your WebVI and Web service in production. This also allows the use of relative URLs on the WebVI block diagram.
 
 ### Project Setup
 The `WebApp_Web Server` directory has been included as **Public Content** within the LabVIEW 2016 project. This was done by right-clicking the Web service in the project and selecting Add **Public Content Folder**. In the **Open** dialog the `WebApp_Web Server` directory was selected. This is an *auto populating* folder so changes made by modifying the WebVI and rebuilding the application in LabVIEW NXG are automatically up taken by LabVIEW 2016 project. See more details on this topic at [Integrating Static Content into a Web Service](http://zone.ni.com/reference/en-XX/help/371361N-01/lvhowto/ws_static_content/).

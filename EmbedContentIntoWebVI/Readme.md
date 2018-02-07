@@ -19,19 +19,36 @@ This example demonstrates how to embed custom web content into the WebVI panel u
   a. On the **Project Files** tab, double-click `WebApp.gcomp` to open the web application component.  
   b. On the **Document** tab, click **Build**.  
 
-  # Hosting
-  Copy and paste the build output at `\EmbedContentIntoWebVI\Builds` directory to any web server you want.
+# Hosting
+You can manually the move the build output found at `\EmbedWebVIIntoContent\Builds` to any web server. This project also includes a Distribution (WebApp.lvdist) that can be used to build a package (.nipkg). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on NI'S YET TO BE NAMED CLOUD SERVICES.
 
-  ## Hosting on the LabVIEW 2009-2017 Web Server
-  1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
-  2. Copy the `WebApp+Web Server` directory into the `www` directory.
-  3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/Main.html`
+## TO BE NAMED Cloud Hosting
+The following steps can be used to host the web app on NI'S YET TO BE NAMED CLOUD SERVICES
+1. Open `EmbedWebVIIntoContent.lvproject`.
+2. Open `WebApp.lvdist`.
+3. Click the build icon in the top command bar of this distribution document
+4. Open a Web browser and navigate to https://YETTOBEDEFINEDHOST/webapps
+5. Click the **Choose nipkg** button and select the nipkg built in step 3.
+6. When the upload is complete, click on your newly uploaded Web app from your list of Web apps
 
+## Local Hosting
+The following steps can be used to host the web app on a local web server
+### Hosting on the NI Web Server with a nipkg
+1. Open `EmbedWebVIIntoContent.lvproject`
+2. Open `WebApp.lvdist`.
+3. Click the build icon in the top command bar of this distribution document
+4. Double-click the nipkg and follow the on screen instructions
+5. Open a web browser and navigate to `http://localhost:9090/embedcontentintowebvi/Main.html`
 
-  ## Hosting on the NI Web Server
-  1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
-  2. Copy the `WebApp_Web Server` directory into the `htdocs` directory.
-  3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/Main.html`.  
+### Hosting on the LabVIEW 2009-2017 Web Server
+1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
+2. Copy the `WebApp+Web Server` directory into the `www` directory.
+3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/Main.html`
+
+### Hosting on the NI Web Server
+1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
+2. Copy the `WebApp_Web Server` directory into the `htdocs` directory.
+3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/Main.html`.
 
 **Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Sever** >> right-click **WebApp.gcomp** >> **Run**
 
