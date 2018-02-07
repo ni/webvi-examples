@@ -2,14 +2,41 @@
 [![Utilize Skyline Data Services](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/Builds/WebApp_Web%20Server/Main.html)
 [![Utilize Skyline Data Services README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/UtilizeSkylineDataServices)
 
-This example demonstrates how to use a WebVI to communicate over networks with Skyline Tags. The example also shows how code can be shared between WebVIs and GVIs using a library.  On the diagram, this WebVI utilizes a state machine to determine when to read/write tags and when to connect to a server. On the panel, this example has fields to enter the server, username, and password. It also has a tab control that determines the visible view as well as the state in the state machine.
+This example demonstrates how to use a WebVI to communicate over networks with Skyline Tags with the YTBNCS cloud or with an on premises server.  
+
+The panel has a tab control to determine whether to connect to an on premises server (user supplies hostname, username, and password) or with CLOUD hosting (user supplies API Key). LEARN MORE ABOUT OBTAINING API KEYS HERE.
+
+The center tab control determines the visible view as well as the state in the state machine. A common library is used to show how code can be shared between WebVIs and GVIs.
+
+Setup for building web applications and NI Packages is also demonstrated. Quickly launch and view the web application in your default browser by going to System Designer, right-clicking `WebApp.gcomp` and selecting **Run**.
 
 ![Screenshot of Demo](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/Screenshot.gif)
 
 # Dependencies
 - LabVIEW NXG 2.0 Web Module
+- YET TO BE NAMED CLOUD SERVICES
+  - API UPDATE FOR YTBNCS
 
-# Setup
+
+# Setup for YTBNCS for data communication
+TODO: IMAGE OF CONFIGURE VI
+**Server URL:**https://YTBNCS.com
+
+**API Key Authentication** An API key is needed to authenticate the communication between the WebVI running on your local machine and the YTBNCS in the cloud. An API key is not needed if the web application is hosted by YTBNCS because your ni.com user name and password can be used for authentication.
+
+## Obtaining an API Key
+1. Go to YTBNCS.com and click on **Security**
+2. Click **+ New API key**
+3. Copy the API key to your clip board
+**Note** You only get to see the API key once so write it down somewhere safe. If you delete the API key all applications using it will not longer be able to connect to YTBNCS
+
+# Set up for On Premises Hosting
+**Server URL:**http://localhost:9090
+
+**User Name + Password Authentication**
+TODO link to ni.com help for setting up users on NI Web Server.
+
+## On Premises Server Setup
 1. After installing the Web Module the NI Web Server must be configured. Please note this configuration enabled development in LabVIEW using Skyline data services hosted on the same machine
     1. Open  the NI Web Server configuration utility in `C:\Program Files\National Instruments\Shared\Web Server Config`
     2. Use the guided setup to set the following options
@@ -20,6 +47,8 @@ This example demonstrates how to use a WebVI to communicate over networks with S
         5. Click **Finish** and go to the **Remote** tab after the Web server has restarted
         6. Enable the radio button for **Enable CORS for other web servers on this machine**
         7. Click **Apply and Restart**
+
+# Run and Build
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
 2. Open `UtilizeSkylineDataServices\UtilizeSkylineDataServices.lvproject`
 3. Open `Main.gviweb` and click the **Run** button.
@@ -30,18 +59,35 @@ This example demonstrates how to use a WebVI to communicate over networks with S
   **Note:** You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Sever** >> right-click **WebApp.gcomp** >> **Run**
 
 # Hosting
-Copy and paste the build output at `\UtilizeSkylineDataServices\Builds` directory to any web server you want.
+You can manually the move the build output found at `\UtilizeSkylineDataServices\Builds` to any web server. This project also includes a Distribution (WebApp.lvdist) that can be used to build a package (.nipkg). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on NI'S YET TO BE NAMED CLOUD SERVICES.
 
-## Hosting on the LabVIEW 2009-2017 Web Server
+## TO BE NAMED Cloud Hosting
+The following steps can be used to host the web app on NI'S YET TO BE NAMED CLOUD SERVICES
+1. Open `UtilizeSkylineDataServices.lvproject`.
+2. Open `WebApp.lvdist`.
+3. Click the build icon in the top command bar of this distribution document
+4. Open a Web browser and navigate to https://YETTOBEDEFINEDHOST/webapps
+5. Click the **Choose nipkg** button and select the nipkg built in step 3.
+6. When the upload is complete, click on your newly uploaded Web app from your list of Web apps
+
+## Local Hosting
+The following steps can be used to host the web app on a local web server
+### Hosting on the NI Web Server with a nipkg
+1. Open `UtilizeSkylineDataServices.lvproject`
+2. Open `WebApp.lvdist`.
+3. Click the build icon in the top command bar of this distribution document
+4. Double-click the nipkg and follow the on screen instructions
+5. Open a web browser and navigate to `http://localhost:9090/utilizeskylinedataservices/Main.html`
+
+### Hosting on the LabVIEW 2009-2017 Web Server
 1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
 2. Copy the `WebApp+Web Server` directory into the `www` directory.
 3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/Main.html`
 
-
-## Hosting on the NI Web Server
+### Hosting on the NI Web Server
 1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
 2. Copy the `WebApp_Web Server` directory into the `htdocs` directory.
-3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/Main.html`.  
+3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/Main.html`.
 
 # Details
 ## Interacting with Tags
