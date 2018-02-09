@@ -8,34 +8,38 @@ The panel has a tab control to determine whether to connect to an on premises se
 
 The center tab control determines the visible view as well as the state in the state machine. A common library is used to show how code can be shared between WebVIs and GVIs.
 
-Setup for building web applications and NI Packages is also demonstrated. Quickly launch and view the web application in your default browser by going to System Designer, right-clicking `WebApp.gcomp` and selecting **Run**.
+Setup for building web applications and NI Packages is also demonstrated. You may also quickly launch and view the web application in your default browser by going to System Designer, right-clicking `WebApp.gcomp` and selecting **Run**.
 
 ![Screenshot of Demo](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/Screenshot.gif)
 
+_Figure 1: When hosting a WebVI in the NI Web Server, credentials do not need to be entered if the user has logged into Skyline web interface_
+
 # Dependencies
 - LabVIEW NXG 2.0 Web Module
-- YET TO BE NAMED CLOUD SERVICES
+- YTBNCS
   - API UPDATE FOR YTBNCS
 
 
-# Setup for YTBNCS
-TODO: IMAGE OF CONFIGURE VI
+# Setup for communicating with YTBNCS from LabVIEW NXG
+![Configure GVI in LabVIEW vs Hosting in YTBNCS](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/ytbncs-config.png)
 
-**Server URL:**https://YTBNCS.com
+_Figure 2: Note differences in inputs between using YTBNCS data services from within LabVIEW vs hosting within YTBNCS_
 
-**API Key Authentication** An API key is needed to authenticate the communication between the WebVI running on your local machine and the YTBNCS in the cloud. An API key is not needed if the web application is hosted by YTBNCS because your ni.com user name and password can be used for authentication.
+When communicating with YTBNCS data services from LabVIEW NXG you must include both a **server url** (https://YTBNCS.com) as well as an **API key**. An API key is needed to authenticate the communication between the WebVI running on your local machine and the YTBNCS in the cloud. Neither an API key nor server URL should be specified when the web application is hosted by YTBNCS because your ni.com user name and password can be used for authentication. This has been done deliberately in order to limit security vulnerabilities that can arise by including an API key on your hosted web application.
 
 ## Obtaining an API Key
-1. Go to YTBNCS.com and click on **Security**
+1. Go to YTBNCS.com, enter your ni.com credentials to login, and click on **Security**
 2. Click **+ New API key**
 3. Copy the API key to your clip board
 **Note** You only get to see the API key once so write it down somewhere safe. If you delete the API key all applications using it will not longer be able to connect to YTBNCS
 
-# Set up for On Premises Hosting
-**Server URL:**http://localhost:9090
+# Setup for communicating with Premises Hosting from LabVIEW NXG
+![Configure GVI in LabVIEW vs Hosting on premises](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/on-premises-config.png)
 
-**User Name + Password Authentication**
-TODO link to ni.com help for setting up users on NI Web Server.
+_Figure 3: Note differences in inputs between using on premises data services from within LabVIEW vs hosting within the NI Web Server_
+
+When communicating with on premises data services from LabVIEW NXG you must include a **server url** (https://YTBNCS.com) as well as an **username** and **password**. The username and password can be managed with the NI Web Server Configuration utility. This utility can be used to create new users and groups as well as leverage existing LDAP or Windows user accounts. [Go here]() to more about using this utility. Like in the case of using YTBNCS to host your web application, the **server url**, **username**, and **password** do not need to specified when the web application is hosted the NI Web Server. Again, this represents a best practice to minimize security vulnerabilities.
+
 
 ## On Premises Server Setup
 1. After installing the Web Module the NI Web Server must be configured. Please note this configuration enabled development in LabVIEW using Skyline data services hosted on the same machine
@@ -60,14 +64,14 @@ TODO link to ni.com help for setting up users on NI Web Server.
   **Note:** You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Sever** >> right-click **WebApp.gcomp** >> **Run**
 
 # Hosting
-You can manually the move the build output found at `\UtilizeSkylineDataServices\Builds` to any web server. This project also includes a Distribution (WebApp.lvdist) that can be used to build a package (.nipkg). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on NI'S YET TO BE NAMED CLOUD SERVICES.
+Once you have authored and built your web application in NXG you will need to move it to a web server so it can access from a web browser. You can manually the move the build output found at `\UtilizeSkylineDataServices\Builds` to any web server of choosing. This project also includes a distribution `WebApp.lvdist` that can be used to build a package (`.nipkg`). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on YTBNCS.
 
 ## TO BE NAMED Cloud Hosting
-The following steps can be used to host the web app on NI'S YET TO BE NAMED CLOUD SERVICES
+The following steps can be used to host the web app on YTBNCS
 1. Open `UtilizeSkylineDataServices.lvproject`.
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
-4. Open a Web browser and navigate to https://YETTOBEDEFINEDHOST/webapps
+4. Open a Web browser and navigate to https://YTBNCS/webapps
 5. Click the **Choose nipkg** button and select the nipkg built in step 3.
 6. When the upload is complete, click on your newly uploaded Web app from your list of Web apps
 
@@ -92,7 +96,7 @@ The following steps can be used to host the web app on a local web server
 
 # Details
 ## Interacting with Tags
-Skyline tags are a highly scalable, lossy network commutation method that utilizes a central node to broker communication between distributed embedded, desktop, and Web applications. Tags have limited data types (integer, double, and string), but these datatypes can be utilized to provide sufficient flexibility for most applications. String tags can be used to transmit JSON or other string based interchange formats. It is also common practice to use integer tags to transmit Boolean data.
+Skyline tags are a highly scalable, lossy network commutation method that utilizes a central node (on premises or cloud) to broker communication between distributed embedded, desktop, and Web applications. Tags have limited data types (integer, double, and string), but these datatypes can be utilized to provide sufficient flexibility for most applications. String tags can be used to transmit JSON or other string based interchange formats. It is also common practice to use integer tags to transmit Boolean data.
 
 ![Screenshot of Int to Bool](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/int-to-bool.png)
 
@@ -112,6 +116,8 @@ If an error has occurred or if the user clicks **Clear Faults and Reconnect** th
 ![Screenshot of Determine Next State](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/next-state.png)
 
 # Security
-For the sake of approachability and learnability this example includes username and password fields on its panel. **We discourage this practice for all applications used in production**. Authentication credentials should also not be stored in constants on the block diagram. Doing this could lead to credentials stored in version control, which is an anti-pattern. We encourage credentials to be stored securely on disk but accessible via HTTPS. For example, credentials could be stored in a JSON file within the Web server that is also hosting your Web application.
+For the sake of approachability and learnability this example includes username and password fields on its panel. **We discourage this practice for all applications used in production**. Additionally, authentication credentials should not be stored in constants on the block diagram. This is true for both username/password and API keys. Doing this could lead to credentials stored in version control or allow a malicious attacker retrieve your credentials by access the code running the browser. We encourage credentials to be stored securely on disk but accessible via HTTPS. For example, credentials could be stored in a JSON file within the Web server that is also hosting your Web application.
 
-If storing credentials in a file is not an option you may choose to host your Web application in the NI Web Server. This requires the user to login to the Skyline Web UI for authentication. Logging into this Web UI stores an authentication cookie in your browser that is automatically sent with calls to Skyline data services. This eliminates the need to enter a username or password directly to the WebVI either on its panel or its diagram. To do this put the built output of your Web application into `C:\Program Files\National Instruments\Shared\Web Server\htdocs`. This is the directory for all files hosted by the NI Web Server. Please not a user can access the URL of the Web application without logging in, but to read/write tags in this scenario they will have to login to the Skyline Web UI at http://localhost:9090.
+If storing credentials in a file is not an option and you need to host your web application on premises you may choose to host your web application in the NI Web Server. This requires the user to login to the Skyline Web UI for authentication. Logging into this Web UI stores an authentication cookie in your browser that is automatically sent with calls to Skyline data services. This eliminates the need to enter a username or password directly to the WebVI either on its panel or its diagram. To do this put the built output of your Web application into `C:\Program Files\National Instruments\Shared\Web Server\htdocs`. This is the directory for all files hosted by the NI Web Server. Please note a user can access the URL of the Web application without logging in, but to read/write tags in this scenario they will have to login to the Skyline Web UI at http://localhost:9090.
+
+If storing credentials in a file is not an option and you can to host your web application in the cloud you may choose to host your web application in YTBNCS. This requires you to have active SSP for the LabVIEW NXG Web module as well as login using your ni.com login. Doing so allows an authentication cookie in your browser to be  automatically sent with calls to YTBNCS. This eliminates the need to enter an API key or server url either on the web applications' panel or its diagram.
