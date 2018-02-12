@@ -4,7 +4,9 @@
 
 This example demonstrates how to use a WebVI to communicate over networks with Skyline Tags with the YTBNCS cloud or with an on premises server.  
 
-The panel has a tab control to determine whether to connect to an on premises server (user supplies hostname, username, and password) or with CLOUD hosting (user supplies API Key). LEARN MORE ABOUT OBTAINING API KEYS HERE.
+![Data Services](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/Sdata-service-cloud.png)
+
+The panel has a tab control to determine whether to connect to an on premises server (user supplies hostname, username, and password) or with CLOUD hosting (user supplies API Key).
 
 The center tab control determines the visible view as well as the state in the state machine. A common library is used to show how code can be shared between WebVIs and GVIs.
 
