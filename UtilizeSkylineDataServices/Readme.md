@@ -61,6 +61,21 @@ An API key authenticates an application, device, or system – much like your ni
 5. Click **Create** at the bottom of the dialog box to activate the API key.
 > **Note**: If you do not click **Create**, you will not create the API key. Therefore, the API key you copied will be invalid.
 
+## Updating Your Skyline API Keys
+In order to connect your systems to Helium, you need to update or install the Skyline API keys. Depending on your version of LabVIEW, follow the instructions below.
+
+### LabVIEW NXG:
+1.	Go to the YTBNCS.com and click the **Data Services APIs** button.
+2.	Click the **Download Skyline API Key Support** button.
+3.	Double click the package file to open **NI Package Manager**.
+4.	Follow instructions in the installation prompt to complete installation.
+
+### LabVIEW 2015, 2016, 2017:
+1.	Open **Package Manager** and click the **Select** tab.
+2.	Select the **NI Skyline Support Message Support** and **NI Skyline Tag Support** packages you need for the version of LabVIEW you are using and click **Next**.
+3.	Follow the instructions to complete installation.
+4.	Once installation is complete, copy the `Open Configuration API Key.vi` file from `C:\Program Files (x86)\National Instruments\LabVIEW 2017\vi.lib\Skyline\Configuration\Configuration HTTP_class` onto your VI's block diagram.
+
 ## Building and Running the Example Web application
 
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine. [Go here](https://help.github.com/articles/cloning-a-repository/) if you’re new to cloning repositories on GitHub.
