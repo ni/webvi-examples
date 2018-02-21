@@ -72,7 +72,7 @@ In order to connect your systems to Helium, you need to update or install the Sk
 
 ### LabVIEW 2015, 2016, 2017:
 1.	Open **Package Manager** and click the **Select** tab.
-2.	Select the **NI Skyline Support Message Support** and **NI Skyline Tag Support** packages you need for the version of LabVIEW you are using and click **Next**.
+2.	Select the **NI Skyline Message Support** and **NI Skyline Tag Support** packages you need for the version of LabVIEW you are using and click **Next**.
 3.	Follow the instructions to complete installation.
 4.	Once installation is complete, copy the `Open Configuration API Key.vi` file from `C:\Program Files (x86)\National Instruments\LabVIEW 2017\vi.lib\Skyline\Configuration\Configuration HTTP_class` onto your VI's block diagram.
 
