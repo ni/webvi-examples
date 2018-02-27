@@ -38,7 +38,7 @@ Do you want to learn about connecting your web application to SystemLink Cloud o
 # SystemLink Cloud
 In this section, you’ll learn how to setup, build, and connect your web application to SystemLink Cloud.
 
-## What You Need to Connect to YTNBCS from LabVIEW NXG
+## What You Need to Connect to SystemLink Cloud from LabVIEW NXG
 ![Configure GVI in LabVIEW vs Hosting in SystemLink Cloud](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/SystemLink Cloud-config.png)
 
 _Figure: Note the input differentiation between using SystemLink Cloud data services from within LabVIEW vs. hosting within SystemLink Cloud._

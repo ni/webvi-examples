@@ -26,7 +26,7 @@ On the panel, this WebVI displays a summary of the results in a data grid and a 
 # Hosting
 You can manually the move the build output found at `\Call3rdPartyWebService\Builds` to any web server. This project also includes a Distribution (WebApp.lvdist) that can be used to build a package (.nipkg). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on SystemLink Cloud.
 
-## TO BE NAMED Cloud Hosting
+## SystemLink Cloud Web App Hosting
 The following steps can be used to host the web app on SystemLink Cloud
 1. Open `Call3rdPartyWebService.lvproject`.
 2. Open `WebApp.lvdist`.

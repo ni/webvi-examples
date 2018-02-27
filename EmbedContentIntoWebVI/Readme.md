@@ -8,7 +8,6 @@ This example demonstrates how to embed custom web content into the WebVI panel u
 
 # Dependencies
 - LabVIEW NXG 2.0 Web Module
-- LabVIEW 2009-2017 (Required for hosting only)
 
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
@@ -22,7 +21,7 @@ This example demonstrates how to embed custom web content into the WebVI panel u
 # Hosting
 You can manually the move the build output found at `\EmbedWebVIIntoContent\Builds` to any web server. This project also includes a Distribution (WebApp.lvdist) that can be used to build a package (.nipkg). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on SystemLink Cloud.
 
-## TO BE NAMED Cloud Hosting
+## SystemLink Cloud Web App Hosting
 The following steps can be used to host the web app on SystemLink Cloud
 1. Open `EmbedWebVIIntoContent.lvproject`.
 2. Open `WebApp.lvdist`.
