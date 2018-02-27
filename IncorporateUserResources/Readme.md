@@ -23,10 +23,10 @@ You can also use resource files to augment the WebVI's capabilities. For example
 **Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Sever** >> right-click **WebApp.gcomp** >> **Run**
 
 # Hosting
-You can manually the move the build output found at `\IncorporateUserResourcest\Builds` to any web server. This project also includes a Distribution (WebApp.lvdist) that can be used to build a package (.nipkg). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on NI'S YET TO BE NAMED CLOUD SERVICES.
+You can manually the move the build output found at `\IncorporateUserResourcest\Builds` to any web server. This project also includes a Distribution (WebApp.lvdist) that can be used to build a package (.nipkg). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on SystemLink Cloud.
 
 ## TO BE NAMED Cloud Hosting
-The following steps can be used to host the web app on NI'S YET TO BE NAMED CLOUD SERVICES
+The following steps can be used to host the web app on SystemLink Cloud
 1. Open `IncorporateUserResources.lvproject`.
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document

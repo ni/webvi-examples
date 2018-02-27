@@ -2,19 +2,19 @@
 [![Utilize Skyline Data Services](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/Builds/WebApp_Web%20Server/Main.html)
 [![Utilize Skyline Data Services README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/UtilizeSkylineDataServices)
 
-This example demonstrates how to use a WebVI to communicate over networks with Skyline Tags after connecting to YTBNCS or an on-premises web server.  
+This example demonstrates how to use a WebVI to communicate over networks with Skyline Tags after connecting to SystemLink Cloud or an on-premises web server.  
 
 Once you complete the necessary steps, you will know:
 
 - How to setup, build, and host web applications.
-- How to setup and connect to YTBNCS or an on-premises web server.
+- How to setup and connect to SystemLink Cloud or an on-premises web server.
 
 ![Data Services](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/Sdata-service-cloud.png)
 
 # Interacting with the Web Application
 From the panel of the web app, you will be able to:
 
--	Connect to an on-premises web server or to YTBNCS by supplying the required credentials.
+-	Connect to an on-premises web server or to SystemLink Cloud by supplying the required credentials.
 -	Choose what information is visible by toggling between the Read Tags and Write Tags tabs.
 -	Determine which state to execute with Skyline Tags.
 
@@ -24,39 +24,39 @@ _Figure: When hosting a WebVI on the NI Web Server, you do not need to supply cr
 
 # Dependencies
 -	[LabVIEW NXG Web Module](http://www.ni.com/labview/webmodule/)
--	[YTBNCS](https://YTBNCS/)
--	Skyline API Key Support for YTBNCS
+-	[SystemLink Cloud](https://systemlinkcloud.com/)
+-	Skyline API Key Support for SystemLink Cloud
 
 # Choosing Your Goal
-Do you want to learn about connecting your web application to YTBNCS or an on-premises server? Click one of the following links to jump to your workflow:
+Do you want to learn about connecting your web application to SystemLink Cloud or an on-premises server? Click one of the following links to jump to your workflow:
 
--	[I want to connect to the YTBNCS](https://github.com/ni/webvi-examples/blob/master/UtilizeSkylineDataServices/Readme.md#YTBNCS).
+-	[I want to connect to the SystemLink Cloud](https://github.com/ni/webvi-examples/blob/master/UtilizeSkylineDataServices/Readme.md#SystemLink Cloud).
 - [I want to connect to an on-premises web server](https://github.com/ni/webvi-examples/blob/master/UtilizeSkylineDataServices/Readme.md#on-premises-web-server).
 -	[I want to learn about the details involved in creating the WebVI](https://github.com/ni/webvi-examples/blob/master/UtilizeSkylineDataServices/Readme.md#webvi-details).
 -	[I want to learn about security](https://github.com/ni/webvi-examples/blob/master/UtilizeSkylineDataServices/Readme.md#security).
 
-# YTBNCS
-In this section, you’ll learn how to setup, build, and connect your web application to YTBNCS.
+# SystemLink Cloud
+In this section, you’ll learn how to setup, build, and connect your web application to SystemLink Cloud.
 
 ## What You Need to Connect to YTNBCS from LabVIEW NXG
-![Configure GVI in LabVIEW vs Hosting in YTBNCS](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/ytbncs-config.png)
+![Configure GVI in LabVIEW vs Hosting in SystemLink Cloud](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/SystemLink Cloud-config.png)
 
-_Figure: Note the input differentiation between using YTBNCS data services from within LabVIEW vs. hosting within YTBNCS._
+_Figure: Note the input differentiation between using SystemLink Cloud data services from within LabVIEW vs. hosting within SystemLink Cloud._
 
-When communicating with YTBNCS data services from LabVIEW NXG, you must include a **server url** (i.e. https://YTBNCS.com) and an **API key**. An API key is needed to authenticate the communication between the WebVI running on your local machine and the YTBNCS in the cloud.
+When communicating with SystemLink Cloud data services from LabVIEW NXG, you must include a **server url** (i.e. https://systemlinkcloud.com) and an **API key**. An API key is needed to authenticate the communication between the WebVI running on your local machine and the SystemLink Cloud in the cloud.
 
-However, when the web application is hosted by YTBNCS, you don’t need an API key or a server URL because your **ni.com credentials** are used instead. This deliberately minimizes security vulnerabilities that can arise when using an API key on your hosted web application.
+However, when the web application is hosted by SystemLink Cloud, you don’t need an API key or a server URL because your **ni.com credentials** are used instead. This deliberately minimizes security vulnerabilities that can arise when using an API key on your hosted web application.
 
 ## What is an API Key?
 
-An API key authenticates an application, device, or system – much like your ni.com credentials authenticate who you are. Assigning an API key to an application allows it to connect to the YTBNCS.
+An API key authenticates an application, device, or system – much like your ni.com credentials authenticate who you are. Assigning an API key to an application allows it to connect to the SystemLink Cloud.
 
 ## Obtaining an API Key
-1.	Go to YTBNCS.com and login with your **ni.com credentials**.
+1.	Go to SystemLink Cloud.com and login with your **ni.com credentials**.
 2.	Click the **Security** button.
 3.	Click **+ New API key** to create an API key.
 4.	Click **Copy to clipboard** to save the API key.
-> **Note**:  You only get to see an API key once, so retain it somewhere safe and only provide it to those you trust. If you delete an API key, all applications using that API key will no longer be able to connect to YTBNCS.
+> **Note**:  You only get to see an API key once, so retain it somewhere safe and only provide it to those you trust. If you delete an API key, all applications using that API key will no longer be able to connect to SystemLink Cloud.
 
 5. Click **Create** at the bottom of the dialog box to activate the API key.
 > **Note**: If you do not click **Create**, you will not create the API key. Therefore, the API key you copied will be invalid.
@@ -65,7 +65,7 @@ An API key authenticates an application, device, or system – much like your ni
 In order to connect your systems to Helium, you need to update or install the Skyline API keys. Depending on your version of LabVIEW, follow the instructions below.
 
 ### LabVIEW NXG:
-1.	Go to the YTBNCS.com and click the **Data Services APIs** button.
+1.	Go to the SystemLink Cloud.com and click the **Data Services APIs** button.
 2.	Click the **Download Skyline API Key Support** button.
 3.	Double click the package file to open **NI Package Manager**.
 4.	Follow instructions in the installation prompt to complete installation.
@@ -92,16 +92,16 @@ In order to connect your systems to Helium, you need to update or install the Sk
 After you create and build your web application in LabVIEW NXG, you need to move it to a web server. This enables its administrators to access it from a web browser. Copy your entire web application output directory to any web server you choose.
 > **Note**: To navigate to your web application output on your machine, click **Locate directory in Windows Explorer** on the **Document** tab of your web application component document. You can also access the build output by navigating to your web application’s project folder manually (`\UtilizeSkylineDataServices\Builds`).
 
-Furthermore, this project includes a distribution document (`WebApp.lvdist`), which can be used to build a package (`.nipkg`). Packages utilize NI Package Manager to automate the process of installing, upgrading, or removing the web application. A package is also required for hosting a web application on YTBNCS. [Go here](http://www-preview.ni.com/documentation/en/labview/2.1/application-builder/distributing-app-lib/) if you’re interested in learning more about distributing applications.
+Furthermore, this project includes a distribution document (`WebApp.lvdist`), which can be used to build a package (`.nipkg`). Packages utilize NI Package Manager to automate the process of installing, upgrading, or removing the web application. A package is also required for hosting a web application on SystemLink Cloud. [Go here](http://www-preview.ni.com/documentation/en/labview/2.1/application-builder/distributing-app-lib/) if you’re interested in learning more about distributing applications.
 
-## YTBNCS Cloud Hosting
-Use the following steps to host the web app on YTBNCS.
+## SystemLink Cloud Cloud Hosting
+Use the following steps to host the web app on SystemLink Cloud.
 1.	Open `UtilizeSkylineDataServices.lvproject`.
 2.	Open `WebApp.lvdist`.
 3.	Click the **Build distribution**.
 > **Note**: The button looks like a hammer.
 
-4.	Open a web browser and go to https://YTBNCS/webapps.
+4.	Open a web browser and go to https://systemlinkcloud.com/webapps.
 5.	To upload your web application, click Choose `.nipkg` and select the package file (`.nipkg`) you just built.
 6.	Once the upload is complete, click on your uploaded web app.
 
@@ -115,7 +115,7 @@ In this section, you’ll learn how to setup, build, and connect your web applic
 
 _Figure: Note the input differentiation between using on-premises data services from within LabVIEW vs hosting within the NI Web Server._
 
-When communicating with on-premises data services from LabVIEW NXG, you must include a **server url** (i.e. https://YTBNCS.com), a **username**, and a **password**. The username and password can be managed with the NI Web Server Configuration utility. This utility can be used to create new users and groups as well as leverage existing LDAP or Windows user accounts.  
+When communicating with on-premises data services from LabVIEW NXG, you must include a **server url** (i.e. https://systemlinkcloud.com), a **username**, and a **password**. The username and password can be managed with the NI Web Server Configuration utility. This utility can be used to create new users and groups as well as leverage existing LDAP or Windows user accounts.  
 
 When the web application is hosted on the NI Web Server, the server url, username, and password are not needed and should not be used. This deliberately minimizes security vulnerabilities.
 
@@ -150,7 +150,7 @@ After installing the Web Module, you need to configure the NI Web Server.
 After you create and build your web application in LabVIEW NXG, you need to move it to a web server. This enables its administrators to access it from a web browser. Copy your entire web application output directory to any web server you choose.
 > **Note**: To navigate to your web application output on your machine, click **Locate directory in Windows Explorer** on the **Document** tab of your web application component document. You can also access the build output by navigating to your web application’s project folder manually (`\UtilizeSkylineDataServices\Builds`).
 
-Furthermore, this project includes a distribution document (`WebApp.lvdist`), which can be used to build a package (`.nipkg`). Packages utilize NI Package Manager to automate the process of installing, upgrading, or removing the web application. A package is also required for hosting a web application on YTBNCS. [Go here](http://www-preview.ni.com/documentation/en/labview/2.1/application-builder/distributing-app-lib/) if you’re interested in learning more about distributing applications.
+Furthermore, this project includes a distribution document (`WebApp.lvdist`), which can be used to build a package (`.nipkg`). Packages utilize NI Package Manager to automate the process of installing, upgrading, or removing the web application. A package is also required for hosting a web application on SystemLink Cloud. [Go here](http://www-preview.ni.com/documentation/en/labview/2.1/application-builder/distributing-app-lib/) if you’re interested in learning more about distributing applications.
 
 ## Local Hosting
 The following steps can be used to host the web app on a local web server.
@@ -215,4 +215,4 @@ Additionally, authentication credentials should not be stored in constants on th
 
 If storing credentials in a file is not an option and you need to host your web application on-premises, you may choose to host your web application in the NI Web Server. This requires users to login to the Skyline Web UI for authentication. Logging into this Web UI stores an authentication cookie in your browser that is automatically sent with calls to Skyline data services. This eliminates the need to enter a username or password directly to the WebVI, either on its panel or its diagram. To do this, put the built output of your web application into the directory found at `C:\Program Files\National Instruments\Shared\Web Server\htdocs`. This is the directory for all files hosted by the NI Web Server. Please note a user can access the URL of the web application without logging in, but in order to read/write tags, they will have to login to the Skyline Web UI at http://localhost:9090.
 
-If storing credentials in a file is not an option and you can host your web application in the cloud, you may choose to host your web application on YTBNCS. This requires you to have an active SSP for the LabVIEW NXG Web Module and an ni.com account. Doing so allows an authentication cookie in your browser to be automatically sent with calls to YTBNCS. This eliminates the need to enter an API key or server url either in the web application.
+If storing credentials in a file is not an option and you can host your web application in the cloud, you may choose to host your web application on SystemLink Cloud. This requires you to have an active SSP for the LabVIEW NXG Web Module and an ni.com account. Doing so allows an authentication cookie in your browser to be automatically sent with calls to SystemLink Cloud. This eliminates the need to enter an API key or server url either in the web application.
