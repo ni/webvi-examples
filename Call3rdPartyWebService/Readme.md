@@ -24,18 +24,35 @@ On the panel, this WebVI displays a summary of the results in a data grid and a 
 **Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Sever** >> right-click **WebApp.gcomp** >> **Run**
 
 # Hosting
-Copy and paste the build output at `\Call3rdPartyWebService\Builds` directory to any web server you want.
+You can manually the move the build output found at `\Call3rdPartyWebService\Builds` to any web server. This project also includes a Distribution (WebApp.lvdist) that can be used to build a package (.nipkg). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on SystemLink Cloud.
 
-## Hosting on the LabVIEW 2009-2017 Web Server
-1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
-2. Copy the `WebApp+Web Server` directory into the `www` directory.
+## SystemLink Cloud Web App Hosting
+The following steps can be used to host the web app on SystemLink Cloud
+1. Open `Call3rdPartyWebService.lvproject`.
+2. Open `WebApp.lvdist`.
+3. Click the build icon in the top command bar of this distribution document
+4. Open a Web browser and navigate to https://systemlinkcloud.com/webapps
+5. Click the **Choose nipkg** button and select the nipkg built in step 3.
+6. When the upload is complete, click on your newly uploaded Web app from your list of Web apps
+
+## Local Hosting
+The following steps can be used to host the web app on a local web server
+### Hosting on the NI Web Server with a nipkg
+1. Open `Call3rdPartyWebService.lvproject`
+2. Open `WebApp.lvdist`.
+3. Click the build icon in the top command bar of this distribution document
+4. Double-click the nipkg and follow the on screen instructions
+5. Open a web browser and navigate to `http://localhost:9090/call3rdpartywebservice/Main.html`
+
+### Hosting on the NI Web Server by manually moving files
+1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`
+2. Copy the `WebApp_Web Server` directory into the `htdocs` directory
+3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/Main.html`
+
+### Hosting on the LabVIEW 2009-2017 Web Server
+1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`
+2. Copy the `WebApp+Web Server` directory into the `www` directory
 3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/Main.html`
-
-
-## Hosting on the NI Web Server
-1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
-2. Copy the `WebApp_Web Server` directory into the `htdocs` directory.
-3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/Main.html`.  
 
 # Details
 A web service is a collection of functions that can be called through the web to trigger behavior or return data. Many websites offer these APIs as a way for third-party developers to build new applications using the website's underlying data or functionality.
