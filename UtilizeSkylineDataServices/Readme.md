@@ -30,7 +30,7 @@ _Figure: When hosting a WebVI on the NI Web Server, you do not need to supply cr
 # Choosing Your Goal
 Do you want to learn about connecting your web application to SystemLink Cloud or an on-premises server? Click one of the following links to jump to your workflow:
 
--	[I want to connect to the SystemLink Cloud](https://github.com/ni/webvi-examples/blob/master/UtilizeSkylineDataServices/Readme.md#SystemLink Cloud).
+-	[I want to connect to the SystemLink Cloud](https://github.com/ni/webvi-examples/blob/master/UtilizeSkylineDataServices/Readme.md#systemlink-cloud).
 - [I want to connect to an on-premises web server](https://github.com/ni/webvi-examples/blob/master/UtilizeSkylineDataServices/Readme.md#on-premises-web-server).
 -	[I want to learn about the details involved in creating the WebVI](https://github.com/ni/webvi-examples/blob/master/UtilizeSkylineDataServices/Readme.md#webvi-details).
 -	[I want to learn about security](https://github.com/ni/webvi-examples/blob/master/UtilizeSkylineDataServices/Readme.md#security).
@@ -39,11 +39,11 @@ Do you want to learn about connecting your web application to SystemLink Cloud o
 In this section, you’ll learn how to setup, build, and connect your web application to SystemLink Cloud.
 
 ## What You Need to Connect to SystemLink Cloud from LabVIEW NXG
-![Configure GVI in LabVIEW vs Hosting in SystemLink Cloud](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/SystemLink Cloud-config.png)
+![Configure GVI in LabVIEW vs Hosting in SystemLink Cloud](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/cloud-config.png)
 
 _Figure: Note the input differentiation between using SystemLink Cloud data services from within LabVIEW vs. hosting within SystemLink Cloud._
 
-When communicating with SystemLink Cloud data services from LabVIEW NXG, you must include a **server url** (i.e. https://systemlinkcloud.com) and an **API key**. An API key is needed to authenticate the communication between the WebVI running on your local machine and the SystemLink Cloud in the cloud.
+When communicating with SystemLink Cloud data services from LabVIEW NXG, you must include a **server url** (i.e. https://www.systemlinkcloud.com) and an **API key**. An API key is needed to authenticate the communication between the WebVI running on your local machine and the SystemLink Cloud in the cloud.
 
 However, when the web application is hosted by SystemLink Cloud, you don’t need an API key or a server URL because your **ni.com credentials** are used instead. This deliberately minimizes security vulnerabilities that can arise when using an API key on your hosted web application.
 
