@@ -9,7 +9,7 @@ Once you complete the necessary steps, you will know:
 - How to setup, build, and host web applications.
 - How to setup and connect to SystemLink Cloud or an on-premises web server.
 
-![Data Services](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/Sdata-service-cloud.png)
+![Data Services](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/data-service-cloud.png)
 
 # Interacting with the Web Application
 From the panel of the web app, you will be able to:
@@ -111,7 +111,7 @@ You can now interact with your web application from anywhere in the world using 
 In this section, you’ll learn how to setup, build, and connect your web application to an on-premises web server.
 
 ## What You Need To Connect To an On-Premises Web Server from LabVIEW NXG
-![Configure GVI in LabVIEW vs Hosting on premises](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/on-premises-config.png)
+![Configure GVI in LabVIEW vs Hosting on premises](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/on-premises-config.PNG)
 
 _Figure: Note the input differentiation between using on-premises data services from within LabVIEW vs hosting within the NI Web Server._
 
@@ -183,7 +183,7 @@ While tags have limited data types (integer, double, and string), these data typ
 
 It is also common practice to use integer tags to transmit Boolean data. For an example of this, check out the example below.
 
-![Screenshot of Int to Bool](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/int-to-bool.png)
+![Screenshot of Int to Bool](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/int-to-bool.PNG)
 
 Here, the Boolean to converted to an integer using the **Boolean to Integer** node before writing the tag. Then, in **Read Example Tags** VI, a **Not Equal to 0?** node is used to convert the integer to a Boolean.
 
