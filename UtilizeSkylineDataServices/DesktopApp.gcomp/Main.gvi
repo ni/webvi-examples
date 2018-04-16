@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="E853A64F9CA6E6052A8E190CB013C9F9" Timestamp="1D3D358DD074B3C" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="6967AFC208BF79DD052FE6A016420A26" Timestamp="1D3D3978F1FE4AD" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="5.3.0.59009" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="5.2.0.49153" Version="5.2.0.49153" />
 		<ParsableNamespace AssemblyFileVersion="5.3.0.59009" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="5.2.0.9" Version="5.2.0.49152" />
@@ -64,7 +64,7 @@
 					<p.Text>milliseconds to wait</p.Text>
 				</NodeLabel>
 				<Wire Id="216" Joints="N(214:Out)|(80,35) N(213:time to wait)|(110,35)" xmlns="http://www.ni.com/PlatformFramework" />
-				<CaseStructure Bounds="55 60 692 500" DataType="@cee2e759f0624c478a0e57a69b74d2b2" Default="230" Id="217" Selected="230" UserSelectorBounds="264.5 0 163 17">
+				<CaseStructure Bounds="55 60 692 500" DataType="@cee2e759f0624c478a0e57a69b74d2b2" Default="230" Id="217" Selected="230" UserSelectorBounds="264 0 163 17">
 					<CaseStructure.Case Bounds="5 5 682 490" Id="230" Pattern="&quot;initialize&quot;, Default">
 						<DataAccessor Bounds="355 75 40 15" DataItem="324" Id="240" Label="243" xmlns="http://www.ni.com/MocCommon">
 							<Terminal DataType="String" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
@@ -94,7 +94,7 @@
 									<Parameter Id="L4" Desc="tag paths" />
 									<Parameter Id="L5" Desc="AuthPicker" />
 									<Parameter Id="L6" Desc="error in" />
-									<Parameter Id="R1" Desc="SystemLink Connection" />
+									<Parameter Id="R0" Desc="SystemLink Connection" />
 									<Parameter Id="R6" Desc="error out" />
 								</MethodDeclaration>
 							</p.MethodDeclaration>
@@ -105,13 +105,12 @@
 							<Terminal DataType="String[]" Direction="Input" Hotspot="0 45" Id="L4" xmlns="http://www.ni.com/PlatformFramework" />
 							<Terminal DataType="@20a612b791904cc897b529b2dba38fc0" Direction="Input" Hotspot="0 55" Id="L5" xmlns="http://www.ni.com/PlatformFramework" />
 							<Terminal DataType="Error" Direction="Input" Hotspot="0 65" Id="L6" xmlns="http://www.ni.com/PlatformFramework" />
-							<Terminal DataType="@3e0ea5719cbf47ff8d02c0d218b57465" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="@3e0ea5719cbf47ff8d02c0d218b57465" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
 							<Terminal DataType="Error" Direction="Output" Hotspot="40 65" Id="R6" xmlns="http://www.ni.com/PlatformFramework" />
 						</MethodCall>
 						<Wire Id="247" Joints="N(242:Value)|(395,50) h(120) v(75) N(246:L0)|(520,125)" xmlns="http://www.ni.com/PlatformFramework" />
 						<Wire Id="248" Joints="N(241:Value)|(395,65) h(108) v(70) N(246:L1)|(520,135)" xmlns="http://www.ni.com/PlatformFramework" />
 						<Wire Id="249" Joints="N(240:Value)|(395,80) h(98) v(65) N(246:L2)|(520,145)" xmlns="http://www.ni.com/PlatformFramework" />
-						<Wire Id="250" Joints="N(246:R1)|(560,135) h(113) v(-10) N(238:230)|(678,125)" xmlns="http://www.ni.com/PlatformFramework" />
 						<MethodCall Bounds="35 270 40 40" DomainName="NI:G Core:Error" Id="251" ResolveFailedHint="Clear Error Cluster.gvi, Package: (LabVIEW NXG G Standard Library Files, Version: 2.0.0)" Target="NI:G\ Core:Error:Clear\ Error\ Cluster\.gvi" xmlns="http://www.ni.com/MocCommon">
 							<p.MethodDeclaration>
 								<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
@@ -181,6 +180,7 @@
 						</NodeLabel>
 						<Wire Id="482" Joints="N(479:Out)|(436,125) h(5) v(40) N(246:L4)|(520,165)" xmlns="http://www.ni.com/PlatformFramework" />
 						<Wire Id="563" Joints="N(246:R6)|(560,185) N(237:230)|(678,185)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="652" Joints="N(246:R0)|(560,125) N(238:230)|(678,125)" xmlns="http://www.ni.com/PlatformFramework" />
 					</CaseStructure.Case>
 					<CaseStructure.Case Bounds="5 5 682 490" Id="231" Pattern="&quot;read-tags&quot;">
 						<Wire Id="262" Joints="N(412:Value)|(620,155) N(235:231)|(678,155)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -194,7 +194,7 @@
 							<Terminal DataType="Double" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 						</DataAccessor>
 						<NodeLabel AttachedTo="265" Bounds="257 200 297 14" Id="266" xmlns="http://www.ni.com/PlatformFramework">
-							<p.Text>Skyline.Examples.DataServices.numeric_chart-indicator</p.Text>
+							<p.Text>Skyline.Examples.DataServices.numeric_indicator</p.Text>
 						</NodeLabel>
 						<DataAccessor Bounds="212 240 40 15" DataItem="331" Id="267" Label="268" xmlns="http://www.ni.com/MocCommon">
 							<Terminal DataType="String" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
@@ -574,7 +574,7 @@
 							<PropertyItemTerminal Action="Write" DataType="UInt16" Hotspot="0 45" Id="c2t0v" Path="State" PathElementMemberKinds="Field" Usage="Required" />
 							<PropertyItemTerminal Action="Write" DataType="String" Hotspot="0 60" Id="c3t0v" Path="String" PathElementMemberKinds="Field" Usage="Required" />
 						</PropertyNode>
-						<Wire Facade="WireInvisibleFacade" Id="607" Joints="N(596:Out)|(307,225) v(10) h(-60) v(-10) N(606:instance in)|(252,225)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Facade="WireInvisibleFacade" Id="607" Joints="N(596:Out)|(252,225) N(606:instance in)|(252,225)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
 						<Wire Id="608" Joints="N(565:Value)|(182,235) N(606:c0t0v)|(252,235)" xmlns="http://www.ni.com/PlatformFramework" />
 						<Wire Id="609" Joints="N(570:Value)|(182,250) N(606:c1t0v)|(252,250)" xmlns="http://www.ni.com/PlatformFramework" />
 						<Wire Id="610" Joints="N(575:Value)|(182,265) N(606:c2t0v)|(252,265)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -615,12 +615,12 @@
 						<Wire Id="312" Joints="N(310:R0)|(132,185) N(237:233)|(678,185)" xmlns="http://www.ni.com/PlatformFramework" />
 						<Wire Id="313" Joints="N(310:R1)|(132,195) N(308:Value)|(160,195)" xmlns="http://www.ni.com/PlatformFramework" />
 					</CaseStructure.Case>
-					<CaseStructure.Selector Bounds="-4 155 13 10" Docking="Left" Id="234" Terminals="217=223, 230, 231, 232, 233=307, 590, 591" />
-					<CaseStructure.Tunnel Bounds="683 155 13 10" Docking="Right" Id="235" Terminals="217=228, 230=255, 231=262, 232=291, 233=307, 590=635, 591=616" />
-					<CaseStructure.Tunnel Bounds="-4 185 13 10" Docking="Left" Id="236" Terminals="217=218, 230=252, 231=275, 232=297, 233=311, 590=620, 591=594" />
-					<CaseStructure.Tunnel Bounds="683 185 13 10" Docking="Right" Id="237" Terminals="217=225, 230=563, 231=276, 232=305, 233=312, 590=637, 591=617" />
-					<CaseStructure.Tunnel Bounds="683 125 13 10" Docking="Right" Id="238" Terminals="217=219, 230=250, 231=269, 232=295, 233=306, 590=642, 591=613" />
-					<CaseStructure.Tunnel Bounds="-4 125 13 10" Docking="Left" Id="239" Terminals="217=220, 230, 231=271, 232=294, 233=306, 590=619, 591=593" />
+					<CaseStructure.Selector Bounds="-4 155 13 10" Docking="Left" Id="234" Terminals="217=223, 230, 231, 232, 590, 591, 233=307" />
+					<CaseStructure.Tunnel Bounds="683 155 13 10" Docking="Right" Id="235" Terminals="217=228, 230=255, 231=262, 232=291, 590=635, 591=616, 233=307" />
+					<CaseStructure.Tunnel Bounds="-4 185 13 10" Docking="Left" Id="236" Terminals="217=218, 230=252, 231=275, 232=297, 590=620, 591=594, 233=311" />
+					<CaseStructure.Tunnel Bounds="683 185 13 10" Docking="Right" Id="237" Terminals="217=225, 230=563, 231=276, 232=305, 590=637, 591=617, 233=312" />
+					<CaseStructure.Tunnel Bounds="683 125 13 10" Docking="Right" Id="238" Terminals="217=219, 230=652, 231=269, 232=295, 590=642, 591=613, 233=306" />
+					<CaseStructure.Tunnel Bounds="-4 125 13 10" Docking="Left" Id="239" Terminals="217=220, 230, 231=271, 232=294, 590=619, 591=593, 233=306" />
 					<CaseStructure.Tunnel Bounds="-4 255 13 10" Docking="Left" Id="623" Terminals="217=624, 230, 231, 232, 590=621, 591, 233" />
 					<CaseStructure.Tunnel Bounds="683 255 13 10" DefaultIfUnwired="True" Docking="Right" Id="629" Terminals="217=630, 230, 231, 232, 590=628, 591, 233" />
 				</CaseStructure>
@@ -715,7 +715,7 @@
 						<CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]485" Height="[float]102" Id="502" Left="[float]5" MinHeight="[float]80" Top="[float]375" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 						<ScaleLegend Graph="[UIModel]485" Height="[float]50" Id="503" Left="[float]383" MinHeight="[float]50" Top="[float]244" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 						<GraphTools Graph="[UIModel]485" Id="504" Left="[float]5" Top="[float]353" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-						<Label Height="[float]16" Id="505" LabelOwner="[UIModel]485" Left="[float]0" Text="[string]Skyline.Examples.DataServices.numeric_chart-indicator" Top="[float]110" Width="[float]288" xmlns="http://www.ni.com/PanelCommon" />
+						<Label Height="[float]16" Id="505" LabelOwner="[UIModel]485" Left="[float]0" Text="[string]Skyline.Examples.DataServices.numeric_indicator" Top="[float]110" Width="[float]256" xmlns="http://www.ni.com/PanelCommon" />
 					</Canvas>
 				</TabItem>
 				<TabItem Header="[string]Write Tags" Id="376" Left="[float]0" TabIndex="[int]0" Top="[float]0">
@@ -727,9 +727,9 @@
 						<Slider BaseName="[string]Slider" Enabled="[bool]True" Id="434" Interval="[double]1" IsInverted="[bool]False" IsTabStop="[bool]True" Label="[UIModel]435" Left="[float]16" Maximum="[double]100" MechanicalAction="[MechanicalAction]SwitchWhenReleased" MinHeight="[float]42" MinWidth="[float]42" Orientation="[SMOrientation]Horizontal" TabIndex="[int]2" Top="[float]216" Value="{DataItemBinding Id=335}" Width="[float]248" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 						<Label Height="[float]16" Id="435" LabelOwner="[UIModel]434" Left="[float]16" Text="[string]Skyline.Examples.DataServices.numeric_slider-control" Top="[float]196" Width="[float]280" xmlns="http://www.ni.com/PanelCommon" />
 						<Slider BaseName="[string]Slider" Enabled="[bool]True" Height="[float]152" Id="438" Interval="[double]1" IsInverted="[bool]False" IsTabStop="[bool]True" Label="[UIModel]439" Left="[float]451" Maximum="[double]1000" MechanicalAction="[MechanicalAction]SwitchWhenReleased" MinHeight="[float]42" MinWidth="[float]42" Orientation="[SMOrientation]Vertical" TabIndex="[int]3" Top="[float]40" Value="{DataItemBinding Id=337}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-						<Label Height="[float]16" Id="439" LabelAlignment="[PartAlignment]TopCenter" LabelOwner="[UIModel]438" Left="[float]350" Text="[string]Skyline.Examples.Oven.Inside.Temp-slider-control" Top="[float]20" Width="[float]261" xmlns="http://www.ni.com/PanelCommon" />
+						<Label Height="[float]16" Id="439" LabelAlignment="[PartAlignment]TopCenter" LabelOwner="[UIModel]438" Left="[float]326" Text="[string]Skyline.Examples.Oven.Inside.Temp-slider-control" Top="[float]20" Width="[float]261" xmlns="http://www.ni.com/PanelCommon" />
 						<Slider BaseName="[string]Slider" Enabled="[bool]True" Height="[float]152" Id="442" Interval="[double]1" IsInverted="[bool]False" IsTabStop="[bool]True" Label="[UIModel]443" Left="[float]457" Maximum="[double]100" MechanicalAction="[MechanicalAction]SwitchWhenReleased" MinHeight="[float]42" MinWidth="[float]42" Orientation="[SMOrientation]Vertical" TabIndex="[int]4" Top="[float]216" Value="{DataItemBinding Id=338}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
-						<Label Height="[float]16" Id="443" LabelAlignment="[PartAlignment]TopCenter" LabelOwner="[UIModel]442" Left="[float]348" Text="[string]Skyline.Examples.Oven.Outside.Temp-slider-control" Top="[float]196" Width="[float]271" xmlns="http://www.ni.com/PanelCommon" />
+						<Label Height="[float]16" Id="443" LabelAlignment="[PartAlignment]TopCenter" LabelOwner="[UIModel]442" Left="[float]327" Text="[string]Skyline.Examples.Oven.Outside.Temp-slider-control" Top="[float]196" Width="[float]271" xmlns="http://www.ni.com/PanelCommon" />
 					</Canvas>
 				</TabItem>
 				<TabItem Header="[string]Read Message" Id="506" Left="[float]0" Top="[float]0">
@@ -826,7 +826,7 @@
 		<DataItem AdaptToDiagramType="True" DataType="Boolean" Id="329" Name="Skyline.Examples.DataServices.int_indicator" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>False</p.DefaultValue>
 		</DataItem>
-		<DataItem AdaptToDiagramType="True" BufferSize="1024" DataType="Double" Id="330" Name="Skyline.Examples.DataServices.numeric_chart-indicator" xmlns="http://www.ni.com/MocCommon" />
+		<DataItem AdaptToDiagramType="True" BufferSize="1024" DataType="Double" Id="330" Name="Skyline.Examples.DataServices.numeric_indicator" xmlns="http://www.ni.com/MocCommon" />
 		<DataItem AdaptToDiagramType="True" DataType="String" Id="331" Name="Skyline.Examples.DataServices.string_indicator" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>""</p.DefaultValue>
 		</DataItem>
@@ -1198,7 +1198,7 @@
 							<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Left="[float]0" TemplateName="[string]Gray" Top="[float]0" Width="[float]40">
 								<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
 								<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
-								<FileNameText Attached="[bool]True" Height="[float]36" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Function" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden" Width="[float]36">
+								<FileNameText Attached="[bool]True" Height="[float]36" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Deque Message" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden" Width="[float]36">
 									<FontSetting FontFamily="Verdana" FontSize="6" />
 								</FileNameText>
 							</IconTemplate>
@@ -1220,7 +1220,7 @@
 							<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Left="[float]0" TemplateName="[string]Gray" Top="[float]0" Width="[float]40">
 								<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
 								<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
-								<FileNameText Attached="[bool]True" Height="[float]36" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Function" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden" Width="[float]36">
+								<FileNameText Attached="[bool]True" Height="[float]36" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Publish Message" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden" Width="[float]36">
 									<FontSetting FontFamily="Verdana" FontSize="6" />
 								</FileNameText>
 							</IconTemplate>
