@@ -26,13 +26,13 @@ _Figure: When hosting a WebVI on the NI Web Server, you do not need to supply cr
 -	[LabVIEW NXG 2.1 Web Module](http://www.ni.com/labview/webmodule/)
 -	[Skyline API Key Support](http://www.systemlinkcloud.com/api-download) for SystemLink Cloud
 
-If you do not install LabVIEW NXG 2.1 Web Module, NI Package Manager will not install the Skyline API Key Support package, which enables you to establish a connection the to SystemLink Cloud server. You will receive installation dependency errors as a result. Please refer to [Skyline API Support](https://www.systemlinkcloud.com/api-download) for installation instructions and the [FAQ](https://www.systemlinkcloud.com/faq) for help navigating installation errors.
+If you do not install LabVIEW NXG 2.1 Web Module, NI Package Manager will not install the Skyline API Key Support package on to your machine. You will receive an installation dependency error as a result. The Skyline API Key Support package enables you to establish a connection to the SystemLink Cloud server. Please refer to [Skyline API Support](https://www.systemlinkcloud.com/api-download) for installation instructions and the [FAQ](https://www.systemlinkcloud.com/faq) for help navigating installation errors.
 
 # Choosing Your Goal
 Do you want to learn about connecting your web application to SystemLink Cloud or an on-premises server? Click one of the following links to jump to your workflow:
 
 -	[I want to install the Skyline API Key Support package](https://github.com/ni/webvi-examples/blob/master/UtilizeSkylineDataServices/Readme.md#skyline-api-key-support-package).
-- [I want to connect to the SystemLink Cloud](https://github.com/ni/webvi-examples/blob/master/UtilizeSkylineDataServices/Readme.md#systemlink-cloud).
+- [I want to connect to SystemLink Cloud](https://github.com/ni/webvi-examples/blob/master/UtilizeSkylineDataServices/Readme.md#systemlink-cloud).
 - [I want to connect to an on-premises web server](https://github.com/ni/webvi-examples/blob/master/UtilizeSkylineDataServices/Readme.md#on-premises-web-server).
 -	[I want to learn about the details involved in creating the WebVI](https://github.com/ni/webvi-examples/blob/master/UtilizeSkylineDataServices/Readme.md#webvi-details).
 -	[I want to learn about security](https://github.com/ni/webvi-examples/blob/master/UtilizeSkylineDataServices/Readme.md#security).
@@ -123,7 +123,7 @@ To connect to SystemLink Cloud from LabVIEW NXG 2.1 Web Module, you need a serve
 
 > **Note**: You can automatically launch and view the web application locally by right-clicking the web application in SystemDesigner and then clicking **Run**.
 
-## Hosting Overview
+## Cloud Hosting Overview
 After you create a web application and build the package in LabVIEW NXG 2.1 Web Module, you need to move it to a web server. This enables administrators to access it from a web browser. Copy your entire web application output directory to any web server you choose.
 >**Note**: To navigate to your web application output on your machine, click **Locate directory in Windows Explorer** on the **Document** tab of your web application component document. You can also access the build output by navigating to your web application’s project folder manually (`\UtilizeSkylineDataServices\Builds`).
 
