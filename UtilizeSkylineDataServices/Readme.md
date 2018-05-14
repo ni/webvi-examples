@@ -216,24 +216,15 @@ Follow the instructions below to host the web app on a web server.
 
 # WebVI Details
 
-The Utilize Skyline Data Services example uses Tags nodes, which are a part of the Skyline data services API. The Tags API is a highly scalable, lossy network commutation method that utilizes a central node to broker communication between distributed embedded, desktop, and web applications. Use Tags nodes to send and receive measurement data from one system to other systems. Refer to the [Skyline API Docs](https://www.systemlinkcloud.com/skyline-api-docs) to find out more about the Skyline data services API.
+The Utilize Skyline Data Services examples uses Tags and Messages, which are a part of the Skyline data services API. The Tag API is a highly scalable, lossy network commutation method that utilizes a central node to broker communication between distributed embedded, desktop, and web applications. Use Tags nodes to send and receive measurement data from one system to other systems.
 
-## Tags and Data Types
-While tags have limited data types (integer, double, and string), these data types can be utilized to provide flexibility for most applications. For example, string tags can be used to transmit JSON or other string-based interchange formats.
+The Messages API communicates between systems with strings by publishing messages to topics and allowing subscribers of those topics to receive the messages. The Messages API works like a queue. Therefore, if a publisher writes three messages, the subscribers dequeue and read those messages one at a time. Use Messages nodes when you need to send warning messages, status updates, or trigger events from one system to other systems.
 
-It is also common practice to use integer tags to transmit Boolean data. For an example of this, see the image below.
+Refer to the [Skyline API Docs](https://www.systemlinkcloud.com/skyline-api-documentation) to find out more about the Skyline data services APIs.
 
-![Screenshot of Int to Bool](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/int-to-bool.PNG)
+Use the example **Main.gviweb** to learn how these APIs can be assembled into an interactive application. Use the examples in **BasicDataServiceExamples.gcomp** for a simple overview of how these APIs are used. Use the LabVIEW examples in **LabVIEWExamples.lvproj** to see how you can interact with SystemLink Cloud from LabVIEW and LabVIEW Real-Time.
 
-Here, the Boolean to converted to an integer using the **Boolean to Integer** node before writing the tag. Then, in **Read Example Tags** VI, a **Not Equal to 0?** node is used to convert the integer to a Boolean.
-
-## Multi Read and Multi Write Tags
-
-The example demonstrates the best practice of using the **Multi Read** and **Multi Write** tags nodes to read and write all tags in a single call. The single read and write versions are implemented but disabled for sake of example. While **Multi Read** and **Multi Write** requires slightly more complex diagram code,  the whole application runs more efficiently by using one **GET** node or **POST** node to read or write all five tags rather than five **GET**/**POST** calls. This advantage scales well in real applications with many tags visualized in a single application.
-
-![Screenshot of MultiRead](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/multi-read.png)
-
-## State Machine
+## The Main.gviweb and Main.gvi State Machine
 State machines implement decision-making algorithms where a set of distinguishable states exists.
 
 These states, or subdiagrams of code, carry out specific operations within a program.
