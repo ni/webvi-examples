@@ -216,7 +216,7 @@ Follow the instructions below to host the web app on a web server.
 
 # WebVI Details
 
-The Utilize Skyline Data Services example uses Tags nodes, which are a part of the Skyline data services API. The Tags API is a highly scalable, lossy network commutation method that utilizes a central node to broker communication between distributed embedded, desktop, and web applications. Use Tags nodes to send and receive measurement data from one system to other systems. Refer to the [Skyline API Docs](https://www.systemlinkcloud.com/skyline-api-docs) to find out more about the Skyline data services API.
+The Utilize Skyline Data Services example uses Tags nodes, which are a part of the Skyline data services API. The Tags API is a highly scalable, lossy network commutation method that utilizes a central node to broker communication between distributed embedded, desktop, and web applications. Use Tags nodes to send and receive measurement data from one system to other systems. Refer to the [Skyline API Docs](https://www.systemlinkcloud.com/skyline-api-documentation) to find out more about the Skyline data services API.
 
 ## Tags and Data Types
 While tags have limited data types (integer, double, and string), these data types can be utilized to provide flexibility for most applications. For example, string tags can be used to transmit JSON or other string-based interchange formats.
