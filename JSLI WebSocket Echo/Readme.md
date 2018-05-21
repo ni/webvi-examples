@@ -1,21 +1,21 @@
-# JSLI WebSocket Echo Client
+# JSLI WebSocket Echo
 [![Call 3rd Party Web Service Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/Call3rdPartyWebService/Builds/WebApp_Web%20Server/Main.html)
-[![Call 3rd Party Web Service README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/Call3rdPartyWebService)
+[![Call 3rd Party Web Service README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/jsli-examples/JSLI%20WebSocket%20Echo/)
 
-This example demonstrates how to use a WebVI to call the [Earthquake API](https://earthquake.usgs.gov/) from the [US Geological Survey](https://www.usgs.gov/) and display recent earthquakes on a web page.
+This example uses the JavaScript Library Interface (JSLI) to connect to the WebSocket Echo Server hosted by websocket.org. The WebVI connects to the server, sends a message, and receives the same message from the server. The WebSocket functions use an external JavaScript file to implement their functions. 
 
-On the diagram, this WebVI uses [HTTP GET](http://zone.ni.com/reference/en-XX/help/371361N-01/lvcomm/http_client_get/) to query the Earthquake API for earthquakes from the last 30 days. The WebVI also uses [Unflatten from JSON](http://zone.ni.com/reference/en-XX/help/371361N-01/glang/unflatten_from_json/) to convert the results from JSON to LabVIEW data.
+On the diagram, this WebVI uses JSLI nodes to open a connection to the echo server, send messages, read received messages, close the connection and log debug information to the browser console. The WebVI also formats sent and received strings to display on the Messages indicator.
 
-On the panel, this WebVI displays a summary of the results in a data grid and a map of the selected earthquake region in a URL Image indicator.
+On the panel, this WebVI displays all sent and received messages in Messages indicator.
 
-![Screenshot of Demo](https://ni.github.io/webvi-examples/Call3rdPartyWebService/Screenshot.gif)
+![Screenshot of Demo](https://github.com/ni/webvi-examples/tree/jsli-examples/JSLI%20WebSocket%20Echo/img/WebSocketDemo.gif)
 
 # Dependencies
 - LabVIEW NXG 3.0 Web Module
 
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
-2. Open `Call3rdPartyWebService/Call3rdPartyWebService.lvproject`
+2. Open `JSLI WebSocket Echo\JSLI WebSocket Echo.lvproject`
 3. Open `Main.gviweb` and click the **Run** button.
 4. Build the web application.  
   a. Open `WebApp.gcomp`.  
@@ -24,25 +24,25 @@ On the panel, this WebVI displays a summary of the results in a data grid and a 
 **Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Sever** >> right-click **WebApp.gcomp** >> **Run**
 
 # Hosting
-You can manually the move the build output found at `\Call3rdPartyWebService\Builds` to any web server. This project also includes a Distribution (WebApp.lvdist) that can be used to build a package (.nipkg). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on SystemLink Cloud.
+You can manually the move the build output found at `\JSLI WebSocket Echo\Builds` to any web server. This project also includes a Distribution (WebApp.lvdist) that can be used to build a package (.nipkg). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on SystemLink Cloud.
 
 ## SystemLink Cloud Web App Hosting
 The following steps can be used to host the web app on SystemLink Cloud
-1. Open `Call3rdPartyWebService.lvproject`.
+1. Open `JSLI WebSocket Echo.lvproject`.
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
-4. Open a Web browser and navigate to https://systemlinkcloud.com/webapps
+4. Open a Web browser and navigate to https://systemlinkcloud.com/
 5. Click the **Choose nipkg** button and select the nipkg built in step 3.
 6. When the upload is complete, click on your newly uploaded Web app from your list of Web apps
 
 ## Local Hosting
 The following steps can be used to host the web app on a local web server
 ### Hosting on the NI Web Server with a nipkg
-1. Open `Call3rdPartyWebService.lvproject`
+1. Open `JSLI WebSocket Echo.lvproject`
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Double-click the nipkg and follow the on screen instructions
-5. Open a web browser and navigate to `http://localhost:9090/call3rdpartywebservice/Main.html`
+5. Open a web browser and navigate to `http://localhost:9090/JSLI%20WebSocket%20Echo/Main.html`
 
 ### Hosting on the NI Web Server by manually moving files
 1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`
@@ -55,20 +55,29 @@ The following steps can be used to host the web app on a local web server
 3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/Main.html`
 
 # Details
-A web service is a collection of functions that can be called through the web to trigger behavior or return data. Many websites offer these APIs as a way for third-party developers to build new applications using the website's underlying data or functionality.
+The WebSockets are a bidirectional communication protocol that allow interaction between the user's browser and a server. It is defined in Internet Engineering Task Force (IETF) RFC 6455 — The WebSocket Protocol. Most modern browsers support WebSockets.
 
-Many web services are open and public like the Earthquake API. Others require registration and API keys that restrict access to specific users and limit the load on the service.
+The JSLI node wraps JavaScript functions in WebSocketWrapper.js, which are then called in LabVIEW.  
 
-To call a web service in a WebVI, this example uses the `HTTP Get` node to pass in the URL of the service and return a string with the result of the call. There are examples of this in several WebVIs, including `GetRecentEarthquakes.gviweb`.
+![JSLI Node Functions](img/JSLI_WS.png)
 
-![Calling Web Service using HTTP Get](img/HTTPGet.png)
+This example connects to a public echo server hosted by websocket.org. To connect to the echo server, the WebVI uses OpenWebSocket and passes in the server URI. This example only allows one connection to the Echo server.
 
-Web services return data in a variety of formats, such as JSON, XML, CSV, and YML. The USGS Earthquake service returns JSON, which LabVIEW can parse using the `Unflatten from JSON` node. To use `Unflatten from JSON`, you must specify the structure the data is expected to take and can provide a path to limit the search to a specific part of the data. There are examples of this in several WebVIs, including `Get Earthquake Count.gviweb`.
+![Open WebSocket Connection](img/Open_WS.png)
 
-![Parsing JSON using Unflatten from JSON](img/UnflattenJSON.PNG)
+Once a connection is established, the user sends messages with the SendMessage function, and the echo server responds with the same message. The onMessage method in WebSocketWrapper.js stores the received messages in memory, and the WebVI polls every 50 ms for new messages with the CheckMessage function.
 
-If the web service returns data in a format other than JSON, you can still parse it in the WebVI using String nodes. There is an example of this in `Get Map URL.gviweb`.
+Additionally, the WebVI does not allow empty messages to be sent. Sent and received messages are formatted in the SubVIs and displayed on the Messages indicator.
 
-Once the data has been retrieved and converted into LabVIEW data types, this example displays the data in indicators on the panel of the top-level WebVI, `Main.gviweb`. This example uses a data grid to show all earthquakes and a URL Image indicator to display a map of the surrounding area.
+![Send and Read Messages](img/Send.png)  
+![Send and Read Messages](img/Read.png)
 
-![Wiring to indicators](img/Indicators.PNG)
+Once the session is completed, the user disconnects from the server.
+
+![Close Connection](img/Close.png)
+
+
+# Related Links
+WebSockets https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications <br />
+Window Object https://developer.mozilla.org/en-US/docs/Web/API/Window <br />
+Closure in JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures <br />
