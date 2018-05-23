@@ -66,8 +66,8 @@
                 newMessage = false;
                 return receivedMessage;
             }
-            return '';
         }
+        return '';
     };
 
     // Close the WebSocket connection if the connection is open.
