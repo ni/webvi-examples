@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="444B4B3CDCBB0A0DD1F51D248B14BFFF" Timestamp="1D3F14A530EF393" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="2C2AC24B234094A5A68FEEF2B9995738" Timestamp="1D3F2E249B3BD6F" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="6.1.0.1875" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="6.1.0.1" Version="6.1.0.1" />
 		<ParsableNamespace AssemblyFileVersion="6.1.0.1875" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="6.0.0.0" Version="6.0.0.49152" />
@@ -10,6 +10,7 @@
 		<ApplicationVersionInfo Build="6.1.0.1875" Name="LabVIEW NXG" Version="3.0.0" />
 	</SourceModelFeatureSet>
 	<VirtualInstrument Id="1" OverridingModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.HTMLVirtualInstrument" xmlns="http://www.ni.com/LabVIEW.VI">
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;This example uses the JavaScript Library Interface (JSLI) to connect to a WebSocket Echo Server.&lt;/p&gt;</p.UserDescription>
 		<Icon Id="17" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
 			<IconPanel Height="[float]40" Id="19" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
 				<IconTemplate Height="[float]40" HorizontalAlignment="[HorizontalAlignment]Stretch" Id="289" Left="[float]0" TemplateName="[string]Custom1" Top="[float]0" VerticalAlignment="[VerticalAlignment]Stretch" Width="[float]40">
@@ -76,7 +77,7 @@
 					</CaseStructure.Case>
 					<CaseStructure.Case Bounds="5 5 150 165" Id="42" Pattern="True">
 						<Wire Id="522" Joints="N(131:42)|(4,145) N(745:L3)|(20,145)" xmlns="http://www.ni.com/PlatformFramework" />
-						<MethodCall Bounds="85 25 40 40" DomainName="Chat:subvis" Id="713" ResolveFailedHint="&quot;C:\\dev\\GitHub\\webvi-examples\\JSLI WebSocket Echo\\WebApp.gcomp\\subvis\\Format Sent Message.gviweb&quot;" Target="Chat::subvis::Format Sent Message.gviweb" xmlns="http://www.ni.com/MocCommon">
+						<MethodCall Bounds="85 25 40 40" DomainName="Chat:subvis" Id="713" ResolveFailedHint="&quot;C:\\dev\\GitHub\\webvi-examples\\JSLIWebSocketEcho\\WebApp.gcomp\\subvis\\Format Sent Message.gviweb&quot;" Target="Chat::subvis::Format Sent Message.gviweb" xmlns="http://www.ni.com/MocCommon">
 							<p.MethodDeclaration>
 								<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 									<Parameter Id="L0" Desc="Chat" />
@@ -90,7 +91,7 @@
 						</MethodCall>
 						<Wire Id="714" Joints="N(638:42)|(4,30) N(713:L0)|(85,30)" xmlns="http://www.ni.com/PlatformFramework" />
 						<Wire Id="716" Joints="N(713:R0)|(125,30) N(641:42)|(146,30)" xmlns="http://www.ni.com/PlatformFramework" />
-						<MethodCall Bounds="20 110 40 40" DomainName="Chat:WebSocket Client.jsli" Id="745" ResolveFailedHint="SendMessage" Target="Chat::WebSocket Client.jsli::SendMessage" xmlns="http://www.ni.com/MocCommon">
+						<MethodCall Bounds="20 110 40 40" DomainName="Chat:WebSocket Client.jsli" Id="745" ResolveFailedHint="Send Message" Target="Chat::WebSocket Client.jsli::Send Message" xmlns="http://www.ni.com/MocCommon">
 							<p.MethodDeclaration>
 								<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 									<Parameter Id="L0" Desc="message" />
@@ -102,7 +103,7 @@
 							<Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
 							<Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
 						</MethodCall>
-						<MethodCall Bounds="85 110 40 40" DomainName="Chat:subvis" Id="761" ResolveFailedHint="&quot;C:\\dev\\GitHub\\webvi-examples\\JSLI WebSocket Echo\\WebApp.gcomp\\subvis\\Format Log to Console.gviweb&quot;" Target="Chat::subvis::Format Log to Console.gviweb" xmlns="http://www.ni.com/MocCommon">
+						<MethodCall Bounds="85 110 40 40" DomainName="Chat:subvis" Id="761" ResolveFailedHint="&quot;C:\\dev\\GitHub\\webvi-examples\\JSLIWebSocketEcho\\WebApp.gcomp\\subvis\\Format Log to Console.gviweb&quot;" Target="Chat::subvis::Format Log to Console.gviweb" xmlns="http://www.ni.com/MocCommon">
 							<p.MethodDeclaration>
 								<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 									<Parameter Id="L0" Desc="Input" />
@@ -155,7 +156,7 @@
 					<p.Text>"2. Sends, logs to console, \r\nand displays a message \r\nevery time the user clicks\r\n the Send button."</p.Text>
 				</Comment>
 				<Wire Id="642" Joints="N(51:i0)|(4,95) N(638:40)|(196,95)" xmlns="http://www.ni.com/PlatformFramework" />
-				<MethodCall Bounds="465 90 40 40" DomainName="Chat:subvis" Id="729" ResolveFailedHint="&quot;C:\\dev\\GitHub\\webvi-examples\\JSLI WebSocket Echo\\WebApp.gcomp\\subvis\\Format Received Message.gviweb&quot;" Target="Chat::subvis::Format Received Message.gviweb" xmlns="http://www.ni.com/MocCommon">
+				<MethodCall Bounds="465 90 40 40" DomainName="Chat:subvis" Id="729" ResolveFailedHint="&quot;C:\\dev\\GitHub\\webvi-examples\\JSLIWebSocketEcho\\WebApp.gcomp\\subvis\\Format Received Message.gviweb&quot;" Target="Chat::subvis::Format Received Message.gviweb" xmlns="http://www.ni.com/MocCommon">
 					<p.MethodDeclaration>
 						<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 							<Parameter Id="L0" Desc="Chat In" />
@@ -170,7 +171,7 @@
 				<Wire Id="730" Joints="N(641:40)|(364,95) N(729:L0)|(465,95)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="731" Joints="N(746:R0)|(455,180) h(5) v(-75) N(729:L1)|(465,105)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="732" Joints="N(729:R0)|(505,95) h(10) B(1) N(50:37)|(651,95) B(1) v(-35) N(22:Value)|(523,60)" xmlns="http://www.ni.com/PlatformFramework" />
-				<MethodCall Bounds="415 175 40 40" DomainName="Chat:WebSocket Client.jsli" Id="746" ResolveFailedHint="CheckMessage" Target="Chat::WebSocket Client.jsli::CheckMessage" xmlns="http://www.ni.com/MocCommon">
+				<MethodCall Bounds="415 175 40 40" DomainName="Chat:WebSocket Client.jsli" Id="746" ResolveFailedHint="Check Message" Target="Chat::WebSocket Client.jsli::Check Message" xmlns="http://www.ni.com/MocCommon">
 					<p.MethodDeclaration>
 						<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 							<Parameter Id="L3" Desc="error in" />
@@ -184,7 +185,7 @@
 				</MethodCall>
 				<Wire Id="763" Joints="N(129:i0)|(4,210) N(131:40)|(196,210)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="764" Joints="N(765:40)|(364,210) N(746:L3)|(415,210)" xmlns="http://www.ni.com/PlatformFramework" />
-				<MethodCall Bounds="135 135 40 40" DomainName="Chat:subvis" Id="797" ResolveFailedHint="&quot;C:\\dev\\GitHub\\webvi-examples\\JSLI WebSocket Echo\\WebApp.gcomp\\subvis\\Check If Empty.gviweb&quot;" Target="Chat::subvis::Check If Empty.gviweb" xmlns="http://www.ni.com/MocCommon">
+				<MethodCall Bounds="135 135 40 40" DomainName="Chat:subvis" Id="797" ResolveFailedHint="&quot;C:\\dev\\GitHub\\webvi-examples\\JSLIWebSocketEcho\\WebApp.gcomp\\subvis\\Check If Empty.gviweb&quot;" Target="Chat::subvis::Check If Empty.gviweb" xmlns="http://www.ni.com/MocCommon">
 					<p.MethodDeclaration>
 						<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 							<Parameter Id="L0" Desc="Message In" />
@@ -254,7 +255,7 @@
 			<Comment Bounds="-160 375 190 15" Id="696" xmlns="http://www.ni.com/MocCommon">
 				<p.Text>1. Connects to the echo server.</p.Text>
 			</Comment>
-			<MethodCall Bounds="20 270 40 40" DomainName="Chat:WebSocket Client.jsli" Id="744" ResolveFailedHint="OpenWebSocket" Target="Chat::WebSocket Client.jsli::OpenWebSocket" xmlns="http://www.ni.com/MocCommon">
+			<MethodCall Bounds="20 270 40 40" DomainName="Chat:WebSocket Client.jsli" Id="744" ResolveFailedHint="Open WebSocket" Target="Chat::WebSocket Client.jsli::Open WebSocket" xmlns="http://www.ni.com/MocCommon">
 				<p.MethodDeclaration>
 					<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 						<Parameter Id="L1" Desc="wsURI" />
@@ -268,7 +269,7 @@
 				<Terminal DataType="Single" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
 				<Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
 			</MethodCall>
-			<MethodCall Bounds="775 270 40 40" DomainName="Chat:WebSocket Client.jsli" Id="747" ResolveFailedHint="CloseWebSocket" Target="Chat::WebSocket Client.jsli::CloseWebSocket" xmlns="http://www.ni.com/MocCommon">
+			<MethodCall Bounds="775 270 40 40" DomainName="Chat:WebSocket Client.jsli" Id="747" ResolveFailedHint="Close WebSocket" Target="Chat::WebSocket Client.jsli::Close WebSocket" xmlns="http://www.ni.com/MocCommon">
 				<p.MethodDeclaration>
 					<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 						<Parameter Id="L3" Desc="error in" />
@@ -384,7 +385,7 @@
 				</MergeItem>
 			</MergeScript>
 		</p.IconModel>
-		<p.IconModel Target="Chat::WebSocket Client.jsli::SendMessage">
+		<p.IconModel Target="Chat::WebSocket Client.jsli::Send Message">
 			<MergeScript>
 				<MergeItem Path="." IsPrimary="True">
 					<Icon ListViewIconCrop="0 0 40 40">
@@ -437,7 +438,7 @@
 				</MergeItem>
 			</MergeScript>
 		</p.IconModel>
-		<p.IconModel Target="Chat::WebSocket Client.jsli::CheckMessage">
+		<p.IconModel Target="Chat::WebSocket Client.jsli::Check Message">
 			<MergeScript>
 				<MergeItem Path="." IsPrimary="True">
 					<Icon ListViewIconCrop="0 0 40 40">
@@ -472,7 +473,7 @@
 				</MergeItem>
 			</MergeScript>
 		</p.IconModel>
-		<p.IconModel Target="Chat::WebSocket Client.jsli::OpenWebSocket">
+		<p.IconModel Target="Chat::WebSocket Client.jsli::Open WebSocket">
 			<MergeScript>
 				<MergeItem Path="." IsPrimary="True">
 					<Icon ListViewIconCrop="0 0 40 40">
@@ -490,7 +491,7 @@
 				</MergeItem>
 			</MergeScript>
 		</p.IconModel>
-		<p.IconModel Target="Chat::WebSocket Client.jsli::CloseWebSocket">
+		<p.IconModel Target="Chat::WebSocket Client.jsli::Close WebSocket">
 			<MergeScript>
 				<MergeItem Path="." IsPrimary="True">
 					<Icon ListViewIconCrop="0 0 40 40">
