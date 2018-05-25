@@ -41,10 +41,6 @@
     // Create a new WebSocket object  with a connection to the echo server and add EventListener functions.
     window.OpenWebSocket = function (URI) {
         if (webSocket === undefined) {
-            // Open Echo Server if no URL is given
-            if (URI === '') {
-                URI = 'ws://echo.websocket.org/';
-            }
             webSocket = new WebSocket(URI);
             webSocket.onopen = function () { onOpen() };
             webSocket.onmessage = function (evt) { onMessage(evt) };
