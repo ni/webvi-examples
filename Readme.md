@@ -1,5 +1,10 @@
-# Access the LabVIEW NXG Beta 2 Examples
-** If you need access to the LabVIEW NXG Beta 2 examples, Please clone or download the version available at the [labview-nxg-beta2 branch](https://github.com/ni/webvi-examples/tree/labview-nxg-beta2)**
+# WebVI Examples for LabVIEW NXG
+This repository has examples for:
+
+**LabVIEW NXG 2 and some specific examples for LabVIEW NXG 3 Beta**
+
+For previous LabVIEW NXG versions:
+* [WebVI Examples for LabVIEW NXG 2 Beta 2](https://github.com/ni/webvi-examples/releases/tag/nxg2-beta2)
 
 # webvi-examples
 The following examples demonstrate different ways of using WebVIs. Each directory contains example code and a readme explaining the example. If you have any questions or problems related to these examples, post on this GitHub repository's issues page.
