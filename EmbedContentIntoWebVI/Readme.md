@@ -49,7 +49,7 @@ The following steps can be used to host the web app on a local web server
 2. Copy the `WebApp_Web Server` directory into the `htdocs` directory.
 3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/Main.html`.
 
-**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Sever** >> right-click **WebApp.gcomp** >> **Run**
+**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Server** >> right-click **WebApp.gcomp** >> **Run**
 
 # Details
 This section describes the content added to the HTML view of the WebVI to create a web page that shows current weather conditions for Iowa State University.
