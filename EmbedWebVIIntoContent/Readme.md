@@ -18,6 +18,8 @@ You can use the techniques demonstrated in this example whenever you want to emb
 
 # Dependencies
 - LabVIEW NXG 2.0 Web Module
+- LabVIEW 2009-2017 (Required for hosting only)
+- NI SystemLink Server (Required for hosting only)
 
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
@@ -28,7 +30,7 @@ You can use the techniques demonstrated in this example whenever you want to emb
   a. On the **Project Files** tab, double-click `WebApp.gcomp` to open the web application component.  
   b. On the **Document** tab, click **Build**.  
 
-**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building.
+**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. 
 
 
 ## Important Directories
