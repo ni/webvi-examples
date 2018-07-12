@@ -50,7 +50,7 @@ This example demonstrates how to embed custom web content into the WebVI panel u
 
 # Embed a WebVI into Web Content
 [![Embed a WebVI into Web Content Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/EmbedWebVIIntoContent/)
-[![Embed a WebVI into Web Content README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/EEmbedWebVIIntoContent)
+[![Embed a WebVI into Web Content README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/EmbedWebVIIntoContent)
 
 This example demonstrates how to embed the output of a WebVI built using LabVIEW NXG 2.0 into an static web page.
 
@@ -73,9 +73,9 @@ You can also use resource files to augment the WebVI's capabilities. For example
 
 ![Screenshot of Demo](https://ni.github.io/webvi-examples/IncorporateUserResources/Screenshot.gif)
 
-# JSLI Calculator
-[![JSLI Calculator into WebVI Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/JSLICalculator/Builds/WebApp_Web%20Server/Main.html)
-[![JSLI Calculator into WebVI README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/JSLICalculator)
+# Call JavaScript From a WebVI (Requires NXG 3 Beta)
+[![Call JavaScript From a WebVI Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/CallJavaScriptFromAWebVI/Builds/WebApp_Web%20Server/Main.html)
+[![Call JavaScript From a WebVI README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/CallJavaScriptFromAWebVI)
 
 **Note: JSLI examples can only be used with the NXG 3 Beta. To access the NXG 3 Beta visit: [ni.com/techpreview](https://ni.com/techpreview)**
 
@@ -83,11 +83,11 @@ This example is a simple 4-bit calculator using the JavaScript Library Interface
 
 On the panel, this WebVI has X and Y binary inputs. The user clicks these to change the numerical values of the inputs. The Outputs of X+Y and X*Y are updated with binary and numerical indicators. 
 
-![Screenshot of Demo](https://ni.github.io/webvi-examples/JSLICalculator/Screenshot.gif)
+![Screenshot of Demo](https://ni.github.io/webvi-examples/CallJavaScriptFromAWebVI/Screenshot.gif)
 
-# JSLI WebSocket Echo
-[![JSLI WebSocket Echo into WebVI Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/JSLIWebSocketEcho/Builds/WebApp_Web%20Server/Main.html)
-[![JSLI WebSocket Echo into WebVI README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/JSLIWebSocketEcho)
+# Connect WebVI to WebSocket Echo Server (Requires NXG 3 Beta)
+[![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/Builds/WebApp_Web%20Server/Main.html)
+[![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/ConnectWebVIToWebSocketEchoServer)
 
 **Note: JSLI examples can only be used with the NXG 3 Beta. To access the NXG 3 Beta visit: [ni.com/techpreview](https://ni.com/techpreview)**
 
@@ -95,16 +95,15 @@ This example uses the JavaScript Library Interface (JSLI) to connect to the WebS
 
 On the diagram, this WebVI uses JSLI VIs to open a connection to the echo server, send messages, read received messages, close the connection and log debug information to the browser console. The WebVI also formats sent and received strings to display on the Messages indicator.
 
-![Screenshot of Demo](https://ni.github.io/webvi-examples/JSLIWebSocketEcho/Screenshot.gif)
+![Screenshot of Demo](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/Screenshot.gif)
 
-<!-- The following should be equivalent to the section in webvi-examples/Readme.md -->
 # Multiple Top-Level WebVIs
 [![Multiple Top-Level WebVIs Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/Builds/MultipleTopLevelWebVIs_Web%20Server/)
 [![Multiple Top-Level WebVIs README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/MultipleTopLevelWebVIs)
 
 This example demonstrates how to create a web application with multiple pages by using multiple top-level WebVIs and Hyperlink controls to link between them. When you build the web application, each top-level WebVI generates a separate HTML file with links to the other HTML files that are generated.
 
-[![Multiple Top-Level WebVIs Demo Link](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/Screenshot.gif)](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/Builds/Web%20Server/Configuration1/MultipleTopLevelWebVIs/)
+![Multiple Top-Level WebVIs Demo Link](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/Screenshot.gif)
 
 # Utilize Skyline Data Services
 [![Utilize Skyline Data Services](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/Builds/WebApp_Web%20Server/Main.html)

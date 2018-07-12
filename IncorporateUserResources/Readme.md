@@ -30,7 +30,7 @@ The following steps can be used to host the web app on SystemLink Cloud
 1. Open `IncorporateUserResources.lvproject`.
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
-4. Open a Web browser and navigate to https://systemlinkcloud.com/webapps
+4. Open a Web browser and navigate to https://www.systemlinkcloud.com/webapphosting
 5. Click the **Choose nipkg** button and select the nipkg built in step 3.
 6. When the upload is complete, click on your newly uploaded Web app from your list of Web apps
 

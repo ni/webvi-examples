@@ -1,6 +1,6 @@
 # Embed Content into a WebVI
 [![Embed Content into a WebVI Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/EmbedContentIntoWebVI/Builds/WebApp_Web%20Server/Main.html)
-[![Embed Content into a WebVI README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/EmbedContentintoWebVI)
+[![Embed Content into a WebVI README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/EmbedContentIntoWebVI)
 
 This example demonstrates how to embed custom web content into the WebVI panel using LabVIEW NXG 2.0. WebVIs use HTML to define and describe the content of the panel that is loaded in a web page. This means that you can add custom HTML content to appear alongside the LabVIEW-generated HTML.
 
@@ -26,7 +26,7 @@ The following steps can be used to host the web app on SystemLink Cloud
 1. Open `EmbedWebVIIntoContent.lvproject`.
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
-4. Open a Web browser and navigate to https://systemlinkcloud.com/webapps
+4. Open a Web browser and navigate to https://www.systemlinkcloud.com/webapphosting
 5. Click the **Choose nipkg** button and select the nipkg built in step 3.
 6. When the upload is complete, click on your newly uploaded Web app from your list of Web apps
 

@@ -1,21 +1,21 @@
-# JSLI WebSocket Echo
-[![JSLI WebSocket Echo into WebVI Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/JSLIWebSocketEcho/Builds/WebApp_Web%20Server/Main.html)
-[![JSLI WebSocket Echo into WebVI README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/JSLIWebSocketEcho)
+# Connect WebVI to WebSocket Echo Server (Requires NXG 3 Beta)
+[![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/Builds/WebApp_Web%20Server/Main.html)
+[![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/ConnectWebVIToWebSocketEchoServer)
 
-This example uses the JavaScript Library Interface (JSLI) to connect to the WebSocket Echo Server hosted by websocket.org. The WebVI connects to the server, sends a message, and receives the same message from the server. The WebSocket functions use an external JavaScript file to implement their functions. 
+**Note: JSLI examples can only be used with the NXG 3 Beta. To access the NXG 3 Beta visit: [ni.com/techpreview](https://ni.com/techpreview)**
 
-On the diagram, this WebVI uses JSLI nodes to open a connection to the echo server, send messages, read received messages, close the connection and log debug information to the browser console. The WebVI also formats sent and received strings to display on the Messages indicator.
+This example uses the JavaScript Library Interface (JSLI) to connect to the WebSocket Echo Server hosted by websocket.org. The WebVI connects to the server, sends a message, and receives the same message from the server. The WebSocket functions use an external JavaScript file to implement their functionality. 
 
-On the panel, this WebVI displays all sent and received messages in Messages indicator.
+On the diagram, this WebVI uses JSLI VIs to open a connection to the echo server, send messages, read received messages, close the connection and log debug information to the browser console. The WebVI also formats sent and received strings to display on the Messages indicator.
 
-![Screenshot of Demo](https://ni.github.io/webvi-examples/JSLIWebSocketEcho/Screenshot.gif)
+![Screenshot of Demo](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/Screenshot.gif)
 
 # Dependencies
 - LabVIEW NXG 3.0 Web Module
 
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
-2. Open `JSLIWebSocketEcho\JSLIWebSocketEcho.lvproject`
+2. Open `ConnectWebVIToWebSocketEchoServer\ConnectWebVIToWebSocketEchoServer.lvproject`
 3. Open `Main.gviweb` and click the **Run** button.
 4. Build the web application.  
   a. Open `WebApp.gcomp`.  
@@ -24,11 +24,11 @@ On the panel, this WebVI displays all sent and received messages in Messages ind
 **Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Server** >> right-click **WebApp.gcomp** >> **Run**
 
 # Hosting
-You can manually the move the build output found at `\JSLIWebSocketEcho\Builds` to any web server. This project also includes a Distribution (WebApp.lvdist) that can be used to build a package (.nipkg). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on SystemLink Cloud.
+You can manually the move the build output found at `\ConnectWebVIToWebSocketEchoServer\Builds` to any web server. This project also includes a Distribution (WebApp.lvdist) that can be used to build a package (.nipkg). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on SystemLink Cloud.
 
 ## SystemLink Cloud Web App Hosting
 The following steps can be used to host the web app on SystemLink Cloud
-1. Open `JSLIWebSocketEcho.lvproject`.
+1. Open `ConnectWebVIToWebSocketEchoServer.lvproject`.
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Open a Web browser and navigate to https://systemlinkcloud.com/
@@ -38,7 +38,7 @@ The following steps can be used to host the web app on SystemLink Cloud
 ## Local Hosting
 The following steps can be used to host the web app on a local web server
 ### Hosting on the NI Web Server with a nipkg
-1. Open `JSLIWebSocketEcho.lvproject`
+1. Open `ConnectWebVIToWebSocketEchoServer.lvproject`
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Double-click the nipkg and follow the on screen instructions

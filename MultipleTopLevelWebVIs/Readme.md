@@ -5,7 +5,7 @@
 
 This example demonstrates how to create a web application with multiple pages by using multiple top-level WebVIs and Hyperlink controls to link between them. When you build the web application, each top-level WebVI generates a separate HTML file with links to the other HTML files that are generated.
 
-[![Multiple Top-Level WebVIs Demo Link](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/Screenshot.gif)](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/Builds/Web%20Server/Configuration1/MultipleTopLevelWebVIs/)
+![Multiple Top-Level WebVIs Demo Link](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/Screenshot.gif)
 
 # Dependencies
 - LabVIEW NXG 2.0 Web Module
@@ -32,7 +32,7 @@ The following steps can be used to host the web app on SystemLink Cloud
 1. Open `MultipleTopLevelVIs.lvproject`.
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
-4. Open a Web browser and navigate to https://systemlinkcloud.com/webapps
+4. Open a Web browser and navigate to https://www.systemlinkcloud.com/webapphosting
 5. Click the **Choose nipkg** button and select the nipkg built in step 3.
 6. When the upload is complete, click on your newly uploaded Web app from your list of Web apps
 
