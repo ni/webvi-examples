@@ -77,83 +77,83 @@ The following section describes the behavior of  different CSS rules you can add
 
 Change the background color of the whole document. Change the background color of the front panel and add a drop shadow.
 ```css
-	body {
-		background-color: white;
-	}
+    body {
+        background-color: white;
+    }
 
-	ni-front-panel {
-		background-color: #00adef;
-		box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.75);
-	}
+    ni-front-panel {
+        background-color: #00adef;
+        box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.75);
+    }
 ```
 
 Change the color of graphs scales to white. Change the axis label color to light gray. Replace the white background for charts and graphs with a transparent background and remove borders around the graph.
 ```css
-	ni-cartesian-graph {
-		background: transparent;
-		border: none;
-	}
+    ni-cartesian-graph {
+        background: transparent;
+        border: none;
+    }
 
-	ni-cartesian-axis[ni-control-id] {
-		color: white;
-	}
+    ni-cartesian-axis[ni-control-id] {
+        color: white;
+    }
 
-	ni-cartesian-graph .flot-x-axis text,
-	ni-cartesian-graph .flot-y-axis text {
-		fill: white;
-	}
+    ni-cartesian-graph .flot-x-axis text,
+    ni-cartesian-graph .flot-y-axis text {
+        fill: white;
+    }
 
-	ni-cartesian-graph text.axisLabels {
-		fill: lightgray;
-	}
+    ni-cartesian-graph text.axisLabels {
+        fill: lightgray;
+    }
 ```
 
 Change the color for slider label, track, fill, tick marks, and scales.
 ```css
-	jqx-slider .jqx-container .jqx-track::before {
-		background: transparent;
-		border: none;
-	}
+    jqx-slider .jqx-container .jqx-track::before {
+        background: transparent;
+        border: none;
+    }
 
-	jqx-slider .jqx-track .jqx-value {
-		background: yellow;
-	}
+    jqx-slider .jqx-track .jqx-value {
+        background: yellow;
+    }
 
-	jqx-slider .jqx-scale {
-		--ni-foreground-color: white;
-		color: var(--ni-foreground-color);
-	}
+    jqx-slider .jqx-scale {
+        --ni-foreground-color: white;
+        color: var(--ni-foreground-color);
+    }
 ```
 
 Change the color for tank scale and circular progress bar fill.
 ```css
-	jqx-tank .jqx-scale {
-		--ni-foreground-color: darkblue;
-		color: var(--ni-foreground-color);
-	}
+    jqx-tank .jqx-scale {
+        --ni-foreground-color: darkblue;
+        color: var(--ni-foreground-color);
+    }
 
-	jqx-circular-progress-bar {
-		--ni-fill-background: yellow;
-	}
+    jqx-circular-progress-bar {
+        --ni-fill-background: yellow;
+    }
 ```
 
 Remove all borders / backgrounds from numeric indicators, and make the text white.
 ```css
-	jqx-numeric-text-box input {
-		color: white;
-	}
+    jqx-numeric-text-box input {
+        color: white;
+    }
 
-	jqx-numeric-text-box {
-		--ni-border: none;
-		--ni-indicator-background-color: transparent;
-		--ni-control-background-color: transparent;
-	}
+    jqx-numeric-text-box {
+        --ni-border: none;
+        --ni-indicator-background-color: transparent;
+        --ni-control-background-color: transparent;
+    }
 ```
 
 Change the power button to have a yellow background, and gray/ black foreground, when turned on.
 ```css
-	jqx-power-button {
-		--ni-true-background: yellow;
-		--ni-true-foreground-color: #2b3033;
-	}
+    jqx-power-button {
+        --ni-true-background: yellow;
+        --ni-true-foreground-color: #2b3033;
+    }
 ```
