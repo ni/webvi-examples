@@ -28,6 +28,8 @@ To use Skyline data services, you need one of the following product combinations
 -	LabVIEW NXG with [LabVIEW NXG 2.1.1 Web Module](http://www.ni.com/labview/webmodule/)
 -	LabVIEW 2015-2018 with SystemLink Client 18.0
 
+Use NI Package Manager to install the products you need. If you do not have NI Package Manager, [download](http://search.ni.com/nisearch/app/main/p/bot/no/ap/tech/lang/en/pg/1/sn/ssnav:dwl/q/ni%20package%20manager/) and install the latest version now.
+
 # Choosing Your Goal
 Do you want to learn about connecting your web application to SystemLink Cloud or SystemLink Server? Click one of the following links to jump to your workflow:
 
