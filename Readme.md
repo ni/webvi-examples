@@ -103,7 +103,7 @@ This example demonstrates how to create a web application with multiple pages by
 
 # User Event Registration
 [![User Event Registration Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/UserEventRegistration/Builds/WebApp_Web%20Server/Main.html)
-[![ Demo Link](http README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/UserEventRegistration)
+[![User Event Registration README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/UserEventRegistration)
 
 This example demonstrates the use of the User Event nodes to implement a user interaction recorder.
 
