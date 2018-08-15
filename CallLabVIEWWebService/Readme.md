@@ -19,9 +19,9 @@ Use LabVIEW 2016 to create web services that do what WebVIs can't do, such as:
 
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
-2. Open `WebService\WebService.lvproj` in LabVIEW 2016.
+2. Open `CallLabVIEWWebService\WebService\WebService.lvproj` in LabVIEW 2016.
 3. In the **Project Explorer**, right-click **Web Server** and select **Start**.
-4. Open `CallLabVIEWWebService.lvproject` in LabVIEW NXG 3.0.
+4. Open `CallLabVIEWWebService\CallLabVIEWWebService.lvproject` in LabVIEW NXG 3.0.
 5. Open `Main.gviweb` and click the **Run** button.
 6. Build the web application.  
   a. Open `WebApp.gcomp`.  
@@ -34,7 +34,7 @@ You can manually the move the build output found at `Builds` to any web server. 
 
 ## SystemLink Cloud Web App Hosting
 The following steps can be used to host the web app on SystemLink Cloud
-1. Open `CallLabVIEWWebService.lvproject`.
+1. Open `CallLabVIEWWebService\CallLabVIEWWebService.lvproject`.
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Open a Web browser and navigate to https://www.systemlinkcloud.com/webapphosting

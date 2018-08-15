@@ -37,7 +37,7 @@ You can use the techniques demonstrated in this example whenever you want to emb
 - **`StaticPageResources`** &mdash; The image and CSS files that define the static web page. This example requires no additional JavaScript.
 
 # Hosting
-After building copy and paste the build output at `\EmbedWebVIIntoContent` directory to any web server you want.
+After building copy and paste the build output at `EmbedWebVIIntoContent` directory to any web server you want.
 
 ## Hosting on the LabVIEW 2009-2018 Web Server
 1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`and create directory; for example `webvi-example`.
