@@ -73,7 +73,7 @@ You can also use resource files to augment the WebVI's capabilities. For example
 
 ![Screenshot of Demo](https://ni.github.io/webvi-examples/IncorporateUserResources/Screenshot.gif)
 
-# Call JavaScript From a WebVI (Requires NXG 3 Beta)
+# Call JavaScript From a WebVI
 [![Call JavaScript From a WebVI Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/CallJavaScriptFromAWebVI/Builds/WebApp_Web%20Server/Main.html)
 [![Call JavaScript From a WebVI README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/CallJavaScriptFromAWebVI)
 
@@ -83,7 +83,7 @@ On the panel, this WebVI has X and Y binary inputs. The user clicks these to cha
 
 ![Screenshot of Demo](https://ni.github.io/webvi-examples/CallJavaScriptFromAWebVI/Screenshot.gif)
 
-# Connect WebVI to WebSocket Echo Server (Requires NXG 3 Beta)
+# Connect WebVI to WebSocket Echo Server
 [![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/Builds/WebApp_Web%20Server/Main.html)
 [![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/ConnectWebVIToWebSocketEchoServer)
 
@@ -100,6 +100,19 @@ On the diagram, this WebVI uses JSLI VIs to open a connection to the echo server
 This example demonstrates how to create a web application with multiple pages by using multiple top-level WebVIs and Hyperlink controls to link between them. When you build the web application, each top-level WebVI generates a separate HTML file with links to the other HTML files that are generated.
 
 ![Multiple Top-Level WebVIs Demo Link](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/Screenshot.gif)
+
+# User Event Registration
+[![User Event Registration Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/UserEventRegistration/Builds/WebApp_Web%20Server/Main.html)
+[![ Demo Link](http README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/UserEventRegistration)
+
+This example demonstrates the use of the User Event nodes to implement a user interaction recorder.
+
+1. Run the VI.
+2. Drag the value of the Slider control around for a few seconds.
+3. Click the Playback button. The exact sequence of drags that you performed will be repeated on the Slider and displayed in the Movement Data graph.
+4. Click Stop to stop the VI.
+
+![Screenshot of Demo](https://ni.github.io/webvi-examples/UserEventRegistration/Screenshot.gif)
 
 # Utilize Skyline Data Services
 [![Utilize Skyline Data Services](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/UtilizeSkylineDataServices/Builds/WebApp_Web%20Server/Main.html)
