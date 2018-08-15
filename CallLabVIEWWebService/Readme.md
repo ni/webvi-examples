@@ -14,14 +14,14 @@ Use LabVIEW 2016 to create web services that do what WebVIs can't do, such as:
   - Reading and writing data to and from file systems and databases
 
 # Dependencies
-- LabVIEW NXG 2.0 Web Module
+- LabVIEW NXG 3.0 Web Module
 - LabVIEW 2016
 
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
-2. Open `CallLabVIEWWebService\WebService\WebService.lvproj` in LabVIEW 2016.
+2. Open `WebService\WebService.lvproj` in LabVIEW 2016.
 3. In the **Project Explorer**, right-click **Web Server** and select **Start**.
-4. Open `Call LabVIEW Web Service\WebVI\CallLabVIEWWebService.lvproject` in LabVIEW NXG 2.0.
+4. Open `CallLabVIEWWebService.lvproject` in LabVIEW NXG 3.0.
 5. Open `Main.gviweb` and click the **Run** button.
 6. Build the web application.  
   a. Open `WebApp.gcomp`.  
@@ -30,7 +30,7 @@ Use LabVIEW 2016 to create web services that do what WebVIs can't do, such as:
 **Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Server** >> right-click **WebApp.gcomp** >> **Run**
 
 # Hosting
-You can manually the move the build output found at `\CallLabVIEWWebService\Builds` to any web server. This project also includes a Distribution (WebApp.lvdist) that can be used to build a package (.nipkg). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on SystemLink Cloud.
+You can manually the move the build output found at `Builds` to any web server. This project also includes a Distribution (WebApp.lvdist) that can be used to build a package (.nipkg). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on SystemLink Cloud.
 
 ## SystemLink Cloud Web App Hosting
 The following steps can be used to host the web app on SystemLink Cloud
@@ -64,7 +64,7 @@ The following steps can be used to host the web app on a local web server
 
 ## Important Directories
 - **`Web Service`** &mdash; Contains the LabVIEW 2016 web service project.
-- **`WebVI`** &mdash; Contains the LabVIEW NXG 2.0 web application project, which includes the WebVI.
+- **`WebVI`** &mdash; Contains the LabVIEW NXG 3.0 web application project, which includes the WebVI.
 - **`WebVI/Builds/WebApp_Web Server`** &mdash; Contains the built web application, which consists of HTML, JavaScript, the compiled diagram, and other web content.
 
 ## The Web Service

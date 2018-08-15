@@ -9,7 +9,7 @@ You can also use resource files to augment the WebVI's capabilities. For example
 ![Screenshot of Demo](https://ni.github.io/webvi-examples/IncorporateUserResources/Screenshot.gif)
 
 # Dependencies
-- LabVIEW NXG 2.0 Web Module
+- LabVIEW NXG 3.0 Web Module
 
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
