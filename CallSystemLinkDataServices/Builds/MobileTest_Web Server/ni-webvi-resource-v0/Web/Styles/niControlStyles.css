@@ -1,0 +1,1557 @@
+/**************************************
+* NI Control Styles
+* National Instruments Copyright 2015
+*
+* NI Control styles sorted in alphabetical order by control, for reference please see: https://www.youtube.com/watch?v=EOueakRcv2Q
+**************************************/
+
+/*************************************
+* Font Awesome
+**************************************/
+/* All of our platforms support woff 1.0 so just use that format */
+@font-face {
+    font-family: "NILVJSFontAwesome";
+    src: url("../../node_modules/font-awesome/fonts/fontawesome-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*************************************
+* Front Panel Canvas styling
+**************************************/
+/* Center the Front Panel on the page horizontally, for run panel and deployed pages */
+.ni-front-panel-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Clip the front panel canvas to its bounds, for run panel and deployed pages */
+.ni-front-panel {
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+/*************************************
+* NI Shared CSS classes
+**************************************/
+/* both elements and their children can be hidden */
+[data-ni-base-style].ni-hidden,
+[data-ni-base-style] .ni-hidden {
+    display: none;
+}
+
+[data-ni-base-style] .jqx-rc-all {
+    border-radius: 0px;
+    webkit-border-radius: 0px;
+}
+
+/*************************************
+* Uninitialized Element Style
+**************************************/
+/*TODO mraj it is possible use of a unqualified attribute selector like this may be a performance issue. It should be carefully monitored:
+https://github.com/CSSLint/csslint/wiki/Disallow-unqualified-attribute-selectors
+If found to be a performance concern, can qualify the styles to all elements, ie:
+ni-array-viewer[data-ni-base-style="uninitialized"]], ni-boolean-button[data-ni-base-style="uninitialized"]],... {uninitialized element styles}
+Or alternatively change from using an attribute to applying a class to the elements (ie .ni-base-style and .ni-base-style-uninitialized) */
+[data-ni-base-style="uninitialized"] {
+    box-shadow: inset 0px 0px 60px -20px lightgray;
+    border-radius: 4px;
+    animation-name: data-ni-base-style-loading;
+    animation-duration: 3s;
+}
+
+ni-label[data-ni-base-style="uninitialized"] {
+    box-shadow: none;
+}
+
+ni-label[data-ni-base-style="uninitialized"]::before {
+    content: attr(text);
+}
+
+ni-tab-item[data-ni-base-style="uninitialized"] {
+    display: none;
+}
+
+@keyframes data-ni-base-style-loading {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*************************************
+* Array Viewer
+**************************************/
+ni-array-viewer {
+    display: inline-block;
+}
+
+ni-array-viewer .jqx-scrollbar-button-state-normal-flat {
+    display: block;
+}
+
+/*************************************
+* Boolean Button
+**************************************/
+
+jqx-toggle-button {
+    position: absolute;
+}
+
+jqx-toggle-button .jqx-container {
+    color: inherit;
+    transition: none !important;
+}
+
+jqx-toggle-button .ni-glyph {
+    display: inline;
+    font: normal normal normal 1em "NILVJSFontAwesome";
+    font-stretch: normal;
+    text-decoration: none;
+    margin-right: 10px;
+    color: inherit;
+}
+
+
+jqx-toggle-button .ni-text {
+    display: inline;
+    text-align: left;
+    white-space: pre;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: inherit;
+}
+
+/* Only hide the text when show values are hidden.
+   The user can hide the glyph by setting the glyph to none. */
+jqx-toggle-button .ni-glyph.ni-hidden {
+    display: inline;
+    margin-right: 0px;
+}
+
+jqx-toggle-button .ni-text.ni-hidden {
+    display: none;
+}
+
+/*************************************
+* Boolean LED
+**************************************/
+
+jqx-led {
+    position: absolute;
+}
+
+jqx-led .ni-hidden {
+    display: none;
+}
+
+jqx-led[checked] .ni-hidden {
+    display: none;
+}
+
+jqx-led[readonly="true"] .jqx-container,
+jqx-led[readonly=""] .jqx-container {
+    cursor: default;
+}
+
+/*************************************
+* Boolean Switch
+**************************************/
+
+/**************************************
+* Boolean Switch (shape power)
+*
+*    <ni-boolean-switch shape="power">
+*        <div></div>
+*    </ni-boolean-switch>
+*
+**************************************/
+
+jqx-power-button {
+    position: absolute;
+}
+
+jqx-power-button .jqx-input:after {
+    font: normal normal normal 20px "NILVJSFontAwesome";
+    font-stretch: normal;
+    text-decoration: none;
+	text-shadow: 0px 1px 1px rgba(250,250,250,0.1);
+    content: '\F011';
+    vertical-align: middle;
+    background-color: #ebebeb;
+}
+
+jqx-power-button[checked] .jqx-input {
+    background-color: #82a3d1;
+}
+
+jqx-power-button .jqx-input:after {
+    background-color: transparent;
+}
+/**************************************
+* Boolean Switch (shape slider)
+**************************************/
+jqx-switch-button {
+    position: absolute;
+}
+
+jqx-switch-button .ni-hidden {
+    display: none;
+}
+
+/*************************************
+* Cartesian Axis
+**************************************/
+ni-cartesian-axis {
+    font-family: "Open Sans", verdana, arial, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    color: #C7CCD0;
+}
+
+/*************************************
+* Cartesian Graph
+**************************************/
+ni-cartesian-graph {
+    position: absolute;
+    border: 1px solid #C7CCD0;
+    background-color: white;
+    padding: 30px 20px 20px;
+    display: inline-block;
+    min-height: 20px;
+    color: #2B3033;
+    box-sizing: border-box;
+}
+
+ni-cartesian-graph ni-grid-div {
+    /*** **border-style** - use solid or none. dashed borders not supported*/
+    border-style: none;
+    /*** **border-width** - top left botton right*/
+    border-width: 0px 0px 0px 0px;
+    /*** **border-color** - the color of the border*/
+    border-color: white;
+    /*** **background-color** - the background color of the grid*/
+    background-color: white;
+    /*** **color** - the color of the grid reticles*/
+    color: inherit;
+}
+
+ni-cartesian-graph .ni-graph-tooltip {
+    position: absolute;
+    display: none;
+    border: 1px solid #fdd;
+    color: #2b3033;
+    padding: 2px;
+    background-color: #ffffff;
+    opacity: 0.80;
+    overflow: hidden;
+}
+
+ni-cartesian-graph .ni-hidden {
+    display: none;
+}
+
+/*************************************
+* Chart
+**************************************/
+ni-chart {
+    position: absolute;
+    border: 1px solid #C7CCD0;
+    background-color: white;
+    padding: 30px 20px 20px;
+    display: inline-block;
+    min-height: 20px;
+    color: #2B3033;
+    box-sizing: border-box;
+}
+
+ni-chart ni-grid-div {
+    /*** **border-style** - use solid or none. dashed borders not supported*/
+    border-style: none;
+    /*** **border-width** - top left botton right*/
+    border-width: 0px 0px 0px 0px;
+    /*** **border-color** - the color of the border*/
+    border-color: white;
+    /*** **background-color** - the background color of the grid*/
+    background-color: white;
+    /*** **color** - the color of the grid reticles*/
+    color: inherit;
+}
+
+ni-chart .ni-graph-tooltip {
+    position: absolute;
+    display: none;
+    border: 1px solid #fdd;
+    color: #2b3033;
+    padding: 2px;
+    background-color: #ffffff;
+    opacity: 0.80;
+    overflow: hidden;
+}
+
+ni-cartesian-graph.ni-hidden {
+    display: none;
+}
+
+/*************************************
+* Color Scale
+**************************************/
+ni-color-scale {
+    font-family: "Open Sans", verdana, arial, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    color: #C7CCD0;
+}
+
+/*************************************
+* Cursor Legend
+**************************************/
+ni-cursor-legend {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    border: 1px solid #C7CCD0;
+    background-color: white;
+}
+
+/* Command section */
+ni-cursor-legend .ni-command-button {
+    width: 25px;
+    height: 25px;
+    margin: 2px;
+    float: right;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Master section */
+
+ni-cursor-legend .jqx-rc-all {
+    border-radius: 0px;
+    webkit-border-radius: 0px;
+}
+
+ni-cursor-legend .ni-master-row {
+    border: 0;
+    background-color: white;
+}
+
+ni-cursor-legend .ni-expand-box {
+    width: 1%;
+    white-space: nowrap;
+    border-right: 0;
+    border-left: 0;
+}
+
+ni-cursor-legend .ni-expand-button {
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+}
+
+ni-cursor-legend .ni-cursor-box {
+    width: 100%;
+    border-collapse: collapse;
+    border-right: 0;
+    border-left: 0;
+    white-space: nowrap;
+}
+
+ni-cursor-legend .ni-cursor-display {
+    border: 1px solid black;
+    background-color: white;
+    margin: auto;
+    vertical-align: middle;
+}
+
+ni-cursor-legend .ni-cursor-title {
+    margin-left: 4px;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+ni-cursor-legend .ni-x-box {
+    width: 15%;
+    border-right: 0;
+    border-left: 0;
+    padding-left: 5px;
+}
+
+ni-cursor-legend .ni-y-box {
+    width: 15%;
+    border-right: 0;
+    border-left: 0;
+    padding-left: 5px;
+}
+
+ni-cursor-legend .ni-actions-box {
+    width: 120px;
+    min-width: 120px;
+    border-right: 0;
+    border-left: 0;
+}
+
+ni-cursor-legend .ni-action-button {
+    width: 25px;
+    height: 25px;
+    margin: 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: right;
+}
+
+ni-cursor-legend .ni-cursor-legend-master-control {
+    width: 1%;
+    white-space: nowrap;
+}
+
+ni-cursor-legend.ni-hidden {
+    display: none;
+}
+
+/* Detail section */
+ni-cursor-legend .ni-details-box {
+    display: table-row;
+    border: 3px solid white;
+}
+
+ni-cursor-legend .ni-details {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    table-layout: fixed;
+}
+
+ni-cursor-legend .ni-details-row {
+    width: 100%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    background-color: white;
+}
+
+ni-cursor-legend .ni-details-row-title-box {
+    width: 0%;
+    visibility: hidden;
+}
+
+ni-cursor-legend .ni-details-row-title {
+    margin-left: 2px;
+}
+
+ni-cursor-legend .ni-details-row-control-box {
+    padding: 1px;
+}
+
+ni-cursor-legend .ni-colorbox-content {
+    text-shadow: none;
+    height: inherit;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+ni-cursor-legend .ni-selector-title {
+    white-space: nowrap;
+}
+
+ni-cursor-legend .ni-selector {
+    box-sizing: border-box;
+}
+
+ni-cursor-legend .ni-selector-icon {
+    width: 80px;
+    height: 16px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: right;
+}
+
+/*************************************
+* Check Box
+**************************************/
+jqx-check-box {
+    position: absolute;
+}
+
+jqx-check-box .ni-hidden {
+    display: none;
+}
+
+jqx-check-box .jqx-label {
+    cursor: pointer;
+}
+
+jqx-check-box[readonly=""] .jqx-label,
+jqx-check-box[readonly="true"] .jqx-label {
+    cursor: default;
+}
+
+jqx-check-box[readonly=""] .jqx-container,
+jqx-check-box[readonly="true"] .jqx-container {
+    cursor: default;
+}
+
+/*************************************
+* Cluster
+**************************************/
+ni-cluster {
+    display: inline-block;
+    outline: 1px solid #C5C5C5;
+}
+
+/*************************************
+* Data Grid
+**************************************/
+ni-data-grid {
+    display: inline-block;
+}
+
+ni-data-grid-column {
+    display: none;
+}
+
+ni-data-grid .jqx-grid {
+    border: 1px solid #A9A9A9;
+}
+
+ni-data-grid .jqx-grid-column-header.ni-selected-header {
+    background-color: #a8afb7;
+}
+
+ni-data-grid .ni-grid-widget .jqx-grid-cell.ni-selected-cell {
+    border-right: 1px solid #00adef;
+}
+
+ni-data-grid .ni-status-bar {
+    background-color:  #e8e8e8;
+}
+
+ni-data-grid .ni-aggregate-box {
+    margin: 4px;
+    margin-top: 2px;
+    margin-bottom: 4px;
+    line-height: 1.75;
+}
+
+ni-data-grid .ni-add-rows-toolbar {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+    margin-top: 2px;
+    margin-bottom: -1px;
+    border-top: 1px solid #b8b8b8;
+    z-index: 999;
+    background-color:  #e8e8e8;
+    overflow: hidden;
+}
+
+ni-data-grid .ni-add-rows-toolbar .ni-row-count-text-field-box {
+    border: 1px solid #A9A9A9;
+}
+
+ni-data-grid .ni-add-rows-toolbar .ni-add-rows-button {
+    border: 1px solid #A9A9A9;
+}
+
+ni-data-grid .jqx-grid-cell {
+    box-sizing: border-box;
+    background-color: #F2F2F2
+}
+
+ni-data-grid .jqx-grid-cell-alt {
+    background-color:  #f7f7f7;
+}
+
+ni-data-grid .jqx-grid-cell-pinned {
+    background-color:  #fbfbfb;
+}
+
+ni-data-grid .jqx-grid-cell-pinned-alt {
+    background-color:  #f7f7f7;
+}
+
+ni-data-grid .ni-grid-widget {
+    font: inherit;
+}
+
+ni-data-grid .ni-grid-widget-content {
+    font: inherit;
+}
+
+/* Customizations to our controls, when they are in a data grid */
+
+ni-data-grid jqx-led {
+    padding: 2px;
+}
+
+ni-data-grid jqx-numeric-text-box input {
+    background-color: transparent;
+}
+
+ni-data-grid ni-string-control .ni-text-field {
+    box-sizing: border-box;
+    color: #000000;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+ni-data-grid ni-linear-progress-bar {
+    padding: 4px;
+    padding-bottom: 6px;
+    box-sizing: border-box;
+}
+
+/* Adds a margin between the go to page text box and the counters */
+ni-data-grid .jqx-grid-pager > div :nth-child(3) {
+    margin-left: 5px;
+}
+
+/* Hides the the grid pager list drop down*/
+ni-data-grid .jqx-grid-pager > div :nth-child(4) {
+    display: none;
+}
+
+/* Hides the "Show rows:" text*/
+ni-data-grid .jqx-grid-pager > div :nth-child(5) {
+    display: none;
+}
+
+/*************************************
+* Drop Down
+**************************************/
+jqx-drop-down-list {
+    position: absolute;
+}
+
+/*************************************
+* Enum Selector
+**************************************/
+ni-enum-selector {
+    display: inline-block;
+}
+
+ni-enum-selector .ni-expand-button {
+    width: 100%;
+    height: 100%;
+}
+
+ni-enum-selector jqx-drop-down-list {
+    width: 100%;
+    height: 100%;
+    font: inherit;
+}
+
+/*************************************
+* Gauge
+**************************************/
+jqx-gauge {
+    position: absolute;
+}
+
+
+/*************************************
+* Graph Tools
+**************************************/
+ni-graph-tools {
+    position: absolute;
+    display: inline-block;
+    overflow: auto;
+    border: 0px solid #C7CCD0;
+}
+
+ni-graph-tools .jqx-rc-all {
+    border-radius: 0px;
+    webkit-border-radius: 0px;
+}
+
+ni-graph-tools .ni-graph-tools-box {
+    width: 100%;
+    height: 100%;
+}
+
+ni-graph-tools .ni-button-box {
+    width: 25%;
+    text-align: center;
+    font-size: 12px;
+}
+
+ni-graph-tools .ni-button {
+    width: 25px;
+    height: 25px;
+    margin: 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #aaaaaa;
+    background-color: #efefef;
+}
+
+ni-graph-tools table {
+    border-collapse: collapse;
+    border: 0px;
+}
+
+ni-graph-tools td {
+    border: 0px;
+    padding: 0px;
+}
+
+ni-graph-tools tr {
+    border: 0px;
+    padding: 0px;
+}
+
+ni-graph-tools.ni-hidden {
+    display: none;
+}
+
+/*************************************
+* Hyperlink
+**************************************/
+ni-hyperlink {
+    display: inline-block;
+}
+
+ni-hyperlink a {
+    /* a tags by default have their own color so force it to inherit instead */
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    /* display block preferred over inline-block as inline-block will wrap small boxes and drop to bottom margin: http://stackoverflow.com/questions/9273016/why-is-this-inline-block-element-pushed-downward */
+    display: block;
+    overflow: hidden;
+    white-space: pre-line;
+    text-overflow: ellipsis;
+}
+
+/*************************************
+* Intensity Graph
+**************************************/
+ni-intensity-graph {
+    position: absolute;
+    border: 1px solid #C7CCD0;
+    background-color: white;
+    padding: 30px 20px 20px;
+    display: inline-block;
+    min-height: 20px;
+    color: #2B3033;
+    box-sizing: border-box;
+}
+
+ni-intensity-graph ni-grid-div {
+    /*** **border-style** - use solid or none. dashed borders not supported*/
+    border-style: none;
+    /*** **border-width** - top left botton right*/
+    border-width: 0px 0px 0px 0px;
+    /*** **border-color** - the color of the border*/
+    border-color: white;
+    /*** **background-color** - the background color of the grid*/
+    background-color: white;
+    /*** **color** - the color of the grid reticles*/
+    color: inherit;
+}
+
+ni-intensity-graph .ni-graph-tooltip {
+    position: absolute;
+    display: none;
+    border: 1px solid #fdd;
+    color: #2b3033;
+    padding: 2px;
+    background-color: #ffffff;
+    opacity: 0.80;
+    overflow: hidden;
+}
+
+ni-intensity-graph.ni-hidden {
+    display: none;
+}
+
+/*************************************
+* IO Name Control
+**************************************/
+ni-io-name-control {
+    display: inline-block;
+}
+
+/*************************************
+* Label
+**************************************/
+ni-label {
+    display: inline-block;
+}
+
+ni-label label {
+    width: 100%;
+    height: 100%;
+    /* display block preferred over inline-block as inline-block will wrap small boxes and drop to bottom margin: http://stackoverflow.com/questions/9273016/why-is-this-inline-block-element-pushed-downward */
+    display: block;
+    overflow: hidden;
+    white-space: pre;
+}
+
+/*************************************
+* Layout panel
+**************************************/
+ni-layout-panel {
+    display: inline-block;
+}
+
+/*************************************
+* Linear Progress Bar
+**************************************/
+ni-linear-progress-bar {
+    display: inline-block;
+}
+
+/*************************************
+* List Box
+**************************************/
+jqx-list-box {
+    position: absolute;
+}
+
+/*************************************
+* Numeric Text Box
+**************************************/
+jqx-numeric-text-box {
+    color: black;
+    position: absolute;
+}
+
+jqx-numeric-text-box[readonly=""] .jqx-numeric-text-box-component {
+    background-color: #efefef;
+}
+
+jqx-numeric-text-box[readonly="true"] .jqx-numeric-text-box-component {
+    background-color: #efefef;
+}
+
+jqx-progress-bar {
+    position: absolute;
+}
+
+jqx-circular-progress-bar {
+    position: absolute;
+}
+
+/*************************************
+* Opaque Refnum
+**************************************/
+ni-opaque-refnum {
+    display: inline-block;
+    background-color: #585858;
+    border: 3px solid #F0F0F0;
+    outline: 1px solid #C5C5C5;
+}
+
+/*************************************
+* Path Selector
+**************************************/
+ni-path-selector {
+    display: inline-block;
+}
+
+ni-path-selector .ni-path-box {
+    height: 100%;
+    width: 100%;
+}
+
+ni-path-selector .jqx-path-control-input {
+    /* jqx inlines a calc statement from js so just override it :( */
+    width: calc(100% - 23px) !important;
+    height: 100%;
+}
+
+ni-path-selector[read-only] .jqx-path-control-input {
+    background-color: #efefef;
+}
+
+ni-path-selector .jqx-path-control-button {
+    /* jqx inlines a calc statement from js so just override it :( */
+    width: 23px;
+    font-family: Verdana,Arial,sans-serif;
+    font-style: normal;
+    font-size: 13px;
+    pointer-events: none;
+}
+
+ni-path-selector[popup-enabled] .jqx-path-control-button {
+    pointer-events: auto;
+}
+
+ni-path-selector[read-only] .jqx-path-control-button {
+    background-color: #efefef;
+}
+
+/* override jqx default font style */
+/* Need two classes to override the specificity of jqx selector :( */
+/* Also normally target jqx-widget but can't because the internal button is also a jqx-widget so target jqx-path-control */
+ni-path-selector .jqx-path-control-input.jqx-input,
+ni-path-selector .jqx-path-control {
+    font: inherit;
+}
+
+/* JQX throws the popup in the root of the DOM so cannot target using ni-path-selector element :( */
+.ni-path-selector.ni-not-a-path-reset-button {
+    color: #0088cc;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/*************************************
+* Plot Legend
+**************************************/
+ni-plot-legend {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    border: 1px solid #C7CCD0;
+    background-color: white;
+}
+
+/* Master section */
+ni-plot-legend .jqx-rc-all {
+    border-radius: 0px;
+    webkit-border-radius: 0px;
+}
+
+
+ni-plot-legend .ni-plot-legend-box {
+    width: 100%;
+    height: 100%;
+}
+
+ni-plot-legend .ni-master-row {
+    padding-top: 1px;
+    padding-bottom: 0;
+    border-color: white;
+    background-color: white;
+}
+
+ni-plot-legend .ni-plot-display {
+    width: 18px;
+    height:18px;
+    vertical-align: middle;
+    display: inline-block;
+    background-color: white;
+    border: 1px solid #aaaaaa;
+    margin-bottom: 1px;
+}
+
+ni-plot-legend .ni-plot-title {
+    vertical-align: middle;
+    white-space: nowrap;
+    margin-left: 5px;
+}
+
+/* Detail section */
+ni-plot-legend .ni-details-box {
+    width: 100%;
+    overflow-y: hidden;
+}
+
+ni-plot-legend .ni-details {
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+}
+
+ni-plot-legend .ni-details-row {
+    width: 100%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+ni-plot-legend .ni-detail-row-title-box {
+    width: 0%;
+    visibility: hidden;
+}
+
+/* the text next to the hover checkbox */
+ni-plot-legend .hover .ni-detail-row-title {
+    width: 0%;
+    visibility: visible;
+    margin-left: 25px;
+    white-space: nowrap;
+}
+
+ni-plot-legend .ni-details-row-operations-box {
+    width: 80%;
+}
+
+ni-plot-legend .ni-button {
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    display: inline-block;
+    margin: 2px;
+}
+
+ni-plot-legend .ni-selector {
+    box-sizing: border-box;
+}
+
+ni-plot-legend .line_width .ni-details-row-operations-box,
+ni-plot-legend .line_style .ni-details-row-operations-box {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+ni-plot-legend .ni-selector-title {
+    white-space: nowrap;
+}
+
+ni-plot-legend .ni-selector-icon {
+    width: 80px;
+    height: 16px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: right;
+}
+
+ni-plot-legend .ni-colorbox-content {
+    text-shadow: none;
+    height: inherit;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+ni-plot-legend .ni-colorbox-selector {
+    vertical-align: middle;
+    width: auto;
+    height: 26px;
+    margin: 2px;
+}
+
+ni-plot-legend table {
+    border-collapse: collapse;
+    border: 0px;
+}
+
+ni-plot-legend td {
+    border: 0px;
+    padding: 0px;
+}
+
+ni-plot-legend tr {
+    border: 0px;
+    padding: 0px;
+}
+
+ni-plot-legend.ni-hidden {
+    display: none;
+}
+
+/*************************************
+* Radio Button Group
+**************************************/
+ni-radio-button-group {
+    display: flex;
+    overflow: hidden;
+}
+
+ni-radio-button-group[orientation="vertical"] {
+    flex-direction: column;
+}
+
+ni-radio-button-group[orientation="horizontal"] {
+    flex-direction: row;
+    align-items: baseline;
+}
+
+ni-radio-button-group .ni-radio-item {
+    display: flex;
+    align-items: center;
+
+    /* TODO mraj improves rendering of empty line, feels hacky though */
+    min-height: 1em;
+
+    /* underlying jqwidget is 13x13px + 1x1px border + 3px margin left / right */
+    min-width: 21px;
+}
+
+ni-radio-button-group[orientation="vertical"] .ni-radio-item {
+    /* Gives a width so children can have overflow */
+    width: 100%;
+    /* Prevents vertical squishing when container too small*/
+    flex-shrink: 0;
+}
+
+ni-radio-button-group[orientation="horizontal"] .ni-radio-item {
+    margin-left: 1.5ch;
+}
+
+ni-radio-button-group[orientation="horizontal"] .ni-radio-item:first-child {
+    margin-left: 0px;
+}
+
+ni-radio-button-group .ni-text {
+    display: inline;
+    white-space: pre;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+ni-radio-button-group .jqx-radiobutton-default {
+    /* underlying jqwidget bounds excluding padding and margin are 13x13px */
+    min-width: 13px;
+    width: 13px;
+    min-height: 13px;
+    height: 13px;
+    margin-right: 0.5ch;
+}
+
+/* override jqx default font style */
+ni-radio-button-group .jqx-widget,
+ni-radio-button-group .jqx-radiobutton-default {
+    font: inherit;
+}
+
+/*************************************
+* Ring Selector
+**************************************/
+ni-ring-selector {
+    display: inline-block;
+}
+
+ni-ring-selector jqx-numeric-text-box {
+    display: none;
+}
+
+ni-ring-selector[allow-undefined] jqx-drop-down-list {
+    width: 70%; /* Keep in sync with ni-ring-selector.js*/
+    overflow: visible;
+}
+
+ni-ring-selector[allow-undefined] jqx-numeric-text-box {
+    display: block;
+    height: 100%;
+    width: 30%;  /* Keep in sync with ni-ring-selector.js*/
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+ni-ring-selector jqx-drop-down-list,
+ni-ring-selector jqx-numeric-text-box {
+    font: inherit;
+}
+
+/*************************************
+* Scale Legend
+**************************************/
+ni-scale-legend {
+    position: absolute;
+    display: inline-block;
+    overflow: auto;
+    border: 1px solid #C7CCD0;
+}
+
+ni-scale-legend .jqx-rc-all {
+    border-radius: 0px;
+    webkit-border-radius: 0px;
+}
+
+ni-scale-legend .ni-row-title {
+    margin-left: 5px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+ni-scale-legend .ni-scale-legend-box {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+ni-scale-legend .ni-row-title-box {
+    width: auto;
+}
+
+ni-scale-legend .ni-lock-box {
+    width: 25px;
+    margin: 2px;
+}
+
+ni-scale-legend .ni-scale-once-box {
+    width: 25px;
+    margin: 2px;
+}
+
+ni-scale-legend .ni-button {
+    width: 25px;
+    height: 25px;
+    margin: 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #aaaaaa;
+    background-color: #efefef;
+}
+
+ni-scale-legend .ni-scale-once-icon {
+    border: 0;
+    border-width: 1px;
+    border-color: darkgray;
+    border-style: solid;
+    width: 25px;
+    height: 25px;
+    margin: 2px;
+}
+
+ni-scale-legend table {
+    border-collapse: collapse;
+    border: 0px;
+}
+
+ni-scale-legend td {
+    border: 0px;
+    padding: 0px;
+}
+
+ni-scale-legend tr {
+    border: 0px;
+    padding: 0px;
+}
+
+ni-scale-legend.ni-hidden {
+    display: none;
+}
+
+/*************************************
+* Slider
+**************************************/
+jqx-slider {
+    position: absolute;
+}
+
+jqx-tank .jqx-label,
+jqx-slider .jqx-label {
+    color: #2B3033;
+}
+
+jqx-slider .jqx-container .jqx-track-container {
+    z-index: inherit;
+}
+
+/*************************************
+* String Control
+**************************************/
+ni-string-control {
+    display: inline-block;
+}
+
+ni-string-control .ni-text-field {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #A9A9A9;
+    border-radius: 0px;
+    resize: none;
+    padding: 0px;
+    box-sizing: border-box;
+    /* display block preferred over inline-block as inline-block will wrap small boxes and drop to bottom margin: http://stackoverflow.com/questions/9273016/why-is-this-inline-block-element-pushed-downward */
+    display: block;
+    text-decoration: inherit;
+}
+
+ni-string-control[read-only] .ni-text-field {
+    background-color: #efefef;
+}
+
+ni-string-control .ni-text-field:focus {
+    /* TODO mraj bad for accessibility, maybe should be niEditorStyles? */
+    outline: none;
+}
+
+/*************************************
+* Tab Control
+**************************************/
+ni-tab-control {
+    display: inline-block;
+}
+
+ni-tab-control > .jqx-ribbon {
+    position: absolute;
+    width: 100%;
+    /* jqx inlines height: auto so override it :( */
+    height: 100% !important;
+    overflow: visible;
+}
+
+ni-tab-control > .jqx-ribbon > .jqx-ribbon-header {
+    border: 1px solid #A9A9A9;
+}
+
+/* wpf is hard coded to 30px tab header in top and bottom, so make sure tab header is always 30px regardless of font size */
+ni-tab-control[tab-strip-placement="Top"] > .jqx-ribbon > .jqx-ribbon-header,
+ni-tab-control[tab-strip-placement="Bottom"] > .jqx-ribbon > .jqx-ribbon-header {
+    height: 30px; 
+    min-height: 30px;
+    max-height: 30px;
+}
+
+/* wpf is hard coded to 90px tab header in left and right, so make sure tab header is always 30px regardless of font size */
+ni-tab-control[tab-strip-placement="Left"] > .jqx-ribbon > .jqx-ribbon-header > .jqx-ribbon-item,
+ni-tab-control[tab-strip-placement="Right"] > .jqx-ribbon > .jqx-ribbon-header > .jqx-ribbon-item {
+    width: 90px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+ni-tab-control > .jqx-ribbon > .jqx-ribbon-content {
+    /* jqx inlines allowing pointer events to the content, but we hide the content tabs so force pointer events off */
+    pointer-events: none !important;
+
+    /* jqx puts a border around the children content elements but since we hide the children we place place the border around the outer element instead */
+    border: 1px solid #c7c7c7;
+
+    /* jqx inlines a transparent background on the parent but white on the children, since children are hidden we force white on the parent anyway */
+    background-color: white !important;
+}
+
+/* The following selectors make sure the content is the right size / placement in each mode and removes extra borders since the tab header already has borders */
+ni-tab-control[tab-strip-placement="Top"] > .jqx-ribbon > .jqx-ribbon-content {
+    height: calc(100% - 30px); 
+    border-top: none;
+}
+
+ni-tab-control[tab-strip-placement="Bottom"] > .jqx-ribbon > .jqx-ribbon-content {
+     height: calc(100% - 30px); 
+    border-bottom: none;
+}
+
+ni-tab-control[tab-strip-placement="Left"] > .jqx-ribbon > .jqx-ribbon-content {
+    padding-left: 90px !important;
+    border-left: none;
+}
+
+ni-tab-control[tab-strip-placement="Right"] > .jqx-ribbon > .jqx-ribbon-content {
+    padding-right: 90px !important;
+    border-right: none;
+}
+
+/* jqx will sometimes display undefined inside a tab content section when the header text changes quickly so just hide them since they are unused anyway */
+ni-tab-control > .jqx-ribbon > .jqx-ribbon-content > .jqx-ribbon-content-section {
+    display: none !important;
+}
+
+/*jqx places this div to cover the border under a tab but it does not respond to font changes so just get rid of it */
+ni-tab-control > .jqx-ribbon > .jqx-ribbon-selection-token {
+    display: none !important;
+}
+
+/* jqx is forcing a z-index on the scrollbuttons so remove it so tabs can stack without them showing through */
+ni-tab-control > .jqx-ribbon > .jqx-ribbon-scrollbutton.jqx-ribbon-scrollbutton-both.jqx-widget-header {
+    z-index: auto;
+    border: none;
+}
+
+ni-tab-control[tab-strip-placement="Right"] > .jqx-ribbon > .jqx-ribbon-scrollbutton.jqx-ribbon-scrollbutton-both.jqx-widget-header {
+    border-left: 1px solid #A9A9A9;
+}
+
+/* jqx does not detect the size we placed above for the tab header width so force our dimensions on it */
+ni-tab-control[tab-strip-placement="Left"] > .jqx-ribbon > .jqx-ribbon-scrollbutton,
+ni-tab-control[tab-strip-placement="Right"] > .jqx-ribbon > .jqx-ribbon-scrollbutton {
+    width: 90px !important;
+}
+
+/* override jqx default font style */
+ni-tab-control > .jqx-ribbon,
+ni-tab-control > .jqx-ribbon > .jqx-ribbon-header,
+ni-tab-control > .jqx-ribbon > .jqx-ribbon-header > .jqx-ribbon-item {
+    font: inherit;
+}
+
+/*************************************
+* Tab Item
+**************************************/
+ni-tab-item {
+    display: none;
+}
+
+ni-tab-item.ni-selected {
+    display: inline-block;
+}
+
+/*************************************
+* Tank
+**************************************/
+jqx-tank {
+    position: absolute;
+}
+
+/*************************************
+* Text
+**************************************/
+ni-text {
+    display: inline-block;
+}
+
+ni-text div {
+    width: 100%;
+    height: 100%;
+    /* display block preferred over inline-block as inline-block will wrap small boxes and drop to bottom margin: http://stackoverflow.com/questions/9273016/why-is-this-inline-block-element-pushed-downward */
+    display: block;
+    overflow: hidden;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/*************************************
+* Time Stamp Text Box
+**************************************/
+ni-time-stamp-text-box {
+    display: inline-block;
+}
+
+ni-time-stamp-text-box .ni-time-stamp-box {
+    height: 100%;
+    width: 100%;
+}
+
+ni-time-stamp-text-box .ni-time-stamp-box .jqx-input-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid #A9A9A9 !important;
+}
+
+/* override jqx default font style */
+ni-time-stamp-text-box .jqx-widget {
+    font: inherit;
+}
+
+/*************************************
+* Url Image
+**************************************/
+ni-url-image {
+    display: inline-block;
+}
+
+ni-url-image .ni-image-box {
+    background-image: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-attachment: scroll;
+    background-color: transparent;
+
+    /* stretch behavior of none */
+    background-size: auto auto;
+}
+
+ni-url-image[source=""] .ni-image-box {
+    outline: 1px solid #A9A9A9;
+}
+
+ni-url-image .ni-stretch-uniform {
+    background-size: contain;
+}
+
+ni-url-image .ni-stretch-uniformtofill {
+    background-size: cover;
+}
+
+ni-url-image .ni-stretch-fill {
+    background-size: 100% 100%;
+}
+
+/*************************************
+* Error message when Vireo load fails
+**************************************/
+#ni-failed-to-load-vireo-source {
+    background-color: rgba(235, 235, 245, 0.8);
+    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+    color: rgb(105, 109, 116);
+    padding: 8px;
+}
+
+#ni-failed-to-load-vireo-message-title {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#ni-failed-to-load-vireo-message-body {
+    font-size: 14px;
+}
+
+/*************************************
+* Web Application
+**************************************/
+ni-web-application .ni-execution-buttons-box {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+ni-web-application .ni-execution-button {
+    display: inline-block;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+ni-web-application .ni-execution-button:active {
+    transform: translateY(5px);
+}
+
+/* Start button */
+ni-web-application .ni-execution-button.ni-start-button {
+    background-color: #64c868;
+    box-shadow: 0 10px #316533;
+}
+
+ni-web-application .ni-execution-button.ni-start-button:hover,
+ni-web-application .ni-execution-button.ni-start-button:focus {
+    background-color: #48934b;
+    outline: none;
+}
+
+ni-web-application .ni-execution-button.ni-start-button:active {
+    background-color: #48934b;
+    box-shadow: 0 5px #316533;
+}
+
+/* Abort button */
+ni-web-application .ni-execution-button.ni-abort-button {
+    background-color: #c86464;
+    box-shadow: 0 10px #4b2222;
+}
+
+ni-web-application .ni-execution-button.ni-abort-button:hover,
+ni-web-application .ni-execution-button.ni-abort-button:focus {
+    background-color: #7e3b3b;
+    outline: none;
+}
+
+ni-web-application .ni-execution-button.ni-abort-button:active {
+    background-color: #7e3b3b;
+    box-shadow: 0 5px #4b2222;
+}
+
+/* Disabled button */
+ni-web-application .ni-execution-button.disabled,
+ni-web-application .ni-execution-button.disabled:hover,
+ni-web-application .ni-execution-button.disabled:active {
+    background-color: #676767;
+    box-shadow: 0 10px #242424;
+    transform: none;
+}
+
+ni-web-application .ni-execution-button.disabled:focus {
+    background-color: #414141;
+}
+
