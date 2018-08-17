@@ -21,7 +21,7 @@ You can use the techniques demonstrated in this example whenever you want to emb
 
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
-2. Open `EmbedWebVIIntoContent/WebVI/EmbedWebVIIntoContent.lvproject`.
+2. Open `EmbedWebVIIntoContent/EmbedWebVIIntoContent.lvproject`.
 3. On the **Project Files** tab, expand `WebApp.gcomp` and open `Main.gviweb`.
 4. Click the **Run** button.
 5. Build the web application.  
@@ -32,21 +32,21 @@ You can use the techniques demonstrated in this example whenever you want to emb
 
 
 ## Important Directories
-- **`WebVI`** &mdash; The source code of the WebVI and the build output of the web application. Most of the paths and file names are defaults from the **Web Application Project** template in LabVIEW NXG 3.0.
-    - **`WebVI/Builds/Web Server/Configuration1/WebApp`** &mdash; The build output of the web application.
-- **`StaticPageResources`** &mdash; The HTML and CSS files that define the static web page. This example requires no additional JavaScript.
+- **This Directory`** &mdash; The source code of the WebVI and the build output of the web application. Most of the paths and file names are defaults from the **Web Application Project** template in LabVIEW NXG 3.0. index.html is the main HTML page for this example.
+    - **`Builds/WebApp_Web Server`** &mdash; The build output of the web application.
+- **`StaticPageResources`** &mdash; The image and CSS files that define the static web page. This example requires no additional JavaScript.
 
 # Hosting
-After building copy and paste the build output at `\EmbedWebVIIntoContents` directory to any web server you want.
+After building copy and paste the build output at `EmbedWebVIIntoContent` directory to any web server you want.
 
 ## Hosting on the LabVIEW 2009-2018 Web Server
 1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`and create directory; for example `webvi-example`.
-2. Copy the `EmbedWebVIIntoContents` directory into the `webvi-example` directory.
+2. Copy the `EmbedWebVIIntoContent` directory into the `webvi-example` directory.
 3. Open a web browser and navigate to `http://localhost:8080/webvi-example/index.html`
 
 ## Hosting on the NI Web Server
 1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs` and create directory; for example `webvi-example`.
-2. Copy the `EmbedWebVIIntoContents` directory into the `htdoc\webvi-example` directory.
+2. Copy the `EmbedWebVIIntoContent` directory into the `htdoc\webvi-example` directory.
 3. Open a web browser and navigate to `http://localhost:9090/webvi-example/index.html`.  
 
 
@@ -168,6 +168,6 @@ The `ni-virtual-instrument` custom element needs no modification after it is bui
 
 Example:
 ```html
-<ni-web-application engine="VIREO" location="BROWSER" vireo-source="WebVI/Builds/Web%20Server/Configuration1/WebApp/Main.via.txt"><ni-virtual-instrument vi-name="Main.gviweb"></ni-virtual-instrument></ni-web-application>
+<ni-web-application engine="VIREO" location="BROWSER" vireo-source="Builds/WebApp_Web Server/Main.via.txt"><ni-virtual-instrument vi-name="Main.gviweb"></ni-virtual-instrument></ni-web-application>
 
 ```
