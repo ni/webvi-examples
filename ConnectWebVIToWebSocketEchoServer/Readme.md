@@ -1,8 +1,6 @@
-# Connect WebVI to WebSocket Echo Server (Requires NXG 3 Beta)
+# Connect WebVI to WebSocket Echo Server
 [![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/Builds/WebApp_Web%20Server/Main.html)
 [![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/ConnectWebVIToWebSocketEchoServer)
-
-**Note: JSLI examples can only be used with the NXG 3 Beta. To access the NXG 3 Beta visit: [ni.com/techpreview](https://ni.com/techpreview)**
 
 This example uses the JavaScript Library Interface (JSLI) to connect to the WebSocket Echo Server hosted by websocket.org. The WebVI connects to the server, sends a message, and receives the same message from the server. The WebSocket functions use an external JavaScript file to implement their functionality. 
 
@@ -59,22 +57,22 @@ The WebSockets are a bidirectional communication protocol that allow interaction
 
 The JSLI node wraps JavaScript functions in WebSocketWrapper.js, which are then called in LabVIEW.  
 
-![JSLI Node Functions](img/JSLI_WS.png)
+![JSLI Node Functions](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/img/JSLI_WS.png)
 
 This example connects to a public echo server hosted by websocket.org. To connect to the echo server, the WebVI uses OpenWebSocket and passes in the server URI. This example only allows one connection to the Echo server.
 
-![Open WebSocket Connection](img/Open_WS.png)
+![Open WebSocket Connection](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/img/Open_WS.png)
 
 Once a connection is established, the user sends messages with the SendMessage function, and the echo server responds with the same message. The onMessage method in WebSocketWrapper.js stores the received messages in memory, and the WebVI polls every 50 ms for new messages with the CheckMessage function.
 
 Additionally, the WebVI does not allow empty messages to be sent. Sent and received messages are formatted in the SubVIs and displayed on the Messages indicator.
 
-![Send and Read Messages](img/Send.png)  
-![Send and Read Messages](img/Read.png)
+![Send and Read Messages](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/img/Send.png)  
+![Send and Read Messages](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/img/Read.png)
 
 Once the session is completed, the user disconnects from the server.
 
-![Close Connection](img/Close.png)
+![Close Connection](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/img/Close.png)
 
 
 # Related Links
