@@ -115,7 +115,7 @@ This example demonstrates the use of the User Event nodes to implement a user in
 ![Screenshot of Demo](https://ni.github.io/webvi-examples/UserEventRegistration/Screenshot.gif)
 
 # Call SystemLink Data Services
-[![Call SystemLink Data Services](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/SystemLinkDataServices/Builds/WebApp_Web%20Server/Main.html)
+[![Call SystemLink Data Services](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/CallSystemLinkDataServices/Builds/WebApp_Web%20Server/Main.html)
 [![CallSystemLink Data Services README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/CallSystemLinkDataServices)
 
 This example demonstrates how to use a WebVI to communicate over networks with SystemLink Tags. The example also shows how code can be shared between WebVIs and GVIs using a library.  On the diagram, this WebVI utilizes a state machine to determine when to read/write tags and when to connect to a server. On the panel, this example has fields to enter the server, username, and password. It also has a tab control that determines the visible view as well as the state in the state machine.
