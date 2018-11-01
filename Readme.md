@@ -1,7 +1,7 @@
 # WebVI Examples for LabVIEW NXG
 This repository has examples for:
 
-**LabVIEW NXG 3**
+**LabVIEW NXG 3.0**
 
 For previous LabVIEW NXG versions see the [previous releases](https://github.com/ni/webvi-examples/releases/)
 
@@ -21,7 +21,7 @@ On the panel, this WebVI displays a summary of the results in a data grid and a 
 ![Screenshot of Demo](https://ni.github.io/webvi-examples/Call3rdPartyWebService/Screenshot.gif)
 
 # Call LabVIEW Web Service
-[![Call LabVIEW Web Service Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/CallLabVIEWWebService/WebVI/Builds/WebApp_Web%20Server/Main.html)
+[![Call LabVIEW Web Service Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/CallLabVIEWWebService/Builds/WebApp_Web%20Server/Main.html)
 [![Call LabVIEW Web Service README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/CallLabVIEWWebService)
 
 __Note: The Call LabVIEW Web Service demo requires the included LabVIEW Web Service to be running locally on your machine__
