@@ -1,8 +1,6 @@
-# Call JavaScript From a WebVI (Requires NXG 3 Beta)
+# Call JavaScript From a WebVI
 [![Call JavaScript From a WebVI Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/CallJavaScriptFromAWebVI/Builds/WebApp_Web%20Server/Main.html)
 [![Call JavaScript From a WebVI README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/CallJavaScriptFromAWebVI)
-
-**Note: JSLI examples can only be used with the NXG 3 Beta. To access the NXG 3 Beta visit: [ni.com/techpreview](https://ni.com/techpreview)**
 
 This example is a simple 4-bit calculator using the JavaScript Library Interface (JSLI). The math functions and Log to Console button illustrate different methods of using the JSLI. Add (JSLI) and Multiply (JSLI) use external JavaScript files to implement their functions. The Log to Console button logs text to the browser debug console using the browser-supported console.log function. After building and deploying the WebVI to a browser, open the browser developer tools (Press F12 in most browsers) and select the Console tab to view the console log.
 
@@ -57,12 +55,12 @@ The following steps can be used to host the web app on a local web server
 # Details
 This WebVI uses the JSLI to interface with simple functions defined in Add.js and Multiply.js, and compares the results with the LabVIEW NXG built-in functions. A single JSLI wraps JavaScript functions in the two external JavaScript files. The external functions are referenced by using the Function prototype symbol, or name, used in the JavaScript file. For example, AddWithJSLI is a function defined in Add.js. The corresponding JSLI function references the Symbol 'AddWithJSLI' to link the JavaScript function to the JSLI function.
 
-![JSLI Node Functions](img/JSLI.png)
+![JSLI Node Functions](https://ni.github.io/webvi-examples/CallJavaScriptFromAWebVI/img/JSLI.png)
 
 The Add and Multiply nodes output the JSLI and built-in function results to the Main WebVI. The Multiply.js file demonstrates a simple, external JavaScript function, and the Add.js file demonstrates a more complex JavaScript function. See these files for comments about the functions themselves. 
 
-![Add and Multiply Nodes](img/nodes.png)
+![Add and Multiply Nodes](https://ni.github.io/webvi-examples/CallJavaScriptFromAWebVI/img/nodes.png)
 
 The Log to Console button logs text to the browser debug console using the browser-supported console.log function. After building and deploying the WebVI to a browser, open the browser developer tools (Press F12 in most browsers) and select the Console tab to view the console log. The log allows the user to see messages that can potentially help debug their application. 
 
-![Log to Console](img/log.png)
+![Log to Console](https://ni.github.io/webvi-examples/CallJavaScriptFromAWebVI/img/log.png)
