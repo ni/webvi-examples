@@ -2,7 +2,7 @@
 [![Embed a WebVI into Web Content Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/EmbedWebVIIntoContent/)
 [![Embed a WebVI into Web Content README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/EmbedWebVIIntoContent)
 
-This example demonstrates how to embed the output of a WebVI built using LabVIEW NXG 3.0 into an static web page.
+This example demonstrates how to embed the output of a WebVI built using LabVIEW NXG into an static web page.
 
 The build output of a WebVI includes three basic parts:
 - HTML5 custom elements
@@ -17,7 +17,7 @@ Because WebVIs share the same basic building blocks as other web pages, you can 
 You can use the techniques demonstrated in this example whenever you want to embed a WebVI to an existing web page. For example, you may create educational course material with an embedded WebVI that visualizes data acquired in a lab setting.
 
 # Dependencies
-- LabVIEW NXG 3.0 Web Module
+- LabVIEW NXG Web Module
 
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
@@ -32,7 +32,7 @@ You can use the techniques demonstrated in this example whenever you want to emb
 
 
 ## Important Directories
-- **This Directory** &mdash; The source code of the WebVI and the build output of the web application. Most of the paths and file names are defaults from the **Web Application Project** template in LabVIEW NXG 3.0. index.html is the main HTML page for this example.
+- **This Directory** &mdash; The source code of the WebVI and the build output of the web application. Most of the paths and file names are defaults from the **Web Application Project** template in LabVIEW NXG. index.html is the main HTML page for this example.
     - **`Builds/WebApp_Web Server`** &mdash; The build output of the web application.
 - **`StaticPageResources`** &mdash; The image and CSS files that define the static web page. This example requires no additional JavaScript.
 

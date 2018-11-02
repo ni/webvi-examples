@@ -44,7 +44,7 @@ One of the main parts of a WebVI is an HTML output that displays HTML5 Custom El
 [![Embed Content into a WebVI Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/EmbedContentIntoWebVI/Builds/WebApp_Web%20Server/Main.html)
 [![Embed Content into a WebVI README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/EmbedContentIntoWebVI)
 
-This example demonstrates how to embed custom web content into the WebVI panel using LabVIEW NXG 3.0. WebVIs use HTML to define and describe the content of the panel that is loaded in a web page. This means that you can add custom HTML content to appear alongside the LabVIEW-generated HTML.
+This example demonstrates how to embed custom web content into the WebVI panel using LabVIEW NXG. WebVIs use HTML to define and describe the content of the panel that is loaded in a web page. This means that you can add custom HTML content to appear alongside the LabVIEW-generated HTML.
 
 ![Screenshot of Demo](https://ni.github.io/webvi-examples/EmbedContentIntoWebVI/Screenshot.gif)
 
@@ -52,7 +52,7 @@ This example demonstrates how to embed custom web content into the WebVI panel u
 [![Embed a WebVI into Web Content Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/EmbedWebVIIntoContent/)
 [![Embed a WebVI into Web Content README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/EmbedWebVIIntoContent)
 
-This example demonstrates how to embed the output of a WebVI built using LabVIEW NXG 3.0 into an static web page.
+This example demonstrates how to embed the output of a WebVI built using LabVIEW NXG into an static web page.
 
 The build output of a WebVI includes three basic parts:
 - HTML5 custom elements
@@ -101,9 +101,9 @@ This example demonstrates how to create a web application with multiple pages by
 
 ![Multiple Top-Level WebVIs Demo Link](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/Screenshot.gif)
 
-# User Event Registration
-[![User Event Registration Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/UserEventRegistration/Builds/WebApp_Web%20Server/Main.html)
-[![User Event Registration README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/UserEventRegistration)
+# User Event Generation
+[![User Event Generation Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/UserEventGeneration/Builds/WebApp_Web%20Server/User%20Event%20Generation.html)
+[![User Event Generation README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/UserEventGeneration)
 
 This example demonstrates the use of the User Event nodes to implement a user interaction recorder.
 
@@ -112,7 +112,7 @@ This example demonstrates the use of the User Event nodes to implement a user in
 3. Click the Playback button. The exact sequence of drags that you performed will be repeated on the Slider and displayed in the Movement Data graph.
 4. Click Stop to stop the VI.
 
-![Screenshot of Demo](https://ni.github.io/webvi-examples/UserEventRegistration/Screenshot.gif)
+![Screenshot of Demo](https://ni.github.io/webvi-examples/UserEventGeneration/Screenshot.gif)
 
 # Call SystemLink Data Services
 [![Call SystemLink Data Services](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/CallSystemLinkDataServices/Builds/WebApp_Web%20Server/Main.html)

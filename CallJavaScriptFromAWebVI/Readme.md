@@ -9,7 +9,7 @@ On the panel, this WebVI has X and Y binary inputs. The user clicks these to cha
 ![Screenshot of Demo](https://ni.github.io/webvi-examples/CallJavaScriptFromAWebVI/Screenshot.gif)
 
 # Dependencies
-- LabVIEW NXG 3.0 Web Module
+- LabVIEW NXG Web Module
 
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
@@ -53,7 +53,7 @@ The following steps can be used to host the web app on a local web server
 3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/Main.html`
 
 # Details
-This WebVI uses the JSLI to interface with simple functions defined in Add.js and Multiply.js, and compares the results with the LabVIEW NXG 3.0 built-in functions. A single JSLI wraps JavaScript functions in the two external JavaScript files. The external functions are referenced by using the Function prototype symbol, or name, used in the JavaScript file. For example, AddWithJSLI is a function defined in Add.js. The corresponding JSLI function references the Symbol 'AddWithJSLI' to link the JavaScript function to the JSLI function.
+This WebVI uses the JSLI to interface with simple functions defined in Add.js and Multiply.js, and compares the results with the LabVIEW NXG built-in functions. A single JSLI wraps JavaScript functions in the two external JavaScript files. The external functions are referenced by using the Function prototype symbol, or name, used in the JavaScript file. For example, AddWithJSLI is a function defined in Add.js. The corresponding JSLI function references the Symbol 'AddWithJSLI' to link the JavaScript function to the JSLI function.
 
 ![JSLI Node Functions](https://ni.github.io/webvi-examples/CallJavaScriptFromAWebVI/img/JSLI.png)
 
