@@ -12,7 +12,7 @@ This example demonstrates the use of the User Event nodes to implement a user in
 ![Screenshot of Demo](https://ni.github.io/webvi-examples/UserEventGeneration/Screenshot.gif)
 
 # Dependencies
-- LabVIEW NXG 3.0 Web Module
+- LabVIEW NXG Web Module
 
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.

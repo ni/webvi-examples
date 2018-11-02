@@ -9,7 +9,7 @@ On the diagram, this WebVI uses JSLI VIs to open a connection to the echo server
 ![Screenshot of Demo](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/Screenshot.gif)
 
 # Dependencies
-- LabVIEW NXG 3.0 Web Module
+- LabVIEW NXG Web Module
 
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.

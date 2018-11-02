@@ -8,7 +8,7 @@ This example demonstrates how to create a web application with multiple pages by
 ![Multiple Top-Level WebVIs Demo Link](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/Screenshot.gif)
 
 # Dependencies
-- LabVIEW NXG 3.0 Web Module
+- LabVIEW NXG Web Module
 - LabVIEW 2009-2017 (Required for hosting only)
 - NI SystemLink Server (Required for hosting only)
 

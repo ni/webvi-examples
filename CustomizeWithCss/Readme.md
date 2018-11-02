@@ -12,7 +12,7 @@ One of the main parts of a WebVI is an HTML output that displays HTML5 Custom El
 You can use this approach in your own projects if you are familiar with CSS and how it interacts with HTML. For example, you can customize controls and indicators to match a corporate color scheme or make them accessible for color-blind users or in low contrast situations.
 
 # Dependencies
-- LabVIEW NXG 3.0 Web Module
+- LabVIEW NXG Web Module
 - LabVIEW 2009-2018 (Required for hosting only)
 
 # Setup
