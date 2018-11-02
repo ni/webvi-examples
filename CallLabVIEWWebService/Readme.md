@@ -92,7 +92,7 @@ The WebVI makes requests to both of the HTTP endpoint methods in the LabVIEW 201
 This example show how to include your WebVI as part of your LabVIEW Web service for either Windows or Real-Time and deploy them together. This is advantageous if you want to avoid CORS between your WebVI and Web service in production. This also allows the use of relative URLs on the WebVI block diagram.
 
 ### Project Setup
-The `WebApp_Web Server` directory has been included as **Public Content** within the LabVIEW 2016 project. This was done by right-clicking the Web service in the project and selecting Add **Public Content Folder**. In the **Open** dialog the `WebApp_Web Server` directory was selected. This is an *auto populating* folder so changes made by modifying the WebVI and rebuilding the application in LabVIEW NXG are automatically up taken by LabVIEW 2016 project. See more details on this topic at [Integrating Static Content into a Web Service](http://zone.ni.com/reference/en-XX/help/371361N-01/lvhowto/ws_static_content/).
+The `WebApp_Web Server` directory has been included as **Public Content** within the LabVIEW 2016 project. This was done by right-clicking the Web service in the project and selecting Add **Public Content Folder**. In the **Open** dialog the `WebApp_Web Server` directory was selected. This is an *auto populating* folder so changes made by modifying the WebVI and rebuilding the application in LabVIEW NXG 3.0 are automatically up taken by LabVIEW 2016 project. See more details on this topic at [Integrating Static Content into a Web Service](http://zone.ni.com/reference/en-XX/help/371361N-01/lvhowto/ws_static_content/).
 
 ### URL Configuration Enum
 In the WebVI there is a drop down for selecting the URL configuration.
