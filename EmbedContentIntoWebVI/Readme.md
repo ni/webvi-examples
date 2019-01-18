@@ -52,7 +52,7 @@ The following steps can be used to host the web app on a local web server
 **Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Server** >> right-click **WebApp.gcomp** >> **Run**
 
 # Details
-This section describes the content added to the HTML view of the WebVI to create a web page that shows current weather conditions for Iowa State University.
+This section describes the content added to the HTML source of the WebVI, through the `Edit panel HTML` button, to create a web page that shows current weather conditions for Iowa State University.
 
 ## Custom iframes
 This example uses an `<iframe>` generated from [Google Maps](https://developers.google.com/maps/documentation/embed/guide) was added to show the location of the web cam on a map.

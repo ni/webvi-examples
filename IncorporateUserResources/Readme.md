@@ -89,8 +89,7 @@ Examples:
 **Note:** The source URL needs to be URL-encoded. For example, `my image.jpg` should be `my%20image.jpg`.
 
 #### Referencing CSS files (*.css)
-1. In a WebVI, switch to the HTML editor.  
-**Note:** You can select the active editor from the document toolbar.
+1. In a WebVI, click the `Edit panel HTML` button to launch the HTML source dialog.  
 2. Add the following line in between the `<head></head>` tags:  
 `<link rel="stylesheet" type="text/css" href="[your-stylesheet].css">`  
 Example:
@@ -102,8 +101,7 @@ Example:
     ```
 
 #### Referencing JavaScript files (*.js)
-1. In a WebVI, switch to the HTML editor.  
-**Note:** You can select the active editor from the document toolbar.
+1. In a WebVI, click the `Edit panel HTML` button to launch the HTML source dialog. 
 2. Add the following line in between the `<head></head>` tags:  
 `<script src="[your-script].js" type="text/javascript"></script>`  
 Example:
