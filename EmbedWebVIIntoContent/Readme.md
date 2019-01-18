@@ -109,7 +109,7 @@ The content in a `.container` class does not get reorganized as the page changes
 This example use LabVIEW's absolute layout system for the controls and indicators and places them within a `.container` class that is positioned relative to the rest of the page content. However, this is not required because the WebVI custom elements can be embedded in a page without an absolute layout.
 
 ### Approximating Relative Layout
-To provide feedback to the 375px bounds of `.content-item`, a CSS rule has been added to the WebVI using the HTML source dialog. The HTML source dialog can be accessed by clicking the `Edit panel HTML` button on the toolbar of a WebVI's panel.
+To provide feedback to the 375px bounds of `.content-item`, a CSS rule has been added to the WebVI using the HTML source dialog. The HTML source dialog can be accessed by clicking the `Edit panel HTML` button in the WebVI panel's toolbar.
 
 ```html
 <style>
