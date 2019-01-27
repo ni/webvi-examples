@@ -76,15 +76,18 @@ The following steps can be used to host the web app on a local web server
 The following section describes the behavior of  different CSS rules you can add to the **HTML** editor of the WebVI.
 
 Change the background color of the whole document. Change the background color of the front panel and add a drop shadow.
-```css
-    body {
-        background-color: white;
-    }
-
+```css    
     ni-front-panel {
         background-color: #00adef;
         box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.75);
     }
+```
+
+Change the background color of alternate sections. Change the background color of text control to white.
+```css
+   .background-white {
+		background-color: white;
+	}
 ```
 
 Change the color of graphs scales to white. Change the axis label color to light gray. Replace the white background for charts and graphs with a transparent background and remove borders around the graph.
@@ -92,10 +95,6 @@ Change the color of graphs scales to white. Change the axis label color to light
     ni-cartesian-graph {
         background: transparent;
         border: none;
-    }
-
-    ni-cartesian-axis[ni-control-id] {
-        color: white;
     }
 
     ni-cartesian-graph .flot-x-axis text,
@@ -111,8 +110,8 @@ Change the color of graphs scales to white. Change the axis label color to light
 Change the color for slider label, track, fill, tick marks, and scales.
 ```css
     jqx-slider .jqx-container .jqx-track::before {
-        background: transparent;
-        border: none;
+		 background: transparent;
+		 border: none;
     }
 
     jqx-slider .jqx-track .jqx-value {
@@ -125,16 +124,20 @@ Change the color for slider label, track, fill, tick marks, and scales.
     }
 ```
 
-Change the color for tank scale and circular progress bar fill.
+Change the color for tank scale and both circular progress bar fill.
 ```css
     jqx-tank .jqx-scale {
         --ni-foreground-color: darkblue;
         color: var(--ni-foreground-color);
     }
 
-    jqx-circular-progress-bar {
-        --ni-fill-background: yellow;
-    }
+    .progressbar-bg-yellow {
+		--ni-fill-background: yellow;
+	}
+	
+	.progressbar-bg-red {
+		--ni-fill-background: red;
+	}
 ```
 
 Remove all borders / backgrounds from numeric indicators, and make the text white.
@@ -150,10 +153,17 @@ Remove all borders / backgrounds from numeric indicators, and make the text whit
     }
 ```
 
-Change the power button to have a yellow background, and gray/ black foreground, when turned on.
+Change the power buttons to have a yellow and red background respectively, and gray/ black foreground, when turned on.
 ```css
-    jqx-power-button {
-        --ni-true-background: yellow;
-        --ni-true-foreground-color: #2b3033;
-    }
+    .button-true-bg-yellow {
+		--ni-true-background: yellow;
+	}
+	
+	.button-true-fg-darkgray {
+		--ni-true-foreground-color: #2b3033;
+	}
+	
+	.button-true-bg-red {
+		--ni-true-background: red;
+	}
 ```
