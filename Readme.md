@@ -87,7 +87,7 @@ On the panel, this WebVI has X and Y binary inputs. The user clicks these to cha
 [![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/Builds/WebApp_Web%20Server/Main.html)
 [![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/ConnectWebVIToWebSocketEchoServer)
 
-This example uses the WebSocket API in LabVIEW Web Module to connect to the WebSocket Echo Server hosted by websocket.org. The WebVI connects to the server, sends a message, and receives the same message from the server. 
+This example uses the WebSocket API in LabVIEW to connect to the WebSocket Echo Server hosted by websocket.org. The WebVI connects to the server, sends a message, and receives the same message from the server. 
 
 On the diagram, this WebVI uses the WebSocket API to open a connection to the echo server, send messages, read received messages, and close the connection. The WebVI also formats sent and received strings to display on the Messages indicator.
 
