@@ -72,4 +72,4 @@ Once the session is completed, the user disconnects from the server.
 
 
 # Related Links
-WebSockets https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications <br />
+[LabVIEW NXG WebSockets API Documentation](http://www.ni.com/documentation/en/labview-web-module/latest/web-mod-node-ref/websocket-nodes/)
