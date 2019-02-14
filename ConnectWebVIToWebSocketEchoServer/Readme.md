@@ -2,9 +2,9 @@
 [![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/Builds/WebApp_Web%20Server/Main.html)
 [![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/ConnectWebVIToWebSocketEchoServer)
 
-This example uses the JavaScript Library Interface (JSLI) to connect to the WebSocket Echo Server hosted by websocket.org. The WebVI connects to the server, sends a message, and receives the same message from the server. The WebSocket functions use an external JavaScript file to implement their functionality. 
+This example uses the Web Module WebSockets API to connect to the WebSocket Echo Server hosted by websocket.org. The WebVI connects to the server, sends a message, and receives the same message from the server. 
 
-On the diagram, this WebVI uses JSLI VIs to open a connection to the echo server, send messages, read received messages, close the connection and log debug information to the browser console. The WebVI also formats sent and received strings to display on the Messages indicator.
+On the diagram, this WebVI uses WebSocket VIs to open a connection to the echo server, send messages, read received messages, and close the connection. The WebVI also formats sent and received strings to display on the Messages indicator.
 
 ![Screenshot of Demo](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/Screenshot.gif)
 
@@ -55,17 +55,13 @@ The following steps can be used to host the web app on a local web server
 # Details
 The WebSockets are a bidirectional communication protocol that allow interaction between the user's browser and a server. It is defined in Internet Engineering Task Force (IETF) RFC 6455 — The WebSocket Protocol. Most modern browsers support WebSockets.
 
-The JSLI node wraps JavaScript functions in WebSocketWrapper.js, which are then called in LabVIEW.  
-
-![JSLI Node Functions](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/img/JSLI_WS.png)
-
-This example connects to a public echo server hosted by websocket.org. To connect to the echo server, the WebVI uses OpenWebSocket and passes in the server URI. This example only allows one connection to the Echo server.
+This example connects to a public echo server hosted by websocket.org. To connect to the echo server, the WebVI uses the WebSocket Open VI and passes in the server URL. This example only allows one connection to the Echo server.
 
 ![Open WebSocket Connection](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/img/Open_WS.png)
 
-Once a connection is established, the user sends messages with the SendMessage function, and the echo server responds with the same message. The onMessage method in WebSocketWrapper.js stores the received messages in memory, and the WebVI polls every 50 ms for new messages with the CheckMessage function.
+Once a connection is established, the user sends messages with the Write String VI, and the echo server responds with the same message. The WebVI polls every 50 ms for new messages with the Read String VI. The Read String VI is configured to timeout if no message becomes avaialble to read after 50 milliseconds.
 
-Additionally, the WebVI does not allow empty messages to be sent. Sent and received messages are formatted in the SubVIs and displayed on the Messages indicator.
+Additionally, the WebVI does not call Write String VI if Message is empty. Sent and received messages are formatted in the SubVIs and displayed on the Messages indicator.
 
 ![Send and Read Messages](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/img/Send.png)  
 ![Send and Read Messages](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/img/Read.png)
@@ -76,6 +72,4 @@ Once the session is completed, the user disconnects from the server.
 
 
 # Related Links
-WebSockets https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications <br />
-Window Object https://developer.mozilla.org/en-US/docs/Web/API/Window <br />
-Closure in JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures <br />
+[LabVIEW NXG WebSockets API Documentation](http://www.ni.com/documentation/en/labview-web-module/latest/web-mod-node-ref/websocket-nodes/)
