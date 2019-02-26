@@ -1,50 +1,95 @@
+/*
+Make the page background white.
+Set the panel to blue with a drop shadow. 
+*/
+
 ni-front-panel {
     background-color: #00adef;
     box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.75);
 }
 
-.background-white {
+/*
+Define a class for "example sections" with a white background color.
+*/
+
+.example-section {
     background-color: white;
 }
 
-jqx-switch-button[checked] span.jqx-thumb::after,
-jqx-switch-button[checked]:hover span.jqx-thumb::after {
+/*********************************/
+
+/*
+Set the thumb to yellow when true, including its hover (mouseover) state.
+*/
+
+jqx-switch-button[checked] .jqx-thumb::after,
+jqx-switch-button[checked]:hover .jqx-thumb::after {
     background: yellow;
 }
+
+/*********************************/
+
+/*
+Set the track to be transparent.
+Set the track fill to yellow.
+Set the track labels to be white.
+*/
 
 jqx-slider .jqx-container .jqx-track::before {
     background: transparent;
     border: none;
 }
 
-jqx-slider .jqx-track .jqx-value {
-    background: yellow;
-}
-
-jqx-slider .jqx-scale {
-    --ni-foreground-color: white;
-    color: var(--ni-foreground-color);
-}
-
-.progressbar-bg-yellow {
+jqx-slider {
     --ni-fill-background: yellow;
+    --ni-foreground-color: white !important;
 }
 
-.button-true-bg-yellow {
+
+/*********************************/
+
+/*
+Set the power button to have an orange foreground when true.
+*/
+
+.activation-button {
+    --ni-true-foreground-color: orange;
+}
+
+/*
+Set the power button to have a yellow background.
+Set the circular progress bar to have a yellow fill. 
+*/
+
+.activation-button.warning {
     --ni-true-background: yellow;
 }
 
-.button-true-fg-darkgray {
-    --ni-true-foreground-color: #2b3033;
+.activation-progress.warning {
+    --ni-fill-background: yellow;
 }
 
-.progressbar-bg-red {
+/*
+Set the power button to have a red background.
+Set the circular progress bar to have a red fill.
+*/
+
+.activation-button.danger {
+    --ni-true-background: red;
+}
+
+.activation-progress.danger {
     --ni-fill-background: red;
 }
 
-.button-true-bg-red {
-    --ni-true-background: red;
-}
+
+/*********************************/
+
+/*
+Make the non-plot area and the plot area transparent.
+Make the axis ticks white. 
+Make the axis labels light gray.
+*/
 
 ni-cartesian-graph {
     background: transparent;
@@ -60,17 +105,27 @@ ni-cartesian-graph text.axisLabels {
     fill: lightgray;
 }
 
-jqx-tank .jqx-scale {
-    --ni-foreground-color: darkblue;
-    color: var(--ni-foreground-color);
+
+/*********************************/
+
+/*
+Set the tank scale color to hotpink.
+*/
+
+jqx-tank {
+    --ni-foreground-color: hotpink !important;
 }
 
-jqx-numeric-text-box input {
-    color: white;
-}
+/*********************************/
+
+/*
+Make the numeric text white.
+Remove all borders and background colors. 
+*/
 
 jqx-numeric-text-box {
     --ni-border: none;
+    --ni-foreground-color: white;
     --ni-indicator-background-color: transparent;
     --ni-control-background-color: transparent;
 }
