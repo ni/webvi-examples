@@ -6,7 +6,7 @@ This example is a simple 4-bit calculator using the JavaScript Library Interface
 
 On the panel, this WebVI has X and Y binary inputs. The user clicks these to change the numerical values of the inputs. The Outputs of X+Y and X*Y are updated with binary and numerical indicators. 
 
-![Screenshot of Demo](https://ni.github.io/webvi-examples/CallJavaScriptFromAWebVI/Screenshot.gif)
+![Screenshot of Demo](https://ni.github.io/webvi-examples/CallJavaScriptFromAWebVI/readme_files/Screenshot.gif)
 
 # Dependencies
 - LabVIEW NXG Web Module
@@ -55,12 +55,12 @@ The following steps can be used to host the web app on a local web server
 # Details
 This WebVI uses the JSLI to interface with simple functions defined in Add.js and Multiply.js, and compares the results with the LabVIEW NXG built-in functions. A single JSLI wraps JavaScript functions in the two external JavaScript files. The external functions are referenced by using the Function prototype symbol, or name, used in the JavaScript file. For example, AddWithJSLI is a function defined in Add.js. The corresponding JSLI function references the Symbol 'AddWithJSLI' to link the JavaScript function to the JSLI function.
 
-![JSLI Node Functions](https://ni.github.io/webvi-examples/CallJavaScriptFromAWebVI/img/JSLI.png)
+![JSLI Node Functions](https://ni.github.io/webvi-examples/CallJavaScriptFromAWebVI/readme_files/JSLI.png)
 
 The Add and Multiply nodes output the JSLI and built-in function results to the Main WebVI. The Multiply.js file demonstrates a simple, external JavaScript function, and the Add.js file demonstrates a more complex JavaScript function. See these files for comments about the functions themselves. 
 
-![Add and Multiply Nodes](https://ni.github.io/webvi-examples/CallJavaScriptFromAWebVI/img/nodes.png)
+![Add and Multiply Nodes](https://ni.github.io/webvi-examples/CallJavaScriptFromAWebVI/readme_files/nodes.png)
 
 The Log to Console button logs text to the browser debug console using the browser-supported console.log function. After building and deploying the WebVI to a browser, open the browser developer tools (Press F12 in most browsers) and select the Console tab to view the console log. The log allows the user to see messages that can potentially help debug their application. 
 
-![Log to Console](https://ni.github.io/webvi-examples/CallJavaScriptFromAWebVI/img/log.png)
+![Log to Console](https://ni.github.io/webvi-examples/CallJavaScriptFromAWebVI/readme_files/log.png)
