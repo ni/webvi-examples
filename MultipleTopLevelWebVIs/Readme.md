@@ -5,7 +5,7 @@
 
 This example demonstrates how to create a web application with multiple pages by using multiple top-level WebVIs and Hyperlink controls to link between them. When you build the web application, each top-level WebVI generates a separate HTML file with links to the other HTML files that are generated.
 
-![Multiple Top-Level WebVIs Demo Link](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/Screenshot.gif)
+![Screenshot of Demo](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/readme_files/Screenshot.gif)
 
 # Dependencies
 - LabVIEW NXG Web Module
@@ -93,7 +93,7 @@ On the **Item** tab, you can change the file name for each WebVI and view the re
 
 Example:  
 
-![Main.gviweb Item tab in .gcomp file showing File name and Relative URL fields](https://ni.github.io/webvi-examples/MultipleTopLevelVIs/ComponentRightRail.png)
+![Main.gviweb Item tab in .gcomp file showing File name and Relative URL fields](https://ni.github.io/webvi-examples/MultipleTopLevelVIs/readme_files/ComponentRightRail.png)
 
 ## Top-level WebVIs can be in any part of the namespace
 Top-level WebVIs do not need to be at the root of the namespace. For example, `SubVIs/Attribution.gviweb` is marked as top-level and has a relative URL of `SubVIs/Attribution.html`.

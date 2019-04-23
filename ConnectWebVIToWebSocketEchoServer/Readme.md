@@ -6,7 +6,7 @@ This example uses the Web Module WebSockets API to connect to the WebSocket Echo
 
 On the diagram, this WebVI uses WebSocket VIs to open a connection to the echo server, send messages, read received messages, and close the connection. The WebVI also formats sent and received strings to display on the Messages indicator.
 
-![Screenshot of Demo](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/Screenshot.gif)
+![Screenshot of Demo](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/readme_files/Screenshot.gif)
 
 # Dependencies
 - LabVIEW NXG Web Module
@@ -57,18 +57,18 @@ The WebSockets are a bidirectional communication protocol that allow interaction
 
 This example connects to a public echo server hosted by websocket.org. To connect to the echo server, the WebVI uses the WebSocket Open VI and passes in the server URL. This example only allows one connection to the Echo server.
 
-![Open WebSocket Connection](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/img/Open_WS.png)
+![Open WebSocket Connection](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/readme_files/Open_WS.png)
 
 Once a connection is established, the user sends messages with the Write String VI, and the echo server responds with the same message. The WebVI polls every 50 ms for new messages with the Read String VI. The Read String VI is configured to timeout if no message becomes avaialble to read after 50 milliseconds.
 
 Additionally, the WebVI does not call Write String VI if Message is empty. Sent and received messages are formatted in the SubVIs and displayed on the Messages indicator.
 
-![Send and Read Messages](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/img/Send.png)  
-![Send and Read Messages](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/img/Read.png)
+![Send and Read Messages](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/readme_files/Send.png)  
+![Send and Read Messages](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/readme_files/Read.png)
 
 Once the session is completed, the user disconnects from the server.
 
-![Close Connection](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/img/Close.png)
+![Close Connection](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/readme_files/Close.png)
 
 
 # Related Links

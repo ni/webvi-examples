@@ -4,7 +4,7 @@
 
 This example demonstrates how to create a WebVI that makes requests to a LabVIEW web service, and how to create a LabVIEW 2016 web service that can respond to requests from a WebVI.
 
-![Screenshot of Demo](https://ni.github.io/webvi-examples/CallLabVIEWWebService/Screenshot.gif)
+![Screenshot of Demo](https://ni.github.io/webvi-examples/CallLabVIEWWebService/readme_files/Screenshot.gif)
 
 # Usage
 Use LabVIEW 2016 to create web services that do what WebVIs can't do, such as:
