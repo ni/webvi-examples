@@ -1,6 +1,6 @@
 # Embed a WebVI into Web Content
-[![Embed a WebVI into Web Content Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/EmbedWebVIIntoContent/)
-[![Embed a WebVI into Web Content README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/EmbedWebVIIntoContent)
+[![Embed a WebVI into Web Content Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](Builds/WebApp_Web%20Server/Main.html)
+[![Embed a WebVI into Web Content README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)]()
 
 This example demonstrates how to embed the output of a WebVI built using LabVIEW NXG into an static web page.
 
@@ -11,7 +11,7 @@ The build output of a WebVI includes three basic parts:
 
 Because WebVIs share the same basic building blocks as other web pages, you can embed WebVI output into any web content.
 
-![Screenshot of Demo](https://ni.github.io/webvi-examples/EmbedWebVIIntoContent/readme_files/Screenshot.gif)
+![Screenshot of Demo](readme_files/Screenshot.gif)
 
 # Usage
 You can use the techniques demonstrated in this example whenever you want to embed a WebVI to an existing web page. For example, you may create educational course material with an embedded WebVI that visualizes data acquired in a lab setting.
@@ -47,11 +47,7 @@ After building copy and paste the build output at `EmbedWebVIIntoContent` direct
 ## Hosting on the NI Web Server
 1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs` and create directory; for example `webvi-example`.
 2. Copy the `EmbedWebVIIntoContent` directory into the `htdoc\webvi-example` directory.
-3. Open a web browser and navigate to `http://localhost:9090/webvi-example/index.html`.  
-
-
-## Published Example
-You can find the fully assembled and hosted web application on [Github Pages](https://ni.github.io/webvi-examples/EmbedWebVIIntoContent)
+3. Open a web browser and navigate to `http://localhost:9090/webvi-example/index.html`.
 
 # Details
 The following sections describe how the static web page was built including including how parts of the WebVI are pulled into the page.

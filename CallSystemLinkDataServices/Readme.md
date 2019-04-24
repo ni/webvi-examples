@@ -1,6 +1,6 @@
 # Call SystemLink Data Services
-[![Call SystemLink Data Services](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/CallSystemLinkDataServices/Builds/WebApp_Web%20Server/Main.html)
-[![Call SystemLink Data Services README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/CallSystemLinkDataServices)
+[![Call SystemLink Data Services](https://img.shields.io/badge/Details-Demo_Link-green.svg)](Builds/WebApp_Web%20Server/Main.html)
+[![Call SystemLink Data Services README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)]()
 
 This example demonstrates how to use a WebVI to communicate over networks with SystemLink Tags after connecting to SystemLink Cloud or SystemLink Server, an on-premises web server.  
 
@@ -9,7 +9,7 @@ Once you complete the necessary steps, you will know:
 - How to set up, build, and host web applications.
 - How to set up and connect to SystemLink Cloud or SystemLink Server, an on-premises web server.
 
-![Data Services](https://ni.github.io/webvi-examples/CallSystemLinkDataServices/readme_files/data-service-cloud.png)
+![Data Services](readme_files/data-service-cloud.png)
 
 # Interacting with the Web Application
 From the panel of the web app, you will be able to:
@@ -18,7 +18,7 @@ From the panel of the web app, you will be able to:
 -	Choose what information is visible by toggling between the Read Tags and Write Tags tabs.
 -	Determine which state to execute with SystemLink Tags.
 
-![Screenshot of Demo](https://ni.github.io/webvi-examples/CallSystemLinkDataServices/readme_files/Screenshot.gif)
+![Screenshot of Demo](readme_files/Screenshot.gif)
 
 _Figure: When hosting a WebVI on the NI Web Server, you do not need to supply credentials again once you logged into the SystemLink web interface._
 
@@ -33,10 +33,10 @@ Use NI Package Manager to install the products you need. If you do not have NI P
 # Choosing Your Goal
 Do you want to learn about connecting your web application to SystemLink Cloud or SystemLink Server? Click one of the following links to jump to your workflow:
 
-- [I want to connect to SystemLink Cloud](https://github.com/ni/webvi-examples/blob/master/CallSystemLinkDataServices/Readme.md#systemlink-cloud).
-- [I want to connect to SystemLink Server](https://github.com/ni/webvi-examples/blob/master/CallSystemLinkDataServices/Readme.md#systemlink-server).
--	[I want to learn about the details involved in creating the WebVI](https://github.com/ni/webvi-examples/blob/master/CallSystemLinkDataServices/Readme.md#webvi-details).
--	[I want to learn about security](https://github.com/ni/webvi-examples/blob/master/CallSystemLinkDataServices/Readme.md#security).
+- [I want to connect to SystemLink Cloud](#systemlink-cloud).
+- [I want to connect to SystemLink Server](#systemlink-server).
+-	[I want to learn about the details involved in creating the WebVI](#webvi-details).
+-	[I want to learn about security](#security).
 
 # SystemLink Cloud
 In this section, you’ll learn how to set up, build, and connect your web application to SystemLink Cloud from LabVIEW NXG Web Module.
@@ -45,9 +45,9 @@ In this section, you’ll learn how to set up, build, and connect your web appli
 
 To connect your web application to SystemLink Cloud from LabVIEW NXG Web Module, you need a server URL and an API key. The API key authenticates the web application running on your local machine for SystemLink Cloud – much like your ni.com credentials authenticate your identity.
 
-[Learn](https://github.com/ni/webvi-examples/blob/master/CallSystemLinkDataServices/Readme.md#connecting-to-systemlink-cloud-from-labview-nxg-3.0-web-module) how to establish a connection to the SystemLink Cloud server from LabVIEW NXG Web Module.
+[Learn](#connecting-to-systemlink-cloud-from-labview-nxg-3.0-web-module) how to establish a connection to the SystemLink Cloud server from LabVIEW NXG Web Module.
 
-![Configure GVI in LabVIEW vs Hosting in SystemLink Cloud](https://ni.github.io/webvi-examples/CallSystemLinkDataServices/readme_files/cloud-config.PNG)
+![Configure GVI in LabVIEW vs Hosting in SystemLink Cloud](readme_files/cloud-config.PNG)
 
 _Figure: Note the input differentiation between connecting to the SystemLink Cloud server from LabVIEW or LabVIEW NXG Web Module vs. hosting your web application on SystemLink Cloud._
 
@@ -120,7 +120,7 @@ For SystemLink Cloud to host your web application, use your ni.com credentials f
 In this section, you’ll learn how to set up, build, and connect your web application to the SystemLink Server, an on-premises web server.
 
 ## What You Need to Connect to the SystemLink Server from LabVIEW NXG Web Module
-![Configure GVI in LabVIEW vs Hosting on premises](https://ni.github.io/webvi-examples/CallSystemLinkDataServices/readme_files/on-premises-config.PNG)
+![Configure GVI in LabVIEW vs Hosting on premises](readme_files/on-premises-config.PNG)
 
 _Figure: Note the input differentiation between connecting to an  on-premises server from LabVIEW or LabVIEW NXG Web Module vs. hosting your web application on the NI Web Server._
 
@@ -206,13 +206,13 @@ These states, or subdiagrams of code, carry out specific operations within a pro
 
 In this example, a state is determined by the visible tab (**Read Tags** and **Write Tags**) on the panel. This means tags are only read or written when those controls and indicators are visible. In the **Read Tags** state, the controls and indicators are updated. This occurs because a control or indicator can have multiple terminals for the same control or indicator, and these terminals can be both read and write. This prevents stale values from being written to tags when the user switches tabs.
 
-![Screenshot of State Machine](https://ni.github.io/webvi-examples/CallSystemLinkDataServices/readme_files/state-machine.png)
+![Screenshot of State Machine](readme_files/state-machine.png)
 
 If an error occurs or if the user clicks **Clear Faults and Reconnect**, the state machine will enter states not determined by the tab control. This logic is contained in the **Determine Next State** node.  If there is no error or if the user has not clicked **Clear Faults and Reconnect**, the **Determine Next State** node will use the state determined by the tab control. Regardless if there is an error or not, clicking the **Clear Faults and Reconnect** button will cause the state machine to enter the `initialize` state. If only an error has occurred, the state machine will enter the `error-no-systemlink state`.
 
 Go here to find out more about [state machines](http://www.ni.com/documentation/en/labview/2.0/g-prog/state-machine-design-pattern/).
 
-![Screenshot of Determine Next State](https://ni.github.io/webvi-examples/CallSystemLinkDataServices/readme_files/next-state.png)
+![Screenshot of Determine Next State](readme_files/next-state.png)
 
 # Security
 For the sake of approachability and learnability this example includes username and password fields on its panel. **We discourage this practice for all applications used in production**.

@@ -1,12 +1,12 @@
 # Connect WebVI to WebSocket Echo Server
-[![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/Builds/WebApp_Web%20Server/Main.html)
-[![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/ConnectWebVIToWebSocketEchoServer)
+[![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-Demo_Link-green.svg)](Builds/WebApp_Web%20Server/Main.html)
+[![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-README_Link-orange.svg)]()
 
 This example uses the Web Module WebSockets API to connect to the WebSocket Echo Server hosted by websocket.org. The WebVI connects to the server, sends a message, and receives the same message from the server. 
 
 On the diagram, this WebVI uses WebSocket VIs to open a connection to the echo server, send messages, read received messages, and close the connection. The WebVI also formats sent and received strings to display on the Messages indicator.
 
-![Screenshot of Demo](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/readme_files/Screenshot.gif)
+![Screenshot of Demo](readme_files/Screenshot.gif)
 
 # Dependencies
 - LabVIEW NXG Web Module
@@ -57,18 +57,18 @@ The WebSockets are a bidirectional communication protocol that allow interaction
 
 This example connects to a public echo server hosted by websocket.org. To connect to the echo server, the WebVI uses the WebSocket Open VI and passes in the server URL. This example only allows one connection to the Echo server.
 
-![Open WebSocket Connection](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/readme_files/Open_WS.png)
+![Open WebSocket Connection](readme_files/Open_WS.png)
 
 Once a connection is established, the user sends messages with the Write String VI, and the echo server responds with the same message. The WebVI polls every 50 ms for new messages with the Read String VI. The Read String VI is configured to timeout if no message becomes avaialble to read after 50 milliseconds.
 
 Additionally, the WebVI does not call Write String VI if Message is empty. Sent and received messages are formatted in the SubVIs and displayed on the Messages indicator.
 
-![Send and Read Messages](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/readme_files/Send.png)  
-![Send and Read Messages](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/readme_files/Read.png)
+![Send and Read Messages](readme_files/Send.png)  
+![Send and Read Messages](readme_files/Read.png)
 
 Once the session is completed, the user disconnects from the server.
 
-![Close Connection](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/readme_files/Close.png)
+![Close Connection](readme_files/Close.png)
 
 
 # Related Links
