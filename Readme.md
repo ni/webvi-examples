@@ -94,7 +94,7 @@ On the diagram, this WebVI uses the WebSocket API to open a connection to the ec
 ![Screenshot of Demo](ConnectWebVIToWebSocketEchoServer/readme_files/Screenshot.gif)
 
 # Multiple Top-Level WebVIs
-[![Multiple Top-Level WebVIs Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](MultipleTopLevelWebVIs/Builds/MultipleTopLevelWebVIs_Web%20Server/)
+[![Multiple Top-Level WebVIs Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](MultipleTopLevelWebVIs/Builds/MultipleTopLevelWebVIs_Web%20Server)
 [![Multiple Top-Level WebVIs README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](MultipleTopLevelWebVIs)
 
 This example demonstrates how to create a web application with multiple pages by using multiple top-level WebVIs and Hyperlink controls to link between them. When you build the web application, each top-level WebVI generates a separate HTML file with links to the other HTML files that are generated.
