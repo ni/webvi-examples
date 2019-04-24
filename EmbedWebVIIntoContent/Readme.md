@@ -1,5 +1,5 @@
 # Embed a WebVI into Web Content
-[![Embed a WebVI into Web Content Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](Builds/WebApp_Web%20Server/Main.html)
+[![Embed a WebVI into Web Content Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/EmbedWebVIIntoContent)
 [![Embed a WebVI into Web Content README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)]()
 
 This example demonstrates how to embed the output of a WebVI built using LabVIEW NXG into an static web page.

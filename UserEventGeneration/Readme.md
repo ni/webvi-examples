@@ -1,5 +1,5 @@
 # User Event Generation
-[![User Event Generation Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](Builds/WebApp_Web%20Server/User%20Event%20Generation.html)
+[![User Event Generation Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/UserEventGeneration/Builds/WebApp_Web%20Server/User%20Event%20Generation.html)
 [![User Event Generation README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)]()
 
 This example demonstrates the use of the User Event nodes to implement a user interaction recorder.
