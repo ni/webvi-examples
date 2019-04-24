@@ -1,6 +1,6 @@
 # User Event Generation
 [![User Event Generation Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/UserEventGeneration/Builds/WebApp_Web%20Server/User%20Event%20Generation.html)
-[![User Event Generation README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/UserEventGeneration)
+[![User Event Generation README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)]()
 
 This example demonstrates the use of the User Event nodes to implement a user interaction recorder.
 
@@ -9,7 +9,7 @@ This example demonstrates the use of the User Event nodes to implement a user in
 3. Click the Playback button. The exact sequence of drags that you performed will be repeated on the Slider and displayed in the Movement Data graph.
 4. Click Stop to stop the VI.
 
-![Screenshot of Demo](https://ni.github.io/webvi-examples/UserEventGeneration/readme_files/Screenshot.gif)
+![Screenshot of Demo](readme_files/Screenshot.gif)
 
 # Dependencies
 - LabVIEW NXG Web Module
@@ -58,8 +58,8 @@ The following steps can be used to host the web app on a local web server
 # Details
 This WebVI uses value changed events and User Events to record users input to a Slider and allowing the user to play the recording back on the Slider and a Graph. Both of these types of events get "handled" by an Event Structure in the WebVI.
 
-![Event Structure](https://ni.github.io/webvi-examples/UserEventGeneration/readme_files/eventStructure.png)
+![Event Structure](readme_files/eventStructure.png)
 
 The Event Structure allows a WebVI to respond asynchronously to input. In the case of this WebVI, Value Changed events are used to respond to changes in the Slider's value, clicking the Playback button, and clicking the Stop button. Furthermore, when the Playback button is pressed, the recorded values of the Slider are used to generate a series of User Events (as seen below), which are then handled by the Event Structure to display the values on the Slider and Graph.
 
-![Generate User Events](https://ni.github.io/webvi-examples/UserEventGeneration/readme_files/generate.png)
+![Generate User Events](readme_files/generate.png)

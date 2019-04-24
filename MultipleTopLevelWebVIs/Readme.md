@@ -1,11 +1,11 @@
 <!-- The following should be equivalent to the section in webvi-examples/Readme.md -->
 # Multiple Top-Level WebVIs
-[![Multiple Top-Level WebVIs Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/Builds/MultipleTopLevelWebVIs_Web%20Server/)
-[![Multiple Top-Level WebVIs README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/MultipleTopLevelWebVIs)
+[![Multiple Top-Level WebVIs Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/Builds/MultipleTopLevelWebVIs_Web%20Server)
+[![Multiple Top-Level WebVIs README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)]()
 
 This example demonstrates how to create a web application with multiple pages by using multiple top-level WebVIs and Hyperlink controls to link between them. When you build the web application, each top-level WebVI generates a separate HTML file with links to the other HTML files that are generated.
 
-![Screenshot of Demo](https://ni.github.io/webvi-examples/MultipleTopLevelWebVIs/readme_files/Screenshot.gif)
+![Screenshot of Demo](readme_files/Screenshot.gif)
 
 # Dependencies
 - LabVIEW NXG Web Module
@@ -55,21 +55,6 @@ The following steps can be used to host the web app on a local web server
 2. Copy the `WebApp_Web Server` directory into the `htdocs` directory.
 3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/Main.html`.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Copy and paste the build output at `\MultipleTopLevelVIs\Builds` directory to any web server you want.
 
 ## Hosting on the LabVIEW 2009-2017 Web Server
@@ -93,7 +78,7 @@ On the **Item** tab, you can change the file name for each WebVI and view the re
 
 Example:  
 
-![Main.gviweb Item tab in .gcomp file showing File name and Relative URL fields](https://ni.github.io/webvi-examples/MultipleTopLevelVIs/readme_files/ComponentRightRail.png)
+![Main.gviweb Item tab in .gcomp file showing File name and Relative URL fields](readme_files/ComponentRightRail.png)
 
 ## Top-level WebVIs can be in any part of the namespace
 Top-level WebVIs do not need to be at the root of the namespace. For example, `SubVIs/Attribution.gviweb` is marked as top-level and has a relative URL of `SubVIs/Attribution.html`.
