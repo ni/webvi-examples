@@ -13,8 +13,8 @@ You can also use resource files to augment the WebVI's capabilities. For example
 
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
-2. Open `IncorporateUserResources/WebVI/EmbedWebVIIntoContent.lvproject`.
-3. On the **Project Files** tab, expand `WebApp.gcomp` and open `Main.gviweb`.
+2. Open `IncorporateUserResources/IncorporateUserResources.lvproject`.
+3. On the **Project Files** tab, expand `WebApp.gcomp` and open `index.gviweb`.
 4. Click the **Run** button.
 5. Build the web application.  
   a. On the **Project Files** tab, double-click `WebApp.gcomp` to open the web application component.  
@@ -41,24 +41,22 @@ The following steps can be used to host the web app on a local web server
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Double-click the nipkg and follow the on screen instructions
-5. Open a web browser and navigate to `http://localhost:9090/incorporateuserresources/Main.html`
+5. Open a web browser and navigate to `http://localhost:9090/incorporateuserresources/`
 
 ### Hosting on the LabVIEW 2009-2017 Web Server
 1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
-2. Copy the `WebApp+Web Server` directory into the `www` directory.
-3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/Main.html`
+2. Copy the `WebApp_Web Server` directory into the `www` directory.
+3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/`
 
 ### Hosting on the NI Web Server
 1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
 2. Copy the `WebApp_Web Server` directory into the `htdocs` directory.
-3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/Main.html`.
+3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/`.
 
 # Details
-This example uses two types of resources: images and CSS files.
+This example uses one type of resource: an image file.
 
-Two images are included in a child namespace within the `WebApp.gcomp` file called `images`: the National Instruments logo (`.svg`), and a screenshot of the diagram code (`.png`).
-
-A CSS file is included in a child namespace called `styles`. The file `main.css` styles the WebVI header at the top of the panel.
+An image is included in the `images` namespace within `WebApp.gcomp`. The image is a screenshot of the diagram code and is named `WebVIDiagram.png`.
 
 Refer to the following sections to learn how to add resource files to a web application component and reference them in a WebVI.
 
@@ -76,11 +74,11 @@ b. Repeat the previous step for every namespace you want to create.
 You can reference a resource file using its relative URL. The relative URL is determined by the namespace of the WebVI and the namespace of the resource file.  
 
 Examples:
-- **WebVI:** `Application/Main.gviweb`  
-  **Resource file:** `Application/myImage.jpg`  
+- **WebVI:** `WebApp/index.gviweb`  
+  **Resource file:** `WebApp/myImage.jpg`  
   **Relative URL:** `myImage.jpg`  
-- **WebVI:** `Application/ChildNamespace1/Main.gviweb`  
-  **Resource:** `Application/ChildNamespace2/myImage.jpg`  
+- **WebVI:** `WebApp/ChildNamespace1/index.gviweb`  
+  **Resource:** `WebApp/ChildNamespace2/myImage.jpg`  
   **Relative URL:** `../ChildNamespace2/myImage.jpg`  
 
 #### Referencing images (*.png, *.bmp, *.jpg, *.jpeg, *.gif, *.svg, *.webp, *.ico)
@@ -96,7 +94,7 @@ Example:
     ```
     <head>
         ...
-        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
     </head>
     ```
 

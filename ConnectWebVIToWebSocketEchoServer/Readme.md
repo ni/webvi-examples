@@ -14,7 +14,7 @@ On the diagram, this WebVI uses WebSocket VIs to open a connection to the echo s
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
 2. Open `ConnectWebVIToWebSocketEchoServer\ConnectWebVIToWebSocketEchoServer.lvproject`
-3. Open `Main.gviweb` and click the **Run** button.
+3. Open `index.gviweb` and click the **Run** button.
 4. Build the web application.  
   a. Open `WebApp.gcomp`.  
   b. On the **Document** tab, click **Build**.
@@ -40,17 +40,17 @@ The following steps can be used to host the web app on a local web server
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Double-click the nipkg and follow the on screen instructions
-5. Open a web browser and navigate to `http://localhost:9090/JSLI%20WebSocket%20Echo/Main.html`
+5. Open a web browser and navigate to `http://localhost:9090/JSLI%20WebSocket%20Echo/`
 
 ### Hosting on the NI Web Server by manually moving files
 1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`
 2. Copy the `WebApp_Web Server` directory into the `htdocs` directory
-3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/Main.html`
+3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/`
 
 ### Hosting on the LabVIEW 2009-2017 Web Server
 1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`
-2. Copy the `WebApp+Web Server` directory into the `www` directory
-3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/Main.html`
+2. Copy the `WebApp_Web Server` directory into the `www` directory
+3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/`
 
 # Details
 The WebSockets are a bidirectional communication protocol that allow interaction between the user's browser and a server. It is defined in Internet Engineering Task Force (IETF) RFC 6455 — The WebSocket Protocol. Most modern browsers support WebSockets.

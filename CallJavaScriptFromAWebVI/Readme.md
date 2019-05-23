@@ -14,7 +14,7 @@ On the panel, this WebVI has X and Y binary inputs. The user clicks these to cha
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
 2. Open `CallJavaScriptFromAWebVI\CallJavaScriptFromAWebVI.lvproject`
-3. Open `Main.gviweb` and click the **Run** button.
+3. Open `index.gviweb` and click the **Run** button.
 4. Build the web application.  
   a. Open `WebApp.gcomp`.  
   b. On the **Document** tab, click **Build**.
@@ -40,24 +40,24 @@ The following steps can be used to host the web app on a local web server
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Double-click the nipkg and follow the on screen instructions
-5. Open a web browser and navigate to `http://localhost:9090/CallJavaScriptFromAWebVI/Main.html`
+5. Open a web browser and navigate to `http://localhost:9090/CallJavaScriptFromAWebVI/`
 
 ### Hosting on the NI Web Server by manually moving files
 1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`
 2. Copy the `WebApp_Web Server` directory into the `htdocs` directory
-3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/Main.html`
+3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/`
 
 ### Hosting on the LabVIEW 2009-2017 Web Server
 1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`
-2. Copy the `WebApp+Web Server` directory into the `www` directory
-3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/Main.html`
+2. Copy the `WebApp_Web Server` directory into the `www` directory
+3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/`
 
 # Details
 This WebVI uses the JSLI to interface with simple functions defined in Add.js and Multiply.js, and compares the results with the LabVIEW NXG built-in functions. A single JSLI wraps JavaScript functions in the two external JavaScript files. The external functions are referenced by using the Function prototype symbol, or name, used in the JavaScript file. For example, AddWithJSLI is a function defined in Add.js. The corresponding JSLI function references the Symbol 'AddWithJSLI' to link the JavaScript function to the JSLI function.
 
 ![JSLI Node Functions](readme_files/JSLI.png)
 
-The Add and Multiply nodes output the JSLI and built-in function results to the Main WebVI. The Multiply.js file demonstrates a simple, external JavaScript function, and the Add.js file demonstrates a more complex JavaScript function. See these files for comments about the functions themselves. 
+The Add and Multiply nodes output the JSLI and built-in function results to the index WebVI. The Multiply.js file demonstrates a simple, external JavaScript function, and the Add.js file demonstrates a more complex JavaScript function. See these files for comments about the functions themselves. 
 
 ![Add and Multiply Nodes](readme_files/nodes.png)
 
