@@ -48,21 +48,6 @@ This example demonstrates how to embed custom web content into the WebVI panel u
 
 ![Screenshot of Demo](EmbedContentIntoWebVI/readme_files/Screenshot.gif)
 
-# Embed a WebVI into Web Content
-[![Embed a WebVI into Web Content Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/EmbedWebVIIntoContent/)
-[![Embed a WebVI into Web Content README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](EmbedWebVIIntoContent)
-
-This example demonstrates how to embed the output of a WebVI built using LabVIEW NXG into an static web page.
-
-The build output of a WebVI includes three basic parts:
-- HTML5 custom elements
-- Compiled WebVI diagram (`.via.txt`)
-- JavaScript and CSS files used in the web application
-
-Because WebVIs share the same basic building blocks as other web pages, you can embed WebVI output into any web content.
-
-![Screenshot of Demo](EmbedWebVIIntoContent/readme_files/Screenshot.gif)
-
 # Incorporate User Resource into WebVI
 [![Incorporate User Resource into WebVI Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/IncorporateUserResources/Builds/WebApp_Web%20Server/Main.html)
 [![Incorporate User Resource into WebVI README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](IncorporateUserResources)
