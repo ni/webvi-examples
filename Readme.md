@@ -86,19 +86,6 @@ This example demonstrates how to create a web application with multiple pages by
 
 ![Multiple Top-Level WebVIs Demo Link](MultipleTopLevelWebVIs/readme_files/Screenshot.gif)
 
-# User Event Generation
-[![User Event Generation Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/UserEventGeneration/Builds/WebApp_Web%20Server/User%20Event%20Generation.html)
-[![User Event Generation README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](UserEventGeneration)
-
-This example demonstrates the use of the User Event nodes to implement a user interaction recorder.
-
-1. Run the VI.
-2. Drag the value of the Slider control around for a few seconds.
-3. Click the Playback button. The exact sequence of drags that you performed will be repeated on the Slider and displayed in the Movement Data graph.
-4. Click Stop to stop the VI.
-
-![Screenshot of Demo](UserEventGeneration/readme_files/Screenshot.gif)
-
 # Call SystemLink Data Services
 [![Call SystemLink Data Services](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/CallSystemLinkDataServices/Builds/WebApp_Web%20Server/Main.html)
 [![CallSystemLink Data Services README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](CallSystemLinkDataServices)
