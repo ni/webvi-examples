@@ -1,10 +1,10 @@
 # Embed Content into a WebVI
-[![Embed Content into a WebVI Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/EmbedContentIntoWebVI/Builds/WebApp_Web%20Server/Main.html)
-[![Embed Content into a WebVI README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/EmbedContentIntoWebVI)
+[![Embed Content into a WebVI Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/EmbedContentIntoWebVI/Builds/WebApp_Web%20Server/)
+[![Embed Content into a WebVI README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)]()
 
 This example demonstrates how to embed custom web content into the WebVI panel using LabVIEW NXG. WebVIs use HTML to define and describe the content of the panel that is loaded in a web page. This means that you can add custom HTML content to appear alongside the LabVIEW-generated HTML.
 
-![Screenshot of Demo](https://ni.github.io/webvi-examples/EmbedContentIntoWebVI/Screenshot.gif)
+![Screenshot of Demo](readme_files/Screenshot.gif)
 
 # Dependencies
 - LabVIEW NXG Web Module
@@ -12,7 +12,7 @@ This example demonstrates how to embed custom web content into the WebVI panel u
 # Setup
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
 2. Open `EmbedWebVIIntoContent/WebVI/Embed WebVI into Content.lvproject`.
-3. On the **Project Files** tab, expand `WebApp.gcomp` and open `Main.gviweb`.
+3. On the **Project Files** tab, expand `WebApp.gcomp` and open `index.gviweb`.
 4. Click the **Run** button.
 5. Build the web application.  
   a. On the **Project Files** tab, double-click `WebApp.gcomp` to open the web application component.  
@@ -37,22 +37,22 @@ The following steps can be used to host the web app on a local web server
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Double-click the nipkg and follow the on screen instructions
-5. Open a web browser and navigate to `http://localhost:9090/embedcontentintowebvi/Main.html`
+5. Open a web browser and navigate to `http://localhost:9090/embedcontentintowebvi/`
 
 ### Hosting on the LabVIEW 2009-2017 Web Server
 1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
-2. Copy the `WebApp+Web Server` directory into the `www` directory.
-3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/Main.html`
+2. Copy the `WebApp_Web Server` directory into the `www` directory.
+3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/`
 
 ### Hosting on the NI Web Server
 1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
 2. Copy the `WebApp_Web Server` directory into the `htdocs` directory.
-3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/Main.html`.
+3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/`.
 
 **Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Server** >> right-click **WebApp.gcomp** >> **Run**
 
 # Details
-This section describes the content added to the HTML view of the WebVI to create a web page that shows current weather conditions for Iowa State University.
+This section describes the content added to the HTML source of the WebVI to create a web page that shows current weather conditions for Iowa State University. The HTML source can be edited by clicking the `Edit panel HTML` button in the WebVI panel's toolbar.
 
 ## Custom iframes
 This example uses an `<iframe>` generated from [Google Maps](https://developers.google.com/maps/documentation/embed/guide) was added to show the location of the web cam on a map.
