@@ -20,10 +20,10 @@ You can also use resource files to augment the WebVI's capabilities. For example
   a. On the **Project Files** tab, double-click `WebApp.gcomp` to open the web application component.  
   b. On the **Document** tab, click **Build**.  
 
-**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Server** >> right-click **WebApp.gcomp** >> **Run**
+**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Server** >> right-click `WebApp.gcomp` >> **Run**
 
 # Hosting
-You can manually the move the build output found at `\IncorporateUserResourcest\Builds` to any web server. This project also includes a Distribution (WebApp.lvdist) that can be used to build a package (.nipkg). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on SystemLink Cloud.
+You can manually the move the build output found at `\IncorporateUserResourcest\Builds` to any web server. This project also includes a Distribution (`WebApp.lvdist`) that can be used to build a package (.nipkg). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on SystemLink Cloud.
 
 ## SystemLink Cloud Web App Hosting
 The following steps can be used to host the web app on SystemLink Cloud
@@ -81,12 +81,12 @@ Examples:
   **Resource:** `WebApp/ChildNamespace2/myImage.jpg`  
   **Relative URL:** `../ChildNamespace2/myImage.jpg`  
 
-#### Referencing images (*.png, *.bmp, *.jpg, *.jpeg, *.gif, *.svg, *.webp, *.ico)
+#### Referencing image files
 1. On the panel of a WebVI, add a **URL Image** control.
-2. Select the URL image control. On the **Item** tab, set **Source URL** to the relative URL of the image you you want to reference.  
+2. Select the URL image control. On the **Item** tab, set **Source URL** to the relative URL of the image you you want to reference.
 **Note:** The source URL needs to be URL-encoded. For example, `my image.jpg` should be `my%20image.jpg`.
 
-#### Referencing CSS files (*.css)
+#### Referencing CSS files
 1. On the panel of a WebVI, click the `Edit panel HTML` button in the toolbar to launch the HTML source dialog.  
 2. Add the following line in between the `<head></head>` tags:  
 `<link rel="stylesheet" type="text/css" href="[your-stylesheet].css">`  
@@ -98,7 +98,7 @@ Example:
     </head>
     ```
 
-#### Referencing JavaScript files (*.js)
+#### Referencing JavaScript files
 1. On the panel of a WebVI, click the `Edit panel HTML` button in the toolbar to launch the HTML source dialog. 
 2. Add the following line in between the `<head></head>` tags:  
 `<script src="[your-script].js" type="text/javascript"></script>`  
@@ -110,6 +110,6 @@ Example:
     </head>
     ```
 
-#### Referencing HTML files (*.html, *.htm)
+#### Referencing HTML files
 1. On the panel of a WebVI, add a **Hyperlink Control**.
 2. Select the hyperlink control. On the **Item** tab, set **URL** to the relative URL of the HTML file you you want to reference.

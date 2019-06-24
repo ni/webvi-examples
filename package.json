@@ -4,7 +4,8 @@
   "description": "Tools for validating LabVIEW NXG WebVI Examples",
   "private": true,
   "scripts": {
-    "test": "glob-exec --foreach \"{./*.md,./*/*.md}\" -- \"npm run markdown-link-check -- -c .markdown-link-check.config.json {{file}} & exit 0\"",
+    "link": "glob-exec --foreach \"{./*.md,./*/*.md}\" -- \"npm run markdown-link-check -- -c .markdown-link-check.config.json {{file}} & exit 0\"",
+    "spell": "mdspell --en-us -r --ignore-numbers \"**/*.md\" \"!node_modules/**\"",
     "markdown-link-check": "markdown-link-check"
   },
   "repository": {
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/ni/webvi-examples#readme",
   "devDependencies": {
     "glob-exec": "^0.1.1",
-    "markdown-link-check": "^3.7.3"
+    "markdown-link-check": "^3.7.3",
+    "markdown-spellcheck": "^1.3.1"
   }
 }
