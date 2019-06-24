@@ -6,7 +6,8 @@
   "scripts": {
     "link": "glob-exec --foreach \"{./*.md,./*/*.md}\" -- \"npm run markdown-link-check -- -c .linkcheck.json {{file}} & exit 0\"",
     "spell": "mdspell --en-us -r --ignore-numbers \"**/*.md\" \"!node_modules/**\"",
-    "markdown-link-check": "markdown-link-check"
+    "markdown-link-check": "markdown-link-check",
+    "test": "npm run spell && npm run link"
   },
   "repository": {
     "type": "git",
