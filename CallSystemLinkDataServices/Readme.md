@@ -197,9 +197,9 @@ The Message API communicates between systems with strings by publishing messages
 
 Refer to the [SystemLink API Docs](https://www.systemlinkcloud.com/skyline-api-documentation) to find out more about the SystemLink data services API.
 
-Use the example **index.gviweb** to learn how these APIs can be assembled into an interactive application. Use the examples in **BasicDataServiceExamples.gcomp** for a simple overview of how these APIs are used. Use the LabVIEW examples in **LabVIEWExamples.lvproj** to see how you can interact with SystemLink Cloud from LabVIEW and LabVIEW Real-Time.
+Use the example `index.gviweb` to learn how these APIs can be assembled into an interactive application. Use the examples in `BasicDataServiceExamples.gcomp` for a simple overview of how these APIs are used. Use the LabVIEW examples in `LabVIEWExamples.lvproj` to see how you can interact with SystemLink Cloud from LabVIEW and LabVIEW Real-Time.
 
-## The index.gviweb and Main.gvi State Machine
+## The `index.gviweb` and `Main.gvi` State Machine
 State machines implement decision-making algorithms where a set of distinguishable states exists.
 
 These states, or subdiagrams of code, carry out specific operations within a program.

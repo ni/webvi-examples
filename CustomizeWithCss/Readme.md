@@ -4,7 +4,7 @@
 
 This example demonstrates how to customize the styling of a WebVI using CSS.
 
-The underlying technology used by WebVIs is HTML Custom Elements. One of the advantages of using HTML Custom Elements is the ability leverage CSS in a web application that seperates style from the content. For example, you could create a custom CSS file that is shared across your organization for custom styles and layouts.
+The underlying technology used by WebVIs is HTML Custom Elements. One of the advantages of using HTML Custom Elements is the ability leverage CSS in a web application that separates style from the content. For example, you could create a custom CSS file that is shared across your organization for custom styles and layouts.
 
 ![Screenshot of Demo](readme_files/Screenshot.gif)
 
@@ -23,10 +23,10 @@ You can use this approach in your own projects if you are familiar with CSS and 
   a. On the **Project Files** tab, double-click `WebApp.gcomp` to open the web application component.  
   b. On the **Document** tab, click **Build**.  
 
-**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Server** >> right-click **WebApp.gcomp** >> **Run**
+**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Server** >> right-click `WebApp.gcomp` >> **Run**
 
 # Hosting
-You can manually move the build output found at `\CustomizeWithCss\Builds` to any web server. This project also includes a Distribution (WebApp.lvdist) that can be used to build a package (.nipkg). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on SystemLink Cloud.
+You can manually move the build output found at `\CustomizeWithCss\Builds` to any web server. This project also includes a Distribution (`WebApp.lvdist`) that can be used to build a package (.nipkg). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on SystemLink Cloud.
 
 ## SystemLink Cloud Web App Hosting
 The following steps can be used to host the web app on SystemLink Cloud
@@ -59,7 +59,7 @@ The following steps can be used to host the web app on a local web server
 # Details
 
 ## Adding custom CSS rules to a WebVI
-1. Add a css file to the root of the WebApp component, for example: `custom_style.css`
+1. Add a CSS file to the root of the Web Application component, for example: `custom_style.css`
 2. Open `index.gviweb` and launch the HTML source dialog by pressing the `Edit panel HTML` button in the WebVI panel's toolbar.
 2. Enter the following line inside the `head` section of the page right before the closing `</head>` tag.
     ```html
@@ -70,7 +70,7 @@ The following steps can be used to host the web app on a local web server
 4. Modify `custom_style.css` to include the style rules for the page
 
 ## CSS rule behavior
-The following section describes the behavior of the CSS rules used in the example. The css rules are included from the `WebApp.gcomp/support/style.css` file.
+The following section describes the behavior of the CSS rules used in the example. The style rules are included from the `WebApp.gcomp/support/style.css` file.
 
 <!-- Note: The following should be copied directly from support/style.css file -->
 ```css
