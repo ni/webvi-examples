@@ -165,7 +165,7 @@ ni-front-panel {
 }
 ```
 
-### Customize border of buttons
+#### Customize border of buttons
 
 ```css
 .user-class-name {
