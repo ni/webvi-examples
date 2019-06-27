@@ -9,6 +9,8 @@
 - [How do I customize a set of controls on my WebVI Panel?](#how-do-i-customize-a-set-of-controls-on-my-webvi-panel)
 - [Which CSS properties are known to work in each version of NXG?](#which-css-properties-are-known-to-work-in-each-version-of-nxg)
 
+> **Note:** The CSS FAQ covers topics that may require **detailed knowledge of underlying web concepts** or discuss APIs that are unstable and **may change between releases of LabVIEW NXG WebVIs**.
+
 ## What is CSS?
 
 It's a textual language used to style an HTML page. It's a deep topic. But you don't have to understand everything to successfully apply a set of CSS rules to a WebVI Panel.
