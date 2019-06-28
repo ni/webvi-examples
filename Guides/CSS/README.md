@@ -7,25 +7,52 @@
 - [Why is my WebVI ignoring my CSS?](#why-is-my-webvi-ignoring-my-css)
 - [How do I customize a specific control on my WebVI Panel?](#how-do-i-customize-a-specific-control-on-my-webvi-panel)
 - [How do I customize a set of controls on my WebVI Panel?](#how-do-i-customize-a-set-of-controls-on-my-webvi-panel)
-- [Which CSS properties are known to work in each version of NXG?](#which-css-properties-are-known-to-work-in-each-version-of-nxg)
+- [Which CSS properties are known to work?](#which-css-properties-are-known-to-work)
 
 > **Note:** The CSS FAQ covers topics that may require **detailed knowledge of underlying web concepts** or discuss APIs that are unstable and **may change between releases of LabVIEW NXG WebVIs**.
 
 ## What is CSS?
 
-It's a textual language used to style an HTML page. It's a deep topic. But you don't have to understand everything to successfully apply a set of CSS rules to a WebVI Panel.
+It's a textual language used to style an HTML page. It's a deep topic.
+But you don't have to understand everything to successfully apply a set of CSS rules to a WebVI Panel.
 
-The understand the basic terminology, consider this example:
+The understand the basic terminology, consider this CSS example:
 
 ```css
 p {
     color: red;
 }
+
+.my-class {
+    color: red;
+}
 ```
 
-`p` is called a _selector_. There are many types of selectors. This one is called an "element" type selector -- that literally selects all of the `<p>` tags in your HTML and applies the style rules to those tags. For styling WebVI controls, we recommend setting classes on the controls in the LabVIEW NXG IDE and then using the "class" type selector in your CSS. This simply means you will always need to put a dot in front of the selector name. Most examples on this page will follow this pattern.
-`color` keyword is called a _property_. There are many, many available properties, often best just explored via the browser Debug tools launched by the right-click Inspect command on any element of a webpage.
-`red` is called a _property value_. In this case the property value will accept specific colors as keywords, hashtag + 6-digits of hex, gradients, amongst other things.
+In a page with the following HTML:
+
+```html
+<p> paragraph one </p>
+<p> paragraph two </p>
+<span class="my-class my-other-class"> span text </span>
+```
+
+### CSS Selectors
+
+In this example, `p` and `.my-class` are called _selectors_. There are many types of selectors.
+The `p` selector is called an "element" selector -- it selects all of the `<p>` tags in your HTML and applies the style rules to those tags.
+
+The `.my-class` selector is called a "class" selector. The class that this selector targets is `my-class`.
+In the example HTML you can see that the `span` has two classes defined, `my-class` and `my-other-class`.
+Notice that the "class" selector starts with **a dot followed by the class name**.
+
+For styling WebVI controls, we recommend setting classes on the controls in the LabVIEW NXG IDE and then using the "class" type selector in your CSS.
+Most examples on this page will follow the class selector pattern.
+
+### CSS properties and values
+
+In the CSS, the `color` keyword is called a _CSS property_. There are many, many available properties, often best just explored via the browser Debug tools.
+Browser debug tools are launched by opening a page, right clicking an element, and choosing the Inspect command.
+`red` is called a _CSS value_. In this case the value will accept specific colors as keywords, hashtag + 6-digits of hex, gradients, [amongst other color representations](https://developer.mozilla.org/en-US/docs/Web/CSS/color).
 
 Those definitions could help you muddle forward. But to really understand what is going on, we suggest you familiarize yourself with CSS as described on the [Mozilla Developer Network](http://digital.ni.com/express.nsf/bycode/exmj34).
 
@@ -33,31 +60,36 @@ Those definitions could help you muddle forward. But to really understand what i
 
 No.
 
-Modifying CSS styles from the NI defaults will mean you need to manually update these when upgrading to the next version of the Web Module. The CSS selectors we are using are not stable from release to release, and we don't update your custom CSS if you were to open your WebVI in a new version of LabVIEW NXG.
+Modifying CSS styles from the NI defaults will mean you need to manually update these when upgrading to the next version of the Web Module.
+The CSS selectors we are using are not stable from release to release, and we don't update your custom CSS if you were to open your WebVI in a new version of LabVIEW NXG.
 
 ## When should I avoid customizing WebVIs via CSS?
 
-In order to keep your panel working the same release to release, you should avoid making customizations via CSS if there is a way to make that same customization via LabVIEW NXG via either:
+In order to keep your panel working the same release to release, you should avoid making customizations via CSS if there is a way to make that same customization via LabVIEW NXG using either:
 
-- LabVIEW NXG's configuration pane UI
+- The LabVIEW NXG configuration pane UI
 - Property nodes can be executed on the diagram to achieve the desired result
 
 ## How should I include CSS in my project?
 
-Though it is possible to inline your CSS into the WebVI source HTML, it is better practice to keep your CSS declaration separate from the HTML in separate files with a `.css` file extension. And then any number of pages can include those styles easily.
+Though it is possible to inline your CSS into the WebVI source HTML, it is better practice to keep your CSS declaration separate from the HTML in separate files with a `.css` file extension.
+And then any number of pages can include those styles easily.
 
-In LabVIEW NXG, this means adding `.css` files to your Web Application components in your project and then including `<link>` references in the HTML Source Panel of any VIs that you want to style. This will cause your WebVI to be styled at all times. You can also do this without editing the HTML Source of a WebVI using a JSLI document but this is a more advanced technique.
+In LabVIEW NXG, this means adding `.css` files to your Web Application components in your project and then including `<link>` references in the HTML Source Panel of any VIs that you want to style.
+This will cause your WebVI to be styled at all times. You can also do this without editing the HTML Source of a WebVI using a JSLI document, but this is a more advanced technique.
 
-It is common to edit the CSS file outside of the LabVIEW process. If you have edited the CSS while the WebVI panel is open in LabVIEW NXG, the panel will not automatically detect the changes. We suggest that you make a trivial edit to the HTML source of the WebVI, such as adding/removing a space character, and upon OKing that change the CSS style will be refreshed from the CSS file on disk. Closing and re-opening the WebVI will also cause it to detect changes to external CSS.
+It is common to edit the CSS file outside of the LabVIEW process. If you have edited the CSS while the WebVI panel is open in LabVIEW NXG, the panel will not automatically detect the changes.
+We suggest that you make a trivial edit to the HTML source of the WebVI, such as adding/removing a space character, and upon approving that change, the CSS style will be refreshed from the CSS file on disk.
+Closing and re-opening the WebVI will also cause it to detect changes to external CSS.
 
 ## Why is my WebVI ignoring my CSS?
 
-Let's go down the checklist of what you need to do in order for a WebVI Panel to pick up on your CSS file:
+Let's go down the checklist of what you need to do for a WebVI Panel to pick up on your CSS file:
 
 1. Make a new CSS file on disk, outside of LabVIEW
 2. Add the CSS file to you project
 3. Ensure that your CSS file is referenced in your Web App component and the box for "always include" is checked.
-4. You've added a reference from your WebVI to your CSS file by adding this snippet to the HTML source of your WebVI, in the `<head>` section, typically right before the closing `</head>` tag:
+4. Add a reference from your WebVI to your CSS file by adding this snippet to the HTML source of your WebVI, in the `<head>` section, typically right before the closing `</head>` tag:
 
    ```html
    <link rel="stylesheet" href="css/style.css">
@@ -67,7 +99,7 @@ Let's go down the checklist of what you need to do in order for a WebVI Panel to
 
 Double-check that the selector in your CSS matches the class name of the control(s) you want to style.
 
-**Note:** The selector in your CSS should be prefixed with a dot. For example:
+**Note:** The class selectors in your CSS **should** be prefixed with a dot. For example:
 
 ```css
 .my-class-name {
@@ -75,12 +107,12 @@ Double-check that the selector in your CSS matches the class name of the control
 }
 ```
 
-While the class attribute in the editor should omit the dot prefix, example:
+While the class attribute in the editor **should not** use the dot prefix. For example:
 
 ![HTML class attribute set to the value class-name without a dot prefix](readme_files/htmlclassattribute.png)
 
-You can also open your WebVI in a browser and view its source to see if the `<link>` tag above is being injected correctly
-and to verify that the path to the CSS file is not incorrect.
+You can also open your WebVI in a browser and view its source to see if the `<link>` tag is injected correctly
+and to verify that the path to the CSS file is correct.
 
 ## How do I customize a specific control on my WebVI Panel?
 
@@ -99,16 +131,17 @@ and be sure to put a `.` on the front of your class name in the CSS selector.
 
 ## How do I customize a set of controls on my WebVI Panel?
 
-In the LabVIEW NXG IDE, the HTML class attribute field will accept multiple user class names for a given control. The list of class names are delimited by space characters.
+In the LabVIEW NXG IDE, the `HTML class attribute` field will accept multiple user class names for a given control.
+**The class names are delimited by space characters**.
 
 Select each control in the WebVI you want to style similarly and add the same HTML class attribute to each one.
 CSS rules targeting that class name will be apply to any the controls in then Panel tagged with the same class name.
 
-## Which CSS properties are known to work in each version of NXG?
+## Which CSS properties are known to work?
 
-### Tested in LabVIEW NXG Web Module 3.1
+**Note:** The following CSS selectors and properties are known to work in **LabVIEW NXG 3.1**.
 
-#### Configure the Panel background
+### Configure the Panel background
 
 This property allows you to set colors, gradients, image settings, etc.
 
@@ -118,7 +151,7 @@ ni-front-panel {
 }
 ```
 
-#### Put a drop shadow around the Panel edge
+### Put a drop shadow around the Panel edge
 
 ```css
 ni-front-panel {
@@ -126,7 +159,7 @@ ni-front-panel {
 }
 ```
 
-#### Set a repeating image as the Page background (behind the Panel)
+### Set a repeating image as the Page background (behind the Panel)
 
 ```css
 body {
@@ -134,7 +167,7 @@ body {
 }
 ```
 
-#### Set the minimum width of the Page
+### Set the minimum width of the Page
 
 ```css
 body {
@@ -142,7 +175,7 @@ body {
 }
 ```
 
-#### Set the minimum width/height of the Panel
+### Set the minimum width/height of the Panel
 
 ```css
 ni-front-panel {
@@ -151,7 +184,7 @@ ni-front-panel {
 }  
 ```
 
-#### Add 4-pixel border around most controls (not Charts/Graphs)
+### Add 4-pixel border around most controls (not Charts/Graphs)
 
 ```css
 .user-class-name {
@@ -159,7 +192,7 @@ ni-front-panel {
 }
 ```
 
-#### Round corners on Buttons
+### Round corners on Buttons
 
 ```css
 .user-class-name button {
@@ -167,7 +200,7 @@ ni-front-panel {
 }
 ```
 
-#### Customize border of buttons
+### Customize border of buttons
 
 ```css
 .user-class-name {
@@ -177,7 +210,7 @@ ni-front-panel {
 }
 ```
 
-#### Remove border of Charts/Graphs
+### Remove border of Charts/Graphs
 
 ```css
 .user-class-name {
@@ -185,7 +218,7 @@ ni-front-panel {
 }
 ```
 
-#### Color background of Charts/Graphs or Freeform Text
+### Color background of Charts/Graphs or Freeform Text
 
 ```css
 .user-class-name {
@@ -193,7 +226,7 @@ ni-front-panel {
 }
 ```
 
-#### Color tick labels on Graphs
+### Color tick labels on Graphs
 
 ```css
 .user-class-name .flot-x-axis text,
@@ -202,7 +235,7 @@ ni-front-panel {
 }
 ```
 
-#### Color axis label color on Graphs
+### Color axis label color on Graphs
 
 ```css
 .user-class-name text.axisLabels {
@@ -210,7 +243,7 @@ ni-front-panel {
 }
 ```
 
-#### Color the text on String Controls or Indicators
+### Color the text on String Controls or Indicators
 
 ```css
 .user-class-name {
@@ -218,7 +251,7 @@ ni-front-panel {
 }
 ```
 
-#### Color the text on Numeric Controls or Indicators
+### Color the text on Numeric Controls or Indicators
 
 ```css
 .user-class-name {
@@ -226,7 +259,7 @@ ni-front-panel {
 }
 ```
 
-#### Remove background color from Numeric, String or Timestamp Controls
+### Remove background color from Numeric, String or Timestamp Controls
 
 ```css
 .user-class-name {
@@ -234,7 +267,7 @@ ni-front-panel {
 }
 ```
 
-#### Remove background color from Numeric, String or Timestamp Indicators
+### Remove background color from Numeric, String or Timestamp Indicators
 
 ```css
 .user-class-name {
@@ -242,7 +275,7 @@ ni-front-panel {
 }
 ```
 
-#### Change background + text color of active tab on a Tab Control
+### Change background + text color of active tab on a Tab Control
 
 ```css
 .user-class-name .jqx-ribbon-item.jqx-ribbon-item-selected {
@@ -251,7 +284,7 @@ ni-front-panel {
 }
 ```
 
-#### Hide tab carousel on a Tab Control (rely on programmatic tab switching instead)
+### Hide tab carousel on a Tab Control (rely on programmatic tab switching instead)
 
 ```css
 .user-class-name .jqx-ribbon-item {
@@ -259,7 +292,7 @@ ni-front-panel {
 }
 ```
 
-#### Configure the border of _just_ the tab control _container_
+### Configure the border of _just_ the tab control _container_
 
 ```css
 .user-class-name {
@@ -267,7 +300,7 @@ ni-front-panel {
 }
 ```
 
-#### Tighten up the blank space between all Flexible Layout Containers
+### Tighten up the blank space between all Flexible Layout Containers
 
 ```css
 ni-flexible-layout-container {
@@ -275,7 +308,7 @@ ni-flexible-layout-container {
 }
 ```
 
-#### Change background or foreground colors on Enums
+### Change background or foreground colors on Enums
 
 ```css
 .user-class-name {
@@ -284,7 +317,7 @@ ni-flexible-layout-container {
 }
 ```
 
-#### Make the track on a Slider transparent
+### Make the track on a Slider transparent
 
 ```css
 .user-class-name .jqx-container .jqx-track::before {
@@ -293,7 +326,7 @@ ni-flexible-layout-container {
 }
 ```
 
-#### Change color of the track labels on a Slider
+### Change color of the track labels on a Slider
 
 ```css
 .user-class-name {
@@ -301,7 +334,7 @@ ni-flexible-layout-container {
 }
 ```
 
-#### Set the fill color on Linear/Circular Progress Bars
+### Set the fill color on Linear/Circular Progress Bars
 
 ```css
 .user-class-name {
@@ -309,7 +342,7 @@ ni-flexible-layout-container {
 }
 ```
 
-#### Set the scale color on Tank Controls
+### Set the scale color on Tank Controls
 
 ```css
 .user-class-name {
@@ -317,7 +350,7 @@ ni-flexible-layout-container {
 }
 ```
 
-#### Set color of the thumb on a Vertical Switch
+### Set color of the thumb on a Vertical Switch
 
 ```css
 .user-class-name[checked] span.jqx-thumb::after, jqs-switch-button[checked]:hover span.jqx-thumb::after {
@@ -325,7 +358,7 @@ ni-flexible-layout-container {
 }
 ```
 
-#### Set the fill color on Gauges
+### Set the fill color on Gauges
 
 ```css
 .user-class-name .jqx-value {
@@ -333,7 +366,7 @@ ni-flexible-layout-container {
 }
 ```
 
-#### Set the true/false colors for the Power Button
+### Set the true/false colors for the Power Button
 
 ```css
 .user-class-name {
@@ -344,4 +377,4 @@ ni-flexible-layout-container {
 }
 ```
 
-Additional tips can be found in the [product documentation](http://www.ni.com/documentation/en/labview-web-module/latest/manual/customizing-appearance-controls-webvi/) or in the [shipping example that demonstrates CSS styling](https://github.com/ni/webvi-examples/tree/master/CustomizeWithCss).
+Additional tips can be found in the [product documentation](http://www.ni.com/documentation/en/labview-web-module/latest/manual/customizing-appearance-controls-webvi/) or in the [shipping example that demonstrates CSS styling](../../CustomizeWithCss).
