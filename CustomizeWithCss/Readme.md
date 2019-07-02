@@ -1,20 +1,24 @@
 # Customize WebVI with CSS
+
 [![Customize WebVI with CSS Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/CustomizeWithCss/Builds/WebApp_Web%20Server/)
 [![Customize WebVI with CSS README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)]()
 
 This example demonstrates how to customize the styling of a WebVI using CSS.
 
-The underlying technology used by WebVIs is HTML Custom Elements. One of the advantages of using HTML Custom Elements is the ability leverage CSS in a web application that seperates style from the content. For example, you could create a custom CSS file that is shared across your organization for custom styles and layouts.
+The underlying technology used by WebVIs is HTML Custom Elements. One of the advantages of using HTML Custom Elements is the ability leverage CSS in a web application that separates style from the content. For example, you could create a custom CSS file that is shared across your organization for custom styles and layouts.
 
 ![Screenshot of Demo](readme_files/Screenshot.gif)
 
-# Usage
+## Usage
+
 You can use this approach in your own projects if you are familiar with CSS and how it interacts with HTML. For example, you can customize controls and indicators to match a corporate color scheme or make them accessible for color-blind users or in low contrast situations.
 
-# Dependencies
+## Dependencies
+
 - LabVIEW NXG Web Module
 
-# Setup
+## Setup
+
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
 2. Open `CustomizeWithCss/CustomizeWithCss.lvproject`.
 3. On the **Project Files** tab, expand `WebApp.gcomp` and open `index.gviweb`.
@@ -23,13 +27,16 @@ You can use this approach in your own projects if you are familiar with CSS and 
   a. On the **Project Files** tab, double-click `WebApp.gcomp` to open the web application component.  
   b. On the **Document** tab, click **Build**.  
 
-**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Server** >> right-click **WebApp.gcomp** >> **Run**
+**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Server** >> right-click `WebApp.gcomp` >> **Run**
 
-# Hosting
-You can manually move the build output found at `\CustomizeWithCss\Builds` to any web server. This project also includes a Distribution (WebApp.lvdist) that can be used to build a package (.nipkg). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on SystemLink Cloud.
+## Hosting
 
-## SystemLink Cloud Web App Hosting
+You can manually move the build output found at `\CustomizeWithCss\Builds` to any web server. This project also includes a Distribution (`WebApp.lvdist`) that can be used to build a package (.nipkg). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on SystemLink Cloud.
+
+### SystemLink Cloud Web App Hosting
+
 The following steps can be used to host the web app on SystemLink Cloud
+
 1. Open `CustomizeWithCss.lvproject`.
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
@@ -37,46 +44,54 @@ The following steps can be used to host the web app on SystemLink Cloud
 5. Click the **Choose nipkg** button and select the nipkg built in step 3.
 6. When the upload is complete, click on your newly uploaded Web app from your list of Web apps
 
-## Local Hosting
+### Local Hosting
+
 The following steps can be used to host the web app on a local web server
-### Hosting on the NI Web Server with a nipkg
+
+#### Hosting on the NI Web Server with a nipkg
+
 1. Open `CustomizeWithCss.lvproject`
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Double-click the nipkg and follow the on screen instructions
 5. Open a web browser and navigate to `http://localhost:9090/customizewithcss/`
 
-### Hosting on the LabVIEW 2009-2017 Web Server
+#### Hosting on the LabVIEW 2009-2017 Web Server
+
 1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
 2. Copy the `WebApp_Web Server` directory into the `www` directory.
 3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/`
 
-### Hosting on the NI Web Server
+#### Hosting on the NI Web Server
+
 1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
 2. Copy the `WebApp_Web Server` directory into the `htdocs` directory.
 3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/`.
 
-# Details
+## Details
 
-## Adding custom CSS rules to a WebVI
-1. Add a css file to the root of the WebApp component, for example: `custom_style.css`
+### Adding custom CSS rules to a WebVI
+
+1. Add a CSS file to the root of the Web Application component, for example: `custom_style.css`
 2. Open `index.gviweb` and launch the HTML source dialog by pressing the `Edit panel HTML` button in the WebVI panel's toolbar.
-2. Enter the following line inside the `head` section of the page right before the closing `</head>` tag.
+3. Enter the following line inside the `head` section of the page right before the closing `</head>` tag.
+
     ```html
     <link rel="stylesheet" href="custom_style.css">
     ```
 
-3. Click the **OK** button in the HTML source dialog and build the web application. Refer to the [setup section](#setup) for instructions on building a web application.
-4. Modify `custom_style.css` to include the style rules for the page
+4. Click the **OK** button in the HTML source dialog and build the web application. Refer to the [setup section](#setup) for instructions on building a web application.
+5. Modify `custom_style.css` to include the style rules for the page
 
-## CSS rule behavior
-The following section describes the behavior of the CSS rules used in the example. The css rules are included from the `WebApp.gcomp/support/style.css` file.
+### CSS rule behavior
+
+The following section describes the behavior of the CSS rules used in the example. The style rules are included from the `WebApp.gcomp/support/style.css` file.
 
 <!-- Note: The following should be copied directly from support/style.css file -->
 ```css
 /*
 Make the page background white.
-Set the panel to blue with a drop shadow. 
+Set the panel to blue with a drop shadow.
 */
 
 ni-front-panel {
@@ -134,7 +149,7 @@ Set the power button to have an orange foreground when true.
 
 /*
 Set the power button to have a yellow background.
-Set the circular progress bar to have a yellow fill. 
+Set the circular progress bar to have a yellow fill.
 */
 
 .activation-button.warning {
@@ -163,7 +178,7 @@ Set the circular progress bar to have a red fill.
 
 /*
 Make the non-plot area and the plot area transparent.
-Make the axis ticks white. 
+Make the axis ticks white.
 Make the axis labels light gray.
 */
 
@@ -196,7 +211,7 @@ jqx-tank {
 
 /*
 Make the numeric text white.
-Remove all borders and background colors. 
+Remove all borders and background colors.
 */
 
 jqx-numeric-text-box {
