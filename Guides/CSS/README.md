@@ -353,7 +353,7 @@ ni-flexible-layout-container {
 ### Set color of the thumb on a Vertical Switch
 
 ```css
-.user-class-name[checked] span.jqx-thumb::after, jqs-switch-button[checked]:hover span.jqx-thumb::after {
+.user-class-name[checked] span.jqx-thumb::after {
    background: yellow;
 }
 ```
