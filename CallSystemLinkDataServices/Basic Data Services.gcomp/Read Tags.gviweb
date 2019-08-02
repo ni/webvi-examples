@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="79E1C68E608EC9B7F359044AFE6B7825A3174FF203000FC242B581DD4C007DF8A19AE74F6D968C9F51069AA12B8A016E7C45F1D67B608F465EA125A582FCE75E" Timestamp="1D548A6766A0030" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="E8A51609005E4CAE9F0748426743EB35FA6B26884BCC101D29E0B6158869D47FA5E8E5A8932E214411375973D8D9DD7C0794472671FAFA29FE1EC4E33DD0ACAE" Timestamp="1D54978617C45E1" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="7.1.0.2007" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="7.1.0.9" Version="7.1.0.9" />
 		<ParsableNamespace AssemblyFileVersion="7.1.0.2007" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="7.1.0.5" Version="7.1.0.5" />
@@ -47,6 +47,12 @@
 			</DataAccessor>
 			<NodeLabel AttachedTo="bbb39f87a06a40d888e5b6c53b129c07" Bounds="-35 0 30 15" Id="605d7d11ccf14a7bafe564feec102e30" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>Hyperlink Control_2</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="0 0 40 15" DataItem="769b0f890afe44c28d7074471b9b6209" Id="5eceb6996cce44d5b37d52100e5f6899" Label="b5b9d3f2d091427d84900cd57576059f">
+				<Terminal DataType="String" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="5eceb6996cce44d5b37d52100e5f6899" Bounds="-35 0 30 15" Id="b5b9d3f2d091427d84900cd57576059f" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>Hyperlink Control_3</p.Text>
 			</NodeLabel>
 		</DiagramUnplacedItems>
 		<FrontPanelUnplacedItems Id="11" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" />
@@ -110,22 +116,22 @@
 				<DataAccessor Bounds="225 30 40 15" DataItem="17" Id="198" Label="199" xmlns="http://www.ni.com/MocCommon">
 					<Terminal DataType="Double" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 				</DataAccessor>
-				<NodeLabel AttachedTo="198" Bounds="270 30 84 14" Id="199" xmlns="http://www.ni.com/PlatformFramework">
+				<NodeLabel AttachedTo="198" Bounds="270 30 85 14" Id="199" xmlns="http://www.ni.com/PlatformFramework">
 					<p.Text>Inner Temp (F)</p.Text>
 				</NodeLabel>
 				<DataAccessor Bounds="225 50 40 15" DataItem="32" Id="222" Label="223" xmlns="http://www.ni.com/MocCommon">
 					<Terminal DataType="Double" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 				</DataAccessor>
-				<NodeLabel AttachedTo="222" Bounds="270 50 85 14" Id="223" xmlns="http://www.ni.com/PlatformFramework">
+				<NodeLabel AttachedTo="222" Bounds="270 50 87 14" Id="223" xmlns="http://www.ni.com/PlatformFramework">
 					<p.Text>Outer Temp (F)</p.Text>
 				</NodeLabel>
 				<Wait Bounds="425 5 40 40" Id="720" />
-				<Literal Bounds="375 20 45 15" DataType="UInt32" Id="721" Label="723" xmlns="http://www.ni.com/MocCommon">
+				<Literal Bounds="380 20 40 15" DataType="UInt32" Id="721" Label="723" xmlns="http://www.ni.com/MocCommon">
 					<p.Data>200</p.Data>
 					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:0" />
 				</Literal>
 				<Wire Id="722" Joints="N(721:Out)|(420,25) N(720:time to wait)|(425,25)" xmlns="http://www.ni.com/PlatformFramework" />
-				<NodeLabel AttachedTo="721" Bounds="375 2 30 15" Id="723" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+				<NodeLabel AttachedTo="721" Bounds="380 2 30 15" Id="723" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 					<p.Text>milliseconds to wait</p.Text>
 				</NodeLabel>
 				<MethodCall Bounds="40 80 40 40" Id="195" ResolveFailedHint="Read Tag (DBL).gvi, Package: (NI SystemLink Tag support for LabVIEW NXG 4.0, Version: 19.5.0)" Signature="@d47091172e4941deb36dc519a1cfd0da" Target="NI::Skyline::TagHTTP::Read Tag (DBL).gvi" xmlns="http://www.ni.com/MocCommon">
@@ -276,6 +282,31 @@
 						<p.Text>password</p.Text>
 					</NodeLabel>
 				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 300 115" Id="45efdad8cee347fb973dfc26772e9a68" Pattern="2">
+					<MethodCall Bounds="200 35 40 40" Id="8efd67387730476db9083a2f6e3b1004" ResolveFailedHint="Open Configuration.gvi, Package: (NI SystemLink Common support for LabVIEW NXG 4.0, Version: 19.5.0)" Signature="@c5cbece99dec47a8b5b289976394386d" Target="NI::Skyline::Configuration::Open Configuration.gvi" xmlns="http://www.ni.com/MocCommon">
+						<p.MethodDeclaration>
+							<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+								<Parameter Id="L0" Desc="server url" />
+								<Parameter Id="L1" Desc="username" />
+								<Parameter Id="L2" Desc="password" />
+								<Parameter Id="L3" Desc="error in" />
+								<Parameter Id="R0" Desc="configuration" />
+								<Parameter Id="R3" Desc="error out" />
+							</MethodDeclaration>
+						</p.MethodDeclaration>
+						<Terminal DataType="String" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+						<Terminal DataType="String" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+						<Terminal DataType="String" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+						<Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+						<Terminal DataType="@1e775b1dd2454d118e738bea1c089eb8" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+						<Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
+					</MethodCall>
+					<Wire Id="2ea700f408a343fe94b1957a7b0f9141" Joints="N(8efd67387730476db9083a2f6e3b1004:R0)|(240,40) N(37c53ac09f1c4016982515f329b52805:45efdad8cee347fb973dfc26772e9a68)|(296,40)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="21c25d1d24554a558454109d41b4a717" Joints="N(8efd67387730476db9083a2f6e3b1004:R3)|(240,70) N(e6f78bd641164f9a9411e57a6b17b397:45efdad8cee347fb973dfc26772e9a68)|(296,70)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Comment Bounds="30 25 150 65" Id="d9f09a0c3a764a12b950601a9908b77b" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
+						<p.Text>"No credentials required when deploying to SystemLink Cloud or NI Web Server "</p.Text>
+					</Comment>
+				</CaseStructure.Case>
 				<CaseStructure.Case Bounds="5 5 300 115" Id="3677649c2d0a4931bb2e2e523caba396" Pattern="1">
 					<Literal Bounds="10 35 200 15" DataType="String" Id="1144def22f6b44d099319f0851cd8d10" Label="f5a27ae9b4fc4840b665c5c68e79bcff" xmlns="http://www.ni.com/MocCommon">
 						<p.Data>https://api.systemlinkcloud.com</p.Data>
@@ -311,9 +342,9 @@
 						<p.Text>API Key</p.Text>
 					</NodeLabel>
 				</CaseStructure.Case>
-				<CaseStructure.Selector Bounds="-4 40 13 10" Docking="Left" Id="226928ad33414ec38df3907c7e35696d" Terminals="4e2a14dd4b404641a437e759660d428e=8c5df01f027a40ac952e28612d9aec4d, 49ccab893ff84b4e87d2fb64456b720c, 3677649c2d0a4931bb2e2e523caba396" />
-				<CaseStructure.Tunnel Bounds="301 40 13 10" Docking="Right" Id="37c53ac09f1c4016982515f329b52805" Terminals="4e2a14dd4b404641a437e759660d428e=65eae885c5fc4c65948fd30e1a4a908f, 49ccab893ff84b4e87d2fb64456b720c=a276d3d5f12a4986b342205d75c2b35a, 3677649c2d0a4931bb2e2e523caba396=130111ddf1e545728cb14494e1543155" />
-				<CaseStructure.Tunnel Bounds="301 70 13 10" Docking="Right" Id="e6f78bd641164f9a9411e57a6b17b397" Terminals="4e2a14dd4b404641a437e759660d428e=24b9d549fcb14ed0a32a2b50e0ebd12c, 49ccab893ff84b4e87d2fb64456b720c=63347b1a7284501920b18a18886fdff, 3677649c2d0a4931bb2e2e523caba396=c50a7891e75944a1baa286d0b432079b" />
+				<CaseStructure.Selector Bounds="-4 40 13 10" Docking="Left" Id="226928ad33414ec38df3907c7e35696d" Terminals="4e2a14dd4b404641a437e759660d428e=8c5df01f027a40ac952e28612d9aec4d, 49ccab893ff84b4e87d2fb64456b720c, 3677649c2d0a4931bb2e2e523caba396, 45efdad8cee347fb973dfc26772e9a68" />
+				<CaseStructure.Tunnel Bounds="301 40 13 10" Docking="Right" Id="37c53ac09f1c4016982515f329b52805" Terminals="4e2a14dd4b404641a437e759660d428e=65eae885c5fc4c65948fd30e1a4a908f, 49ccab893ff84b4e87d2fb64456b720c=a276d3d5f12a4986b342205d75c2b35a, 3677649c2d0a4931bb2e2e523caba396=130111ddf1e545728cb14494e1543155, 45efdad8cee347fb973dfc26772e9a68=2ea700f408a343fe94b1957a7b0f9141" />
+				<CaseStructure.Tunnel Bounds="301 70 13 10" Docking="Right" Id="e6f78bd641164f9a9411e57a6b17b397" Terminals="4e2a14dd4b404641a437e759660d428e=24b9d549fcb14ed0a32a2b50e0ebd12c, 49ccab893ff84b4e87d2fb64456b720c=63347b1a7284501920b18a18886fdff, 3677649c2d0a4931bb2e2e523caba396=c50a7891e75944a1baa286d0b432079b, 45efdad8cee347fb973dfc26772e9a68=21c25d1d24554a558454109d41b4a717" />
 			</CaseStructure>
 			<Wire Id="8c5df01f027a40ac952e28612d9aec4d" Joints="N(49eaecb517514d2f9cc486276d429b7e:Value)|(295,380) N(226928ad33414ec38df3907c7e35696d:4e2a14dd4b404641a437e759660d428e)|(321,380)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="65eae885c5fc4c65948fd30e1a4a908f" Joints="N(37c53ac09f1c4016982515f329b52805:4e2a14dd4b404641a437e759660d428e)|(639,380) h(301) B(1) h(50) N(164:T0)|(990,410) B(1) v(-65) B(4) h(50) N(163:T0)|(990,325) B(4) v(-95) h(700) v(110) N(205:L0)|(1650,330)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -323,6 +354,9 @@
 			<NodeLabel AttachedTo="49eaecb517514d2f9cc486276d429b7e" Bounds="104 375 146 14" Id="fcfab35b7fd047fa8bd0357205b9e82f" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>Authentication Credentials</p.Text>
 			</NodeLabel>
+			<Comment Bounds="370 475 225 50" Id="ee4b453b93f04fc496790ddb3c2fc0fb" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
+				<p.Text>Open a connection to SystemLink Server or SystemLink Cloud</p.Text>
+			</Comment>
 		</BlockDiagram>
 		<HtmlFrontPanel Height="[float]768" Id="15" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" Width="[float]1024" xmlns="http://www.ni.com/NationalInstruments.LabVIEW.HtmlVI">
 			<Text BaseName="[string]Text" Height="[float]168" Id="16" Left="[float]35" MinHeight="[float]11" MinWidth="[float]11" SizeMode="[TextModelSizeMode]Fixed" Text="[string]Overview: Demonstrates the use of the SystemLink Tag functions to write multiple tag values. Use tags to publish and monitor live measurement data.&#xD;&#xA;&#xD;&#xA;Requirements: LabVIEW NXG Web Module&#xD;&#xA;&#xD;&#xA;Instructions:&#xD;&#xA;1. Ensure the local SystemLink Server is running or you have access to SystemLink Cloud&#xD;&#xA;2. Specify the appropriate credentials for SystemLink Server or SystemLink Cloud in the Authentication Credentials tab control on the Panel below&#xD;&#xA;3. Publish data to this VI using LabVIEW using webvi-examples\CallSystemLinkDataServices\LabVIEWExamples.lvproj&gt;WriteTags.vi&#xD;&#xA;4. Run WriteTags.vi&#xD;&#xA;5. Run this WebVI. " TextWrapping="[TextWrapping]Wrap" Top="[float]52" Width="[float]984" xmlns="http://www.ni.com/PlatformFramework">
@@ -392,7 +426,7 @@
 				<FontSetting FontFamily="Segoe UI" FontSize="14" Id="6904071b8e964640a5e5b833f0459593" />
 			</Text>
 			<TabControl BaseName="[string]Tab" Height="[float]216" Id="412270da634f46f490874b3104eef226" IncludeInCapture="[bool]False" Label="[UIModel]ed4c88ce685f4a40b6c39f414180b234" Left="[float]35" MinHeight="[float]55" MinWidth="[float]60" SelectedIndex="{DataItemBinding Id=4c2bd1d0547c47bb89f4ea323d37db34}" TabIndex="[int]5" Top="[float]532" Width="[float]338" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-				<TabItem Header="[string]On Premises" Id="8cd8c69db63c487f94186c1971e26040" Left="[float]0" TabIndex="[int]5" Top="[float]0">
+				<TabItem Header="[string]SystemLink Server" Id="8cd8c69db63c487f94186c1971e26040" Left="[float]0" TabIndex="[int]5" Top="[float]0">
 					<HtmlBehavior ClassAttributes="" xmlns="http://www.ni.com/PlatformFramework">
 						<p.ElementAttributes>
 							<Attribute Name="tab-position" Value="0" />
@@ -407,7 +441,7 @@
 						<Label Height="[float]16" Id="d2f7b15876524faaae56c381244dab1b" LabelOwner="[UIModel]341359c74db24e83958fd77752fd9622" Left="[float]10" Text="[string]server url" Top="[float]5" Width="[float]49" xmlns="http://www.ni.com/PanelCommon" />
 					</LayoutPanel>
 				</TabItem>
-				<TabItem Header="[string]Cloud" Id="56452d4f48a4b2da5552e6c71d4a8ff" Left="[float]0" TabIndex="[int]5" Top="[float]0">
+				<TabItem Header="[string]SystemLink Cloud" Id="56452d4f48a4b2da5552e6c71d4a8ff" Left="[float]0" TabIndex="[int]5" Top="[float]0">
 					<HtmlBehavior ClassAttributes="" xmlns="http://www.ni.com/PlatformFramework">
 						<p.ElementAttributes>
 							<Attribute Name="tab-position" Value="1" />
@@ -416,6 +450,13 @@
 					<LayoutPanel Height="[float]191" Id="fb6d166d4abb4b0585ea881ca4faa80c" Left="[float]1" MinHeight="[float]30" Top="[float]24" Width="[float]336">
 						<StringControl AcceptsReturn="[bool]False" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="d0ece35e636e4beaa8ae89a287d550ce" Label="[UIModel]8d01317df8784bffba33dcc71e07bfdb" Left="[float]10" TabIndex="[int]0" Text="{DataItemBinding Id=fa94a39be685479c96b17dd496e053e9}" Top="[float]37" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]319" />
 						<Label Height="[float]16" Id="8d01317df8784bffba33dcc71e07bfdb" LabelOwner="[UIModel]d0ece35e636e4beaa8ae89a287d550ce" Left="[float]10" Text="[string]API Key" Top="[float]17" Width="[float]40" xmlns="http://www.ni.com/PanelCommon" />
+						<LVHyperlinkControl BaseName="[string]Hyperlink Control" Content="[string]Use Tag Viewer to manage or debug your tags" Foreground="[SMColor]#ff73a9d8" Height="[float]24" Id="e6a880a5b4b7437d9e049ccdc5fcedd3" IsUrlSameAsContent="[bool]False" Label="[UIModel]b16ce85b14f34026a4c5c1df1c4be274" Left="[float]16" TabIndex="[int]1" TargetUrl="{DataItemBinding Id=769b0f890afe44c28d7074471b9b6209}" Top="[float]159" Width="[float]280" />
+						<Label Height="[float]16" Id="b16ce85b14f34026a4c5c1df1c4be274" LabelOwner="[UIModel]e6a880a5b4b7437d9e049ccdc5fcedd3" Left="[float]16" Text="[string]Hyperlink Control_3" Top="[float]139" Visible="[bool]False" Width="[float]105" xmlns="http://www.ni.com/PanelCommon" />
+					</LayoutPanel>
+				</TabItem>
+				<TabItem Header="[string]Deployed" Id="636bb75596ef4d2d9f8586a45e5264e5" Left="[float]0" Top="[float]0">
+					<LayoutPanel Height="[float]191" Id="111c1a76e8444f48af66c84865f68a0f" Left="[float]1" MinHeight="[float]30" Top="[float]24" Width="[float]336">
+						<Text BaseName="[string]Text" Height="[float]136" Id="2a0f15e5adf147adadcdf794262b4fa8" Left="[float]16" MinHeight="[float]11" MinWidth="[float]11" SizeMode="[TextModelSizeMode]Fixed" Text="[string]Note: You do not need to specify a URL or credentials (username/password or API key) when hosting a WebVI on SystemLink Cloud or NI Web Server.&#xD;&#xA;&#xD;&#xA;During development, specify SystemLink Server or SystemLink Cloud credentials in the appropriate tab." TextWrapping="[TextWrapping]Wrap" Top="[float]20" Width="[float]280" xmlns="http://www.ni.com/PlatformFramework" />
 					</LayoutPanel>
 				</TabItem>
 			</TabControl>
@@ -442,7 +483,7 @@
 			<p.DefaultValue>Read TDMS Data.html</p.DefaultValue>
 		</DataItem>
 		<DataItem AdaptToDiagramType="True" DataType="Int32" Id="4c2bd1d0547c47bb89f4ea323d37db34" Name="Authentication Credentials" xmlns="http://www.ni.com/MocCommon">
-			<p.DefaultValue>0</p.DefaultValue>
+			<p.DefaultValue>2</p.DefaultValue>
 		</DataItem>
 		<DataItem AdaptToDiagramType="True" DataType="String" Id="21ee055b2e454e6384cb979e36e4c84f" Name="password" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>""</p.DefaultValue>
@@ -455,6 +496,9 @@
 		</DataItem>
 		<DataItem AdaptToDiagramType="True" DataType="String" Id="fa94a39be685479c96b17dd496e053e9" Name="API Key" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>""</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="String" Id="769b0f890afe44c28d7074471b9b6209" Name="Hyperlink Control_3" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>https://www.systemlinkcloud.com/tags/viewer</p.DefaultValue>
 		</DataItem>
 	</VirtualInstrument>
 	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
