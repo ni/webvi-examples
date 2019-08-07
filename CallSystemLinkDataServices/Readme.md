@@ -1,7 +1,7 @@
 # Call SystemLink Data Services
 
 [![Call SystemLink Data Services](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/CallSystemLinkDataServices/Builds/WebApp_Web%20Server/)
-[![Call SystemLink Data Services README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](https://github.com/ni/webvi-examples/tree/master/CallSystemLinkDataServices)
+[![Call SystemLink Data Services README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)]()
 
 This example demonstrates how to use a WebVI to communicate over networks with SystemLink Tags after connecting to SystemLink Cloud or SystemLink Server, an on-premises web server.  
 
@@ -90,11 +90,10 @@ To connect to SystemLink Cloud from LabVIEW NXG Web Module, you need a server UR
 
 ### Running the Example Web application
 
-1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine. [Go here](https://help.github.com/articles/cloning-a-repository/) if you’re new to cloning repositories on GitHub.
-2. Open the **Call SystemLink Data Services** example in LabVIEW NXG Web Module.
-   > **Note**: You can search for it by name in the search bar or navigate to **Learning»Examples»Programming WebVIs»Call SystemLink Data Services** to launch it.
-
-3. Open `index.gviweb` and click **Run**.
+1. Open the **Call SystemLink Data Services** example in LabVIEW NXG Web Module.
+   - You can search for it by name in the search bar or navigate to **Learning»Examples»Programming WebVIs»Call SystemLink Data Services** to launch it.
+   - Alternately, clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine to use the latest version of this example. [Go here](https://help.github.com/articles/cloning-a-repository/) if you’re new to cloning repositories on GitHub.
+2. Open `index.gviweb` and click **Run**.
 
 ### Cloud Hosting Overview
 
@@ -164,13 +163,13 @@ After installing LabVIEW NXG Web Module, you need to install and configure a Sys
 
 ### Building and Running the Example Web application
 
-1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine. [Go here](https://help.github.com/articles/cloning-a-repository/) if you’re new to cloning repositories on GitHub.
-2. Open the **Call SystemLink Data Services** example in LabVIEW NXG Web Module.
-   >**Note**: You can either search for the example by name in the search bar or select **Learning»Examples»Programming WebVIs»Call SystemLink Data Services** to launch it.
+1. Open the **Call SystemLink Data Services** example in LabVIEW NXG Web Module.
+   - You can search for it by name in the search bar or navigate to **Learning»Examples»Programming WebVIs»Call SystemLink Data Services** to launch it.
+   - Alternately, clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine to use the latest version of this example. [Go here](https://help.github.com/articles/cloning-a-repository/) if you’re new to cloning repositories on GitHub.
 
-3. Open `index.gviweb` and click **Run**.
-4. On the **Projects Files** tab, double-click the `Full Data Services App.gcomp` to open it.
-5. On the **Document tab**, click **Build** to build your web application.
+2. Open `index.gviweb` and click **Run**.
+3. On the **Projects Files** tab, double-click the `Full Data Services App.gcomp` to open it.
+4. On the **Document tab**, click **Build** to build your web application.
    > **Note**: You can automatically launch and view the web application locally by right-clicking the web application in SystemDesigner and then clicking **Run**.
 
 ### Hosting Overview
@@ -193,19 +192,19 @@ Follow the instructions below to host the web app on a web server.
 
 4. Click **Locate item in Windows Explorer** to find the build output.
 5. Double-click the package (`.nipkg`) and follow the on-screen instructions.
-6. Open a web browser and navigate to `http://localhost:9090/CallSystemLinkdataservices/index.html`.
+6. Open a web browser and navigate to `http://localhost:9090/CallSystemLinkdataservices/`.
 
 #### Hosting on the LabVIEW 2009-2018 Web Server
 
 1. Go to the LabVIEW Web Server directory using the following path: `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
 2. Copy the entire `Full Data Services App_Web Server` directory into the `www` directory of the LabVIEW web server.
-3. Open a web browser and navigate to `http://localhost:8080/Full%20Data%20Services%20App_Web%20Server/index.html`.
+3. Open a web browser and navigate to `http://localhost:8080/Full%20Data%20Services%20App_Web%20Server/`.
 
 #### Hosting on the NI Web Server
 
 1. Go to the NI Web Server using the following path: `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
 2. Copy the `Full Data Services App_Web Server` directory into the `htdocs` directory of the NI Web Server.
-3. Open a web browser and navigate to `http://localhost:9090/Full%20Data%20Services%20App_Web%20Server/index.html`.
+3. Open a web browser and navigate to `http://localhost:9090/Full%20Data%20Services%20App_Web%20Server/`.
 
 ## WebVI Details
 
