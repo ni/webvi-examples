@@ -175,7 +175,7 @@ After installing LabVIEW NXG Web Module, you need to install and configure a Sys
 ### Hosting Overview
 
 After you create a web application and build the package in LabVIEW NXG Web Module, you need to move it to a web server. This enables administrators to access it from a web browser. Copy your entire web application output directory to any web server you choose.
-> **Note:** To navigate to your web application output on your machine, click **Locate directory in Windows Explorer** on the **Document** tab of your web application component document. You can also access the build output by navigating to your web application’s project folder manually (`\CallSystemLinkDataServices\Builds`).
+> **Note:** To navigate to your web application output on your machine, click **Locate directory in Windows Explorer** on the **Document** tab of your web application component document. You can also access the build output by navigating to your web application’s project folder manually (`..\CallSystemLinkDataServices\Builds`).
 
 Furthermore, this project includes a distribution document (`Full Data Services App.lvdist`), which you can use to build a package (`.nipkg`). A package is also required for hosting a web application on SystemLink Cloud. [Go here](http://www.ni.com/documentation/en/labview/3.0/application-builder/distributing-app-lib/) to learn more about distributing applications.
 
@@ -214,7 +214,7 @@ The Message API communicates between systems with strings by publishing messages
 
 Refer to the [SystemLink API Docs](https://www.systemlinkcloud.com/skyline-api-documentation) to find out more about the SystemLink data services API.
 
-Use the example **index.gviweb** to learn how these APIs can be assembled into an interactive application. Use the examples in **Basic Data Services.gcomp** for a simple overview of how these APIs are used. Use the LabVIEW examples in **LabVIEWExamples.lvproj** to see how you can interact with SystemLink Cloud from LabVIEW and LabVIEW Real-Time.
+Use the example `index.gviweb` to learn how these APIs can be assembled into an interactive application. Use the examples in `Basic Data Services.gcomp` for a simple overview of how these APIs are used. Use the LabVIEW examples in the application’s project folder `..\CallSystemLinkDataServices\LabVIEWExamples\LabVIEWExamples.lvproj`, to see how you can interact with SystemLink Cloud from LabVIEW and LabVIEW Real-Time.
 
 ## Security
 
