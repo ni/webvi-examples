@@ -214,7 +214,9 @@ The Message API communicates between systems with strings by publishing messages
 
 Refer to the [SystemLink API Docs](https://www.systemlinkcloud.com/skyline-api-documentation) to find out more about the SystemLink data services API.
 
-Use the example `index.gviweb` to learn how these APIs can be assembled into an interactive application. Use the examples in `Basic Data Services.gcomp` for a simple overview of how these APIs are used. Use the LabVIEW examples in the application’s project folder `..\CallSystemLinkDataServices\LabVIEWExamples\LabVIEWExamples.lvproj`, to see how you can interact with SystemLink Cloud from LabVIEW and LabVIEW Real-Time.
+- Use the example `index.gviweb` to learn how these APIs can be assembled into an interactive application.
+- Use the examples in `Basic Data Services.gcomp` for a simple overview of these APIs.
+- Use the LabVIEW examples in the application’s project folder `..\CallSystemLinkDataServices\LabVIEWExamples\LabVIEWExamples.lvproj` to see how you can interact with SystemLink and SystemLink Cloud from LabVIEW and LabVIEW Real-Time.
 
 ## Security
 
