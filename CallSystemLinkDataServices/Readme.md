@@ -30,12 +30,13 @@ To use SystemLink data services, you need one of the following product combinati
 
 - LabVIEW NXG with [LabVIEW NXG Web Module](http://www.ni.com/labview/webmodule/)
 - LabVIEW 2015-2018 with SystemLink Client 18.0
+- LabVIEW 2016-2019 with SystemLink Client 19.5
 
 Use NI Package Manager to install the products you need. If you do not have NI Package Manager, [download](http://search.ni.com/nisearch/app/main/p/bot/no/ap/tech/lang/en/pg/1/sn/ssnav:dwl/q/ni%20package%20manager/) and install the latest version now.
 
 ## Choosing Your Goal
 
-Do you want to learn about connecting your web application to SystemLink Cloud or SystemLink Server? Click one of the following links to jump to your workflow:
+Do you want to learn about connecting your web application to SystemLink Cloud or SystemLink Server? Click one of the following links to jump to your workflow:  
 
 - [I want to connect to SystemLink Cloud](#systemlink-cloud).
 - [I want to connect to SystemLink Server](#systemlink-server).
@@ -65,7 +66,8 @@ An API key authenticates an application trying to access SystemLink Cloud. It he
 1. Go to [Security](https://www.systemlinkcloud.com/security).
 2. Click **+ NEW API KEY** to create an API key.
 3. Click **Copy key** to save the API key.
-   >**Note:** You only get to see an API key once, so keep it somewhere safe and only provide it to those you trust. If you delete an API key, all applications using that API key will no longer be able to connect to SystemLink Cloud.
+
+>**Note:** You only get to see an API key once, so keep it somewhere safe and only provide it to those you trust. If you delete an API key, all applications using that API key will no longer be able to connect to SystemLink Cloud.
 
 ### Connecting to SystemLink Cloud from LabVIEW NXG Web Module
 
@@ -75,6 +77,7 @@ To connect to SystemLink Cloud from LabVIEW NXG Web Module, you need a server UR
 2. Click **+ NEW API KEY** button to create an API key.
 3. Click **Copy key** to save the API key.
    >**Note:** You will only see the API key once, so keep it somewhere safe.
+
 4. Open LabVIEW NXG Web Module and create a WebVI.
    >**Tip:** Use the Web Application Project template to easily create a WebVI. Navigate to the **Projects** tab and click **Web Application Project** to launch it.
 
@@ -85,23 +88,23 @@ To connect to SystemLink Cloud from LabVIEW NXG Web Module, you need a server UR
 
 8. Provide the copied API key as the **api key** and enter `https://api.systemlinkcloud.com` as the **server url**.
 
-## Building and Running the Example Web application
+### Running the Example Web application
 
-1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine. [Go here](https://help.github.com/articles/cloning-a-repository/) if you’re new to cloning repositories on GitHub.
-2. Open the **Call SystemLink Data Services** example in LabVIEW NXG Web Module.
-   > **Note**: You can search for it by name in the search bar or navigate to **Learning»Examples»Programming WebVIs»Call SystemLink Data Services** to launch it.
-
-3. Open `index.gviweb` and click **Run**.
-4. On the **Projects Files** tab, double-click the `WebApp.gcomp` to open it.
-5. On the **Document** tab, click **Build** to build your web application.
-   > **Note**: You can automatically launch and view the web application locally by right-clicking the web application in SystemDesigner and then clicking **Run**.
+1. Open the **Call SystemLink Data Services** example in LabVIEW NXG Web Module.
+   - You can search for it by name in the search bar or navigate to **Learning»Examples»Programming WebVIs»Call SystemLink Data Services** to launch it.
+   - Alternately, clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine to use the latest version of this example. [Go here](https://help.github.com/articles/cloning-a-repository/) if you’re new to cloning repositories on GitHub.
+2. Open `index.gviweb` and click **Run**.
 
 ### Cloud Hosting Overview
 
-After you create a web application and build the package in LabVIEW NXG Web Module, you need to move it to a web server. This enables administrators to access it from a web browser. Copy your entire web application output directory to any web server you choose.
->**Note**: To navigate to your web application output on your machine, click **Locate directory in Windows Explorer** on the **Document** tab of your web application component document. You can also access the build output by navigating to your web application’s project folder manually (`\CallSystemLinkDataServices\Builds`).
+After you create a web application and build the package in LabVIEW NXG Web Module, you need to deploy it to a web server so that others can access it using a web browser.
 
-Furthermore, this project includes a distribution document (`WebApp.lvdist`), which can be used to build a package (`.nipkg`). A package is also required to host a web application on SystemLink Cloud. [Go here](http://www.ni.com/documentation/en/labview/3.0/application-builder/distributing-app-lib/) if you’re interested in learning more about distributing applications.
+To upload a WebVI to SystemLink Cloud, you will need to build it into a package file, which can be uploaded to SystemLink Cloud. This project includes a distribution document (`Full Data Services App.lvdist`), which can be used to build a package (`.nipkg`).
+
+1. On the **Projects Files** tab, double-click the `Full Data Services App.lvdist` to open it.
+2. On the **Document tab**, click **Build** to build the package.
+
+ [Go here](http://www.ni.com/documentation/en/labview/3.0/application-builder/distributing-app-lib/) if you’re interested in learning more about distributing applications.
 
 ### Hosting a Web Application on SystemLink Cloud
 
@@ -145,41 +148,45 @@ After installing LabVIEW NXG Web Module, you need to install and configure a Sys
 2. Search for and install SystemLink Server.
 3. Launch NI SystemLink Web Application. NI Web Server Configuration launches automatically.
    >**Note:** If the NI Web Server Configuration doesn't launch automatically, follow this path: `C:\Program Files\National Instruments\Shared\Web Server Config`.
+
 4. Follow the prompts in the NI Web Server Configuration to choose the following configuration options:
    1. On the **Select Preset** tab, select **Simple Local Access** configuration preset.
    2. On the **Authentication** tab, check **Login using Windows accounts**.
       > **Note**: This makes the user an admin for SystemLink data services. It also makes the user an admin for Windows.
+
    3. On the **Administrators** tab, ensure **Add the local Windows Administrators group to the admins role** is selected.
    4. On the **HTTP Port** tab, set the **Server HTTP Port**.
-      >  **Note**: This example assumes port 9090 is chosen.
+      > **Note**: This example assumes port 9090 is chosen.
+
    5. On the **CORS** tab, ensure **Enable CORS for web servers running on the same machine as clients** is selected.
    6. On the **Summary** tab, review your selections and then click **Finish**.
 
-### Building and Running the Example Web application with an On-Premises Web Server
+### Building and Running the Example Web application
 
-1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine. [Go here](https://help.github.com/articles/cloning-a-repository/) if you’re new to cloning repositories on GitHub.
-2. Open the **Call SystemLink Data Services** example in LabVIEW NXG Web Module.
-   >**Note**: You can either search for the example by name in the search bar or select **Learning»Examples»Programming WebVIs»Call SystemLink Data Services** to launch it.
-3. Open `index.gviweb` and click **Run**.
-4. On the **Projects Files** tab, double-click the `WebApp.gcomp` to open it.
-5. On the **Document tab**, click **Build** to build your web application.
+1. Open the **Call SystemLink Data Services** example in LabVIEW NXG Web Module.
+   - You can search for it by name in the search bar or navigate to **Learning»Examples»Programming WebVIs»Call SystemLink Data Services** to launch it.
+   - Alternately, clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine to use the latest version of this example. [Go here](https://help.github.com/articles/cloning-a-repository/) if you’re new to cloning repositories on GitHub.
+
+2. Open `index.gviweb` and click **Run**.
+3. On the **Projects Files** tab, double-click the `Full Data Services App.gcomp` to open it.
+4. On the **Document tab**, click **Build** to build your web application.
    > **Note**: You can automatically launch and view the web application locally by right-clicking the web application in SystemDesigner and then clicking **Run**.
 
 ### Hosting Overview
 
 After you create a web application and build the package in LabVIEW NXG Web Module, you need to move it to a web server. This enables administrators to access it from a web browser. Copy your entire web application output directory to any web server you choose.
-> **Note:** To navigate to your web application output on your machine, click **Locate directory in Windows Explorer** on the **Document** tab of your web application component document. You can also access the build output by navigating to your web application’s project folder manually (`\CallSystemLinkDataServices\Builds`).
+> **Note:** To navigate to your web application output on your machine, click **Locate directory in Windows Explorer** on the **Document** tab of your web application component document. You can also access the build output by navigating to your web application’s project folder manually (`..\CallSystemLinkDataServices\Builds`).
 
-Furthermore, this project includes a distribution document (`WebApp.lvdist`), which you can use to build a package (`.nipkg`). A package is also required for hosting a web application on SystemLink Cloud. [Go here](http://www.ni.com/documentation/en/labview/3.0/application-builder/distributing-app-lib/) to learn more about distributing applications.
+Furthermore, this project includes a distribution document (`Full Data Services App.lvdist`), which you can use to build a package (`.nipkg`). A package is also required for hosting a web application on SystemLink Cloud. [Go here](http://www.ni.com/documentation/en/labview/3.0/application-builder/distributing-app-lib/) to learn more about distributing applications.
 
 ### Local Hosting
 
 Follow the instructions below to host the web app on a web server.
 
-#### Hosting a Package File (.nipkg) on the NI Web Server
+### Hosting a Package File (.nipkg) on the NI Web Server
 
 1. Open `CallSystemLinkDataServices.lvproject`
-2. Open `WebApp.lvdist`.
+2. Open `Full Data Services App.lvdist`.
 3. Click the **Build distribution**.
    > **Note**: The button looks like a hammer.
 
@@ -190,14 +197,14 @@ Follow the instructions below to host the web app on a web server.
 #### Hosting on the LabVIEW 2009-2018 Web Server
 
 1. Go to the LabVIEW Web Server directory using the following path: `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
-2. Copy the entire `WebApp_Web Server` directory into the `www` directory of the LabVIEW web server.
-3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/`.
+2. Copy the entire `Full Data Services App_Web Server` directory into the `www` directory of the LabVIEW web server.
+3. Open a web browser and navigate to `http://localhost:8080/Full%20Data%20Services%20App_Web%20Server/`.
 
 #### Hosting on the NI Web Server
 
 1. Go to the NI Web Server using the following path: `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
-2. Copy the `WebApp_Web Server` directory into the `htdocs` directory of the NI Web Server.
-3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/`.
+2. Copy the `Full Data Services App_Web Server` directory into the `htdocs` directory of the NI Web Server.
+3. Open a web browser and navigate to `http://localhost:9090/Full%20Data%20Services%20App_Web%20Server/`.
 
 ## WebVI Details
 
@@ -207,23 +214,9 @@ The Message API communicates between systems with strings by publishing messages
 
 Refer to the [SystemLink API Docs](https://www.systemlinkcloud.com/skyline-api-documentation) to find out more about the SystemLink data services API.
 
-Use the example `index.gviweb` to learn how these APIs can be assembled into an interactive application. Use the examples in `BasicDataServiceExamples.gcomp` for a simple overview of how these APIs are used. Use the LabVIEW examples in `LabVIEWExamples.lvproj` to see how you can interact with SystemLink Cloud from LabVIEW and LabVIEW Real-Time.
-
-### The `index.gviweb` and `Main.gvi` State Machine
-
-State machines implement decision-making algorithms where a set of distinguishable states exists.
-
-These states, or subdiagrams of code, carry out specific operations within a program.
-
-In this example, a state is determined by the visible tab (**Read Tags** and **Write Tags**) on the panel. This means tags are only read or written when those controls and indicators are visible. In the **Read Tags** state, the controls and indicators are updated. This occurs because a control or indicator can have multiple terminals for the same control or indicator, and these terminals can be both read and write. This prevents stale values from being written to tags when the user switches tabs.
-
-![Screenshot of State Machine](readme_files/state-machine.png)
-
-If an error occurs or if the user clicks **Clear Faults and Reconnect**, the state machine will enter states not determined by the tab control. This logic is contained in the **Determine Next State** node.  If there is no error or if the user has not clicked **Clear Faults and Reconnect**, the **Determine Next State** node will use the state determined by the tab control. Regardless if there is an error or not, clicking the **Clear Faults and Reconnect** button will cause the state machine to enter the `initialize` state. If only an error has occurred, the state machine will enter the `error-no-systemlink state`.
-
-Go here to find out more about [state machines](http://www.ni.com/documentation/en/labview/2.0/g-prog/state-machine-design-pattern/).
-
-![Screenshot of Determine Next State](readme_files/next-state.png)
+- Use the example `index.gviweb` to learn how these APIs can be assembled into an interactive application.
+- Use the examples in `Basic Data Services.gcomp` for a simple overview of these APIs.
+- Use the LabVIEW examples in the application’s project folder `..\CallSystemLinkDataServices\LabVIEWExamples\LabVIEWExamples.lvproj` to see how you can interact with SystemLink and SystemLink Cloud from LabVIEW and LabVIEW Real-Time.
 
 ## Security
 
