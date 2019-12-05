@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "link": "glob-exec --foreach \"{./*.md,./*/*.md,./Guides/*/*.md}\" -- \"npm run markdown-link-check -- -c .linkcheck.json {{file}}\"",
-    "spell": "mdspell --en-us -r --ignore-numbers \"**/*.md\" \"!node_modules/**\"",
+    "spell": "mdspell --en-us -r --ignore-numbers \"./*.md\" \"**/*.md\" \"!node_modules/**\"",
     "lint": "markdownlint ./*.md ./*/*.md ./Guides/*/*.md",
     "markdown-link-check": "markdown-link-check",
     "markdownlint": "markdownlint",

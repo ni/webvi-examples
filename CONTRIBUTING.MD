@@ -11,15 +11,17 @@ branch with your changes to your project, and then submit a pull request.
 
 See [GitHub's official documentation](https://help.github.com/articles/using-pull-requests/) for more details.
 
-# Getting Started
+<!--
+## Getting Started
 
 - TODO: include build steps here.
 
-# Testing
+## Testing
 
 - TODO: include testing steps here.
+-->
 
-# Developer Certificate of Origin (DCO)
+## Developer Certificate of Origin (DCO)
 
    Developer's Certificate of Origin 1.1
 
@@ -47,7 +49,7 @@ See [GitHub's official documentation](https://help.github.com/articles/using-pul
        maintained indefinitely and may be redistributed consistent with
        this project or the open source license(s) involved.
 
-(taken from [developercertificate.org](https://developercertificate.org/))
+(taken from https://developercertificate.org/)
 
 See [LICENSE](https://github.com/ni/webvi-examples/blob/master/LICENSE)
 for details about how webvi-examples is licensed.
