@@ -1,7 +1,7 @@
 # WebVI Examples for LabVIEW NXG Web Module
 
 This repository has examples for:
-**LabVIEW NXG 4.0 Web Module**
+**LabVIEW NXG 5.0 Web Module**
 
 For previous LabVIEW NXG versions see the [previous releases](https://github.com/ni/webvi-examples/releases/)
 
