@@ -93,7 +93,7 @@ Let's go down the checklist of what you need to do for a WebVI Panel to pick up 
 
    ```html
    <link rel="stylesheet" href="css/style.css">
-   ````
+   ```
 
 5. At this point you should see your style rule applied to the WebVI Panel.
 
@@ -285,6 +285,8 @@ ni-front-panel {
 ```
 
 ### Hide tab carousel on a Tab Control (rely on programmatic tab switching instead)
+
+**Note:** As of NXG 5 the `Show tab selector` option should be used to configure tab selector visibility instead of custom CSS.
 
 ```css
 .user-class-name .jqx-ribbon-item {
