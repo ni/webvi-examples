@@ -1,7 +1,7 @@
-# WebVI Examples for LabVIEW NXG Web Module
+# WebVI Examples for G Web Development Software
 
 This repository has examples for:
-**LabVIEW NXG 5.0 Web Module**
+**G Web Development Software**
 
 For previous LabVIEW NXG versions see the [previous releases](https://github.com/ni/webvi-examples/releases/)
 
