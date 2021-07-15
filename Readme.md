@@ -1,7 +1,7 @@
-# WebVI Examples for LabVIEW NXG Web Module
+# WebVI Examples for G Web Development Software
 
 This repository has examples for:
-**LabVIEW NXG 5.0 Web Module**
+**G Web Development Software 2021**
 
 For previous LabVIEW NXG versions see the [previous releases](https://github.com/ni/webvi-examples/releases/)
 
@@ -81,7 +81,7 @@ The underlying technology used by WebVIs is HTML Custom Elements. One of the adv
 [![Embed Content into a WebVI Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/EmbedContentIntoWebVI/Builds/WebApp_Web%20Server/)
 [![Embed Content into a WebVI README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](EmbedContentIntoWebVI)
 
-This example demonstrates how to embed custom web content into the WebVI panel using LabVIEW NXG. WebVIs use HTML to define and describe the content of the panel that is loaded in a web page. This means that you can add custom HTML content to appear alongside the LabVIEW-generated HTML.
+This example demonstrates how to embed custom web content into the WebVI panel using G Web Development Software. WebVIs use HTML to define and describe the content of the panel that is loaded in a web page. This means that you can add custom HTML content to appear alongside the LabVIEW-generated HTML.
 
 ![Screenshot of Demo](EmbedContentIntoWebVI/readme_files/Screenshot.gif)
 

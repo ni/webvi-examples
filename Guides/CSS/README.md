@@ -9,7 +9,7 @@
 - [How do I customize a set of controls on my WebVI Panel?](#how-do-i-customize-a-set-of-controls-on-my-webvi-panel)
 - [Which CSS properties are known to work?](#which-css-properties-are-known-to-work)
 
-> **Note:** The CSS FAQ covers topics that may require **detailed knowledge of underlying web concepts** or discuss APIs that are unstable and **may change between releases of LabVIEW NXG WebVIs**.
+> **Note:** The CSS FAQ covers topics that may require **detailed knowledge of underlying web concepts** or discuss APIs that are unstable and **may change between releases of G Web Developent Software WebVIs**.
 
 ## What is CSS?
 
@@ -45,7 +45,7 @@ The `.my-class` selector is called a "class" selector. The class that this selec
 In the example HTML you can see that the `span` has two classes defined, `my-class` and `my-other-class`.
 Notice that the "class" selector starts with **a dot followed by the class name**.
 
-For styling WebVI controls, we recommend setting classes on the controls in the LabVIEW NXG IDE and then using the "class" type selector in your CSS.
+For styling WebVI controls, we recommend setting classes on the controls in the G Web Development IDE and then using the "class" type selector in your CSS.
 Most examples on this page will follow the class selector pattern.
 
 ### CSS properties and values
@@ -61,13 +61,13 @@ Those definitions could help you muddle forward. But to really understand what i
 No.
 
 Modifying CSS styles from the NI defaults will mean you need to manually update these when upgrading to the next version of the Web Module.
-The CSS selectors we are using are not stable from release to release, and we don't update your custom CSS if you were to open your WebVI in a new version of LabVIEW NXG.
+The CSS selectors we are using are not stable from release to release, and we don't update your custom CSS if you were to open your WebVI in a new version of G Web Development Software.
 
 ## When should I avoid customizing WebVIs via CSS?
 
-In order to keep your panel working the same release to release, you should avoid making customizations via CSS if there is a way to make that same customization via LabVIEW NXG using either:
+In order to keep your panel working the same release to release, you should avoid making customizations via CSS if there is a way to make that same customization via G Web Development Software using either:
 
-- The LabVIEW NXG configuration pane UI
+- The G Web Development Software configuration pane UI
 - Property nodes can be executed on the diagram to achieve the desired result
 
 ## How should I include CSS in my project?
@@ -75,10 +75,10 @@ In order to keep your panel working the same release to release, you should avoi
 Though it is possible to inline your CSS into the WebVI source HTML, it is better practice to keep your CSS declaration separate from the HTML in separate files with a `.css` file extension.
 And then any number of pages can include those styles easily.
 
-In LabVIEW NXG, this means adding `.css` files to your Web Application components in your project and then including `<link>` references in the HTML Source Panel of any VIs that you want to style.
+In G Web Development Software, this means adding `.css` files to your Web Application components in your project and then including `<link>` references in the HTML Source Panel of any VIs that you want to style.
 This will cause your WebVI to be styled at all times. You can also do this without editing the HTML Source of a WebVI using a JSLI document, but this is a more advanced technique.
 
-It is common to edit the CSS file outside of the LabVIEW process. If you have edited the CSS while the WebVI panel is open in LabVIEW NXG, the panel will not automatically detect the changes.
+It is common to edit the CSS file outside of the G Web process. If you have edited the CSS while the WebVI panel is open in G Web Development Software, the panel will not automatically detect the changes.
 We suggest that you make a trivial edit to the HTML source of the WebVI, such as adding/removing a space character, and upon approving that change, the CSS style will be refreshed from the CSS file on disk.
 Closing and re-opening the WebVI will also cause it to detect changes to external CSS.
 
@@ -86,7 +86,7 @@ Closing and re-opening the WebVI will also cause it to detect changes to externa
 
 Let's go down the checklist of what you need to do for a WebVI Panel to pick up on your CSS file:
 
-1. Make a new CSS file on disk, outside of LabVIEW
+1. Make a new CSS file on disk, outside of G Web
 2. Add the CSS file to you project
 3. Ensure that your CSS file is referenced in your Web App component and the box for "always include" is checked.
 4. Add a reference from your WebVI to your CSS file by adding this snippet to the HTML source of your WebVI, in the `<head>` section, typically right before the closing `</head>` tag:
@@ -116,7 +116,7 @@ and to verify that the path to the CSS file is correct.
 
 ## How do I customize a specific control on my WebVI Panel?
 
-Select a control in the WebVI and configure the HTML class attribute with a `user-class-name` in the LabVIEW NXG IDE.
+Select a control in the WebVI and configure the HTML class attribute with a `user-class-name` in the G Web Development Software IDE.
 You cannot use spaces since they are used to separate multiple classes.
 
 Then write some CSS to targets that specific control:
@@ -131,7 +131,7 @@ and be sure to put a `.` on the front of your class name in the CSS selector.
 
 ## How do I customize a set of controls on my WebVI Panel?
 
-In the LabVIEW NXG IDE, the `HTML class attribute` field will accept multiple user class names for a given control.
+In the G Web Development Software IDE, the `HTML class attribute` field will accept multiple user class names for a given control.
 **The class names are delimited by space characters**.
 
 Select each control in the WebVI you want to style similarly and add the same HTML class attribute to each one.
