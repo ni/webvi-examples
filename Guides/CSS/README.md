@@ -9,7 +9,7 @@
 - [How do I customize a set of controls on my WebVI Panel?](#how-do-i-customize-a-set-of-controls-on-my-webvi-panel)
 - [Which CSS properties are known to work?](#which-css-properties-are-known-to-work)
 
-> **Note:** The CSS FAQ covers topics that may require **detailed knowledge of underlying web concepts** or discuss APIs that are unstable and **may change between releases of G Web Developent Software WebVIs**.
+> **Note:** The CSS FAQ covers topics that may require **detailed knowledge of underlying web concepts** or discuss APIs that are unstable and **may change between releases of G Web Development Software WebVIs**.
 
 ## What is CSS?
 
@@ -45,7 +45,7 @@ The `.my-class` selector is called a "class" selector. The class that this selec
 In the example HTML you can see that the `span` has two classes defined, `my-class` and `my-other-class`.
 Notice that the "class" selector starts with **a dot followed by the class name**.
 
-For styling WebVI controls, we recommend setting classes on the controls in the G Web Development IDE and then using the "class" type selector in your CSS.
+For styling WebVI controls, we recommend setting classes on the controls in the G Web Development Software IDE and then using the "class" type selector in your CSS.
 Most examples on this page will follow the class selector pattern.
 
 ### CSS properties and values
@@ -86,7 +86,7 @@ Closing and re-opening the WebVI will also cause it to detect changes to externa
 
 Let's go down the checklist of what you need to do for a WebVI Panel to pick up on your CSS file:
 
-1. Make a new CSS file on disk, outside of G Web
+1. Make a new CSS file on disk, outside of G Web Development Software
 2. Add the CSS file to you project
 3. Ensure that your CSS file is referenced in your Web App component and the box for "always include" is checked.
 4. Add a reference from your WebVI to your CSS file by adding this snippet to the HTML source of your WebVI, in the `<head>` section, typically right before the closing `</head>` tag:
