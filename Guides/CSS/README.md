@@ -60,7 +60,7 @@ Those definitions could help you muddle forward. But to really understand what i
 
 No.
 
-Modifying CSS styles from the NI defaults will mean you need to manually update these when upgrading to the next version of the Web Module.
+Modifying CSS styles from the NI defaults will mean you need to manually update these when upgrading to the next version of the G Web Development Software.
 The CSS selectors we are using are not stable from release to release, and we don't update your custom CSS if you were to open your WebVI in a new version of G Web Development Software.
 
 ## When should I avoid customizing WebVIs via CSS?

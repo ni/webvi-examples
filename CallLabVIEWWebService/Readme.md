@@ -20,17 +20,15 @@ Use LabVIEW to create web services that do what WebVIs can't do, such as:
 
 ## Dependencies
 
-- LabVIEW NXG Web Module
+- G Web Development Software
 - LabVIEW 2016 or later
 
 ## Setup
 
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
-2. Open `CallLabVIEWWebService\WebService\WebService.lvproj` in LabVIEW.
-3. In the **Project Explorer**, right-click **Web Server** and select **Start**.
-4. Open `CallLabVIEWWebService\CallLabVIEWWebService.lvproject` in LabVIEW NXG.
-5. Open `index.gviweb` and click the **Run** button.
-6. Build the web application.  
+2. Open `CallLabVIEWWebService\CallLabVIEWWebService.gwebproject` in G Web Development Software.
+3. Open `index.gviweb` and click the **Run** button.
+4. Build the web application.  
   a. Open `WebApp.gcomp`.  
   b. On the **Document** tab, click **Build**.
 
@@ -44,7 +42,7 @@ You can manually the move the build output found at `Builds` to any web server. 
 
 The following steps can be used to host the web app on SystemLink Cloud
 
-1. Open `CallLabVIEWWebService\CallLabVIEWWebService.lvproject`.
+1. Open `CallLabVIEWWebService\CallLabVIEWWebService.gwebproject`.
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Open a Web browser and navigate to https://www.systemlinkcloud.com/webapphosting
@@ -57,13 +55,13 @@ The following steps can be used to host the web app on a local web server
 
 #### Hosting on the NI Web Server with a nipkg
 
-1. Open `CallLabVIEWWebService.lvproject`
+1. Open `CallLabVIEWWebService.gwebproject`
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Double-click the nipkg and follow the on screen instructions
 5. Open a web browser and navigate to `http://localhost:9090/calllvwebservice/`
 
-#### Hosting on the LabVIEW 2009-2017 Web Server
+#### Hosting on the G Web Development Software Web Server
 
 1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
 2. Copy the `WebApp_Web Server` directory into the `www` directory.
@@ -79,17 +77,17 @@ The following steps can be used to host the web app on a local web server
 
 ### Important Directories
 
-- **`Web Service`** &mdash; Contains the LabVIEW web service project.
-- **`WebVI`** &mdash; Contains the LabVIEW NXG web application project, which includes the WebVI.
+- **`Web Service`** &mdash; Contains the G Web web service project.
+- **`WebVI`** &mdash; Contains the G Web Development Software web application project, which includes the WebVI.
 - **`WebVI/Builds/WebApp_Web Server`** &mdash; Contains the built web application, which consists of HTML, JavaScript, the compiled diagram, and other web content.
 
 ### The Web Service
 
-The web service is created in LabVIEW and consists of two HTTP endpoint methods (one `GET` and one `POST`) and a few SubVIs.
+The web service is created in G Web Development Software and consists of two HTTP endpoint methods (one `GET` and one `POST`) and a few SubVIs.
 
 #### Output Type
 
-You must configure the Output Type correctly in order for a LabVIEW web service to send data to a WebVI.
+You must configure the Output Type correctly in order for a G Web web service to send data to a WebVI.
 
 1. In the **Project Explorer**, right-click **Web Server** and select **Properties**.
 **Note:** The Web Server must be stopped before you can edit its properties.
@@ -99,11 +97,11 @@ You must configure the Output Type correctly in order for a LabVIEW web service 
   a. Option 1 (recommended): Select **Stream** and enable the **Use headers** and **Buffered** checkboxes.
 **Note:** This option requires the web service VI to flatten return data to JSON and return it through `Write Response.vi`.
   b. Option 2: Select **Terminal** and select **JSON** as the output format.  
-**Note:** This option returns data through VI output terminals and serializes LabVIEW data into JSON automatically.
+**Note:** This option returns data through VI output terminals and serializes G Web data into JSON automatically.
 
 #### CORS
 
-Cross-Origin Resource Sharing (CORS) allows a Web Service VI to respond to HTTP requests from a different server than where it is hosted. `AddCORSHeaders.vi` adds HTTP headers to allow requests from any origin. This configuration is necessary if your WebVI is not hosted on the LabVIEW web server.
+Cross-Origin Resource Sharing (CORS) allows a Web Service VI to respond to HTTP requests from a different server than where it is hosted. `AddCORSHeaders.vi` adds HTTP headers to allow requests from any origin. This configuration is necessary if your WebVI is not hosted on the G Web Development Software web server.
 
 ### The WebVI
 
@@ -115,11 +113,11 @@ This example show how to include your WebVI as part of your LabVIEW Web service 
 
 #### Project Setup
 
-The `WebApp_Web Server` directory has been included as **Public Content** within the LabVIEW project. This was done by right-clicking the Web service in the project and selecting Add **Public Content Folder**. In the **Open** dialog the `WebApp_Web Server` directory was selected. This is an *auto populating* folder so changes made by modifying the WebVI and rebuilding the application in LabVIEW NXG are automatically up taken by LabVIEW project. See more details on this topic at [Integrating Static Content into a Web Service](http://zone.ni.com/reference/en-XX/help/371361N-01/lvhowto/ws_static_content/).
+The `WebApp_Web Server` directory has been included as **Public Content** within the G Web project. This was done by right-clicking the Web service in the project and selecting Add **Public Content Folder**. In the **Open** dialog the `WebApp_Web Server` directory was selected. This is an *auto populating* folder so changes made by modifying the WebVI and rebuilding the application in LabVIEW NXG are automatically up taken by G Web project. See more details on this topic at [Integrating Static Content into a Web Service](http://zone.ni.com/reference/en-XX/help/371361N-01/lvhowto/ws_static_content/).
 
 #### URL Configuration Enum
 
 In the WebVI there is a drop down for selecting the URL configuration.
 
-- **Use Absolute URLs and Local Debugging**: This uses fully qualified URLs; e.g. `http://127.0.0.1:8001/Web_Server/ParametricCurve` in each HTTP request. Fully qualified URLs must be used if the Web service access by the WebVI is on a different host than the WebVI itself; e.g. CORS. The Web server here is the **Local Debugging** Web server built into LabVIEW. This is enabled by right-clicking the Web Service in the LabVIEW project and selecting **Start**.
-- **Use Relative URLs and Application Web Server**: This uses a relative URLs; e.g. `ParametricCurve` in each HTTP request. The rest of the URL is filled in automatically by the browser. This technique is useful because URLs in code don't need to be changed as the hostname, protocol, or port or the Web service is changed. The Web service and WebVI are deployed to the **Application Web Server** by right-clicking the Web service in the LabVIEW project and selecting **Publish**.
+- **Use Absolute URLs and Local Debugging**: This uses fully qualified URLs; e.g. `http://127.0.0.1:8001/Web_Server/ParametricCurve` in each HTTP request. Fully qualified URLs must be used if the Web service access by the WebVI is on a different host than the WebVI itself; e.g. CORS. The Web server here is the **Local Debugging** Web server built into G Web Development Software. This is enabled by right-clicking the Web Service in the G Web project and selecting **Start**.
+- **Use Relative URLs and Application Web Server**: This uses a relative URLs; e.g. `ParametricCurve` in each HTTP request. The rest of the URL is filled in automatically by the browser. This technique is useful because URLs in code don't need to be changed as the hostname, protocol, or port or the Web service is changed. The Web service and WebVI are deployed to the **Application Web Server** by right-clicking the Web service in the G Web project and selecting **Publish**.
