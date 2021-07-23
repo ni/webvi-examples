@@ -15,12 +15,12 @@ You can use this approach in your own projects if you are familiar with CSS and 
 
 ## Dependencies
 
-- LabVIEW NXG Web Module
+- G Web Development Software
 
 ## Setup
 
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
-2. Open `CustomizeWithCss/CustomizeWithCss.lvproject`.
+2. Open `CustomizeWithCss/CustomizeWithCss.gwebproject`.
 3. On the **Project Files** tab, expand `WebApp.gcomp` and open `index.gviweb`.
 4. Click the **Run** button.
 5. Build the web application.  
@@ -37,7 +37,7 @@ You can manually move the build output found at `\CustomizeWithCss\Builds` to an
 
 The following steps can be used to host the web app on SystemLink Cloud
 
-1. Open `CustomizeWithCss.lvproject`.
+1. Open `CustomizeWithCss.gwebproject`.
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Open a Web browser and navigate to https://www.systemlinkcloud.com/webapphosting
@@ -50,7 +50,7 @@ The following steps can be used to host the web app on a local web server
 
 #### Hosting on the NI Web Server with a nipkg
 
-1. Open `CustomizeWithCss.lvproject`
+1. Open `CustomizeWithCss.gwebproject`
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Double-click the nipkg and follow the on screen instructions

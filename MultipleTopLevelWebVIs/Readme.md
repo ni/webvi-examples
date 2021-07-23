@@ -9,12 +9,12 @@ This example demonstrates how to create a web application with multiple pages by
 
 ## Dependencies
 
-- LabVIEW NXG Web Module
+- G Web Development Software
 
 ## Setup
 
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
-2. Open `MultipleTopLevelVIs/MultipleTopLevelVIs.lvproject`
+2. Open `MultipleTopLevelVIs/MultipleTopLevelVIs.gwebproject`
 3. On the **Project Files** tab, expand `WebApp.gcomp` and open `index.gviweb`
 4. Click the **Run** button.
 5. Build the web application.  
@@ -31,7 +31,7 @@ You can manually the move the build output found at `\MultipleTopLevelVIs\Builds
 
 The following steps can be used to host the web app on SystemLink Cloud
 
-1. Open `MultipleTopLevelVIs.lvproject`
+1. Open `MultipleTopLevelVIs.gwebproject`
 2. Open `WebApp.lvdist`
 3. Click the build icon in the top command bar of this distribution document
 4. Open a Web browser and navigate to https://www.systemlinkcloud.com/webapphosting
@@ -44,7 +44,7 @@ The following steps can be used to host the web app on a local web server
 
 #### Hosting on the NI Web Server with a nipkg
 
-1. Open `MultipleTopLevelVIs.lvproject`
+1. Open `MultipleTopLevelVIs.gwebproject`
 2. Open `WebApp.lvdist`
 3. Click the build icon in the top command bar of this distribution document.
 4. Double-click the nipkg and follow the on screen instructions.

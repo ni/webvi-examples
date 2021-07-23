@@ -11,12 +11,12 @@ You can also use resource files to augment the WebVI's capabilities. For example
 
 ## Dependencies
 
-- LabVIEW NXG Web Module
+- G Web Development Software
 
 ## Setup
 
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
-2. Open `IncorporateUserResources/IncorporateUserResources.lvproject`.
+2. Open `IncorporateUserResources/IncorporateUserResources.gwebproject`.
 3. On the **Project Files** tab, expand `WebApp.gcomp` and open `index.gviweb`.
 4. Click the **Run** button.
 5. Build the web application.  
@@ -33,7 +33,7 @@ You can manually the move the build output found at `\IncorporateUserResourcest\
 
 The following steps can be used to host the web app on SystemLink Cloud
 
-1. Open `IncorporateUserResources.lvproject`.
+1. Open `IncorporateUserResources.gwebproject`.
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Open a Web browser and navigate to https://www.systemlinkcloud.com/webapphosting
@@ -46,7 +46,7 @@ The following steps can be used to host the web app on a local web server
 
 #### Hosting on the NI Web Server with a nipkg
 
-1. Open `IncorporateUserResources.lvproject`
+1. Open `IncorporateUserResources.gwebproject`
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Double-click the nipkg and follow the on screen instructions

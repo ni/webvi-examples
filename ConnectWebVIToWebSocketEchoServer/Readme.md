@@ -3,7 +3,7 @@
 [![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/Builds/WebApp_Web%20Server/)
 [![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-README_Link-orange.svg)]()
 
-This example uses the Web Module WebSockets API to connect to the WebSocket Echo Server hosted by https://websocket.org/. The WebVI connects to the server, sends a message, and receives the same message from the server.
+This example uses the G Web WebSockets API to connect to the WebSocket Echo Server hosted by https://websocket.org/. The WebVI connects to the server, sends a message, and receives the same message from the server.
 
 On the diagram, this WebVI uses WebSocket VIs to open a connection to the echo server, send messages, read received messages, and close the connection. The WebVI also formats sent and received strings to display on the Messages indicator.
 
@@ -11,12 +11,12 @@ On the diagram, this WebVI uses WebSocket VIs to open a connection to the echo s
 
 ## Dependencies
 
-- LabVIEW NXG Web Module
+- G Web Development Software
 
 ## Setup
 
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
-2. Open `ConnectWebVIToWebSocketEchoServer\ConnectWebVIToWebSocketEchoServer.lvproject`
+2. Open `ConnectWebVIToWebSocketEchoServer\ConnectWebVIToWebSocketEchoServer.gwebproject`
 3. Open `index.gviweb` and click the **Run** button.
 4. Build the web application.  
   a. Open `WebApp.gcomp`.  
@@ -32,7 +32,7 @@ You can manually the move the build output found at `\ConnectWebVIToWebSocketEch
 
 The following steps can be used to host the web app on SystemLink Cloud
 
-1. Open `ConnectWebVIToWebSocketEchoServer.lvproject`.
+1. Open `ConnectWebVIToWebSocketEchoServer.gwebproject`.
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Open a Web browser and navigate to https://systemlinkcloud.com/
@@ -45,7 +45,7 @@ The following steps can be used to host the web app on a local web server
 
 #### Hosting on the NI Web Server with a nipkg
 
-1. Open `ConnectWebVIToWebSocketEchoServer.lvproject`
+1. Open `ConnectWebVIToWebSocketEchoServer.gwebproject`
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Double-click the nipkg and follow the on screen instructions

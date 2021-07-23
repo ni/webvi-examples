@@ -11,12 +11,12 @@ On the panel, this WebVI has X and Y binary inputs. The user clicks these to cha
 
 ## Dependencies
 
-- LabVIEW NXG Web Module
+- G Web Development Software
 
 ## Setup
 
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
-2. Open `CallJavaScriptFromAWebVI\CallJavaScriptFromAWebVI.lvproject`
+2. Open `CallJavaScriptFromAWebVI\CallJavaScriptFromAWebVI.gwebproject`
 3. Open `index.gviweb` and click the **Run** button.
 4. Build the web application.  
   a. Open `WebApp.gcomp`.  
@@ -32,7 +32,7 @@ You can manually the move the build output found at `\CallJavaScriptFromAWebVI\B
 
 The following steps can be used to host the web app on SystemLink Cloud
 
-1. Open `CallJavaScriptFromAWebVI.lvproject`.
+1. Open `CallJavaScriptFromAWebVI.gwebproject`.
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Open a Web browser and navigate to https://systemlinkcloud.com/
@@ -45,7 +45,7 @@ The following steps can be used to host the web app on a local web server
 
 #### Hosting on the NI Web Server with a nipkg
 
-1. Open `CallJavaScriptFromAWebVI.lvproject`
+1. Open `CallJavaScriptFromAWebVI.gwebproject`
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Double-click the nipkg and follow the on screen instructions
@@ -57,7 +57,7 @@ The following steps can be used to host the web app on a local web server
 2. Copy the `WebApp_Web Server` directory into the `htdocs` directory
 3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/`
 
-#### Hosting on the LabVIEW 2009-2017 Web Server
+#### Hosting on the G Web Development Software Web Server
 
 1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`
 2. Copy the `WebApp_Web Server` directory into the `www` directory
@@ -65,7 +65,7 @@ The following steps can be used to host the web app on a local web server
 
 ## Details
 
-This WebVI uses the JSLI to interface with simple functions defined in `Add.js` and `Multiply.js`, and compares the results with the LabVIEW NXG built-in functions.
+This WebVI uses the JSLI to interface with simple functions defined in `Add.js` and `Multiply.js`, and compares the results with the G Web Development Software built-in functions.
 A single JSLI wraps JavaScript functions in the two external JavaScript files.
 The external functions are referenced by using the Function prototype symbol, or name, used in the JavaScript file.
 For example, `AddWithJSLI` is a function defined in `Add.js`.

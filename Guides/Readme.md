@@ -1,4 +1,4 @@
-# Web Module Guides
+# G Web Development Software Guides
 
 The following are supplementary guides for developing with G Web Development Software WebVIs.
 
