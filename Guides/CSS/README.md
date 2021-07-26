@@ -379,4 +379,4 @@ ni-flexible-layout-container {
 }
 ```
 
-Additional tips can be found in the [product documentation](http://www.ni.com/documentation/en/labview-web-module/latest/manual/customizing-appearance-controls-webvi/) or in the [shipping example that demonstrates CSS styling](../../CustomizeWithCss).
+Additional tips can be found in the [product documentation](https://www.ni.com/documentation/en/g-web-development/1.0/manual/customizing-appearance-controls-webvi/) or in the [shipping example that demonstrates CSS styling](../../CustomizeWithCss).
