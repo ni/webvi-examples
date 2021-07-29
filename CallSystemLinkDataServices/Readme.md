@@ -29,9 +29,9 @@ _Figure: When hosting a WebVI on the NI Web Server, you do not need to supply cr
 To use SystemLink data services, you need one of the following product combinations:
 
 - G Web Development Software 2021
-- LabVIEW NXG with [LabVIEW NXG Web Module](http://www.ni.com/labview/webmodule/)
 - LabVIEW 2015-2018 with SystemLink Client 18.0
 - LabVIEW 2016-2019 with SystemLink Client 19.5
+- LabVIEW 2020 with SystemLink Client 2020 R4
 
 Use NI Package Manager to install the products you need. If you do not have NI Package Manager, [download](http://search.ni.com/nisearch/app/main/p/bot/no/ap/tech/lang/en/pg/1/sn/ssnav:dwl/q/ni%20package%20manager/) and install the latest version now.
 
@@ -56,7 +56,7 @@ To connect your web application to SystemLink Cloud from G Web Development Softw
 
 ![Configure GVI in G Web Development Software vs Hosting in SystemLink Cloud](readme_files/cloud-config.PNG)
 
-_Figure: Note the input differentiation between connecting to the SystemLink Cloud server from G Web Development Software vs. hosting your web application on SystemLink Cloud._
+_Figure: Note the input differentiation between connecting to the SystemLink Cloud server from LabVIEW or G Web Development Software vs. hosting your web application on SystemLink Cloud._
 
 ### What is an API Key?
 
@@ -195,10 +195,10 @@ Follow the instructions below to host the web app on a web server.
 5. Double-click the package (`.nipkg`) and follow the on-screen instructions.
 6. Open a web browser and navigate to `http://localhost:9090/CallSystemLinkdataservices/`.
 
-#### Hosting on the G Web Development Server
+#### Hosting on the LabVIEW 2009-2018 Web Server
 
-1. Go to the G Web Development Software Web Server directory using the following path: `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
-2. Copy the entire `Full Data Services App_Web Server` directory into the `www` directory of the G Web Development Software web server.
+1. Go to the LabVIEW Web Server directory using the following path: `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
+2. Copy the entire `Full Data Services App_Web Server` directory into the `www` directory of the LabVIEW web server.
 3. Open a web browser and navigate to `http://localhost:8080/Full%20Data%20Services%20App_Web%20Server/`.
 
 #### Hosting on the NI Web Server
