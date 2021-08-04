@@ -27,7 +27,9 @@ You can use this approach in your own projects if you are familiar with CSS and 
   a. On the **Project Files** tab, double-click `WebApp.gcomp` to open the web application component.  
   b. On the **Document** tab, click **Build**.  
 
-**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Server** >> right-click `WebApp.gcomp` >> **Run**
+> **Note:** 
+> 1. To view the build output on your machine, click **Output Directory** on the **Document** tab once your application finishes building.
+> 2. To launch and view the Web Application locally you can use the **Run** button on the **Document** tab.
 
 ## Hosting
 
@@ -56,17 +58,17 @@ The following steps can be used to host the web app on a local web server
 4. Double-click the nipkg and follow the on screen instructions
 5. Open a web browser and navigate to `http://localhost:9090/customizewithcss/`
 
-#### Hosting on the LabVIEW 2009-2017 Web Server
+#### Hosting on the LabVIEW 2009-2021 Web Server
 
 1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
-2. Copy the `WebApp_Web Server` directory into the `www` directory.
-3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/`
+2. Copy the `WebApp_Default Web Server` directory into the `www` directory.
+3. Open a web browser and navigate to `http://localhost:8080/WebApp_Default%20Web%20Server/`
 
 #### Hosting on the NI Web Server
 
 1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
-2. Copy the `WebApp_Web Server` directory into the `htdocs` directory.
-3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/`.
+2. Copy the `WebApp_Default Web Server` directory into the `htdocs` directory.
+3. Open a web browser and navigate to `http://localhost:9090/WebApp_Default%20Web%20Server/`.
 
 ## Details
 

@@ -105,7 +105,7 @@ To upload a WebVI to SystemLink Cloud, you will need to build it into a package 
 1. On the **Projects Files** tab, double-click the `Full Data Services App.lvdist` to open it.
 2. On the **Document tab**, click **Build** to build the package.
 
- [Go here](http://www.ni.com/documentation/en/labview/3.0/application-builder/distributing-app-lib/) if you’re interested in learning more about distributing applications.
+ [Go here](https://www.ni.com/documentation/en/g-web-development/latest/application-builder/distributing-app-lib/) if you’re interested in learning more about distributing applications.
 
 ### Hosting a Web Application on SystemLink Cloud
 
@@ -171,14 +171,16 @@ After installing G Web Development Software, you need to install and configure a
 2. Open `index.gviweb` and click **Run**.
 3. On the **Projects Files** tab, double-click the `Full Data Services App.gcomp` to open it.
 4. On the **Document tab**, click **Build** to build your web application.
-   > **Note**: You can automatically launch and view the web application locally by right-clicking the web application in SystemDesigner and then clicking **Run**.
+> **Note:** 
+> 1. To view the build output on your machine, click **Output Directory** on the **Document** tab once your application finishes building.
+> 2. To launch and view the Web Application locally you can use the **Run** button on the **Document** tab.
 
 ### Hosting Overview
 
 After you create a web application and build the package in G Web Development Software, you need to move it to a web server. This enables administrators to access it from a web browser. Copy your entire web application output directory to any web server you choose.
 > **Note:** To navigate to your web application output on your machine, click **Locate directory in Windows Explorer** on the **Document** tab of your web application component document. You can also access the build output by navigating to your web application’s project folder manually (`..\CallSystemLinkDataServices\Builds`).
 
-Furthermore, this project includes a distribution document (`Full Data Services App.lvdist`), which you can use to build a package (`.nipkg`). A package is also required for hosting a web application on SystemLink Cloud. [Go here](http://www.ni.com/documentation/en/labview/3.0/application-builder/distributing-app-lib/) to learn more about distributing applications.
+Furthermore, this project includes a distribution document (`Full Data Services App.lvdist`), which you can use to build a package (`.nipkg`). A package is also required for hosting a web application on SystemLink Cloud. [Go here](https://www.ni.com/documentation/en/g-web-development/latest/application-builder/distributing-app-lib/) to learn more about distributing applications.
 
 ### Local Hosting
 
@@ -195,7 +197,7 @@ Follow the instructions below to host the web app on a web server.
 5. Double-click the package (`.nipkg`) and follow the on-screen instructions.
 6. Open a web browser and navigate to `http://localhost:9090/CallSystemLinkdataservices/`.
 
-#### Hosting on the LabVIEW 2009-2018 Web Server
+#### Hosting on the LabVIEW 2009-2021 Web Server
 
 1. Go to the LabVIEW Web Server directory using the following path: `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
 2. Copy the entire `Full Data Services App_Web Server` directory into the `www` directory of the LabVIEW web server.

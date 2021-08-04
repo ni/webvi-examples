@@ -22,7 +22,9 @@ On the diagram, this WebVI uses WebSocket VIs to open a connection to the echo s
   a. Open `WebApp.gcomp`.  
   b. On the **Document** tab, click **Build**.
 
-**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Server** >> right-click `WebApp.gcomp` >> **Run**
+> **Note:**
+> 1. To view the build output on your machine, click **Output Directory** on the **Document** tab once your application finishes building.
+> 2. To launch and view the Web Application locally you can use the **Run** button on the **Document** tab.
 
 ## Hosting
 
@@ -54,14 +56,14 @@ The following steps can be used to host the web app on a local web server
 #### Hosting on the NI Web Server by manually moving files
 
 1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`
-2. Copy the `WebApp_Web Server` directory into the `htdocs` directory
-3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/`
+2. Copy the `WebApp_Default Web Server` directory into the `htdocs` directory
+3. Open a web browser and navigate to `http://localhost:9090/WebApp_Default%20Web%20Server/`
 
-#### Hosting on the LabVIEW 2009-2017 Web Server
+#### Hosting on the LabVIEW 2009-2021 Web Server
 
 1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`
-2. Copy the `WebApp_Web Server` directory into the `www` directory
-3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/`
+2. Copy the `WebApp_Default Web Server` directory into the `www` directory
+3. Open a web browser and navigate to `http://localhost:8080/WebApp_Default%20Web%20Server/`
 
 ## Details
 
@@ -84,4 +86,4 @@ Once the session is completed, the user disconnects from the server.
 
 ## Related Links
 
-[LabVIEW NXG WebSockets API Documentation](http://www.ni.com/documentation/en/labview-web-module/latest/web-mod-node-ref/websocket-nodes/)
+[LabVIEW NXG WebSockets API Documentation](https://www.ni.com/documentation/en/g-web-development/latest/web-mod-node-ref/websocket-nodes/)

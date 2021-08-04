@@ -5,7 +5,7 @@
 
 This example demonstrates how to use a WebVI to call the [Earthquake API](https://earthquake.usgs.gov/) from the [US Geological Survey](https://www.usgs.gov/) and display recent earthquakes on a web page.
 
-On the diagram, this WebVI uses [HTTP GET](http://www.ni.com/documentation/en/labview/latest/node-ref/get/) to query the Earthquake API for earthquakes from the last 30 days. The WebVI also uses [Unflatten from JSON](http://www.ni.com/documentation/en/labview/latest/node-ref/unflatten-from-json/) to convert the results from JSON to LabVIEW data.
+On the diagram, this WebVI uses [HTTP GET](https://www.ni.com/documentation/en/g-web-development/latest/node-ref/get/) to query the Earthquake API for earthquakes from the last 30 days. The WebVI also uses [Unflatten from JSON](https://www.ni.com/documentation/en/g-web-development/latest/node-ref/unflatten-from-json/) to convert the results from JSON to LabVIEW data.
 
 On the panel, this WebVI displays a summary of the results in a data grid and a map of the selected earthquake region in a URL Image indicator.
 
@@ -24,7 +24,9 @@ On the panel, this WebVI displays a summary of the results in a data grid and a 
   a. Open `WebApp.gcomp`.  
   b. On the **Document** tab, click **Build**.
 
-**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Server** >> right-click `WebApp.gcomp` >> **Run**
+> **Note:** 
+> 1. To view the build output on your machine, click **Output Directory** on the **Document** tab once your application finishes building. 
+> 2. To launch and view the Web Application locally you can use the **Run** button on the **Document** tab.
 
 ## Hosting
 
@@ -56,14 +58,14 @@ The following steps can be used to host the web app on a local web server
 #### Hosting on the NI Web Server by manually moving files
 
 1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`
-2. Copy the `WebApp_Web Server` directory into the `htdocs` directory
-3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/`
+2. Copy the `WebApp_Default Web Server` directory into the `htdocs` directory
+3. Open a web browser and navigate to `http://localhost:9090/WebApp_Default%20Web%20Server/`
 
-#### Hosting on the LabVIEW 2009-2017 Web Server
+#### Hosting on the LabVIEW 2009-2021 Web Server
 
 1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`
-2. Copy the `WebApp_Web Server` directory into the `www` directory
-3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/`
+2. Copy the `WebApp_Default Web Server` directory into the `www` directory
+3. Open a web browser and navigate to `http://localhost:8080/WebApp_Default%20Web%20Server/`
 
 ## Details
 
