@@ -32,6 +32,7 @@ To use SystemLink data services, you need one of the following product combinati
 - LabVIEW 2015-2018 with SystemLink Client 18.0
 - LabVIEW 2016-2019 with SystemLink Client 19.5
 - LabVIEW 2020 with SystemLink Client 2020 R4
+- LabVIEW 2021 with SystemLink Client 2021 R2
 
 Use NI Package Manager to install the products you need. If you do not have NI Package Manager, [download](http://search.ni.com/nisearch/app/main/p/bot/no/ap/tech/lang/en/pg/1/sn/ssnav:dwl/q/ni%20package%20manager/) and install the latest version now.
 
