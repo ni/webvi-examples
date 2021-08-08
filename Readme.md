@@ -1,9 +1,9 @@
-# WebVI Examples for LabVIEW NXG Web Module
+# WebVI Examples for G Web Development Software
 
 This repository has examples for:
-**LabVIEW NXG 5.0 Web Module**
+**G Web Development Software 2021**
 
-For previous LabVIEW NXG versions see the [previous releases](https://github.com/ni/webvi-examples/releases/)
+For LabVIEW NXG versions see the [previous releases](https://github.com/ni/webvi-examples/releases/)
 
 The following examples demonstrate different ways of using WebVIs. Each directory contains example code and a `README.md` file explaining the example.
 
@@ -17,7 +17,7 @@ If there is a technical error or typo with the examples themselves please create
 
 This example demonstrates how to use a WebVI to call the [Earthquake API](https://earthquake.usgs.gov/) from the [US Geological Survey](https://www.usgs.gov/) and display recent earthquakes on a web page.
 
-On the diagram, this WebVI uses [HTTP GET](http://www.ni.com/documentation/en/labview/latest/node-ref/get/) to query the Earthquake API for earthquakes from the last 30 days. The WebVI also uses [Unflatten from JSON](http://www.ni.com/documentation/en/labview/latest/node-ref/unflatten-from-json/) to convert the results from JSON to LabVIEW data.
+On the diagram, this WebVI uses [HTTP GET](https://www.ni.com/documentation/en/g-web-development/latest/node-ref/get/) to query the Earthquake API for earthquakes from the last 30 days. The WebVI also uses [Unflatten from JSON](https://www.ni.com/documentation/en/g-web-development/latest/node-ref/unflatten-from-json/) to convert the results from JSON to LabVIEW data.
 
 On the panel, this WebVI displays a summary of the results in a data grid and a map of the selected earthquake region in a URL Image indicator.
 
@@ -59,7 +59,7 @@ This example demonstrates how to use a WebVI to communicate over networks with S
 [![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/Builds/WebApp_Web%20Server/)
 [![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-README_Link-orange.svg)](ConnectWebVIToWebSocketEchoServer)
 
-This example uses the Web Module WebSockets API to connect to the WebSocket Echo Server hosted by https://websocket.org/. The WebVI connects to the server, sends a message, and receives the same message from the server.
+This example uses the WebSockets API in G Web Development Software to connect to the WebSocket Echo Server hosted by https://websocket.org/. The WebVI connects to the server, sends a message, and receives the same message from the server.
 
 On the diagram, this WebVI uses WebSocket VIs to open a connection to the echo server, send messages, read received messages, and close the connection. The WebVI also formats sent and received strings to display on the Messages indicator.
 
@@ -81,7 +81,7 @@ The underlying technology used by WebVIs is HTML Custom Elements. One of the adv
 [![Embed Content into a WebVI Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/EmbedContentIntoWebVI/Builds/WebApp_Web%20Server/)
 [![Embed Content into a WebVI README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](EmbedContentIntoWebVI)
 
-This example demonstrates how to embed custom web content into the WebVI panel using LabVIEW NXG. WebVIs use HTML to define and describe the content of the panel that is loaded in a web page. This means that you can add custom HTML content to appear alongside the LabVIEW-generated HTML.
+This example demonstrates how to embed custom web content into the WebVI panel using G Web Development Software. WebVIs use HTML to define and describe the content of the panel that is loaded in a web page. This means that you can add custom HTML content to appear alongside the generated HTML.
 
 ![Screenshot of Demo](EmbedContentIntoWebVI/readme_files/Screenshot.gif)
 

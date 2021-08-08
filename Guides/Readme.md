@@ -1,8 +1,8 @@
-# Web Module Guides
+# G Web Development Software Guides
 
-The following are supplementary guides for developing with LabVIEW NXG WebVIs.
+The following are supplementary guides for developing with G Web Development Software WebVIs.
 
-For complete documentation of well-supported LabVIEW NXG WebVI features see the [LabVIEW NXG Web Module Manual](http://www.ni.com/documentation/en/labview-web-module/latest/manual/manual-overview/).
+For complete documentation of well-supported G Web Development Software WebVI features see the [G Web Development Software Manual](https://www.ni.com/documentation/en/g-web-development/latest/manual/manual-overview/).
 
 ## CSS Frequently Asked Questions
 

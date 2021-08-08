@@ -20,7 +20,7 @@ Use LabVIEW to create web services that do what WebVIs can't do, such as:
 
 ## Dependencies
 
-- LabVIEW NXG Web Module
+- G Web Development Software
 - LabVIEW 2016 or later
 
 ## Setup
@@ -28,13 +28,15 @@ Use LabVIEW to create web services that do what WebVIs can't do, such as:
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
 2. Open `CallLabVIEWWebService\WebService\WebService.lvproj` in LabVIEW.
 3. In the **Project Explorer**, right-click **Web Server** and select **Start**.
-4. Open `CallLabVIEWWebService\CallLabVIEWWebService.lvproject` in LabVIEW NXG.
+4. Open `CallLabVIEWWebService\CallLabVIEWWebService.gwebproject` in G Web Development Software.
 5. Open `index.gviweb` and click the **Run** button.
 6. Build the web application.  
   a. Open `WebApp.gcomp`.  
   b. On the **Document** tab, click **Build**.
 
-**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Server** >> right-click `WebApp.gcomp` >> **Run**
+> **Note:** 
+> 1. To view the build output on your machine, click **Output Directory** on the **Document** tab once your application finishes building.
+> 2. To launch and view the Web Application locally you can use the **Run** button on the **Document** tab.
 
 ## Hosting
 
@@ -44,7 +46,7 @@ You can manually the move the build output found at `Builds` to any web server. 
 
 The following steps can be used to host the web app on SystemLink Cloud
 
-1. Open `CallLabVIEWWebService\CallLabVIEWWebService.lvproject`.
+1. Open `CallLabVIEWWebService\CallLabVIEWWebService.gwebproject`.
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Open a Web browser and navigate to https://www.systemlinkcloud.com/webapphosting
@@ -57,31 +59,31 @@ The following steps can be used to host the web app on a local web server
 
 #### Hosting on the NI Web Server with a nipkg
 
-1. Open `CallLabVIEWWebService.lvproject`
+1. Open `CallLabVIEWWebService.gwebproject`
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Double-click the nipkg and follow the on screen instructions
 5. Open a web browser and navigate to `http://localhost:9090/calllvwebservice/`
 
-#### Hosting on the LabVIEW 2009-2017 Web Server
+#### Hosting on the LabVIEW 2009-2021 Web Server
 
 1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
-2. Copy the `WebApp_Web Server` directory into the `www` directory.
-3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/`
+2. Copy the `WebApp_Default Web Server` directory into the `www` directory.
+3. Open a web browser and navigate to `http://localhost:8080/WebApp_Default%20Web%20Server/`
 
 #### Hosting on the NI Web Server
 
 1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
-2. Copy the `WebApp_Web Server` directory into the `htdocs` directory.
-3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/`.
+2. Copy the `WebApp_Default Web Server` directory into the `htdocs` directory.
+3. Open a web browser and navigate to `http://localhost:9090/WebApp_Default%20Web%20Server/`.
 
 ## Details
 
 ### Important Directories
 
 - **`Web Service`** &mdash; Contains the LabVIEW web service project.
-- **`WebVI`** &mdash; Contains the LabVIEW NXG web application project, which includes the WebVI.
-- **`WebVI/Builds/WebApp_Web Server`** &mdash; Contains the built web application, which consists of HTML, JavaScript, the compiled diagram, and other web content.
+- **`WebVI`** &mdash; Contains the G Web Development Software web application project, which includes the WebVI.
+- **`WebVI/Builds/WebApp_Default Web Server`** &mdash; Contains the built web application, which consists of HTML, JavaScript, the compiled diagram, and other web content.
 
 ### The Web Service
 
@@ -115,7 +117,7 @@ This example show how to include your WebVI as part of your LabVIEW Web service 
 
 #### Project Setup
 
-The `WebApp_Web Server` directory has been included as **Public Content** within the LabVIEW project. This was done by right-clicking the Web service in the project and selecting Add **Public Content Folder**. In the **Open** dialog the `WebApp_Web Server` directory was selected. This is an *auto populating* folder so changes made by modifying the WebVI and rebuilding the application in LabVIEW NXG are automatically up taken by LabVIEW project. See more details on this topic at [Integrating Static Content into a Web Service](http://zone.ni.com/reference/en-XX/help/371361N-01/lvhowto/ws_static_content/).
+The `WebApp_Default Web Server` directory has been included as **Public Content** within the LabVIEW project. This was done by right-clicking the Web service in the project and selecting Add **Public Content Folder**. In the **Open** dialog the `WebApp_Default Web Server` directory was selected. This is an *auto populating* folder so changes made by modifying the WebVI and rebuilding the application in G Web Development Software are automatically up taken by LabVIEW project. See more details on this topic at [Integrating Static Content into a Web Service](http://zone.ni.com/reference/en-XX/help/371361N-01/lvhowto/ws_static_content/).
 
 #### URL Configuration Enum
 
