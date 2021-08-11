@@ -139,7 +139,7 @@ CSS rules targeting that class name will be apply to any the controls in then Pa
 
 ## Which CSS properties are known to work?
 
-**Note:** The following CSS selectors and properties are known to work in **LabVIEW NXG 3.1**.
+**Note:** The following CSS selectors and properties are known to work in **G Web Development Software 2021**.
 
 ### Configure the Panel background
 
@@ -286,7 +286,7 @@ ni-front-panel {
 
 ### Hide tab carousel on a Tab Control (rely on programmatic tab switching instead)
 
-**Note:** As of NXG 5 the `Show tab selector` option should be used to configure tab selector visibility instead of custom CSS.
+**Note:** The `Show tab selector` option should be used to configure tab selector visibility instead of custom CSS.
 
 ```css
 .user-class-name .jqx-ribbon-item {
