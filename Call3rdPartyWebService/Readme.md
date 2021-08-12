@@ -52,8 +52,9 @@ The following steps can be used to host the web app on a local web server
 1. Open `Call3rdPartyWebService.gwebproject`
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
-4. Double-click the nipkg and follow the on screen instructions
-5. Open a web browser and navigate to `http://localhost:9090/call3rdpartywebservice/`
+4. Open a web browser and navigate to `http://localhost:9090/#/webvihost`
+5. Click the `Import` button and select the nipkg built in step 3
+6. When the upload is complete, click on your newly uploaded Web app from your list of Web apps
 
 #### Hosting on the NI Web Server by manually moving files
 

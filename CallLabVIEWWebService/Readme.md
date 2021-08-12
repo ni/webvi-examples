@@ -62,8 +62,9 @@ The following steps can be used to host the web app on a local web server
 1. Open `CallLabVIEWWebService.gwebproject`
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
-4. Double-click the nipkg and follow the on screen instructions
-5. Open a web browser and navigate to `http://localhost:9090/calllvwebservice/`
+4. Open a web browser and navigate to `http://localhost:9090/#/webvihost`
+5. Click the `Import` button and select the nipkg built in step 3
+6. When the upload is complete, click on your newly uploaded Web app from your list of Web apps
 
 #### Hosting on the LabVIEW 2018-2021 Web Server
 
