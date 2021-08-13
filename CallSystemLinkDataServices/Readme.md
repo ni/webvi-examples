@@ -180,7 +180,7 @@ After installing G Web Development Software, you need to install and configure a
 After you create a web application and build the package in G Web Development Software, you need to move it to a web server. This enables administrators to access it from a web browser. Copy your entire web application output directory to any web server you choose.
 > **Note:** To navigate to your web application output on your machine, click **Locate directory in Windows Explorer** on the **Document** tab of your web application component document. You can also access the build output by navigating to your web application’s project folder manually (`..\CallSystemLinkDataServices\Builds`).
 
-Furthermore, this project includes a distribution document (`Full Data Services App.lvdist`), which you can use to build a package (`.nipkg`). A package is also required for hosting a web application on SystemLink Cloud. [Go here](https://www.ni.com/documentation/en/g-web-development/latest/application-builder/distributing-app-lib/) to learn more about distributing applications.
+Furthermore, this project includes a distribution document (`Full Data Services App.lvdist`), which you can use to build a package (`.nipkg`). A package is also required for hosting a web application on SystemLink Cloud. See [packaging an application](https://www.ni.com/documentation/en/g-web-development/latest/manual/distributing-app-lib/) to learn more about distributing applications.
 
 ### Local Hosting
 
