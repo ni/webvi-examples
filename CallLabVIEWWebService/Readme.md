@@ -65,7 +65,7 @@ The following steps can be used to host the web app on a local web server
 4. Double-click the nipkg and follow the on screen instructions
 5. Open a web browser and navigate to `http://localhost:9090/calllvwebservice/`
 
-#### Hosting on the LabVIEW 2018-2021 Web Server
+#### Hosting on the LabVIEW 2009-2021 Web Server
 
 1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
 2. Copy the `WebApp_Default Web Server` directory into the `www` directory.
