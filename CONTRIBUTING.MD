@@ -51,5 +51,5 @@ See [GitHub's official documentation](https://help.github.com/articles/using-pul
 
 (taken from https://developercertificate.org/)
 
-See [LICENSE](https://github.com/ni/webvi-examples/blob/master/LICENSE)
+See [LICENSE](https://github.com/ni/webvi-examples/tree/main/LICENSE)
 for details about how webvi-examples is licensed.
