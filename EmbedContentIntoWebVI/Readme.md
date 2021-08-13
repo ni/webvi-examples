@@ -3,18 +3,18 @@
 [![Embed Content into a WebVI Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/EmbedContentIntoWebVI/Builds/WebApp_Web%20Server/)
 [![Embed Content into a WebVI README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)]()
 
-This example demonstrates how to embed custom web content into the WebVI panel using LabVIEW NXG. WebVIs use HTML to define and describe the content of the panel that is loaded in a web page. This means that you can add custom HTML content to appear alongside the LabVIEW-generated HTML.
+This example demonstrates how to embed custom web content into the WebVI panel using G Web Development Software. WebVIs use HTML to define and describe the content of the panel that is loaded in a web page. This means that you can add custom HTML content to appear alongside the generated HTML.
 
 ![Screenshot of Demo](readme_files/Screenshot.gif)
 
 ## Dependencies
 
-- LabVIEW NXG Web Module
+- G Web Development Software
 
 ## Setup
 
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
-2. Open `EmbedWebVIIntoContent/WebVI/Embed WebVI into Content.lvproject`.
+2. Open `EmbedWebVIIntoContent/WebVI/Embed WebVI into Content.gwebproject`.
 3. On the **Project Files** tab, expand `WebApp.gcomp` and open `index.gviweb`.
 4. Click the **Run** button.
 5. Build the web application.
@@ -29,7 +29,7 @@ You can manually the move the build output found at `\EmbedWebVIIntoContent\Buil
 
 The following steps can be used to host the web app on SystemLink Cloud
 
-1. Open `EmbedWebVIIntoContent.lvproject`.
+1. Open `EmbedWebVIIntoContent.gwebproject`.
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Open a Web browser and navigate to https://www.systemlinkcloud.com/webapphosting
@@ -42,25 +42,25 @@ The following steps can be used to host the web app on a local web server
 
 #### Hosting on the NI Web Server with a nipkg
 
-1. Open `EmbedWebVIIntoContent.lvproject`
+1. Open `EmbedWebVIIntoContent.gwebproject`
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Double-click the nipkg and follow the on screen instructions
 5. Open a web browser and navigate to `http://localhost:9090/embedcontentintowebvi/`
 
-#### Hosting on the LabVIEW 2009-2017 Web Server
+#### Hosting on the LabVIEW 2009-2021 Web Server
 
 1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
-2. Copy the `WebApp_Web Server` directory into the `www` directory.
-3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/`
+2. Copy the `WebApp_Default Web Server` directory into the `www` directory.
+3. Open a web browser and navigate to `http://localhost:8080/WebApp_Default%20Web%20Server/`
 
 #### Hosting on the NI Web Server
 
 1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
-2. Copy the `WebApp_Web Server` directory into the `htdocs` directory.
-3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/`.
-
-**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Server** >> right-click `WebApp.gcomp` >> **Run**
+2. Copy the `WebApp_Default Web Server` directory into the `htdocs` directory.
+3. Open a web browser and navigate to `http://localhost:9090/WebApp_Default%20Web%20Server/`.
+    - To view the build output on your machine, click **Output Directory** on the **Document** tab once your application finishes building.
+    - To launch and view the Web Application locally you can use the **Run** button on the **Document** tab.
 
 ## Details
 
