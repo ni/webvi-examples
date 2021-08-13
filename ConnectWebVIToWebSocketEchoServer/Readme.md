@@ -1,9 +1,9 @@
 # Connect WebVI to WebSocket Echo Server
 
-[![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/Builds/WebApp_Web%20Server/)
+[![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/Builds/WebApp_Default%20Web%20Server/)
 [![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-README_Link-orange.svg)]()
 
-This example uses the Web Module WebSockets API to connect to the WebSocket Echo Server hosted by https://websocket.org/. The WebVI connects to the server, sends a message, and receives the same message from the server.
+This example uses the G Web Development Software WebSockets API to connect to the WebSocket Echo Server hosted by https://websocket.org/. The WebVI connects to the server, sends a message, and receives the same message from the server.
 
 On the diagram, this WebVI uses WebSocket VIs to open a connection to the echo server, send messages, read received messages, and close the connection. The WebVI also formats sent and received strings to display on the Messages indicator.
 
@@ -11,18 +11,18 @@ On the diagram, this WebVI uses WebSocket VIs to open a connection to the echo s
 
 ## Dependencies
 
-- LabVIEW NXG Web Module
+- G Web Development Software
 
 ## Setup
 
 1. Clone the [ni/webvi-examples](https://github.com/ni/webvi-examples) repository to your machine.
-2. Open `ConnectWebVIToWebSocketEchoServer\ConnectWebVIToWebSocketEchoServer.lvproject`
+2. Open `ConnectWebVIToWebSocketEchoServer\ConnectWebVIToWebSocketEchoServer.gwebproject`
 3. Open `index.gviweb` and click the **Run** button.
 4. Build the web application.  
   a. Open `WebApp.gcomp`.  
   b. On the **Document** tab, click **Build**.
-
-**Note:** To view the build output on your machine, click **Locate Directory in Windows Explorer** on the **Document** tab once your application finishes building. You can automatically launch and view the Web application locally by going to **System Designer** >> **Web Server** >> right-click `WebApp.gcomp` >> **Run**
+    - To view the build output on your machine, click **Output Directory** on the **Document** tab once your application finishes building.
+    - To launch and view the Web Application locally you can use the **Run** button on the **Document** tab.
 
 ## Hosting
 
@@ -32,7 +32,7 @@ You can manually the move the build output found at `\ConnectWebVIToWebSocketEch
 
 The following steps can be used to host the web app on SystemLink Cloud
 
-1. Open `ConnectWebVIToWebSocketEchoServer.lvproject`.
+1. Open `ConnectWebVIToWebSocketEchoServer.gwebproject`.
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Open a Web browser and navigate to https://systemlinkcloud.com/
@@ -45,7 +45,7 @@ The following steps can be used to host the web app on a local web server
 
 #### Hosting on the NI Web Server with a nipkg
 
-1. Open `ConnectWebVIToWebSocketEchoServer.lvproject`
+1. Open `ConnectWebVIToWebSocketEchoServer.gwebproject`
 2. Open `WebApp.lvdist`.
 3. Click the build icon in the top command bar of this distribution document
 4. Double-click the nipkg and follow the on screen instructions
@@ -54,14 +54,14 @@ The following steps can be used to host the web app on a local web server
 #### Hosting on the NI Web Server by manually moving files
 
 1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`
-2. Copy the `WebApp_Web Server` directory into the `htdocs` directory
-3. Open a web browser and navigate to `http://localhost:9090/WebApp_Web%20Server/`
+2. Copy the `WebApp_Default Web Server` directory into the `htdocs` directory
+3. Open a web browser and navigate to `http://localhost:9090/WebApp_Default%20Web%20Server/`
 
-#### Hosting on the LabVIEW 2009-2017 Web Server
+#### Hosting on the LabVIEW 2009-2021 Web Server
 
 1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`
-2. Copy the `WebApp_Web Server` directory into the `www` directory
-3. Open a web browser and navigate to `http://localhost:8080/WebApp_Web%20Server/`
+2. Copy the `WebApp_Default Web Server` directory into the `www` directory
+3. Open a web browser and navigate to `http://localhost:8080/WebApp_Default%20Web%20Server/`
 
 ## Details
 
@@ -84,4 +84,4 @@ Once the session is completed, the user disconnects from the server.
 
 ## Related Links
 
-[LabVIEW NXG WebSockets API Documentation](http://www.ni.com/documentation/en/labview-web-module/latest/web-mod-node-ref/websocket-nodes/)
+[LabVIEW NXG WebSockets API Documentation](https://www.ni.com/documentation/en/g-web-development/latest/web-mod-node-ref/websocket-nodes/)
