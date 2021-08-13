@@ -106,7 +106,7 @@ To upload a WebVI to SystemLink Cloud, you will need to build it into a package 
 1. On the **Projects Files** tab, double-click the `Full Data Services App.lvdist` to open it.
 2. On the **Document tab**, click **Build** to build the package.
 
- [Go here](https://www.ni.com/documentation/en/g-web-development/latest/application-builder/distributing-app-lib/) if you’re interested in learning more about distributing applications.
+ See [packaging an application](https://www.ni.com/documentation/en/g-web-development/latest/manual/distributing-app-lib/) if you’re interested in learning more about distributing applications.
 
 ### Hosting a Web Application on SystemLink Cloud
 
