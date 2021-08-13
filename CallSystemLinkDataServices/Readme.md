@@ -53,7 +53,7 @@ In this section, you’ll learn how to set up, build, and connect your web appli
 
 To connect your web application to SystemLink Cloud from G Web Development Software, you need a server URL and an API key. The API key authenticates the web application running on your local machine for SystemLink Cloud – much like your ni.com credentials authenticate your identity.
 
-[Learn](#connecting-to-systemlink-cloud-from-labview-nxg-3.0-web-module) how to establish a connection to the SystemLink Cloud server from G Web Development Software.
+Learn how to [establish a connection to SystemLink Cloud](#connecting-to-systemlink-cloud) from G Web Development Software.
 
 ![Configure GVI in G Web Development Software vs Hosting in SystemLink Cloud](readme_files/cloud-config.PNG)
 
@@ -71,7 +71,7 @@ An API key authenticates an application trying to access SystemLink Cloud. It he
 
 >**Note:** You only get to see an API key once, so keep it somewhere safe and only provide it to those you trust. If you delete an API key, all applications using that API key will no longer be able to connect to SystemLink Cloud.
 
-### Connecting to SystemLink Cloud from G Web Development Software
+### Connecting to SystemLink Cloud
 
 To connect to SystemLink Cloud from G Web Development Software, you need a server URL and an API key.
 

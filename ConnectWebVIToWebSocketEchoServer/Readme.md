@@ -84,4 +84,4 @@ Once the session is completed, the user disconnects from the server.
 
 ## Related Links
 
-[LabVIEW NXG WebSockets API Documentation](https://www.ni.com/documentation/en/g-web-development/latest/web-mod-node-ref/websocket-nodes/)
+[WebSockets API Documentation](https://www.ni.com/documentation/en/g-web-development/latest/web-mod-node-ref/websocket-nodes/)

@@ -6,7 +6,7 @@ For complete documentation of well-supported G Web Development Software WebVI fe
 
 ## CSS Frequently Asked Questions
 
-The [CSS FAQ](CSS) provides a brief introduction to CSS and covers selectors known to work in specific versions of LabVIEW NXG.
+The [CSS FAQ](CSS) provides a brief introduction to CSS and covers selectors known to work in specific versions of G Web Development Software.
 
 > **Note:** The CSS FAQ covers topics that may require **detailed knowledge of underlying web concepts** or discuss APIs that are unstable and **may change between releases of G Web Development Software**.
 
