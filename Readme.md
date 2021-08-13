@@ -47,7 +47,7 @@ This example demonstrates how to create a WebVI that makes requests to a LabVIEW
 
 ## Call SystemLink Data Services
 
-[![Call SystemLink Data Services](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/CallSystemLinkDataServices/Builds/Full%20Data%20Services%20App_Web%20Server/)
+[![Call SystemLink Data Services](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/CallSystemLinkDataServices/Builds/Full%20Data%20Services%20App_Default%20Web%20Server/)
 [![CallSystemLink Data Services README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](CallSystemLinkDataServices)
 
 This example demonstrates how to use a WebVI to communicate over networks with SystemLink Tags after connecting to SystemLink Cloud or SystemLink Server, an on-premises web server.  
