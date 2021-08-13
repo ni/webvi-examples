@@ -59,10 +59,8 @@ The following steps can be used to host the web app on a local web server
 1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
 2. Copy the `WebApp_Default Web Server` directory into the `htdocs` directory.
 3. Open a web browser and navigate to `http://localhost:9090/WebApp_Default%20Web%20Server/`.
-
-> **Note:** 
-> 1. To view the build output on your machine, click **Output Directory** on the **Document** tab once your application finishes building.
-> 2. To launch and view the Web Application locally you can use the **Run** button on the **Document** tab.
+    - To view the build output on your machine, click **Output Directory** on the **Document** tab once your application finishes building.
+    - To launch and view the Web Application locally you can use the **Run** button on the **Document** tab.
 
 ## Details
 

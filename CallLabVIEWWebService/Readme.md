@@ -33,10 +33,8 @@ Use LabVIEW to create web services that do what WebVIs can't do, such as:
 6. Build the web application.  
   a. Open `WebApp.gcomp`.  
   b. On the **Document** tab, click **Build**.
-
-> **Note:** 
-> 1. To view the build output on your machine, click **Output Directory** on the **Document** tab once your application finishes building.
-> 2. To launch and view the Web Application locally you can use the **Run** button on the **Document** tab.
+    - To view the build output on your machine, click **Output Directory** on the **Document** tab once your application finishes building.
+    - To launch and view the Web Application locally you can use the **Run** button on the **Document** tab.
 
 ## Hosting
 

@@ -172,9 +172,8 @@ After installing G Web Development Software, you need to install and configure a
 2. Open `index.gviweb` and click **Run**.
 3. On the **Projects Files** tab, double-click the `Full Data Services App.gcomp` to open it.
 4. On the **Document tab**, click **Build** to build your web application.
-> **Note:** 
-> 1. To view the build output on your machine, click **Output Directory** on the **Document** tab once your application finishes building.
-> 2. To launch and view the Web Application locally you can use the **Run** button on the **Document** tab.
+    - To view the build output on your machine, click **Output Directory** on the **Document** tab once your application finishes building.
+    - To launch and view the Web Application locally you can use the **Run** button on the **Document** tab.
 
 ### Hosting Overview
 

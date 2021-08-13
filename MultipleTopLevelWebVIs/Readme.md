@@ -20,10 +20,8 @@ This example demonstrates how to create a web application with multiple pages by
 5. Build the web application.  
   a. On the **Project Files** tab, double-click `WebApp.gcomp` to open the web application component.  
   b. On the **Document** tab, click **Build**.  
-
-> **Note:** 
-> 1. To view the build output on your machine, click **Output Directory** on the **Document** tab once your application finishes building.
-> 2. To launch and view the Web Application locally you can use the **Run** button on the **Document** tab.
+    - To view the build output on your machine, click **Output Directory** on the **Document** tab once your application finishes building.
+    - To launch and view the Web Application locally you can use the **Run** button on the **Document** tab.
 
 ## Hosting
 
