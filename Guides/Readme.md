@@ -12,4 +12,4 @@ The [CSS FAQ](CSS) provides a brief introduction to CSS and covers selectors kno
 
 ## Questions or comments?
 
-For questions related to topics discussed in the WebVI Example Guides, please ask in the [LabVIEW NXG discussion forums](https://forums.ni.com/t5/LabVIEW/bd-p/170).
+For questions related to topics discussed in the WebVI Example Guides, please ask in the [G Web Development Software discussion forums](https://forums.ni.com/t5/G-Web-Development-Software/bd-p/g-web-development?profile.language=en0).
