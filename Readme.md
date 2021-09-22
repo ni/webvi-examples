@@ -7,7 +7,7 @@ For LabVIEW NXG versions see the [previous releases](https://github.com/ni/webvi
 
 The following examples demonstrate different ways of using WebVIs. Each directory contains example code and a `README.md` file explaining the example.
 
-If you have any questions or general feedback about the examples please post in [G Web Development Software Discussion Forums](https://forums.ni.com/t5/G-Web-Development-Software/bd-p/g-web-development?profile.language=en0).
+If you have any questions or general feedback about the examples please post in [G Web Development Software Discussion Forums](https://www.ni.com/r/ask-ni-community-gweb).
 If there is a technical error or typo with the examples themselves please create and issue on the issues page of this repository.
 
 ## Call 3rd Party Web Service
