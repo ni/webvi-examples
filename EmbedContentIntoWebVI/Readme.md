@@ -80,4 +80,4 @@ This example uses an `<iframe>` generated from [Google Maps](https://developers.
 
 The **URL Image** indicator from the **Drawings** palette category allows you to enter a URL to an external image. The **URL Image** supports both static images (`.jpg`, `.png`, etc.) and animated images (`.gif`, etc.).
 
-This example uses the following image URL from the [Atlantic County Utilities Authority](http://www.acua.com/green-initiatives/renewable-energy/windfarm/): `http://107.1.228.34/axis-cgi/mjpg/video.cgi?resolution=640x480&compression=50&dummy=1502732035434`
+This example uses the following image URL from the [University of Delaware Public Utilities](https://publicutility.ceoe.udel.edu/lewesturbine/multimedia.shtml#live): `https://ceoe-contrail.ceoe.udel.edu:8100/Mjpeg/1?authToken=d392c0a2-3a6c-4a94-aad8-1c248e44915a`

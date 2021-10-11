@@ -7,7 +7,7 @@ For LabVIEW NXG versions see the [previous releases](https://github.com/ni/webvi
 
 The following examples demonstrate different ways of using WebVIs. Each directory contains example code and a `README.md` file explaining the example.
 
-If you have any questions or general feedback about the examples please post in the LabVIEW NXG section of the [LabVIEW Discussion Forums](https://forums.ni.com/t5/LabVIEW/bd-p/170).
+If you have any questions or general feedback about the examples please post in [G Web Development Software Discussion Forums](https://www.ni.com/r/ask-ni-community-gweb).
 If there is a technical error or typo with the examples themselves please create and issue on the issues page of this repository.
 
 ## Call 3rd Party Web Service
@@ -64,7 +64,7 @@ Once you complete the necessary steps, you will know:
 [![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/Builds/WebApp_Default%20Web%20Server/)
 [![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-README_Link-orange.svg)](ConnectWebVIToWebSocketEchoServer)
 
-This example uses the WebSockets API in G Web Development Software to connect to the WebSocket Echo Server hosted by https://websocket.org/. The WebVI connects to the server, sends a message, and receives the same message from the server.
+This example uses the WebSockets API in G Web Development Software to connect to the WebSocket Echo Server hosted by https://ifelse.io/. The WebVI connects to the server, sends a message, and receives the same message from the server.
 
 On the diagram, this WebVI uses WebSocket VIs to open a connection to the echo server, send messages, read received messages, and close the connection. The WebVI also formats sent and received strings to display on the Messages indicator.
 
