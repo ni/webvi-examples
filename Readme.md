@@ -64,7 +64,7 @@ Once you complete the necessary steps, you will know:
 [![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/ConnectWebVIToWebSocketEchoServer/Builds/WebApp_Default%20Web%20Server/)
 [![Connect WebVI to WebSocket Echo Server](https://img.shields.io/badge/Details-README_Link-orange.svg)](ConnectWebVIToWebSocketEchoServer)
 
-This example uses the WebSockets API in G Web Development Software to connect to the WebSocket Echo Server hosted by https://websocket.org/. The WebVI connects to the server, sends a message, and receives the same message from the server.
+This example uses the WebSockets API in G Web Development Software to connect to the WebSocket Echo Server hosted by https://ifelse.io/. The WebVI connects to the server, sends a message, and receives the same message from the server.
 
 On the diagram, this WebVI uses WebSocket VIs to open a connection to the echo server, send messages, read received messages, and close the connection. The WebVI also formats sent and received strings to display on the Messages indicator.
 
