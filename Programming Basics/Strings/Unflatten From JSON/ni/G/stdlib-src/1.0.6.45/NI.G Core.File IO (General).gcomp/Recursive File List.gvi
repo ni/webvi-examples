@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="CC77F1F9673918CCCC7977B0A946BA9DA9E1925F7D983B0C76186EFE796CE5CBB11FE777482D12D89CE22E7E812E2843A47E16CF7C96C7A9095DD377F07D6B49" Timestamp="1D69761B73FC594" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.51564" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.49573" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;contexthelp&gt;&lt;p&gt;Lists the contents of a folder.&lt;/p&gt;&lt;/contexthelp&gt;</p.UserDescription>
+		<Icon Id="279" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="470" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<Path Data="[PathGeometry]M 40,36 C 40,38.2000008 38.2000008,40 36,40 L 4,40 C 1.79999995,40 0,38.2000008 0,36 L 0,4 C 0,1.79999995 1.79999995,0 4,0 L 36,0 C 38.2000008,0 40,1.79999995 40,4 L 40,36 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Id="461" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+				<Path Data="[PathGeometry]M 39,36 C 39,37.6500015 37.6500015,39 36,39 L 4,39 C 2.3499999,39 1,37.6500015 1,36 L 1,4 C 1,2.3499999 2.3499999,1 4,1 L 36,1 C 37.6500015,1 39,2.3499999 39,4 L 39,36 Z" Fill="[SMSolidColorBrush]#ffffffff" Height="[float]40" Id="462" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+				<Path Data="[PathGeometry]M 38,36 C 38,37.0999985 37.0999985,38 36,38 L 4,38 C 2.9000001,38 2,37.0999985 2,36 L 2,4 C 2,2.9000001 2.9000001,2 4,2 L 36,2 C 37.0999985,2 38,2.9000001 38,4 L 38,36 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Id="463" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+				<Path Data="[PathGeometry]M 6.00199986,25 L 18,25 L 18,26 L 6.00199986,26 Z" Fill="[SMSolidColorBrush]#b2000000" Height="[float]1" Id="464" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]11.998" />
+				<Path Data="[PathGeometry]M 7.00199986,27 L 18,27 L 18,28 L 7.00199986,28 Z" Fill="[SMSolidColorBrush]#b2000000" Height="[float]1" Id="465" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]10.998" />
+				<Path Data="[PathGeometry]M 7,8 L 24,8 L 24,8.91300011 L 25,8.91300011 L 25,7 L 15,7 L 15,5 L 6,5 L 6,8.91300011 L 7,8.91300011 L 7,8 Z" Fill="[SMSolidColorBrush]#b2000000" Height="[float]40" Id="466" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+				<Path Data="[PathGeometry]M 26,10.1560001 L 5,10.1560001 L 5,24 L 18,24 L 18,15 L 26,15 L 26,10.1560001 Z" Fill="[SMSolidColorBrush]#b2000000" Height="[float]40" Id="467" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+				<Path Data="[PathGeometry]M 29.0039997,17 L 29,20 L 32,20 L 29.0039997,17 Z" Fill="[SMSolidColorBrush]#b2000000" Height="[float]40" Id="468" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+				<Path Data="[PathGeometry]M 33,21 L 28,21 L 28,17 C 28,16.448 27.552,16 27,16 L 19.0079994,16 L 19.0079994,34 L 34,34 L 34,22 C 34,21.448 33.5519981,21 33,21 Z M 32,31 L 23,31 L 23,30 L 32,30 L 32,31 Z M 32,28 L 23,28 L 23,27 L 32,27 L 32,28 Z M 32,25 L 23,25 L 23,24 L 32,24 L 32,25 Z" Fill="[SMSolidColorBrush]#b2000000" Height="[float]40" Id="469" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<ConnectorPane Height="40" Id="9" ListViewHeight="120" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+			<ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="14" />
+			<ConnectorPaneTerminal Hotspot="0 15" />
+			<ConnectorPaneTerminal Hotspot="0 25" ListViewHotspot="0 125" Parameter="22" />
+			<ConnectorPaneTerminal Hotspot="0 35" ListViewHotspot="0 50" Parameter="26" />
+			<ConnectorPaneTerminal Hotspot="15 0" />
+			<ConnectorPaneTerminal Hotspot="25 0" ListViewHotspot="150 110" Parameter="61" />
+			<ConnectorPaneTerminal Hotspot="40 5" />
+			<ConnectorPaneTerminal Hotspot="40 15" ListViewHotspot="150 65" Parameter="40" />
+			<ConnectorPaneTerminal Hotspot="40 25" ListViewHotspot="150 80" Parameter="47" />
+			<ConnectorPaneTerminal Hotspot="40 35" ListViewHotspot="150 95" Parameter="51" />
+			<ConnectorPaneTerminal Hotspot="15 40" ListViewHotspot="0 140" Parameter="68" />
+			<ConnectorPaneTerminal Hotspot="25 40" ListViewHotspot="0 155" Parameter="72" />
+		</ConnectorPane>
+		<DiagramUnplacedItems Id="10" xmlns="http://www.ni.com/MocCommon" />
+		<FrontPanelUnplacedItems Id="11" Left="[float]0" PanelSizeMode="Fixed" Top="[float]0" />
+		<BlockDiagram Id="12">
+			<DataAccessor Bounds="-25 230 40 15" DataItem="14" Id="16" Label="90" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Path" Direction="Output" Hotspot="40 5" Id="Path" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<DataAccessor Bounds="1545 -45 40 15" DataItem="40" Id="45" Label="95" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Path[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<DataAccessor Bounds="1545 -20 40 15" DataItem="47" Id="49" Label="96" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Int32" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<DataAccessor Bounds="-20 330 40 15" DataItem="26" Id="28" Label="93" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Error" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<DataAccessor Bounds="1545 330 40 15" DataItem="51" Id="53" Label="97" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Error" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<DataAccessor Bounds="1545 130 40 15" DataItem="61" Id="66" Label="98" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Path[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<DataAccessor Bounds="-20 365 40 15" DataItem="68" Id="70" Label="99" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="String" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<DataAccessor Bounds="-20 420 40 15" DataItem="22" Id="24" Label="92" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<DataAccessor Bounds="-20 70 40 15" DataItem="72" Id="77" Label="100" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="String[]" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="16" Bounds="-62 230 32 14" Id="90" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>folder</p.Text>
+			</NodeLabel>
+			<NodeLabel AttachedTo="45" Bounds="1590 -45 89 14" Id="95" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>all files in folder</p.Text>
+			</NodeLabel>
+			<NodeLabel AttachedTo="49" Bounds="1590 -20 84 14" Id="96" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>number of files</p.Text>
+			</NodeLabel>
+			<NodeLabel AttachedTo="28" Bounds="-67 330 42 14" Id="93" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>error in</p.Text>
+			</NodeLabel>
+			<NodeLabel AttachedTo="53" Bounds="1590 330 50 14" Id="97" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>error out</p.Text>
+			</NodeLabel>
+			<NodeLabel AttachedTo="66" Bounds="1590 130 54 14" Id="98" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>all folders</p.Text>
+			</NodeLabel>
+			<NodeLabel AttachedTo="70" Bounds="-66 365 41 14" Id="99" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>pattern</p.Text>
+			</NodeLabel>
+			<NodeLabel AttachedTo="24" Bounds="-176 420 151 14" Id="92" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>continue recursing on error</p.Text>
+			</NodeLabel>
+			<NodeLabel AttachedTo="77" Bounds="-124 70 99 14" Id="100" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>folders to exclude</p.Text>
+			</NodeLabel>
+			<CaseStructure Bounds="40 -195 1490 715" DataType="Error" Id="101" Selected="102" UserSelectorBounds="692 0 106 17">
+				<CaseStructure.Case Bounds="5 5 1480 705" Id="102" Pattern="No Error">
+					<ArrayLiteral Bounds="108 110 12 10" DataType="Int32[]" Id="117" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>
+							<Array Lengths="0" />
+						</p.Data>
+						<ArrayBehavior ElementType="Int32" IndexEditorWidth="42">
+							<p.DefaultElementValue>0</p.DefaultElementValue>
+						</ArrayBehavior>
+						<Literal Bounds="47 5 40 15" DataType="Int32" Id="118">
+							<NumericBehavior Interpretation="Exact" Radix="Decimal" RadixVisibility="Hidden" ValueFormatter="Decimal, Uppercase, Signed" />
+						</Literal>
+						<DockedConstantFacade UndockedSize="101 25" />
+					</ArrayLiteral>
+					<ArraySize Bounds="30 260 40 20" Id="119" />
+					<BuildArray Bounds="15 420 40 20" Id="120" Terminals="outArray=413, c0t0v=414, c1t0v" />
+					<ToLowerCase Bounds="35 290 30 10" Id="121" />
+					<WhileLoop Bounds="125 25 1105 645" DiagramId="123" Id="122">
+						<LoopCondition Bounds="1065 420 15 15" Id="124" />
+						<LoopIteration Bounds="335 110 15 15" Id="125" />
+						<Literal Bounds="9.5 420 40 15" DataType="Int32" Id="141" Label="142" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>0</p.Data>
+							<NumericBehavior Interpretation="Exact" Radix="Decimal" RadixVisibility="Hidden" ValueFormatter="Decimal, Uppercase, Signed" />
+						</Literal>
+						<NodeLabel AttachedTo="141" Bounds="9.5 420 0 0" Id="142" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>index</p.Text>
+						</NodeLabel>
+						<Select Bounds="35 460 40 40" Id="143" />
+						<DeleteFromArray Bounds="70 390 40 40" Id="144" Terminals="inArray=388, length (1), outArray=376, deleted=369, index0=382" />
+						<CaseStructure Bounds="160 220 190 110" DataType="Int32" Default="147" Id="145" Selected="146" UserSelectorBounds="45 0 100 17">
+							<CaseStructure.Case Bounds="5 5 180 100" Id="146" Pattern="0">
+								<Literal Bounds="124.5 15 40 15" DataType="Int32" Id="152" Label="153" xmlns="http://www.ni.com/MocCommon">
+									<p.Data>-1</p.Data>
+									<NumericBehavior Interpretation="Exact" Radix="Decimal" RadixVisibility="Hidden" ValueFormatter="Decimal, Uppercase, Signed" />
+								</Literal>
+								<NodeLabel AttachedTo="152" Bounds="124.5 15 0 0" Id="153" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+									<p.Text>index of element</p.Text>
+								</NodeLabel>
+								<Comment Bounds="10 50 155 28" Id="154" xmlns="http://www.ni.com/MocCommon">
+									<p.Text>"No exclusion folders.\nJust run normal recurse."</p.Text>
+								</Comment>
+								<Wire Id="287" Joints="N(152:Out)|(164.5,20) N(151:146)|(176,20)" xmlns="http://www.ni.com/PlatformFramework" />
+							</CaseStructure.Case>
+							<CaseStructure.Case Bounds="5 5 180 100" Id="147" Pattern="Default">
+								<StripPath Bounds="15 55 30 30" Id="155" />
+								<ToLowerCase Bounds="55 70 30 10" Id="156" />
+								<Search1DArray Bounds="110 35 40 40" Id="157" />
+								<Wire Id="288" Joints="N(157:index of element)|(150,60) h(15) v(-40) N(151:147)|(176,20)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="289" Joints="N(149:147)|(4,40) N(157:1D array)|(110,40)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="290" Joints="N(156:all lower case string)|(85,75) h(10) v(-15) N(157:element)|(110,60)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="291" Joints="N(155:name)|(45,75) N(156:string)|(58,75)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="292" Joints="N(150:147)|(4,70) N(155:path)|(15,70)" xmlns="http://www.ni.com/PlatformFramework" />
+							</CaseStructure.Case>
+							<CaseStructure.Selector Bounds="-4 20 13 10" Docking="Left" Id="148" Terminals="145=371, 146, 147" />
+							<CaseStructure.Tunnel Bounds="-4 40 13 10" Docking="Left" Id="149" Terminals="145=370, 146, 147=289" />
+							<CaseStructure.Tunnel Bounds="-4 70 13 10" Docking="Left" Id="150" Terminals="145=369, 146, 147=292" />
+							<CaseStructure.Tunnel Bounds="181 20 13 10" Docking="Right" Id="151" Terminals="145=368, 146=287, 147=288" />
+						</CaseStructure>
+						<CaseStructure Bounds="370 20 635 600" DataType="Int32" Default="160" Id="158" Selected="159" UserSelectorBounds="268 0 100 17">
+							<CaseStructure.Case Bounds="5 5 625 590" Id="159" Pattern="-1">
+								<FileOrDirectoryInfo Bounds="35 385 40 40" Id="177" />
+								<CaseStructure Bounds="115 295 180 185" Default="179" Id="178" Selected="179" UserSelectorBounds="46 0 88 17">
+									<CaseStructure.Case Bounds="5 5 170 175" Id="179" Pattern="False">
+										<ListFolder Bounds="35 85 40 40" Id="201" />
+										<ListFolder Bounds="95 110 40 40" Id="202" />
+										<Comment Bounds="10 20 150 60" Id="203" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
+											<p.Text>Check files and folders separately since pattern input affects folder list</p.Text>
+										</Comment>
+										<Wire Id="293" Joints="N(201:path out)|(75,90) h(10) B(1) N(183:179)|(166,90) B(1) v(25) N(202:path)|(95,115)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="294" Joints="N(202:folder names)|(135,135) N(187:179)|(166,135)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="295" Joints="N(202:error out)|(135,145) h(15) v(-25) N(184:179)|(166,120)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="296" Joints="N(201:error out)|(75,120) h(10) v(25) N(202:error in)|(95,145)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="297" Joints="N(186:179)|(4,155) h(46) N(201:pattern)|(50,125)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="298" Joints="N(188:179)|(4,120) N(201:error in)|(35,120)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="299" Joints="N(189:179)|(4,90) N(201:path)|(35,90)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="300" Joints="N(201:file names)|(75,100) N(182:179)|(166,100)" xmlns="http://www.ni.com/PlatformFramework" />
+									</CaseStructure.Case>
+									<CaseStructure.Case Bounds="5 5 170 175" Id="180" Pattern="True">
+										<Comment Bounds="15 15 135 55" Id="206" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
+											<p.Text>Do not attempt to recurse the contents of folder shortcuts</p.Text>
+										</Comment>
+										<Wire Id="316" Joints="N(188:180)|(4,120) N(184:180)|(166,120)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="317" Joints="N(189:180)|(4,90) N(183:180)|(166,90)" xmlns="http://www.ni.com/PlatformFramework" />
+									</CaseStructure.Case>
+									<CaseStructure.Selector Bounds="-4 135 13 10" Docking="Left" Id="181" Terminals="178=350, 179, 180" />
+									<CaseStructure.Tunnel Bounds="171 100 13 10" DefaultIfUnwired="True" Docking="Right" Id="182" Terminals="178=343, 179=300, 180" />
+									<CaseStructure.Tunnel Bounds="171 90 13 10" Docking="Right" Id="183" Terminals="178=358, 179=293, 180=317" />
+									<CaseStructure.Tunnel Bounds="171 120 13 10" Docking="Right" Id="184" Terminals="178=348, 179=295, 180=316" />
+									<CaseStructure.Tunnel Bounds="-4 155 13 10" Docking="Left" Id="186" Terminals="178=356, 179=297, 180" />
+									<CaseStructure.Tunnel Bounds="171 135 13 10" DefaultIfUnwired="True" Docking="Right" Id="187" Terminals="178=355, 179=294, 180" />
+									<CaseStructure.Tunnel Bounds="-4 120 13 10" Docking="Left" Id="188" Terminals="178=352, 179=298, 180=316" />
+									<CaseStructure.Tunnel Bounds="-4 90 13 10" Docking="Left" Id="189" Terminals="178=351, 179=299, 180=317" />
+								</CaseStructure>
+								<IsEmptyArray Bounds="340 445 30 30" Id="207" />
+								<IsEmptyArray Bounds="340 210 30 30" Id="208" />
+								<CaseStructure Bounds="325 505 130 70" Default="210" Id="209" Selected="211" UserSelectorBounds="21 0 88 17">
+									<CaseStructure.Case Bounds="5 5 120 60" Id="210" Pattern="False">
+										<Wire Id="318" Joints="N(213:210)|(4,20) N(214:210)|(116,20)" xmlns="http://www.ni.com/PlatformFramework" />
+									</CaseStructure.Case>
+									<CaseStructure.Case Bounds="5 5 120 60" Id="211" Pattern="True">
+										<Wire Id="319" Joints="N(433:error out)|(90,35) h(15) v(-15) N(214:211)|(116,20)" xmlns="http://www.ni.com/PlatformFramework" />
+										<MergeErrors Bounds="60 30 30 20" Id="433" Terminals="error out=319, c0t0v=437, c1t0v=438" />
+										<Wire Id="437" Joints="N(215:211)|(4,35) N(433:c0t0v)|(60,35)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="438" Joints="N(213:211)|(4,20) h(31) v(25) N(433:c1t0v)|(60,45)" xmlns="http://www.ni.com/PlatformFramework" />
+									</CaseStructure.Case>
+									<CaseStructure.Selector Bounds="-4 50 13 10" Docking="Left" Id="212" Terminals="209=347, 210, 211" />
+									<CaseStructure.Tunnel Bounds="-4 20 13 10" Docking="Left" Id="213" Terminals="209=348, 210=318, 211=438" />
+									<CaseStructure.Tunnel Bounds="121 20 13 10" Docking="Right" Id="214" Terminals="209=346, 210=318, 211=319" />
+									<CaseStructure.Tunnel Bounds="-4 35 13 10" Docking="Left" Id="215" Terminals="209=345, 210, 211=437" />
+								</CaseStructure>
+								<CaseStructure Bounds="385 320 195 170" Default="218" Id="217" Selected="219" UserSelectorBounds="54 0 88 17">
+									<CaseStructure.Case Bounds="5 5 185 160" Id="218" Pattern="False">
+										<ForLoop Bounds="23 68 75 85" DiagramId="226" Id="225">
+											<LoopIteration Bounds="0 55 15 15" Id="227" />
+											<BuildPath Bounds="20 20 30 30" Id="232" />
+											<Wire Id="322" Joints="N(231:i0)|(6,40) N(232:name or relative path)|(20,40)" xmlns="http://www.ni.com/PlatformFramework" />
+											<Wire Id="323" Joints="N(232:appended path)|(50,25) N(230:i0)|(63,25)" xmlns="http://www.ni.com/PlatformFramework" />
+											<Wire Id="324" Joints="N(229:i0)|(6,25) N(232:base path)|(20,25)" xmlns="http://www.ni.com/PlatformFramework" />
+											<LoopCount Bounds="1 1 15 15" Docking="Left" Id="228" Terminals="225, 226" />
+											<LoopTunnel Bounds="-5 22 13 10" Docking="Left" Id="229" Terminals="o0=329, i0=324" />
+											<LoopTunnel AutoIndex="True" Bounds="65 22 13 10" Docking="Right" Id="230" Terminals="o0=326, i0=323" TunnelMode="0" />
+											<LoopTunnel AutoIndex="True" Bounds="-5 37 13 10" Docking="Left" Id="231" Terminals="o0=325, i0=322" TunnelMode="0" />
+										</ForLoop>
+										<BuildArray Bounds="130 40 40 20" ConcatenateInputsIsRequested="True" Id="233" Terminals="outArray=328, c0t0v=326, c1t0v=327" />
+										<Comment Bounds="15 15 130 23" Id="234" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
+											<p.Text>Build list of folders</p.Text>
+										</Comment>
+										<Wire Id="325" Joints="N(224:218)|(4,110) N(231:o0)|(18,110)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="326" Joints="N(230:o0)|(101,95) h(7) v(-50) N(233:c0t0v)|(130,45)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="327" Joints="N(221:218)|(4,45) h(5) v(10) N(233:c1t0v)|(130,55)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="328" Joints="N(233:outArray)|(170,45) N(222:218)|(181,45)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="329" Joints="N(223:218)|(4,65) h(9) v(30) N(229:o0)|(18,95)" xmlns="http://www.ni.com/PlatformFramework" />
+									</CaseStructure.Case>
+									<CaseStructure.Case Bounds="5 5 185 160" Id="219" Pattern="True">
+										<Wire Id="330" Joints="N(221:219)|(4,45) N(222:219)|(181,45)" xmlns="http://www.ni.com/PlatformFramework" />
+									</CaseStructure.Case>
+									<CaseStructure.Selector Bounds="-4 135 13 10" Docking="Left" Id="220" Terminals="217=354, 218, 219" />
+									<CaseStructure.Tunnel Bounds="-4 45 13 10" Docking="Left" Id="221" Terminals="217=342, 218=327, 219=330" />
+									<CaseStructure.Tunnel Bounds="186 45 13 10" Docking="Right" Id="222" Terminals="217=353, 218=328, 219=330" />
+									<CaseStructure.Tunnel Bounds="-4 65 13 10" Docking="Left" Id="223" Terminals="217=358, 218=329, 219" />
+									<CaseStructure.Tunnel Bounds="-4 110 13 10" Docking="Left" Id="224" Terminals="217=355, 218=325, 219" />
+								</CaseStructure>
+								<CaseStructure Bounds="385 80 220 175" Default="236" Id="235" Selected="236" UserSelectorBounds="66 0 88 17">
+									<CaseStructure.Case Bounds="5 5 210 165" Id="236" Pattern="False">
+										<ForLoop Bounds="58 68 70 90" DiagramId="244" Id="243">
+											<LoopIteration Bounds="0 60 15 15" Id="245" />
+											<BuildPath Bounds="15 25 30 30" Id="250" />
+											<Wire Id="331" Joints="N(250:appended path)|(45,30) N(249:i0)|(58,30)" xmlns="http://www.ni.com/PlatformFramework" />
+											<Wire Id="332" Joints="N(247:i0)|(6,45) N(250:name or relative path)|(15,45)" xmlns="http://www.ni.com/PlatformFramework" />
+											<Wire Id="333" Joints="N(248:i0)|(6,30) N(250:base path)|(15,30)" xmlns="http://www.ni.com/PlatformFramework" />
+											<LoopCount Bounds="1 1 15 15" Docking="Left" Id="246" Terminals="243, 244" />
+											<LoopTunnel AutoIndex="True" Bounds="-5 42 13 10" Docking="Left" Id="247" Terminals="o0=337, i0=332" TunnelMode="0" />
+											<LoopTunnel Bounds="-5 27 13 10" Docking="Left" Id="248" Terminals="o0=334, i0=333" />
+											<LoopTunnel AutoIndex="True" Bounds="60 27 13 10" Docking="Right" Id="249" Terminals="o0=335, i0=331" TunnelMode="0" />
+										</ForLoop>
+										<BuildArray Bounds="145 85 40 20" ConcatenateInputsIsRequested="True" Id="251" Terminals="outArray=338, c0t0v=336, c1t0v=335" />
+										<Comment Bounds="15 35 110 23" Id="252" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
+											<p.Text>Build list of files</p.Text>
+										</Comment>
+										<Wire Id="334" Joints="N(242:236)|(4,100) N(248:o0)|(53,100)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="335" Joints="N(249:o0)|(131,100) N(251:c1t0v)|(145,100)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="336" Joints="N(241:236)|(4,25) h(136) v(65) N(251:c0t0v)|(145,90)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="337" Joints="N(240:236)|(4,115) N(247:o0)|(53,115)" xmlns="http://www.ni.com/PlatformFramework" />
+										<Wire Id="338" Joints="N(251:outArray)|(185,90) h(10) v(-65) N(239:236)|(206,25)" xmlns="http://www.ni.com/PlatformFramework" />
+									</CaseStructure.Case>
+									<CaseStructure.Case Bounds="5 5 210 165" Id="237" Pattern="True">
+										<Wire Id="339" Joints="N(241:237)|(4,25) N(239:237)|(206,25)" xmlns="http://www.ni.com/PlatformFramework" />
+									</CaseStructure.Case>
+									<CaseStructure.Selector Bounds="-4 140 13 10" Docking="Left" Id="238" Terminals="235=344, 236, 237" />
+									<CaseStructure.Tunnel Bounds="211 25 13 10" Docking="Right" Id="239" Terminals="235=360, 236=338, 237=339" />
+									<CaseStructure.Tunnel Bounds="-4 115 13 10" Docking="Left" Id="240" Terminals="235=343, 236=337, 237" />
+									<CaseStructure.Tunnel Bounds="-4 25 13 10" Docking="Left" Id="241" Terminals="235=359, 236=336, 237=339" />
+									<CaseStructure.Tunnel Bounds="-4 100 13 10" Docking="Left" Id="242" Terminals="235=341, 236=334, 237" />
+								</CaseStructure>
+								<Comment Bounds="35 15 335 35" Id="253" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
+									<p.Text>Do normal recursion (exclusion list was either empty, or didn't contain this folder)</p.Text>
+								</Comment>
+								<Wire Id="340" Joints="N(173:159)|(4,60) N(175:159)|(621,60)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="341" Joints="N(167:159)|(4,390) h(16) B(1) N(177:path)|(35,390) B(1) v(-120) h(285) B(4) N(174:159)|(621,270) B(4) v(-85) N(242:235)|(381,185)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="342" Joints="N(172:159)|(4,370) h(9) v(-80) h(357) v(80) N(221:217)|(381,370)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="343" Joints="N(182:178)|(299,400) h(21) v(-175) B(2) N(208:array)|(340,225) B(2) v(-25) N(240:235)|(381,200)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="344" Joints="N(208:empty?)|(370,225) N(238:235)|(381,225)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="345" Joints="N(171:159)|(4,545) N(215:209)|(321,545)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="346" Joints="N(214:209)|(459,530) h(151) v(-60) N(170:159)|(621,470)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="347" Joints="N(169:159)|(4,560) N(212:209)|(321,560)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="348" Joints="N(184:178)|(299,420) h(16) v(110) N(213:209)|(321,530)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="349" Joints="N(168:159)|(4,470) h(21) v(-50) N(177:error in)|(35,420)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="350" Joints="N(177:shortcut)|(50,425) v(10) N(181:178)|(111,435)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="351" Joints="N(177:path out)|(75,390) N(189:178)|(111,390)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="352" Joints="N(177:error out)|(75,420) N(188:178)|(111,420)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="353" Joints="N(222:217)|(584,370) N(166:159)|(621,370)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="354" Joints="N(207:empty?)|(370,460) N(220:217)|(381,460)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="355" Joints="N(187:178)|(299,435) h(31) B(1) N(224:217)|(381,435) B(1) v(25) N(207:array)|(340,460)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="356" Joints="N(165:159)|(4,505) h(81) v(-50) N(186:178)|(111,455)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="358" Joints="N(183:178)|(299,390) N(223:217)|(381,390)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="359" Joints="N(163:159)|(4,110) N(241:235)|(381,110)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="360" Joints="N(239:235)|(609,110) N(162:159)|(621,110)" xmlns="http://www.ni.com/PlatformFramework" />
+							</CaseStructure.Case>
+							<CaseStructure.Case Bounds="5 5 625 590" Id="160" Pattern="Default">
+								<BuildArray Bounds="290 55 40 20" Id="255" Terminals="outArray=363, c0t0v=364, c1t0v=362" />
+								<Comment Bounds="385 210 186 15" Id="256" xmlns="http://www.ni.com/MocCommon">
+									<p.Text>Output empty folder path here</p.Text>
+								</Comment>
+								<Comment Bounds="40 240 305 90" Id="257" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
+									<p.Text>This is an excluded folder.  Don't recurse it, and add its index to the index array so we can delete its empty path from the All Folders array after the loop is done.</p.Text>
+								</Comment>
+								<Wire Id="362" Joints="N(176:160)|(4,90) h(236) v(-20) N(255:c1t0v)|(290,70)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="363" Joints="N(255:outArray)|(330,60) N(175:160)|(621,60)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="364" Joints="N(173:160)|(4,60) N(255:c0t0v)|(290,60)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="365" Joints="N(168:160)|(4,470) N(170:160)|(621,470)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="366" Joints="N(172:160)|(4,370) N(166:160)|(621,370)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="367" Joints="N(163:160)|(4,110) N(162:160)|(621,110)" xmlns="http://www.ni.com/PlatformFramework" />
+							</CaseStructure.Case>
+							<CaseStructure.Selector Bounds="-4 220 13 10" Docking="Left" Id="161" Terminals="158=368, 159, 160" />
+							<CaseStructure.Tunnel Bounds="626 110 13 10" Docking="Right" Id="162" Terminals="158=389, 159=360, 160=367" />
+							<CaseStructure.Tunnel Bounds="-4 110 13 10" Docking="Left" Id="163" Terminals="158=387, 159=359, 160=367" />
+							<CaseStructure.Tunnel Bounds="-4 505 13 10" Docking="Left" Id="165" Terminals="158=385, 159=356, 160" />
+							<CaseStructure.Tunnel Bounds="626 370 13 10" Docking="Right" Id="166" Terminals="158=384, 159=353, 160=366" />
+							<CaseStructure.Tunnel Bounds="-4 390 13 10" Docking="Left" Id="167" Terminals="158=369, 159=341, 160" />
+							<CaseStructure.Tunnel Bounds="-4 470 13 10" Docking="Left" Id="168" Terminals="158=381, 159=349, 160=365" />
+							<CaseStructure.Tunnel Bounds="-4 560 13 10" Docking="Left" Id="169" Terminals="158=379, 159=347, 160" />
+							<CaseStructure.Tunnel Bounds="626 470 13 10" Docking="Right" Id="170" Terminals="158=378, 159=346, 160=365" />
+							<CaseStructure.Tunnel Bounds="-4 545 13 10" Docking="Left" Id="171" Terminals="158=377, 159=345, 160" />
+							<CaseStructure.Tunnel Bounds="-4 370 13 10" Docking="Left" Id="172" Terminals="158=376, 159=342, 160=366" />
+							<CaseStructure.Tunnel Bounds="-4 60 13 10" Docking="Left" Id="173" Terminals="158=375, 159=340, 160=364" />
+							<CaseStructure.Tunnel Bounds="626 270 13 10" DefaultIfUnwired="True" Docking="Right" Id="174" Terminals="158=374, 159=341, 160" />
+							<CaseStructure.Tunnel Bounds="626 60 13 10" Docking="Right" Id="175" Terminals="158=373, 159=340, 160=363" />
+							<CaseStructure.Tunnel Bounds="-4 90 13 10" Docking="Left" Id="176" Terminals="158=372, 159, 160=362" />
+						</CaseStructure>
+						<IsEmptyArray Bounds="1025 410 30 30" Id="258" />
+						<Comment Bounds="15 15 215 60" Id="259" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
+							<p.Text>"See if the current folder name\nmatches any of the names\nspecified in the exclusion list"</p.Text>
+						</Comment>
+						<Wire Id="368" Joints="N(151:145)|(354,245) N(161:158)|(366,245)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="369" Joints="N(144:deleted)|(110,415) h(30) B(1) N(167:158)|(366,415) B(1) v(-120) N(150:145)|(156,295)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="370" Joints="N(139:i0)|(4,265) N(149:145)|(156,265)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="371" Joints="N(140:i0)|(4,245) N(148:145)|(156,245)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="372" Joints="N(125:Output)|(350,115) N(176:158)|(366,115)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="373" Joints="N(175:158)|(1009,85) N(132:123)|(1091,85)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="374" Joints="N(174:158)|(1009,295) N(135:i0)|(1091,295)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="375" Joints="N(133:i0)|(4,85) N(173:158)|(366,85)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="376" Joints="N(144:outArray)|(110,395) N(172:158)|(366,395)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="377" Joints="N(131:i0)|(4,495) h(11) B(1) N(143:f)|(35,495) B(1) v(75) N(171:158)|(366,570)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="378" Joints="N(170:158)|(1009,495) N(130:123)|(1091,495)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="379" Joints="N(137:i0)|(4,585) h(21) B(1) N(169:158)|(366,585) B(1) v(-105) N(143:s)|(35,480)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="380" Joints="N(138:i0)|(4,465) N(143:t)|(35,465)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="381" Joints="N(143:s? t:f)|(75,480) h(5) v(15) N(168:158)|(366,495)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="382" Joints="N(141:Out)|(49.5,425) N(144:index0)|(70,425)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="383" Joints="N(258:empty?)|(1055,425) N(124:Input)|(1065,425)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="384" Joints="N(166:158)|(1009,395) h(6) B(1) N(128:123)|(1091,395) B(1) v(30) N(258:array)|(1025,425)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="385" Joints="N(136:i0)|(4,530) N(165:158)|(366,530)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="387" Joints="N(127:i0)|(4,135) N(163:158)|(366,135)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="388" Joints="N(129:i0)|(4,395) N(144:inArray)|(70,395)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="389" Joints="N(162:158)|(1009,135) N(126:123)|(1091,135)" xmlns="http://www.ni.com/PlatformFramework" />
+						<RightShiftRegister Bounds="1096 135 13 10" Docking="Right" Id="126" Terminals="122=408, 123=389" />
+						<LeftShiftRegister Bounds="-4 135 13 10" Docking="Left" Id="127" RightRegister="126" Terminals="o0=432, i0=387" />
+						<RightShiftRegister Bounds="1096 395 13 10" Docking="Right" Id="128" Terminals="122, 123=384" />
+						<LeftShiftRegister Bounds="-4 395 13 10" Docking="Left" Id="129" RightRegister="128" Terminals="o0=413, i0=388" />
+						<RightShiftRegister Bounds="1096 495 13 10" Docking="Right" Id="130" Terminals="122=409, 123=378" />
+						<LeftShiftRegister Bounds="-4 495 13 10" Docking="Left" Id="131" RightRegister="130" Terminals="o0=405, i0=377" />
+						<RightShiftRegister Bounds="1096 85 13 10" Docking="Right" Id="132" Terminals="122=398, 123=373" />
+						<LeftShiftRegister Bounds="-4 85 13 10" Docking="Left" Id="133" RightRegister="132" Terminals="o0=403, i0=375" />
+						<LoopTunnel AutoIndex="True" Bounds="1096 295 13 10" Docking="Right" Id="135" Terminals="o0=401, i0=374" TunnelMode="0" />
+						<LoopTunnel Bounds="-4 530 13 10" Docking="Left" Id="136" Terminals="o0=410, i0=385" />
+						<LoopTunnel Bounds="-4 585 13 10" Docking="Left" Id="137" Terminals="o0=406, i0=379" />
+						<LoopTunnel Bounds="-4 465 13 10" Docking="Left" Id="138" Terminals="o0=405, i0=380" />
+						<LoopTunnel Bounds="-4 265 13 10" Docking="Left" Id="139" Terminals="o0=404, i0=370" />
+						<LoopTunnel Bounds="-4 245 13 10" Docking="Left" Id="140" Terminals="o0=400, i0=371" />
+					</WhileLoop>
+					<ArraySize Bounds="1280 160 40 20" Id="260" />
+					<CaseStructure Bounds="1280 260 180 155" DataType="Int32" Default="262" Id="261" Selected="262" UserSelectorBounds="40 0 100 17">
+						<CaseStructure.Case Bounds="5 5 170 145" Id="262" Pattern="Default">
+							<Reverse1DArray Bounds="15 85 40 20" Id="268" />
+							<ForLoop Bounds="68 28 85 105" DiagramId="270" Id="269">
+								<LoopIteration Bounds="0 75 15 15" Id="271" />
+								<DeleteFromArray Bounds="20 25 40 40" Id="276" Terminals="inArray=392, length (1), outArray=391, deleted, index0=390" />
+								<Wire Id="390" Joints="N(275:i0)|(6,60) N(276:index0)|(20,60)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="391" Joints="N(276:outArray)|(60,30) N(273:270)|(73,30)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="392" Joints="N(274:i0)|(6,30) N(276:inArray)|(20,30)" xmlns="http://www.ni.com/PlatformFramework" />
+								<LoopCount Bounds="1 1 15 15" Docking="Left" Id="272" Terminals="269, 270" />
+								<RightShiftRegister Bounds="75 27 13 10" Docking="Right" Id="273" Terminals="269=394, 270=391" />
+								<LeftShiftRegister Bounds="-5 27 13 10" Docking="Left" Id="274" RightRegister="273" Terminals="o0=395, i0=392" />
+								<LoopTunnel AutoIndex="True" Bounds="-5 57 13 10" Docking="Left" Id="275" Terminals="o0=393, i0=390" TunnelMode="0" />
+							</ForLoop>
+							<Wire Id="393" Joints="N(268:reversed array)|(55,90) N(275:o0)|(63,90)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="394" Joints="N(273:269)|(156,60) N(266:262)|(166,60)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="395" Joints="N(265:262)|(4,60) N(274:o0)|(63,60)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="396" Joints="N(267:262)|(4,90) N(268:array)|(15,90)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Case Bounds="5 5 170 145" Id="263" Pattern="0">
+							<Comment Bounds="15 65 146 55" Id="277" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>"No excluded folders.\nDon't run the code that\ndeletes excluded folder\nindices. "</p.Text>
+							</Comment>
+							<Wire Id="397" Joints="N(265:263)|(4,60) N(266:263)|(166,60)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Selector Bounds="-4 110 13 10" Docking="Left" Id="264" Terminals="261=400, 262, 263" />
+						<CaseStructure.Tunnel Bounds="-4 60 13 10" Docking="Left" Id="265" Terminals="261=401, 262=395, 263=397" />
+						<CaseStructure.Tunnel Bounds="171 60 13 10" Docking="Right" Id="266" Terminals="261=399, 262=394, 263=397" />
+						<CaseStructure.Tunnel Bounds="-4 90 13 10" Docking="Left" Id="267" Terminals="261=398, 262=396, 263" />
+					</CaseStructure>
+					<Wire Id="398" Joints="N(132:122)|(1234,115) h(16) v(240) N(267:261)|(1276,355)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="399" Joints="N(266:261)|(1464,325) N(110:102)|(1476,325)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="400" Joints="N(119:size(s\))|(70,275) h(30) B(1) N(140:o0)|(121,275) B(1) v(410) h(1150) v(-310) N(264:261)|(1276,375)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="401" Joints="N(135:o0)|(1234,325) N(265:261)|(1276,325)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="402" Joints="N(113:102)|(4,265) h(21) B(1) N(119:array)|(30,265) B(1) v(30) N(121:string)|(38,295)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Facade="WireInvisibleFacade" Id="403" Joints="N(117:Out)|(120,115) N(133:o0)|(121,115)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="404" Joints="N(121:all lower case string)|(65,295) N(139:o0)|(121,295)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="405" Joints="N(104:102)|(4,525) h(101) B(1) N(131:o0)|(121,525) B(1) v(-30) N(138:o0)|(121,495)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="406" Joints="N(112:102)|(4,615) N(137:o0)|(121,615)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="407" Joints="N(260:size(s\))|(1320,175) N(107:102)|(1476,175)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="408" Joints="N(126:122)|(1234,165) h(26) B(1) N(260:array)|(1280,165) B(1) v(-15) N(106:102)|(1476,150)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="409" Joints="N(130:122)|(1234,525) N(108:102)|(1476,525)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="410" Joints="N(111:102)|(4,560) N(136:o0)|(121,560)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="413" Joints="N(120:outArray)|(55,425) N(129:o0)|(121,425)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="414" Joints="N(105:102)|(4,425) N(120:c0t0v)|(15,425)" xmlns="http://www.ni.com/PlatformFramework" />
+					<ArrayLiteral Bounds="108 160 12 10" DataType="Path[]" Id="431" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>null</p.Data>
+						<ArrayBehavior ElementType="Path" IndexEditorWidth="42">
+							<p.DefaultElementValue>
+								<Path a="1" />
+							</p.DefaultElementValue>
+						</ArrayBehavior>
+						<Literal Bounds="47 5 40 15" DataType="Path" Id="430">
+							<PathBehavior />
+						</Literal>
+						<DockedConstantFacade UndockedSize="101 25" />
+					</ArrayLiteral>
+					<Wire Facade="WireInvisibleFacade" Id="432" Joints="N(431:Out)|(120,165) N(127:o0)|(121,165)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<Comment Bounds="1280 5 186 130" Id="278" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
+						<p.Text>After the recursion is done, if there were any excluded folders, remove their empty paths from the All Folders list.  Reverse the array so they can be removed from the bottom up and indices can be preserved.</p.Text>
+					</Comment>
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 1480 705" Id="103" Pattern="Error">
+					<Wire Id="415" Joints="N(104:103)|(4,525) N(108:103)|(1476,525)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Selector Bounds="-4 525 13 10" Docking="Left" Id="104" Terminals="101=422, 102=405, 103=415" />
+				<CaseStructure.Tunnel Bounds="-4 425 13 10" Docking="Left" Id="105" Terminals="101=541, 102=414, 103" />
+				<CaseStructure.Tunnel Bounds="1481 150 13 10" DefaultIfUnwired="True" Docking="Right" Id="106" Terminals="101=425, 102=408, 103" />
+				<CaseStructure.Tunnel Bounds="1481 175 13 10" DefaultIfUnwired="True" Docking="Right" Id="107" Terminals="101=424, 102=407, 103" />
+				<CaseStructure.Tunnel Bounds="1481 525 13 10" Docking="Right" Id="108" Terminals="101=423, 102=409, 103=415" />
+				<CaseStructure.Tunnel Bounds="1481 325 13 10" DefaultIfUnwired="True" Docking="Right" Id="110" Terminals="101=420, 102=399, 103" />
+				<CaseStructure.Tunnel Bounds="-4 560 13 10" Docking="Left" Id="111" Terminals="101=418, 102=410, 103" />
+				<CaseStructure.Tunnel Bounds="-4 615 13 10" Docking="Left" Id="112" Terminals="101=417, 102=406, 103" />
+				<CaseStructure.Tunnel Bounds="-4 265 13 10" Docking="Left" Id="113" Terminals="101=416, 102=402, 103" />
+			</CaseStructure>
+			<Wire Id="416" Joints="N(77:Value)|(20,75) N(113:101)|(36,75)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="417" Joints="N(24:Value)|(20,425) N(112:101)|(36,425)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="418" Joints="N(70:Value)|(20,370) N(111:101)|(36,370)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="420" Joints="N(110:101)|(1534,135) N(66:Value)|(1548,135)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="422" Joints="N(28:Value)|(20,335) N(104:101)|(36,335)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="423" Joints="N(108:101)|(1534,335) N(53:Value)|(1548,335)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="424" Joints="N(107:101)|(1534,-15) N(49:Value)|(1548,-15)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="425" Joints="N(106:101)|(1534,-40) N(45:Value)|(1548,-40)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="541" Joints="N(16:Path)|(15,235) N(105:101)|(36,235)" xmlns="http://www.ni.com/PlatformFramework" />
+		</BlockDiagram>
+		<NativeFrontPanel AllowMaximize="[bool]False" EnforceMaximumSize="[bool]True" Height="[float]1600" Id="13" Left="[float]0" MaxHeight="[float]1600" MaxWidth="[float]2000" PanelSizeMode="Fixed" Top="[float]0" Width="[float]2000" WindowTitleOption="[WindowTitleOption]None">
+			<PathSelector BaseName="[string]Path" BrowseDialogTitle="[string]Open File" Filter="[string]txt;*.csv" Height="[float]24" Id="17" InteractionMode="[PathSelectorInteractionModes]BrowseDialog, TextInput, AllowNullPathSelection" Label="[UIModel]79" Left="[float]205" Path="{DataItemBinding Id=14}" TabIndex="[int]0" Top="[float]36" Width="[float]180" WrapText="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;contexthelp&gt;&lt;p&gt;&lt;b&gt;Folder Path&lt;/b&gt; specifies the path to the folder or LLB whose contents you want LabVIEW to return.&lt;/p&gt;&lt;/contexthelp&gt;</p.UserDescription>
+			</PathSelector>
+			<Switch BaseName="[string]Switch" FalseContent="[string]No" Height="[float]50" Id="25" IsReadOnly="[bool]False" Label="[UIModel]81" Left="[float]205" Margin="[SMThickness]0,0,0,0" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" TabIndex="[int]1" Top="[float]184" TrueContent="[string]Yes" Value="{DataItemBinding Id=22}" Width="[float]52" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;contexthelp&gt;&lt;p&gt;&lt;b&gt;Continue Recursing on Error?&lt;/b&gt; specifies whether to continue recursing directories if an error occurs. If &lt;b&gt;Continue Recursing on Error?&lt;/b&gt; is TRUE, the VI continues recursing directory contents after the error occurs. If &lt;b&gt;Continue Recursing on Error?&lt;/b&gt; is FALSE, the VI stops recursing directory content when the error occurs.&lt;/p&gt;&lt;/contexthelp&gt;</p.UserDescription>
+			</Switch>
+			<ArrayViewer ArrayElement="[UIModel]43" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]40" Id="46" IndexEditorWidth="[double]79" Label="[UIModel]84" Left="[float]463" Margin="[SMThickness]0,0,0,0" Orientation="[SMOrientation]Horizontal" Rows="[int]1" TabIndex="[int]2" Top="[float]105" Value="{DataItemBinding Id=40}" Width="[float]423" xmlns="http://www.ni.com/PanelCommon">
+				<p.DefaultElementValue>
+					<Path a="1" />
+				</p.DefaultElementValue>
+				<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;All Files in Dir&lt;/B&gt; returns a list of all files in &lt;B&gt;Folder Path&lt;/B&gt;. If &lt;B&gt;Treat LLBs as Folders?&lt;/B&gt; is set to TRUE, the list of files includes LLBs. The list also includes shortcuts to files.</p.UserDescription>
+				<PathSelector BaseName="[string]Path" Filter="[string]txt;*.csv" Height="[float]28" Id="43" InteractionMode="[PathSelectorInteractionModes]ReadOnly" Margin="[SMThickness]0,0,0,0" Name="[string]Child" Width="[float]330" WrapText="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			</ArrayViewer>
+			<NumericText BaseName="[string]Numeric" Height="[float]24" Id="50" IsReadOnly="[bool]True" Label="[UIModel]85" Left="[float]463" TabIndex="[int]3" Top="[float]184" Value="{DataItemBinding Id=47}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;contexthelp&gt;&lt;p&gt;&lt;b&gt;Number of Files&lt;/b&gt; returns the number of files in the &lt;b&gt;All Files in Dir&lt;/b&gt; array.&lt;/p&gt;&lt;/contexthelp&gt;</p.UserDescription>
+			</NumericText>
+			<ArrayViewer ArrayElement="[UIModel]64" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]40" Id="67" Label="[UIModel]87" Left="[float]463" Orientation="[SMOrientation]Vertical" Rows="[int]1" TabIndex="[int]4" Top="[float]531" Value="{DataItemBinding Id=61}" Width="[float]424" xmlns="http://www.ni.com/PanelCommon">
+				<p.DefaultElementValue>
+					<Path a="1" />
+				</p.DefaultElementValue>
+				<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;All Folders&lt;/B&gt; returns a list of all subfolders, and shortcuts to folders in &lt;B&gt;Folder Path&lt;/B&gt;.</p.UserDescription>
+				<PathSelector BaseName="[string]Path" Filter="[string]txt;*.csv" Height="[float]28" Id="64" InteractionMode="[PathSelectorInteractionModes]ReadOnly" Margin="[SMThickness]0,0,0,0" Name="[string]Child" Width="[float]357" WrapText="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			</ArrayViewer>
+			<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="71" IsReadOnly="[bool]False" Label="[UIModel]88" Left="[float]295" TabIndex="[int]5" Text="{DataItemBinding Id=68}" Top="[float]473" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;pattern&lt;/B&gt; specifies the pattern for files for which you want to search in &lt;B&gt;Folder Path&lt;/B&gt;.</p.UserDescription>
+			</StringControl>
+			<ArrayViewer ArrayElement="[UIModel]75" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]36" Id="78" Label="[UIModel]89" Left="[float]245" Orientation="[SMOrientation]Horizontal" Rows="[int]1" TabIndex="[int]6" Top="[float]531" Value="{DataItemBinding Id=72}" Width="[float]157" xmlns="http://www.ni.com/PanelCommon">
+				<p.DefaultElementValue>""</p.DefaultElementValue>
+				<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;Folders to Exclude&lt;/B&gt; specifies folder names you want to exclude during the recursion. Any folder you exclude does not appear in the &lt;B&gt;All Folders&lt;/B&gt; array. This input is case insensitive.</p.UserDescription>
+				<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="75" IsReadOnly="[bool]False" Name="[string]Child" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			</ArrayViewer>
+			<Label Height="[float]16" Id="79" LabelOwner="[UIModel]17" Left="[float]205" Text="[string]folder" Top="[float]16" Width="[float]32" xmlns="http://www.ni.com/PanelCommon" />
+			<Label Height="[float]16" Id="81" LabelOwner="[UIModel]25" Left="[float]205" Text="[string]continue recursing on error" Top="[float]164" Width="[float]145" xmlns="http://www.ni.com/PanelCommon" />
+			<Label Height="[float]16" Id="84" LabelOwner="[UIModel]46" Left="[float]463" Text="[string]all files in folder" Top="[float]85" Width="[float]84" xmlns="http://www.ni.com/PanelCommon" />
+			<Label Height="[float]16" Id="85" LabelOwner="[UIModel]50" Left="[float]463" Text="[string]number of files" Top="[float]164" Width="[float]80" xmlns="http://www.ni.com/PanelCommon" />
+			<Label Height="[float]16" Id="87" LabelOwner="[UIModel]67" Left="[float]463" Text="[string]all folders" Top="[float]511" Width="[float]52" xmlns="http://www.ni.com/PanelCommon" />
+			<Label Height="[float]16" Id="88" LabelOwner="[UIModel]71" Left="[float]295" Text="[string]pattern" Top="[float]453" Width="[float]39" xmlns="http://www.ni.com/PanelCommon" />
+			<Label Height="[float]16" Id="89" LabelOwner="[UIModel]78" Left="[float]245" Text="[string]folders to exclude" Top="[float]511" Width="[float]95" xmlns="http://www.ni.com/PanelCommon" />
+			<Cluster BaseName="[string]Error" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]Error" Height="[float]176" Id="523" IsTabStop="[bool]True" Label="[UIModel]530" LabelLinked="[bool]True" Left="[float]205" MinHeight="[float]128" MinWidth="[float]112" TabIndex="[int]7" Top="[float]271" Value="{DataItemBinding Id=26}" Width="[float]176" p4:ControlDefinitionChecksum="J+f/EiASvnzghyjtgi4nEE7z+0udh8Z1+KU2hWC1ppw=" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/PanelCommon">
+				<p4:p.TypeDefinitionTargets>
+					<p4:TypeDefinitionTarget TargetName="NI::G Core::Error::Error.gtype::ControlDefinition" />
+				</p4:p.TypeDefinitionTargets>
+				<LVCheckBox Content="[string]" ContentVisibility="[Visibility]Collapsed" Height="[float]22" Id="567cb8a20a28417d85776f55809a965b" Label="[UIModel]9071f9ae91f94a07af2b1774b59fb6f2" Left="[float]3" TabIndex="[int]0" Top="[float]24" Value="{ClusterBinding FieldName=status}" Width="[float]22" p6:DisplayAsErrorStatus="True" xmlns:p6="http://www.ni.com/Controls.LabVIEW.Design" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="9071f9ae91f94a07af2b1774b59fb6f2" LabelOwner="[UIModel]567cb8a20a28417d85776f55809a965b" Left="[float]3" Text="[string]status" Top="[float]4" Width="[float]32" />
+				<NumericText Height="[float]24" Id="8d6534213e8e460cba4271eea1a633d4" Label="[UIModel]4ba460b5474c4ec08404fab3279f51ce" Left="[float]54" RadixVisibility="[SMVisibility]Visible" TabIndex="[int]1" Top="[float]24" Value="{ClusterBinding FieldName=code}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]111" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="4ba460b5474c4ec08404fab3279f51ce" LabelOwner="[UIModel]8d6534213e8e460cba4271eea1a633d4" Left="[float]54" Text="[string]code" Top="[float]4" Width="[float]26" />
+				<StringControl AcceptsReturn="[bool]True" Height="[float]95" Id="73c26246aa1145708f40c073421a5376" Label="[UIModel]c0492a984f2a4dab8355cbeb38d497b8" Left="[float]3" TabIndex="[int]2" Text="{ClusterBinding FieldName=source}" Top="[float]70" Width="[float]162" WordWrap="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="c0492a984f2a4dab8355cbeb38d497b8" LabelOwner="[UIModel]73c26246aa1145708f40c073421a5376" Left="[float]3" Text="[string]source" Top="[float]50" Width="[float]35" />
+			</Cluster>
+			<Label Height="[float]16" Id="530" LabelOwner="[UIModel]523" Left="[float]205" Text="[string]error in" Top="[float]251" Width="[float]26" xmlns="http://www.ni.com/PanelCommon" />
+			<Cluster BaseName="[string]Error" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]Error" Height="[float]176" Id="532" IsTabStop="[bool]True" Label="[UIModel]539" LabelLinked="[bool]True" Left="[float]463" MinHeight="[float]128" MinWidth="[float]112" TabIndex="[int]8" Top="[float]271" Value="{DataItemBinding Id=51}" Width="[float]176" p4:ControlDefinitionChecksum="J+f/EiASvnzghyjtgi4nEE7z+0udh8Z1+KU2hWC1ppw=" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/PanelCommon">
+				<p4:p.TypeDefinitionTargets>
+					<p4:TypeDefinitionTarget TargetName="NI::G Core::Error::Error.gtype::ControlDefinition" />
+				</p4:p.TypeDefinitionTargets>
+				<LVCheckBox Content="[string]" ContentVisibility="[Visibility]Collapsed" Height="[float]22" Id="76b4533f86c54d80a323766d5f2de316" IsReadOnly="[bool]True" Label="[UIModel]fcfa658dadc941c6bb4e48b42b64be16" Left="[float]3" TabIndex="[int]0" Top="[float]24" Value="{ClusterBinding FieldName=status}" Width="[float]22" p6:DisplayAsErrorStatus="True" xmlns:p6="http://www.ni.com/Controls.LabVIEW.Design" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="fcfa658dadc941c6bb4e48b42b64be16" LabelOwner="[UIModel]76b4533f86c54d80a323766d5f2de316" Left="[float]3" Text="[string]status" Top="[float]4" Width="[float]32" />
+				<NumericText Height="[float]24" Id="f0fa5d31c284de9bea359646529c6bc" IsReadOnly="[bool]True" Label="[UIModel]f7f6ec8abff047228e9a7bbba0a64786" Left="[float]54" RadixVisibility="[SMVisibility]Visible" TabIndex="[int]1" Top="[float]24" Value="{ClusterBinding FieldName=code}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]111" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="f7f6ec8abff047228e9a7bbba0a64786" LabelOwner="[UIModel]f0fa5d31c284de9bea359646529c6bc" Left="[float]54" Text="[string]code" Top="[float]4" Width="[float]26" />
+				<StringControl AcceptsReturn="[bool]True" Height="[float]95" Id="406f87fca66d48afbee87d4b40b163cb" IsReadOnly="[bool]True" Label="[UIModel]14c182dcec984557a9d8427c0cd8fff8" Left="[float]3" TabIndex="[int]2" Text="{ClusterBinding FieldName=source}" Top="[float]70" Width="[float]162" WordWrap="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="14c182dcec984557a9d8427c0cd8fff8" LabelOwner="[UIModel]406f87fca66d48afbee87d4b40b163cb" Left="[float]3" Text="[string]source" Top="[float]50" Width="[float]35" />
+			</Cluster>
+			<Label Height="[float]16" Id="539" LabelOwner="[UIModel]532" Left="[float]463" Text="[string]error out" Top="[float]251" Width="[float]26" xmlns="http://www.ni.com/PanelCommon" />
+			<PanelExecutionWindow Id="542" />
+		</NativeFrontPanel>
+		<DataItem CallDirection="Input" CallIndex="1" CallUsage="Required" DataType="Path" Id="14" Name="folder" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>
+				<Path a="1" />
+			</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="3" CallUsage="Optional" DataType="Boolean" Id="22" Name="continue recursing on error" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>False</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="4" DataType="Error" Id="26" Name="error in" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>
+				<Cluster>
+					<Field1>False</Field1>
+					<Field2>0</Field2>
+					<Field3>""</Field3>
+				</Cluster>
+			</p.DefaultValue>
+			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+				<TypeDefinitionTarget TargetName="NI::G Core::Error::Error.gtype" />
+			</p.TypeDefinitionTargets>
+		</DataItem>
+		<DataItem CallDirection="Output" CallIndex="2" DataType="Path[]" Id="40" Name="all files in folder" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>null</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Output" CallIndex="3" DataType="Int32" Id="47" Name="number of files" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Output" CallIndex="4" DataType="Error" Id="51" Name="error out" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>
+				<Cluster>
+					<Field1>False</Field1>
+					<Field2>0</Field2>
+					<Field3>""</Field3>
+				</Cluster>
+			</p.DefaultValue>
+			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+				<TypeDefinitionTarget TargetName="NI::G Core::Error::Error.gtype" />
+			</p.TypeDefinitionTargets>
+		</DataItem>
+		<DataItem CallDirection="Output" CallIndex="5" DataType="Path[]" Id="61" Name="all folders" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>null</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="5" CallUsage="Optional" DataType="String" Id="68" Name="pattern" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>""</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="6" CallUsage="Optional" DataType="String[]" Id="72" Name="folders to exclude" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>null</p.DefaultValue>
+		</DataItem>
+	</VirtualInstrument>
+</SourceFile>

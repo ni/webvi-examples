@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="8A69D0DCDB762F6BAF497050DDB0407C68F97E76A0114984A5E6CBA8DC8DA2CD159A7FD5B27FF2C71CACA05E4EAB0562131763395D280906FEADE78EADEFA97F" Timestamp="1D7E5E08C2ECE85" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="External Code" Name="http://www.ni.com/ExternalCode" OldestCompatibleVersion="5.1.0.0" Version="5.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="GComponentFeatureSet" Name="http://www.ni.com/GComponent.xsd" OldestCompatibleVersion="9.0.0.0" Version="9.0.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="9.1.0.50238" Name="G Web Development Software" Version="21.0.0" />
+	</SourceModelFeatureSet>
+	<ComponentDefinition Company="NI" DefaultConfigurationName="Default" Id="4" Product="G Core" RootNamespaceId="24" xmlns="http://www.ni.com/GComponent.xsd">
+		<Icon Id="13" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="14" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" HorizontalAlignment="[HorizontalAlignment]Center" Id="15" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" VerticalAlignment="[VerticalAlignment]Center" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<CompilerSymbolTable Id="5" xmlns="http://www.ni.com/PlatformFramework" />
+		<ComponentConfiguration ComponentSubtypeIdentifier="G Library" Id="6" Name="Default">
+			<CompilerSymbolTable Id="7" xmlns="http://www.ni.com/PlatformFramework" />
+			<ComponentItemProperties AssociatedEnvoyId="9" Exported="True" Id="10" />
+			<ComponentItemProperties AssociatedEnvoyId="11" Exported="True" Id="12" />
+			<ComponentItemProperties AssociatedEnvoyId="17" Exported="True" Id="18" />
+			<ComponentItemProperties AssociatedEnvoyId="25" Exported="True" Id="26" />
+			<ComponentItemProperties AssociatedEnvoyId="28" Exported="True" Id="30" />
+			<GLibraryProperties Id="8a448e3a7fb24d7883ddae223d326ade" />
+		</ComponentConfiguration>
+	</ComponentDefinition>
+	<EnvoyManagerFile Id="1" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="2" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<EmbeddedDefinitionReference Id="3" ModelDefinitionType="{http://www.ni.com/GComponent.xsd}ComponentDefinitionEnvoyHierarchyRoot" Name="Global Namespace">
+			<ComponentDefinitionEnvoyHierarchyRoot xmlns="http://www.ni.com/GComponent.xsd" />
+			<NameScopingEnvoy AutomaticallyResolveUp="True" Id="22" Name="NI">
+				<NameScopingEnvoy AutomaticallyResolveUp="True" Id="23" Name="G Core">
+					<NameScopingEnvoy AutomaticallyResolveUp="True" Id="24" Name="Timing">
+						<SourceFileReference Id="8" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="FormatTime String.gvi" StoragePath="FormatTime String.gvi" />
+						<SourceFileReference Id="11" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Elapsed Timer.gvi" StoragePath="Elapsed Timer.gvi" />
+						<NameScopingEnvoy AutomaticallyResolveUp="True" Id="27" Name="Legacy">
+							<SourceFileReference Id="17" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="subTimeDelay Compatibility.gvi" StoragePath="Legacy\subTimeDelay Compatibility.gvi" />
+							<SourceFileReference Id="9" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="subElapsedTime.gvi" StoragePath="Legacy\subElapsedTime.gvi" />
+							<SourceFileReference Id="28" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="High Resolution Relative Seconds.gvi" StoragePath="Legacy\High Resolution Relative Seconds.gvi" />
+							<SourceFileReference Bindings="EnvoyManager" Id="29" ModelDefinitionType="{http://www.ni.com/ExternalCode}SharedLibrary" Name="LabVIEW_HighResRelSec.sli" StoragePath="Legacy\LabVIEW_HighResRelSec.sli" />
+						</NameScopingEnvoy>
+						<SourceFileReference Bindings="EnvoyManager" Id="25" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="Date Time Record.gtype" StoragePath="Date Time Record.gtype\Date Time Record.gtype" />
+					</NameScopingEnvoy>
+				</NameScopingEnvoy>
+			</NameScopingEnvoy>
+		</EmbeddedDefinitionReference>
+		<NameScopingEnvoy Id="19" Name="NI.G Core.Timing.gcomp" NameTracksFileName="True">
+			<ContentReference Bindings="" ContentIdentifier="6" Id="20" Name="Default" OverridingModelDefinitionType="{http://www.ni.com/GComponent.xsd}ComponentConfiguration" />
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+</SourceFile>

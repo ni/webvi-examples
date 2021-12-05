@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="109B087E0E5348630714F7862A0C3D59435A2E8AE3B610610EDD2EAB1A25124378F7123F46DCDD588DAC16624AB4BAE826611F54236FECDDB6439CCED1FD6E27" Timestamp="1D69761B425F32D" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.51564" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.49573" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">Converts numeric, Boolean, waveform and array data types to the dynamic data type for use with Express VIs.</p.UserDescription>
+		<Icon Id="27" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="28" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Id="29" Left="[float]0" TemplateName="[string]GrayNoText" Top="[float]0" Width="[float]40">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="30" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="31" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+				</IconTemplate>
+				<Image Height="[float]30" Id="33" Left="[float]5" MinHeight="[float]13" MinWidth="[float]13" Source="[SMEmbeddedImageSource]iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAIAAAC0Ujn1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACUSURBVEhL7Y5REoQgDEM5LafdO2G2wVqDDjOif81ESUt9tjRTKQi/dRunKyR06+7hm+7pQKBfoTnEECneqZjFU/2KJTuraHYi0T1Dj4FZOkb3vHdwa0Ae0IF2xN2bYdiaYXXrSITPP+jMfkC69aWnAyPaah16YOdC/4T6LRFKnYp3lWhRokWJFiValGhRokWfoVvbAA9hZbM6uNX2AAAAAElFTkSuQmCC" Top="[float]5" Width="[float]30" />
+			</IconPanel>
+		</Icon>
+		<ConnectorPane Height="40" Id="10" ListViewHeight="70" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+			<ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="15" />
+			<ConnectorPaneTerminal Hotspot="0 15" />
+			<ConnectorPaneTerminal Hotspot="0 25" />
+			<ConnectorPaneTerminal Hotspot="0 35" />
+			<ConnectorPaneTerminal Hotspot="15 0" />
+			<ConnectorPaneTerminal Hotspot="25 0" />
+			<ConnectorPaneTerminal Hotspot="40 5" ListViewHotspot="150 50" Parameter="16" />
+			<ConnectorPaneTerminal Hotspot="40 15" />
+			<ConnectorPaneTerminal Hotspot="40 25" />
+			<ConnectorPaneTerminal Hotspot="40 35" />
+			<ConnectorPaneTerminal Hotspot="15 40" />
+			<ConnectorPaneTerminal Hotspot="25 40" />
+		</ConnectorPane>
+		<DiagramUnplacedItems Id="11" xmlns="http://www.ni.com/MocCommon" />
+		<FrontPanelUnplacedItems Id="12" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" />
+		<BlockDiagram Id="13">
+			<GetCurrentTime Bounds="40 225 35 30" Id="17" />
+			<ForLoop Bounds="108 153 110 125" DiagramId="19" Id="18">
+				<LoopIteration Bounds="0 95 15 15" Id="20" />
+				<BuildWaveformNode Bounds="35 40 40 40" Id="25" />
+				<Wire Id="70" Joints="N(24:i0)|(6,65) N(25:t0)|(35,65)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="71" Joints="N(25:output waveform)|(75,45) N(23:i0)|(98,45)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="72" Joints="N(22:i0)|(6,45) N(25:Y)|(35,45)" xmlns="http://www.ni.com/PlatformFramework" />
+				<LoopCount Bounds="1 1 15 15" Docking="Left" Id="21" Terminals="18, 19" />
+				<LoopTunnel AutoIndex="True" Bounds="-5 42 13 10" Docking="Left" Id="22" Terminals="o0=74, i0=72" TunnelMode="0" />
+				<LoopTunnel AutoIndex="True" Bounds="100 42 13 10" Docking="Right" Id="23" Terminals="o0=75, i0=71" TunnelMode="0" />
+				<LoopTunnel Bounds="-5 62 13 10" Docking="Left" Id="24" Terminals="o0=73, i0=70" />
+			</ForLoop>
+			<Comment Bounds="-5 135 488 15" Id="26" xmlns="http://www.ni.com/MocCommon">
+				<p.Text>This VI converts a 2 dimensional array of numerics to the Dynamic Data Type Signal.</p.Text>
+			</Comment>
+			<Wire Id="73" Joints="N(17:current time)|(75,230) h(5) v(-10) N(24:o0)|(103,220)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="74" Joints="N(76:Value)|(55,200) N(22:o0)|(103,200)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="75" Joints="N(23:o0)|(221,200) N(79:Value)|(253,200)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="15 195 40 15" DataItem="15" Id="76" Label="77" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Double[,]" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="76" Bounds="15 178 50 14" Id="77" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>2D Array</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="250 195 40 15" DataItem="16" Id="79" Label="80" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Wfm(Double)[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="79" Bounds="250 178 109 14" Id="80" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>Dynamic Data Type</p.Text>
+			</NodeLabel>
+		</BlockDiagram>
+		<NativeFrontPanel AllowMaximize="[bool]False" EnforceMaximumSize="[bool]True" Height="[float]1600" Id="14" Left="[float]0" MaxHeight="[float]1600" MaxWidth="[float]2000" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" Width="[float]2000" WindowTitleOption="[WindowTitleOption]None">
+			<ArrayViewer ArrayElement="[UIModel]38" BaseName="[string]Array" Columns="[int]3" Dimensions="[int]2" Height="[float]42" Id="41" IndexVisibility="[Visibility]Visible" Label="[UIModel]42" Left="[float]47" Orientation="[SMOrientation]Horizontal" Rows="[int]4" TabIndex="[int]0" Top="[float]36" Value="{DataItemBinding Id=15}" Width="[float]120" xmlns="http://www.ni.com/PanelCommon">
+				<p.DefaultElementValue>0x0</p.DefaultElementValue>
+				<NumericText BaseName="[string]Numeric" Height="[float]24" Id="38" Name="[string]Child" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			</ArrayViewer>
+			<Label Height="[float]16" Id="42" LabelOwner="[UIModel]41" Left="[float]47" Text="[string]2D Array" Top="[float]16" Width="[float]47" xmlns="http://www.ni.com/PanelCommon" />
+			<Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=16}" Height="[float]255" Id="48" Label="[UIModel]66" Left="[float]426" MetadataAlwaysOverridesPlotNames="[bool]True" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" TabIndex="[int]1" Top="[float]36" Width="[float]426" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<Axis Adjuster="[RangeAdjuster]FitLoosely" Id="49" Label="[string]Time" MajorDivisions="[UIModel]60" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 100, System.Double" ValueType="[Type]Double">
+					<RangeLabeledDivisions Id="60">
+						<p.LabelPresenter Kind="LVRelativeSeconds" Format="0.######" ShortFormat="0.000E+0" />
+					</RangeLabeledDivisions>
+				</Axis>
+				<Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="50" Label="[string]Amplitude" MajorDivisions="[UIModel]61" Orientation="[SMOrientation]Vertical" Range="[IRange]0, 10, System.Double" ValueType="[Type]Double">
+					<RangeLabeledDivisions Id="61">
+						<p.LabelPresenter Kind="LVRelativeSeconds" Format="0.######" ShortFormat="0.000E+0" />
+					</RangeLabeledDivisions>
+				</Axis>
+				<Plot HorizontalScale="[UIModel]49" Id="51" Label="[string]Plot" VerticalScale="[UIModel]50" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="52" LineStroke="[SMSolidColorBrush]#ff7b161a" PointShape="[PointShape]Ellipse" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="53" LineStroke="[SMSolidColorBrush]#ff008ee4" PointShape="[PointShape]Rectangle" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="54" LineStroke="[SMSolidColorBrush]#ffe2b683" PointShape="[PointShape]Diamond" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="55" LineStroke="[SMSolidColorBrush]#ffb7ac1f" PointShape="[PointShape]Cross" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="56" LineStroke="[SMSolidColorBrush]#ffaedcef" PointShape="[PointShape]Ellipse" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="57" LineStroke="[SMSolidColorBrush]#ffa08bb0" PointShape="[PointShape]Rectangle" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="58" LineStroke="[SMSolidColorBrush]#ff7f7f7f" PointShape="[PointShape]Diamond" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="59" LineStroke="[SMSolidColorBrush]#ff3c0726" PointShape="[PointShape]Cross" />
+			</Graph>
+			<Label Height="[float]16" Id="66" LabelOwner="[UIModel]48" Left="[float]426" Text="[string]Dynamic Data Type" Top="[float]16" Width="[float]103" xmlns="http://www.ni.com/PanelCommon" />
+			<PlotLegend Graph="[UIModel]48" Height="[float]28" Id="62" Left="[float]859" Top="[float]36" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]48" Height="[float]102" Id="63" Left="[float]431" MinHeight="[float]80" Top="[float]320" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<ScaleLegend Graph="[UIModel]48" Height="[float]50" Id="64" Left="[float]859" MinHeight="[float]50" Top="[float]189" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<GraphTools Graph="[UIModel]48" Height="[float]22" Id="65" Left="[float]431" Top="[float]298" Visible="[bool]False" Width="[float]148" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<PanelExecutionWindow Id="81" />
+		</NativeFrontPanel>
+		<DataItem CallDirection="Input" CallIndex="1" DataType="Double[,]" Id="15" Name="2D Array" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>null</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">2 dimensional array of numerics</p.UserDescription>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="1" DataType="Wfm(Double)[]" Id="16" Name="Dynamic Data Type" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>
+				<Array Lengths="0" />
+			</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">Resulting Dynamic Data Type Signal</p.UserDescription>
+		</DataItem>
+	</VirtualInstrument>
+</SourceFile>

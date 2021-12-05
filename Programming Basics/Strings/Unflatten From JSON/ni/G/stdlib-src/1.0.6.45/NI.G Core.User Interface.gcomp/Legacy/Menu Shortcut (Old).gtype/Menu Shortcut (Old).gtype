@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="8D94E9C6F1BA863D76B836B8C2E01B5AB2BDE1BECED415E613E995AEC8E3E88FCE56845F36895B625B43E93A15EB77DC1E5FF8779B9A53E2CBA0042AB2CB82EA" Timestamp="1D77A36070B99E0" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="9.1.0.50238" Name="LabVIEW NXG" Version="6.0.0" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@ad1d7ba31d7f441d81fc5af1f340c9a6" Id="1" xmlns="http://www.ni.com/MocCommon">
+		<Icon Id="2" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="3" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" Id="4" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@ad1d7ba31d7f441d81fc5af1f340c9a6" Id="10" Name="Menu Shortcut Compatibility">
+			<p.DefaultValue>
+				<Cluster>
+					<Field1>False</Field1>
+					<Field2>False</Field2>
+					<Field3>""</Field3>
+				</Cluster>
+			</p.DefaultValue>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="5" LazyInitialize="True" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="6" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="7" Name="Menu Shortcut (Old).gtype" NameTracksFileName="True">
+			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="8" ModelDefinitionType="{http://www.ni.com/MocCommon}ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition DefaultDirection="Control" Id="9" xmlns="http://www.ni.com/MocCommon">
+					<Cluster AutoArrange="[AutoArrange]SizeToFit" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@ad1d7ba31d7f441d81fc5af1f340c9a6" Height="[float]166" Id="12" Label="[UIModel]13" Left="[float]96" TabIndex="[int]0" Top="[float]110" Value="{DataItemBinding Id=10}" Width="[float]110" xmlns="http://www.ni.com/PanelCommon">
+						<LED BaseName="[string]Round LED" FalseContent="[string]Off" Height="[float]24" Id="16" IsReadOnly="[bool]False" Label="[UIModel]17" Left="[float]4" Shape="[LEDShape]Round" TabIndex="[int]0" Top="[float]24" TrueContent="[string]On" Value="{ClusterBinding FieldName=Include\ Shift\ Key?}" Width="[float]24" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="17" LabelOwner="[UIModel]16" Left="[float]4" Text="[string]Include Shift Key?" Top="[float]4" Width="[float]94" />
+						<LED BaseName="[string]Round LED" FalseContent="[string]Off" Height="[float]24" Id="18" IsReadOnly="[bool]False" Label="[UIModel]19" Left="[float]4" Shape="[LEDShape]Round" TabIndex="[int]1" Top="[float]76" TrueContent="[string]On" Value="{ClusterBinding FieldName=Include\ Ctrl\ Key?}" Width="[float]24" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="19" LabelOwner="[UIModel]18" Left="[float]4" Text="[string]Include Ctrl Key?" Top="[float]56" Width="[float]89" />
+						<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="22" Label="[UIModel]23" Left="[float]4" TabIndex="[int]2" Text="{ClusterBinding FieldName=Shortcut\ Key}" Top="[float]130" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="23" LabelOwner="[UIModel]22" Left="[float]4" Text="[string]Shortcut Key" Top="[float]110" Width="[float]68" />
+					</Cluster>
+					<Label Height="[float]16" Id="13" LabelOwner="[UIModel]12" Left="[float]96" Text="[string]Menu Shortcut Compatibility" Top="[float]90" Width="[float]153" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="ad1d7ba31d7f441d81fc5af1f340c9a6">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Include Shift Key?" DataType="Boolean" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Include Ctrl Key?" DataType="Boolean" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Shortcut Key" DataType="String" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="9CA20F876E880A52D661BC0F76E5D0E4F46B1D587F6E2C19A97304F4726040FFE5CBE54ECCEDB626E126F08A65DA0D3F17A4CA9C01FB29970DF95B813175E510" Timestamp="1D77A3606B7FACF" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="9.1.0.50238" Name="LabVIEW NXG" Version="6.0.0" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@2ed67df3b6b54ca785dd49f276fff799" Id="1" xmlns="http://www.ni.com/MocCommon">
+		<Icon Id="2" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="3" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Id="4" Left="[float]0" TemplateName="[string]Gray" Top="[float]0" Width="[float]40">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+					<FileNameText Attached="[bool]True" Id="7" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]joystick direction info" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0">
+						<FontSetting FontFamily="Segoe UI" FontSize="6.75" Id="8" />
+					</FileNameText>
+				</IconTemplate>
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@2ed67df3b6b54ca785dd49f276fff799" Id="25" Name="Cluster">
+			<p.DefaultValue>0_0_0_0_</p.DefaultValue>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="10" LazyInitialize="True" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="11" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="12" Name="joystick direction info.gtype" NameTracksFileName="True">
+			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="13" ModelDefinitionType="{http://www.ni.com/MocCommon}ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition Id="14" xmlns="http://www.ni.com/MocCommon">
+					<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@2ed67df3b6b54ca785dd49f276fff799" Height="[float]181" Id="15" Label="[UIModel]24" Left="[float]1105" Top="[float]23" Value="{DataItemBinding Id=25}" Width="[float]88" xmlns="http://www.ni.com/PanelCommon">
+						<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;htmlcontent type="contexthelp"&gt;&lt;p&gt;&lt;b&gt;direction info&lt;/b&gt; contains numeric values for up to four points of view.&lt;/p&gt;&lt;/htmlcontent&gt;</p.UserDescription>
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="16" IsReadOnly="[bool]True" Label="[UIModel]20" Left="[float]5" TabIndex="[int]1" Top="[float]23" Value="{ClusterBinding FieldName=pov\ 1}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="17" IsReadOnly="[bool]True" Label="[UIModel]21" Left="[float]5" TabIndex="[int]2" Top="[float]65" Value="{ClusterBinding FieldName=pov\ 2}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="18" IsReadOnly="[bool]True" Label="[UIModel]22" Left="[float]5" TabIndex="[int]3" Top="[float]107" Value="{ClusterBinding FieldName=pov\ 3}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="19" IsReadOnly="[bool]True" Label="[UIModel]23" Left="[float]5" TabIndex="[int]4" Top="[float]149" Value="{ClusterBinding FieldName=pov\ 4}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Id="20" LabelOwner="[UIModel]16" Left="[float]5" Text="[string]pov 1" Top="[float]3" />
+						<Label Id="21" LabelOwner="[UIModel]17" Left="[float]5" Text="[string]pov 2" Top="[float]45" />
+						<Label Id="22" LabelOwner="[UIModel]18" Left="[float]5" Text="[string]pov 3" Top="[float]87" />
+						<Label Id="23" LabelOwner="[UIModel]19" Left="[float]5" Text="[string]pov 4" Top="[float]129" />
+					</Cluster>
+					<Label Id="24" LabelOwner="[UIModel]15" Left="[float]1105" Text="[string]direction info" Top="[float]3" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="2ed67df3b6b54ca785dd49f276fff799">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="pov 1" DataType="Int32" />
+					<Field FieldAccessPolicy="ReadWrite" Name="pov 2" DataType="Int32" />
+					<Field FieldAccessPolicy="ReadWrite" Name="pov 3" DataType="Int32" />
+					<Field FieldAccessPolicy="ReadWrite" Name="pov 4" DataType="Int32" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

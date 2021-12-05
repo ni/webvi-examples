@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="0F333B8602A71511B67F77401EDDCB6FE21A2066E73586B4F6FB78548382DDFDE7F5F7F4F591895FC04AE7D5B8FE051D3374750A4B07AD4B9128A9D42FE32383" Timestamp="1D77A3606A77FBB" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="9.1.0.50238" Name="LabVIEW NXG" Version="6.0.0" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@66a35bd12825495199108df555a10e5b" Id="1" xmlns="http://www.ni.com/MocCommon">
+		<Icon Id="2" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="3" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Id="4" Left="[float]0" TemplateName="[string]Gray" Top="[float]0" Width="[float]40">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+					<FileNameText Attached="[bool]True" Id="7" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]SLI - Unit Info (Numeric)" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0">
+						<FontSetting FontFamily="Segoe UI" FontSize="6" Id="8" />
+					</FileNameText>
+				</IconTemplate>
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@66a35bd12825495199108df555a10e5b" Id="24" Name="Array">
+			<p.DefaultValue>null</p.DefaultValue>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="10" LazyInitialize="True" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="11" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="12" Name="SLI - Unit Info (Numeric).gtype" NameTracksFileName="True">
+			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="13" ModelDefinitionType="{http://www.ni.com/MocCommon}ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition Id="14" xmlns="http://www.ni.com/MocCommon">
+					<ArrayViewer ArrayElement="[UIModel]17" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]84" Id="26" IndexVisibility="[Visibility]Visible" IsFixedSize="[bool]False" Label="[UIModel]29" Left="[float]200" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]200" Value="{DataItemBinding Id=24}" Width="[float]130" xmlns="http://www.ni.com/PanelCommon">
+						<p.DefaultElementValue>0_0_</p.DefaultElementValue>
+						<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@8682b1f855354c279f519dcd89b716a5" Height="[float]96" Id="17" Name="[string]Child" Width="[float]88">
+							<NumericText BaseName="[string]Numeric" Height="[float]24" Id="20" Label="[UIModel]27" Left="[float]5" TabIndex="[int]0" Top="[float]22" Value="{ClusterBinding FieldName=Type}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int16" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<NumericText BaseName="[string]Numeric" Height="[float]24" Id="23" Label="[UIModel]28" Left="[float]5" TabIndex="[int]1" Top="[float]64" Value="{ClusterBinding FieldName=Exponent}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int16" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<Label Id="27" LabelOwner="[UIModel]20" Left="[float]5" Text="[string]Type" Top="[float]2" />
+							<Label Id="28" LabelOwner="[UIModel]23" Left="[float]5" Text="[string]Exponent" Top="[float]44" />
+						</Cluster>
+					</ArrayViewer>
+					<Label Id="29" LabelOwner="[UIModel]26" Left="[float]200" Text="[string]Array" Top="[float]180" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="66a35bd12825495199108df555a10e5b">
+			<VariableArray DereferenceType="@8682b1f855354c279f519dcd89b716a5" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="8682b1f855354c279f519dcd89b716a5">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Type" DataType="Int16" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Exponent" DataType="Int16" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

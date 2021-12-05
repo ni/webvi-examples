@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="694CB996DCACE04BCF4846369BEF86A9DB398CDF039B64969C0C367C8FC86A6CEB95BE43BDE6F15FD877A509ED719F586CF253BA9DDAAA2BFB0475B9290F5284" Timestamp="1D69761C3E17D3A" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.51564" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.49573" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<VirtualInstrument CustomTitle="Convert Strain Gauge Reading" Id="1" OverloadGroup="NI:G Core:Numeric:Convert Strain Gauge Reading" xmlns="http://www.ni.com/LabVIEW.VI">
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Converts a voltage read from a strain gauge to units of strain.&lt;/p&gt;</p.UserDescription>
+		<Icon Id="90" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="91" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<Path Data="[PathGeometry]M 36,1 C 37.6539993,1 39,2.29299998 39,3.94700003 L 39,36 C 39,37.6539993 37.6539993,39 36,39 L 4.08300018,39 C 2.4289999,39 1,37.6539993 1,36 L 1,3.94700003 C 1,2.29299998 2.4289999,1 4.08300018,1 L 36,1" Fill="[SMSolidColorBrush]#ffffffff" Height="[float]40" Id="234" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+				<Path Data="[PathGeometry]M 36,1 C 37.6539993,1 39,2.29299998 39,3.94700003 L 39,36 C 39,37.6539993 37.6539993,39 36,39 L 4.08300018,39 C 2.4289999,39 1,37.6539993 1,36 L 1,3.94700003 C 1,2.29299998 2.4289999,1 4.08300018,1 L 36,1 M 36,0 L 4.08300018,0 C 1.88300002,0 0,1.74699998 0,3.94700003 L 0,36 C 0,38.2000008 1.88300002,40 4.08300018,40 L 36,40 C 38.2000008,40 40,38.2000008 40,36 L 40,3.94700003 C 40,1.74699998 38.2000008,0 36,0 L 36,0 Z" Fill="[SMSolidColorBrush]#ff747474" Height="[float]40" Id="235" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+				<Path Data="[PathGeometry]M 38,36.007 C 38,37.1069984 37.0999985,37.9539986 36,37.9539986 L 4,37.9539986 C 2.9000001,37.9539986 2,37.1069984 2,36.007 L 2,3.954 C 2,2.85400009 2.9000001,1.954 4,1.954 L 36,1.954 C 37.0999985,1.954 38,2.85400009 38,3.954 L 38,36.007 Z" Fill="[SMSolidColorBrush]#ffeaeaea" Height="[float]40" Id="236" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+				<Path Data="[PathGeometry]M 22.7390003,10.2950001 L 8.16600037,17.573 L 11,11.7180004 L 5,11.7180004 L 5,8.71800041 L 11,8.71800041 L 8.16600037,3 L 22.7390003,10.2950001 Z M 31.875,23 L 28.9599991,17.1709995 L 35,17.1490002 L 35,14.1490002 L 29.007,14.1610003 L 31.875,8.42599964 L 17.302,15.7040005 L 31.875,23 Z M 29.6119995,26 C 29.6159992,26 29.6200008,26 29.6240005,26 C 29.8959999,26 30.2250004,26.4540005 30.5440006,26.7649994 C 31,27.2099991 31.5639992,27.8770008 32.3300018,27.7210007 C 33.4710007,27.493 33.8769989,25.9029999 34.0820007,24.7189999 L 32.8310013,24.5060005 C 32.5099983,26.3549995 32.0849991,26.4899998 32.0810013,26.4899998 C 31.9729996,26.5249996 31.5939999,26.1350002 31.4309998,25.9769993 C 30.9650002,25.5230007 30.3740005,24.9519997 29.5690002,24.9750004 C 28.4400005,25.0139999 27.5049992,26.1100006 26.6270008,28.4699993 L 27.8180008,28.8239994 C 28.7360001,26.3540001 29.4239998,26 29.6119995,26 Z M 13.1669998,32.8450012 L 13.8409996,32.7050018 C 18.0529995,31.9029999 22.3770008,31.8869991 26.5919991,32.6650009 L 27.2959995,32.8110008 C 29.8540001,33.3380013 32.3610001,34.1669998 34.7770004,35.2770004 C 35.1889992,34.4690018 35.5999985,33.6609993 36.012001,32.8530006 C 33.2249985,31.4330006 30.2910004,30.4290009 27.2959995,29.8110008 L 26.1959991,31.8220005 L 26.5919991,29.6650009 C 22.3770008,28.8869991 18.0529995,28.9020004 13.8409996,29.7049999 L 14.1110001,31.5720005 L 13.1669998,29.8449993 C 10.2290001,30.4659996 7.3499999,31.4589996 4.61299992,32.8530006 C 5.02400017,33.6609993 5.43599987,34.4679985 5.84800005,35.276001 C 8.21199989,34.1899986 10.665,33.3730011 13.1669998,32.8450012 Z M 8.02900028,27.6989994 C 8.78899956,27.8549995 9.35900021,27.2099991 9.81499958,26.7649994 C 10.1330004,26.4549999 10.4630003,26 10.7340002,26 C 10.7379999,26 10.7419996,26 10.7460003,26 C 10.9350004,26 11.6230001,26.3540001 12.5419998,28.8250008 L 13.7329998,28.448 C 12.8549995,26.0879993 11.9200001,25.0249996 10.7910004,24.9860001 C 9.97700024,24.9589996 9.39500046,25.5270004 8.9289999,25.9820004 C 8.76599979,26.1410007 8.36499977,26.5100002 8.27900028,26.4909992 C 8.27499962,26.4899998 7.8499999,26.3509998 7.52899981,24.5020008 L 6.27799988,24.7080002 C 6.48199987,25.8929996 6.88800001,27.4710007 8.02900028,27.6989994 Z" Fill="[SMSolidColorBrush]#ff4d4d4d" Height="[float]40" Id="237" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<ConnectorPane Height="40" Id="10" ListViewHeight="130" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+			<ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="15" />
+			<ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 50" Parameter="16" />
+			<ConnectorPaneTerminal Hotspot="0 25" ListViewHotspot="0 65" Parameter="17" />
+			<ConnectorPaneTerminal Hotspot="0 35" ListViewHotspot="0 95" Parameter="21" />
+			<ConnectorPaneTerminal Hotspot="15 0" ListViewHotspot="0 125" Parameter="19" />
+			<ConnectorPaneTerminal Hotspot="25 0" ListViewHotspot="0 140" Parameter="20" />
+			<ConnectorPaneTerminal Hotspot="40 5" ListViewHotspot="150 80" Parameter="18" />
+			<ConnectorPaneTerminal Hotspot="40 15" />
+			<ConnectorPaneTerminal Hotspot="40 25" />
+			<ConnectorPaneTerminal Hotspot="40 35" />
+			<ConnectorPaneTerminal Hotspot="15 40" ListViewHotspot="0 110" Parameter="22" />
+			<ConnectorPaneTerminal Hotspot="25 40" ListViewHotspot="0 155" Parameter="23" />
+		</ConnectorPane>
+		<DiagramUnplacedItems Id="11" xmlns="http://www.ni.com/MocCommon" />
+		<FrontPanelUnplacedItems Id="12" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" />
+		<BlockDiagram Id="13">
+			<PropertyNode Bounds="120 -440 50 35" HasErrorTerminals="False" Id="29" InstanceDataType="Wfm(Double)" Mode="InstanceProperties" Template="List" xmlns="http://www.ni.com/MocCommon">
+				<PropertyItemTerminal DataType="Double[]" Hotspot="50 15" Id="c0t0v" Path="Y" PathElementMemberKinds="Field" Usage="Optional" />
+			</PropertyNode>
+			<ForLoop Bounds="203 -422 135 160" DiagramId="31" Id="30">
+				<LoopIteration Bounds="105 125 15 15" Id="32" />
+				<Wire Id="192" Joints="N(39:i0)|(6,65) N(217:L0)|(65,65)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="193" Joints="N(38:i0)|(6,135) h(84) N(217:B1)|(90,100)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="194" Joints="N(37:i0)|(6,105) h(44) v(-10) N(217:L3)|(65,95)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="195" Joints="N(36:i0)|(6,40) h(74) N(217:T0)|(80,60)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="196" Joints="N(35:i0)|(6,75) N(217:L1)|(65,75)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="197" Joints="N(34:i0)|(6,25) h(84) N(217:T1)|(90,60)" xmlns="http://www.ni.com/PlatformFramework" />
+				<MethodCall Bounds="65 60 40 40" Id="217" ResolveFailedHint="&quot;C:\\dev\\asw3\\Source\\AddonSource\\stdlib\\NI.G Core.Numeric.gcomp\\Convert Strain Gauge Reading (scalar).gvi&quot;" Signature="@fdcb49147f3648a8aaf71f9485b11e5d" Target="NI::G Core::Numeric::Convert Strain Gauge Reading (scalar).gvi" xmlns="http://www.ni.com/MocCommon">
+					<p.MethodDeclaration>
+						<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+							<Parameter Id="L0" Desc="voltage" />
+							<Parameter Id="L1" Desc="bridge configuration" />
+							<Parameter Id="L2" Desc="Vex" />
+							<Parameter Id="T0" Desc="v" />
+							<Parameter Id="T1" Desc="GF" />
+							<Parameter Id="L3" Desc="Rg" />
+							<Parameter Id="B0" Desc="Vinit" />
+							<Parameter Id="B1" Desc="Rl" />
+							<Parameter Id="R0" Desc="strain" />
+						</MethodDeclaration>
+					</p.MethodDeclaration>
+					<Terminal DataType="Double" Direction="Input" Hotspot="15 40" Id="B0" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Double" Direction="Input" Hotspot="25 40" Id="B1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Double" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt16" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Double" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Double" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Double" Direction="Input" Hotspot="15 0" Id="T0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Double" Direction="Input" Hotspot="25 0" Id="T1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+				</MethodCall>
+				<Wire Id="218" Joints="N(217:R0)|(105,65) N(40:i0)|(123,65)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="227" Joints="N(228:i0)|(6,90) h(29) v(-5) N(217:L2)|(65,85)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="231" Joints="N(232:i0)|(6,120) h(74) N(217:B0)|(80,100)" xmlns="http://www.ni.com/PlatformFramework" />
+				<LoopCount Bounds="1 1 15 15" Docking="Left" Id="33" Terminals="30, 31" />
+				<LoopTunnel Bounds="-5 22 13 10" Docking="Left" Id="34" Terminals="o0=210, i0=197" />
+				<LoopTunnel Bounds="-5 72 13 10" Docking="Left" Id="35" Terminals="o0=209, i0=196" />
+				<LoopTunnel Bounds="-5 37 13 10" Docking="Left" Id="36" Terminals="o0=208, i0=195" />
+				<LoopTunnel Bounds="-5 102 13 10" Docking="Left" Id="37" Terminals="o0=207, i0=194" />
+				<LoopTunnel Bounds="-5 132 13 10" Docking="Left" Id="38" Terminals="o0=206, i0=193" />
+				<LoopTunnel AutoIndex="True" Bounds="-5 62 13 10" Docking="Left" Id="39" Terminals="o0=201, i0=192" TunnelMode="0" />
+				<LoopTunnel AutoIndex="True" Bounds="125 62 13 10" Docking="Right" Id="40" Terminals="o0=200, i0=218" TunnelMode="0" />
+				<LoopTunnel Bounds="-5 87 13 10" Docking="Left" Id="228" Terminals="o0=224, i0=227" />
+				<LoopTunnel Bounds="-5 117 13 10" Docking="Left" Id="232" Terminals="o0=233, i0=231" />
+			</ForLoop>
+			<PropertyNode Bounds="365 -440 50 35" HasErrorTerminals="False" Id="78" InstanceDataType="Wfm(Double)" Mode="InstanceProperties" Template="List" xmlns="http://www.ni.com/MocCommon">
+				<PropertyItemTerminal Action="Write" DataType="Double[]" Hotspot="0 15" Id="c0t0v" Path="Y" PathElementMemberKinds="Field" Usage="Required" />
+			</PropertyNode>
+			<DataAccessor Bounds="60 -440 40 15" DataItem="15" Id="97" Label="98" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Wfm(Double)" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="97" Bounds="34 -440 21 14" Id="98" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>voltage</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="60 -350 40 15" DataItem="16" Id="101" Label="102" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt16" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="101" Bounds="-59 -350 114 14" Id="102" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>bridge configuration</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="60 -335 40 15" DataItem="17" Id="105" Label="106" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="105" Bounds="34 -335 21 14" Id="106" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>Vex</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="430 -440 40 15" DataItem="18" Id="111" Label="112" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Wfm(Double)" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="111" Bounds="475 -440 34 14" Id="112" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>strain</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="60 -385 40 15" DataItem="19" Id="115" Label="116" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="115" Bounds="45 -385 10 14" Id="116" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>v</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="60 -400 40 15" DataItem="20" Id="121" Label="122" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="121" Bounds="40 -400 15 14" Id="122" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>GF</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="60 -320 40 15" DataItem="21" Id="127" Label="128" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="127" Bounds="40 -320 15 14" Id="128" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>Rg</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="60 -305 40 15" DataItem="22" Id="133" Label="134" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="133" Bounds="30 -305 25 14" Id="134" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>Vinit</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="60 -290 40 15" DataItem="23" Id="139" Label="140" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="139" Bounds="44 -290 11 14" Id="140" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>Rl</p.Text>
+			</NodeLabel>
+			<Wire Id="199" Joints="N(78:instance out)|(415,-435) N(111:Value)|(433,-435)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="200" Joints="N(40:o0)|(341,-355) h(14) v(-70) N(78:c0t0v)|(365,-425)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="201" Joints="N(29:c0t0v)|(170,-425) h(15) v(70) N(39:o0)|(198,-355)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="206" Joints="N(139:Value)|(100,-285) N(38:o0)|(198,-285)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="207" Joints="N(127:Value)|(100,-315) N(37:o0)|(198,-315)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="208" Joints="N(115:Value)|(100,-380) N(36:o0)|(198,-380)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="209" Joints="N(101:Value)|(100,-345) N(35:o0)|(198,-345)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="210" Joints="N(121:Value)|(100,-395) N(34:o0)|(198,-395)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="215" Joints="N(29:instance out)|(170,-435) N(78:instance in)|(365,-435)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="224" Joints="N(105:Value)|(100,-330) N(228:o0)|(198,-330)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="226" Joints="N(97:Value)|(100,-435) N(29:instance in)|(120,-435)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="233" Joints="N(133:Value)|(100,-300) N(232:o0)|(198,-300)" xmlns="http://www.ni.com/PlatformFramework" />
+		</BlockDiagram>
+		<NativeFrontPanel AllowMaximize="[bool]False" EnforceMaximumSize="[bool]True" Height="[float]1600" Id="14" Left="[float]0" MaxHeight="[float]1600" MaxWidth="[float]2000" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" Width="[float]2000" WindowTitleOption="[WindowTitleOption]None">
+			<Text Id="81" Left="[float]83" Text="[string]Converts a strain gauge to strain value using the formula appropriate for the given bridge configuration." TextWrapping="[TextWrapping]Wrap" Top="[float]415" xmlns="http://www.ni.com/PlatformFramework" />
+			<Waveform Id="99" Label="[UIModel]100" Left="[float]88" TabIndex="[int]0" Top="[float]36" WaveformData="{DataItemBinding Id=15}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="100" LabelOwner="[UIModel]99" Left="[float]88" Text="[string]voltage" Top="[float]16" Width="[float]40" xmlns="http://www.ni.com/PanelCommon" />
+			<RingSelector AllowNonSequentialValues="[bool]False" Height="[float]24" Id="103" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" Label="[UIModel]104" Left="[float]88" TabIndex="[int]1" Top="[float]232" Value="{DataItemBinding Id=16}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]132" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<RingSelectorInfo DisplayValue="[string]Qtr Bridge I" Value="[ushort]0" ValueType="[Type]UInt16" />
+				<RingSelectorInfo DisplayValue="[string]Qtr Bridge II" Value="[ushort]1" ValueType="[Type]UInt16" />
+				<RingSelectorInfo DisplayValue="[string]Half Bridge I" Value="[ushort]2" ValueType="[Type]UInt16" />
+				<RingSelectorInfo DisplayValue="[string]Half Bridge II" Value="[ushort]3" ValueType="[Type]UInt16" />
+				<RingSelectorInfo DisplayValue="[string]Full Bridge I" Value="[ushort]4" ValueType="[Type]UInt16" />
+				<RingSelectorInfo DisplayValue="[string]Full Bridge II" Value="[ushort]5" ValueType="[Type]UInt16" />
+				<RingSelectorInfo DisplayValue="[string]Full Bridge III" Value="[ushort]6" ValueType="[Type]UInt16" />
+			</RingSelector>
+			<Label Height="[float]16" Id="104" LabelOwner="[UIModel]103" Left="[float]88" Text="[string]bridge configuration" Top="[float]212" Width="[float]109" xmlns="http://www.ni.com/PanelCommon" />
+			<NumericText BaseName="[string]Numeric" Height="[float]24" Id="109" Interval="[double]1" Label="[UIModel]110" Left="[float]88" RadixVisibility="[SMVisibility]Hidden" TabIndex="[int]2" Top="[float]298" Value="{DataItemBinding Id=17}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]132" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="110" LabelOwner="[UIModel]109" Left="[float]88" Text="[string]Vex" Top="[float]278" Width="[float]20" xmlns="http://www.ni.com/PanelCommon" />
+			<Waveform Id="113" Label="[UIModel]114" Left="[float]647" TabIndex="[int]3" Top="[float]36" WaveformData="{DataItemBinding Id=18}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="114" LabelOwner="[UIModel]113" Left="[float]647" Text="[string]strain" Top="[float]16" Width="[float]30" xmlns="http://www.ni.com/PanelCommon" />
+			<NumericText BaseName="[string]Numeric" Height="[float]24" Id="119" Interval="[double]1" Label="[UIModel]120" Left="[float]380" RadixVisibility="[SMVisibility]Hidden" TabIndex="[int]4" Top="[float]36" Value="{DataItemBinding Id=19}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]83" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="120" LabelOwner="[UIModel]119" Left="[float]380" Text="[string]v" Top="[float]16" xmlns="http://www.ni.com/PanelCommon" />
+			<NumericText BaseName="[string]Numeric" Height="[float]24" Id="125" Interval="[double]1" Label="[UIModel]126" Left="[float]513" RadixVisibility="[SMVisibility]Hidden" TabIndex="[int]5" Top="[float]36" Value="{DataItemBinding Id=20}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]83" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="126" LabelOwner="[UIModel]125" Left="[float]513" Text="[string]GF" Top="[float]16" Width="[float]15" xmlns="http://www.ni.com/PanelCommon" />
+			<NumericText BaseName="[string]Numeric" Height="[float]24" Id="131" Interval="[double]1" Label="[UIModel]132" Left="[float]88" RadixVisibility="[SMVisibility]Hidden" TabIndex="[int]6" Top="[float]364" Value="{DataItemBinding Id=21}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]132" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="132" LabelOwner="[UIModel]131" Left="[float]88" Text="[string]Rg" Top="[float]344" Width="[float]15" xmlns="http://www.ni.com/PanelCommon" />
+			<NumericText BaseName="[string]Numeric" Height="[float]24" Id="137" Interval="[double]1" Label="[UIModel]138" Left="[float]380" RadixVisibility="[SMVisibility]Hidden" TabIndex="[int]7" Top="[float]364" Value="{DataItemBinding Id=22}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]83" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="138" LabelOwner="[UIModel]137" Left="[float]380" Text="[string]Vinit" Top="[float]344" Width="[float]25" xmlns="http://www.ni.com/PanelCommon" />
+			<NumericText BaseName="[string]Numeric" Height="[float]24" Id="143" Interval="[double]1" Label="[UIModel]144" Left="[float]513" RadixVisibility="[SMVisibility]Hidden" TabIndex="[int]8" Top="[float]364" Value="{DataItemBinding Id=23}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]83" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="144" LabelOwner="[UIModel]143" Left="[float]513" Text="[string]Rl" Top="[float]344" Width="[float]11" xmlns="http://www.ni.com/PanelCommon" />
+			<PanelExecutionWindow Id="238" />
+		</NativeFrontPanel>
+		<DataItem CallDirection="Input" CallIndex="1" DataType="Wfm(Double)" Id="15" Name="voltage" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>
+				<Waveform>
+					<Timestamp>60052752000;0;Utc</Timestamp>
+					<Interval>0x3FF0000000000000</Interval>
+					<Data>
+						<Array Lengths="0" />
+					</Data>
+					<Attributes>
+						<Attribute Name="NI.DeltaTimeOverride" DataType="Double">0x0</Attribute>
+					</Attributes>
+				</Waveform>
+			</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;Vsg&lt;/B&gt; is the voltage you read from the strain gauge.</p.UserDescription>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="2" DataType="UInt16" Id="16" Name="bridge configuration" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>3</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;Bridge Configuration&lt;/B&gt;  indicates the type of bridge configuration in which the strain gauge is mounted. The default is Half Bridge II.</p.UserDescription>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="3" DataType="Double" Id="17" Name="Vex" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0x400AA3D700000000</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;Vex&lt;/B&gt; is the excitation voltage you use. The defaults is 3.333 V.</p.UserDescription>
+		</DataItem>
+		<DataItem CallDirection="Output" CallIndex="1" DataType="Wfm(Double)" Id="18" Name="strain" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>
+				<Waveform>
+					<Timestamp>60052752000;0;Utc</Timestamp>
+					<Interval>0x3FF0000000000000</Interval>
+					<Data>
+						<Array Lengths="0" />
+					</Data>
+					<Attributes>
+						<Attribute Name="NI.DeltaTimeOverride" DataType="Double">0x0</Attribute>
+					</Attributes>
+				</Waveform>
+			</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;Strain&lt;/B&gt; is the return strain value.</p.UserDescription>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="4" CallUsage="Optional" DataType="Double" Id="19" Name="v" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0x0</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;v&lt;/B&gt; is Poisson's Ratio. This parameter is only required for certain bridge configurations.</p.UserDescription>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="5" CallUsage="Optional" DataType="Double" Id="20" Name="GF" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0x4000000000000000</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;GF&lt;/B&gt; is the gauge factor of the strain gauge.</p.UserDescription>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="6" DataType="Double" Id="21" Name="Rg" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0x405E000000000000</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;Rg&lt;/B&gt; is the strain gauge nominal resistance value in ohms. The default is 120 Omega.</p.UserDescription>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="7" DataType="Double" Id="22" Name="Vinit" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0x0</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;Vinit&lt;/B&gt; is the unstrained voltage of the strain gauge after you mount it in its bridge configuration. Read this voltage at the beginning of your application and save it to pass to this VI.</p.UserDescription>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="8" CallUsage="Optional" DataType="Double" Id="23" Name="Rl" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0x0</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;Rl&lt;/B&gt; is the lead resistance. The &lt;B&gt;Rl&lt;/B&gt; parameter defaults to 0. In many cases, the lead resistance is negligible and you can leave this terminal unwired.</p.UserDescription>
+		</DataItem>
+	</VirtualInstrument>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="fdcb49147f3648a8aaf71f9485b11e5d">
+			<Attributed AttributedType="@5941a8c300594ae68f0f0f5a04e7a48f">
+				<AttributeValues>
+					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
+					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="5941a8c300594ae68f0f0f5a04e7a48f">
+			<Function Id="1" IsStatic="True" IsConstructor="False" Name="Convert Strain Gauge Reading (scalar).gvi" ReturnType="Void" GenericTypeDefinition="Void">
+				<Parameters>
+					<Attributed AttributedType="@2991c9ae499e489999e60699a67293da">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Vinit" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@192485d5a74646ddbdd9d115490022b8">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Rl" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@afdca3de6d4b484ebfeae4fbffbe20ed">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]voltage" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@286ebfe48014470486ec34a49bfa78a3">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]bridge configuration" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@47172c2d931e40edbfc02de8f341f0bb">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Vex" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@cef86450f6ff4784a474a9bca0e2c4e6">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Rg" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@f7a82664abc5423eafc105d4c8f94f61">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]v" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@2a47e157f5ea40f9be754d2f7e1b8bda">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]GF" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@2202de46e2af41199995023b59a931e1">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]strain" />
+						</AttributeValues>
+					</Attributed>
+				</Parameters>
+			</Function>
+		</p.TypeReference>
+		<p.TypeReference TypeId="2991c9ae499e489999e60699a67293da">
+			<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="B0" DataType="Double" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="192485d5a74646ddbdd9d115490022b8">
+			<Parameter InputParameterPassingRule="Optional" OutputParameterPassingRule="NotAllowed" Name="B1" DataType="Double" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="afdca3de6d4b484ebfeae4fbffbe20ed">
+			<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="L0" DataType="Double" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="286ebfe48014470486ec34a49bfa78a3">
+			<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="L1" DataType="UInt16" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="47172c2d931e40edbfc02de8f341f0bb">
+			<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="L2" DataType="Double" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="cef86450f6ff4784a474a9bca0e2c4e6">
+			<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="L3" DataType="Double" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="f7a82664abc5423eafc105d4c8f94f61">
+			<Parameter InputParameterPassingRule="Optional" OutputParameterPassingRule="NotAllowed" Name="T0" DataType="Double" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="2a47e157f5ea40f9be754d2f7e1b8bda">
+			<Parameter InputParameterPassingRule="Optional" OutputParameterPassingRule="NotAllowed" Name="T1" DataType="Double" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="2202de46e2af41199995023b59a931e1">
+			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R0" DataType="Double" />
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+	<IconTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.IconModel Target="NI::G Core::Numeric::Convert Strain Gauge Reading (scalar).gvi">
+			<MergeScript>
+				<MergeItem Path="." IsPrimary="True">
+					<Icon ListViewIconCrop="0 0 40 40">
+						<IconPanel Height="[float]40" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+							<Path Data="[PathGeometry]M 36,1 C 37.6539993,1 39,2.29299998 39,3.94700003 L 39,36 C 39,37.6539993 37.6539993,39 36,39 L 4.08300018,39 C 2.4289999,39 1,37.6539993 1,36 L 1,3.94700003 C 1,2.29299998 2.4289999,1 4.08300018,1 L 36,1" Fill="[SMSolidColorBrush]#ffffffff" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+							<Path Data="[PathGeometry]M 36,1 C 37.6539993,1 39,2.29299998 39,3.94700003 L 39,36 C 39,37.6539993 37.6539993,39 36,39 L 4.08300018,39 C 2.4289999,39 1,37.6539993 1,36 L 1,3.94700003 C 1,2.29299998 2.4289999,1 4.08300018,1 L 36,1 M 36,0 L 4.08300018,0 C 1.88300002,0 0,1.74699998 0,3.94700003 L 0,36 C 0,38.2000008 1.88300002,40 4.08300018,40 L 36,40 C 38.2000008,40 40,38.2000008 40,36 L 40,3.94700003 C 40,1.74699998 38.2000008,0 36,0 L 36,0 Z" Fill="[SMSolidColorBrush]#ff747474" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+							<Path Data="[PathGeometry]M 38,36.007 C 38,37.1069984 37.0999985,37.9539986 36,37.9539986 L 4,37.9539986 C 2.9000001,37.9539986 2,37.1069984 2,36.007 L 2,3.954 C 2,2.85400009 2.9000001,1.954 4,1.954 L 36,1.954 C 37.0999985,1.954 38,2.85400009 38,3.954 L 38,36.007 Z" Fill="[SMSolidColorBrush]#ffeaeaea" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+							<Path Data="[PathGeometry]M 22.7390003,10.2950001 L 8.16600037,17.573 L 11,11.7180004 L 5,11.7180004 L 5,8.71800041 L 11,8.71800041 L 8.16600037,3 L 22.7390003,10.2950001 Z M 31.875,23 L 28.9599991,17.1709995 L 35,17.1490002 L 35,14.1490002 L 29.007,14.1610003 L 31.875,8.42599964 L 17.302,15.7040005 L 31.875,23 Z M 29.6119995,26 C 29.6159992,26 29.6200008,26 29.6240005,26 C 29.8959999,26 30.2250004,26.4540005 30.5440006,26.7649994 C 31,27.2099991 31.5639992,27.8770008 32.3300018,27.7210007 C 33.4710007,27.493 33.8769989,25.9029999 34.0820007,24.7189999 L 32.8310013,24.5060005 C 32.5099983,26.3549995 32.0849991,26.4899998 32.0810013,26.4899998 C 31.9729996,26.5249996 31.5939999,26.1350002 31.4309998,25.9769993 C 30.9650002,25.5230007 30.3740005,24.9519997 29.5690002,24.9750004 C 28.4400005,25.0139999 27.5049992,26.1100006 26.6270008,28.4699993 L 27.8180008,28.8239994 C 28.7360001,26.3540001 29.4239998,26 29.6119995,26 Z M 13.1669998,32.8450012 L 13.8409996,32.7050018 C 18.0529995,31.9029999 22.3770008,31.8869991 26.5919991,32.6650009 L 27.2959995,32.8110008 C 29.8540001,33.3380013 32.3610001,34.1669998 34.7770004,35.2770004 C 35.1889992,34.4690018 35.5999985,33.6609993 36.012001,32.8530006 C 33.2249985,31.4330006 30.2910004,30.4290009 27.2959995,29.8110008 L 26.1959991,31.8220005 L 26.5919991,29.6650009 C 22.3770008,28.8869991 18.0529995,28.9020004 13.8409996,29.7049999 L 14.1110001,31.5720005 L 13.1669998,29.8449993 C 10.2290001,30.4659996 7.3499999,31.4589996 4.61299992,32.8530006 C 5.02400017,33.6609993 5.43599987,34.4679985 5.84800005,35.276001 C 8.21199989,34.1899986 10.665,33.3730011 13.1669998,32.8450012 Z M 8.02900028,27.6989994 C 8.78899956,27.8549995 9.35900021,27.2099991 9.81499958,26.7649994 C 10.1330004,26.4549999 10.4630003,26 10.7340002,26 C 10.7379999,26 10.7419996,26 10.7460003,26 C 10.9350004,26 11.6230001,26.3540001 12.5419998,28.8250008 L 13.7329998,28.448 C 12.8549995,26.0879993 11.9200001,25.0249996 10.7910004,24.9860001 C 9.97700024,24.9589996 9.39500046,25.5270004 8.9289999,25.9820004 C 8.76599979,26.1410007 8.36499977,26.5100002 8.27900028,26.4909992 C 8.27499962,26.4899998 7.8499999,26.3509998 7.52899981,24.5020008 L 6.27799988,24.7080002 C 6.48199987,25.8929996 6.88800001,27.4710007 8.02900028,27.6989994 Z" Fill="[SMSolidColorBrush]#ff4d4d4d" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+						</IconPanel>
+					</Icon>
+				</MergeItem>
+			</MergeScript>
+		</p.IconModel>
+	</IconTable>
+</SourceFile>

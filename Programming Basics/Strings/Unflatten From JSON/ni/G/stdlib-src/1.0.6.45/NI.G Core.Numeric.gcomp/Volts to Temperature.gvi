@@ -1,0 +1,732 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="A0A56E31F5A8C9124AE06179DDC3ABAEA13CFB68C5971D6846D9AC61C97AA45ADFF6A34762B23AA0F3D0EB4A2F1ECCF83680DD88020FA58D04CBC2C061D8C19C" Timestamp="1D69761C4AA5EDA" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="C" Name="http://www.ni.com/CCode" OldestCompatibleVersion="4.5.0.0" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.51564" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="Text based nodes" Name="http://www.ni.com/TextCode.Editor" OldestCompatibleVersion="4.5.0.0" Version="4.5.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.49573" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Converts a voltage read from a thermocouple into a temperature. National Instruments has chosen thermocouple polynomial expressions that are valid only for particular temperature ranges (given in the VI diagram). These polynomials come from the NIST Monograph 175.&lt;/p&gt;</p.UserDescription>
+		<Icon Id="273" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="274" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Id="275" Left="[float]0" TemplateName="[string]GrayNoText" Top="[float]0" Width="[float]40">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="276" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="277" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+				</IconTemplate>
+				<Image Height="[float]30" Id="279" Left="[float]5" MinHeight="[float]13" MinWidth="[float]13" Source="[SMEmbeddedImageSource]iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAIAAAC0Ujn1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACDSURBVEhL7ZDRDoAgCEX9/582Jq4IGd7Ilm6eJ5S7AyPlz9hqRV+dUnD83+rTzjXBT58HW0sjYg+qEeZTI2OgRaSd4acPFIqxurq9IHLTcvmL+lt4q2bM5H2OSDhecImImlDduJpqk9pG1ASHzKhEBYap2y6kJnyvyQTqUWy1YkV1zgdKD8i29NbqQAAAAABJRU5ErkJggg==" Top="[float]5" Width="[float]30" />
+			</IconPanel>
+		</Icon>
+		<ConnectorPane Height="40" Id="10" ListViewHeight="100" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+			<ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="15" />
+			<ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 50" Parameter="16" />
+			<ConnectorPaneTerminal Hotspot="0 25" ListViewHotspot="0 65" Parameter="17" />
+			<ConnectorPaneTerminal Hotspot="0 35" />
+			<ConnectorPaneTerminal Hotspot="15 0" />
+			<ConnectorPaneTerminal Hotspot="25 0" />
+			<ConnectorPaneTerminal Hotspot="40 5" ListViewHotspot="150 80" Parameter="18" />
+			<ConnectorPaneTerminal Hotspot="40 15" />
+			<ConnectorPaneTerminal Hotspot="40 25" />
+			<ConnectorPaneTerminal Hotspot="40 35" />
+			<ConnectorPaneTerminal Hotspot="15 40" />
+			<ConnectorPaneTerminal Hotspot="25 40" />
+		</ConnectorPane>
+		<DiagramUnplacedItems Id="11" xmlns="http://www.ni.com/MocCommon" />
+		<FrontPanelUnplacedItems Id="12" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" />
+		<BlockDiagram Id="13">
+			<Literal Bounds="321 155 70 16" DataType="Double" Id="19" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>0x412E848000000000</p.Data>
+				<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G7" />
+			</Literal>
+			<Multiply Bounds="405 130 30 30" Id="20" Terminals="o=473, c0t0v=476, c1t0v=475" />
+			<CaseStructure Bounds="452 0 788 325" DataType="UInt16" Id="21" Selected="22" UserSelectorBounds="356 0 75 17">
+				<CaseStructure.Case Bounds="5 5 778 315" Id="22" Pattern="..0">
+					<Literal Bounds="18 160 49 16" DataType="Double" Id="33" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x40A2FE0000000000</p.Data>
+						<NumericBehavior Interpretation="Exact" Radix="Decimal" RadixVisibility="Hidden" ValueFormatter="Decimal, Uppercase, Signed" />
+					</Literal>
+					<IsGreaterOrEqual Bounds="78 145 30 30" Id="34" />
+					<CaseStructure Bounds="123 30 510 265" Default="36" Id="35" Selected="37" UserSelectorBounds="211 0 88 17">
+						<CaseStructure.Case Bounds="5 5 500 255" Id="36" Pattern="False">
+							<CCodeNode Bounds="40 60 415 170" DocumentText="&quot;T=   (9.842332E1)     +\r\n       v * ( (6.9971500E-1)   +\r\n      v * ( (-8.4765304E-4)   +\r\n       v * ( (1.0052644E-6)   +\r\n    v * ( (-8.3345952E-10)   +\r\n     v * ( (4.5508542E-13)   +\r\n    v * ( (-1.5523037E-16)   +\r\n     v * ( (2.9886750E-20)   +               \r\n      v * (-2.4742860E-24) ) ) ) ) ) ) );&quot;" Id="41" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{5cee41e7-5d81-44c3-bad4-95ebafd3ee42}" Id="42" />
+								<CVariable Bounds="395 40 50 15" DataType="Double" Direction="Output" Hotspot="445 45" Id="1" IsTypeFixed="True" Name="T" Usage="Optional" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="2" Name="v" Usage="Required" />
+							</CCodeNode>
+							<Comment Bounds="35 40 189 15" Id="43" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.03 C to -0.02 C</p.Text>
+							</Comment>
+							<Comment Bounds="35 25 214 15" Id="44" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: 250 C to 700 C</p.Text>
+							</Comment>
+							<Wire Id="352" Joints="N(41:1)|(485,105) N(40:36)|(496,105)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="353" Joints="N(39:36)|(4,105) N(41:2)|(15,105)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Case Bounds="5 5 500 255" Id="37" Pattern="True">
+							<CCodeNode Bounds="40 60 415 185" DocumentText="&quot;T=   (2.1315071E2)     +\r\n       v * ( (2.8510504E-1)   +\r\n      v * ( (-5.2742887E-5)   +\r\n       v * ( (9.9160804E-9)   +\r\n    v * ( (-1.2965303E-12)   +\r\n     v * ( (1.1195870E-16)   +\r\n    v * ( (-6.0625199E-21)   +\r\n     v * ( (1.8661696E-25)   +               \r\n      v * (-2.4878585E-30) ) ) ) ) ) ) ) ;&quot;" Id="46" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{fcdfed5b-4cee-4764-863b-31f127c1459a}" Id="47" />
+								<CVariable Bounds="395 40 50 15" DataType="Double" Direction="Output" Hotspot="445 45" Id="1" IsTypeFixed="True" Name="T" Usage="Optional" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="2" Name="v" Usage="Required" />
+							</CCodeNode>
+							<Comment Bounds="15 35 189 15" Id="48" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.02 C to -0.01 C</p.Text>
+							</Comment>
+							<Comment Bounds="15 20 221 15" Id="49" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: 700 C to 1820 C</p.Text>
+							</Comment>
+							<Wire Id="354" Joints="N(46:1)|(485,105) N(40:37)|(496,105)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="355" Joints="N(39:37)|(4,105) N(46:2)|(15,105)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Selector Bounds="-4 125 13 10" Docking="Left" Id="38" Terminals="35=358, 36, 37" />
+						<CaseStructure.Tunnel Bounds="-4 105 13 10" Docking="Left" Id="39" Terminals="35=357, 36=353, 37=355" />
+						<CaseStructure.Tunnel Bounds="501 105 13 10" Docking="Right" Id="40" Terminals="35=359, 36=352, 37=354" />
+					</CaseStructure>
+					<Wire Id="356" Joints="N(33:Out)|(67,165) N(34:y)|(78,165)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="357" Joints="N(32:22)|(4,140) h(63) B(1) N(39:35)|(119,140) B(1) v(10) N(34:x)|(78,150)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="358" Joints="N(34:x &gt;= y?)|(108,160) N(38:35)|(119,160)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="359" Joints="N(40:35)|(637,140) N(31:22)|(774,140)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Comment Bounds="8 5 132 15" Id="50" xmlns="http://www.ni.com/MocCommon">
+						<p.Text>B type thermocouple</p.Text>
+					</Comment>
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 778 315" Id="23" Pattern="1">
+					<CaseStructure Bounds="83 25 495 255" Default="54" Id="53" Selected="55" UserSelectorBounds="204 0 88 17">
+						<CaseStructure.Case Bounds="5 5 485 245" Id="54" Pattern="False">
+							<CCodeNode Bounds="40 65 380 155" DocumentText="&quot;T= v * ( (1.6977288E-2)   +\r\n    v * ( (-4.3514970E-7)   +\r\n     v * ( (-1.5859697E-10)  +\r\n    v * ( (-9.2502871E-14) +\r\n    v * ( (-2.6084314E-17) +\r\n     v * ( (-4.1360199E-21) +\r\n    v * ( (-3.4034030E-25) +\r\n     v * (-1.1564890E-29) ) ) ) ) ) ) );&quot;" Id="59" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{ceb9098e-68cd-42d4-b879-b9a340404a65}" Id="60" />
+								<CVariable Bounds="360 40 50 15" DataType="Double" Direction="Output" Hotspot="410 45" Id="1" IsTypeFixed="True" Name="T" Usage="Optional" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="2" Name="v" Usage="Required" />
+							</CCodeNode>
+							<Comment Bounds="15 35 189 15" Id="61" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.03 C to -0.01 C</p.Text>
+							</Comment>
+							<Comment Bounds="15 20 205 15" Id="63" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: -200 C to 0 C</p.Text>
+							</Comment>
+							<Wire Id="360" Joints="N(59:1)|(450,110) N(58:54)|(481,110)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="361" Joints="N(57:54)|(4,110) N(59:2)|(15,110)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Case Bounds="5 5 485 245" Id="55" Pattern="True">
+							<CCodeNode Bounds="40 65 400 170" DocumentText="&quot;T= v * ( (1.7057035E-2)   +\r\n    v * ( (-2.3301759E-7)   +\r\n     v * ( (6.5435585E-12)  +\r\n    v * ( (-7.3562749E-17) +\r\n    v * ( (-1.7896001E-21) +\r\n     v * ( (8.4036165E-26) +\r\n    v * ( (-1.3735879E-30) +\r\n     v * ( (1.0629823E-35) +               \r\n    v * (-3.2447087E-41) ) ) ) ) ) ) ) );&quot;" Id="64" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{f1a0bb07-0575-4e5e-ad73-6d3c36f736dc}" Id="65" />
+								<CVariable Bounds="380 40 50 15" DataType="Double" Direction="Output" Hotspot="430 45" Id="1" IsTypeFixed="True" Name="T" Usage="Optional" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="2" Name="v" Usage="Required" />
+							</CCodeNode>
+							<Comment Bounds="10 30 189 15" Id="66" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.02 C to -0.02 C</p.Text>
+							</Comment>
+							<Comment Bounds="10 15 207 15" Id="68" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: 0 C to 1000 C</p.Text>
+							</Comment>
+							<Wire Id="362" Joints="N(64:1)|(470,110) N(58:55)|(481,110)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="363" Joints="N(57:55)|(4,110) N(64:2)|(15,110)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Selector Bounds="-4 130 13 10" Docking="Left" Id="56" Terminals="53=367, 54, 55" />
+						<CaseStructure.Tunnel Bounds="-4 110 13 10" Docking="Left" Id="57" Terminals="53=364, 54=361, 55=363" />
+						<CaseStructure.Tunnel Bounds="486 110 13 10" Docking="Right" Id="58" Terminals="53=366, 54=360, 55=362" />
+					</CaseStructure>
+					<Wire Id="364" Joints="N(32:23)|(4,140) h(23) B(1) N(57:53)|(79,140) B(1) v(20) N(486:x)|(38,160)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="366" Joints="N(58:53)|(582,140) N(31:23)|(774,140)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="367" Joints="N(486:x &gt;= 0?)|(68,160) N(56:53)|(79,160)" xmlns="http://www.ni.com/PlatformFramework" />
+					<IsGreaterOrEqualTo0 Bounds="38 145 30 30" Id="486" />
+					<Comment Bounds="13 5 131 15" Id="67" xmlns="http://www.ni.com/MocCommon">
+						<p.Text>E type thermocouple</p.Text>
+					</Comment>
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 778 315" Id="24" Pattern="2">
+					<Literal Bounds="28 160 56 16" DataType="Double" Id="70" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x40E4F4E000000000</p.Data>
+						<NumericBehavior Interpretation="Exact" Radix="Decimal" RadixVisibility="Hidden" ValueFormatter="Decimal, Uppercase, Signed" />
+					</Literal>
+					<IsGreaterOrEqual Bounds="98 145 30 30" Id="71" />
+					<BooleanTo0Or1 Bounds="138 155 30 10" Id="72" />
+					<BooleanTo0Or1 Bounds="138 190 30 10" Id="74" />
+					<Add Bounds="188 155 30 30" Id="75" Terminals="o=377, c0t0v=379, c1t0v=378" />
+					<CaseStructure Bounds="233 20 470 245" DataType="Int16" Id="76" Selected="77" UserSelectorBounds="198 0 75 17">
+						<CaseStructure.Case Bounds="5 5 460 235" Id="77" Pattern="..0">
+							<CCodeNode Bounds="40 70 370 155" DocumentText="&quot;T= v * ( (1.9528268E-2)   +\r\n    v * ( (-1.2286185E-6)   +\r\n     v * ( (-1.0752178E-9)   +\r\n    v * ( (-5.9086933E-13) +\r\n     v * ( (-1.7256713E-16) +\r\n    v * ( (-2.8131513E-20) +\r\n     v * ( (-2.3963370E-24) +\r\n    v * (-8.3823321E-29) ) ) ) ) ) ) );&quot;" Id="83" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{665cf80b-c557-410a-af7e-f07751915799}" Id="84" />
+								<CVariable Bounds="350 40 50 15" DataType="Double" Direction="Output" Hotspot="400 45" Id="1" IsTypeFixed="True" Name="T" Usage="Optional" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="2" Name="v" Usage="Required" />
+							</CCodeNode>
+							<Comment Bounds="10 40 189 15" Id="85" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.03 C to -0.05 C</p.Text>
+							</Comment>
+							<Comment Bounds="10 25 205 15" Id="86" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: -210 C to 0 C</p.Text>
+							</Comment>
+							<Wire Id="368" Joints="N(81:77)|(4,115) N(83:2)|(15,115)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="369" Joints="N(83:1)|(440,115) N(82:77)|(456,115)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Case Bounds="5 5 460 235" Id="78" Pattern="1">
+							<CCodeNode Bounds="40 70 350 140" DocumentText="&quot;T= v * ( (1.978425E-2)   +\r\n    v * ( (-2.001204E-7)   +\r\n     v * ( (1.036969E-11)   +\r\n    v * ( (-2.549687E-16) +\r\n     v * ( (3.585153E-21) +\r\n    v * ( (-5.344285E-26) +\r\n     v * (5.099890E-31) ) ) ) ) ) );&quot;" Id="88" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{8ac9d078-a02c-438c-9108-2060f2074e13}" Id="89" />
+								<CVariable Bounds="330 40 50 15" DataType="Double" Direction="Output" Hotspot="380 45" Id="1" IsTypeFixed="True" Name="T" Usage="Optional" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="2" Name="v" Usage="Required" />
+							</CCodeNode>
+							<Comment Bounds="10 40 189 15" Id="90" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.04 C to -0.04 C</p.Text>
+							</Comment>
+							<Comment Bounds="10 25 200 15" Id="91" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: 0 C to 760 C</p.Text>
+							</Comment>
+							<Wire Id="370" Joints="N(81:78)|(4,115) N(88:2)|(15,115)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="371" Joints="N(88:1)|(420,115) N(82:78)|(456,115)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Case Bounds="5 5 460 235" Id="79" Pattern="2..">
+							<CCodeNode Bounds="40 70 335 125" DocumentText="&quot;T= (-3.11358187E3)  +\r\n     v * ( (3.00543684E-1)   +\r\n    v * ( (-9.94773230E-6)   +\r\n     v * ( (1.70276630E-10)   +\r\n    v * ( (-1.43033468E-15) +\r\n     v * (4.73886084E-21) ) ) ) );&quot;" Id="93" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{0bd20d2d-076a-422e-b32e-a47174afe007}" Id="94" />
+								<CVariable Bounds="315 40 50 15" DataType="Double" Direction="Output" Hotspot="365 45" Id="1" IsTypeFixed="True" Name="T" Usage="Optional" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="2" Name="v" Usage="Required" />
+							</CCodeNode>
+							<Comment Bounds="10 35 189 15" Id="95" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.03 C to -0.04 C</p.Text>
+							</Comment>
+							<Comment Bounds="10 20 221 15" Id="96" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: 760 C to 1200 C</p.Text>
+							</Comment>
+							<Wire Id="372" Joints="N(93:1)|(405,115) N(82:79)|(456,115)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="373" Joints="N(81:79)|(4,115) N(93:2)|(15,115)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Selector Bounds="-4 145 13 10" Docking="Left" Id="80" Terminals="76=377, 77, 78, 79" />
+						<CaseStructure.Tunnel Bounds="-4 115 13 10" Docking="Left" Id="81" Terminals="76=374, 77=368, 78=370, 79=373" />
+						<CaseStructure.Tunnel Bounds="461 115 13 10" Docking="Right" Id="82" Terminals="76=382, 77=369, 78=371, 79=372" />
+					</CaseStructure>
+					<Wire Id="374" Joints="N(32:24)|(4,140) h(18) B(1) N(81:76)|(229,140) B(1) v(10) B(3) N(71:x)|(98,150) B(3) v(45) N(487:x)|(98,195)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="375" Joints="N(70:Out)|(84,165) N(71:y)|(98,165)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="377" Joints="N(75:o)|(218,170) N(80:76)|(229,170)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="378" Joints="N(74:0, 1)|(168,195) h(9) v(-20) N(75:c1t0v)|(188,175)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="379" Joints="N(72:0, 1)|(168,160) N(75:c0t0v)|(188,160)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="380" Joints="N(487:x &gt;= 0?)|(128,195) N(74:Boolean)|(141,195)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="381" Joints="N(71:x &gt;= y?)|(128,160) N(72:Boolean)|(141,160)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="382" Joints="N(82:76)|(707,140) N(31:24)|(774,140)" xmlns="http://www.ni.com/PlatformFramework" />
+					<IsGreaterOrEqualTo0 Bounds="98 180 30 30" Id="487" />
+					<Comment Bounds="8 10 129 15" Id="87" xmlns="http://www.ni.com/MocCommon">
+						<p.Text>J type thermocouple</p.Text>
+					</Comment>
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 778 315" Id="25" Pattern="3">
+					<Literal Bounds="23 165 56 16" DataType="Double" Id="99" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x40D4290000000000</p.Data>
+						<NumericBehavior Interpretation="Exact" Radix="Decimal" RadixVisibility="Hidden" ValueFormatter="Decimal, Uppercase, Signed" />
+					</Literal>
+					<IsGreaterOrEqual Bounds="88 150 30 30" Id="100" />
+					<BooleanTo0Or1 Bounds="128 160 30 10" Id="101" />
+					<BooleanTo0Or1 Bounds="123 195 30 10" Id="103" />
+					<Add Bounds="168 160 30 30" Id="104" Terminals="o=390, c0t0v=392, c1t0v=391" />
+					<CaseStructure Bounds="213 20 490 260" DataType="Int16" Id="105" Selected="106" UserSelectorBounds="208 0 75 17">
+						<CaseStructure.Case Bounds="5 5 480 250" Id="106" Pattern="..0">
+							<CCodeNode Bounds="40 70 380 155" DocumentText="&quot;T= v * ( (2.5173462E-2)   +\r\n     v * ( (-1.1662878E-6)   +\r\n    v * ( (-1.0833638E-9)   +\r\n     v * ( (-8.9773540E-13) +\r\n    v * ( (-3.7342377E-16) +\r\n     v * ( (-8.6632643E-20) +\r\n    v * ( (-1.0450598E-23) +\r\n     v * (-5.1920577E-28) ) ) ) ) ) ) );&quot;" Id="112" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{40fc7448-5b06-431e-8dcf-b81d07f7822f}" Id="113" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="1" Name="v" Usage="Required" />
+								<CVariable Bounds="360 40 50 15" DataType="Double" Direction="Output" Hotspot="410 45" Id="2" IsTypeFixed="True" Name="T" Usage="Optional" />
+							</CCodeNode>
+							<Comment Bounds="10 40 189 15" Id="114" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.04 C to -0.02 C</p.Text>
+							</Comment>
+							<Comment Bounds="10 25 205 15" Id="115" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: -200 C to 0 C</p.Text>
+							</Comment>
+							<Wire Id="383" Joints="N(110:106)|(4,115) N(112:1)|(15,115)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="384" Joints="N(112:2)|(450,115) N(111:106)|(476,115)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Case Bounds="5 5 480 250" Id="107" Pattern="1">
+							<CCodeNode Bounds="40 70 390 170" DocumentText="&quot;T= v * ( (2.508355E-2)   +\r\n     v * ( (7.860106E-8)   +\r\n    v * ( (-2.503131E-10)   +\r\n     v * ( (8.315270E-14) +\r\n    v * ( (-1.228034E-17) +\r\n     v * ( (9.804036E-22) +\r\n    v * ( (-4.413030E-26) +\r\n     v * ( (1.057734E-30) +               \r\n    v * (-1.052755E-35) ) ) ) ) ) ) ) );&quot;" Id="117" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{a67d635a-0f51-4d92-8742-24415490e867}" Id="118" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="1" Name="v" Usage="Required" />
+								<CVariable Bounds="370 40 50 15" DataType="Double" Direction="Output" Hotspot="420 45" Id="2" IsTypeFixed="True" Name="T" Usage="Optional" />
+							</CCodeNode>
+							<Comment Bounds="5 35 189 15" Id="119" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.04 C to -0.05 C</p.Text>
+							</Comment>
+							<Comment Bounds="5 20 200 15" Id="120" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: 0 C to 500 C</p.Text>
+							</Comment>
+							<Wire Id="385" Joints="N(110:107)|(4,115) N(117:1)|(15,115)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="386" Joints="N(117:2)|(460,115) N(111:107)|(476,115)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Case Bounds="5 5 480 250" Id="108" Pattern="2..">
+							<CCodeNode Bounds="40 70 340 140" DocumentText="&quot;T= (-1.318058E+2) +\r\n     v * ( (4.830222E-2)   +\r\n     v * ( (-1.646031E-6)   +\r\n    v * ( (5.464731E-11)   +\r\n     v * ( (-9.650715E-16) +\r\n    v * ( (8.802193E-21) +\r\n     v * (-3.110810E-26) ) ) ) ) );&quot;" Id="122" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{4a7a242c-5513-4e76-b998-dd52848909cb}" Id="123" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="1" Name="v" Usage="Required" />
+								<CVariable Bounds="320 40 50 15" DataType="Double" Direction="Output" Hotspot="370 45" Id="2" IsTypeFixed="True" Name="T" Usage="Optional" />
+							</CCodeNode>
+							<Comment Bounds="10 35 189 15" Id="124" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.06 C to -0.05 C</p.Text>
+							</Comment>
+							<Comment Bounds="10 20 221 15" Id="125" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: 500 C to 1372 C</p.Text>
+							</Comment>
+							<Wire Id="387" Joints="N(122:2)|(410,115) N(111:108)|(476,115)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="388" Joints="N(110:108)|(4,115) N(122:1)|(15,115)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Selector Bounds="-4 150 13 10" Docking="Left" Id="109" Terminals="105=390, 106, 107, 108" />
+						<CaseStructure.Tunnel Bounds="-4 115 13 10" Docking="Left" Id="110" Terminals="105=397, 106=383, 107=385, 108=388" />
+						<CaseStructure.Tunnel Bounds="481 115 13 10" Docking="Right" Id="111" Terminals="105=389, 106=384, 107=386, 108=387" />
+					</CaseStructure>
+					<Wire Id="389" Joints="N(111:105)|(707,140) N(31:25)|(774,140)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="390" Joints="N(104:o)|(198,175) N(109:105)|(209,175)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="391" Joints="N(103:0, 1)|(153,200) h(7) v(-20) N(104:c1t0v)|(168,180)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="392" Joints="N(101:0, 1)|(158,165) N(104:c0t0v)|(168,165)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="393" Joints="N(489:x &gt;= 0?)|(83,200) N(103:Boolean)|(126,200)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="394" Joints="N(100:x &gt;= y?)|(118,165) N(101:Boolean)|(131,165)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="395" Joints="N(99:Out)|(79,170) N(100:y)|(88,170)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="397" Joints="N(32:25)|(4,140) h(11) B(1) h(65) B(2) N(110:105)|(209,140) B(2) v(15) N(100:x)|(88,155) B(1) v(60) N(489:x)|(53,200)" xmlns="http://www.ni.com/PlatformFramework" />
+					<IsGreaterOrEqualTo0 Bounds="53 185 30 30" Id="489" />
+					<Comment Bounds="8 5 132 15" Id="121" xmlns="http://www.ni.com/MocCommon">
+						<p.Text>K type thermocouple</p.Text>
+					</Comment>
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 778 315" Id="26" Pattern="4">
+					<Literal Bounds="28 290 49 16" DataType="Double" Id="127" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x409E0C0000000000</p.Data>
+						<NumericBehavior Interpretation="Exact" Radix="Decimal" RadixVisibility="Hidden" ValueFormatter="Decimal, Uppercase, Signed" />
+					</Literal>
+					<Literal Bounds="23 235 56 16" DataType="Double" Id="128" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x40C6308000000000</p.Data>
+						<NumericBehavior Interpretation="Exact" Radix="Decimal" RadixVisibility="Hidden" ValueFormatter="Decimal, Uppercase, Signed" />
+					</Literal>
+					<Literal Bounds="23 185 56 16" DataType="Double" Id="129" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x40D346C000000000</p.Data>
+						<NumericBehavior Interpretation="Exact" Radix="Decimal" RadixVisibility="Hidden" ValueFormatter="Decimal, Uppercase, Signed" />
+					</Literal>
+					<IsGreaterOrEqual Bounds="88 170 30 30" Id="130" />
+					<BooleanTo0Or1 Bounds="133 180 30 10" Id="131" />
+					<IsGreaterOrEqual Bounds="88 220 30 30" Id="132" />
+					<BooleanTo0Or1 Bounds="133 230 30 10" Id="133" />
+					<IsGreaterOrEqual Bounds="88 275 30 30" Id="134" />
+					<BooleanTo0Or1 Bounds="133 285 30 10" Id="135" />
+					<Add Bounds="198 180 30 45" Id="137" Terminals="o=410, c0t0v=491, c1t0v=492, c2t0v=493" VerticalChunkCount="3" />
+					<CaseStructure Bounds="243 20 520 275" DataType="Int16" Id="138" Selected="139" UserSelectorBounds="222 0 75 17">
+						<CaseStructure.Case Bounds="5 5 510 265" Id="139" Pattern="..0">
+							<CCodeNode Bounds="40 70 405 185" DocumentText="&quot;T= v * ( (1.8891380E-1)   +\r\n    v * ( (-9.3835290E-5)   +\r\n     v * ( (1.3068619E-7)   +\r\n    v * ( (-2.2703580E-10) +\r\n     v * ( (3.5145659E-13) +\r\n    v * ( (-3.8953900E-16) +\r\n     v * ( (2.8239471E-19) +\r\n    v * ( (-1.2607281E-22) +               \r\n     v * ( (3.1353611E-26) +\r\n    v * (-3.3187769E-30) ) ) ) ) ) ) ) ) );&quot;" Id="146" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{c4b4370a-a788-4269-92eb-f113b62c09a0}" Id="147" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="1" Name="v" Usage="Required" />
+								<CVariable Bounds="385 40 50 15" DataType="Double" Direction="Output" Hotspot="435 45" Id="2" IsTypeFixed="True" Name="T" Usage="Optional" />
+							</CCodeNode>
+							<Comment Bounds="5 45 189 15" Id="148" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.02 C to -0.02 C</p.Text>
+							</Comment>
+							<Comment Bounds="5 30 204 15" Id="149" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: -50C to 250C</p.Text>
+							</Comment>
+							<Wire Id="398" Joints="N(146:2)|(475,115) N(145:139)|(506,115)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="399" Joints="N(144:139)|(4,115) N(146:1)|(15,115)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Case Bounds="5 5 510 265" Id="140" Pattern="1">
+							<CCodeNode Bounds="40 70 420 190" DocumentText="&quot;T= (1.334584505E1)  +\r\n     v * ( (1.472644573E-1)   +\r\n    v * ( (-1.844024844E-5)   +\r\n     v * ( (4.031129726E-9)   +\r\n    v * ( (-6.249428360E-13) +\r\n     v * ( (6.468412046E-17) +\r\n    v * ( (-4.458750426E-21) +\r\n     v * ( (1.994710149E-25) +\r\n    v * ( (-5.313401790E-30) +               \r\n     v * (6.481976217E-35) ) ) ) ) ) ) ) );&quot;" Id="151" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{d4927685-31b1-43bc-8d60-eee14d47c3f8}" Id="152" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="1" Name="v" Usage="Required" />
+								<CVariable Bounds="400 40 50 15" DataType="Double" Direction="Output" Hotspot="450 45" Id="2" IsTypeFixed="True" Name="T" Usage="Optional" />
+							</CCodeNode>
+							<Comment Bounds="10 35 203 15" Id="153" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.005 C to -0.005 C</p.Text>
+							</Comment>
+							<Comment Bounds="10 20 213 15" Id="154" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: 250C to 1200C</p.Text>
+							</Comment>
+							<Wire Id="400" Joints="N(151:2)|(490,115) N(145:140)|(506,115)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="401" Joints="N(144:140)|(4,115) N(151:1)|(15,115)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Case Bounds="5 5 510 265" Id="141" Pattern="2">
+							<CCodeNode Bounds="40 70 340 125" DocumentText="&quot;T= (-8.199599416E1)  +\r\n     v * ( (1.553962042E-1)   +\r\n    v * ( (-8.342197663E-6)   +\r\n     v * ( (4.279433549E-10)   +\r\n    v * ( (-1.191577910E-14) +\r\n     v * (1.492290091E-19) ) ) ) );&quot;" Id="156" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{27f64680-d656-4af4-81a7-555247cc9256}" Id="157" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="1" Name="v" Usage="Required" />
+								<CVariable Bounds="320 40 50 15" DataType="Double" Direction="Output" Hotspot="370 45" Id="2" IsTypeFixed="True" Name="T" Usage="Optional" />
+							</CCodeNode>
+							<Comment Bounds="5 35 210 15" Id="158" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.001 C to -0.0005 C</p.Text>
+							</Comment>
+							<Comment Bounds="5 20 231 15" Id="159" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: 1064C to 1664.5C</p.Text>
+							</Comment>
+							<Wire Id="402" Joints="N(156:2)|(410,115) N(145:141)|(506,115)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="403" Joints="N(144:141)|(4,115) N(156:1)|(15,115)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Case Bounds="5 5 510 265" Id="142" Pattern="3..">
+							<CCodeNode Bounds="40 70 320 110" DocumentText="&quot;T= (3.406177836E4)  +\r\n     v * ( (-7.023729171)   +\r\n    v * ( (5.582903813E-4)   +\r\n     v * ( (-1.952394635E-8)   +\r\n    v * (2.560740231E-13) ) ) );&quot;" Id="161" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{6c310635-1d27-4579-ade2-19dcad5941be}" Id="162" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="1" Name="v" Usage="Required" />
+								<CVariable Bounds="300 40 50 15" DataType="Double" Direction="Output" Hotspot="350 45" Id="2" IsTypeFixed="True" Name="T" Usage="Optional" />
+							</CCodeNode>
+							<Comment Bounds="5 35 203 15" Id="163" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.002 C to -0.001 C</p.Text>
+							</Comment>
+							<Comment Bounds="5 20 242 15" Id="164" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: 1664.5C to 1768.1C</p.Text>
+							</Comment>
+							<Wire Id="404" Joints="N(161:2)|(390,115) N(145:142)|(506,115)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="405" Joints="N(144:142)|(4,115) N(161:1)|(15,115)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Selector Bounds="-4 170 13 10" Docking="Left" Id="143" Terminals="138=410, 139, 140, 141, 142" />
+						<CaseStructure.Tunnel Bounds="-4 115 13 10" Docking="Left" Id="144" Terminals="138=406, 139=399, 140=401, 141=403, 142=405" />
+						<CaseStructure.Tunnel Bounds="511 115 13 10" Docking="Right" Id="145" Terminals="138=418, 139=398, 140=400, 141=402, 142=404" />
+					</CaseStructure>
+					<Wire Id="406" Joints="N(32:26)|(4,140) h(11) B(1) N(144:138)|(239,140) B(1) v(35) B(3) N(130:x)|(88,175) B(3) v(50) B(5) N(132:x)|(88,225) B(5) v(55) N(134:x)|(88,280)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="407" Joints="N(127:Out)|(77,295) N(134:y)|(88,295)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="408" Joints="N(128:Out)|(79,240) N(132:y)|(88,240)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="409" Joints="N(129:Out)|(79,190) N(130:y)|(88,190)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="410" Joints="N(137:o)|(228,195) N(143:138)|(239,195)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="415" Joints="N(130:x &gt;= y?)|(118,185) N(131:Boolean)|(136,185)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="416" Joints="N(132:x &gt;= y?)|(118,235) N(133:Boolean)|(136,235)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="417" Joints="N(134:x &gt;= y?)|(118,290) N(135:Boolean)|(136,290)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="418" Joints="N(145:138)|(767,140) N(31:26)|(774,140)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="491" Joints="N(131:0, 1)|(163,185) N(137:c0t0v)|(198,185)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="492" Joints="N(133:0, 1)|(163,235) h(10) v(-35) N(137:c1t0v)|(198,200)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="493" Joints="N(135:0, 1)|(163,290) h(22) v(-75) N(137:c2t0v)|(198,215)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Comment Bounds="8 10 132 15" Id="150" xmlns="http://www.ni.com/MocCommon">
+						<p.Text>R type thermocouple</p.Text>
+					</Comment>
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 778 315" Id="27" Pattern="5">
+					<Literal Bounds="33 250 49 16" DataType="Double" Id="166" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x409D480000000000</p.Data>
+						<NumericBehavior Interpretation="Exact" Radix="Decimal" RadixVisibility="Hidden" ValueFormatter="Decimal, Uppercase, Signed" />
+					</Literal>
+					<Literal Bounds="28 205 56 16" DataType="Double" Id="167" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x40C42E0000000000</p.Data>
+						<NumericBehavior Interpretation="Exact" Radix="Decimal" RadixVisibility="Hidden" ValueFormatter="Decimal, Uppercase, Signed" />
+					</Literal>
+					<Literal Bounds="28 165 56 16" DataType="Double" Id="168" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x40D1200000000000</p.Data>
+						<NumericBehavior Interpretation="Exact" Radix="Decimal" RadixVisibility="Hidden" ValueFormatter="Decimal, Uppercase, Signed" />
+					</Literal>
+					<IsGreaterOrEqual Bounds="93 150 30 30" Id="169" />
+					<BooleanTo0Or1 Bounds="133 160 30 10" Id="170" />
+					<IsGreaterOrEqual Bounds="93 190 30 30" Id="171" />
+					<BooleanTo0Or1 Bounds="133 200 30 10" Id="172" />
+					<IsGreaterOrEqual Bounds="93 235 30 30" Id="173" />
+					<BooleanTo0Or1 Bounds="133 245 30 10" Id="174" />
+					<Add Bounds="193 160 30 45" Id="176" Terminals="o=429, c0t0v=494, c1t0v=495, c2t0v=496" VerticalChunkCount="3" />
+					<CaseStructure Bounds="238 20 525 275" DataType="Int16" Id="177" Selected="178" UserSelectorBounds="225 0 75 17">
+						<CaseStructure.Case Bounds="5 5 515 265" Id="178" Pattern="..0">
+							<CCodeNode Bounds="40 70 405 170" DocumentText="&quot;T= v * ( (1.84949460E-1)   +\r\n    v * ( (-8.00504062E-5)   +\r\n     v * ( (1.02237430E-7)   +\r\n    v * ( (-1.52248592E-10) +\r\n     v * ( (1.88821343E-13) +\r\n    v * ( (-1.59085941E-16) +\r\n     v * ( (8.23027880E-20) +\r\n    v * ( (-2.34181944E-23) +               \r\n     v * (2.79786260E-27) ) ) ) ) ) ) ) );&quot;" Id="185" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{7f7db19d-dcbe-4281-95da-3caae4ebdba2}" Id="186" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="1" Name="v" Usage="Required" />
+								<CVariable Bounds="385 40 50 15" DataType="Double" Direction="Output" Hotspot="435 45" Id="2" IsTypeFixed="True" Name="T" Usage="Optional" />
+							</CCodeNode>
+							<Comment Bounds="5 35 189 15" Id="187" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.02 C to -0.02 C</p.Text>
+							</Comment>
+							<Comment Bounds="5 20 204 15" Id="188" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: -50C to 250C</p.Text>
+							</Comment>
+							<Wire Id="419" Joints="N(184:178)|(4,115) N(185:1)|(15,115)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="420" Joints="N(185:2)|(475,115) N(183:178)|(511,115)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Case Bounds="5 5 515 265" Id="179" Pattern="1">
+							<CCodeNode Bounds="40 70 425 185" DocumentText="&quot;T= (1.291507177E1)  +\r\n     v * ( (1.466298863E-1)   +\r\n    v * ( (-1.534713402E-5)   +\r\n     v * ( (3.145945973E-9)   +\r\n    v * ( (-4.163257839E-13) +\r\n     v * ( (3.187963771E-17) +\r\n    v * ( (-1.29163750E-21) +\r\n     v * ( (2.183475087E-26) +\r\n    v * ( (-1.447379511E-31) +               \r\n     v * (8.211272125E-36) ) ) ) ) ) ) ) );&quot;" Id="190" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{c5ec83ca-571e-4c52-b49b-c8aa68a0d9f3}" Id="191" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="1" Name="v" Usage="Required" />
+								<CVariable Bounds="405 40 50 15" DataType="Double" Direction="Output" Hotspot="455 45" Id="2" IsTypeFixed="True" Name="T" Usage="Optional" />
+							</CCodeNode>
+							<Comment Bounds="5 35 189 15" Id="192" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.01 C to -0.01 C</p.Text>
+							</Comment>
+							<Comment Bounds="5 20 213 15" Id="193" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: 250C to 1200C</p.Text>
+							</Comment>
+							<Wire Id="421" Joints="N(184:179)|(4,115) N(190:1)|(15,115)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="422" Joints="N(190:2)|(495,115) N(183:179)|(511,115)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Case Bounds="5 5 515 265" Id="180" Pattern="2">
+							<CCodeNode Bounds="40 70 340 125" DocumentText="&quot;T= (-8.087801117E1)  +\r\n     v * ( (1.621573104E-1)   +\r\n    v * ( (-8.536869453E-6)   +\r\n     v * ( (4.719686976E-10)   +\r\n    v * ( (-1.441693666E-14) +\r\n     v * (2.081618890E-19) ) ) ) );&quot;" Id="195" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{1a66fe0c-77cf-4c4c-9f3a-6ce2190ba5d4}" Id="196" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="1" Name="v" Usage="Required" />
+								<CVariable Bounds="320 40 50 15" DataType="Double" Direction="Output" Hotspot="370 45" Id="2" IsTypeFixed="True" Name="T" Usage="Optional" />
+							</CCodeNode>
+							<Comment Bounds="10 35 217 15" Id="197" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.0002 C to -0.0002 C</p.Text>
+							</Comment>
+							<Comment Bounds="10 20 231 15" Id="198" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: 1064C to 1664.5C</p.Text>
+							</Comment>
+							<Wire Id="423" Joints="N(184:180)|(4,115) N(195:1)|(15,115)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="424" Joints="N(195:2)|(410,115) N(183:180)|(511,115)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Case Bounds="5 5 515 265" Id="181" Pattern="3..">
+							<CCodeNode Bounds="40 70 320 110" DocumentText="&quot;T= (5.333875126E4)  +\r\n     v * ( (-1.235892298E1)   +\r\n    v * ( (1.092657613E-3)   +\r\n     v * ( (-4.265693686E-8)   +\r\n    v * (6.247205420E-13) ) ) );&quot;" Id="200" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{2755ea18-8a84-4eb6-bb5f-5a5be8a6a02e}" Id="201" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="1" Name="v" Usage="Required" />
+								<CVariable Bounds="300 40 50 15" DataType="Double" Direction="Output" Hotspot="350 45" Id="2" IsTypeFixed="True" Name="T" Usage="Optional" />
+							</CCodeNode>
+							<Comment Bounds="5 35 203 15" Id="202" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.002 C to -0.002 C</p.Text>
+							</Comment>
+							<Comment Bounds="5 20 242 15" Id="203" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: 1664.5C to 1768.1C</p.Text>
+							</Comment>
+							<Wire Id="425" Joints="N(184:181)|(4,115) N(200:1)|(15,115)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="426" Joints="N(200:2)|(390,115) N(183:181)|(511,115)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Selector Bounds="-4 150 13 10" Docking="Left" Id="182" Terminals="177=429, 178, 179, 180, 181" />
+						<CaseStructure.Tunnel Bounds="516 115 13 10" Docking="Right" Id="183" Terminals="177=439, 178=420, 179=422, 180=424, 181=426" />
+						<CaseStructure.Tunnel Bounds="-4 115 13 10" Docking="Left" Id="184" Terminals="177=435, 178=419, 179=421, 180=423, 181=425" />
+					</CaseStructure>
+					<Wire Id="429" Joints="N(176:o)|(223,175) N(182:177)|(234,175)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="432" Joints="N(168:Out)|(84,170) N(169:y)|(93,170)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="433" Joints="N(167:Out)|(84,210) N(171:y)|(93,210)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="434" Joints="N(166:Out)|(82,255) N(173:y)|(93,255)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="435" Joints="N(32:27)|(4,140) h(16) B(1) N(184:177)|(234,140) B(1) v(15) B(3) N(169:x)|(93,155) B(3) v(40) B(5) N(171:x)|(93,195) B(5) v(45) N(173:x)|(93,240)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="436" Joints="N(173:x &gt;= y?)|(123,250) N(174:Boolean)|(136,250)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="437" Joints="N(171:x &gt;= y?)|(123,205) N(172:Boolean)|(136,205)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="438" Joints="N(169:x &gt;= y?)|(123,165) N(170:Boolean)|(136,165)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="439" Joints="N(183:177)|(767,140) N(31:27)|(774,140)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="494" Joints="N(170:0, 1)|(163,165) N(176:c0t0v)|(193,165)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="495" Joints="N(172:0, 1)|(163,205) h(12) v(-25) N(176:c1t0v)|(193,180)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="496" Joints="N(174:0, 1)|(163,250) h(20) v(-55) N(176:c2t0v)|(193,195)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Comment Bounds="8 10 132 15" Id="194" xmlns="http://www.ni.com/MocCommon">
+						<p.Text>S type thermocouple</p.Text>
+					</Comment>
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 778 315" Id="28" Pattern="6">
+					<CaseStructure Bounds="73 30 455 225" Default="208" Id="207" Selected="209" UserSelectorBounds="184 0 88 17">
+						<CaseStructure.Case Bounds="5 5 445 215" Id="208" Pattern="False">
+							<CCodeNode Bounds="45 60 355 145" DocumentText="&quot;T= v * ( (2.5949192E-2)   +\r\n    v * ( (-2.1316967E-7)   +\r\n     v * ( (7.9018692E-10)  +\r\n    v * ( (4.2527777E-13) +\r\n     v * ( (1.3304473E-16) +\r\n    v * ( (2.0241446E-20) + \r\n     v * (1.2668171E-24) ) ) ) ) ) );&quot;" Id="213" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{e0c9f8b7-c705-4dae-87b3-c223d8be1b60}" Id="214" />
+								<CVariable Bounds="335 40 50 15" DataType="Double" Direction="Output" Hotspot="385 45" Id="1" IsTypeFixed="True" Name="T" Usage="Optional" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="2" Name="v" Usage="Required" />
+							</CCodeNode>
+							<Comment Bounds="10 35 189 15" Id="215" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.04 C to -0.02 C</p.Text>
+							</Comment>
+							<Comment Bounds="10 20 197 15" Id="216" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: -200C to 0C</p.Text>
+							</Comment>
+							<Wire Id="440" Joints="N(212:208)|(4,105) N(213:2)|(20,105)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="441" Joints="N(213:1)|(430,105) N(211:208)|(441,105)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Case Bounds="5 5 445 215" Id="209" Pattern="True">
+							<CCodeNode Bounds="40 60 335 125" DocumentText="&quot;T= v * ( (2.592800E-2)   +\r\n    v * ( (-7.602961E-7)   +\r\n     v * ( (4.637791E-11)  +\r\n    v * ( (-2.165394E-15) +\r\n     v * ( (6.048144E-20) +\r\n    v * (-7.293422E-25) ) ) ) ) );&quot;" Id="218" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{e856ad7d-85f9-4c4b-933c-772b2e89489d}" Id="219" />
+								<CVariable Bounds="315 40 50 15" DataType="Double" Direction="Output" Hotspot="365 45" Id="1" IsTypeFixed="True" Name="T" Usage="Optional" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="2" Name="v" Usage="Required" />
+							</CCodeNode>
+							<Comment Bounds="5 35 189 15" Id="220" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.03 C to -0.03 C</p.Text>
+							</Comment>
+							<Comment Bounds="5 20 192 15" Id="221" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: 0C to 400C</p.Text>
+							</Comment>
+							<Wire Id="442" Joints="N(212:209)|(4,105) N(218:2)|(15,105)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="443" Joints="N(218:1)|(405,105) N(211:209)|(441,105)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Selector Bounds="-4 130 13 10" Docking="Left" Id="210" Terminals="207=446, 208, 209" />
+						<CaseStructure.Tunnel Bounds="446 105 13 10" Docking="Right" Id="211" Terminals="207=447, 208=441, 209=443" />
+						<CaseStructure.Tunnel Bounds="-4 105 13 10" Docking="Left" Id="212" Terminals="207=444, 208=440, 209=442" />
+					</CaseStructure>
+					<Wire Id="444" Joints="N(32:28)|(4,140) h(11) B(1) N(212:207)|(69,140) B(1) v(25) N(497:x)|(28,165)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="446" Joints="N(497:x &gt;= 0?)|(58,165) N(210:207)|(69,165)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="447" Joints="N(211:207)|(532,140) N(31:28)|(774,140)" xmlns="http://www.ni.com/PlatformFramework" />
+					<IsGreaterOrEqualTo0 Bounds="28 150 30 30" Id="497" />
+					<Comment Bounds="8 10 131 15" Id="217" xmlns="http://www.ni.com/MocCommon">
+						<p.Text>T type thermocouple</p.Text>
+					</Comment>
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 778 315" Id="29" Pattern="7..">
+					<Literal Bounds="23 165 56 16" DataType="Double" Id="224" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>0x40D4214000000000</p.Data>
+						<NumericBehavior Interpretation="Exact" Radix="Decimal" RadixVisibility="Hidden" ValueFormatter="Decimal, Uppercase, Signed" />
+					</Literal>
+					<IsGreaterOrEqual Bounds="88 150 30 30" Id="225" />
+					<BooleanTo0Or1 Bounds="133 160 30 10" Id="226" />
+					<BooleanTo0Or1 Bounds="128 195 30 10" Id="228" />
+					<Add Bounds="183 160 30 30" Id="229" Terminals="o=456, c0t0v=455, c1t0v=454" />
+					<CaseStructure Bounds="233 20 480 280" DataType="Int16" Id="230" Selected="231" UserSelectorBounds="202 0 75 17">
+						<CaseStructure.Case Bounds="5 5 470 270" Id="231" Pattern="..0">
+							<CCodeNode Bounds="40 70 385 170" DocumentText="&quot;T= v * ( (3.8436847E-2)   +\r\n     v * ( (1.1010485E-6)   +\r\n    v * ( (5.2229312E-9)   +\r\n     v * ( (7.2060525E-12) +\r\n    v * ( (5.8488586E-15) +\r\n     v * ( (2.7754916E-18) +\r\n    v * ( (7.7075166E-22) +\r\n     v * ( (1.1582665E-25) +\r\n     v * (7.3138868E-30) ) ) ) ) ) ) ) );&quot;" Id="237" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{4baf3c6a-a1b9-4cff-af70-82248c44c0ca}" Id="238" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="1" Name="v" Usage="Required" />
+								<CVariable Bounds="365 40 50 15" DataType="Double" Direction="Output" Hotspot="415 45" Id="2" IsTypeFixed="True" Name="T" Usage="Optional" />
+							</CCodeNode>
+							<Comment Bounds="10 45 189 15" Id="239" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.03 C to -0.02 C</p.Text>
+							</Comment>
+							<Comment Bounds="10 30 205 15" Id="240" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: -200 C to 0 C</p.Text>
+							</Comment>
+							<Wire Id="448" Joints="N(235:231)|(4,115) N(237:1)|(15,115)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="449" Joints="N(237:2)|(455,115) N(236:231)|(466,115)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Case Bounds="5 5 470 270" Id="232" Pattern="1">
+							<CCodeNode Bounds="40 70 340 140" DocumentText="&quot;T= v * ( (3.86896E-2)   +\r\n     v * ( (-1.08267E-6)   +\r\n    v * ( (4.70205E-11)   +\r\n     v * ( (-2.12169E-18) +\r\n    v * ( (-1.17272E-19) +\r\n     v * ( (5.39280E-24) +\r\n    v * (-7.98156E-29) ) ) ) ) ) );&quot;" Id="242" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{49bea6d7-ac14-4186-b8c8-4d6e9dd1f515}" Id="243" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="1" Name="v" Usage="Required" />
+								<CVariable Bounds="320 40 50 15" DataType="Double" Direction="Output" Hotspot="370 45" Id="2" IsTypeFixed="True" Name="T" Usage="Optional" />
+							</CCodeNode>
+							<Comment Bounds="10 40 189 15" Id="244" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.03 C to -0.02 C</p.Text>
+							</Comment>
+							<Comment Bounds="10 25 200 15" Id="245" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: 0 C to 600 C</p.Text>
+							</Comment>
+							<Wire Id="450" Joints="N(235:232)|(4,115) N(242:1)|(15,115)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="451" Joints="N(242:2)|(410,115) N(236:232)|(466,115)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Case Bounds="5 5 470 270" Id="233" Pattern="2..">
+							<CCodeNode Bounds="40 70 315 125" DocumentText="&quot;T= (1.972485E1) +\r\n     v * ( (3.300943E-2)   +\r\n     v * ( (-3.915159E-7)   +\r\n    v * ( (9.855391E-12)   +\r\n     v * ( (-1.274371E-16) +\r\n    v * (7.767022E-22) ) ) ) );&quot;" Id="247" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+								<CCodeNodeDll DllId="{d34dd854-d8b5-4e9a-a4ac-2eb05a27a373}" Id="248" />
+								<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="1" Name="v" Usage="Required" />
+								<CVariable Bounds="295 40 50 15" DataType="Double" Direction="Output" Hotspot="345 45" Id="2" IsTypeFixed="True" Name="T" Usage="Optional" />
+							</CCodeNode>
+							<Comment Bounds="5 35 189 15" Id="249" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>error range:  0.02 C to -0.04 C</p.Text>
+							</Comment>
+							<Comment Bounds="5 20 221 15" Id="250" xmlns="http://www.ni.com/MocCommon">
+								<p.Text>temperature range: 600 C to 1300 C</p.Text>
+							</Comment>
+							<Wire Id="452" Joints="N(235:233)|(4,115) N(247:1)|(15,115)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="453" Joints="N(247:2)|(385,115) N(236:233)|(466,115)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Selector Bounds="-4 150 13 10" Docking="Left" Id="234" Terminals="230=456, 231, 232, 233" />
+						<CaseStructure.Tunnel Bounds="-4 115 13 10" Docking="Left" Id="235" Terminals="230=460, 231=448, 232=450, 233=452" />
+						<CaseStructure.Tunnel Bounds="471 115 13 10" Docking="Right" Id="236" Terminals="230=461, 231=449, 232=451, 233=453" />
+					</CaseStructure>
+					<Wire Id="454" Joints="N(228:0, 1)|(158,200) h(12) v(-20) N(229:c1t0v)|(183,180)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="455" Joints="N(226:0, 1)|(163,165) N(229:c0t0v)|(183,165)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="456" Joints="N(229:o)|(213,175) N(234:230)|(229,175)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="457" Joints="N(225:x &gt;= y?)|(118,165) N(226:Boolean)|(136,165)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="458" Joints="N(498:x &gt;= 0?)|(113,200) N(228:Boolean)|(131,200)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="459" Joints="N(224:Out)|(79,170) N(225:y)|(88,170)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="460" Joints="N(32:29)|(4,140) h(11) B(1) N(235:230)|(229,140) B(1) v(15) B(3) N(225:x)|(88,155) B(3) v(45) N(498:x)|(83,200)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="461" Joints="N(236:230)|(717,140) N(31:29)|(774,140)" xmlns="http://www.ni.com/PlatformFramework" />
+					<IsGreaterOrEqualTo0 Bounds="83 185 30 30" Id="498" />
+					<Comment Bounds="8 10 132 15" Id="241" xmlns="http://www.ni.com/MocCommon">
+						<p.Text>N type thermocouple</p.Text>
+					</Comment>
+				</CaseStructure.Case>
+				<CaseStructure.Selector Bounds="-4 65 13 10" Docking="Left" Id="30" Terminals="21=474, 22, 23, 24, 25, 26, 27, 28, 29" />
+				<CaseStructure.Tunnel Bounds="779 140 13 10" Docking="Right" Id="31" Terminals="21=471, 22=359, 23=366, 24=382, 25=389, 26=418, 27=439, 28=447, 29=461" />
+				<CaseStructure.Tunnel Bounds="-4 140 13 10" Docking="Left" Id="32" Terminals="21=473, 22=357, 23=364, 24=374, 25=397, 26=406, 27=435, 28=444, 29=460" />
+			</CaseStructure>
+			<CaseStructure Bounds="1255 -30 350 210" DataType="UInt16" Id="252" Selected="254" UserSelectorBounds="138 0 75 17">
+				<CaseStructure.Case Bounds="5 5 340 200" Id="253" Pattern="..0">
+					<Comment Bounds="140 20 55 15" Id="260" xmlns="http://www.ni.com/MocCommon">
+						<p.Text>Celsius</p.Text>
+					</Comment>
+					<Wire Id="463" Joints="N(258:253)|(4,170) N(259:253)|(336,170)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 340 200" Id="254" Pattern="1">
+					<CCodeNode Bounds="40 125 245 65" DocumentText="F = (C * 1.8) + 32.0;" Id="261" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+						<CCodeNodeDll DllId="{277dd74d-987e-49d0-bb97-e87f91d91b40}" Id="262" />
+						<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="1" Name="C" Usage="Required" />
+						<CVariable Bounds="225 40 50 15" DataType="Double" Direction="Output" Hotspot="275 45" Id="2" IsTypeFixed="True" Name="F" Usage="Optional" />
+					</CCodeNode>
+					<Comment Bounds="120 20 75 15" Id="263" xmlns="http://www.ni.com/MocCommon">
+						<p.Text>Fahrenheit</p.Text>
+					</Comment>
+					<Wire Id="464" Joints="N(261:2)|(315,170) N(259:254)|(336,170)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="465" Joints="N(258:254)|(4,170) N(261:1)|(15,170)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 340 200" Id="255" Pattern="2">
+					<CCodeNode Bounds="40 125 205 65" DocumentText="K = C + 273.15;" Id="264" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+						<CCodeNodeDll DllId="{93abb1fd-d3a0-4d85-bafb-96d553bf2c50}" Id="265" />
+						<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="1" Name="C" Usage="Required" />
+						<CVariable Bounds="185 40 50 15" DataType="Double" Direction="Output" Hotspot="235 45" Id="2" IsTypeFixed="True" Name="K" Usage="Optional" />
+					</CCodeNode>
+					<Comment Bounds="140 20 50 15" Id="266" xmlns="http://www.ni.com/MocCommon">
+						<p.Text>Kelvin</p.Text>
+					</Comment>
+					<Wire Id="466" Joints="N(264:2)|(275,170) N(259:255)|(336,170)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="467" Joints="N(258:255)|(4,170) N(264:1)|(15,170)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 340 200" Id="256" Pattern="3..">
+					<CCodeNode Bounds="40 125 255 65" DocumentText="R = (C * 1.8) + 491.67;" Id="267" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+						<CCodeNodeDll DllId="{407d7219-fa87-4b2d-9e5a-8b0dd656a29e}" Id="268" />
+						<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="1" Name="C" Usage="Required" />
+						<CVariable Bounds="235 40 50 15" DataType="Double" Direction="Output" Hotspot="285 45" Id="2" IsTypeFixed="True" Name="R" Usage="Optional" />
+					</CCodeNode>
+					<Comment Bounds="140 20 61 15" Id="269" xmlns="http://www.ni.com/MocCommon">
+						<p.Text>Rankine</p.Text>
+					</Comment>
+					<Wire Id="468" Joints="N(267:2)|(325,170) N(259:256)|(336,170)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="469" Joints="N(258:256)|(4,170) N(267:1)|(15,170)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Selector Bounds="-4 15 13 10" Docking="Left" Id="257" Terminals="252=472, 253, 254, 255, 256" />
+				<CaseStructure.Tunnel Bounds="-4 170 13 10" Docking="Left" Id="258" Terminals="252=471, 253=463, 254=465, 255=467, 256=469" />
+				<CaseStructure.Tunnel Bounds="341 170 13 10" Docking="Right" Id="259" Terminals="252=470, 253=463, 254=464, 255=466, 256=468" />
+			</CaseStructure>
+			<Comment Bounds="325 330 342 28" Id="270" xmlns="http://www.ni.com/MocCommon">
+				<p.Text>"The formulas expect voltages in microvolts, so we multiply\nthe input voltage by 1,000,000 to convert to microvolts."</p.Text>
+			</Comment>
+			<DataAccessor Bounds="315 130 40 15" DataItem="15" Id="280" Label="281" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="280" Bounds="315 113 124 14" Id="281" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>thermocouple voltage</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="315 65 40 15" DataItem="16" Id="286" Label="287" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt16" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="286" Bounds="315 48 109 14" Id="287" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>thermocouple type</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="315 -15 40 15" DataItem="17" Id="290" Label="291" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt16" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="290" Bounds="315 -32 104 14" Id="291" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>temperature units</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="1625 140 40 15" DataItem="18" Id="294" Label="295" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Double" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="294" Bounds="1625 123 72 14" Id="295" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>temperature</p.Text>
+			</NodeLabel>
+			<Wire Id="470" Joints="N(259:252)|(1609,145) N(294:Value)|(1628,145)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="471" Joints="N(31:21)|(1244,145) N(258:252)|(1251,145)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="472" Joints="N(290:Value)|(355,-10) N(257:252)|(1251,-10)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="473" Joints="N(20:o)|(435,145) N(32:21)|(448,145)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="474" Joints="N(286:Value)|(355,70) N(30:21)|(448,70)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="475" Joints="N(19:Out)|(391,160) h(9) v(-10) N(20:c1t0v)|(405,150)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="476" Joints="N(280:Value)|(355,135) N(20:c0t0v)|(405,135)" xmlns="http://www.ni.com/PlatformFramework" />
+		</BlockDiagram>
+		<NativeFrontPanel AllowMaximize="[bool]False" EnforceMaximumSize="[bool]True" Height="[float]1600" Id="14" Left="[float]0" MaxHeight="[float]1600" MaxWidth="[float]2000" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" Width="[float]2000" WindowTitleOption="[WindowTitleOption]None">
+			<Text Foreground="[SMColor]#ff0000ff" Id="271" Left="[float]19" SizeMode="[TextModelSizeMode]SizeToText" Text="[string]Convert a thermocouple voltage to temperature." TextWrapping="[TextWrapping]Wrap" Top="[float]20" xmlns="http://www.ni.com/PlatformFramework" />
+			<Text Height="[float]62" Id="272" Left="[float]19" SizeMode="[TextModelSizeMode]Fixed" Text="[string]National Instruments has chosen thermocouple polynomial expressions that are valid only for particular temperature ranges (given in the VI diagram).  These polynomials come from the NIST Monograph 175." TextWrapping="[TextWrapping]Wrap" Top="[float]315" Width="[float]571" xmlns="http://www.ni.com/PlatformFramework" />
+			<NumericText BaseName="[string]Numeric" Height="[float]24" Id="284" Interval="[double]1" Label="[UIModel]285" Left="[float]19" RadixVisibility="[SMVisibility]Hidden" TabIndex="[int]0" Top="[float]86" Value="{DataItemBinding Id=15}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="285" LabelOwner="[UIModel]284" Left="[float]19" Text="[string]thermocouple voltage" Top="[float]66" Width="[float]117" xmlns="http://www.ni.com/PanelCommon" />
+			<RingSelector AllowNonSequentialValues="[bool]False" Height="[float]24" Id="288" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" Label="[UIModel]289" Left="[float]19" TabIndex="[int]1" Top="[float]169" Value="{DataItemBinding Id=16}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<RingSelectorInfo DisplayValue="[string]B" Value="[ushort]0" ValueType="[Type]UInt16" />
+				<RingSelectorInfo DisplayValue="[string]E" Value="[ushort]1" ValueType="[Type]UInt16" />
+				<RingSelectorInfo DisplayValue="[string]J" Value="[ushort]2" ValueType="[Type]UInt16" />
+				<RingSelectorInfo DisplayValue="[string]K" Value="[ushort]3" ValueType="[Type]UInt16" />
+				<RingSelectorInfo DisplayValue="[string]R" Value="[ushort]4" ValueType="[Type]UInt16" />
+				<RingSelectorInfo DisplayValue="[string]S" Value="[ushort]5" ValueType="[Type]UInt16" />
+				<RingSelectorInfo DisplayValue="[string]T" Value="[ushort]6" ValueType="[Type]UInt16" />
+				<RingSelectorInfo DisplayValue="[string]N" Value="[ushort]7" ValueType="[Type]UInt16" />
+			</RingSelector>
+			<Label Height="[float]16" Id="289" LabelOwner="[UIModel]288" Left="[float]19" Text="[string]thermocouple type" Top="[float]149" Width="[float]101" xmlns="http://www.ni.com/PanelCommon" />
+			<RingSelector AllowNonSequentialValues="[bool]False" Height="[float]24" Id="292" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" Label="[UIModel]293" Left="[float]19" TabIndex="[int]2" Top="[float]252" Value="{DataItemBinding Id=17}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<RingSelectorInfo DisplayValue="[string]Celsius" Value="[ushort]0" ValueType="[Type]UInt16" />
+				<RingSelectorInfo DisplayValue="[string]Fahrenheit" Value="[ushort]1" ValueType="[Type]UInt16" />
+				<RingSelectorInfo DisplayValue="[string]Kelvin" Value="[ushort]2" ValueType="[Type]UInt16" />
+				<RingSelectorInfo DisplayValue="[string]Rankine" Value="[ushort]3" ValueType="[Type]UInt16" />
+			</RingSelector>
+			<Label Height="[float]16" Id="293" LabelOwner="[UIModel]292" Left="[float]19" Text="[string]temperature units" Top="[float]232" Width="[float]95" xmlns="http://www.ni.com/PanelCommon" />
+			<NumericText BaseName="[string]Numeric" Height="[float]24" Id="298" Interval="[double]1" IsReadOnly="[bool]True" Label="[UIModel]299" Left="[float]328" RadixVisibility="[SMVisibility]Hidden" TabIndex="[int]3" Top="[float]86" Value="{DataItemBinding Id=18}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]103" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="299" LabelOwner="[UIModel]298" Left="[float]328" Text="[string]temperature" Top="[float]66" Width="[float]66" xmlns="http://www.ni.com/PanelCommon" />
+			<PanelExecutionWindow Id="499" />
+		</NativeFrontPanel>
+		<DataItem CallDirection="Input" CallIndex="1" DataType="Double" Id="15" Name="thermocouple voltage" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0x0</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">Voltage read from thermocouple.</p.UserDescription>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="2" DataType="UInt16" Id="16" Name="thermocouple type" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>2</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">Type of thermocouple wire used.</p.UserDescription>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="3" DataType="UInt16" Id="17" Name="temperature units" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">Type of thermocouple wire used.</p.UserDescription>
+		</DataItem>
+		<DataItem CallDirection="Output" CallIndex="1" DataType="Double" Id="18" Name="temperature" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0x0</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">Scaled value of the voltage converted to temperature in Celcius.</p.UserDescription>
+		</DataItem>
+	</VirtualInstrument>
+</SourceFile>

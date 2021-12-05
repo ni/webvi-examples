@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="9EAEE0125BF77B09B6BEDE0523457EA1E8E681A1FA164D5AFAC51BDDDD2A434DC178DDCBDD2D0D0ED8798E5F524A36501DB34A6387D999FCCC87E08669F719F4" Timestamp="1D77A3606B56297" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="9.1.0.50238" Name="LabVIEW NXG" Version="6.0.0" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@3364247e205a4069a396e2701dbf57bb" Id="1" xmlns="http://www.ni.com/MocCommon">
+		<Icon Id="2" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="3" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Id="4" Left="[float]0" TemplateName="[string]Gray" Top="[float]0" Width="[float]40">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+					<FileNameText Attached="[bool]True" Id="7" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Plugin Info" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+						<FontSetting FontFamily="Verdana" FontSize="8.25" Id="8" />
+					</FileNameText>
+				</IconTemplate>
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@3364247e205a4069a396e2701dbf57bb" Id="30" Name="Plugin info">
+			<p.DefaultValue>
+				<Cluster>
+					<Field1>""</Field1>
+					<Field2>
+						<Path a="1" />
+					</Field2>
+					<Field3>""</Field3>
+					<Field4>""</Field4>
+					<Field5>
+						<Path a="1" />
+					</Field5>
+					<Field6>""</Field6>
+					<Field7>False</Field7>
+				</Cluster>
+			</p.DefaultValue>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="9" LazyInitialize="True" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="10" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="11" Name="Plugin Info.gtype" NameTracksFileName="True">
+			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="12" ModelDefinitionType="{http://www.ni.com/MocCommon}ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition DefaultDirection="Control" Id="13" xmlns="http://www.ni.com/MocCommon">
+					<Cluster AutoArrange="[AutoArrange]ArrangeVertically" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@3364247e205a4069a396e2701dbf57bb" Height="[float]367" Id="14" Label="[UIModel]29" Left="[float]100" Top="[float]100" Value="{DataItemBinding Id=30}" Width="[float]203" xmlns="http://www.ni.com/PanelCommon">
+						<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="15" IsReadOnly="[bool]False" Label="[UIModel]22" Left="[float]5" TabIndex="[int]0" Text="{ClusterBinding FieldName=Name}" Top="[float]25" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<PathSelector BaseName="[string]Path" BrowseDialogTitle="[string]Open File" Height="[float]28" Id="16" InteractionMode="[PathSelectorInteractionModes]BrowseDialog, TextInput, AllowNullPathSelection" Label="[UIModel]23" Left="[float]5" Path="{ClusterBinding FieldName=Path}" TabIndex="[int]1" Top="[float]70" Width="[float]180" WrapText="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="17" IsReadOnly="[bool]False" Label="[UIModel]24" Left="[float]5" TabIndex="[int]2" Text="{ClusterBinding FieldName=Default\ ext}" Top="[float]121" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="18" IsReadOnly="[bool]False" Label="[UIModel]25" Left="[float]5" TabIndex="[int]3" Text="{ClusterBinding FieldName=Parameters}" Top="[float]166" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<PathSelector BaseName="[string]Path" BrowseDialogTitle="[string]Open File" Height="[float]28" Id="19" InteractionMode="[PathSelectorInteractionModes]BrowseDialog, TextInput, AllowNullPathSelection" Label="[UIModel]26" Left="[float]5" Path="{ClusterBinding FieldName=Path\ Config\ VI}" TabIndex="[int]4" Top="[float]211" Width="[float]180" WrapText="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="20" IsReadOnly="[bool]False" Label="[UIModel]27" Left="[float]5" TabIndex="[int]5" Text="{ClusterBinding FieldName=Description}" Top="[float]262" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="21" IsReadOnly="[bool]False" Label="[UIModel]28" Left="[float]5" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" TabIndex="[int]6" Top="[float]307" TrueContent="[string]On" Value="{ClusterBinding FieldName=USI}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="22" LabelOwner="[UIModel]15" Left="[float]5" Text="[string]Name" Top="[float]5" Width="[float]32" />
+						<Label Height="[float]16" Id="23" LabelOwner="[UIModel]16" Left="[float]5" Text="[string]Path" Top="[float]50" Width="[float]24" />
+						<Label Height="[float]16" Id="24" LabelOwner="[UIModel]17" Left="[float]5" Text="[string]Default ext" Top="[float]101" Width="[float]58" />
+						<Label Height="[float]16" Id="25" LabelOwner="[UIModel]18" Left="[float]5" Text="[string]Parameters" Top="[float]146" Width="[float]60" />
+						<Label Height="[float]16" Id="26" LabelOwner="[UIModel]19" Left="[float]5" Text="[string]Path Config VI" Top="[float]191" Width="[float]76" />
+						<Label Height="[float]16" Id="27" LabelOwner="[UIModel]20" Left="[float]5" Text="[string]Description" Top="[float]242" Width="[float]61" />
+						<Label Height="[float]16" Id="28" LabelOwner="[UIModel]21" Left="[float]5" Text="[string]USI" Top="[float]287" Width="[float]18" />
+					</Cluster>
+					<Label Height="[float]16" Id="29" LabelOwner="[UIModel]14" Left="[float]100" Text="[string]Plugin info" Top="[float]80" Width="[float]57" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="3364247e205a4069a396e2701dbf57bb">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Name" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Path" DataType="Path" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Default ext" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Parameters" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Path Config VI" DataType="Path" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Description" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="USI" DataType="Boolean" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

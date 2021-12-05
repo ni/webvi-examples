@@ -1,0 +1,1122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="0AFEAF55C7C27E23F12AF6D6C3626E1D4E10B0796B45E6CBDC2D7EC6C643FBB20E38799239B7E140CD4954222911E68B9C68F878A3F04D75F3854905809FB2D1" Timestamp="1D69761B82E3DE8" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.51564" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.49573" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Convert refnum kind and subkind to enums.&lt;/p&gt;</p.UserDescription>
+		<Icon Id="51" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="52" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<Path Data="[PathGeometry]M 36,1 C 37.6539993,1 39,2.29299998 39,3.94700003 L 39,36 C 39,37.6539993 37.6539993,39 36,39 L 4.08300018,39 C 2.4289999,39 1,37.6539993 1,36 L 1,3.94700003 C 1,2.29299998 2.4289999,1 4.08300018,1 L 36,1" Fill="[SMSolidColorBrush]#ffffffff" Height="[float]40" Id="175" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+				<Path Data="[PathGeometry]M 36,1 C 37.6539993,1 39,2.29299998 39,3.94700003 L 39,36 C 39,37.6539993 37.6539993,39 36,39 L 4.08300018,39 C 2.4289999,39 1,37.6539993 1,36 L 1,3.94700003 C 1,2.29299998 2.4289999,1 4.08300018,1 L 36,1 M 36,0 L 4.08300018,0 C 1.88300002,0 0,1.74699998 0,3.94700003 L 0,36 C 0,38.2000008 1.88300002,40 4.08300018,40 L 36,40 C 38.2000008,40 40,38.2000008 40,36 L 40,3.94700003 C 40,1.74699998 38.2000008,0 36,0 L 36,0 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Id="176" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+				<Path Data="[PathGeometry]M 38,36.0530014 C 38,37.1529999 37.0999985,38 36,38 L 4,38 C 2.9000001,38 2,37.1529999 2,36.0530014 L 2,4 C 2,2.9000001 2.9000001,2 4,2 L 36,2 C 37.0999985,2 38,2.9000001 38,4 L 38,36.0530014 Z" Fill="[SMSolidColorBrush]#ffebebeb" Height="[float]40" Id="177" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+				<Path Data="[PathGeometry]M 9,5 L 13,5 L 13,9 L 9,9 L 9,5 Z M 14,8 L 16,8 L 16,6 L 14,6 L 14,8 Z M 38,4 L 38,12 L 2,12 L 2,4 C 2,2.9000001 2.9000001,2 4,2 L 36,2 C 37.0999985,2 38,2.9000001 38,4 Z M 27,5 L 32,5 L 32,4 L 27,4 L 27,5 Z M 17,5 L 14,5 L 14,4 L 8,4 L 8,5 L 5,5 L 5,9 L 8,9 L 8,10 L 14,10 L 14,9 L 17,9 L 17,5 Z M 26,6.50299978 L 21,4 L 22,6 L 19,6 L 19,7 L 22,7 L 21,9 L 26,6.50299978 Z M 32,8 L 27,8 L 27,9 L 32,9 L 32,8 Z M 35,6 L 30,6 L 30,7 L 35,7 L 35,6 Z M 6,8 L 8,8 L 8,6 L 6,6 L 6,8 Z" Fill="[SMSolidColorBrush]#ff622181" Height="[float]40" Id="178" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+				<Path Data="[PathGeometry]M 21,29 C 21,25.1340008 24.1340008,22 28,22 C 31.8659992,22 35,25.1340008 35,29 C 35,32.8660011 31.8659992,36 28,36 C 24.1340008,36 21,32.8660011 21,29 Z M 27.0709991,28.382 L 27.0709991,31.6760006 L 26.1429996,31.6760006 L 26.1429996,33.0830002 L 29.9290009,33.0830002 L 29.9290009,31.6760006 L 29.0200005,31.6760006 L 29.0200005,26.9750004 L 26.1429996,26.9750004 L 26.1429996,28.382 L 27.0709991,28.382 Z M 27.3169994,25.9720001 C 27.5270004,26.1819992 27.7779999,26.2859993 28.0680008,26.2859993 C 28.3619995,26.2859993 28.6140003,26.1819992 28.8220005,25.9750004 C 29.0300007,25.7670002 29.1340008,25.5160007 29.1340008,25.2229996 C 29.1340008,24.9300003 29.0310001,24.6779995 28.8250008,24.4680004 C 28.6189995,24.2590008 28.3659992,24.1539993 28.0680008,24.1539993 C 27.7740002,24.1539993 27.5219994,24.2590008 27.3139992,24.4680004 C 27.1060009,24.6779995 27.0020008,24.9300003 27.0020008,25.2229996 C 27.0020008,25.5130005 27.1070004,25.7619991 27.3169994,25.9720001 Z" Fill="[SMSolidColorBrush]#b2000000" Height="[float]40" Id="179" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+				<Path Data="[PathGeometry]M 5,15 L 5,32 L 19,32 L 19,20 L 14,20 L 14,15 L 5,15 Z M 15,15 L 15,19 L 19,19 L 15,15 Z" Fill="[SMSolidColorBrush]#ff622181" Height="[float]40" Id="180" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<ConnectorPane Height="40" Id="10" ListViewHeight="130" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+			<ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="15" />
+			<ConnectorPaneTerminal Hotspot="0 15" />
+			<ConnectorPaneTerminal Hotspot="0 25" />
+			<ConnectorPaneTerminal Hotspot="0 35" ListViewHotspot="0 50" Parameter="16" />
+			<ConnectorPaneTerminal Hotspot="15 0" />
+			<ConnectorPaneTerminal Hotspot="25 0" />
+			<ConnectorPaneTerminal Hotspot="40 5" ListViewHotspot="150 65" Parameter="17" />
+			<ConnectorPaneTerminal Hotspot="40 15" ListViewHotspot="150 110" Parameter="244" />
+			<ConnectorPaneTerminal Hotspot="40 25" ListViewHotspot="150 80" Parameter="19" />
+			<ConnectorPaneTerminal Hotspot="40 35" ListViewHotspot="150 95" Parameter="20" />
+			<ConnectorPaneTerminal Hotspot="15 40" />
+			<ConnectorPaneTerminal Hotspot="25 40" />
+		</ConnectorPane>
+		<DiagramUnplacedItems Id="11" xmlns="http://www.ni.com/MocCommon" />
+		<FrontPanelUnplacedItems Id="12" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" />
+		<BlockDiagram Id="13">
+			<CaseStructure Bounds="145 0 390 255" DataType="Error" Id="21" Selected="22" UserSelectorBounds="142 0 106 17">
+				<CaseStructure.Case Bounds="5 5 380 245" Id="22" Pattern="No Error">
+					<Literal Bounds="10.3000031 70 115 15" DataType="@94ac027b67dd4bb0a3cf27f0c1e30e06" Id="32" Label="34" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>30</p.Data>
+						<EnumBehavior />
+					</Literal>
+					<NodeLabel AttachedTo="32" Bounds="10.3000031 70 0 0" Id="34" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>Refnum Kind</p.Text>
+					</NodeLabel>
+					<CaseStructure Bounds="235 35 130 195" Id="35" Selected="37" UserSelectorBounds="21 0 88 17">
+						<CaseStructure.Case Bounds="5 5 120 185" Id="36" Pattern="True">
+							<Literal Bounds="15 95 40 16" DataType="Int32" Id="48" Label="49" xmlns="http://www.ni.com/MocCommon">
+								<p.Data>1</p.Data>
+								<NumericBehavior Interpretation="Exact" Radix="Decimal" RadixVisibility="Hidden" ValueFormatter="Decimal, Uppercase, Signed" />
+							</Literal>
+							<NodeLabel AttachedTo="48" Bounds="15 95 0 0" Id="49" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+								<p.Text>error code (0)</p.Text>
+							</NodeLabel>
+							<Wire Id="110" Joints="N(48:Out)|(55,100) h(5) v(-10) N(141:L1)|(65,90)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="113" Joints="N(45:36)|(4,80) N(141:L0)|(65,80)" xmlns="http://www.ni.com/PlatformFramework" />
+							<MethodCall Bounds="65 75 40 40" Id="141" ResolveFailedHint="&quot;C:\\dev\\asw3\\Source\\AddonSource\\stdlib\\NI.G Core.gcomp\\Error\\Build Error Cluster.gvi&quot;" Signature="@5bbf8e93a51a470499b23ef6b4a6c466" Target="NI::G Core::Error::Build Error Cluster.gvi" xmlns="http://www.ni.com/MocCommon">
+								<p.MethodDeclaration>
+									<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+										<Parameter Id="L1" Desc="code" />
+										<Parameter Id="L2" Desc="description" />
+										<Parameter Id="L0" Desc="error in" />
+										<Parameter Id="T0" Desc="include call chain" />
+										<Parameter Id="T1" Desc="make warning" />
+										<Parameter Id="R0" Desc="error out" />
+									</MethodDeclaration>
+								</p.MethodDeclaration>
+								<Terminal DataType="Error" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+								<Terminal DataType="Int32" Direction="Input" Hotspot="0 15" Id="L1" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+								<Terminal DataType="String" Direction="Input" Hotspot="0 25" Id="L2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+								<Terminal DataType="Boolean" Direction="Input" Hotspot="15 0" Id="T0" xmlns="http://www.ni.com/PlatformFramework" />
+								<Terminal DataType="Boolean" Direction="Input" Hotspot="25 0" Id="T1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+								<Terminal DataType="Error" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+							</MethodCall>
+							<Wire Id="151" Joints="N(141:R0)|(105,80) N(46:36)|(116,80)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Case Bounds="5 5 120 185" Id="37" Pattern="False">
+							<MethodCall Bounds="50 90 40 40" Id="106" Label="107" ResolveFailedHint="&quot;C:\\dev\\asw3\\Source\\AddonSource\\stdlib\\NI.G Core.Data Type.gcomp\\I32ToRefnumType.gvi&quot;" Signature="@ca45747a3fb242f6a6b3cbffac9b76b0" Target="NI::G Core::Data Type::I32ToRefnumType.gvi" xmlns="http://www.ni.com/MocCommon">
+								<p.MethodDeclaration>
+									<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+										<Parameter Id="L0" Desc="Kind" />
+										<Parameter Id="L1" Desc="Subkind" />
+										<Parameter Id="R0" Desc="ReferenceType" />
+										<Parameter Id="R1" Desc="VI Server Generic Type" />
+									</MethodDeclaration>
+								</p.MethodDeclaration>
+								<Terminal DataType="Int16" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+								<Terminal DataType="Int32" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+								<Terminal DataType="@9cc7af70698b4c04a46137b23b5699ad" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+								<Terminal DataType="@894311e3dd824b17b1a87ec37a9f5fb9" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+							</MethodCall>
+							<NodeLabel AttachedTo="106" Bounds="50 90 0 0" Id="107" IsReadOnly="True" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+								<p.Text>I32ToRefnumType</p.Text>
+							</NodeLabel>
+							<Wire Id="114" Joints="N(45:37)|(4,80) N(46:37)|(116,80)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="115" Joints="N(106:R1)|(90,105) h(21) v(15) N(44:37)|(116,120)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="116" Joints="N(106:R0)|(90,95) N(40:37)|(116,95)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="117" Joints="N(41:37)|(4,105) N(106:L1)|(50,105)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="118" Joints="N(39:37)|(4,95) N(106:L0)|(50,95)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="119" Joints="N(43:37)|(4,140) N(42:37)|(116,140)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Selector Bounds="-4 45 13 10" Docking="Left" Id="38" Terminals="35=120, 36, 37" />
+						<CaseStructure.Tunnel Bounds="-4 95 13 10" Docking="Left" Id="39" Terminals="35=122, 36, 37=118" />
+						<CaseStructure.Tunnel Bounds="121 95 13 10" DefaultIfUnwired="True" Docking="Right" Id="40" Terminals="35=129, 36, 37=116" />
+						<CaseStructure.Tunnel Bounds="-4 105 13 10" Docking="Left" Id="41" Terminals="35=126, 36, 37=117" />
+						<CaseStructure.Tunnel Bounds="121 140 13 10" DefaultIfUnwired="True" Docking="Right" Id="42" Terminals="35=128, 36, 37=119" />
+						<CaseStructure.Tunnel Bounds="-4 140 13 10" Docking="Left" Id="43" Terminals="35=125, 36, 37=119" />
+						<CaseStructure.Tunnel Bounds="121 120 13 10" DefaultIfUnwired="True" Docking="Right" Id="44" Terminals="35=127, 36, 37=115" />
+						<CaseStructure.Tunnel Bounds="-4 80 13 10" Docking="Left" Id="45" Terminals="35=123, 36=113, 37=114" />
+						<CaseStructure.Tunnel Bounds="121 80 13 10" Docking="Right" Id="46" Terminals="35=124, 36=151, 37=114" />
+					</CaseStructure>
+					<IsEqual Bounds="195 70 30 30" Id="50" />
+					<Wire Id="120" Joints="N(50:x = y?)|(225,85) N(38:35)|(231,85)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="121" Joints="N(32:Out)|(125.3,75) N(50:x)|(195,75)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="122" Joints="N(30:22)|(4,90) h(126) B(1) N(50:y)|(195,90) B(1) v(45) N(39:35)|(231,135)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="123" Joints="N(24:22)|(4,120) N(45:35)|(231,120)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="124" Joints="N(46:35)|(369,120) N(31:22)|(376,120)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="125" Joints="N(29:22)|(4,180) N(43:35)|(231,180)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="126" Joints="N(28:22)|(4,100) h(95) v(45) N(41:35)|(231,145)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="127" Joints="N(44:35)|(369,160) N(27:22)|(376,160)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="128" Joints="N(42:35)|(369,180) N(26:22)|(376,180)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="129" Joints="N(40:35)|(369,135) N(25:22)|(376,135)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 380 245" Id="23" Pattern="Error">
+					<Wire Id="130" Joints="N(24:23)|(4,120) N(31:23)|(376,120)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Selector Bounds="-4 120 13 10" Docking="Left" Id="24" Terminals="21=131, 22=123, 23=130" />
+				<CaseStructure.Tunnel Bounds="381 135 13 10" DefaultIfUnwired="True" Docking="Right" Id="25" Terminals="21=140, 22=129, 23" />
+				<CaseStructure.Tunnel Bounds="381 180 13 10" DefaultIfUnwired="True" Docking="Right" Id="26" Terminals="21=249, 22=128, 23" />
+				<CaseStructure.Tunnel Bounds="381 160 13 10" DefaultIfUnwired="True" Docking="Right" Id="27" Terminals="21=137, 22=127, 23" />
+				<CaseStructure.Tunnel Bounds="-4 100 13 10" Docking="Left" Id="28" Terminals="21=136, 22=126, 23" />
+				<CaseStructure.Tunnel Bounds="-4 180 13 10" Docking="Left" Id="29" Terminals="21=135, 22=125, 23" />
+				<CaseStructure.Tunnel Bounds="-4 90 13 10" Docking="Left" Id="30" Terminals="21=134, 22=122, 23" />
+				<CaseStructure.Tunnel Bounds="381 120 13 10" Docking="Right" Id="31" Terminals="21=132, 22=124, 23=130" />
+			</CaseStructure>
+			<DataAccessor Bounds="-5 90 40 15" DataItem="15" Id="58" Label="59" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="@bd2232353db34e3ebe062acdcac878ce" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="58" Bounds="-49 90 39 14" Id="59" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>variant</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="-5 120 40 15" DataItem="16" Id="64" Label="65" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Error" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="64" Bounds="-52 120 42 14" Id="65" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>error in</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="550 135 40 15" DataItem="17" Id="76" Label="77" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="@9cc7af70698b4c04a46137b23b5699ad" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="76" Bounds="590 135 81 14" Id="77" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>reference type</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="550 160 40 15" DataItem="19" Id="87" Label="88" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="@894311e3dd824b17b1a87ec37a9f5fb9" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="87" Bounds="590 160 124 14" Id="88" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>VI server generic type</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="550 120 40 15" DataItem="20" Id="92" Label="93" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Error" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="92" Bounds="590 120 50 14" Id="93" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>error out</p.Text>
+			</NodeLabel>
+			<MethodCall Bounds="55 90 40 40" Id="104" Label="105" ResolveFailedHint="&quot;C:\\dev\\asw3\\Source\\AddonSource\\stdlib\\NI.G Core.Data Type.gcomp\\GetRefnumInfoInternal.gvi&quot;" Signature="@f99f358f37f14cd6b5c1620e0c0ac73f" Target="NI::G Core::Data Type::GetRefnumInfoInternal.gvi" xmlns="http://www.ni.com/MocCommon">
+				<p.MethodDeclaration>
+					<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+						<Parameter Id="L0" Desc="Variant" />
+						<Parameter Id="L3" Desc="error in (no error)" />
+						<Parameter Id="R2" Desc="StrictType" />
+						<Parameter Id="R0" Desc="Refnum Kind" />
+						<Parameter Id="R1" Desc="subKind" />
+						<Parameter Id="R3" Desc="error out" />
+						<Parameter Id="B1" Desc="info" />
+					</MethodDeclaration>
+				</p.MethodDeclaration>
+				<Terminal DataType="@bd2232353db34e3ebe062acdcac878ce" Direction="Input" Id="L0" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="String" Direction="Output" Hotspot="25 40" Id="B1" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="@94ac027b67dd4bb0a3cf27f0c1e30e06" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="Int32" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="@bd2232353db34e3ebe062acdcac878ce" Direction="Output" Hotspot="40 25" Id="R2" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
+			</MethodCall>
+			<NodeLabel AttachedTo="104" Bounds="55 90 0 0" Id="105" IsReadOnly="True" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>GetRefnumInfoInternal</p.Text>
+			</NodeLabel>
+			<Wire Id="131" Joints="N(104:R3)|(95,125) N(24:21)|(141,125)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="132" Joints="N(31:21)|(539,125) N(92:Value)|(553,125)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="133" Joints="N(64:Value)|(35,125) N(104:L3)|(55,125)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="134" Joints="N(104:R0)|(95,95) N(30:21)|(141,95)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="135" Joints="N(104:R2)|(95,115) h(30) v(70) N(29:21)|(141,185)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="136" Joints="N(104:R1)|(95,105) N(28:21)|(141,105)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="137" Joints="N(27:21)|(539,165) N(87:Value)|(553,165)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="138" Joints="N(58:Value)|(35,95) N(104:L0)|(55,95)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="140" Joints="N(25:21)|(539,140) N(76:Value)|(553,140)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="550 180 40 15" DataItem="244" Id="245" Label="248" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="@bd2232353db34e3ebe062acdcac878ce" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="245" Bounds="595 180 56 14" Id="248" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>strict type</p.Text>
+			</NodeLabel>
+			<Wire Id="249" Joints="N(26:21)|(539,185) N(245:Value)|(553,185)" xmlns="http://www.ni.com/PlatformFramework" />
+		</BlockDiagram>
+		<NativeFrontPanel AllowMaximize="[bool]False" EnforceMaximumSize="[bool]True" Height="[float]1600" Id="14" Left="[float]0" MaxHeight="[float]1600" MaxWidth="[float]2000" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" Width="[float]2000" WindowTitleOption="[WindowTitleOption]None">
+			<VariantControl BaseName="[string]Variant" Height="[float]100" Id="62" IsIndicator="[bool]False" Label="[UIModel]63" Left="[float]153" TabIndex="[int]0" Top="[float]35" VariantValue="{DataItemBinding Id=15}" Width="[float]100" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="63" LabelOwner="[UIModel]62" Left="[float]153" Text="[string]variant" Top="[float]15" Width="[float]36" xmlns="http://www.ni.com/PanelCommon" />
+			<Cluster BaseName="[string]Error" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]Error" Height="[float]176" Id="227" IsTabStop="[bool]True" Label="[UIModel]234" LabelLinked="[bool]True" Left="[float]153" MinHeight="[float]128" MinWidth="[float]112" TabIndex="[int]1" Top="[float]381" Value="{DataItemBinding Id=16}" Width="[float]176" p4:ControlDefinitionChecksum="J+f/EiASvnzghyjtgi4nEE7z+0udh8Z1+KU2hWC1ppw=" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/PanelCommon">
+				<p4:p.TypeDefinitionTargets>
+					<p4:TypeDefinitionTarget TargetName="NI::G Core::Error::Error.gtype::ControlDefinition" />
+				</p4:p.TypeDefinitionTargets>
+				<LVCheckBox Content="[string]" ContentVisibility="[Visibility]Collapsed" Height="[float]22" Id="4185aa9170664d2b9ade3678b8355ff5" Label="[UIModel]47810fc16e3342538ed19020d7a19cce" Left="[float]3" TabIndex="[int]0" Top="[float]24" Value="{ClusterBinding FieldName=status}" Width="[float]22" p6:DisplayAsErrorStatus="True" xmlns:p6="http://www.ni.com/Controls.LabVIEW.Design" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="47810fc16e3342538ed19020d7a19cce" LabelOwner="[UIModel]4185aa9170664d2b9ade3678b8355ff5" Left="[float]3" Text="[string]status" Top="[float]4" Width="[float]32" />
+				<NumericText Height="[float]24" Id="7dd956ca3dae473390b0f5c788331f52" Label="[UIModel]18281b228e92465082e4c1675a8a8541" Left="[float]54" RadixVisibility="[SMVisibility]Visible" TabIndex="[int]1" Top="[float]24" Value="{ClusterBinding FieldName=code}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]111" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="18281b228e92465082e4c1675a8a8541" LabelOwner="[UIModel]7dd956ca3dae473390b0f5c788331f52" Left="[float]54" Text="[string]code" Top="[float]4" Width="[float]26" />
+				<StringControl AcceptsReturn="[bool]True" Height="[float]95" Id="8ee0adc5704544e091c39be373cdce73" Label="[UIModel]f0ba387a91fe4ae490bc12e13d710eb0" Left="[float]3" TabIndex="[int]2" Text="{ClusterBinding FieldName=source}" Top="[float]70" Width="[float]162" WordWrap="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="f0ba387a91fe4ae490bc12e13d710eb0" LabelOwner="[UIModel]8ee0adc5704544e091c39be373cdce73" Left="[float]3" Text="[string]source" Top="[float]50" Width="[float]35" />
+			</Cluster>
+			<Label Height="[float]16" Id="234" LabelOwner="[UIModel]227" Left="[float]153" Text="[string]error in" Top="[float]361" Width="[float]26" xmlns="http://www.ni.com/PanelCommon" />
+			<EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Enum" Height="[float]24" Id="213" InteractionMode="[SelectorInteractionModes]ReadOnly" IsTabStop="[bool]True" IsTypeAheadEnabled="[bool]True" Label="[UIModel]214" LabelLinked="[bool]True" Left="[float]597" TabIndex="[int]2" Top="[float]35" Value="{DataItemBinding Id=17}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]90" p4:ControlDefinitionChecksum="ymD3WcV5ZM6UVh21Y5OJ2quwi76U3Q5CWJXn/XiSQO8=" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<p4:p.TypeDefinitionTargets>
+					<p4:TypeDefinitionTarget TargetName="NI::G Core::Data Type::Refnum Type.gtype::ControlDefinition" />
+				</p4:p.TypeDefinitionTargets>
+				<EnumSelectorInfo DisplayValue="[string]NotARefnum" Value="[ushort]0" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]UnknownRefnum" Value="[ushort]1" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]Generic" Value="[ushort]2" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]Datalog" Value="[ushort]3" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]ByteStream" Value="[ushort]4" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]Device" Value="[ushort]5" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]Occurence" Value="[ushort]6" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]TCPNetConnection" Value="[ushort]7" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]Auto" Value="[ushort]8" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]Menu" Value="[ushort]9" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]Imaq" Value="[ushort]10" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]Hardware" Value="[ushort]11" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]DataSocket" Value="[ushort]12" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]Visa" Value="[ushort]13" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]IVI" Value="[ushort]14" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]UDPNetConnection" Value="[ushort]15" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]Notifier" Value="[ushort]16" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]Queue" Value="[ushort]17" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]Irda" Value="[ushort]18" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]EventReg" Value="[ushort]19" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]DotNet" Value="[ushort]20" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]UserEvent" Value="[ushort]21" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]Callback" Value="[ushort]22" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]UNUSED_EMPTY_POSITION" Value="[ushort]23" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]BlueToothNetConnection" Value="[ushort]24" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]LVObjApp" Value="[ushort]25" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]LVObjVI" Value="[ushort]26" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]LVObjUnknown" Value="[ushort]27" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]GenericClass" Value="[ushort]28" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]UserDefinedRefnumTag" Value="[ushort]29" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]DataValue" Value="[ushort]30" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]RT FIFO" Value="[ushort]31" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]TDMS File" Value="[ushort]32" ValueType="[Type]UInt16" />
+			</EnumSelector>
+			<Label Id="214" LabelOwner="[UIModel]213" Left="[float]597" Text="[string]reference type" Top="[float]15" xmlns="http://www.ni.com/PanelCommon" />
+			<EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Enum" Height="[float]24" Id="216" InteractionMode="[SelectorInteractionModes]ReadOnly" IsTabStop="[bool]True" IsTypeAheadEnabled="[bool]True" Label="[UIModel]217" LabelLinked="[bool]True" Left="[float]597" TabIndex="[int]3" Top="[float]286" Value="{DataItemBinding Id=19}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]90" p4:ControlDefinitionChecksum="v76N1j5s7deEMUf8wH0N6VtBj/rZeF93x/a4o3KgiHA=" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<p4:p.TypeDefinitionTargets>
+					<p4:TypeDefinitionTarget TargetName="NI::G Core::Data Type::VI Server Generic Type.gtype::ControlDefinition" />
+				</p4:p.TypeDefinitionTargets>
+				<EnumSelectorInfo DisplayValue="[string]NoType" Value="[ushort]0" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjApp=0x1" Value="[ushort]1" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjVI" Value="[ushort]2" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjGeneric" Value="[ushort]3" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjDecoration" Value="[ushort]4" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjText" Value="[ushort]5" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjControl" Value="[ushort]6" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjColorBox" Value="[ushort]7" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjBoolean" Value="[ushort]8" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjRefNum" Value="[ushort]9" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjVariant" Value="[ushort]10" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjPath" Value="[ushort]11" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjListBox" Value="[ushort]12" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjTable" Value="[ushort]13" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjArray" Value="[ushort]14" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjPicture" Value="[ushort]15" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjOleContainer" Value="[ushort]16" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjNumeric" Value="[ushort]17" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjDigital" Value="[ushort]18" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjNamedNumeric" Value="[ushort]19" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjColorRamp" Value="[ushort]20" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjSlide" Value="[ushort]21" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjGraphOrChart" Value="[ushort]22" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjWaveformChart" Value="[ushort]23" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjWaveformGraph" Value="[ushort]24" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjIntensityChart" Value="[ushort]25" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjIntensityGraph" Value="[ushort]26" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjString" Value="[ushort]27" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjIOName" Value="[ushort]28" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjComboBox" Value="[ushort]29" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjCluster" Value="[ushort]30" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjPanel" Value="[ushort]31" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjKnob" Value="[ushort]32" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjNumWithScale" Value="[ushort]33" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjRing" Value="[ushort]34" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjEnum" Value="[ushort]35" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjGObject" Value="[ushort]36" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjPlot" Value="[ushort]37" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjCursor" Value="[ushort]38" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjNumericText" Value="[ushort]39" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjScale" Value="[ushort]40" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjColorScale" Value="[ushort]41" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjGraphScale" Value="[ushort]42" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjColorGraphScale" Value="[ushort]43" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjTypedRefNum" Value="[ushort]44" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjOldKnobScale" Value="[ushort]45" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjMCListbox" Value="[ushort]46" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjMeasureData" Value="[ushort]47" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjDSCTag" Value="[ushort]48" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjDAQName" Value="[ushort]49" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjVISAName" Value="[ushort]50" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjIVIName" Value="[ushort]51" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjSlideScale" Value="[ushort]52" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjTabControl" Value="[ushort]53" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjPage" Value="[ushort]54" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjTabArrayTabControl" Value="[ushort]55" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjConPane" Value="[ushort]56" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjDAQMXName" Value="[ushort]57" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjVIRefNum" Value="[ushort]58" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjLVObjRefNum" Value="[ushort]59" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjAbsTime" Value="[ushort]60" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjDigitalTable" Value="[ushort]61" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjUnused" Value="[ushort]62" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjUnused2" Value="[ushort]63" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjSCLControl" Value="[ushort]64" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjSubPanel" Value="[ushort]65" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjTreeControl" Value="[ushort]66" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjGenClassTagRef" Value="[ushort]67" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjGenClassRef" Value="[ushort]68" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjRotaryColorScale" Value="[ushort]69" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjPlugInDDOControl" Value="[ushort]70" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjPlugInDDOClassHolder" Value="[ushort]71" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjRadClusControl" Value="[ushort]72" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjProject" Value="[ushort]73" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjProjectItem" Value="[ushort]74" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjPane" Value="[ushort]75" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjSplitterBar" Value="[ushort]76" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjProjectBuildItem" Value="[ushort]77" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjPixmap" Value="[ushort]78" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjFacadeVI" Value="[ushort]79" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjLibrary" Value="[ushort]80" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjVariable" Value="[ushort]81" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjPropertyBag" Value="[ushort]82" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjXYGraph" Value="[ushort]83" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjScene" Value="[ushort]84" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjUDClassLibrary" Value="[ushort]85" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjUDClassClone" Value="[ushort]86" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjMethodVI" Value="[ushort]87" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjXCtlLibrary" Value="[ushort]88" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjXNodeLibrary" Value="[ushort]89" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjScroll" Value="[ushort]90" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjLVTarget" Value="[ushort]91" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjMixedGraph" Value="[ushort]92" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjProvider" Value="[ushort]93" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjCopyOperation" Value="[ushort]94" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjTargetItem" Value="[ushort]95" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjProjectItemType" Value="[ushort]96" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjCopyItem" Value="[ushort]97" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjCopyConflict" Value="[ushort]98" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjCopyExpert" Value="[ushort]99" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjSceneGraphDisp" Value="[ushort]100" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjPolyVI" Value="[ushort]101" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjLVClassDDO" Value="[ushort]102" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string]kLVObjDiagram=0x4000" Value="[ushort]103" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjTerminal" Value="[ushort]104" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjConstant" Value="[ushort]105" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjPathConstant" Value="[ushort]106" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjArrayConstant" Value="[ushort]107" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjNumericConstant" Value="[ushort]108" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjDigitalNumConstant" Value="[ushort]109" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjNamedNumericConstant" Value="[ushort]110" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjStringConstant" Value="[ushort]111" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjClusterConstant" Value="[ushort]112" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjFixedConstant" Value="[ushort]113" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjControlTerminal" Value="[ushort]114" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjFormulaParameter" Value="[ushort]115" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjGlobal" Value="[ushort]116" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjLocal" Value="[ushort]117" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjRightShiftRegister" Value="[ushort]118" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjFunction" Value="[ushort]119" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjSubVI" Value="[ushort]120" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjCallByRef" Value="[ushort]121" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjUnitCast" Value="[ushort]122" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjStructure" Value="[ushort]123" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjLoop" Value="[ushort]124" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjMultiframeStructure" Value="[ushort]125" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjSequence" Value="[ushort]126" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjCaseSelector" Value="[ushort]127" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjFormula" Value="[ushort]128" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjGrowableFunction" Value="[ushort]129" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjBuildClusterArray" Value="[ushort]130" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjCompoundArithmetic" Value="[ushort]131" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjIndexArray" Value="[ushort]132" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjBuildArray" Value="[ushort]133" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjNamedBundler" Value="[ushort]134" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjCIN" Value="[ushort]135" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjCallLibrary" Value="[ushort]136" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjObjectFunction" Value="[ushort]137" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjProperty" Value="[ushort]138" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjInvoke" Value="[ushort]139" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjNode" Value="[ushort]140" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjBooleanConstant" Value="[ushort]141" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjBlockDiagram" Value="[ushort]142" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjRingConstant" Value="[ushort]143" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjEnumConstant" Value="[ushort]144" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjTunnel" Value="[ushort]145" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjLoopTunnel" Value="[ushort]146" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjSequenceLocal" Value="[ushort]147" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjComparison" Value="[ushort]148" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjReadWriteFile" Value="[ushort]149" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjTypeCast" Value="[ushort]150" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjFlattenUnflattenString" Value="[ushort]151" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjGPIBReadWrite" Value="[ushort]152" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjForLoop" Value="[ushort]153" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjWhileLoop" Value="[ushort]154" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjScriptNode" Value="[ushort]155" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjArrayToCluster" Value="[ushort]156" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjFormatScanString" Value="[ushort]157" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjWire" Value="[ushort]158" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjProbe" Value="[ushort]159" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjInnerTerminal" Value="[ushort]160" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjLeftShiftRegister" Value="[ushort]161" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjPolySubVI" Value="[ushort]162" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjPropItem" Value="[ushort]163" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjIONameConstant" Value="[ushort]164" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjDSCTagConstant" Value="[ushort]165" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjDAQNameConstant" Value="[ushort]166" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjVISANameConstant" Value="[ushort]167" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjIVINameConstant" Value="[ushort]168" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjColorBoxConstant" Value="[ushort]169" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjControlRefConstant" Value="[ushort]170" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjClassSpecifierConstant" Value="[ushort]171" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjConfNode" Value="[ushort]172" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjMasterWizard" Value="[ushort]173" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjStateDiagWizard" Value="[ushort]174" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjOuterTerminal" Value="[ushort]175" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjDAQMXNameConstant" Value="[ushort]176" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjEventStructure" Value="[ushort]177" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjFlatSequence" Value="[ushort]178" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjGenClassTagRefConstant" Value="[ushort]179" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjAbsTimeConstant" Value="[ushort]180" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjExternalNode" Value="[ushort]181" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjSubWizard" Value="[ushort]182" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjScriptNodeParameter" Value="[ushort]183" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjStatVIRef" Value="[ushort]184" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjComboBoxConstant" Value="[ushort]185" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjTimedLoop" Value="[ushort]186" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjGenClassDeepCopy" Value="[ushort]187" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjGenClassTagFlat" Value="[ushort]188" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjGenClassTagFlatRefConstant" Value="[ushort]189" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjGenClassFlat" Value="[ushort]190" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjSimDiagram" Value="[ushort]191" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjCompDiagram" Value="[ushort]192" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjSimNode" Value="[ushort]193" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjSimDCO" Value="[ushort]194" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjBundler" Value="[ushort]195" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjUnbundler" Value="[ushort]196" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjNamedUnbundler" Value="[ushort]197" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjFlatSeqFrame" Value="[ushort]198" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjFlatSeqInTun" Value="[ushort]199" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjFlatSeqOutTun" Value="[ushort]200" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjRefNumConst" Value="[ushort]201" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjFlattenString" Value="[ushort]202" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjPolySelector" Value="[ushort]203" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjXNode" Value="[ushort]204" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjSelectorTunnel" Value="[ushort]205" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjCommentNode" Value="[ushort]206" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjSdfDiagram" Value="[ushort]207" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjSDFCompDiagram" Value="[ushort]208" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjSdfNode" Value="[ushort]209" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjSdfDCO" Value="[ushort]210" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjFileDialog" Value="[ushort]211" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjTLDCO" Value="[ushort]212" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjTimeSeqFrame" Value="[ushort]213" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjTimeFlatSequence" Value="[ushort]214" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjTimedSequence" Value="[ushort]215" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjXDataNode" Value="[ushort]216" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjCodeWizard" Value="[ushort]217" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjMathScriptNode" Value="[ushort]218" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjMathScriptNodeParameter" Value="[ushort]219" ValueType="[Type]UInt16" />
+				<EnumSelectorInfo DisplayValue="[string] kLVObjLVClassBDConst" Value="[ushort]220" ValueType="[Type]UInt16" />
+			</EnumSelector>
+			<Label Id="217" LabelOwner="[UIModel]216" Left="[float]597" Text="[string]VI server generic type" Top="[float]266" xmlns="http://www.ni.com/PanelCommon" />
+			<Cluster BaseName="[string]Error" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]Error" Height="[float]176" Id="236" IsTabStop="[bool]True" Label="[UIModel]243" LabelLinked="[bool]True" Left="[float]597" MinHeight="[float]128" MinWidth="[float]112" TabIndex="[int]4" Top="[float]381" Value="{DataItemBinding Id=20}" Width="[float]176" p4:ControlDefinitionChecksum="J+f/EiASvnzghyjtgi4nEE7z+0udh8Z1+KU2hWC1ppw=" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/PanelCommon">
+				<p4:p.TypeDefinitionTargets>
+					<p4:TypeDefinitionTarget TargetName="NI::G Core::Error::Error.gtype::ControlDefinition" />
+				</p4:p.TypeDefinitionTargets>
+				<LVCheckBox Content="[string]" ContentVisibility="[Visibility]Collapsed" Height="[float]22" Id="920da13f3a22435dafad7366ca5d0398" IsReadOnly="[bool]True" Label="[UIModel]f85047a2bc38479b84ec723cd6ddc001" Left="[float]3" TabIndex="[int]0" Top="[float]24" Value="{ClusterBinding FieldName=status}" Width="[float]22" p6:DisplayAsErrorStatus="True" xmlns:p6="http://www.ni.com/Controls.LabVIEW.Design" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="f85047a2bc38479b84ec723cd6ddc001" LabelOwner="[UIModel]920da13f3a22435dafad7366ca5d0398" Left="[float]3" Text="[string]status" Top="[float]4" Width="[float]32" />
+				<NumericText Height="[float]24" Id="bc88064aacd2451780dcb3cc8e531f74" IsReadOnly="[bool]True" Label="[UIModel]483f565753b4f52acdcc3975c9511ce" Left="[float]54" RadixVisibility="[SMVisibility]Visible" TabIndex="[int]1" Top="[float]24" Value="{ClusterBinding FieldName=code}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]111" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="483f565753b4f52acdcc3975c9511ce" LabelOwner="[UIModel]bc88064aacd2451780dcb3cc8e531f74" Left="[float]54" Text="[string]code" Top="[float]4" Width="[float]26" />
+				<StringControl AcceptsReturn="[bool]True" Height="[float]95" Id="3215a6c2481b408f9ae8d71b513616c7" IsReadOnly="[bool]True" Label="[UIModel]44b9a1f5bc2449eea7c4fc374d40482b" Left="[float]3" TabIndex="[int]2" Text="{ClusterBinding FieldName=source}" Top="[float]70" Width="[float]162" WordWrap="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="44b9a1f5bc2449eea7c4fc374d40482b" LabelOwner="[UIModel]3215a6c2481b408f9ae8d71b513616c7" Left="[float]3" Text="[string]source" Top="[float]50" Width="[float]35" />
+			</Cluster>
+			<Label Height="[float]16" Id="243" LabelOwner="[UIModel]236" Left="[float]597" Text="[string]error out" Top="[float]361" Width="[float]26" xmlns="http://www.ni.com/PanelCommon" />
+			<VariantControl BaseName="[string]Variant" Height="[float]88" Id="246" IsIndicator="[bool]True" Label="[UIModel]247" Left="[float]597" TabIndex="[int]5" Top="[float]132" VariantValue="{DataItemBinding Id=244}" Width="[float]104" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="247" LabelOwner="[UIModel]246" Left="[float]597" Text="[string]strict type" Top="[float]112" Width="[float]53" xmlns="http://www.ni.com/PanelCommon" />
+			<PanelExecutionWindow Id="250" />
+		</NativeFrontPanel>
+		<DataItem CallDirection="Input" CallIndex="1" CallUsage="Required" DataType="@bd2232353db34e3ebe062acdcac878ce" Id="15" Name="variant" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>
+				<Variant>
+					<InnerType>Void</InnerType>
+					<VariantData>null</VariantData>
+				</Variant>
+			</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;Variant&lt;/B&gt; specifies the variant data from which you want to retrieve data type information.</p.UserDescription>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="2" DataType="Error" Id="16" Name="error in" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>
+				<Cluster>
+					<Field1>False</Field1>
+					<Field2>0</Field2>
+					<Field3>""</Field3>
+				</Cluster>
+			</p.DefaultValue>
+			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+				<TypeDefinitionTarget TargetName="NI::G Core::Error::Error.gtype" />
+			</p.TypeDefinitionTargets>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;error in&lt;/B&gt; describes error conditions that occur before this node runs. This input provides standard error in functionality.</p.UserDescription>
+		</DataItem>
+		<DataItem CallDirection="Output" CallIndex="1" DataType="@9cc7af70698b4c04a46137b23b5699ad" Id="17" Name="reference type" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+				<TypeDefinitionTarget TargetName="NI::G Core::Data Type::Refnum Type.gtype" />
+			</p.TypeDefinitionTargets>
+		</DataItem>
+		<DataItem CallDirection="Output" CallIndex="3" DataType="@894311e3dd824b17b1a87ec37a9f5fb9" Id="19" Name="VI server generic type" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+				<TypeDefinitionTarget TargetName="NI::G Core::Data Type::VI Server Generic Type.gtype" />
+			</p.TypeDefinitionTargets>
+		</DataItem>
+		<DataItem CallDirection="Output" CallIndex="4" DataType="Error" Id="20" Name="error out" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>
+				<Cluster>
+					<Field1>False</Field1>
+					<Field2>0</Field2>
+					<Field3>""</Field3>
+				</Cluster>
+			</p.DefaultValue>
+			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+				<TypeDefinitionTarget TargetName="NI::G Core::Error::Error.gtype" />
+			</p.TypeDefinitionTargets>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;error out&lt;/B&gt; contains error information. This output provides standard error out functionality.</p.UserDescription>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="0" DataType="@bd2232353db34e3ebe062acdcac878ce" Id="244" Name="strict type" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>
+				<Variant>
+					<InnerType>Void</InnerType>
+					<VariantData>null</VariantData>
+				</Variant>
+			</p.DefaultValue>
+		</DataItem>
+	</VirtualInstrument>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="94ac027b67dd4bb0a3cf27f0c1e30e06">
+			<Enumeration>
+				<Members>
+					<EnumerationMember Value="0" Name="Generic" />
+					<EnumerationMember Value="1" Name="Datalog" />
+					<EnumerationMember Value="2" Name="ByteStream" />
+					<EnumerationMember Value="3" Name="Device" />
+					<EnumerationMember Value="4" Name="Occurence" />
+					<EnumerationMember Value="5" Name="TCPNetConnection" />
+					<EnumerationMember Value="6" Name="OldVisa" />
+					<EnumerationMember Value="7" Name="Auto" />
+					<EnumerationMember Value="8" Name="LVObj" />
+					<EnumerationMember Value="9" Name="Menu" />
+					<EnumerationMember Value="10" Name="OldIVI" />
+					<EnumerationMember Value="11" Name="Imaq" />
+					<EnumerationMember Value="12" Name="Hardware" />
+					<EnumerationMember Value="13" Name="DataSocket" />
+					<EnumerationMember Value="14" Name="Visa" />
+					<EnumerationMember Value="15" Name="IVI" />
+					<EnumerationMember Value="16" Name="UDPNetConnection" />
+					<EnumerationMember Value="17" Name="Notifier" />
+					<EnumerationMember Value="18" Name="Queue" />
+					<EnumerationMember Value="19" Name="Irda" />
+					<EnumerationMember Value="20" Name="GenClass" />
+					<EnumerationMember Value="21" Name="GenClassTag" />
+					<EnumerationMember Value="22" Name="DAQmx" />
+					<EnumerationMember Value="23" Name="EventReg" />
+					<EnumerationMember Value="24" Name="DotNet" />
+					<EnumerationMember Value="25" Name="UserEvent" />
+					<EnumerationMember Value="26" Name="GenClassDeepCopy" />
+					<EnumerationMember Value="27" Name="Callback" />
+					<EnumerationMember Value="28" Name="GenClassFlatten" />
+					<EnumerationMember Value="29" Name="GenClassTagFlatten" />
+					<EnumerationMember Value="30" Name="LVClassInst" />
+					<EnumerationMember Value="31" Name="BlueToothNetConnection" />
+					<EnumerationMember Value="32" Name="DataValue" />
+					<EnumerationMember Value="33" Name="RT FIFO" />
+					<EnumerationMember Value="34" Name="TDMS File" />
+				</Members>
+				<DataType>UInt16</DataType>
+			</Enumeration>
+		</p.TypeReference>
+		<p.TypeReference TypeId="5bbf8e93a51a470499b23ef6b4a6c466">
+			<Attributed AttributedType="@cbf5b0ca7ab24b3999a06c5157e216a7">
+				<AttributeValues>
+					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
+					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="ca45747a3fb242f6a6b3cbffac9b76b0">
+			<Attributed AttributedType="@66dd73421a194cca958b54caa93c1cfb">
+				<AttributeValues>
+					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
+					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="9cc7af70698b4c04a46137b23b5699ad">
+			<Attributed AttributedType="@d61f4adb28914e0b8746b9b3e259650d">
+				<AttributeValues>
+					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]NI::G Core::Data Type" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="894311e3dd824b17b1a87ec37a9f5fb9">
+			<Attributed AttributedType="@167d2881090f4b07b40af05f2d57b819">
+				<AttributeValues>
+					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]NI::G Core::Data Type" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="bd2232353db34e3ebe062acdcac878ce">
+			<Composite Id="1" Name="Variant" Sealed="" GenericTypeDefinition="Void" BaseType="Void" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="f99f358f37f14cd6b5c1620e0c0ac73f">
+			<Attributed AttributedType="@39cd0d3f28b94670bad0cbd187b2de8f">
+				<AttributeValues>
+					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
+					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="cbf5b0ca7ab24b3999a06c5157e216a7">
+			<Function Id="1" IsStatic="True" IsConstructor="False" Name="Build Error Cluster.gvi" ReturnType="Void" GenericTypeDefinition="Void">
+				<Parameters>
+					<Attributed AttributedType="@e6d044f992fc4bbb90cf36afa5b9f6c3">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]error in" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@86168b72c2034e528b10a5d4b1ddd8db">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]code" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@4bac6c8c500846fa9387380e6bff9c51">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]description" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@062ddd011b04438e820fa138191bf23e">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]include call chain" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@51bac614d68646aaaeaa72f5e9b3a2d4">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]make warning" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@2c45c494f4c64256bd53d586fb901a6f">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]error out" />
+						</AttributeValues>
+					</Attributed>
+				</Parameters>
+			</Function>
+		</p.TypeReference>
+		<p.TypeReference TypeId="66dd73421a194cca958b54caa93c1cfb">
+			<Function Id="1" IsStatic="True" IsConstructor="False" Name="I32ToRefnumType.gvi" ReturnType="Void" GenericTypeDefinition="Void">
+				<Parameters>
+					<Attributed AttributedType="@ef4c19384b774580a00810304cf3f1cc">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Kind" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@bb1c5b524377475ba30402256349d519">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Subkind" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@8bf978853fbf4c809cc247960b2d995e">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]ReferenceType" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@497fc2adeb6640729e5c0dddb18c82fb">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]VI Server Generic Type" />
+						</AttributeValues>
+					</Attributed>
+				</Parameters>
+			</Function>
+		</p.TypeReference>
+		<p.TypeReference TypeId="d61f4adb28914e0b8746b9b3e259650d">
+			<Typedef TypedefName="Refnum Type.gtype" UnderlyingType="@5e7d2b7064e44a81919ecc85945a1d60" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="167d2881090f4b07b40af05f2d57b819">
+			<Typedef TypedefName="VI Server Generic Type.gtype" UnderlyingType="@37d343a8ec254fea9269e763850744e6" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="39cd0d3f28b94670bad0cbd187b2de8f">
+			<Function Id="1" IsStatic="True" IsConstructor="False" Name="GetRefnumInfoInternal.gvi" ReturnType="Void" GenericTypeDefinition="Void">
+				<Parameters>
+					<Attributed AttributedType="@055c06594cf547e9b1b9c5c0a88b155f">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Variant" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@eaa0952f2df44056ad3ef319e4eea008">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]error in (no error)" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@b3f90b2298ef40ccadb37ede6317cdc7">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]info" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@2e9730264a0d4da49805aa62905cd226">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Refnum Kind" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@15548b6676dc48d9a30602e4dd1f6d1a">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]subKind" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@d4936b6c651a4c2da09fb23d43ae0f49">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]StrictType" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@0ce0988966c242898155811ab128879b">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]error out" />
+						</AttributeValues>
+					</Attributed>
+				</Parameters>
+			</Function>
+		</p.TypeReference>
+		<p.TypeReference TypeId="e6d044f992fc4bbb90cf36afa5b9f6c3">
+			<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="L0" DataType="Error" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="86168b72c2034e528b10a5d4b1ddd8db">
+			<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="L1" DataType="Int32" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="4bac6c8c500846fa9387380e6bff9c51">
+			<Parameter InputParameterPassingRule="Optional" OutputParameterPassingRule="NotAllowed" Name="L2" DataType="String" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="062ddd011b04438e820fa138191bf23e">
+			<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="T0" DataType="Boolean" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="51bac614d68646aaaeaa72f5e9b3a2d4">
+			<Parameter InputParameterPassingRule="Optional" OutputParameterPassingRule="NotAllowed" Name="T1" DataType="Boolean" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="2c45c494f4c64256bd53d586fb901a6f">
+			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R0" DataType="Error" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="ef4c19384b774580a00810304cf3f1cc">
+			<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="L0" DataType="Int16" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="bb1c5b524377475ba30402256349d519">
+			<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="L1" DataType="Int32" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="8bf978853fbf4c809cc247960b2d995e">
+			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R0" DataType="@9cc7af70698b4c04a46137b23b5699ad" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="497fc2adeb6640729e5c0dddb18c82fb">
+			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R1" DataType="@894311e3dd824b17b1a87ec37a9f5fb9" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="5e7d2b7064e44a81919ecc85945a1d60">
+			<Enumeration>
+				<Members>
+					<EnumerationMember Value="0" Name="NotARefnum" />
+					<EnumerationMember Value="1" Name="UnknownRefnum" />
+					<EnumerationMember Value="2" Name="Generic" />
+					<EnumerationMember Value="3" Name="Datalog" />
+					<EnumerationMember Value="4" Name="ByteStream" />
+					<EnumerationMember Value="5" Name="Device" />
+					<EnumerationMember Value="6" Name="Occurence" />
+					<EnumerationMember Value="7" Name="TCPNetConnection" />
+					<EnumerationMember Value="8" Name="Auto" />
+					<EnumerationMember Value="9" Name="Menu" />
+					<EnumerationMember Value="10" Name="Imaq" />
+					<EnumerationMember Value="11" Name="Hardware" />
+					<EnumerationMember Value="12" Name="DataSocket" />
+					<EnumerationMember Value="13" Name="Visa" />
+					<EnumerationMember Value="14" Name="IVI" />
+					<EnumerationMember Value="15" Name="UDPNetConnection" />
+					<EnumerationMember Value="16" Name="Notifier" />
+					<EnumerationMember Value="17" Name="Queue" />
+					<EnumerationMember Value="18" Name="Irda" />
+					<EnumerationMember Value="19" Name="EventReg" />
+					<EnumerationMember Value="20" Name="DotNet" />
+					<EnumerationMember Value="21" Name="UserEvent" />
+					<EnumerationMember Value="22" Name="Callback" />
+					<EnumerationMember Value="23" Name="UNUSED_EMPTY_POSITION" />
+					<EnumerationMember Value="24" Name="BlueToothNetConnection" />
+					<EnumerationMember Value="25" Name="LVObjApp" />
+					<EnumerationMember Value="26" Name="LVObjVI" />
+					<EnumerationMember Value="27" Name="LVObjUnknown" />
+					<EnumerationMember Value="28" Name="GenericClass" />
+					<EnumerationMember Value="29" Name="UserDefinedRefnumTag" />
+					<EnumerationMember Value="30" Name="DataValue" />
+					<EnumerationMember Value="31" Name="RT FIFO" />
+					<EnumerationMember Value="32" Name="TDMS File" />
+				</Members>
+				<DataType>UInt16</DataType>
+			</Enumeration>
+		</p.TypeReference>
+		<p.TypeReference TypeId="37d343a8ec254fea9269e763850744e6">
+			<Enumeration>
+				<Members>
+					<EnumerationMember Value="0" Name="NoType" />
+					<EnumerationMember Value="1" Name=" kLVObjApp=0x1" />
+					<EnumerationMember Value="2" Name=" kLVObjVI" />
+					<EnumerationMember Value="3" Name=" kLVObjGeneric" />
+					<EnumerationMember Value="4" Name=" kLVObjDecoration" />
+					<EnumerationMember Value="5" Name=" kLVObjText" />
+					<EnumerationMember Value="6" Name=" kLVObjControl" />
+					<EnumerationMember Value="7" Name=" kLVObjColorBox" />
+					<EnumerationMember Value="8" Name=" kLVObjBoolean" />
+					<EnumerationMember Value="9" Name=" kLVObjRefNum" />
+					<EnumerationMember Value="10" Name=" kLVObjVariant" />
+					<EnumerationMember Value="11" Name=" kLVObjPath" />
+					<EnumerationMember Value="12" Name=" kLVObjListBox" />
+					<EnumerationMember Value="13" Name=" kLVObjTable" />
+					<EnumerationMember Value="14" Name=" kLVObjArray" />
+					<EnumerationMember Value="15" Name=" kLVObjPicture" />
+					<EnumerationMember Value="16" Name=" kLVObjOleContainer" />
+					<EnumerationMember Value="17" Name=" kLVObjNumeric" />
+					<EnumerationMember Value="18" Name=" kLVObjDigital" />
+					<EnumerationMember Value="19" Name=" kLVObjNamedNumeric" />
+					<EnumerationMember Value="20" Name=" kLVObjColorRamp" />
+					<EnumerationMember Value="21" Name=" kLVObjSlide" />
+					<EnumerationMember Value="22" Name=" kLVObjGraphOrChart" />
+					<EnumerationMember Value="23" Name=" kLVObjWaveformChart" />
+					<EnumerationMember Value="24" Name=" kLVObjWaveformGraph" />
+					<EnumerationMember Value="25" Name=" kLVObjIntensityChart" />
+					<EnumerationMember Value="26" Name=" kLVObjIntensityGraph" />
+					<EnumerationMember Value="27" Name=" kLVObjString" />
+					<EnumerationMember Value="28" Name=" kLVObjIOName" />
+					<EnumerationMember Value="29" Name=" kLVObjComboBox" />
+					<EnumerationMember Value="30" Name=" kLVObjCluster" />
+					<EnumerationMember Value="31" Name=" kLVObjPanel" />
+					<EnumerationMember Value="32" Name=" kLVObjKnob" />
+					<EnumerationMember Value="33" Name=" kLVObjNumWithScale" />
+					<EnumerationMember Value="34" Name=" kLVObjRing" />
+					<EnumerationMember Value="35" Name=" kLVObjEnum" />
+					<EnumerationMember Value="36" Name=" kLVObjGObject" />
+					<EnumerationMember Value="37" Name=" kLVObjPlot" />
+					<EnumerationMember Value="38" Name=" kLVObjCursor" />
+					<EnumerationMember Value="39" Name=" kLVObjNumericText" />
+					<EnumerationMember Value="40" Name=" kLVObjScale" />
+					<EnumerationMember Value="41" Name=" kLVObjColorScale" />
+					<EnumerationMember Value="42" Name=" kLVObjGraphScale" />
+					<EnumerationMember Value="43" Name=" kLVObjColorGraphScale" />
+					<EnumerationMember Value="44" Name=" kLVObjTypedRefNum" />
+					<EnumerationMember Value="45" Name=" kLVObjOldKnobScale" />
+					<EnumerationMember Value="46" Name=" kLVObjMCListbox" />
+					<EnumerationMember Value="47" Name=" kLVObjMeasureData" />
+					<EnumerationMember Value="48" Name=" kLVObjDSCTag" />
+					<EnumerationMember Value="49" Name=" kLVObjDAQName" />
+					<EnumerationMember Value="50" Name=" kLVObjVISAName" />
+					<EnumerationMember Value="51" Name=" kLVObjIVIName" />
+					<EnumerationMember Value="52" Name=" kLVObjSlideScale" />
+					<EnumerationMember Value="53" Name=" kLVObjTabControl" />
+					<EnumerationMember Value="54" Name=" kLVObjPage" />
+					<EnumerationMember Value="55" Name=" kLVObjTabArrayTabControl" />
+					<EnumerationMember Value="56" Name=" kLVObjConPane" />
+					<EnumerationMember Value="57" Name=" kLVObjDAQMXName" />
+					<EnumerationMember Value="58" Name=" kLVObjVIRefNum" />
+					<EnumerationMember Value="59" Name=" kLVObjLVObjRefNum" />
+					<EnumerationMember Value="60" Name=" kLVObjAbsTime" />
+					<EnumerationMember Value="61" Name=" kLVObjDigitalTable" />
+					<EnumerationMember Value="62" Name=" kLVObjUnused" />
+					<EnumerationMember Value="63" Name=" kLVObjUnused2" />
+					<EnumerationMember Value="64" Name=" kLVObjSCLControl" />
+					<EnumerationMember Value="65" Name=" kLVObjSubPanel" />
+					<EnumerationMember Value="66" Name=" kLVObjTreeControl" />
+					<EnumerationMember Value="67" Name=" kLVObjGenClassTagRef" />
+					<EnumerationMember Value="68" Name=" kLVObjGenClassRef" />
+					<EnumerationMember Value="69" Name=" kLVObjRotaryColorScale" />
+					<EnumerationMember Value="70" Name=" kLVObjPlugInDDOControl" />
+					<EnumerationMember Value="71" Name=" kLVObjPlugInDDOClassHolder" />
+					<EnumerationMember Value="72" Name=" kLVObjRadClusControl" />
+					<EnumerationMember Value="73" Name=" kLVObjProject" />
+					<EnumerationMember Value="74" Name=" kLVObjProjectItem" />
+					<EnumerationMember Value="75" Name=" kLVObjPane" />
+					<EnumerationMember Value="76" Name=" kLVObjSplitterBar" />
+					<EnumerationMember Value="77" Name=" kLVObjProjectBuildItem" />
+					<EnumerationMember Value="78" Name=" kLVObjPixmap" />
+					<EnumerationMember Value="79" Name=" kLVObjFacadeVI" />
+					<EnumerationMember Value="80" Name=" kLVObjLibrary" />
+					<EnumerationMember Value="81" Name=" kLVObjVariable" />
+					<EnumerationMember Value="82" Name=" kLVObjPropertyBag" />
+					<EnumerationMember Value="83" Name=" kLVObjXYGraph" />
+					<EnumerationMember Value="84" Name=" kLVObjScene" />
+					<EnumerationMember Value="85" Name=" kLVObjUDClassLibrary" />
+					<EnumerationMember Value="86" Name=" kLVObjUDClassClone" />
+					<EnumerationMember Value="87" Name=" kLVObjMethodVI" />
+					<EnumerationMember Value="88" Name=" kLVObjXCtlLibrary" />
+					<EnumerationMember Value="89" Name=" kLVObjXNodeLibrary" />
+					<EnumerationMember Value="90" Name=" kLVObjScroll" />
+					<EnumerationMember Value="91" Name=" kLVObjLVTarget" />
+					<EnumerationMember Value="92" Name=" kLVObjMixedGraph" />
+					<EnumerationMember Value="93" Name=" kLVObjProvider" />
+					<EnumerationMember Value="94" Name=" kLVObjCopyOperation" />
+					<EnumerationMember Value="95" Name=" kLVObjTargetItem" />
+					<EnumerationMember Value="96" Name=" kLVObjProjectItemType" />
+					<EnumerationMember Value="97" Name=" kLVObjCopyItem" />
+					<EnumerationMember Value="98" Name=" kLVObjCopyConflict" />
+					<EnumerationMember Value="99" Name=" kLVObjCopyExpert" />
+					<EnumerationMember Value="100" Name=" kLVObjSceneGraphDisp" />
+					<EnumerationMember Value="101" Name=" kLVObjPolyVI" />
+					<EnumerationMember Value="102" Name=" kLVObjLVClassDDO" />
+					<EnumerationMember Value="103" Name="kLVObjDiagram=0x4000" />
+					<EnumerationMember Value="104" Name=" kLVObjTerminal" />
+					<EnumerationMember Value="105" Name=" kLVObjConstant" />
+					<EnumerationMember Value="106" Name=" kLVObjPathConstant" />
+					<EnumerationMember Value="107" Name=" kLVObjArrayConstant" />
+					<EnumerationMember Value="108" Name=" kLVObjNumericConstant" />
+					<EnumerationMember Value="109" Name=" kLVObjDigitalNumConstant" />
+					<EnumerationMember Value="110" Name=" kLVObjNamedNumericConstant" />
+					<EnumerationMember Value="111" Name=" kLVObjStringConstant" />
+					<EnumerationMember Value="112" Name=" kLVObjClusterConstant" />
+					<EnumerationMember Value="113" Name=" kLVObjFixedConstant" />
+					<EnumerationMember Value="114" Name=" kLVObjControlTerminal" />
+					<EnumerationMember Value="115" Name=" kLVObjFormulaParameter" />
+					<EnumerationMember Value="116" Name=" kLVObjGlobal" />
+					<EnumerationMember Value="117" Name=" kLVObjLocal" />
+					<EnumerationMember Value="118" Name=" kLVObjRightShiftRegister" />
+					<EnumerationMember Value="119" Name=" kLVObjFunction" />
+					<EnumerationMember Value="120" Name=" kLVObjSubVI" />
+					<EnumerationMember Value="121" Name=" kLVObjCallByRef" />
+					<EnumerationMember Value="122" Name=" kLVObjUnitCast" />
+					<EnumerationMember Value="123" Name=" kLVObjStructure" />
+					<EnumerationMember Value="124" Name=" kLVObjLoop" />
+					<EnumerationMember Value="125" Name=" kLVObjMultiframeStructure" />
+					<EnumerationMember Value="126" Name=" kLVObjSequence" />
+					<EnumerationMember Value="127" Name=" kLVObjCaseSelector" />
+					<EnumerationMember Value="128" Name=" kLVObjFormula" />
+					<EnumerationMember Value="129" Name=" kLVObjGrowableFunction" />
+					<EnumerationMember Value="130" Name=" kLVObjBuildClusterArray" />
+					<EnumerationMember Value="131" Name=" kLVObjCompoundArithmetic" />
+					<EnumerationMember Value="132" Name=" kLVObjIndexArray" />
+					<EnumerationMember Value="133" Name=" kLVObjBuildArray" />
+					<EnumerationMember Value="134" Name=" kLVObjNamedBundler" />
+					<EnumerationMember Value="135" Name=" kLVObjCIN" />
+					<EnumerationMember Value="136" Name=" kLVObjCallLibrary" />
+					<EnumerationMember Value="137" Name=" kLVObjObjectFunction" />
+					<EnumerationMember Value="138" Name=" kLVObjProperty" />
+					<EnumerationMember Value="139" Name=" kLVObjInvoke" />
+					<EnumerationMember Value="140" Name=" kLVObjNode" />
+					<EnumerationMember Value="141" Name=" kLVObjBooleanConstant" />
+					<EnumerationMember Value="142" Name=" kLVObjBlockDiagram" />
+					<EnumerationMember Value="143" Name=" kLVObjRingConstant" />
+					<EnumerationMember Value="144" Name=" kLVObjEnumConstant" />
+					<EnumerationMember Value="145" Name=" kLVObjTunnel" />
+					<EnumerationMember Value="146" Name=" kLVObjLoopTunnel" />
+					<EnumerationMember Value="147" Name=" kLVObjSequenceLocal" />
+					<EnumerationMember Value="148" Name=" kLVObjComparison" />
+					<EnumerationMember Value="149" Name=" kLVObjReadWriteFile" />
+					<EnumerationMember Value="150" Name=" kLVObjTypeCast" />
+					<EnumerationMember Value="151" Name=" kLVObjFlattenUnflattenString" />
+					<EnumerationMember Value="152" Name=" kLVObjGPIBReadWrite" />
+					<EnumerationMember Value="153" Name=" kLVObjForLoop" />
+					<EnumerationMember Value="154" Name=" kLVObjWhileLoop" />
+					<EnumerationMember Value="155" Name=" kLVObjScriptNode" />
+					<EnumerationMember Value="156" Name=" kLVObjArrayToCluster" />
+					<EnumerationMember Value="157" Name=" kLVObjFormatScanString" />
+					<EnumerationMember Value="158" Name=" kLVObjWire" />
+					<EnumerationMember Value="159" Name=" kLVObjProbe" />
+					<EnumerationMember Value="160" Name=" kLVObjInnerTerminal" />
+					<EnumerationMember Value="161" Name=" kLVObjLeftShiftRegister" />
+					<EnumerationMember Value="162" Name=" kLVObjPolySubVI" />
+					<EnumerationMember Value="163" Name=" kLVObjPropItem" />
+					<EnumerationMember Value="164" Name=" kLVObjIONameConstant" />
+					<EnumerationMember Value="165" Name=" kLVObjDSCTagConstant" />
+					<EnumerationMember Value="166" Name=" kLVObjDAQNameConstant" />
+					<EnumerationMember Value="167" Name=" kLVObjVISANameConstant" />
+					<EnumerationMember Value="168" Name=" kLVObjIVINameConstant" />
+					<EnumerationMember Value="169" Name=" kLVObjColorBoxConstant" />
+					<EnumerationMember Value="170" Name=" kLVObjControlRefConstant" />
+					<EnumerationMember Value="171" Name=" kLVObjClassSpecifierConstant" />
+					<EnumerationMember Value="172" Name=" kLVObjConfNode" />
+					<EnumerationMember Value="173" Name=" kLVObjMasterWizard" />
+					<EnumerationMember Value="174" Name=" kLVObjStateDiagWizard" />
+					<EnumerationMember Value="175" Name=" kLVObjOuterTerminal" />
+					<EnumerationMember Value="176" Name=" kLVObjDAQMXNameConstant" />
+					<EnumerationMember Value="177" Name=" kLVObjEventStructure" />
+					<EnumerationMember Value="178" Name=" kLVObjFlatSequence" />
+					<EnumerationMember Value="179" Name=" kLVObjGenClassTagRefConstant" />
+					<EnumerationMember Value="180" Name=" kLVObjAbsTimeConstant" />
+					<EnumerationMember Value="181" Name=" kLVObjExternalNode" />
+					<EnumerationMember Value="182" Name=" kLVObjSubWizard" />
+					<EnumerationMember Value="183" Name=" kLVObjScriptNodeParameter" />
+					<EnumerationMember Value="184" Name=" kLVObjStatVIRef" />
+					<EnumerationMember Value="185" Name=" kLVObjComboBoxConstant" />
+					<EnumerationMember Value="186" Name=" kLVObjTimedLoop" />
+					<EnumerationMember Value="187" Name=" kLVObjGenClassDeepCopy" />
+					<EnumerationMember Value="188" Name=" kLVObjGenClassTagFlat" />
+					<EnumerationMember Value="189" Name=" kLVObjGenClassTagFlatRefConstant" />
+					<EnumerationMember Value="190" Name=" kLVObjGenClassFlat" />
+					<EnumerationMember Value="191" Name=" kLVObjSimDiagram" />
+					<EnumerationMember Value="192" Name=" kLVObjCompDiagram" />
+					<EnumerationMember Value="193" Name=" kLVObjSimNode" />
+					<EnumerationMember Value="194" Name=" kLVObjSimDCO" />
+					<EnumerationMember Value="195" Name=" kLVObjBundler" />
+					<EnumerationMember Value="196" Name=" kLVObjUnbundler" />
+					<EnumerationMember Value="197" Name=" kLVObjNamedUnbundler" />
+					<EnumerationMember Value="198" Name=" kLVObjFlatSeqFrame" />
+					<EnumerationMember Value="199" Name=" kLVObjFlatSeqInTun" />
+					<EnumerationMember Value="200" Name=" kLVObjFlatSeqOutTun" />
+					<EnumerationMember Value="201" Name=" kLVObjRefNumConst" />
+					<EnumerationMember Value="202" Name=" kLVObjFlattenString" />
+					<EnumerationMember Value="203" Name=" kLVObjPolySelector" />
+					<EnumerationMember Value="204" Name=" kLVObjXNode" />
+					<EnumerationMember Value="205" Name=" kLVObjSelectorTunnel" />
+					<EnumerationMember Value="206" Name=" kLVObjCommentNode" />
+					<EnumerationMember Value="207" Name=" kLVObjSdfDiagram" />
+					<EnumerationMember Value="208" Name=" kLVObjSDFCompDiagram" />
+					<EnumerationMember Value="209" Name=" kLVObjSdfNode" />
+					<EnumerationMember Value="210" Name=" kLVObjSdfDCO" />
+					<EnumerationMember Value="211" Name=" kLVObjFileDialog" />
+					<EnumerationMember Value="212" Name=" kLVObjTLDCO" />
+					<EnumerationMember Value="213" Name=" kLVObjTimeSeqFrame" />
+					<EnumerationMember Value="214" Name=" kLVObjTimeFlatSequence" />
+					<EnumerationMember Value="215" Name=" kLVObjTimedSequence" />
+					<EnumerationMember Value="216" Name=" kLVObjXDataNode" />
+					<EnumerationMember Value="217" Name=" kLVObjCodeWizard" />
+					<EnumerationMember Value="218" Name=" kLVObjMathScriptNode" />
+					<EnumerationMember Value="219" Name=" kLVObjMathScriptNodeParameter" />
+					<EnumerationMember Value="220" Name=" kLVObjLVClassBDConst" />
+				</Members>
+				<DataType>UInt16</DataType>
+			</Enumeration>
+		</p.TypeReference>
+		<p.TypeReference TypeId="055c06594cf547e9b1b9c5c0a88b155f">
+			<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="L0" DataType="@bd2232353db34e3ebe062acdcac878ce" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="eaa0952f2df44056ad3ef319e4eea008">
+			<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="L3" DataType="Error" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="b3f90b2298ef40ccadb37ede6317cdc7">
+			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="B1" DataType="String" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="2e9730264a0d4da49805aa62905cd226">
+			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R0" DataType="@94ac027b67dd4bb0a3cf27f0c1e30e06" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="15548b6676dc48d9a30602e4dd1f6d1a">
+			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R1" DataType="Int32" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="d4936b6c651a4c2da09fb23d43ae0f49">
+			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R2" DataType="@bd2232353db34e3ebe062acdcac878ce" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="0ce0988966c242898155811ab128879b">
+			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R3" DataType="Error" />
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+	<IconTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.IconModel Target="NI::G Core::Error::Build Error Cluster.gvi">
+			<MergeScript>
+				<MergeItem Path="." IsPrimary="True">
+					<Icon ListViewIconCrop="0 0 40 40">
+						<IconPanel Height="[float]40" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+							<Path Data="[PathGeometry]M 4,1 L 36,1 C 37.6570015,1 39,2.34299994 39,4 L 39,36 C 39,37.6570015 37.6570015,39 36,39 L 4,39 C 2.34299994,39 1,37.6570015 1,36 L 1,4 C 1,2.34299994 2.34299994,1 4,1" Fill="[SMSolidColorBrush]#ffececec" Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40" />
+							<Path Data="[PathGeometry]M 37,0 L 4,0 C 1.78999996,0 0,1.78999996 0,4 L 0,36 C 0,38.2099991 1.78999996,40 4,40 L 36,40 C 38.2099991,40 40,38.2099991 40,36 L 40,4 C 40,1.78999996 38.2099991,0 37,0 Z M 14.2700005,2.01999998 L 13.8800001,11.25 L 11.04,11.25 L 10.6400003,2.01999998 L 14.2700005,2.01999998 Z M 14.21,12.6800003 L 14.21,14.9799995 L 10.6999998,14.9799995 L 10.6999998,12.6800003 L 14.21,12.6800003 Z M 4.07000017,2.1099999 L 8.97000027,7.0999999 L 1.94000006,4.5999999 L 4.07000017,2.1099999 Z M 7.67999983,9.06000042 L 2.95000005,11.5600004 L 2.68000007,9.06000042 L 7.67999983,9.06000042 Z M 39,36 C 39,37.6599998 37.6599998,39 36,39 L 4,39 C 2.33999991,39 1,37.6599998 1,36 L 1,17 L 17,17 L 17,1 L 36,1 C 37.6599998,1 39,2.33999991 39,4 L 39,36 Z" Fill="[SMSolidColorBrush]#ffa0a017" Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40" />
+							<Path Data="[PathGeometry]M 26.3299999,24.3169994 L 29.0429993,19.1210003 L 23.8400002,21.8279991 L 22.0820007,15.1549997 L 20.3169994,21.8250008 L 15.1169996,19.1119995 L 17.8239994,24.3150005 L 11,26.0720005 L 17.8239994,27.8369999 L 15.1110001,33.0369987 L 20.3139992,30.3269997 L 22.0720005,37 L 23.8339996,30.3299999 L 29.0340004,33.0429993 L 26.3269997,27.8400002 L 33,26.0820007 L 26.3299999,24.3169994" Fill="[SMSolidColorBrush]#b2000000" Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40" />
+						</IconPanel>
+					</Icon>
+				</MergeItem>
+			</MergeScript>
+		</p.IconModel>
+		<p.IconModel Target="NI::G Core::Data Type::I32ToRefnumType.gvi">
+			<MergeScript>
+				<MergeItem Path="." IsPrimary="True">
+					<Icon ListViewIconCrop="0 0 40 40">
+						<IconPanel Height="[float]40" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+							<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Left="[float]0" TemplateName="[string]GrayNoText" Top="[float]0" Width="[float]40">
+								<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+								<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+							</IconTemplate>
+							<Image Height="[float]30" Left="[float]5" MinHeight="[float]13" MinWidth="[float]13" Source="[SMEmbeddedImageSource]iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAIAAAC0Ujn1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADMSURBVEhL5ZBbDsMgDAQ5be5/A7rJIse8bAcJ8dGJVa2NOw1NV7o21avOI+RUVzPnJtBDVKWWPJuwHs97xBY0+X5KN1KTphVkU6oc7FDruh9Wvzr78qN13gNVqXvkVNdwzn0gk7SR8lsbOKfmtfT9dLYJqcksz4iqv3pBVA2Yg14QUuNTjMyArUH0FRY4qi73r/8QZpvYkvI2weAf1AA54gWhpTUOqXl30Lclmf+Mo9ZBi2wpcdREt32e4ah10C7XC76piUxs/I1Fcv4BKjckgOlHZTYAAAAASUVORK5CYII=" Top="[float]5" Width="[float]30" />
+							<IconTemplate Height="[float]40" HorizontalAlignment="[HorizontalAlignment]Center" IsHitTestVisible="[bool]False" Left="[float]0" TemplateName="[string][Comp]NI.G Core.Data Type.gcomp" Top="[float]0" VerticalAlignment="[VerticalAlignment]Center" Width="[float]40" />
+						</IconPanel>
+					</Icon>
+				</MergeItem>
+			</MergeScript>
+		</p.IconModel>
+		<p.IconModel Target="NI::G Core::Data Type::GetRefnumInfoInternal.gvi">
+			<MergeScript>
+				<MergeItem Path="." IsPrimary="True">
+					<Icon ListViewIconCrop="0 0 40 40">
+						<IconPanel Height="[float]40" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+							<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Left="[float]0" TemplateName="[string]GrayNoText" Top="[float]0" Width="[float]40">
+								<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+								<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+							</IconTemplate>
+							<Image Height="[float]30" Left="[float]5" MinHeight="[float]13" MinWidth="[float]13" Source="[SMEmbeddedImageSource]iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAIAAAC0Ujn1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAENSURBVEhLvY9hFsIgDIN32t3/BjOQGrpQ5g/Fb319SQpVjvM4N9VYfVVomstyngQ5RN1WS68SVt8zRrTAdPvCVauJWaGTqhjsWJ2rfaz56OpyX/vhf6Buq2c0zVXmPA+UHBuJ39rA5tXx/98vCNNtqLfu8xArCyKRkpgPEWja3LN1IQOgZUudE3aJoktJyIJS2zGzIBIpCXSihEhnMYeAevif8/fV8aL7Y9GJQumSesY7upw7kc6hUQ9sowlqEzP1gBfsft5io5J6YLvMElhLjKfZl2xezXfpdbLkQdNmIQuGR5dok0oAC9El1Imn6BRKKEwDWYWyZHilDwJYuLJgeDtkglhYWtJ0zzdwXS9HQ/+I5y0WewAAAABJRU5ErkJggg==" Top="[float]5" Width="[float]30" />
+							<IconTemplate Height="[float]40" HorizontalAlignment="[HorizontalAlignment]Center" IsHitTestVisible="[bool]False" Left="[float]0" TemplateName="[string][Comp]NI.G Core.Data Type.gcomp" Top="[float]0" VerticalAlignment="[VerticalAlignment]Center" Width="[float]40" />
+						</IconPanel>
+					</Icon>
+				</MergeItem>
+			</MergeScript>
+		</p.IconModel>
+	</IconTable>
+</SourceFile>

@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="8D9C15781E62ED61F3A62211013C1A12EFDD71FAE4FC25A62F4EDC9117DE7AFC5854D2AA121FF1E09682B3815C72599284895377B55656FC6AFDA2310E5B4620" Timestamp="1D69761B72DA97B" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.51564" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.49573" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">Convert MDTFlavor value to Data Type enum.</p.UserDescription>
+		<Icon Id="23" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="24" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Id="25" Left="[float]0" TemplateName="[string]GrayNoText" Top="[float]0" Width="[float]40">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="26" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="27" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+				</IconTemplate>
+				<Image Height="[float]30" Id="29" Left="[float]5" MinHeight="[float]13" MinWidth="[float]13" Source="[SMEmbeddedImageSource]iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAIAAAC0Ujn1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADWSURBVEhL5ZBrEoQgDIM5rfe/gRsIUwMt6K6D/tjPDpO+opi2tC2Kw3qPsK5GV+ck0CKisTY9qjCKz9FiCjqdn5pF1qRLDZu0qI0V1hr5YfjR0XKxPfkORGPtsa5GWOc8sEpaSH3XAt6w1gtRl0tmrEiYembWXFNROoEIGfbUTs9QhAx7uvaENWERqPbMejd51Zo/AWhKPefakPh2YsI/WAPoK77g0tBvPG7NWwNqPUkecmlHXAW2QKGnT0OGPV1TR6Iptedrawoy8QV3rUnNW4bWd9n3D3MY9KGSZ4duAAAAAElFTkSuQmCC" Top="[float]5" Width="[float]30" />
+			</IconPanel>
+		</Icon>
+		<ConnectorPane Height="40" Id="10" ListViewHeight="70" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+			<ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="15" />
+			<ConnectorPaneTerminal Hotspot="0 15" />
+			<ConnectorPaneTerminal Hotspot="0 25" />
+			<ConnectorPaneTerminal Hotspot="0 35" />
+			<ConnectorPaneTerminal Hotspot="15 0" />
+			<ConnectorPaneTerminal Hotspot="25 0" />
+			<ConnectorPaneTerminal Hotspot="40 5" ListViewHotspot="150 50" Parameter="16" />
+			<ConnectorPaneTerminal Hotspot="40 15" />
+			<ConnectorPaneTerminal Hotspot="40 25" />
+			<ConnectorPaneTerminal Hotspot="40 35" />
+			<ConnectorPaneTerminal Hotspot="15 40" />
+			<ConnectorPaneTerminal Hotspot="25 40" />
+		</ConnectorPane>
+		<DiagramUnplacedItems Id="11" xmlns="http://www.ni.com/MocCommon" />
+		<FrontPanelUnplacedItems Id="12" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" />
+		<BlockDiagram Id="13">
+			<ArrayLiteral Bounds="189 140 121 365" DataType="Int16[]" Id="17" Label="19" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>
+					<Array Lengths="20" IsBinary="True" Compression="GZip">
+						<BinaryElements>H4sIAAAAAAAEABXGCw6AIBAD0SJRQECXz/2vqrOTvLQKkj7y9czPRk4u4EDEiQsJGQU3Kho6HrwwDEwsbNUfiDtBH2sAAAA=</BinaryElements>
+					</Array>
+				</p.Data>
+				<ArrayBehavior ElementType="Int16" IndexEditorWidth="42" VisibleRows="21">
+					<p.DefaultElementValue>0</p.DefaultElementValue>
+				</ArrayBehavior>
+				<Literal Bounds="47 243 60 15" DataType="Int16" Id="18">
+					<NumericBehavior Interpretation="Exact" Radix="Decimal" RadixVisibility="Hidden" ValueFormatter="Decimal, Uppercase, Signed" />
+				</Literal>
+			</ArrayLiteral>
+			<NodeLabel AttachedTo="17" Bounds="190 123 59 14" Id="19" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>MDTFlavor</p.Text>
+			</NodeLabel>
+			<Search1DArray Bounds="350 510 40 40" Id="20" />
+			<ArrayIndex Bounds="615 510 40 30" Id="21" Terminals="array=45, c0t0v=47, c0out=46" />
+			<Comment Bounds="240 575 440 70" Id="22" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
+				<p.Text>The MDTFlavor values correspond to an enum in the LabVIEW code base (datatypeForward.h.  Search for mdtTimestamp).  If MDTFlavors are added, update the array and resulting datatype.</p.Text>
+			</Comment>
+			<DataAccessor Bounds="185 530 40 15" DataItem="15" Id="30" Label="31" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Int16" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="30" Bounds="126 530 59 14" Id="31" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>MDTFlavor</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="695 530 40 15" DataItem="16" Id="36" Label="37" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="@b85932d43cca4393a2f5907df92f3106" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="36" Bounds="735 530 57 14" Id="37" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>Data Type</p.Text>
+			</NodeLabel>
+			<ArrayLiteral Bounds="369 145 211 365" DataType="@6a1a8cb0f6ff4e5f9d692b99b99b1467" Id="41" Label="44" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>
+					<Array Lengths="20" IsBinary="True" Compression="GZip">
+						<BinaryElements>H4sIAAAAAAAEAGNgZGBg+A8EIBoEBEAMESDmYAIiZSSkwsGkxsGkysGkjiqOBXEDALE5sn9XAAAA</BinaryElements>
+					</Array>
+				</p.Data>
+				<ArrayBehavior ElementType="@b85932d43cca4393a2f5907df92f3106" IndexEditorWidth="42">
+					<p.DefaultElementValue>0</p.DefaultElementValue>
+				</ArrayBehavior>
+				<Literal Bounds="122 5 75 15" DataType="@b85932d43cca4393a2f5907df92f3106" Id="57">
+					<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+						<TypeDefinitionTarget TargetName="NI::G Core::Data Type::Data Type.gtype" />
+					</p.TypeDefinitionTargets>
+					<EnumBehavior />
+				</Literal>
+			</ArrayLiteral>
+			<NodeLabel AttachedTo="41" Bounds="370 128 53 14" Id="44" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>DataType</p.Text>
+			</NodeLabel>
+			<Wire Id="45" Joints="N(41:Out)|(580,150) h(29) v(365) N(21:array)|(615,515)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="46" Joints="N(21:c0out)|(655,535) N(36:Value)|(698,535)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="47" Joints="N(20:index of element)|(390,535) N(21:c0t0v)|(615,535)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="48" Joints="N(30:Value)|(225,535) N(20:element)|(350,535)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="49" Joints="N(17:Out)|(310,145) h(32) v(370) N(20:1D array)|(350,515)" xmlns="http://www.ni.com/PlatformFramework" />
+		</BlockDiagram>
+		<NativeFrontPanel AllowMaximize="[bool]False" EnforceMaximumSize="[bool]True" Height="[float]1600" Id="14" Left="[float]0" MaxHeight="[float]1600" MaxWidth="[float]2000" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" Width="[float]2000" WindowTitleOption="[WindowTitleOption]None">
+			<NumericText BaseName="[string]Numeric" Height="[float]24" Id="34" Label="[UIModel]35" Left="[float]315" RadixVisibility="[SMVisibility]Hidden" TabIndex="[int]0" Top="[float]36" UnitAnnotation="[null]" Value="{DataItemBinding Id=15}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int16" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="35" LabelOwner="[UIModel]34" Left="[float]315" Text="[string]MDTFlavor" Top="[float]16" Width="[float]58" xmlns="http://www.ni.com/PanelCommon" />
+			<EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Enum" Height="[float]24" Id="54" InteractionMode="[SelectorInteractionModes]ReadOnly" IsTabStop="[bool]True" IsTypeAheadEnabled="[bool]True" Label="[UIModel]55" LabelLinked="[bool]True" Left="[float]484" TabIndex="[int]1" Top="[float]36" Value="{DataItemBinding Id=16}" ValueType="[Type]UInt8" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]194" p4:ControlDefinitionChecksum="5GFFTPJXktgfC76CXXxNPqOHXcWgS6o/8YYaDD7eSVg=" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<p4:p.TypeDefinitionTargets>
+					<p4:TypeDefinitionTarget TargetName="NI::G Core::Data Type::Data Type.gtype::ControlDefinition" />
+				</p4:p.TypeDefinitionTargets>
+				<EnumSelectorInfo DisplayValue="[string]Invalid Type" Value="[byte]0" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Void" Value="[byte]1" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]I8" Value="[byte]2" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]I16" Value="[byte]3" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]I32" Value="[byte]4" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]I64" Value="[byte]5" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]U8" Value="[byte]6" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]U16" Value="[byte]7" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]U32" Value="[byte]8" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]U64" Value="[byte]9" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Single Float" Value="[byte]10" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Double Float" Value="[byte]11" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Extended Float" Value="[byte]12" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Single Complex" Value="[byte]13" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Double Complex" Value="[byte]14" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Extended Complex" Value="[byte]15" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Enum U8" Value="[byte]16" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Enum U16" Value="[byte]17" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Enum U32" Value="[byte]18" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Enum U64" Value="[byte]19" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Single Float With Unit" Value="[byte]20" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Double Float With Unit" Value="[byte]21" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Extended Float With Unit" Value="[byte]22" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Single Complex with Unit" Value="[byte]23" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Double Complex with Unit" Value="[byte]24" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Extended Complex with Unit" Value="[byte]25" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Boolean" Value="[byte]26" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]String" Value="[byte]27" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Path" Value="[byte]28" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Picture" Value="[byte]29" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Tag" Value="[byte]30" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Array" Value="[byte]31" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Cluster" Value="[byte]32" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Variant" Value="[byte]33" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]LV Variant" Value="[byte]34" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Waveform" Value="[byte]35" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Timestamp" Value="[byte]36" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Digital Waveform" Value="[byte]37" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Digital Data" Value="[byte]38" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]ExpressData" Value="[byte]39" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Refnum" Value="[byte]40" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]External Data" Value="[byte]41" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]VI" Value="[byte]42" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Poly VI" Value="[byte]43" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Encapsulated" DisplayValueOverride="[string]" IsEnabled="[bool]True" Value="[byte]44" ValueType="[Type]UInt8" />
+				<EnumSelectorInfo DisplayValue="[string]Fixed Point" Value="[byte]45" ValueType="[Type]UInt8" />
+			</EnumSelector>
+			<Label Height="[float]16" Id="55" LabelOwner="[UIModel]54" Left="[float]484" Text="[string]Data Type" Top="[float]16" Width="[float]54" xmlns="http://www.ni.com/PanelCommon" />
+			<PanelExecutionWindow Id="58" />
+		</NativeFrontPanel>
+		<DataItem CallDirection="Input" CallIndex="1" DataType="Int16" Id="15" Name="MDTFlavor" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Output" CallIndex="1" DataType="@b85932d43cca4393a2f5907df92f3106" Id="16" Name="Data Type" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>37</p.DefaultValue>
+			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+				<TypeDefinitionTarget TargetName="NI::G Core::Data Type::Data Type.gtype" />
+			</p.TypeDefinitionTargets>
+		</DataItem>
+	</VirtualInstrument>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="b85932d43cca4393a2f5907df92f3106">
+			<Attributed AttributedType="@e17a0a79ea174e3cb7f7583e171d813f">
+				<AttributeValues>
+					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]NI::G Core::Data Type" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="6a1a8cb0f6ff4e5f9d692b99b99b1467">
+			<VariableArray DereferenceType="@b85932d43cca4393a2f5907df92f3106" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="e17a0a79ea174e3cb7f7583e171d813f">
+			<Typedef TypedefName="Data Type.gtype" UnderlyingType="@52835920b9a744fcb894b7722a890d56" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="52835920b9a744fcb894b7722a890d56">
+			<Enumeration>
+				<Members>
+					<EnumerationMember Value="0" Name="Invalid Type" />
+					<EnumerationMember Value="1" Name="Void" />
+					<EnumerationMember Value="2" Name="I8" />
+					<EnumerationMember Value="3" Name="I16" />
+					<EnumerationMember Value="4" Name="I32" />
+					<EnumerationMember Value="5" Name="I64" />
+					<EnumerationMember Value="6" Name="U8" />
+					<EnumerationMember Value="7" Name="U16" />
+					<EnumerationMember Value="8" Name="U32" />
+					<EnumerationMember Value="9" Name="U64" />
+					<EnumerationMember Value="10" Name="Single Float" />
+					<EnumerationMember Value="11" Name="Double Float" />
+					<EnumerationMember Value="12" Name="Extended Float" />
+					<EnumerationMember Value="13" Name="Single Complex" />
+					<EnumerationMember Value="14" Name="Double Complex" />
+					<EnumerationMember Value="15" Name="Extended Complex" />
+					<EnumerationMember Value="16" Name="Enum U8" />
+					<EnumerationMember Value="17" Name="Enum U16" />
+					<EnumerationMember Value="18" Name="Enum U32" />
+					<EnumerationMember Value="19" Name="Enum U64" />
+					<EnumerationMember Value="20" Name="Single Float With Unit" />
+					<EnumerationMember Value="21" Name="Double Float With Unit" />
+					<EnumerationMember Value="22" Name="Extended Float With Unit" />
+					<EnumerationMember Value="23" Name="Single Complex with Unit" />
+					<EnumerationMember Value="24" Name="Double Complex with Unit" />
+					<EnumerationMember Value="25" Name="Extended Complex with Unit" />
+					<EnumerationMember Value="26" Name="Boolean" />
+					<EnumerationMember Value="27" Name="String" />
+					<EnumerationMember Value="28" Name="Path" />
+					<EnumerationMember Value="29" Name="Picture" />
+					<EnumerationMember Value="30" Name="Tag" />
+					<EnumerationMember Value="31" Name="Array" />
+					<EnumerationMember Value="32" Name="Cluster" />
+					<EnumerationMember Value="33" Name="Variant" />
+					<EnumerationMember Value="34" Name="LV Variant" />
+					<EnumerationMember Value="35" Name="Waveform" />
+					<EnumerationMember Value="36" Name="Timestamp" />
+					<EnumerationMember Value="37" Name="Digital Waveform" />
+					<EnumerationMember Value="38" Name="Digital Data" />
+					<EnumerationMember Value="39" Name="ExpressData" />
+					<EnumerationMember Value="40" Name="Refnum" />
+					<EnumerationMember Value="41" Name="External Data" />
+					<EnumerationMember Value="42" Name="VI" />
+					<EnumerationMember Value="43" Name="Poly VI" />
+					<EnumerationMember Value="44" Name="Encapsulated" />
+					<EnumerationMember Value="45" Name="Fixed Point" />
+				</Members>
+				<DataType>UInt8</DataType>
+			</Enumeration>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

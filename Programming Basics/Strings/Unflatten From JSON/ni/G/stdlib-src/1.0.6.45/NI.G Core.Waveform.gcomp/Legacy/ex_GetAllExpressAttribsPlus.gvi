@@ -1,0 +1,697 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="F332C179DBDB517E178CED74E963876DE8A084B3EFFE36F5C9C915AF76D3A048584DE776E26BEC2E752EE3B5B995176D24EDAF2D80B593A996CBDE3772B82298" Timestamp="1D69761BBEC8909" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.51564" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.49573" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<VirtualInstrument Id="1" Reentrancy="Stateful" xmlns="http://www.ni.com/LabVIEW.VI">
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">Read Express attributes (and other Waveform values). If any of the four time-related attributes are not found, adds a best guess to the to All Express Wave Attributes.</p.UserDescription>
+		<Icon Id="22" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="23" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Id="24" Left="[float]0" TemplateName="[string]GrayNoText" Top="[float]0" Width="[float]40">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="25" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="26" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+				</IconTemplate>
+				<Image Height="[float]38" Id="27" Left="[float]2" MinHeight="[float]13" MinWidth="[float]13" Source="[SMEmbeddedImageSource]iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAIAAAC0Ujn1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADkSURBVEhL3ZENCsMgFIN3p91pp+2dnBJJ07xn118Kgw/JizGIvqZSbqJXvz8dbqyjSeh4tlXHnBKdSjwSY15NaFZhAYwa0JEsqqvQnK4KYvRHsfxBopOOGrZYxb+RCdMQqdZV6dV30B+E6N5J/K0vZHFrWBBcbUs1RPSh81trTkU60jR9qlpRBzr5Rlvp06TGaAHqVr0Ccwd4rvoMc/XGCyK2JZxXU48qdlQjqo10ouAIDWyszNW691OMRqVV60Z6Morom67k1VHEEdCkJvM3Xs6O6nivdZ6uxlMS2x3xxw9yhFK++hcJdolDxfUAAAAASUVORK5CYII=" Top="[float]1" Width="[float]35" />
+			</IconPanel>
+		</Icon>
+		<ConnectorPane Height="40" Id="9" ListViewHeight="145" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+			<ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="17" />
+			<ConnectorPaneTerminal Hotspot="0 15" />
+			<ConnectorPaneTerminal Hotspot="0 25" />
+			<ConnectorPaneTerminal Hotspot="0 35" ListViewHotspot="0 50" Parameter="15" />
+			<ConnectorPaneTerminal Hotspot="15 0" />
+			<ConnectorPaneTerminal Hotspot="25 0" ListViewHotspot="150 125" Parameter="18" />
+			<ConnectorPaneTerminal Hotspot="40 5" ListViewHotspot="150 65" Parameter="19" />
+			<ConnectorPaneTerminal Hotspot="40 15" ListViewHotspot="150 80" Parameter="20" />
+			<ConnectorPaneTerminal Hotspot="40 25" ListViewHotspot="150 95" Parameter="16" />
+			<ConnectorPaneTerminal Hotspot="40 35" ListViewHotspot="150 110" Parameter="14" />
+			<ConnectorPaneTerminal Hotspot="15 40" />
+			<ConnectorPaneTerminal Hotspot="25 40" />
+		</ConnectorPane>
+		<DiagramUnplacedItems Id="10" xmlns="http://www.ni.com/MocCommon" />
+		<FrontPanelUnplacedItems Height="[float]1600" Id="11" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" Width="[float]2000">
+			<ArrayViewer ArrayElement="[UIModel]280" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]48" Id="283" IndexVisibility="[Visibility]Visible" Label="[UIModel]284" Left="[float]543" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]269" Value="{DataItemBinding Id=21}" Width="[float]262" xmlns="http://www.ni.com/PanelCommon">
+				<p.DefaultElementValue>60052752000;0;Utc</p.DefaultElementValue>
+				<TimeStampTextBox BaseName="[string]Timestamp" Height="[float]24" Id="280" InteractionMode="[TimeStampTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput, CalendarButton" Maximum="[PrecisionDateTime]3001-01-01T00:00:00.0" Minimum="[PrecisionDateTime]1600-01-01T00:00:00.0" Name="[string]Child" Width="[float]202" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<Label Id="284" IsVisualChild="[bool]False" LabelOwner="[UIModel]283" Text="[string]origin timestamps" />
+			</ArrayViewer>
+		</FrontPanelUnplacedItems>
+		<BlockDiagram Id="12">
+			<DataAccessor Bounds="1550 305 40 15" DataItem="14" Id="28" Label="29" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Error" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="28" Bounds="1550 288 50 14" Id="29" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>error out</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="-20 305 40 15" DataItem="15" Id="30" Label="31" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Error" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="30" Bounds="-20 288 42 14" Id="31" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>error in</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="1550 85 40 15" DataItem="16" Id="32" Label="33" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="@5cadaeb3ca924fecb1fe6ffc1ae1d3cd" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="32" Bounds="1550 68 180 14" Id="33" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>All Express Wave Attributes Plus</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="-20 540 40 15" DataItem="17" Id="34" Label="35" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Wfm(Double)[]" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="34" Bounds="-20 523 54 14" Id="35" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>Signals in</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="1550 35 40 15" DataItem="18" Id="36" Label="37" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Boolean[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="36" Bounds="1550 18 129 14" Id="37" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>Time Attribs Not Found</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="1550 540 40 15" DataItem="19" Id="38" Label="39" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Wfm(Double)[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="38" Bounds="1550 523 62 14" Id="39" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>Signals out</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="1550 360 40 15" DataItem="20" Id="40" Label="41" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="@ce057386dfa04a029d8dc1cedcd5170b" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="40" Bounds="1550 343 154 14" Id="41" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>All Express Wave Attributes</p.Text>
+			</NodeLabel>
+			<IsFirstCall Bounds="-20 365 15 15" Id="42" />
+			<CaseStructure Bounds="50 -30 1475 605" DataType="Error" Id="43" Selected="44" UserSelectorBounds="684 0 106 17">
+				<CaseStructure.Case Bounds="5 5 1465 595" Id="44" Pattern="No Error">
+					<ClusterLiteral Bounds="326 110 12 10" DataType="@ae9a4a732f94449287829bed488247a5" Id="54" Label="73" xmlns="http://www.ni.com/MocCommon">
+						<p.Data>
+							<Cluster>
+								<Field1>60052752000;0;Utc</Field1>
+								<Field2>60052752000;0;Utc</Field2>
+								<Field3>False</Field3>
+								<Field4>""</Field4>
+								<Field5>""</Field5>
+								<Field6>""</Field6>
+								<Field7>60052752000;0;Utc</Field7>
+								<Field8>0x0</Field8>
+								<Field9>0</Field9>
+							</Cluster>
+						</p.Data>
+						<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+							<TypeDefinitionTarget TargetName="NI::G Core::Waveform::Legacy::ex_WaveformAttribsPlus.gtype" />
+						</p.TypeDefinitionTargets>
+						<ClusterBehavior AutoArrange="ArrangeVertically" />
+						<Literal Bounds="5 19 165 30" DataType="Timestamp" Id="55" Label="56">
+							<p.Data>60052752000;0;Utc</p.Data>
+							<TimestampBehavior />
+						</Literal>
+						<NodeLabel AttachedTo="55" Bounds="5 2 93 14" Id="56" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>Start Timestamp</p.Text>
+						</NodeLabel>
+						<Literal Bounds="5 66 165 30" DataType="Timestamp" Id="57" Label="58">
+							<p.Data>60052752000;0;Utc</p.Data>
+							<TimestampBehavior />
+						</Literal>
+						<NodeLabel AttachedTo="57" Bounds="5 49 62 14" Id="58" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>Timestamp</p.Text>
+						</NodeLabel>
+						<Literal Bounds="5 113 26 15" DataType="Boolean" Id="59" Label="60">
+							<p.Data>False</p.Data>
+							<BooleanBehavior />
+						</Literal>
+						<NodeLabel AttachedTo="59" Bounds="5 96 82 14" Id="60" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>Relative Time?</p.Text>
+						</NodeLabel>
+						<Literal Bounds="5 145 40 15" DataType="String" Id="61" Label="62">
+							<p.Data>""</p.Data>
+							<StringBehavior TextDisplayMode="Default" />
+						</Literal>
+						<NodeLabel AttachedTo="61" Bounds="5 128 70 14" Id="62" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>X Dimension</p.Text>
+						</NodeLabel>
+						<Literal Bounds="5 177 40 15" DataType="String" Id="63" Label="64">
+							<p.Data>""</p.Data>
+							<StringBehavior TextDisplayMode="Default" />
+						</Literal>
+						<NodeLabel AttachedTo="63" Bounds="5 160 70 14" Id="64" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>Signal Name</p.Text>
+						</NodeLabel>
+						<Literal Bounds="5 209 40 15" DataType="String" Id="65" Label="66">
+							<p.Data>""</p.Data>
+							<StringBehavior TextDisplayMode="Default" />
+						</Literal>
+						<NodeLabel AttachedTo="65" Bounds="5 192 39 14" Id="66" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>Y Units</p.Text>
+						</NodeLabel>
+						<Literal Bounds="5 241 165 30" DataType="Timestamp" Id="67" Label="68">
+							<p.Data>60052752000;0;Utc</p.Data>
+							<TimestampBehavior />
+						</Literal>
+						<NodeLabel AttachedTo="67" Bounds="5 224 15 14" Id="68" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>X0</p.Text>
+						</NodeLabel>
+						<Literal Bounds="5 288 40 16" DataType="Double" Id="69" Label="70">
+							<p.Data>0x0</p.Data>
+							<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+						</Literal>
+						<NodeLabel AttachedTo="69" Bounds="5 271 15 14" Id="70" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>dX</p.Text>
+						</NodeLabel>
+						<Literal Bounds="5 321 40 16" DataType="Int32" Id="71" Label="72">
+							<p.Data>0</p.Data>
+							<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+						</Literal>
+						<NodeLabel AttachedTo="71" Bounds="5 304 41 14" Id="72" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>nPoints</p.Text>
+						</NodeLabel>
+						<DockedConstantFacade UndockedSize="188 347" />
+					</ClusterLiteral>
+					<NodeLabel AttachedTo="54" Bounds="326 93 154 14" Id="73" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+						<p.Text>All Express Wave Attributes</p.Text>
+					</NodeLabel>
+					<GetCurrentTime Bounds="85 405 35 30" Id="74" />
+					<ArraySize Bounds="25 425 40 20" Id="75" />
+					<CaseStructure Bounds="140 370 140 95" Default="77" Id="76" Selected="77" UserSelectorBounds="26 0 88 17">
+						<CaseStructure.Case Bounds="5 5 130 85" Id="77" Pattern="False">
+							<DataAccessor Bounds="25 30 40 15" DataItem="21" Id="83" Label="84" xmlns="http://www.ni.com/MocCommon">
+								<Terminal DataType="Timestamp[]" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+							</DataAccessor>
+							<NodeLabel AttachedTo="83" Bounds="25 13 100 14" Id="84" xmlns="http://www.ni.com/PlatformFramework">
+								<p.Text>origin timestamps</p.Text>
+							</NodeLabel>
+							<Wire Id="285" Joints="N(83:Value)|(65,35) N(80:77)|(126,35)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Case Bounds="5 5 130 85" Id="78" Pattern="True">
+							<InitializeArray Bounds="25 30 40 30" Id="85" Terminals="element=286, outArray=288, c0t0v=287" />
+							<Wire Id="286" Joints="N(82:78)|(4,35) N(85:element)|(25,35)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="287" Joints="N(81:78)|(4,65) h(11) v(-10) N(85:c0t0v)|(25,55)" xmlns="http://www.ni.com/PlatformFramework" />
+							<Wire Id="288" Joints="N(85:outArray)|(65,35) N(80:78)|(126,35)" xmlns="http://www.ni.com/PlatformFramework" />
+						</CaseStructure.Case>
+						<CaseStructure.Selector Bounds="-4 20 13 10" Docking="Left" Id="79" Terminals="76=339, 77, 78" />
+						<CaseStructure.Tunnel Bounds="131 35 13 10" Docking="Right" Id="80" Terminals="76=340, 77=285, 78=288" />
+						<CaseStructure.Tunnel Bounds="-4 65 13 10" Docking="Left" Id="81" Terminals="76=337, 77, 78=287" />
+						<CaseStructure.Tunnel Bounds="-4 35 13 10" Docking="Left" Id="82" Terminals="76=336, 77, 78=286" />
+					</CaseStructure>
+					<ForLoop Bounds="343 33 1085 520" DiagramId="87" Id="86">
+						<LoopIteration Bounds="35 390 15 15" Id="88" />
+						<Literal Bounds="10 195 145 15" DataType="String" Id="98" Label="99" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>NI_ExpIsRelativeTime</p.Data>
+							<StringBehavior TextDisplayMode="Default" />
+						</Literal>
+						<NodeLabel AttachedTo="98" Bounds="10 178 31 14" Id="99" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>name</p.Text>
+						</NodeLabel>
+						<Literal Bounds="10 235 127 15" DataType="String" Id="100" Label="101" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>NI_ExpTimeStamp</p.Data>
+							<StringBehavior TextDisplayMode="Default" />
+						</Literal>
+						<NodeLabel AttachedTo="100" Bounds="10 218 31 14" Id="101" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>name</p.Text>
+						</NodeLabel>
+						<Literal Bounds="10 255 129 15" DataType="String" Id="102" Label="103" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>NI_ExpXDimension</p.Data>
+							<StringBehavior TextDisplayMode="Default" />
+						</Literal>
+						<NodeLabel AttachedTo="102" Bounds="10 238 31 14" Id="103" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>name</p.Text>
+						</NodeLabel>
+						<Literal Bounds="10 215 154 15" DataType="String" Id="104" Label="105" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>NI_ExpStartTimeStamp</p.Data>
+							<StringBehavior TextDisplayMode="Default" />
+						</Literal>
+						<NodeLabel AttachedTo="104" Bounds="10 198 31 14" Id="105" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>name</p.Text>
+						</NodeLabel>
+						<Literal Bounds="10 275 120 15" DataType="String" Id="106" Label="107" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>NI_ChannelName</p.Data>
+							<StringBehavior TextDisplayMode="Default" />
+						</Literal>
+						<NodeLabel AttachedTo="106" Bounds="10 258 31 14" Id="107" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>name</p.Text>
+						</NodeLabel>
+						<Literal Bounds="125 305 40 15" DataType="String" Id="108" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>""</p.Data>
+							<StringBehavior TextDisplayMode="Default" />
+							<FixedConstantFacade Facade="Empty String Constant" />
+						</Literal>
+						<Literal Bounds="10 175 128 15" DataType="String" Id="109" Label="110" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>NI_UnitDescription</p.Data>
+							<StringBehavior TextDisplayMode="Default" />
+						</Literal>
+						<NodeLabel AttachedTo="109" Bounds="10 158 31 14" Id="110" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>name</p.Text>
+						</NodeLabel>
+						<ClusterLiteral Bounds="808 350 12 10" DataType="@7d82b5ab51ad43ed8aa5f0686b48fbef" Id="111" Label="122" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>
+								<Cluster>
+									<Field1>60052752000;0;Utc</Field1>
+									<Field2>60052752000;0;Utc</Field2>
+									<Field3>False</Field3>
+									<Field4>""</Field4>
+									<Field5>""</Field5>
+								</Cluster>
+							</p.Data>
+							<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+								<TypeDefinitionTarget TargetName="NI::G Core::Waveform::Legacy::ex_WaveformAttribs.gtype" />
+							</p.TypeDefinitionTargets>
+							<ClusterBehavior AutoArrange="ArrangeVertically" />
+							<Literal Bounds="5 19 165 30" DataType="Timestamp" Id="112" Label="113">
+								<p.Data>60052752000;0;Utc</p.Data>
+								<TimestampBehavior />
+							</Literal>
+							<NodeLabel AttachedTo="112" Bounds="5 2 93 14" Id="113" xmlns="http://www.ni.com/PlatformFramework">
+								<p.Text>Start Timestamp</p.Text>
+							</NodeLabel>
+							<Literal Bounds="5 66 165 30" DataType="Timestamp" Id="114" Label="115">
+								<p.Data>60052752000;0;Utc</p.Data>
+								<TimestampBehavior />
+							</Literal>
+							<NodeLabel AttachedTo="114" Bounds="5 49 62 14" Id="115" xmlns="http://www.ni.com/PlatformFramework">
+								<p.Text>Timestamp</p.Text>
+							</NodeLabel>
+							<Literal Bounds="5 113 26 15" DataType="Boolean" Id="116" Label="117">
+								<p.Data>False</p.Data>
+								<BooleanBehavior />
+							</Literal>
+							<NodeLabel AttachedTo="116" Bounds="5 96 82 14" Id="117" xmlns="http://www.ni.com/PlatformFramework">
+								<p.Text>Relative Time?</p.Text>
+							</NodeLabel>
+							<Literal Bounds="5 145 40 15" DataType="String" Id="118" Label="119">
+								<p.Data>""</p.Data>
+								<StringBehavior TextDisplayMode="Default" />
+							</Literal>
+							<NodeLabel AttachedTo="118" Bounds="5 128 70 14" Id="119" xmlns="http://www.ni.com/PlatformFramework">
+								<p.Text>X Dimension</p.Text>
+							</NodeLabel>
+							<Literal Bounds="5 177 40 15" DataType="String" Id="120" Label="121">
+								<p.Data>""</p.Data>
+								<StringBehavior TextDisplayMode="Default" />
+							</Literal>
+							<NodeLabel AttachedTo="120" Bounds="5 160 70 14" Id="121" xmlns="http://www.ni.com/PlatformFramework">
+								<p.Text>Signal Name</p.Text>
+							</NodeLabel>
+							<DockedConstantFacade UndockedSize="188 202" />
+						</ClusterLiteral>
+						<NodeLabel AttachedTo="111" Bounds="808 333 154 14" Id="122" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>All Express Wave Attributes</p.Text>
+						</NodeLabel>
+						<Literal Bounds="200 455 165 30" DataType="Timestamp" Id="123" Label="124" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>63082285200;0;Utc</p.Data>
+							<TimestampBehavior />
+						</Literal>
+						<NodeLabel AttachedTo="123" Bounds="200 438 43 14" Id="124" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+							<p.Text>number</p.Text>
+						</NodeLabel>
+						<Literal Bounds="370 305 40 15" DataType="String" Id="125" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>t</p.Data>
+							<StringBehavior TextDisplayMode="Default" />
+						</Literal>
+						<Literal Bounds="790 310 40 15" DataType="String" Id="126" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>""</p.Data>
+							<StringBehavior TextDisplayMode="Default" />
+							<FixedConstantFacade Facade="Empty String Constant" />
+						</Literal>
+						<PropertyNode Bounds="205 385 50 65" HasErrorTerminals="False" Id="127" InstanceDataType="Wfm(Double)" ListViewAutoSize="False" Mode="InstanceProperties" Template="List" xmlns="http://www.ni.com/MocCommon">
+							<PropertyItemTerminal DataType="Double[]" Hotspot="50 15" Id="c0t0v" Path="Y" PathElementMemberKinds="Field" Usage="Optional" />
+							<PropertyItemTerminal DataType="Double" Hotspot="50 30" Id="c1t0v" Path="dt" PathElementMemberKinds="Field" Usage="Optional" />
+							<PropertyItemTerminal DataType="Timestamp" Hotspot="50 45" Id="c2t0v" Path="t0" PathElementMemberKinds="Field" Usage="Optional" />
+						</PropertyNode>
+						<ArrayIndex Bounds="60 370 40 30" Id="128" Terminals="array=293, c0t0v=290, c0out=291" />
+						<ArraySize Bounds="850 85 40 20" Id="129" />
+						<IsLess Bounds="380 440 30 30" Id="130" />
+						<Select Bounds="445 330 40 40" Id="131" />
+						<GetWaveformAttribute Bounds="275 265 40 40" Id="132" WaveformDataType="Wfm(Double)" />
+						<GetWaveformAttribute Bounds="445 265 40 40" Id="133" WaveformDataType="Wfm(Double)" />
+						<GetWaveformAttribute Bounds="535 265 40 40" Id="134" WaveformDataType="Wfm(Double)" />
+						<GetWaveformAttribute Bounds="625 265 40 40" Id="135" WaveformDataType="Wfm(Double)" />
+						<GetWaveformAttribute Bounds="710 265 40 40" Id="136" WaveformDataType="Wfm(Double)" />
+						<LogicalAnd Bounds="840 20 25 40" Id="137" InvertedTerminals="10000" Terminals="o=307, c0t0v=311, c1t0v=310, c2t0v=309, c3t0v=308" VerticalChunkCount="4" />
+						<PropertyNode Bounds="820 350 110 95" HasErrorTerminals="False" Id="138" InstanceDataType="@7d82b5ab51ad43ed8aa5f0686b48fbef" ListViewAutoSize="False" Mode="InstanceProperties" Template="List" xmlns="http://www.ni.com/MocCommon">
+							<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+								<TypeDefinitionTarget TargetName="NI::G Core::Waveform::Legacy::ex_WaveformAttribs.gtype" />
+							</p.TypeDefinitionTargets>
+							<PropertyItemTerminal Action="Write" DataType="Boolean" Hotspot="0 15" Id="c0t0v" Path="Relative Time?" PathElementMemberKinds="Field" Usage="Required" />
+							<PropertyItemTerminal Action="Write" DataType="Timestamp" Hotspot="0 30" Id="c1t0v" Path="Start Timestamp" PathElementMemberKinds="Field" Usage="Required" />
+							<PropertyItemTerminal Action="Write" DataType="Timestamp" Hotspot="0 45" Id="c2t0v" Path="Timestamp" PathElementMemberKinds="Field" Usage="Required" />
+							<PropertyItemTerminal Action="Write" DataType="String" Hotspot="0 60" Id="c3t0v" Path="X Dimension" PathElementMemberKinds="Field" Usage="Required" />
+							<PropertyItemTerminal Action="Write" DataType="String" Hotspot="0 75" Id="c4t0v" Path="Signal Name" PathElementMemberKinds="Field" Usage="Required" />
+						</PropertyNode>
+						<GetWaveformAttribute Bounds="850 265 40 40" Id="139" WaveformDataType="Wfm(Double)" />
+						<PropertyNode Bounds="925 75 110 155" HasErrorTerminals="False" Id="140" InstanceDataType="@ae9a4a732f94449287829bed488247a5" ListViewAutoSize="False" Mode="InstanceProperties" Template="List" xmlns="http://www.ni.com/MocCommon">
+							<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+								<TypeDefinitionTarget TargetName="NI::G Core::Waveform::Legacy::ex_WaveformAttribsPlus.gtype" />
+							</p.TypeDefinitionTargets>
+							<PropertyItemTerminal Action="Write" DataType="Int32" Hotspot="0 15" Id="c0t0v" Path="nPoints" PathElementMemberKinds="Field" Usage="Required" />
+							<PropertyItemTerminal Action="Write" DataType="Double" Hotspot="0 30" Id="c1t0v" Path="dX" PathElementMemberKinds="Field" Usage="Required" />
+							<PropertyItemTerminal Action="Write" DataType="Timestamp" Hotspot="0 45" Id="c2t0v" Path="X0" PathElementMemberKinds="Field" Usage="Required" />
+							<PropertyItemTerminal Action="Write" DataType="Boolean" Hotspot="0 60" Id="c3t0v" Path="Relative Time?" PathElementMemberKinds="Field" Usage="Required" />
+							<PropertyItemTerminal Action="Write" DataType="Timestamp" Hotspot="0 75" Id="c4t0v" Path="Start Timestamp" PathElementMemberKinds="Field" Usage="Required" />
+							<PropertyItemTerminal Action="Write" DataType="Timestamp" Hotspot="0 90" Id="c5t0v" Path="Timestamp" PathElementMemberKinds="Field" Usage="Required" />
+							<PropertyItemTerminal Action="Write" DataType="String" Hotspot="0 105" Id="c6t0v" Path="X Dimension" PathElementMemberKinds="Field" Usage="Required" />
+							<PropertyItemTerminal Action="Write" DataType="String" Hotspot="0 120" Id="c7t0v" Path="Signal Name" PathElementMemberKinds="Field" Usage="Required" />
+							<PropertyItemTerminal Action="Write" DataType="String" Hotspot="0 135" Id="c8t0v" Path="Y Units" PathElementMemberKinds="Field" Usage="Required" />
+						</PropertyNode>
+						<Wire Id="289" Joints="N(131:s? t:f)|(485,350) h(20) B(1) h(105) v(-60) N(135:default value (empty Variant\))|(625,290) B(1) v(-60) N(134:default value (empty Variant\))|(535,290)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="290" Joints="N(88:Output)|(50,395) N(128:c0t0v)|(60,395)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="291" Joints="N(128:c0out)|(100,395) h(10) v(-60) N(131:t)|(445,335)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="292" Joints="N(127:c2t0v)|(255,430) h(110) B(1) v(-65) B(2) N(131:f)|(445,365) B(2) v(-245) N(140:c2t0v)|(925,120) B(1) v(15) N(130:x)|(380,445)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="293" Joints="N(97:i0)|(6,375) N(128:array)|(60,375)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="294" Joints="N(130:x &lt; y?)|(410,455) h(20) B(1) h(270) v(-165) N(136:default value (empty Variant\))|(710,290) B(1) v(-105) N(131:s)|(445,350)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="295" Joints="N(126:Out)|(830,315) h(5) v(-25) N(139:default value (empty Variant\))|(850,290)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="296" Joints="N(125:Out)|(410,310) h(25) v(-20) N(133:default value (empty Variant\))|(445,290)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="298" Joints="N(123:Out)|(365,460) N(130:y)|(380,460)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="299" Joints="N(138:instance out)|(930,355) N(96:i0)|(1073,355)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="300" Joints="N(132:value)|(315,290) h(100) B(1) v(-95) N(140:c7t0v)|(925,195) B(1) v(135) N(138:c4t0v)|(820,425)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="301" Joints="N(133:value)|(485,290) h(10) B(1) v(-105) h(360) v(-5) N(140:c6t0v)|(925,180) B(1) v(120) N(138:c3t0v)|(820,410)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="302" Joints="N(134:value)|(575,290) h(25) B(1) v(-125) N(140:c5t0v)|(925,165) B(1) v(105) N(138:c2t0v)|(820,395)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="303" Joints="N(135:value)|(665,290) h(20) B(1) v(-140) N(140:c4t0v)|(925,150) B(1) v(90) N(138:c1t0v)|(820,380)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="304" Joints="N(136:value)|(750,290) h(20) B(1) v(-155) N(140:c3t0v)|(925,135) B(1) v(75) N(138:c0t0v)|(820,365)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Facade="WireInvisibleFacade" Id="305" Joints="N(111:Out)|(820,355) N(138:instance in)|(820,355)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="306" Joints="N(140:instance out)|(1035,80) N(95:i0)|(1073,80)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="307" Joints="N(137:o)|(865,30) N(94:i0)|(1073,30)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="308" Joints="N(136:found)|(750,280) h(10) v(-225) N(137:c3t0v)|(840,55)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="309" Joints="N(135:found)|(665,280) h(10) v(-235) N(137:c2t0v)|(840,45)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="310" Joints="N(134:found)|(575,280) h(10) v(-245) N(137:c1t0v)|(840,35)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="311" Joints="N(133:found)|(485,280) h(25) v(-255) N(137:c0t0v)|(840,25)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="312" Joints="N(139:error out)|(890,300) N(90:87)|(1073,300)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="313" Joints="N(127:c1t0v)|(255,415) h(95) v(-310) N(140:c1t0v)|(925,105)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="314" Joints="N(129:size(s\))|(890,100) h(10) v(-10) N(140:c0t0v)|(925,90)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="315" Joints="N(127:c0t0v)|(255,400) h(75) v(-310) N(129:array)|(850,90)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="317" Joints="N(108:Out)|(165,310) h(20) v(-20) N(132:default value (empty Variant\))|(275,290)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="318" Joints="N(136:error out)|(750,300) N(139:error in (no error\))|(850,300)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="319" Joints="N(136:duplicate waveform)|(750,270) N(139:waveform)|(850,270)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="320" Joints="N(109:Out)|(138,180) h(697) v(100) N(139:name)|(850,280)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="321" Joints="N(93:i0)|(6,80) N(140:instance in)|(925,80)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="322" Joints="N(133:error out)|(485,300) N(134:error in (no error\))|(535,300)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="323" Joints="N(133:duplicate waveform)|(485,270) N(134:waveform)|(535,270)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="324" Joints="N(132:error out)|(315,300) N(133:error in (no error\))|(445,300)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="325" Joints="N(132:duplicate waveform)|(315,270) N(133:waveform)|(445,270)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="326" Joints="N(106:Out)|(130,280) N(132:name)|(275,280)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="327" Joints="N(91:i0)|(6,300) N(132:error in (no error\))|(275,300)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="328" Joints="N(104:Out)|(164,220) h(446) v(60) N(135:name)|(625,280)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="329" Joints="N(102:Out)|(139,260) h(296) v(20) N(133:name)|(445,280)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="330" Joints="N(100:Out)|(137,240) h(383) v(40) N(134:name)|(535,280)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="331" Joints="N(134:error out)|(575,300) N(135:error in (no error\))|(625,300)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="332" Joints="N(134:duplicate waveform)|(575,270) N(135:waveform)|(625,270)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="333" Joints="N(98:Out)|(155,200) h(545) v(80) N(136:name)|(710,280)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="334" Joints="N(135:error out)|(665,300) N(136:error in (no error\))|(710,300)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="335" Joints="N(135:duplicate waveform)|(665,270) N(136:waveform)|(710,270)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="358" Joints="N(92:i0)|(6,440) h(174) v(-50) N(127:instance in)|(205,390)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="359" Joints="N(127:instance out)|(255,390) h(5) v(-120) N(132:waveform)|(275,270)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="362" Joints="N(139:value)|(890,290) h(15) v(-80) N(140:c8t0v)|(925,210)" xmlns="http://www.ni.com/PlatformFramework" />
+						<LoopCount Bounds="1 1 15 15" Docking="Left" Id="89" Terminals="86, 87" />
+						<RightShiftRegister Bounds="1075 297 13 10" Docking="Right" Id="90" Terminals="86=342, 87=312" />
+						<LeftShiftRegister Bounds="-5 297 13 10" Docking="Left" Id="91" RightRegister="90" Terminals="o0=346, i0=327" />
+						<LoopTunnel AutoIndex="True" Bounds="-5 437 13 10" Docking="Left" Id="92" Terminals="o0=338, i0=358" TunnelMode="0" />
+						<LoopTunnel Bounds="-5 77 13 10" Docking="Left" Id="93" Terminals="o0=345, i0=321" />
+						<LoopTunnel AutoIndex="True" Bounds="1075 27 13 10" Docking="Right" Id="94" Terminals="o0=344, i0=307" TunnelMode="0" />
+						<LoopTunnel AutoIndex="True" Bounds="1075 77 13 10" Docking="Right" Id="95" Terminals="o0=343, i0=306" TunnelMode="0" />
+						<LoopTunnel AutoIndex="True" Bounds="1075 352 13 10" Docking="Right" Id="96" Terminals="o0=341, i0=299" TunnelMode="0" />
+						<LoopTunnel Bounds="-5 372 13 10" Docking="Left" Id="97" Terminals="o0=340, i0=293" />
+					</ForLoop>
+					<Wire Id="336" Joints="N(74:current time)|(120,410) N(82:76)|(136,410)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="337" Joints="N(75:size(s\))|(65,440) N(81:76)|(136,440)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="338" Joints="N(48:44)|(4,570) h(11) B(1) N(51:44)|(1461,570) B(1) v(-95) B(3) N(92:o0)|(338,475) B(3) v(-45) N(75:array)|(25,430)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="339" Joints="N(53:44)|(4,395) N(79:76)|(136,395)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="340" Joints="N(80:76)|(284,410) N(97:o0)|(338,410)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="341" Joints="N(96:o0)|(1431,390) N(52:44)|(1461,390)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="342" Joints="N(90:86)|(1431,335) N(47:44)|(1461,335)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="343" Joints="N(95:o0)|(1431,115) N(49:44)|(1461,115)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="344" Joints="N(94:o0)|(1431,65) N(50:44)|(1461,65)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Facade="WireInvisibleFacade" Id="345" Joints="N(54:Out)|(338,115) N(93:o0)|(338,115)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="346" Joints="N(46:44)|(4,335) N(91:o0)|(338,335)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 1465 595" Id="45" Pattern="Error">
+					<Wire Id="347" Joints="N(48:45)|(4,570) N(51:45)|(1461,570)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="348" Joints="N(46:45)|(4,335) N(47:45)|(1461,335)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Selector Bounds="-4 335 13 10" Docking="Left" Id="46" Terminals="43=355, 44=346, 45=348" />
+				<CaseStructure.Tunnel Bounds="1466 335 13 10" Docking="Right" Id="47" Terminals="43=356, 44=342, 45=348" />
+				<CaseStructure.Tunnel Bounds="-4 570 13 10" Docking="Left" Id="48" Terminals="43=353, 44=338, 45=347" />
+				<CaseStructure.Tunnel Bounds="1466 115 13 10" DefaultIfUnwired="True" Docking="Right" Id="49" Terminals="43=354, 44=343, 45" />
+				<CaseStructure.Tunnel Bounds="1466 65 13 10" DefaultIfUnwired="True" Docking="Right" Id="50" Terminals="43=352, 44=344, 45" />
+				<CaseStructure.Tunnel Bounds="1466 570 13 10" Docking="Right" Id="51" Terminals="43=351, 44=338, 45=347" />
+				<CaseStructure.Tunnel Bounds="1466 390 13 10" DefaultIfUnwired="True" Docking="Right" Id="52" Terminals="43=350, 44=341, 45" />
+				<CaseStructure.Tunnel Bounds="-4 395 13 10" Docking="Left" Id="53" Terminals="43=349, 44=339, 45" />
+			</CaseStructure>
+			<Wire Id="349" Joints="N(42:First Call?: T/F)|(-5,370) N(53:43)|(46,370)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="350" Joints="N(52:43)|(1529,365) N(40:Value)|(1553,365)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="351" Joints="N(51:43)|(1529,545) N(38:Value)|(1553,545)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="352" Joints="N(50:43)|(1529,40) N(36:Value)|(1553,40)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="353" Joints="N(34:Value)|(20,545) N(48:43)|(46,545)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="354" Joints="N(49:43)|(1529,90) N(32:Value)|(1553,90)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="355" Joints="N(30:Value)|(20,310) N(46:43)|(46,310)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="356" Joints="N(47:43)|(1529,310) N(28:Value)|(1553,310)" xmlns="http://www.ni.com/PlatformFramework" />
+		</BlockDiagram>
+		<NativeFrontPanel AllowMaximize="[bool]False" EnforceMaximumSize="[bool]True" Height="[float]1600" Id="13" Left="[float]0" MaxHeight="[float]1600" MaxWidth="[float]2000" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" Width="[float]2000" WindowTitleOption="[WindowTitleOption]None">
+			<Cluster BaseName="[string]Error" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]Error" Height="[float]176" Id="363" IsTabStop="[bool]True" Label="[UIModel]370" LabelLinked="[bool]True" Left="[float]721" MinHeight="[float]128" MinWidth="[float]112" TabIndex="[int]0" Top="[float]704" Value="{DataItemBinding Id=14}" Width="[float]176" p4:ControlDefinitionChecksum="J+f/EiASvnzghyjtgi4nEE7z+0udh8Z1+KU2hWC1ppw=" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/PanelCommon">
+				<p4:p.TypeDefinitionTargets>
+					<p4:TypeDefinitionTarget TargetName="NI::G Core::Error::Error.gtype::ControlDefinition" />
+				</p4:p.TypeDefinitionTargets>
+				<LVCheckBox Content="[string]" ContentVisibility="[Visibility]Collapsed" Height="[float]22" Id="2ce2b391939e4cde89194bd9f5d1153c" IsReadOnly="[bool]True" Label="[UIModel]44c661e6a6ae4bdbbc961b05fbd053ed" Left="[float]3" TabIndex="[int]0" Top="[float]24" Value="{ClusterBinding FieldName=status}" Width="[float]22" p6:DisplayAsErrorStatus="True" xmlns:p6="http://www.ni.com/Controls.LabVIEW.Design" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="44c661e6a6ae4bdbbc961b05fbd053ed" LabelOwner="[UIModel]2ce2b391939e4cde89194bd9f5d1153c" Left="[float]3" Text="[string]status" Top="[float]4" Width="[float]32" />
+				<NumericText Height="[float]24" Id="b37a10a0a20c4c19bfaa8ddbd3c2a189" IsReadOnly="[bool]True" Label="[UIModel]c9ab0ddcfe6f4a25b0089c67330b1b78" Left="[float]54" RadixVisibility="[SMVisibility]Visible" TabIndex="[int]1" Top="[float]24" Value="{ClusterBinding FieldName=code}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]111" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="c9ab0ddcfe6f4a25b0089c67330b1b78" LabelOwner="[UIModel]b37a10a0a20c4c19bfaa8ddbd3c2a189" Left="[float]54" Text="[string]code" Top="[float]4" Width="[float]26" />
+				<StringControl AcceptsReturn="[bool]True" Height="[float]95" Id="ec758e82cd514e628f8ff83e0cfa7b96" IsReadOnly="[bool]True" Label="[UIModel]a59859d64fbd4717ab6367235d146712" Left="[float]3" TabIndex="[int]2" Text="{ClusterBinding FieldName=source}" Top="[float]70" Width="[float]162" WordWrap="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="a59859d64fbd4717ab6367235d146712" LabelOwner="[UIModel]ec758e82cd514e628f8ff83e0cfa7b96" Left="[float]3" Text="[string]source" Top="[float]50" Width="[float]35" />
+			</Cluster>
+			<Label Height="[float]16" Id="370" LabelOwner="[UIModel]363" Left="[float]721" Text="[string]error out" Top="[float]684" Width="[float]26" xmlns="http://www.ni.com/PanelCommon" />
+			<Cluster BaseName="[string]Error" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]Error" Height="[float]176" Id="372" IsTabStop="[bool]True" Label="[UIModel]379" LabelLinked="[bool]True" Left="[float]64" MinHeight="[float]128" MinWidth="[float]112" TabIndex="[int]1" Top="[float]704" Value="{DataItemBinding Id=15}" Width="[float]176" p4:ControlDefinitionChecksum="J+f/EiASvnzghyjtgi4nEE7z+0udh8Z1+KU2hWC1ppw=" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/PanelCommon">
+				<p4:p.TypeDefinitionTargets>
+					<p4:TypeDefinitionTarget TargetName="NI::G Core::Error::Error.gtype::ControlDefinition" />
+				</p4:p.TypeDefinitionTargets>
+				<LVCheckBox Content="[string]" ContentVisibility="[Visibility]Collapsed" Height="[float]22" Id="bbf7489108e8432dbc30edc450317023" Label="[UIModel]3ed083db8a2b4efda913808214f62a7e" Left="[float]3" TabIndex="[int]0" Top="[float]24" Value="{ClusterBinding FieldName=status}" Width="[float]22" p6:DisplayAsErrorStatus="True" xmlns:p6="http://www.ni.com/Controls.LabVIEW.Design" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="3ed083db8a2b4efda913808214f62a7e" LabelOwner="[UIModel]bbf7489108e8432dbc30edc450317023" Left="[float]3" Text="[string]status" Top="[float]4" Width="[float]32" />
+				<NumericText Height="[float]24" Id="66f07ac3a6e4a35ae43318318cb76ca" Label="[UIModel]2c8edc7954214fbfb77ab31270b33395" Left="[float]54" RadixVisibility="[SMVisibility]Visible" TabIndex="[int]1" Top="[float]24" Value="{ClusterBinding FieldName=code}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]111" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="2c8edc7954214fbfb77ab31270b33395" LabelOwner="[UIModel]66f07ac3a6e4a35ae43318318cb76ca" Left="[float]54" Text="[string]code" Top="[float]4" Width="[float]26" />
+				<StringControl AcceptsReturn="[bool]True" Height="[float]95" Id="2159006a9d694bd0a4c3983b61e2d61d" Label="[UIModel]723feea32aab4be29780efcb2e7f3849" Left="[float]3" TabIndex="[int]2" Text="{ClusterBinding FieldName=source}" Top="[float]70" Width="[float]162" WordWrap="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="723feea32aab4be29780efcb2e7f3849" LabelOwner="[UIModel]2159006a9d694bd0a4c3983b61e2d61d" Left="[float]3" Text="[string]source" Top="[float]50" Width="[float]35" />
+			</Cluster>
+			<Label Height="[float]16" Id="379" LabelOwner="[UIModel]372" Left="[float]64" Text="[string]error in" Top="[float]684" Width="[float]26" xmlns="http://www.ni.com/PanelCommon" />
+			<ArrayViewer ArrayElement="[UIModel]161" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]440" Id="191" IndexVisibility="[Visibility]Visible" IsFixedSize="[bool]False" Label="[UIModel]201" Left="[float]384" Orientation="[SMOrientation]Horizontal" Rows="[int]1" TabIndex="[int]2" Top="[float]288" Value="{DataItemBinding Id=16}" Width="[float]280" xmlns="http://www.ni.com/PanelCommon">
+				<p.DefaultElementValue>
+					<Cluster>
+						<Field1>60052752000;0;Utc</Field1>
+						<Field2>60052752000;0;Utc</Field2>
+						<Field3>False</Field3>
+						<Field4>""</Field4>
+						<Field5>""</Field5>
+						<Field6>""</Field6>
+						<Field7>60052752000;0;Utc</Field7>
+						<Field8>0x0</Field8>
+						<Field9>0</Field9>
+					</Cluster>
+				</p.DefaultElementValue>
+				<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@002297f3791f47de9f9523eb92685f17" Height="[float]426" Id="161" Name="[string]Child" Width="[float]220">
+					<TimeStampTextBox BaseName="[string]Timestamp" Height="[float]24" Id="164" InteractionMode="[TimeStampTextBoxInteractionModes]ReadOnly" Label="[UIModel]192" Left="[float]5" Maximum="[PrecisionDateTime]3001-01-01T00:00:00.0" Minimum="[PrecisionDateTime]1600-01-01T00:00:00.0" TabIndex="[int]0" Top="[float]23" Value="{ClusterBinding FieldName=Start\ Timestamp}" Width="[float]202" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<TimeStampTextBox BaseName="[string]Timestamp" Height="[float]24" Id="167" InteractionMode="[TimeStampTextBoxInteractionModes]ReadOnly" Label="[UIModel]193" Left="[float]5" Maximum="[PrecisionDateTime]3001-01-01T00:00:00.0" Minimum="[PrecisionDateTime]1600-01-01T00:00:00.0" TabIndex="[int]1" Top="[float]68" Value="{ClusterBinding FieldName=Timestamp}" Width="[float]202" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<LED BaseName="[string]Square LED" FalseContent="[string]Off" Height="[float]30" Id="170" IsReadOnly="[bool]True" Label="[UIModel]194" Left="[float]5" Shape="[LEDShape]Square" TabIndex="[int]2" Top="[float]113" TrueContent="[string]On" Value="{ClusterBinding FieldName=Relative\ Time?}" Width="[float]30" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="173" IsReadOnly="[bool]True" Label="[UIModel]195" Left="[float]5" TabIndex="[int]3" Text="{ClusterBinding FieldName=X\ Dimension}" Top="[float]166" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="176" IsReadOnly="[bool]True" Label="[UIModel]196" Left="[float]5" TabIndex="[int]4" Text="{ClusterBinding FieldName=Signal\ Name}" Top="[float]211" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="179" IsReadOnly="[bool]True" Label="[UIModel]197" Left="[float]5" TabIndex="[int]5" Text="{ClusterBinding FieldName=Y\ Units}" Top="[float]256" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<TimeStampTextBox BaseName="[string]Timestamp" Height="[float]24" Id="182" InteractionMode="[TimeStampTextBoxInteractionModes]ReadOnly" Label="[UIModel]198" Left="[float]5" Maximum="[PrecisionDateTime]3001-01-01T00:00:00.0" Minimum="[PrecisionDateTime]1600-01-01T00:00:00.0" TabIndex="[int]6" Top="[float]301" Value="{ClusterBinding FieldName=X0}" Width="[float]202" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<NumericText BaseName="[string]Numeric" Height="[float]24" Id="185" IsReadOnly="[bool]True" Label="[UIModel]199" Left="[float]5" TabIndex="[int]7" Top="[float]346" Value="{ClusterBinding FieldName=dX}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<NumericText BaseName="[string]Numeric" Height="[float]24" Id="188" Interval="[int]1" IsReadOnly="[bool]True" Label="[UIModel]200" Left="[float]5" TabIndex="[int]8" Top="[float]391" Value="{ClusterBinding FieldName=nPoints}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<Label Id="192" LabelOwner="[UIModel]164" Left="[float]5" Text="[string]Start Timestamp" Top="[float]3" />
+					<Label Id="193" LabelOwner="[UIModel]167" Left="[float]5" Text="[string]Timestamp" Top="[float]48" />
+					<Label Id="194" LabelOwner="[UIModel]170" Left="[float]5" Text="[string]Relative Time?" Top="[float]93" />
+					<Label Id="195" LabelOwner="[UIModel]173" Left="[float]5" Text="[string]X Dimension" Top="[float]146" />
+					<Label Id="196" LabelOwner="[UIModel]176" Left="[float]5" Text="[string]Signal Name" Top="[float]191" />
+					<Label Id="197" LabelOwner="[UIModel]179" Left="[float]5" Text="[string]Y Units" Top="[float]236" />
+					<Label Id="198" LabelOwner="[UIModel]182" Left="[float]5" Text="[string]X0" Top="[float]281" />
+					<Label Id="199" LabelOwner="[UIModel]185" Left="[float]5" Text="[string]dX" Top="[float]326" />
+					<Label Id="200" LabelOwner="[UIModel]188" Left="[float]5" Text="[string]nPoints" Top="[float]371" />
+				</Cluster>
+			</ArrayViewer>
+			<Label Height="[float]16" Id="201" LabelOwner="[UIModel]191" Left="[float]384" Text="[string]All Express Wave Attributes Plus" Top="[float]268" Width="[float]170" xmlns="http://www.ni.com/PanelCommon" />
+			<Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=17}" Height="[float]200" Id="204" Label="[UIModel]222" Left="[float]64" MetadataAlwaysOverridesPlotNames="[bool]True" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" TabIndex="[int]3" Top="[float]46" Width="[float]300" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<Axis Adjuster="[RangeAdjuster]FitLoosely" Id="205" Label="[string]Time" MajorDivisions="[UIModel]216" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 100, System.Double" ValueType="[Type]Double">
+					<RangeLabeledDivisions Id="216">
+						<p.LabelPresenter Kind="LVRelativeSeconds" Format="0.######" ShortFormat="0.000E+0" />
+					</RangeLabeledDivisions>
+				</Axis>
+				<Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="206" Label="[string]Amplitude" MajorDivisions="[UIModel]217" Orientation="[SMOrientation]Vertical" Range="[IRange]0, 10, System.Double" ValueType="[Type]Double">
+					<RangeLabeledDivisions Id="217">
+						<p.LabelPresenter Kind="LVRelativeSeconds" Format="0.######" ShortFormat="0.000E+0" />
+					</RangeLabeledDivisions>
+				</Axis>
+				<Plot HorizontalScale="[UIModel]205" Id="207" Label="[string]Plot" VerticalScale="[UIModel]206" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="208" LineStroke="[SMSolidColorBrush]#ff7b161a" PointShape="[PointShape]Ellipse" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="209" LineStroke="[SMSolidColorBrush]#ff008ee4" PointShape="[PointShape]Rectangle" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="210" LineStroke="[SMSolidColorBrush]#ffe2b683" PointShape="[PointShape]Diamond" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="211" LineStroke="[SMSolidColorBrush]#ffb7ac1f" PointShape="[PointShape]Cross" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="212" LineStroke="[SMSolidColorBrush]#ffaedcef" PointShape="[PointShape]Ellipse" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="213" LineStroke="[SMSolidColorBrush]#ffa08bb0" PointShape="[PointShape]Rectangle" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="214" LineStroke="[SMSolidColorBrush]#ff7f7f7f" PointShape="[PointShape]Diamond" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="215" LineStroke="[SMSolidColorBrush]#ff3c0726" PointShape="[PointShape]Cross" />
+			</Graph>
+			<Label Height="[float]16" Id="222" LabelOwner="[UIModel]204" Left="[float]64" Text="[string]Signals in" Top="[float]26" Width="[float]51" xmlns="http://www.ni.com/PanelCommon" />
+			<PlotLegend Graph="[UIModel]204" Height="[float]28" Id="218" Left="[float]371" Top="[float]46" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]204" Height="[float]102" Id="219" Left="[float]69" MinHeight="[float]80" Top="[float]275" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<ScaleLegend Graph="[UIModel]204" Height="[float]50" Id="220" Left="[float]371" MinHeight="[float]50" Top="[float]144" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<GraphTools Graph="[UIModel]204" Height="[float]22" Id="221" Left="[float]69" Top="[float]253" Visible="[bool]False" Width="[float]148" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<ArrayViewer ArrayElement="[UIModel]225" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]44" Id="228" IndexVisibility="[Visibility]Visible" Label="[UIModel]229" Left="[float]64" Orientation="[SMOrientation]Horizontal" Rows="[int]1" TabIndex="[int]5" Top="[float]288" Value="{DataItemBinding Id=18}" Width="[float]90" xmlns="http://www.ni.com/PanelCommon">
+				<p.DefaultElementValue>False</p.DefaultElementValue>
+				<LED BaseName="[string]Square LED" FalseContent="[string]Off" Height="[float]30" Id="225" IsReadOnly="[bool]True" Name="[string]Child" Shape="[LEDShape]Square" TrueContent="[string]On" Width="[float]30" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			</ArrayViewer>
+			<Label Height="[float]16" Id="229" LabelOwner="[UIModel]228" Left="[float]64" Text="[string]Time Attribs Not Found" Top="[float]268" Width="[float]125" xmlns="http://www.ni.com/PanelCommon" />
+			<Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=19}" Height="[float]200" Id="232" Label="[UIModel]250" Left="[float]721" MetadataAlwaysOverridesPlotNames="[bool]True" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" TabIndex="[int]4" Top="[float]46" Width="[float]300" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<Axis Adjuster="[RangeAdjuster]FitLoosely" Id="233" Label="[string]Time" MajorDivisions="[UIModel]244" Orientation="[SMOrientation]Horizontal" Range="[IRange]0, 100, System.Double" ValueType="[Type]Double">
+					<RangeLabeledDivisions Id="244">
+						<p.LabelPresenter Kind="LVRelativeSeconds" Format="0.######" ShortFormat="0.000E+0" />
+					</RangeLabeledDivisions>
+				</Axis>
+				<Axis Adjuster="[RangeAdjuster]FitVisibleLoosely" Id="234" Label="[string]Amplitude" MajorDivisions="[UIModel]245" Orientation="[SMOrientation]Vertical" Range="[IRange]0, 10, System.Double" ValueType="[Type]Double">
+					<RangeLabeledDivisions Id="245">
+						<p.LabelPresenter Kind="LVRelativeSeconds" Format="0.######" ShortFormat="0.000E+0" />
+					</RangeLabeledDivisions>
+				</Axis>
+				<Plot HorizontalScale="[UIModel]233" Id="235" Label="[string]Plot" VerticalScale="[UIModel]234" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="236" LineStroke="[SMSolidColorBrush]#ff7b161a" PointShape="[PointShape]Ellipse" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="237" LineStroke="[SMSolidColorBrush]#ff008ee4" PointShape="[PointShape]Rectangle" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="238" LineStroke="[SMSolidColorBrush]#ffe2b683" PointShape="[PointShape]Diamond" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="239" LineStroke="[SMSolidColorBrush]#ffb7ac1f" PointShape="[PointShape]Cross" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="240" LineStroke="[SMSolidColorBrush]#ffaedcef" PointShape="[PointShape]Ellipse" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="241" LineStroke="[SMSolidColorBrush]#ffa08bb0" PointShape="[PointShape]Rectangle" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="242" LineStroke="[SMSolidColorBrush]#ff7f7f7f" PointShape="[PointShape]Diamond" />
+				<PlotRenderer AreaBaseline="[FillBaseline]Zero" BarBaseline="[FillBaseline]Zero" Id="243" LineStroke="[SMSolidColorBrush]#ff3c0726" PointShape="[PointShape]Cross" />
+			</Graph>
+			<Label Height="[float]16" Id="250" LabelOwner="[UIModel]232" Left="[float]721" Text="[string]Signals out" Top="[float]26" Width="[float]59" xmlns="http://www.ni.com/PanelCommon" />
+			<PlotLegend Graph="[UIModel]232" Height="[float]28" Id="246" Left="[float]1028" Top="[float]46" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<CursorLegend DefaultCursorForeground="[SMSolidColorBrush]#ff000000" Graph="[UIModel]232" Height="[float]102" Id="247" Left="[float]726" MinHeight="[float]80" Top="[float]275" Visible="[bool]False" Width="[float]251" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<ScaleLegend Graph="[UIModel]232" Height="[float]50" Id="248" Left="[float]1028" MinHeight="[float]50" Top="[float]144" Visible="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<GraphTools Graph="[UIModel]232" Height="[float]22" Id="249" Left="[float]726" Top="[float]253" Visible="[bool]False" Width="[float]148" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<ArrayViewer ArrayElement="[UIModel]253" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" Height="[float]260" Id="271" IndexVisibility="[Visibility]Visible" IsFixedSize="[bool]False" Label="[UIModel]277" Left="[float]721" Orientation="[SMOrientation]Horizontal" Rows="[int]1" TabIndex="[int]6" Top="[float]288" Value="{DataItemBinding Id=20}" Width="[float]280" xmlns="http://www.ni.com/PanelCommon">
+				<p.DefaultElementValue>
+					<Cluster>
+						<Field1>60052752000;0;Utc</Field1>
+						<Field2>60052752000;0;Utc</Field2>
+						<Field3>False</Field3>
+						<Field4>""</Field4>
+						<Field5>""</Field5>
+					</Cluster>
+				</p.DefaultElementValue>
+				<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@32da263b062b4b8687ba784147fef6c9" Height="[float]246" Id="253" Name="[string]Child" Width="[float]220">
+					<TimeStampTextBox BaseName="[string]Timestamp" Height="[float]24" Id="256" InteractionMode="[TimeStampTextBoxInteractionModes]ReadOnly" Label="[UIModel]272" Left="[float]5" Maximum="[PrecisionDateTime]3001-01-01T00:00:00.0" Minimum="[PrecisionDateTime]1600-01-01T00:00:00.0" TabIndex="[int]0" Top="[float]23" Value="{ClusterBinding FieldName=Start\ Timestamp}" Width="[float]202" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<TimeStampTextBox BaseName="[string]Timestamp" Height="[float]24" Id="259" InteractionMode="[TimeStampTextBoxInteractionModes]ReadOnly" Label="[UIModel]273" Left="[float]5" Maximum="[PrecisionDateTime]3001-01-01T00:00:00.0" Minimum="[PrecisionDateTime]1600-01-01T00:00:00.0" TabIndex="[int]1" Top="[float]68" Value="{ClusterBinding FieldName=Timestamp}" Width="[float]202" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<LED BaseName="[string]Square LED" FalseContent="[string]Off" Height="[float]30" Id="262" IsReadOnly="[bool]True" Label="[UIModel]274" Left="[float]5" Shape="[LEDShape]Square" TabIndex="[int]2" Top="[float]113" TrueContent="[string]On" Value="{ClusterBinding FieldName=Relative\ Time?}" Width="[float]30" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="265" IsReadOnly="[bool]True" Label="[UIModel]275" Left="[float]5" TabIndex="[int]3" Text="{ClusterBinding FieldName=X\ Dimension}" Top="[float]166" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="268" IsReadOnly="[bool]True" Label="[UIModel]276" Left="[float]5" TabIndex="[int]4" Text="{ClusterBinding FieldName=Signal\ Name}" Top="[float]211" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+					<Label Id="272" LabelOwner="[UIModel]256" Left="[float]5" Text="[string]Start Timestamp" Top="[float]3" />
+					<Label Id="273" LabelOwner="[UIModel]259" Left="[float]5" Text="[string]Timestamp" Top="[float]48" />
+					<Label Id="274" LabelOwner="[UIModel]262" Left="[float]5" Text="[string]Relative Time?" Top="[float]93" />
+					<Label Id="275" LabelOwner="[UIModel]265" Left="[float]5" Text="[string]X Dimension" Top="[float]146" />
+					<Label Id="276" LabelOwner="[UIModel]268" Left="[float]5" Text="[string]Signal Name" Top="[float]191" />
+				</Cluster>
+			</ArrayViewer>
+			<Label Height="[float]16" Id="277" LabelOwner="[UIModel]271" Left="[float]721" Text="[string]All Express Wave Attributes" Top="[float]268" Width="[float]145" xmlns="http://www.ni.com/PanelCommon" />
+			<PanelExecutionWindow Id="380" />
+		</NativeFrontPanel>
+		<DataItem CallDirection="Output" CallIndex="4" DataType="Error" Id="14" Name="error out" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>
+				<Cluster>
+					<Field1>False</Field1>
+					<Field2>0</Field2>
+					<Field3>""</Field3>
+				</Cluster>
+			</p.DefaultValue>
+			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+				<TypeDefinitionTarget TargetName="NI::G Core::Error::Error.gtype" />
+			</p.TypeDefinitionTargets>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">"The &lt;B&gt;error in&lt;/B&gt; cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.\n\nThe pop-up option &lt;B&gt;Explain Error&lt;/B&gt; (or Explain Warning) gives more information about the error displayed. "</p.UserDescription>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="2" DataType="Error" Id="15" Name="error in" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>
+				<Cluster>
+					<Field1>False</Field1>
+					<Field2>0</Field2>
+					<Field3>""</Field3>
+				</Cluster>
+			</p.DefaultValue>
+			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+				<TypeDefinitionTarget TargetName="NI::G Core::Error::Error.gtype" />
+			</p.TypeDefinitionTargets>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">"The &lt;B&gt;error in&lt;/B&gt; cluster can accept error information wired from VIs previously called.  Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.\n\nThe pop-up option &lt;B&gt;Explain Error&lt;/B&gt; (or Explain Warning) gives more information about the error displayed. "</p.UserDescription>
+		</DataItem>
+		<DataItem CallDirection="Output" CallIndex="3" DataType="@5cadaeb3ca924fecb1fe6ffc1ae1d3cd" Id="16" Name="All Express Wave Attributes Plus" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>null</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="1" DataType="Wfm(Double)[]" Id="17" Name="Signals in" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>
+				<Array Lengths="0" />
+			</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Output" CallIndex="5" DataType="Boolean[]" Id="18" Name="Time Attribs Not Found" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>null</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Output" CallIndex="1" DataType="Wfm(Double)[]" Id="19" Name="Signals out" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>
+				<Array Lengths="0" />
+			</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Output" CallIndex="2" DataType="@ce057386dfa04a029d8dc1cedcd5170b" Id="20" Name="All Express Wave Attributes" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>null</p.DefaultValue>
+		</DataItem>
+		<DataItem DataType="Timestamp[]" Id="21" Name="origin timestamps" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>null</p.DefaultValue>
+		</DataItem>
+	</VirtualInstrument>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="5cadaeb3ca924fecb1fe6ffc1ae1d3cd">
+			<VariableArray DereferenceType="@002297f3791f47de9f9523eb92685f17" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="ce057386dfa04a029d8dc1cedcd5170b">
+			<VariableArray DereferenceType="@32da263b062b4b8687ba784147fef6c9" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="ae9a4a732f94449287829bed488247a5">
+			<Attributed AttributedType="@6bf6bca274f04aa2a843f1d3f05b3f97">
+				<AttributeValues>
+					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]NI::G Core::Waveform::Legacy" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="7d82b5ab51ad43ed8aa5f0686b48fbef">
+			<Attributed AttributedType="@4e67b56752f64c80a4d9f123fe7a7bfe">
+				<AttributeValues>
+					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]NI::G Core::Waveform::Legacy" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="002297f3791f47de9f9523eb92685f17">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Start Timestamp" DataType="Timestamp" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Timestamp" DataType="Timestamp" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Relative Time?" DataType="Boolean" />
+					<Field FieldAccessPolicy="ReadWrite" Name="X Dimension" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Signal Name" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Y Units" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="X0" DataType="Timestamp" />
+					<Field FieldAccessPolicy="ReadWrite" Name="dX" DataType="Double" />
+					<Field FieldAccessPolicy="ReadWrite" Name="nPoints" DataType="Int32" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="32da263b062b4b8687ba784147fef6c9">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Start Timestamp" DataType="Timestamp" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Timestamp" DataType="Timestamp" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Relative Time?" DataType="Boolean" />
+					<Field FieldAccessPolicy="ReadWrite" Name="X Dimension" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Signal Name" DataType="String" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="6bf6bca274f04aa2a843f1d3f05b3f97">
+			<Typedef TypedefName="ex_WaveformAttribsPlus.gtype" UnderlyingType="@002297f3791f47de9f9523eb92685f17" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="4e67b56752f64c80a4d9f123fe7a7bfe">
+			<Typedef TypedefName="ex_WaveformAttribs.gtype" UnderlyingType="@32da263b062b4b8687ba784147fef6c9" />
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

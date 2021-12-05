@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="90421980134A7B30D75859AAA0AA0F1148A5679F51F8539E403748BAEEA8ADFB2083A05CE0C7836247488DE623762817B2384271AB374BDB158538A4C8D545E6" Timestamp="1D69761C3DF0DF0" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="C" Name="http://www.ni.com/CCode" OldestCompatibleVersion="4.5.0.0" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.51564" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="Text based nodes" Name="http://www.ni.com/TextCode.Editor" OldestCompatibleVersion="4.5.0.0" Version="4.5.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.49573" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<VirtualInstrument CustomTitle="Convert Thermistor Reading" Id="1" OverloadGroup="NI:G Core:Numeric:Convert Thermistor Reading" xmlns="http://www.ni.com/LabVIEW.VI">
+		<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Converts a thermistor voltage into a temperature. This VI has different modes of operation for voltage-excited and current-excited thermistors. Wire data to the &lt;b&gt;Voltage&lt;/b&gt; input to determine the polymorphic instance to use or manually select the instance.&lt;/p&gt;</p.UserDescription>
+		<Icon Id="63" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="64" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<Path Data="[PathGeometry]M 36,1 C 37.6539993,1 39,2.29299998 39,3.94700003 L 39,36 C 39,37.6539993 37.6539993,39 36,39 L 4.08300018,39 C 2.4289999,39 1,37.6539993 1,36 L 1,3.94700003 C 1,2.29299998 2.4289999,1 4.08300018,1 L 36,1" Fill="[SMSolidColorBrush]#ffffffff" Height="[float]40" Id="472" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+				<Path Data="[PathGeometry]M 36,1 C 37.6539993,1 39,2.29299998 39,3.94700003 L 39,36 C 39,37.6539993 37.6539993,39 36,39 L 4.08300018,39 C 2.4289999,39 1,37.6539993 1,36 L 1,3.94700003 C 1,2.29299998 2.4289999,1 4.08300018,1 L 36,1 M 36,0 L 4.08300018,0 C 1.88300002,0 0,1.74699998 0,3.94700003 L 0,36 C 0,38.2000008 1.88300002,40 4.08300018,40 L 36,40 C 38.2000008,40 40,38.2000008 40,36 L 40,3.94700003 C 40,1.74699998 38.2000008,0 36,0 L 36,0 Z" Fill="[SMSolidColorBrush]#ff747474" Height="[float]40" Id="473" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+				<Path Data="[PathGeometry]M 38,36.007 C 38,37.1069984 37.0999985,37.9539986 36,37.9539986 L 4,37.9539986 C 2.9000001,37.9539986 2,37.1069984 2,36.007 L 2,3.954 C 2,2.85400009 2.9000001,1.954 4,1.954 L 36,1.954 C 37.0999985,1.954 38,2.85400009 38,3.954 L 38,36.007 Z" Fill="[SMSolidColorBrush]#ffeaeaea" Height="[float]40" Id="474" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+				<Path Data="[PathGeometry]M 8,34.0900002 L 8,28.3470001 C 8,27.1720009 8.95300007,26.2189999 10.1280003,26.2189999 L 14.8710003,26.2189999 C 15.2349997,26.2189999 15.5749998,26.3120003 15.8719997,26.4740009 C 16.4950008,26.8139992 17.1749992,27.0370007 17.8850002,27.0370007 L 19.0440006,27.0370007 C 19.4309998,27.0370007 19.7740002,27.2180004 19.9979992,27.4990005 C 20.1660004,27.7099991 20.4020004,27.8560009 20.6720009,27.8560009 L 22.1030006,27.8560009 L 22.2259998,28.0090008 C 22.6620007,28.5510006 23.2129993,29.1709995 23.4950008,29.4190006 C 23.7740002,29.1560001 24.375,28.5330009 24.8799992,27.9869995 L 25.0009995,27.8560009 L 31.7250004,27.8560009 L 31.7250004,28.6739998 L 25.3600006,28.6739998 C 24.4640007,29.6380005 23.9150009,30.1730003 23.7290001,30.2670002 C 23.4769993,30.3929996 23.2180004,30.5200005 21.7140007,28.6739998 L 20.6730003,28.6739998 C 20.4029999,28.6739998 20.1669998,28.8190002 19.9990005,29.0310001 C 19.7749996,29.3120003 19.4319992,29.493 19.0450001,29.493 L 17.8180008,29.493 C 17.3659992,29.493 17,29.8589993 17,30.3110008 L 17,32.1290016 C 17,32.5810013 17.3659992,32.9469986 17.8180008,32.9469986 L 19.0450001,32.9469986 C 19.4319992,32.9469986 19.7749996,33.1279984 19.9990005,33.4090004 C 20.1669998,33.6199989 20.4029999,33.7659988 20.6730003,33.7659988 L 21.7140007,33.7659988 C 22.8369999,32.387001 23.2660007,32.1090012 23.5170002,32.1090012 C 23.6019993,32.1090012 23.6660004,32.1409988 23.7299995,32.1730003 C 23.9160004,32.2669983 24.4650002,32.8030014 25.3610001,33.7659988 L 31.7280006,33.7659988 L 31.7280006,34.5839996 L 25.0039997,34.5839996 L 24.8829994,34.4529991 C 24.3829994,33.9119987 23.7880001,33.2949982 23.4960003,33.0239983 C 23.2140007,33.2729988 22.6639996,33.8919983 22.2299995,34.4319992 L 22.1070004,34.5849991 L 20.6760006,34.5849991 C 20.4060001,34.5849991 20.1700001,34.7299995 20.0020008,34.9420013 C 19.7779999,35.2229996 19.4349995,35.4039993 19.0480003,35.4039993 L 17.9570007,35.4039993 C 17.2019997,35.4039993 16.4890003,35.6590004 15.816,35.9990005 C 15.533,36.1419983 15.2139997,36.2229996 14.875,36.2229996 L 10.132,36.2229996 C 8.95300007,36.2179985 8,35.2649994 8,34.0900002 Z M 8.16600037,3 L 11,8.71800041 L 5,8.71800041 L 5,11.7180004 L 11,11.7180004 L 8.16600037,17.573 L 22.7390003,10.2950001 L 8.16600037,3 Z M 17.302,15.7049999 L 31.875,8.42700005 L 29.007,14.1619997 L 35,14.1490002 L 35,17.1490002 L 28.9599991,17.1709995 L 31.875,23 L 17.302,15.7049999 Z" Fill="[SMSolidColorBrush]#ff4d4d4d" Height="[float]40" Id="475" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<ConnectorPane Height="40" Id="10" ListViewHeight="70" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+			<ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="15" />
+			<ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 65" Parameter="16" />
+			<ConnectorPaneTerminal Hotspot="0 25" ListViewHotspot="0 80" Parameter="17" />
+			<ConnectorPaneTerminal Hotspot="0 35" />
+			<ConnectorPaneTerminal Hotspot="15 0" ListViewHotspot="0 95" Parameter="19" />
+			<ConnectorPaneTerminal Hotspot="25 0" />
+			<ConnectorPaneTerminal Hotspot="40 5" ListViewHotspot="150 50" Parameter="18" />
+			<ConnectorPaneTerminal Hotspot="40 15" />
+			<ConnectorPaneTerminal Hotspot="40 25" />
+			<ConnectorPaneTerminal Hotspot="40 35" />
+			<ConnectorPaneTerminal Hotspot="15 40" ListViewHotspot="0 110" Parameter="20" />
+			<ConnectorPaneTerminal Hotspot="25 40" ListViewHotspot="0 125" Parameter="21" />
+		</ConnectorPane>
+		<DiagramUnplacedItems Id="11" xmlns="http://www.ni.com/MocCommon" />
+		<FrontPanelUnplacedItems Id="12" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" />
+		<BlockDiagram Id="13">
+			<Literal Bounds="140 35 74 16" DataType="Double" Id="22" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>0x3F553923486AB918</p.Data>
+				<NumericBehavior Interpretation="Exact" Radix="Decimal" RadixVisibility="Hidden" ValueFormatter="Decimal, Uppercase, Signed" />
+			</Literal>
+			<Literal Bounds="140 50 74 16" DataType="Double" Id="23" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>0x3F2EB656413EDF70</p.Data>
+				<NumericBehavior Interpretation="Exact" Radix="Decimal" RadixVisibility="Hidden" ValueFormatter="Decimal, Uppercase, Signed" />
+			</Literal>
+			<Literal Bounds="140 65 74 16" DataType="Double" Id="24" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>0x3E7B5879451EC03A</p.Data>
+				<NumericBehavior Interpretation="Exact" Radix="Decimal" RadixVisibility="Hidden" ValueFormatter="Decimal, Uppercase, Signed" />
+			</Literal>
+			<Literal Bounds="605 110 60 16" DataType="Double" Id="25" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>0x4071126666666666</p.Data>
+				<NumericBehavior Interpretation="Exact" Radix="Decimal" RadixVisibility="Hidden" ValueFormatter="Decimal, Uppercase, Signed" />
+			</Literal>
+			<CaseStructure Bounds="50 95 170 135" DataType="UInt16" Id="26" Label="30" Selected="27" UserSelectorBounds="48 0 75 17">
+				<CaseStructure.Case Bounds="5 5 160 125" Id="27" Pattern="..0">
+					<Subtract Bounds="55 35 30 30" Id="33" />
+					<Divide Bounds="100 45 30 30" Id="34" />
+					<Comment Bounds="10 20 39 15" Id="35" xmlns="http://www.ni.com/MocCommon">
+						<p.Text>Vref</p.Text>
+					</Comment>
+					<Wire Id="116" Joints="N(465:27)|(4,75) h(76) v(-10) N(34:y)|(100,65)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="117" Joints="N(34:x/y)|(130,60) N(32:27)|(156,60)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="118" Joints="N(258:27)|(4,40) N(33:x)|(55,40)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="119" Joints="N(31:27)|(4,55) N(33:y)|(55,55)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="120" Joints="N(33:x-y)|(85,50) N(34:x)|(100,50)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 160 125" Id="28" Pattern="1..">
+					<Wire Id="470" Joints="N(468:28)|(4,95) h(36) v(-35) N(32:28)|(156,60)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Selector Bounds="-4 115 13 10" Docking="Left" Id="29" Terminals="26=132, 27, 28" />
+				<CaseStructure.Tunnel Bounds="-4 55 13 10" Docking="Left" Id="31" Terminals="26=133, 27=119, 28" />
+				<CaseStructure.Tunnel Bounds="161 60 13 10" Docking="Right" Id="32" Terminals="26=134, 27=117, 28=470" />
+				<CaseStructure.Tunnel Bounds="-4 40 13 10" Docking="Left" Id="258" Terminals="26=257, 27=118, 28" />
+				<CaseStructure.Tunnel Bounds="-4 75 13 10" Docking="Left" Id="465" Terminals="26=464, 27=116, 28" />
+				<CaseStructure.Tunnel Bounds="-4 95 13 10" Docking="Left" Id="468" Terminals="26=469, 27, 28=470" />
+			</CaseStructure>
+			<NodeLabel AttachedTo="26" Bounds="50 95 0 0" Id="30" IsReadOnly="True" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>"Rt = Vo / Irt where Irt  is the current through the thermistor\nFor Voltage Source connection - Vo = Vref* Rt/ (R1 + Rt); \n     or Rt = R1 ( Vo / (Vref - Vo))\n     Irt = R1 / (Vref - Vo)\nFor Current Source connection - Vo = Iex * Rt\n     or Rt = Vo / Iex\n     Irt = Iex"</p.Text>
+			</NodeLabel>
+			<CCodeNode Bounds="270 -20 390 125" DocumentText="&quot;lnRt = log( Vo / Irt );\r\nT = 1/ (a + lnRt*(b + c*(pow(lnRt,2))));&quot;" Id="36" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+				<CCodeNodeDll DllId="{58dcf516-2046-4be4-8231-d19c867350ec}" Id="37" />
+				<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="1" Name="Vo" Usage="Required" />
+				<CVariable Bounds="370 40 50 15" DataType="Double" Direction="Output" Hotspot="420 45" Id="2" IsTypeFixed="True" Name="T" Usage="Optional" />
+				<CVariable Bounds="-25 55 45 15" DataType="Double" Direction="Input" Hotspot="-25 60" Id="3" Name="a" Usage="Required" />
+				<CVariable Bounds="-25 70 45 15" DataType="Double" Direction="Input" Hotspot="-25 75" Id="4" Name="b" Usage="Required" />
+				<CVariable Bounds="-25 85 45 15" DataType="Double" Direction="Input" Hotspot="-25 90" Id="5" Name="c" Usage="Required" />
+				<CVariable Bounds="-25 100 45 15" DataType="Double" Direction="Input" Hotspot="-25 105" Id="6" Name="Irt" Usage="Required" />
+				<CVariable Bounds="370 55 55 15" DataType="Double" Direction="Output" Hotspot="425 60" Id="7" IsTypeFixed="True" Name="lnRt" Usage="Optional" />
+			</CCodeNode>
+			<Subtract Bounds="715 20 30 30" Id="38" />
+			<CaseStructure Bounds="760 -40 350 295" DataType="UInt16" Id="39" Selected="40" UserSelectorBounds="138 0 75 17">
+				<CaseStructure.Case Bounds="5 5 340 285" Id="40" Pattern="..0">
+					<Comment Bounds="40 5 55 15" Id="47" xmlns="http://www.ni.com/MocCommon">
+						<p.Text>Celsius</p.Text>
+					</Comment>
+					<Wire Id="122" Joints="N(45:40)|(4,70) N(46:40)|(336,70)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 340 285" Id="41" Pattern="1">
+					<CCodeNode Bounds="40 25 250 65" DocumentText="F = (C * 1.8) + 32.0;" Id="48" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+						<CCodeNodeDll DllId="{f770536e-48a7-43c2-b523-2a15740483ae}" Id="49" />
+						<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="1" Name="C" Usage="Required" />
+						<CVariable Bounds="230 40 50 15" DataType="Double" Direction="Output" Hotspot="280 45" Id="2" IsTypeFixed="True" Name="F" Usage="Optional" />
+					</CCodeNode>
+					<Comment Bounds="40 5 75 15" Id="50" xmlns="http://www.ni.com/MocCommon">
+						<p.Text>Fahrenheit</p.Text>
+					</Comment>
+					<Wire Id="123" Joints="N(48:2)|(320,70) N(46:41)|(336,70)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="124" Joints="N(45:41)|(4,70) N(48:1)|(15,70)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 340 285" Id="42" Pattern="2">
+					<CCodeNode Bounds="40 25 205 65" DocumentText="K = C + 273.15;" Id="51" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+						<CCodeNodeDll DllId="{95a51a3d-e6da-48e0-a62e-e33f7b7d4f51}" Id="52" />
+						<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="1" Name="C" Usage="Required" />
+						<CVariable Bounds="185 40 50 15" DataType="Double" Direction="Output" Hotspot="235 45" Id="2" IsTypeFixed="True" Name="K" Usage="Optional" />
+					</CCodeNode>
+					<Comment Bounds="40 5 50 15" Id="53" xmlns="http://www.ni.com/MocCommon">
+						<p.Text>Kelvin</p.Text>
+					</Comment>
+					<Wire Id="125" Joints="N(51:2)|(275,70) N(46:42)|(336,70)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="126" Joints="N(45:42)|(4,70) N(51:1)|(15,70)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 340 285" Id="43" Pattern="3..">
+					<CCodeNode Bounds="40 25 255 105" DocumentText="R = (C * 1.8) + 491.67;" Id="54" OutliningMode="Manual" xmlns="http://www.ni.com/CCode">
+						<CCodeNodeDll DllId="{0f5c95e4-e4b6-496d-a7ab-470cc65fda66}" Id="55" />
+						<CVariable Bounds="-25 40 45 15" DataType="Double" Direction="Input" Hotspot="-25 45" Id="1" Name="C" Usage="Required" />
+						<CVariable Bounds="235 40 50 15" DataType="Double" Direction="Output" Hotspot="285 45" Id="2" IsTypeFixed="True" Name="R" Usage="Optional" />
+					</CCodeNode>
+					<Comment Bounds="40 5 61 15" Id="56" xmlns="http://www.ni.com/MocCommon">
+						<p.Text>Rankine</p.Text>
+					</Comment>
+					<Wire Id="127" Joints="N(54:2)|(325,70) N(46:43)|(336,70)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="128" Joints="N(45:43)|(4,70) N(54:1)|(15,70)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Selector Bounds="-4 275 13 10" Docking="Left" Id="44" Terminals="39=131, 40, 41, 42, 43" />
+				<CaseStructure.Tunnel Bounds="-4 70 13 10" Docking="Left" Id="45" Terminals="39=130, 40=122, 41=124, 42=126, 43=128" />
+				<CaseStructure.Tunnel Bounds="341 70 13 10" Docking="Right" Id="46" Terminals="39=129, 40=122, 41=123, 42=125, 43=127" />
+			</CaseStructure>
+			<Comment Bounds="-25 -160 453 28" Id="57" xmlns="http://www.ni.com/MocCommon">
+				<p.Text>"The resistance of the thermistor, Rt,  is a function of the temperature.\n1/T = a + b(lnRt) + c(lnRt)^3;  equation for determining temperature from Rt"</p.Text>
+			</Comment>
+			<Comment Bounds="630 130 94 42" Id="59" xmlns="http://www.ni.com/MocCommon">
+				<p.Text>"Convert from \nKelvin to \nCentigrade"</p.Text>
+			</Comment>
+			<DataAccessor Bounds="-20 20 40 15" DataItem="15" Id="70" Label="71" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="70" Bounds="-67 20 42 14" Id="71" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>voltage</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="1125 30 40 15" DataItem="18" Id="88" Label="89" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Double" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="88" Bounds="1170 30 72 14" Id="89" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>temperature</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="-20 210 40 15" DataItem="19" Id="94" Label="95" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt16" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="94" Bounds="-125 210 100 14" Id="95" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>type of excitation</p.Text>
+			</NodeLabel>
+			<DataAccessor Bounds="-15 235 40 15" DataItem="21" Id="104" Label="105" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="UInt16" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="104" Bounds="-124 235 104 14" Id="105" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>temperature units</p.Text>
+			</NodeLabel>
+			<Wire Id="129" Joints="N(46:39)|(1114,35) N(88:Value)|(1128,35)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="130" Joints="N(38:x-y)|(745,35) N(45:39)|(756,35)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="131" Joints="N(104:Value)|(25,240) N(44:39)|(756,240)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="132" Joints="N(94:Value)|(20,215) N(29:26)|(46,215)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="133" Joints="N(70:Value)|(20,25) h(15) B(1) N(36:1)|(245,25) B(1) v(130) N(31:26)|(46,155)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="134" Joints="N(32:26)|(224,160) h(11) v(-75) N(36:6)|(245,85)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="135" Joints="N(25:Out)|(665,115) h(40) v(-75) N(38:y)|(715,40)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="136" Joints="N(36:2)|(690,25) N(38:x)|(715,25)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="137" Joints="N(22:Out)|(214,40) N(36:3)|(245,40)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="138" Joints="N(23:Out)|(214,55) N(36:4)|(245,55)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="139" Joints="N(24:Out)|(214,70) N(36:5)|(245,70)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="-20 135 40 15" DataItem="16" Id="76" Label="77" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="76" Bounds="-126 135 101 14" Id="77" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>voltage reference</p.Text>
+			</NodeLabel>
+			<Wire Id="257" Joints="N(76:Value)|(20,140) N(258:26)|(46,140)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="-20 170 40 15" DataItem="17" Id="82" Label="83" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="82" Bounds="-40 170 15 14" Id="83" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>R1</p.Text>
+			</NodeLabel>
+			<Wire Id="464" Joints="N(82:Value)|(20,175) N(465:26)|(46,175)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="-20 190 40 15" DataItem="20" Id="98" Label="99" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Double" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="98" Bounds="-125 190 100 14" Id="99" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>excitation current</p.Text>
+			</NodeLabel>
+			<Wire Id="469" Joints="N(98:Value)|(20,195) N(468:26)|(46,195)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Comment Bounds="-25 -130 354 95" Id="471" xmlns="http://www.ni.com/MocCommon">
+				<p.Text>"Rt = Vo / Irt where Irt  is the current through the thermistor\nFor Voltage Source connection - Vo = Vref* Rt/ (R1 + Rt); \n     or Rt = R1 ( Vo / (Vref - Vo))\n     Irt = R1 / (Vref - Vo)\nFor Current Source connection - Vo = Iex * Rt\n     or Rt = Vo / Iex\n     Irt = Iex"</p.Text>
+			</Comment>
+		</BlockDiagram>
+		<NativeFrontPanel AllowMaximize="[bool]False" EnforceMaximumSize="[bool]True" Height="[float]1600" Id="14" Left="[float]0" MaxHeight="[float]1600" MaxWidth="[float]2000" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" Width="[float]2000" WindowTitleOption="[WindowTitleOption]None">
+			<NumericText BaseName="[string]Numeric" Height="[float]24" Id="74" Interval="[double]1" Label="[UIModel]75" Left="[float]100" RadixVisibility="[SMVisibility]Hidden" TabIndex="[int]0" Top="[float]39" Value="{DataItemBinding Id=15}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]76" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="75" LabelOwner="[UIModel]74" Left="[float]100" Text="[string]voltage" Top="[float]19" Width="[float]40" xmlns="http://www.ni.com/PanelCommon" />
+			<NumericText BaseName="[string]Numeric" Height="[float]24" Id="80" Interval="[double]1" Label="[UIModel]81" Left="[float]100" RadixVisibility="[SMVisibility]Hidden" TabIndex="[int]1" Top="[float]128" Value="{DataItemBinding Id=16}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="81" LabelOwner="[UIModel]80" Left="[float]100" Text="[string]voltage reference" Top="[float]108" Width="[float]93" xmlns="http://www.ni.com/PanelCommon" />
+			<NumericText BaseName="[string]Numeric" Height="[float]24" Id="86" Interval="[double]1" Label="[UIModel]87" Left="[float]103" RadixVisibility="[SMVisibility]Hidden" TabIndex="[int]2" Top="[float]219" Value="{DataItemBinding Id=17}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="87" LabelOwner="[UIModel]86" Left="[float]103" Text="[string]R1" Top="[float]199" Width="[float]14" xmlns="http://www.ni.com/PanelCommon" />
+			<NumericText BaseName="[string]Numeric" Height="[float]24" Id="92" Interval="[double]1" IsReadOnly="[bool]True" Label="[UIModel]93" Left="[float]587" RadixVisibility="[SMVisibility]Hidden" TabIndex="[int]3" Top="[float]39" Value="{DataItemBinding Id=18}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]79" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="93" LabelOwner="[UIModel]92" Left="[float]587" Text="[string]temperature" Top="[float]19" Width="[float]66" xmlns="http://www.ni.com/PanelCommon" />
+			<RingSelector AllowNonSequentialValues="[bool]False" Height="[float]24" Id="96" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" Label="[UIModel]97" Left="[float]241" TabIndex="[int]4" Top="[float]39" Value="{DataItemBinding Id=19}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]134" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<RingSelectorInfo DisplayValue="[string]Voltage Reference" Value="[ushort]0" ValueType="[Type]UInt16" />
+				<RingSelectorInfo DisplayValue="[string]Current Reference" Value="[ushort]1" ValueType="[Type]UInt16" />
+			</RingSelector>
+			<Label Height="[float]16" Id="97" LabelOwner="[UIModel]96" Left="[float]241" Text="[string]type of excitation" Top="[float]19" Width="[float]92" xmlns="http://www.ni.com/PanelCommon" />
+			<NumericText BaseName="[string]Numeric" Height="[float]24" Id="102" Interval="[double]1" Label="[UIModel]103" Left="[float]241" RadixVisibility="[SMVisibility]Hidden" TabIndex="[int]5" Top="[float]303" Value="{DataItemBinding Id=20}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]76" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="103" LabelOwner="[UIModel]102" Left="[float]241" Text="[string]excitation current" Top="[float]283" Width="[float]93" xmlns="http://www.ni.com/PanelCommon" />
+			<RingSelector AllowNonSequentialValues="[bool]False" Height="[float]24" Id="106" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" Label="[UIModel]107" Left="[float]429" TabIndex="[int]6" Top="[float]303" Value="{DataItemBinding Id=21}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+				<RingSelectorInfo DisplayValue="[string]Celsius" Value="[ushort]0" ValueType="[Type]UInt16" />
+				<RingSelectorInfo DisplayValue="[string]Fahrenheit" Value="[ushort]1" ValueType="[Type]UInt16" />
+				<RingSelectorInfo DisplayValue="[string]Kelvin" Value="[ushort]2" ValueType="[Type]UInt16" />
+				<RingSelectorInfo DisplayValue="[string]Rankine" Value="[ushort]3" ValueType="[Type]UInt16" />
+			</RingSelector>
+			<Label Height="[float]16" Id="107" LabelOwner="[UIModel]106" Left="[float]429" Text="[string]temperature units" Top="[float]283" Width="[float]95" xmlns="http://www.ni.com/PanelCommon" />
+			<PanelExecutionWindow Id="476" />
+		</NativeFrontPanel>
+		<DataItem CallDirection="Input" CallIndex="1" DataType="Double" Id="15" Name="voltage" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0x3FF4000000000000</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;Voltage&lt;/B&gt; is the voltage read from a thermistor.</p.UserDescription>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="2" CallUsage="Optional" DataType="Double" Id="16" Name="voltage reference" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0x4004000000000000</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;Voltage Reference&lt;/B&gt; (VREF) is the reference you apply across a resistor of known value in series with your thermistor. The default is 2.5 V. Use this input only when you set &lt;B&gt;Type of Excitation&lt;/B&gt; to Voltage Reference.</p.UserDescription>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="3" CallUsage="Optional" DataType="Double" Id="17" Name="R1" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0x40B3880000000000</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;R1&lt;/B&gt; is the value of the resistor in series with your thermistor expressed in Ohms. The default is 5 kOmega. Use this input only when you set &lt;B&gt;Type of Excitation&lt;/B&gt; to Voltage Reference.</p.UserDescription>
+		</DataItem>
+		<DataItem CallDirection="Output" CallIndex="1" DataType="Double" Id="18" Name="temperature" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0x4039000000000000</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;Temperature&lt;/B&gt; is the return temperature value in the units specified in &lt;B&gt;Temperature Units&lt;/B&gt;.</p.UserDescription>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="4" CallUsage="Optional" DataType="UInt16" Id="19" Name="type of excitation" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;Type of Excitation&lt;/B&gt; distinguishes the two modes of operation of the VI. This VI defaults to the Voltage Reference mode. Use the &lt;B&gt;Voltage Reference&lt;/B&gt; (VREF) and the &lt;B&gt;R1&lt;/B&gt; values only in this mode. You use the &lt;B&gt;Current Excitation&lt;/B&gt; (IEX) value only in the Current Reference mode.</p.UserDescription>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="5" CallUsage="Optional" DataType="Double" Id="20" Name="excitation current" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0x3F1A36E2E0000000</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;Excitation Current&lt;/B&gt; (IEX) is the current excitation applied to the thermistor. The default is 100 microA. Use this input only when you set &lt;B&gt;Type of Excitation&lt;/B&gt; to Current Reference.</p.UserDescription>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="6" CallUsage="Optional" DataType="UInt16" Id="21" Name="temperature units" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+			<p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;B&gt;Temperature Units&lt;/B&gt; is the units of temperature the VI outputs.</p.UserDescription>
+		</DataItem>
+	</VirtualInstrument>
+</SourceFile>

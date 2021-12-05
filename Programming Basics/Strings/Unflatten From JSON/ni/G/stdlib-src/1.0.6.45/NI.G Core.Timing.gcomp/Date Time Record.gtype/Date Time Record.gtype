@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="356891201287B308D91B0C6C24DE4F3CEC0EF63EA8068948420AADFCBC6F7BBED4976AF8348E4DCA272F10774568E8672BC5CDD53D95E164B95BF4625F8A9232" Timestamp="1D77A3606FAF7E8" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="9.1.0.50238" Name="LabVIEW NXG" Version="6.0.0" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@86371839f2ec4bc8bf9ca4d486b2a3a4" Id="1" xmlns="http://www.ni.com/MocCommon">
+		<Icon Id="2" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="3" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" Id="4" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@86371839f2ec4bc8bf9ca4d486b2a3a4" Id="10" Name="date time record">
+			<p.DefaultValue>0x0_0_0_0_0_0_0_0_0_0_</p.DefaultValue>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="5" LazyInitialize="True" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="6" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="7" Name="Date Time Record.gtype" NameTracksFileName="True">
+			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="8" ModelDefinitionType="{http://www.ni.com/MocCommon}ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition DefaultDirection="Control" Id="9" xmlns="http://www.ni.com/MocCommon">
+					<Cluster AutoArrange="[AutoArrange]ArrangeVertically" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@86371839f2ec4bc8bf9ca4d486b2a3a4" Height="[float]528" Id="12" Label="[UIModel]13" Left="[float]142" TabIndex="[int]0" Top="[float]68" Value="{DataItemBinding Id=10}" Width="[float]107" xmlns="http://www.ni.com/PanelCommon">
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="16" Label="[UIModel]17" Left="[float]4" TabIndex="[int]0" Top="[float]24" Value="{ClusterBinding FieldName=fractional\ second}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="17" LabelOwner="[UIModel]16" Left="[float]4" Text="[string]fractional second" Top="[float]4" Width="[float]91" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="18" Interval="[int]1" Label="[UIModel]19" Left="[float]4" TabIndex="[int]1" Top="[float]76" Value="{ClusterBinding FieldName=second}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="19" LabelOwner="[UIModel]18" Left="[float]4" Text="[string]second" Top="[float]56" Width="[float]38" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="20" Interval="[int]1" Label="[UIModel]21" Left="[float]4" TabIndex="[int]2" Top="[float]128" Value="{ClusterBinding FieldName=minute}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="21" LabelOwner="[UIModel]20" Left="[float]4" Text="[string]minute" Top="[float]108" Width="[float]38" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="22" Interval="[int]1" Label="[UIModel]23" Left="[float]4" TabIndex="[int]3" Top="[float]180" Value="{ClusterBinding FieldName=hour}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="23" LabelOwner="[UIModel]22" Left="[float]4" Text="[string]hour" Top="[float]160" Width="[float]25" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="24" Interval="[int]1" Label="[UIModel]25" Left="[float]4" TabIndex="[int]4" Top="[float]232" Value="{ClusterBinding FieldName=day\ of\ month}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="25" LabelOwner="[UIModel]24" Left="[float]4" Text="[string]day of month" Top="[float]212" Width="[float]72" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="26" Interval="[int]1" Label="[UIModel]27" Left="[float]4" TabIndex="[int]5" Top="[float]284" Value="{ClusterBinding FieldName=month}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="27" LabelOwner="[UIModel]26" Left="[float]4" Text="[string]month" Top="[float]264" Width="[float]36" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="28" Interval="[int]1" Label="[UIModel]29" Left="[float]4" TabIndex="[int]6" Top="[float]336" Value="{ClusterBinding FieldName=year}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="29" LabelOwner="[UIModel]28" Left="[float]4" Text="[string]year" Top="[float]316" Width="[float]23" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="30" Interval="[int]1" Label="[UIModel]31" Left="[float]4" TabIndex="[int]7" Top="[float]388" Value="{ClusterBinding FieldName=day\ of\ week}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="31" LabelOwner="[UIModel]30" Left="[float]4" Text="[string]day of week" Top="[float]368" Width="[float]64" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="32" Interval="[int]1" Label="[UIModel]33" Left="[float]4" TabIndex="[int]8" Top="[float]440" Value="{ClusterBinding FieldName=day\ of\ year}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="33" LabelOwner="[UIModel]32" Left="[float]4" Text="[string]day of year" Top="[float]420" Width="[float]59" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="34" Interval="[int]1" Label="[UIModel]35" Left="[float]4" TabIndex="[int]9" Top="[float]492" Value="{ClusterBinding FieldName=DST}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="35" LabelOwner="[UIModel]34" Left="[float]4" Text="[string]DST" Top="[float]472" Width="[float]22" />
+					</Cluster>
+					<Label Height="[float]16" Id="13" LabelOwner="[UIModel]12" Left="[float]142" Text="[string]date time record" Top="[float]48" Width="[float]88" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="86371839f2ec4bc8bf9ca4d486b2a3a4">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="fractional second" DataType="Double" />
+					<Field FieldAccessPolicy="ReadWrite" Name="second" DataType="Int32" />
+					<Field FieldAccessPolicy="ReadWrite" Name="minute" DataType="Int32" />
+					<Field FieldAccessPolicy="ReadWrite" Name="hour" DataType="Int32" />
+					<Field FieldAccessPolicy="ReadWrite" Name="day of month" DataType="Int32" />
+					<Field FieldAccessPolicy="ReadWrite" Name="month" DataType="Int32" />
+					<Field FieldAccessPolicy="ReadWrite" Name="year" DataType="Int32" />
+					<Field FieldAccessPolicy="ReadWrite" Name="day of week" DataType="Int32" />
+					<Field FieldAccessPolicy="ReadWrite" Name="day of year" DataType="Int32" />
+					<Field FieldAccessPolicy="ReadWrite" Name="DST" DataType="Int32" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

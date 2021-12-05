@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="8AC2F619AA6B91EF1B7DFA2A7AC7AA56BCEE4DBBC9FE33A404771620778B56248FEB888D32A27D19F59785BCAD55CAD4F54E2A71BFE49E36FC01566802CEBD30" Timestamp="1D77A3606B5B0B6" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="9.1.0.50238" Name="LabVIEW NXG" Version="6.0.0" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@e0c96fcfe335434ababacbdb2d6b068e" Id="1" xmlns="http://www.ni.com/MocCommon">
+		<Icon Id="2" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="3" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Id="4" Left="[float]0" TemplateName="[string]Gray" Top="[float]0" Width="[float]40">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+					<FileNameText Attached="[bool]True" Id="7" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Read Info" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+						<FontSetting FontFamily="Verdana" FontSize="10.5" Id="8" />
+					</FileNameText>
+				</IconTemplate>
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@e0c96fcfe335434ababacbdb2d6b068e" Id="30" Name="read info in">
+			<p.DefaultValue>
+				<Cluster>
+					<Field1>0</Field1>
+					<Field2>0</Field2>
+					<Field3>0</Field3>
+					<Field4>60052752000;0;Utc</Field4>
+					<Field5>""</Field5>
+					<Field6>""</Field6>
+					<Field7>""</Field7>
+				</Cluster>
+			</p.DefaultValue>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="9" LazyInitialize="True" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="10" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="11" Name="Read Info.gtype" NameTracksFileName="True">
+			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="12" ModelDefinitionType="{http://www.ni.com/MocCommon}ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition DefaultDirection="Control" Id="13" xmlns="http://www.ni.com/MocCommon">
+					<Cluster AutoArrange="[AutoArrange]ArrangeVertically" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@e0c96fcfe335434ababacbdb2d6b068e" Height="[float]331" Id="14" Label="[UIModel]29" Left="[float]100" Top="[float]100" Value="{DataItemBinding Id=30}" Width="[float]225" xmlns="http://www.ni.com/PanelCommon">
+						<OpaqueRefnum BaseName="[string]OpaqueRefnum" Height="[float]26" Id="15" Label="[UIModel]17" Left="[float]5" RefnumType="[Type]@9614aabcd22747b79dc7fb3fdd9c486c" TabIndex="[int]0" Top="[float]25" Value="{ClusterBinding FieldName=file\ refnum}" Width="[float]20" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="16" Label="[UIModel]18" Left="[float]5" TabIndex="[int]1" Top="[float]74" Value="{ClusterBinding FieldName=group\ index}" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="17" LabelOwner="[UIModel]15" Left="[float]5" Text="[string]file refnum" Top="[float]5" Width="[float]58" />
+						<Label Height="[float]16" Id="18" LabelOwner="[UIModel]16" Left="[float]5" Text="[string]group index" Top="[float]54" Width="[float]64" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="19" Label="[UIModel]20" Left="[float]5" TabIndex="[int]2" Top="[float]119" Value="{ClusterBinding FieldName=segment\ index}" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="20" LabelOwner="[UIModel]19" Left="[float]5" Text="[string]segment index" Top="[float]99" Width="[float]78" />
+						<TimeStampTextBox BaseName="[string]Timestamp" Height="[float]24" Id="21" Label="[UIModel]22" Left="[float]5" Maximum="[PrecisionDateTime]9900-12-31T11:59:59.998999999999999999979183318288278314867056906223297119140625-06:00" Minimum="[PrecisionDateTime]1900-01-01T00:00:00.0-06:00" TabIndex="[int]3" Top="[float]164" Value="{ClusterBinding FieldName=Start\ Time\ Stamp}" Width="[float]202" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p.ValueFormatter Kind="Time" Format="MM/dd/yyyy hh:mm:ss.fff tt" />
+						</TimeStampTextBox>
+						<Label Height="[float]16" Id="22" LabelOwner="[UIModel]21" Left="[float]5" Text="[string]Start Time Stamp" Top="[float]144" Width="[float]92" />
+						<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="23" Label="[UIModel]24" Left="[float]5" TabIndex="[int]4" Text="{ClusterBinding FieldName=file\ name}" Top="[float]209" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="24" LabelOwner="[UIModel]23" Left="[float]5" Text="[string]file name" Top="[float]189" Width="[float]49" />
+						<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="25" Label="[UIModel]26" Left="[float]5" TabIndex="[int]5" Text="{ClusterBinding FieldName=group\ name}" Top="[float]254" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="26" LabelOwner="[UIModel]25" Left="[float]5" Text="[string]group name" Top="[float]234" Width="[float]65" />
+						<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="27" Label="[UIModel]28" Left="[float]5" TabIndex="[int]6" Text="{ClusterBinding FieldName=group\ type}" Top="[float]299" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="28" LabelOwner="[UIModel]27" Left="[float]5" Text="[string]group type" Top="[float]279" Width="[float]59" />
+					</Cluster>
+					<Label Height="[float]16" Id="29" LabelOwner="[UIModel]14" Left="[float]100" Text="[string]read info" Top="[float]80" Width="[float]48" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="e0c96fcfe335434ababacbdb2d6b068e">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="file refnum" DataType="@9614aabcd22747b79dc7fb3fdd9c486c" />
+					<Field FieldAccessPolicy="ReadWrite" Name="group index" DataType="UInt32" />
+					<Field FieldAccessPolicy="ReadWrite" Name="segment index" DataType="UInt32" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Start Time Stamp" DataType="Timestamp" />
+					<Field FieldAccessPolicy="ReadWrite" Name="file name" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="group name" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="group type" DataType="String" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="9614aabcd22747b79dc7fb3fdd9c486c">
+			<Attributed AttributedType="@ce8402c22f3546e1bf79d134aed17b10">
+				<AttributeValues>
+					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]Refnum" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="ce8402c22f3546e1bf79d134aed17b10">
+			<Composite Id="1" Name="NationalInstruments.LabVIEW.CoreRuntime.TDMSFileRefnum" ReferenceClass="" GenericTypeDefinition="Void" BaseType="Void" />
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

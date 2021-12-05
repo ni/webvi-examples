@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="D3FD464C177728F5DC3A74CF5513E1CCD0B1F0DD6AFF275C9BA2715820FC08C15D0802A724ACBB35F8245EF778B077E5D103149840777D9A83B8D5312BA62AC5" Timestamp="1D77A3606B5147E" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="9.1.0.50238" Name="LabVIEW NXG" Version="6.0.0" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@c05f1547850b42b4bfc30d5aa1abdb9e" Id="1" xmlns="http://www.ni.com/MocCommon">
+		<Icon Id="2" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="3" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Id="4" Left="[float]0" TemplateName="[string]Gray" Top="[float]0" Width="[float]40">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+					<FileNameText Attached="[bool]True" Id="7" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]New File Options" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+						<FontSetting FontFamily="Verdana" FontSize="6.75" Id="8" />
+					</FileNameText>
+				</IconTemplate>
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@c05f1547850b42b4bfc30d5aa1abdb9e" Id="46" Name="new file options">
+			<p.DefaultValue>False_0_False_0_False_0_False_0_False_0_</p.DefaultValue>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="9" LazyInitialize="True" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="10" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="11" Name="New File Options.gtype" NameTracksFileName="True">
+			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="12" ModelDefinitionType="{http://www.ni.com/MocCommon}ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition DefaultDirection="Control" Id="13" xmlns="http://www.ni.com/MocCommon">
+					<Cluster AutoArrange="[AutoArrange]ArrangeVertically" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@c05f1547850b42b4bfc30d5aa1abdb9e" Height="[float]782" Id="14" Label="[UIModel]45" Left="[float]100" TabIndex="[int]29" Top="[float]100" Value="{DataItemBinding Id=46}" Width="[float]140" xmlns="http://www.ni.com/PanelCommon">
+						<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@acf83f2d76b74eb384377b162e353796" Height="[float]131" Id="15" Label="[UIModel]20" Left="[float]5" TabIndex="[int]0" Top="[float]25" Value="{ClusterBinding FieldName=Element\ 1}" Width="[float]88">
+							<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="25" IsReadOnly="[bool]False" Label="[UIModel]27" Left="[float]5" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" TabIndex="[int]0" Top="[float]23" TrueContent="[string]On" Value="{ClusterBinding FieldName=new_file_iter}" Width="[float]34" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<NumericText BaseName="[string]Numeric" Height="[float]24" Id="26" Label="[UIModel]28" Left="[float]5" TabIndex="[int]1" Top="[float]96" Value="{ClusterBinding FieldName=new_file_#iter}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<Label Height="[float]16" Id="27" LabelOwner="[UIModel]25" Left="[float]5" Text="[string]new_file_iter" Top="[float]3" Width="[float]65" />
+							<Label Height="[float]16" Id="28" LabelOwner="[UIModel]26" Left="[float]5" Text="[string]new_file_#iter" Top="[float]76" Width="[float]73" />
+						</Cluster>
+						<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@0a03f1bfc54f4fa498ce50acebb79ef8" Height="[float]131" Id="16" Label="[UIModel]21" Left="[float]5" TabIndex="[int]1" Top="[float]179" Value="{ClusterBinding FieldName=Element\ 2}" Width="[float]111">
+							<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="29" IsReadOnly="[bool]False" Label="[UIModel]31" Left="[float]5" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" TabIndex="[int]0" Top="[float]23" TrueContent="[string]On" Value="{ClusterBinding FieldName=new_file_samples}" Width="[float]34" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<NumericText BaseName="[string]Numeric" Height="[float]24" Id="30" Label="[UIModel]32" Left="[float]5" TabIndex="[int]1" Top="[float]96" Value="{ClusterBinding FieldName=new_file_#samples}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<Label Height="[float]16" Id="31" LabelOwner="[UIModel]29" Left="[float]5" Text="[string]new_file_samples" Top="[float]3" Width="[float]91" />
+							<Label Height="[float]16" Id="32" LabelOwner="[UIModel]30" Left="[float]5" Text="[string]new_file_#samples" Top="[float]76" Width="[float]98" />
+						</Cluster>
+						<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@b3a6fe2ec26443ec9a5b56eb508f5402" Height="[float]131" Id="17" Label="[UIModel]22" Left="[float]5" TabIndex="[int]2" Top="[float]333" Value="{ClusterBinding FieldName=Element\ 3}" Width="[float]108">
+							<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="33" IsReadOnly="[bool]False" Label="[UIModel]35" Left="[float]5" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" TabIndex="[int]0" Top="[float]23" TrueContent="[string]On" Value="{ClusterBinding FieldName=new_file_size}" Width="[float]34" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<NumericText BaseName="[string]Numeric" Height="[float]24" Id="34" Label="[UIModel]36" Left="[float]5" TabIndex="[int]1" Top="[float]96" Value="{ClusterBinding FieldName=new_file_max_size}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<Label Height="[float]16" Id="35" LabelOwner="[UIModel]33" Left="[float]5" Text="[string]new_file_size" Top="[float]3" Width="[float]68" />
+							<Label Height="[float]16" Id="36" LabelOwner="[UIModel]34" Left="[float]5" Text="[string]new_file_max_size" Top="[float]76" Width="[float]95" />
+						</Cluster>
+						<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@c52076012bed4a23b39c957470289874" Height="[float]131" Id="18" Label="[UIModel]23" Left="[float]5" TabIndex="[int]3" Top="[float]487" Value="{ClusterBinding FieldName=Element\ 4}" Width="[float]117">
+							<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="37" IsReadOnly="[bool]False" Label="[UIModel]39" Left="[float]5" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" TabIndex="[int]0" Top="[float]23" TrueContent="[string]On" Value="{ClusterBinding FieldName=new_file_elaps_time}" Width="[float]34" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<NumericText BaseName="[string]Numeric" Height="[float]24" Id="38" Label="[UIModel]40" Left="[float]5" TabIndex="[int]1" Top="[float]96" Value="{ClusterBinding FieldName=seconds}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<Label Height="[float]16" Id="39" LabelOwner="[UIModel]37" Left="[float]5" Text="[string]new_file_elaps_time" Top="[float]3" Width="[float]104" />
+							<Label Height="[float]16" Id="40" LabelOwner="[UIModel]38" Left="[float]5" Text="[string]seconds" Top="[float]76" Width="[float]43" />
+						</Cluster>
+						<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@7aaa0fa50a0e42d6b708ffdae3936bc2" Height="[float]131" Id="19" Label="[UIModel]24" Left="[float]5" TabIndex="[int]4" Top="[float]641" Value="{ClusterBinding FieldName=Element\ 5}" Width="[float]114">
+							<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="41" IsReadOnly="[bool]False" Label="[UIModel]43" Left="[float]5" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" TabIndex="[int]0" Top="[float]23" TrueContent="[string]On" Value="{ClusterBinding FieldName=new_file_daily}" Width="[float]34" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<NumericText BaseName="[string]Numeric" Height="[float]24" Id="42" Label="[UIModel]44" Left="[float]5" TabIndex="[int]1" Top="[float]96" Value="{ClusterBinding FieldName=new_file_timeofday}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<Label Height="[float]16" Id="43" LabelOwner="[UIModel]41" Left="[float]5" Text="[string]new_file_daily" Top="[float]3" Width="[float]73" />
+							<Label Height="[float]16" Id="44" LabelOwner="[UIModel]42" Left="[float]5" Text="[string]new_file_timeofday" Top="[float]76" Width="[float]101" />
+						</Cluster>
+						<Label Height="[float]16" Id="20" LabelOwner="[UIModel]15" Left="[float]5" Text="[string]Element 1" Top="[float]5" Width="[float]53" />
+						<Label Height="[float]16" Id="21" LabelOwner="[UIModel]16" Left="[float]5" Text="[string]Element 2" Top="[float]159" Width="[float]53" />
+						<Label Height="[float]16" Id="22" LabelOwner="[UIModel]17" Left="[float]5" Text="[string]Element 3" Top="[float]313" Width="[float]53" />
+						<Label Height="[float]16" Id="23" LabelOwner="[UIModel]18" Left="[float]5" Text="[string]Element 4" Top="[float]467" Width="[float]53" />
+						<Label Height="[float]16" Id="24" LabelOwner="[UIModel]19" Left="[float]5" Text="[string]Element 5" Top="[float]621" Width="[float]53" />
+					</Cluster>
+					<Label Height="[float]16" Id="45" LabelOwner="[UIModel]14" Left="[float]100" Text="[string]new file options" Top="[float]80" Width="[float]85" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="c05f1547850b42b4bfc30d5aa1abdb9e">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Element 1" DataType="@acf83f2d76b74eb384377b162e353796" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Element 2" DataType="@0a03f1bfc54f4fa498ce50acebb79ef8" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Element 3" DataType="@b3a6fe2ec26443ec9a5b56eb508f5402" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Element 4" DataType="@c52076012bed4a23b39c957470289874" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Element 5" DataType="@7aaa0fa50a0e42d6b708ffdae3936bc2" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="acf83f2d76b74eb384377b162e353796">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="new_file_iter" DataType="Boolean" />
+					<Field FieldAccessPolicy="ReadWrite" Name="new_file_#iter" DataType="Int32" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="0a03f1bfc54f4fa498ce50acebb79ef8">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="new_file_samples" DataType="Boolean" />
+					<Field FieldAccessPolicy="ReadWrite" Name="new_file_#samples" DataType="Int32" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="b3a6fe2ec26443ec9a5b56eb508f5402">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="new_file_size" DataType="Boolean" />
+					<Field FieldAccessPolicy="ReadWrite" Name="new_file_max_size" DataType="Int32" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="c52076012bed4a23b39c957470289874">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="new_file_elaps_time" DataType="Boolean" />
+					<Field FieldAccessPolicy="ReadWrite" Name="seconds" DataType="Int32" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="7aaa0fa50a0e42d6b708ffdae3936bc2">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="new_file_daily" DataType="Boolean" />
+					<Field FieldAccessPolicy="ReadWrite" Name="new_file_timeofday" DataType="Int32" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

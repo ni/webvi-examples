@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="848B2AD85FEF3842218DCB9DFBD8C520F15EBC2CC25FF638A080F36E125739F90B1E7BE21568078994A8126D4F80CBFF308D8BB07351B197EFCB2A31ADA26E02" Timestamp="1D69761BA57BAD3" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.49573" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.51564" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.49573" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+		<Icon Id="2" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="3" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Id="4" Left="[float]0" TemplateName="[string]Gray" Top="[float]0" Width="[float]40">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+					<FileNameText Attached="[bool]True" Id="7" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Read Localized Strings Dictionary From File" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+						<FontSetting FontFamily="Verdana" FontSize="6" Id="8" />
+					</FileNameText>
+				</IconTemplate>
+			</IconPanel>
+		</Icon>
+		<ConnectorPane Height="40" Id="9" ListViewHeight="85" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+			<ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="82" />
+			<ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 65" Parameter="9a3bccee09ff47bda9de34c3b079a66d" />
+			<ConnectorPaneTerminal Hotspot="0 25" />
+			<ConnectorPaneTerminal Hotspot="0 35" />
+			<ConnectorPaneTerminal Hotspot="15 0" />
+			<ConnectorPaneTerminal Hotspot="25 0" />
+			<ConnectorPaneTerminal Hotspot="40 5" ListViewHotspot="150 50" Parameter="593" />
+			<ConnectorPaneTerminal Hotspot="40 15" />
+			<ConnectorPaneTerminal Hotspot="40 25" />
+			<ConnectorPaneTerminal Hotspot="40 35" />
+			<ConnectorPaneTerminal Hotspot="15 40" />
+			<ConnectorPaneTerminal Hotspot="25 40" />
+		</ConnectorPane>
+		<DiagramUnplacedItems Id="10" xmlns="http://www.ni.com/MocCommon" />
+		<FrontPanelUnplacedItems Height="[float]1600" Id="11" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" Width="[float]2000" />
+		<BlockDiagram Id="12">
+			<DataAccessor Bounds="25 175 40 15" DataItem="82" Id="83" Label="85" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="Path" Direction="Output" Hotspot="40 5" Id="Path" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="83" Bounds="-5 175 25 14" Id="85" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>Path</p.Text>
+			</NodeLabel>
+			<ReadFromTextFile Bounds="85 175 40 40" Id="86" />
+			<Wire Id="87" Joints="N(83:Path)|(65,180) N(86:file (use dialog\))|(85,180)" xmlns="http://www.ni.com/PlatformFramework" />
+			<SearchOrSplitString Bounds="205 185 40 40" Id="88" />
+			<Wire Id="89" Joints="N(86:text)|(125,190) N(88:string)|(205,190)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Literal Bounds="145 200 40 15" DataType="String" Id="90" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>?&gt;</p.Data>
+				<StringBehavior TextDisplayMode="Default" />
+			</Literal>
+			<Wire Id="91" Joints="N(90:Out)|(185,205) N(88:search string/char)|(205,205)" xmlns="http://www.ni.com/PlatformFramework" />
+			<StringSubset Bounds="325 200 40 40" Id="92" />
+			<Wire Id="93" Joints="N(88:match + rest of string)|(245,205) N(92:string)|(325,205)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Literal Bounds="265 220 40 15" DataType="Int32" Id="94" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>2</p.Data>
+				<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+			</Literal>
+			<Wire Id="95" Joints="N(94:Out)|(305,225) N(92:offset (0\))|(325,225)" xmlns="http://www.ni.com/PlatformFramework" />
+			<MethodCall Bounds="385 200 40 40" Id="96" ResolveFailedHint="&quot;C:\\dev\\asw3\\Source\\AddonSource\\stdlib\\NI.G Core.gcomp\\Localization\\XML\\XML Parser.gvi&quot;" Signature="@41bfa584585e4c019d0c88c4b6583c10" Target="NI::G Core::Localization::XML::XML Parser.gvi" xmlns="http://www.ni.com/MocCommon">
+				<p.MethodDeclaration>
+					<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+						<Parameter Id="L0" Desc="XML" />
+						<Parameter Id="R0" Desc="Nodes" />
+					</MethodDeclaration>
+				</p.MethodDeclaration>
+				<Terminal DataType="String" Direction="Input" Id="L0" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="@46298546ca724af0985615aef7ad3b8c" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+			</MethodCall>
+			<Wire Id="97" Joints="N(92:substring)|(365,205) N(96:L0)|(385,205)" xmlns="http://www.ni.com/PlatformFramework" />
+			<ArraySize Bounds="445 200 40 20" Id="99" />
+			<Wire Id="100" Joints="N(96:R0)|(425,205) h(15) B(1) N(99:array)|(445,205) B(1) v(25) N(102:array)|(470,230)" xmlns="http://www.ni.com/PlatformFramework" />
+			<ArrayIndex Bounds="470 225 40 30" Id="102" Terminals="array=100, c0t0v, c0out=110" />
+			<IsEqual Bounds="725 210 30 30" Id="103" />
+			<Wire Id="104" Joints="N(99:size(s\))|(485,215) N(103:x)|(725,215)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Literal Bounds="660 225 40 15" DataType="Int32" Id="105" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>1</p.Data>
+				<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+			</Literal>
+			<Wire Id="106" Joints="N(105:Out)|(700,230) N(103:y)|(725,230)" xmlns="http://www.ni.com/PlatformFramework" />
+			<PropertyNode Bounds="520 245 79 50" HasErrorTerminals="False" Id="109" InstanceDataType="@630516acecc24c17a44f3cd34bd37f77" Mode="InstanceProperties" Template="List" xmlns="http://www.ni.com/MocCommon">
+				<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+					<TypeDefinitionTarget TargetName="NI::G Core::Localization::XML::Node.gtype" />
+				</p.TypeDefinitionTargets>
+				<PropertyItemTerminal DataType="String" Hotspot="79 15" Id="c0t0v" Path="Name" PathElementMemberKinds="Field" Usage="Optional" />
+				<PropertyItemTerminal DataType="String" Hotspot="79 30" Id="c1t0v" Path="SubXML" PathElementMemberKinds="Field" Usage="Optional" />
+			</PropertyNode>
+			<Wire Id="110" Joints="N(102:c0out)|(510,250) N(109:instance in)|(520,250)" xmlns="http://www.ni.com/PlatformFramework" />
+			<IsEqual Bounds="805 285 30 30" Id="111" />
+			<Literal Bounds="625 300 165 15" DataType="String" Id="113" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>LocalizedStringsDictionary</p.Data>
+				<StringBehavior TextDisplayMode="Default" />
+			</Literal>
+			<Wire Id="114" Joints="N(113:Out)|(790,305) N(111:y)|(805,305)" xmlns="http://www.ni.com/PlatformFramework" />
+			<LogicalAnd Bounds="855 220 25 30" Id="115" Terminals="o=122, c0t0v=116, c1t0v=1066, c2t0v=1067" VerticalChunkCount="3" />
+			<Wire Id="116" Joints="N(103:x = y?)|(755,225) N(115:c0t0v)|(855,225)" xmlns="http://www.ni.com/PlatformFramework" />
+			<CaseStructure Bounds="909 85 1276 570" Default="119" Id="118" Selected="119" UserSelectorBounds="594 0 88 17">
+				<CaseStructure.Case Bounds="5 5 1266 560" Id="119" Pattern="False">
+					<Wire Id="3f31b5a8ece44b4d9c3470da6a17796a" Joints="N(93077ad1fd3046bbb90b2062b2ec1953:119)|(4,100) h(1253) v(60) N(1069:119)|(1262,160)" xmlns="http://www.ni.com/PlatformFramework" />
+				</CaseStructure.Case>
+				<CaseStructure.Case Bounds="5 5 1266 560" Id="120" Pattern="True">
+					<MethodCall Bounds="116 225 40 40" Id="363" ResolveFailedHint="&quot;C:\\dev\\asw3\\Source\\AddonSource\\stdlib\\NI.G Core.gcomp\\Localization\\XML\\XML Parser.gvi&quot;" Signature="@41bfa584585e4c019d0c88c4b6583c10" Target="NI::G Core::Localization::XML::XML Parser.gvi" xmlns="http://www.ni.com/MocCommon">
+						<p.MethodDeclaration>
+							<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+								<Parameter Id="L0" Desc="XML" />
+								<Parameter Id="R0" Desc="Nodes" />
+							</MethodDeclaration>
+						</p.MethodDeclaration>
+						<Terminal DataType="String" Direction="Input" Id="L0" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+						<Terminal DataType="@46298546ca724af0985615aef7ad3b8c" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+					</MethodCall>
+					<Wire Id="364" Joints="N(142:120)|(4,235) h(5) v(-5) N(363:L0)|(116,230)" xmlns="http://www.ni.com/PlatformFramework" />
+					<ForLoop Bounds="209 58 1015 480" DiagramId="383" Id="382">
+						<LoopIteration Bounds="0 450 15 15" Id="385" />
+						<PropertyNode Bounds="40 165 79 50" HasErrorTerminals="False" Id="707" InstanceDataType="@630516acecc24c17a44f3cd34bd37f77" Mode="InstanceProperties" Template="List" xmlns="http://www.ni.com/MocCommon">
+							<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+								<TypeDefinitionTarget TargetName="NI::G Core::Localization::XML::Node.gtype" />
+							</p.TypeDefinitionTargets>
+							<PropertyItemTerminal DataType="String" Hotspot="79 15" Id="c0t0v" Path="SubXML" PathElementMemberKinds="Field" Usage="Optional" />
+							<PropertyItemTerminal DataType="String" Hotspot="79 30" Id="c1t0v" Path="Name" PathElementMemberKinds="Field" Usage="Optional" />
+						</PropertyNode>
+						<Wire Id="708" Joints="N(575:i0)|(6,170) N(707:instance in)|(40,170)" xmlns="http://www.ni.com/PlatformFramework" />
+						<IsEqual Bounds="220 315 30 30" Id="709" />
+						<Literal Bounds="120 330 50 15" DataType="String" Id="711" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>entry</p.Data>
+							<StringBehavior TextDisplayMode="Default" />
+						</Literal>
+						<Wire Id="712" Joints="N(711:Out)|(170,335) N(709:y)|(220,335)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Literal Bounds="150 175 40 15" DataType="String" Id="715" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>key</p.Data>
+							<StringBehavior TextDisplayMode="Default" />
+						</Literal>
+						<MethodCall Bounds="145 205 40 40" Id="731" ResolveFailedHint="&quot;C:\\dev\\asw3\\Source\\AddonSource\\stdlib\\NI.G Core.gcomp\\Localization\\XML\\XML Parser.gvi&quot;" Signature="@41bfa584585e4c019d0c88c4b6583c10" Target="NI::G Core::Localization::XML::XML Parser.gvi" xmlns="http://www.ni.com/MocCommon">
+							<p.MethodDeclaration>
+								<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+									<Parameter Id="L0" Desc="XML" />
+									<Parameter Id="R0" Desc="Nodes" />
+								</MethodDeclaration>
+							</p.MethodDeclaration>
+							<Terminal DataType="String" Direction="Input" Id="L0" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="@46298546ca724af0985615aef7ad3b8c" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+						</MethodCall>
+						<ArraySize Bounds="215 265 40 20" Id="735" />
+						<Wire Id="736" Joints="N(731:R0)|(185,210) h(20) B(1) N(741:array)|(270,210) B(1) v(60) N(735:array)|(215,270)" xmlns="http://www.ni.com/PlatformFramework" />
+						<IsEqual Bounds="280 275 30 30" Id="737" />
+						<Wire Id="738" Joints="N(735:size(s\))|(255,280) N(737:x)|(280,280)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Literal Bounds="215 290 40 15" DataType="Int32" Id="739" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>1</p.Data>
+							<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+						</Literal>
+						<Wire Id="740" Joints="N(739:Out)|(255,295) N(737:y)|(280,295)" xmlns="http://www.ni.com/PlatformFramework" />
+						<ArrayIndex Bounds="270 205 40 30" Id="741" Terminals="array=736, c0t0v, c0out=745" />
+						<PropertyNode Bounds="330 190 79 50" HasErrorTerminals="False" Id="744" InstanceDataType="@630516acecc24c17a44f3cd34bd37f77" Mode="InstanceProperties" Template="List" xmlns="http://www.ni.com/MocCommon">
+							<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+								<TypeDefinitionTarget TargetName="NI::G Core::Localization::XML::Node.gtype" />
+							</p.TypeDefinitionTargets>
+							<PropertyItemTerminal DataType="String" Hotspot="79 15" Id="c0t0v" Path="SubXML" PathElementMemberKinds="Field" Usage="Optional" />
+							<PropertyItemTerminal DataType="String" Hotspot="79 30" Id="c1t0v" Path="Name" PathElementMemberKinds="Field" Usage="Optional" />
+						</PropertyNode>
+						<Wire Id="745" Joints="N(741:c0out)|(310,230) h(15) v(-35) N(744:instance in)|(330,195)" xmlns="http://www.ni.com/PlatformFramework" />
+						<IsEqual Bounds="510 215 30 30" Id="752" />
+						<Literal Bounds="445 230 40 15" DataType="String" Id="754" xmlns="http://www.ni.com/MocCommon">
+							<p.Data>loc</p.Data>
+							<StringBehavior TextDisplayMode="Default" />
+						</Literal>
+						<Wire Id="755" Joints="N(754:Out)|(485,235) N(752:y)|(510,235)" xmlns="http://www.ni.com/PlatformFramework" />
+						<LogicalAnd Bounds="600 215 25 40" Id="757" Terminals="o=b80895d6daa14b2d8aa4eb5bf2d347d1, c0t0v=1084, c1t0v=1087, c2t0v=1086, c3t0v=1085" VerticalChunkCount="4" />
+						<MethodCall Bounds="220 165 40 40" Id="923" ResolveFailedHint="&quot;C:\\dev\\asw3\\Source\\AddonSource\\stdlib\\NI.G Core.gcomp\\Localization\\XML\\Contains Property.gvi&quot;" Signature="@acb57ce8a16d4cfda2b4512a38030e18" Target="NI::G Core::Localization::XML::Contains Property.gvi" xmlns="http://www.ni.com/MocCommon">
+							<p.MethodDeclaration>
+								<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+									<Parameter Id="L0" Desc="Node" />
+									<Parameter Id="L1" Desc="Key" />
+									<Parameter Id="R0" Desc="Found" />
+									<Parameter Id="R1" Desc="Value" />
+								</MethodDeclaration>
+							</p.MethodDeclaration>
+							<Terminal DataType="@630516acecc24c17a44f3cd34bd37f77" Direction="Input" Id="L0" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="String" Direction="Input" Hotspot="0 15" Id="L1" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+							<Terminal DataType="String" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+						</MethodCall>
+						<Wire Id="924" Joints="N(715:Out)|(190,180) N(923:L1)|(220,180)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="925" Joints="N(707:instance out)|(119,170) N(923:L0)|(220,170)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="927" Joints="N(923:R1)|(260,180) h(415) v(10) N(ab80ea759e134321831b36c420bc7c76:b09945ba20ee42f9951a74142035eb06)|(691,190)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="1077" Joints="N(707:c0t0v)|(119,180) h(16) v(30) N(731:L0)|(145,210)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="1078" Joints="N(707:c1t0v)|(119,195) h(5) v(125) N(709:x)|(220,320)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="1080" Joints="N(744:c0t0v)|(409,205) h(266) v(-5) N(288e89e388e04bdf95853d130f583c20:b09945ba20ee42f9951a74142035eb06)|(691,200)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="1081" Joints="N(744:c1t0v)|(409,220) N(752:x)|(510,220)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="1084" Joints="N(923:R0)|(260,170) h(10) v(-10) h(315) v(60) N(757:c0t0v)|(600,220)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="1085" Joints="N(709:x = y?)|(250,330) h(330) v(-80) N(757:c3t0v)|(600,250)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="1086" Joints="N(737:x = y?)|(310,290) h(260) v(-50) N(757:c2t0v)|(600,240)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="1087" Joints="N(752:x = y?)|(540,230) N(757:c1t0v)|(600,230)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Comment Bounds="100 355 220 15" Id="1089" xmlns="http://www.ni.com/MocCommon">
+							<p.Text>Check to see if child's name is entry</p.Text>
+						</Comment>
+						<Comment Bounds="310 300 210 15" Id="1090" xmlns="http://www.ni.com/MocCommon">
+							<p.Text>Check to see if entry has one child</p.Text>
+						</Comment>
+						<Comment Bounds="440 250 120 30" Id="1091" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
+							<p.Text>Check to see if child's name is loc</p.Text>
+						</Comment>
+						<Comment Bounds="130 115 165 30" Id="1092" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
+							<p.Text>Check to see if entry has a property named key</p.Text>
+						</Comment>
+						<Comment Bounds="740 75 195 28" Id="1093" xmlns="http://www.ni.com/MocCommon">
+							<p.Text>"If all those conditions are met,\r\nadd that entry to the dictionary"</p.Text>
+						</Comment>
+						<Wire Id="1123" Joints="N(588:i0)|(6,100) h(9) v(55) N(7cbcd83a7ea54197a751ca5e77d4485d:b09945ba20ee42f9951a74142035eb06)|(691,155)" xmlns="http://www.ni.com/PlatformFramework" />
+						<CaseStructure Bounds="695 115 295 120" Default="209e471babb24d5dbc024438f9930cc9" Id="b09945ba20ee42f9951a74142035eb06" Selected="40936952a7e3479a871a7744be21bac4" UserSelectorBounds="104 0 88 17">
+							<CaseStructure.Case Bounds="5 5 285 110" Id="209e471babb24d5dbc024438f9930cc9" Pattern="False">
+								<Wire Id="afd782653b9c49a0a35859b22831483f" Joints="N(7cbcd83a7ea54197a751ca5e77d4485d:209e471babb24d5dbc024438f9930cc9)|(4,35) N(82e05e47dff9408b83b2bd6ad20b7607:209e471babb24d5dbc024438f9930cc9)|(281,35)" xmlns="http://www.ni.com/PlatformFramework" />
+							</CaseStructure.Case>
+							<CaseStructure.Case Bounds="5 5 285 110" Id="40936952a7e3479a871a7744be21bac4" Pattern="True">
+								<PropertyNode Bounds="25 30 72 35" HasErrorTerminals="False" Id="ac68a17e738642428c518206321e9b89" InstanceDataType="@bbe321e90c5c4e44905ad9e7aa3dc7c8" Mode="InstanceProperties" xmlns="http://www.ni.com/MocCommon">
+									<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+										<TypeDefinitionTarget TargetName="NI::G Core::Localization::Localized String Dict.gtype" />
+									</p.TypeDefinitionTargets>
+									<PropertyItemTerminal DataType="@bd2232353db34e3ebe062acdcac878ce" Hotspot="72 15" Id="c0t0v" Path="entries" PathElementMemberKinds="Field" Usage="Optional" />
+								</PropertyNode>
+								<Wire Id="2206e9d1b15473d861a8bc9ac3c4405" Joints="N(7cbcd83a7ea54197a751ca5e77d4485d:40936952a7e3479a871a7744be21bac4)|(4,35) N(ac68a17e738642428c518206321e9b89:instance in)|(25,35)" xmlns="http://www.ni.com/PlatformFramework" />
+								<PropertyNode Bounds="185 30 78 35" HasErrorTerminals="False" Id="12edcc89b6124e9d83623311723af0f3" InstanceDataType="@bbe321e90c5c4e44905ad9e7aa3dc7c8" Mode="InstanceProperties" xmlns="http://www.ni.com/MocCommon">
+									<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+										<TypeDefinitionTarget TargetName="NI::G Core::Localization::Localized String Dict.gtype" />
+									</p.TypeDefinitionTargets>
+									<PropertyItemTerminal Action="Write" DataType="@bd2232353db34e3ebe062acdcac878ce" Hotspot="0 15" Id="c0t0v" Path="entries" PathElementMemberKinds="Field" Usage="Required" />
+								</PropertyNode>
+								<Wire Id="3ca933533d624e5cb5f4354a1ff237a8" Joints="N(12edcc89b6124e9d83623311723af0f3:instance out)|(263,35) N(82e05e47dff9408b83b2bd6ad20b7607:40936952a7e3479a871a7744be21bac4)|(281,35)" xmlns="http://www.ni.com/PlatformFramework" />
+								<SetVariantAttribute Bounds="125 40 40 40" Id="fbf654851c1b4ee9adc4b13fa470b544" />
+								<Wire Id="9ca7a1eb318b4769a724551e672c749e" Joints="N(ac68a17e738642428c518206321e9b89:c0t0v)|(97,45) N(fbf654851c1b4ee9adc4b13fa470b544:variant)|(125,45)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="f8701bd9191e4d9482ddeb0626f8bdc9" Joints="N(ac68a17e738642428c518206321e9b89:instance out)|(97,35) N(12edcc89b6124e9d83623311723af0f3:instance in)|(185,35)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="d49661a9c62c4b52824fce3ac1f7eb57" Joints="N(fbf654851c1b4ee9adc4b13fa470b544:variant out)|(165,45) N(12edcc89b6124e9d83623311723af0f3:c0t0v)|(185,45)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="8b40c806d8b34872ba2e6bc668981b96" Joints="N(ab80ea759e134321831b36c420bc7c76:40936952a7e3479a871a7744be21bac4)|(4,70) h(101) v(-15) N(fbf654851c1b4ee9adc4b13fa470b544:name)|(125,55)" xmlns="http://www.ni.com/PlatformFramework" />
+								<Wire Id="e1844afd4baa4daba13b2e098157fb11" Joints="N(288e89e388e04bdf95853d130f583c20:40936952a7e3479a871a7744be21bac4)|(4,80) h(111) v(-15) N(fbf654851c1b4ee9adc4b13fa470b544:value)|(125,65)" xmlns="http://www.ni.com/PlatformFramework" />
+							</CaseStructure.Case>
+							<CaseStructure.Selector Bounds="-4 20 13 10" Docking="Left" Id="862b383bdedb4a128ef4b8e6d3f3c9d5" Terminals="b09945ba20ee42f9951a74142035eb06=b80895d6daa14b2d8aa4eb5bf2d347d1, 209e471babb24d5dbc024438f9930cc9, 40936952a7e3479a871a7744be21bac4" />
+							<CaseStructure.Tunnel Bounds="-4 35 13 10" Docking="Left" Id="7cbcd83a7ea54197a751ca5e77d4485d" Terminals="b09945ba20ee42f9951a74142035eb06=1123, 209e471babb24d5dbc024438f9930cc9=afd782653b9c49a0a35859b22831483f, 40936952a7e3479a871a7744be21bac4=2206e9d1b15473d861a8bc9ac3c4405" />
+							<CaseStructure.Tunnel Bounds="286 35 13 10" Docking="Right" Id="82e05e47dff9408b83b2bd6ad20b7607" Terminals="b09945ba20ee42f9951a74142035eb06=c5f8a6c698514a4e94c11e2c418fcc8a, 209e471babb24d5dbc024438f9930cc9=afd782653b9c49a0a35859b22831483f, 40936952a7e3479a871a7744be21bac4=3ca933533d624e5cb5f4354a1ff237a8" />
+							<CaseStructure.Tunnel Bounds="-4 70 13 10" Docking="Left" Id="ab80ea759e134321831b36c420bc7c76" Terminals="b09945ba20ee42f9951a74142035eb06=927, 209e471babb24d5dbc024438f9930cc9, 40936952a7e3479a871a7744be21bac4=8b40c806d8b34872ba2e6bc668981b96" />
+							<CaseStructure.Tunnel Bounds="-4 80 13 10" Docking="Left" Id="288e89e388e04bdf95853d130f583c20" Terminals="b09945ba20ee42f9951a74142035eb06=1080, 209e471babb24d5dbc024438f9930cc9, 40936952a7e3479a871a7744be21bac4=e1844afd4baa4daba13b2e098157fb11" />
+						</CaseStructure>
+						<Wire Id="b80895d6daa14b2d8aa4eb5bf2d347d1" Joints="N(757:o)|(625,225) h(60) v(-85) N(862b383bdedb4a128ef4b8e6d3f3c9d5:b09945ba20ee42f9951a74142035eb06)|(691,140)" xmlns="http://www.ni.com/PlatformFramework" />
+						<Wire Id="c5f8a6c698514a4e94c11e2c418fcc8a" Joints="N(82e05e47dff9408b83b2bd6ad20b7607:b09945ba20ee42f9951a74142035eb06)|(994,155) h(6) v(-55) N(587:383)|(1003,100)" xmlns="http://www.ni.com/PlatformFramework" />
+						<LoopCount Bounds="1 1 15 15" Docking="Left" Id="384" Terminals="382, 383" />
+						<LoopTunnel AutoIndex="True" Bounds="-5 167 13 10" Docking="Left" Id="575" Terminals="o0=405, i0=708" TunnelMode="0" />
+						<RightShiftRegister Bounds="1005 97 13 10" Docking="Right" Id="587" Terminals="382=1068, 383=c5f8a6c698514a4e94c11e2c418fcc8a" />
+						<LeftShiftRegister Bounds="-5 97 13 10" Docking="Left" Id="588" RightRegister="587" Terminals="o0=783, i0=1123" />
+					</ForLoop>
+					<Wire Id="405" Joints="N(363:R0)|(156,230) N(575:o0)|(204,230)" xmlns="http://www.ni.com/PlatformFramework" />
+					<PropertyNode Bounds="101 155 91 35" HasErrorTerminals="False" Id="781" InstanceDataType="@bbe321e90c5c4e44905ad9e7aa3dc7c8" Mode="InstanceProperties" Template="List" xmlns="http://www.ni.com/MocCommon">
+						<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+							<TypeDefinitionTarget TargetName="NI::G Core::Localization::Localized String Dict.gtype" />
+						</p.TypeDefinitionTargets>
+						<PropertyItemTerminal Action="Write" DataType="String" Hotspot="0 15" Id="c0t0v" Path="language" PathElementMemberKinds="Field" Usage="Required" />
+					</PropertyNode>
+					<Wire Id="782" Joints="N(93077ad1fd3046bbb90b2062b2ec1953:120)|(4,100) h(81) v(60) N(781:instance in)|(101,160)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="783" Joints="N(781:instance out)|(192,160) N(588:o0)|(204,160)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="920" Joints="N(919:120)|(4,175) h(5) v(-5) N(781:c0t0v)|(101,170)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Wire Id="1068" Joints="N(587:382)|(1227,160) N(1069:120)|(1262,160)" xmlns="http://www.ni.com/PlatformFramework" />
+					<Comment Bounds="381 25 350 15" Id="1088" xmlns="http://www.ni.com/MocCommon">
+						<p.Text>Iterate over all the child nodes of LocalizedStringsDictionary</p.Text>
+					</Comment>
+				</CaseStructure.Case>
+				<CaseStructure.Selector Bounds="-4 145 13 10" Docking="Left" Id="121" Terminals="118=122, 119, 120" />
+				<CaseStructure.Tunnel Bounds="-4 235 13 10" Docking="Left" Id="142" Terminals="118=141, 119, 120=364" />
+				<CaseStructure.Tunnel Bounds="-4 175 13 10" Docking="Left" Id="919" Terminals="118=918, 119, 120=920" />
+				<CaseStructure.Tunnel Bounds="1267 160 13 10" DefaultIfUnwired="True" Docking="Right" Id="1069" Terminals="118=693, 119=3f31b5a8ece44b4d9c3470da6a17796a, 120=1068" />
+				<CaseStructure.Tunnel Bounds="-4 100 13 10" Docking="Left" Id="93077ad1fd3046bbb90b2062b2ec1953" Terminals="118=6c235699b2ee4ef0953a4688dc739144, 119=3f31b5a8ece44b4d9c3470da6a17796a, 120=782" />
+			</CaseStructure>
+			<Wire Id="122" Joints="N(115:o)|(880,230) h(19) v(5) N(121:118)|(905,235)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="139" Joints="N(109:c0t0v)|(599,260) h(21) v(30) N(111:x)|(805,290)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="141" Joints="N(109:c1t0v)|(599,275) h(86) v(50) N(142:118)|(905,325)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="2210 245 40 15" DataItem="593" Id="606" Label="607" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="@bbe321e90c5c4e44905ad9e7aa3dc7c8" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="606" Bounds="2255 245 80 14" Id="607" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>Dictionary Out</p.Text>
+			</NodeLabel>
+			<Wire Id="693" Joints="N(1069:118)|(2189,250) N(606:Value)|(2213,250)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Literal Bounds="635 255 110 15" DataType="String" Id="773" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>source_language</p.Data>
+				<StringBehavior TextDisplayMode="Default" />
+			</Literal>
+			<MethodCall Bounds="760 245 40 40" Id="914" ResolveFailedHint="&quot;C:\\dev\\asw3\\Source\\AddonSource\\stdlib\\NI.G Core.gcomp\\Localization\\XML\\Contains Property.gvi&quot;" Signature="@acb57ce8a16d4cfda2b4512a38030e18" Target="NI::G Core::Localization::XML::Contains Property.gvi" xmlns="http://www.ni.com/MocCommon">
+				<p.MethodDeclaration>
+					<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+						<Parameter Id="L0" Desc="Node" />
+						<Parameter Id="L1" Desc="Key" />
+						<Parameter Id="R0" Desc="Found" />
+						<Parameter Id="R1" Desc="Value" />
+					</MethodDeclaration>
+				</p.MethodDeclaration>
+				<Terminal DataType="@630516acecc24c17a44f3cd34bd37f77" Direction="Input" Id="L0" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="String" Direction="Input" Hotspot="0 15" Id="L1" Usage="Required" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+				<Terminal DataType="String" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+			</MethodCall>
+			<Wire Id="915" Joints="N(109:instance out)|(599,250) N(914:L0)|(760,250)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="916" Joints="N(773:Out)|(745,260) N(914:L1)|(760,260)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="918" Joints="N(914:R1)|(800,260) h(89) v(5) N(919:118)|(905,265)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Comment Bounds="55 115 270 15" Id="1064" xmlns="http://www.ni.com/MocCommon">
+				<p.Text>Remove the &lt;?Node?&gt; line from the begining</p.Text>
+			</Comment>
+			<Comment Bounds="525 145 260 55" Id="1065" xmlns="http://www.ni.com/MocCommon">
+				<p.Text>"Check the parent node:\r\n1. There is only one\r\n2. It's name is LocalizedStringsDictionary\r\n3. It has a property called source_language"</p.Text>
+			</Comment>
+			<Wire Id="1066" Joints="N(914:R0)|(800,250) h(45) v(-15) N(115:c1t0v)|(855,235)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="1067" Joints="N(111:x = y?)|(835,300) h(15) v(-55) N(115:c2t0v)|(855,245)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="855 185 40 15" DataItem="9a3bccee09ff47bda9de34c3b079a66d" Id="2452019e8bbe42789873ef7c0ef25e95" Label="f55fa5570e234fd1bdd2322162f27767" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="@bbe321e90c5c4e44905ad9e7aa3dc7c8" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="2452019e8bbe42789873ef7c0ef25e95" Bounds="778 185 72 14" Id="f55fa5570e234fd1bdd2322162f27767" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>Dictionary In</p.Text>
+			</NodeLabel>
+			<Wire Id="6c235699b2ee4ef0953a4688dc739144" Joints="N(2452019e8bbe42789873ef7c0ef25e95:Value)|(895,190) N(93077ad1fd3046bbb90b2062b2ec1953:118)|(905,190)" xmlns="http://www.ni.com/PlatformFramework" />
+		</BlockDiagram>
+		<NativeFrontPanel AllowMaximize="[bool]False" EnforceMaximumSize="[bool]True" Height="[float]1600" Id="13" Left="[float]0" MaxHeight="[float]1600" MaxWidth="[float]2000" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" Width="[float]2000" WindowTitleOption="[WindowTitleOption]None">
+			<PathSelector BaseName="[string]Path" BrowseDialogTitle="[string]Open File" Height="[float]28" Id="84" Label="[UIModel]379" Left="[float]228" Path="{DataItemBinding Id=82}" TabIndex="[int]0" Top="[float]68" Width="[float]360" WrapText="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Height="[float]16" Id="379" LabelOwner="[UIModel]84" Left="[float]228" Text="[string]Path" Top="[float]48" Width="[float]24" xmlns="http://www.ni.com/PanelCommon" />
+			<Cluster AutoArrange="[AutoArrange]ArrangeVertically" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@bbe321e90c5c4e44905ad9e7aa3dc7c8" Height="[float]176" Id="1132" IsTabStop="[bool]True" Label="[UIModel]1143" Left="[float]628" TabIndex="[int]1" Top="[float]148" Value="{DataItemBinding Id=593}" Width="[float]120" p4:ControlDefinitionChecksum="LCZ6aRR4o3vLUoILGzGyqQoe6Y+p+6zqLBFOK52Lxds=" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/PanelCommon">
+				<p4:p.TypeDefinitionTargets>
+					<p4:TypeDefinitionTarget TargetName="NI::G Core::Localization::Localized String Dict.gtype::ControlDefinition" />
+				</p4:p.TypeDefinitionTargets>
+				<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="9e7d865e6da44a94a5ccca852ea4e1b8" IsReadOnly="[bool]True" Label="[UIModel]9a75f1c343c9433daab4e4f2d71d2605" Left="[float]4" TabIndex="[int]0" Text="{ClusterBinding FieldName=language}" Top="[float]24" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="9a75f1c343c9433daab4e4f2d71d2605" LabelOwner="[UIModel]9e7d865e6da44a94a5ccca852ea4e1b8" Left="[float]4" Text="[string]language" Top="[float]4" Width="[float]50" />
+				<VariantControl BaseName="[string]Variant" Height="[float]88" Id="8ca59d3b9cdf4d17817136b6a798db97" IsIndicator="[bool]True" Label="[UIModel]55d45bd8850348b38596ae813620ccd8" Left="[float]4" TabIndex="[int]1" Top="[float]76" VariantValue="{ClusterBinding FieldName=entries}" Width="[float]104" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="55d45bd8850348b38596ae813620ccd8" LabelOwner="[UIModel]8ca59d3b9cdf4d17817136b6a798db97" Left="[float]4" Text="[string]entries" Top="[float]56" Width="[float]36" />
+			</Cluster>
+			<Label Height="[float]16" Id="1143" LabelOwner="[UIModel]1132" Left="[float]628" Text="[string]Dictionary Out" Top="[float]128" Width="[float]77" xmlns="http://www.ni.com/PanelCommon" />
+			<PanelExecutionWindow Id="1144" />
+			<Cluster AutoArrange="[AutoArrange]ArrangeVertically" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@bbe321e90c5c4e44905ad9e7aa3dc7c8" Height="[float]176" Id="8340a275942146e28806a836840e8c58" IsTabStop="[bool]True" Label="[UIModel]3d4f9584d95c46f7a50fa570106c9182" Left="[float]228" TabIndex="[int]2" Top="[float]148" Value="{DataItemBinding Id=9a3bccee09ff47bda9de34c3b079a66d}" Width="[float]120" p4:ControlDefinitionChecksum="LCZ6aRR4o3vLUoILGzGyqQoe6Y+p+6zqLBFOK52Lxds=" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/PanelCommon">
+				<p4:p.TypeDefinitionTargets>
+					<p4:TypeDefinitionTarget TargetName="NI::G Core::Localization::Localized String Dict.gtype::ControlDefinition" />
+				</p4:p.TypeDefinitionTargets>
+				<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="3948a6d2b1454fd0bf52ddcea03edea3" IsReadOnly="[bool]False" Label="[UIModel]810aff8d3bd0478e9410fb1fb416c577" Left="[float]4" TabIndex="[int]0" Text="{ClusterBinding FieldName=language}" Top="[float]24" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="810aff8d3bd0478e9410fb1fb416c577" LabelOwner="[UIModel]3948a6d2b1454fd0bf52ddcea03edea3" Left="[float]4" Text="[string]language" Top="[float]4" Width="[float]50" />
+				<VariantControl BaseName="[string]Variant" Height="[float]88" Id="ee8918400fdc443db6f5e1dcf503a17b" IsIndicator="[bool]False" Label="[UIModel]93e97605e1424163be00f3357b1cd97f" Left="[float]4" TabIndex="[int]1" Top="[float]76" VariantValue="{ClusterBinding FieldName=entries}" Width="[float]104" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+				<p4:Label Height="[float]16" Id="93e97605e1424163be00f3357b1cd97f" LabelOwner="[UIModel]ee8918400fdc443db6f5e1dcf503a17b" Left="[float]4" Text="[string]entries" Top="[float]56" Width="[float]36" />
+			</Cluster>
+			<Label Height="[float]16" Id="3d4f9584d95c46f7a50fa570106c9182" LabelOwner="[UIModel]8340a275942146e28806a836840e8c58" Left="[float]228" Text="[string]Dictionary In" Top="[float]128" Width="[float]68" xmlns="http://www.ni.com/PanelCommon" />
+		</NativeFrontPanel>
+		<DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="0" CallUsage="Required" DataType="Path" Id="82" Name="Path" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>
+				<Path a="1" />
+			</p.DefaultValue>
+		</DataItem>
+		<DataItem CallDirection="Output" CallIndex="0" DataType="@bbe321e90c5c4e44905ad9e7aa3dc7c8" Id="593" Name="Dictionary Out" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>
+				<Cluster>
+					<Field1>""</Field1>
+					<Field2>
+						<Variant>
+							<InnerType>Void</InnerType>
+							<VariantData>null</VariantData>
+						</Variant>
+					</Field2>
+				</Cluster>
+			</p.DefaultValue>
+			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+				<TypeDefinitionTarget TargetName="NI::G Core::Localization::Localized String Dict.gtype" />
+			</p.TypeDefinitionTargets>
+		</DataItem>
+		<DataItem CallDirection="Input" CallIndex="1" DataType="@bbe321e90c5c4e44905ad9e7aa3dc7c8" Id="9a3bccee09ff47bda9de34c3b079a66d" Name="Dictionary In" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>
+				<Cluster>
+					<Field1>""</Field1>
+					<Field2>
+						<Variant>
+							<InnerType>Void</InnerType>
+							<VariantData>null</VariantData>
+						</Variant>
+					</Field2>
+				</Cluster>
+			</p.DefaultValue>
+			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+				<TypeDefinitionTarget TargetName="NI::G Core::Localization::Localized String Dict.gtype" />
+			</p.TypeDefinitionTargets>
+		</DataItem>
+	</VirtualInstrument>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="41bfa584585e4c019d0c88c4b6583c10">
+			<Attributed AttributedType="@e0bf7583752a459f8ab772fd069596a2">
+				<AttributeValues>
+					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
+					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="46298546ca724af0985615aef7ad3b8c">
+			<VariableArray DereferenceType="@630516acecc24c17a44f3cd34bd37f77" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="630516acecc24c17a44f3cd34bd37f77">
+			<Attributed AttributedType="@7a6d943387214c3794a2a9060916eea0">
+				<AttributeValues>
+					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]NI::G Core::Localization::XML" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="acb57ce8a16d4cfda2b4512a38030e18">
+			<Attributed AttributedType="@3cb2514d50a94b99b2346822c2aeaa3d">
+				<AttributeValues>
+					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
+					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="bbe321e90c5c4e44905ad9e7aa3dc7c8">
+			<Attributed AttributedType="@1de865fa13814c0a81d10b2b2b7c89ef">
+				<AttributeValues>
+					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]NI::G Core::Localization" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="bd2232353db34e3ebe062acdcac878ce">
+			<Composite Id="1" Name="Variant" Sealed="" GenericTypeDefinition="Void" BaseType="Void" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="e0bf7583752a459f8ab772fd069596a2">
+			<Function Id="1" IsStatic="True" IsConstructor="False" Name="XML Parser.gvi" ReturnType="Void" GenericTypeDefinition="Void">
+				<Parameters>
+					<Attributed AttributedType="@8e9fd4e289ce4c30b7d1d23ffcb8f608">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]XML" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@eb6a28bba67049b088329d160c582fce">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Nodes" />
+						</AttributeValues>
+					</Attributed>
+				</Parameters>
+			</Function>
+		</p.TypeReference>
+		<p.TypeReference TypeId="7a6d943387214c3794a2a9060916eea0">
+			<Typedef TypedefName="Node.gtype" UnderlyingType="@036f343228634a6c8fbdb32b1e57791c" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="3cb2514d50a94b99b2346822c2aeaa3d">
+			<Function Id="1" IsStatic="True" IsConstructor="False" Name="Contains Property.gvi" ReturnType="Void" GenericTypeDefinition="Void">
+				<Parameters>
+					<Attributed AttributedType="@6f62d60187e446acb897338bc9f19e52">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Node" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@a8619251754448f5a00e983c70d5adee">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Key" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@6b2ca4c2b03b48558b8d6f5ede50ce9e">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Found" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@09e2ba79c89a412bb6f119a4f5ff4bb5">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Value" />
+						</AttributeValues>
+					</Attributed>
+				</Parameters>
+			</Function>
+		</p.TypeReference>
+		<p.TypeReference TypeId="1de865fa13814c0a81d10b2b2b7c89ef">
+			<Typedef TypedefName="Localized String Dict.gtype" UnderlyingType="@9330093c35b94bc4a201f55445535525" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="8e9fd4e289ce4c30b7d1d23ffcb8f608">
+			<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="L0" DataType="String" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="eb6a28bba67049b088329d160c582fce">
+			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R0" DataType="@46298546ca724af0985615aef7ad3b8c" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="036f343228634a6c8fbdb32b1e57791c">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Name" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="SubXML" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Properties" DataType="@08cb33a4cac744028f695acb65426eb0" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="6f62d60187e446acb897338bc9f19e52">
+			<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="L0" DataType="@630516acecc24c17a44f3cd34bd37f77" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="a8619251754448f5a00e983c70d5adee">
+			<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="L1" DataType="String" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="6b2ca4c2b03b48558b8d6f5ede50ce9e">
+			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R0" DataType="Boolean" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="09e2ba79c89a412bb6f119a4f5ff4bb5">
+			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R1" DataType="String" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="9330093c35b94bc4a201f55445535525">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="language" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="entries" DataType="@bd2232353db34e3ebe062acdcac878ce" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="08cb33a4cac744028f695acb65426eb0">
+			<VariableArray DereferenceType="@8e526e15adf647758f72194f557323b8" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="8e526e15adf647758f72194f557323b8">
+			<Attributed AttributedType="@44feb95395fd4f6382ac1fc7875b6fed">
+				<AttributeValues>
+					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]NI::G Core::Localization::XML" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="44feb95395fd4f6382ac1fc7875b6fed">
+			<Typedef TypedefName="Property.gtype" UnderlyingType="@92cb5cf916b2454694606d7a871f2b58" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="92cb5cf916b2454694606d7a871f2b58">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Key" DataType="String" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Value" DataType="String" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+	<IconTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.IconModel Target="NI::G Core::Localization::XML::XML Parser.gvi">
+			<MergeScript>
+				<MergeItem Path="." IsPrimary="True">
+					<Icon ListViewIconCrop="0 0 40 40">
+						<IconPanel Height="[float]40" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+							<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Left="[float]0" TemplateName="[string]Gray" Top="[float]0" Width="[float]40">
+								<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+								<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+								<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]XML Parser" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+									<FontSetting FontFamily="Verdana" FontSize="8.25" />
+								</FileNameText>
+							</IconTemplate>
+							<IconTemplate Height="[float]40" IsHitTestVisible="[bool]False" Left="[float]0" TemplateName="[string][Comp]NI.G Core.gcomp" Top="[float]0" Width="[float]40" />
+						</IconPanel>
+					</Icon>
+				</MergeItem>
+			</MergeScript>
+		</p.IconModel>
+		<p.IconModel Target="NI::G Core::Localization::XML::Contains Property.gvi">
+			<MergeScript>
+				<MergeItem Path="." IsPrimary="True">
+					<Icon ListViewIconCrop="0 0 40 40">
+						<IconPanel Height="[float]40" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+							<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Left="[float]0" TemplateName="[string]Gray" Top="[float]0" Width="[float]40">
+								<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+								<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+								<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Contains Property" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+									<FontSetting FontFamily="Verdana" FontSize="6" />
+								</FileNameText>
+							</IconTemplate>
+							<IconTemplate Height="[float]40" IsHitTestVisible="[bool]False" Left="[float]0" TemplateName="[string][Comp]NI.G Core.gcomp" Top="[float]0" Width="[float]40" />
+						</IconPanel>
+					</Icon>
+				</MergeItem>
+			</MergeScript>
+		</p.IconModel>
+	</IconTable>
+</SourceFile>

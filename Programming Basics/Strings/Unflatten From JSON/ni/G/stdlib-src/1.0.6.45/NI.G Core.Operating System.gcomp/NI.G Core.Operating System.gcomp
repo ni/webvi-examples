@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="A2C7752D5492343070C5D81D3E4D98616D74C92CE1010B0380519AA2B76CEAE2D11056BB9E5559CD029740193FAEBB628A358F96AD373BA65BF002FC9472F1AD" Timestamp="1D7E5E083AB16C4" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="External Code" Name="http://www.ni.com/ExternalCode" OldestCompatibleVersion="5.1.0.0" Version="5.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="GComponentFeatureSet" Name="http://www.ni.com/GComponent.xsd" OldestCompatibleVersion="9.0.0.0" Version="9.0.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.1.0.50238" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="9.1.0.50238" Name="G Web Development Software" Version="21.0.0" />
+	</SourceModelFeatureSet>
+	<ComponentDefinition Company="NI" DefaultConfigurationName="Default" Id="4" Product="G Core" RootNamespaceId="22" xmlns="http://www.ni.com/GComponent.xsd">
+		<Icon Id="13" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="14" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" HorizontalAlignment="[HorizontalAlignment]Center" Id="15" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" VerticalAlignment="[VerticalAlignment]Center" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<CompilerSymbolTable Id="5" xmlns="http://www.ni.com/PlatformFramework" />
+		<ComponentConfiguration ComponentSubtypeIdentifier="G Library" Id="6" Name="Default">
+			<CompilerSymbolTable Id="7" xmlns="http://www.ni.com/PlatformFramework" />
+			<ComponentItemProperties AssociatedEnvoyId="8" Exported="True" Id="10" />
+			<GLibraryProperties Id="2a090460cc1748dab31c34e0cd5888ef" />
+		</ComponentConfiguration>
+	</ComponentDefinition>
+	<EnvoyManagerFile Id="1" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="2" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<EmbeddedDefinitionReference Id="3" ModelDefinitionType="{http://www.ni.com/GComponent.xsd}ComponentDefinitionEnvoyHierarchyRoot" Name="Global Namespace">
+			<ComponentDefinitionEnvoyHierarchyRoot xmlns="http://www.ni.com/GComponent.xsd" />
+			<NameScopingEnvoy AutomaticallyResolveUp="True" Id="20" Name="NI">
+				<NameScopingEnvoy AutomaticallyResolveUp="True" Id="21" Name="G Core">
+					<NameScopingEnvoy AutomaticallyResolveUp="True" Id="22" Name="Operating System">
+						<SourceFileReference Id="8" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Write to System Log.gvi" StoragePath="Write to System Log.gvi" />
+						<SourceFileReference Bindings="EnvoyManager" Id="9" ModelDefinitionType="{http://www.ni.com/ExternalCode}SharedLibrary" Name="systemlogging.sli" StoragePath="systemlogging.sli" />
+					</NameScopingEnvoy>
+				</NameScopingEnvoy>
+			</NameScopingEnvoy>
+		</EmbeddedDefinitionReference>
+		<NameScopingEnvoy Id="17" Name="NI.G Core.Operating System.gcomp" NameTracksFileName="True">
+			<ContentReference Bindings="" ContentIdentifier="6" Id="18" Name="Default" OverridingModelDefinitionType="{http://www.ni.com/GComponent.xsd}ComponentConfiguration" />
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+</SourceFile>
