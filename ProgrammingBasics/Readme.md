@@ -1,7 +1,7 @@
 # Programming Basics
 
 These examples teach the basics of how to program in GWeb. These examples are better viewed in GWeb examples and can be found in "Learning>>Examples>>Programming Basics" as shown below:
-![Programming Basics](GWebCardScreenShot.Png)
+![Programming Basics](GWebCardScreenShot.PNG)
 
 ## Arrays
 
