@@ -1,14 +1,16 @@
 # WebVI Examples for G Web Development Software
 
 This repository has examples for:
-**G Web Development Software 2021**
+**G Web Development Software 2022**
 
 For LabVIEW NXG versions see the [previous releases](https://github.com/ni/webvi-examples/releases/)
 
 The following examples demonstrate different ways of using WebVIs. Each directory contains example code and a `README.md` file explaining the example.
 
+To understand the basics of programming with G language refer to the examples in [Programming Basics directory](ProgrammingBasics).
+
 If you have any questions or general feedback about the examples please post in [G Web Development Software Discussion Forums](https://www.ni.com/r/ask-ni-community-gweb).
-If there is a technical error or typo with the examples themselves please create and issue on the issues page of this repository.
+If there is a technical error or typo with the examples themselves please report the problem in the issues page of this repository.
 
 ## Call 3rd Party Web Service
 
