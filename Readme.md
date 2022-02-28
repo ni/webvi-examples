@@ -1,7 +1,7 @@
 # WebVI Examples for G Web Development Software
 
 This repository has examples for:
-**G Web Development Software 2022**
+**G Web Development Software 2022 Q1**
 
 For LabVIEW NXG versions see the [previous releases](https://github.com/ni/webvi-examples/releases/)
 

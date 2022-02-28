@@ -27,7 +27,7 @@ Demonstrates iterating through elements of a one-dimensional array and building 
 
 Demonstrates how the And node operates with different data types.
 
-## Comparision
+## Comparison
 
 ### Compare Character Types
 
