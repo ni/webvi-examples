@@ -92,3 +92,11 @@ Demonstrates using a Case Structure with several data types.
 ### Simple For Loop
 
 Demonstrates how to use a For Loop to execute the same code multiple times.
+
+### Handling Common User Interface Events
+
+Demonstrates the use of the Event Structure to handle common user interface events.
+
+### State Machine Fundamentals
+
+Demonstrates the fundamental concepts of a State Machine design pattern in LabVIEW.
