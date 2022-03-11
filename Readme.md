@@ -41,7 +41,7 @@ On the panel, this WebVI has X and Y binary inputs. The user clicks these to cha
 [![Call LabVIEW Web Service Demo Link](https://img.shields.io/badge/Details-Demo_Link-green.svg)](https://ni.github.io/webvi-examples/CallLabVIEWWebService/Builds/WebApp_Default%20Web%20Server/)
 [![Call LabVIEW Web Service README Link](https://img.shields.io/badge/Details-README_Link-orange.svg)](CallLabVIEWWebService)
 
-__Note: The Call LabVIEW Web Service demo requires the included LabVIEW Web Service to be running locally on your machine.__
+**Note: The Call LabVIEW Web Service demo requires the included LabVIEW Web Service to be running locally on your machine.**
 
 This example demonstrates how to create a WebVI that makes requests to a LabVIEW web service, and how to create a LabVIEW web service that can respond to requests from a WebVI.
 
