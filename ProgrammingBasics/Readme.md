@@ -23,7 +23,7 @@ Demonstrates iterating through elements of a one-dimensional array and building 
 
 ## Booleans
 
-## Boolean Logic
+### Boolean Logic
 
 Demonstrates how the And node operates with different data types.
 
@@ -81,6 +81,10 @@ Demonstrates the LabVIEW JSON (JavaScript Object Notation) parser by flattening 
 
 Demonstrates how you can use a Disable Structure to comment out a section of code on the diagram.
 
+### Handling Common User Interface Events
+
+Demonstrates the use of the Event Structure to handle common user interface events.
+
 ### Loop Tunnel Modes
 
 Demonstrates the use of indexing and non-indexing tunnels.
@@ -92,3 +96,7 @@ Demonstrates using a Case Structure with several data types.
 ### Simple For Loop
 
 Demonstrates how to use a For Loop to execute the same code multiple times.
+
+### State Machine Fundamentals
+
+Demonstrates the fundamental concepts of a State Machine design pattern in LabVIEW.
