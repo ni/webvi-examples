@@ -38,42 +38,11 @@ Use LabVIEW to create web services that do what WebVIs can't do, such as:
 
 ## Hosting
 
-You can manually the move the build output found at `Builds` to any web server. This project also includes a Distribution (`WebApp.lvdist`) that can be used to build a package (.nipkg). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for hosting a Web application on SystemLink Cloud.
+You can manually move the build output found at `\Call3rdPartyWebService\Builds` to any web server.
 
-### SystemLink Cloud Web App Hosting
+This project also includes a Distribution (`WebApp.lvdist`) that can be used to build a package (`.nipkg`). Packages utilize NI Package Manager to automated the process of installing, upgrading, or removing the web app. A package is also a requirement for [hosting a Web application with the Web Applications service](https://www.ni.com/docs/en-US/bundle/g-web-development/page/hosting-a-web-vi.html).
 
-The following steps can be used to host the web app on SystemLink Cloud
-
-1. Open `CallLabVIEWWebService\CallLabVIEWWebService.gwebproject`.
-2. Open `WebApp.lvdist`.
-3. Click the build icon in the top command bar of this distribution document
-4. Open a Web browser and navigate to https://www.systemlinkcloud.com/webapphosting
-5. Click the **Choose nipkg** button and select the nipkg built in step 3.
-6. When the upload is complete, click on your newly uploaded Web app from your list of Web apps
-
-### Local Hosting
-
-The following steps can be used to host the web app on a local web server
-
-#### Hosting on the NI Web Server with a nipkg
-
-1. Open `CallLabVIEWWebService.gwebproject`
-2. Open `WebApp.lvdist`.
-3. Click the build icon in the top command bar of this distribution document
-4. Double-click the nipkg and follow the on screen instructions
-5. Open a web browser and navigate to `http://localhost:9090/calllvwebservice/`
-
-#### Hosting on the LabVIEW 2009-2021 Web Server
-
-1. Open `C:\Program Files (x86)\National Instruments\Shared\NI WebServer\www`.
-2. Copy the `WebApp_Default Web Server` directory into the `www` directory.
-3. Open a web browser and navigate to `http://localhost:8080/WebApp_Default%20Web%20Server/`
-
-#### Hosting on the NI Web Server
-
-1. Open `C:\Program Files\National Instruments\Shared\Web Server\htdocs`.
-2. Copy the `WebApp_Default Web Server` directory into the `htdocs` directory.
-3. Open a web browser and navigate to `http://localhost:9090/WebApp_Default%20Web%20Server/`.
+Leveraging the [Web Applications service](https://www.ni.com/docs/en-US/bundle/g-web-development/page/hosting-a-web-vi.html) is the recommended way to host a WebVI as it enables permissioned access and configurable security settings. Other options for hosting a WebVI can be found in the [Hosting a Web Application on a Server](https://www.ni.com/docs/en-US/bundle/g-web-development/page/hosting-web-application-on-server.html) topic. 
 
 ## Details
 
