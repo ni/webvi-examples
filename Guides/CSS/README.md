@@ -1,7 +1,7 @@
 # CSS Frequently Asked Questions
 
 - [What is CSS?](#what-is-css)
-- [Will NI maintain a stable set of CSS properties from release to release?](#will-ni-maintain-a-stable-set-of-CSS-properties-from-release-to-release)
+- [Will NI maintain a stable set of CSS properties from release to release?](#will-ni-maintain-a-stable-set-of-css-properties-from-release-to-release)
 - [When should I avoid customizing WebVIs via CSS?](#when-should-i-avoid-customizing-webvis-via-css)
 - [How should I include CSS in my project?](#how-should-i-include-css-in-my-project)
 - [Why is my WebVI ignoring my CSS?](#why-is-my-webvi-ignoring-my-css)
