@@ -4,7 +4,7 @@
   "description": "Tools for validating G Web Development Software WebVI Examples",
   "private": true,
   "scripts": {
-    "link": "glob-exec --foreach \"{./*.md,./*/*.md,./Guides/*/*.md}\" -- \"npm run markdown-link-check -- -c .linkcheck.json {{file}}\"",
+    "link": "glob-exec --foreach \"{./*.md,./*/*.md,./Guides/*/*.md}\" -- \"npm run markdown-link-check -- --verbose -c .linkcheck.json {{file}}\"",
     "lint": "npm run lint-markdown && npm run lint-spell",
     "lint-markdown": "markdownlint ./*.md ./*/*.md ./Guides/*/*.md",
     "lint-spell": "cspell \"**/*.md\"",
