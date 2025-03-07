@@ -2,7 +2,7 @@
 
 If you have any **questions or feedback**, ask in the [G Web Development Software Discussion Forums](https://www.ni.com/r/ask-ni-community-gweb).
 
-This repository has examples for: **G Web Development Software 2022 Q1**.
+This repository has examples for: **G Web Development Software 2022 Q3**.
 
 For previous versions of G Web Development Software or LabVIEW NXG Web Module see the [previous releases](https://github.com/ni/webvi-examples/releases/).
 
