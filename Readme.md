@@ -1,5 +1,8 @@
 # WebVI Examples for G Web Development Software
 
+> [!NOTE]
+> Beginning December 1, 2027, G Web Development Software will enter the Limited Support lifecycle phase. [See the forums for more information](https://forums.ni.com/t5/G-Web-Development-Software/G-Web-Development-Software-Compliance-Driven-Lifecycle-Update/td-p/4483530).
+
 If you have any **questions or feedback**, ask in the [G Web Development Software Discussion Forums](https://www.ni.com/r/ask-ni-community-gweb).
 
 This repository has examples for: **G Web Development Software 2022 Q3 Patch 2**.
